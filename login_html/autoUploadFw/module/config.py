@@ -1,0 +1,15 @@
+# coding=utf-8
+
+user_name = 'telnetcom'
+pass_word = 'nE7jA%5m'
+
+telnet_name = 'telnetadmin'
+telnet_passwd = 'telnetadmin'
+
+
+Host = '192.168.1.1'
+login_url = 'http://192.168.1.1:8080/login.html'
+mainurl   ='http://192.168.1.1:8080/main.html'
+serice_ctrl_url   = 'http://192.168.1.1:8080/scsrvcntr.html'
+local_updata_url  = 'http://192.168.1.1:8080/upload.html'
+upgrade_file_path = 'D:\python27\login_html\\123.txt'

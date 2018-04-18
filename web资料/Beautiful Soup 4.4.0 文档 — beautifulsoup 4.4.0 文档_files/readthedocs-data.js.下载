@@ -1,0 +1,14 @@
+  var READTHEDOCS_DATA = {
+    project: "beautifulsoup",
+    version: "latest",
+    language: "zh_CN",
+    subprojects: {},
+    canonical_url: "http://beautifulsoup.readthedocs.io/zh_CN/v4.4.0/",
+    theme: "alabaster",
+    builder: "sphinx",
+    docroot: "/docs/",
+    source_suffix: ".rst",
+    api_host: "https://readthedocs.org",
+    commit: "65392449"
+  };
+  

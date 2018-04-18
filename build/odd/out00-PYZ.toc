@@ -1,0 +1,6 @@
+('D:\\python27\\build\\odd\\out00-PYZ.pyz',
+ [('encodings.aliases',
+   'c:\\python27\\lib\\encodings\\aliases.py',
+   'PYMODULE'),
+  ('encodings', 'c:\\python27\\lib\\encodings\\__init__.py', 'PYMODULE'),
+  ('codecs', 'c:\\python27\\lib\\codecs.py', 'PYMODULE')])

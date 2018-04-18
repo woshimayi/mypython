@@ -1,0 +1,14 @@
+  var READTHEDOCS_DATA = {
+    project: "requests-docs-cn",
+    version: "latest",
+    language: "zh_CN",
+    subprojects: {},
+    canonical_url: "http://docs.python-requests.org/zh_CN/latest/",
+    theme: "alabaster",
+    builder: "sphinx",
+    docroot: "/docs/",
+    source_suffix: ".rst",
+    api_host: "https://readthedocs.org",
+    commit: "c7ff4112"
+  };
+  

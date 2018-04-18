@@ -1,0 +1,14 @@
+1490838298118	geckodriver	INFO	Listening on 127.0.0.1:58513
+1490838300165	mozprofile::profile	INFO	Using profile path C:\Users\zhengsen\AppData\Local\Temp\rust_mozprofile.t3oP3zjok6Vz
+1490838300166	geckodriver::marionette	INFO	Starting browser C:\Program Files\Mozilla Firefox\firefox.exe with args []
+1490838300173	geckodriver::marionette	INFO	Connecting to Marionette on localhost:58520
+1490838300832	Marionette	INFO	Listening on port 58520
+JavaScript error: http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js, line 7: TypeError: a is not a function
+[Child 11548] WARNING: pipe error: 109: file c:/builds/moz2_slave/m-rel-w32-00000000000000000000/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+js, line 1: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+[Child 10392] WARNING: pipe error: 109: file c:/builds/moz2_slave/m-rel-w32-00000000000000000000/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 345
+to fetch resource.
+Full stack: 
+*************************
+[Child 9824] WARNING: pipe error: 109: file c:/builds/moz2_slave/m-rel-w32-00000000000000000000/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 345
+n/ipc_channel_win.cc, line 345

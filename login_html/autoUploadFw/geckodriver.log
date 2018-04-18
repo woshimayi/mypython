@@ -1,0 +1,76 @@
+1492080215287	geckodriver	INFO	Listening on 127.0.0.1:63169
+1492080217333	mozprofile::profile	INFO	Using profile path C:\Users\zhengsen\AppData\Local\Temp\rust_mozprofile.al3JLio0AYgj
+1492080217335	geckodriver::marionette	INFO	Starting browser C:\Program Files\Mozilla Firefox\firefox.exe with args []
+1492080217343	geckodriver::marionette	INFO	Connecting to Marionette on localhost:63177
+1492080218187	Marionette	INFO	Listening on port 63177
+1492080218704	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://192.168.1.1/lib/js/common.js, line 1096: unreachable code after return statement
+JavaScript warning: http://192.168.1.1/lib/js/common.js, line 1096: unreachable code after return statement
+JavaScript warning: http://192.168.1.1/lib/js/common.js, line 1096: unreachable code after return statement
+JavaScript warning: http://192.168.1.1/lib/js/common.js, line 1096: unreachable code after return statement
+JavaScript warning: http://192.168.1.1/lib/js/common.js, line 1096: unreachable code after return statement
+JavaScript warning: http://192.168.1.1/lib/js/common.js, line 1096: unreachable code after return statement
+JavaScript warning: http://192.168.1.1/lib/js/common.js, line 1096: unreachable code after return statement
+JavaScript warning: http://192.168.1.1/lib/js/common.js, line 1096: unreachable code after return statement
+JavaScript warning: http://192.168.1.1/lib/js/common.js, line 1096: unreachable code after return statement
+JavaScript warning: http://192.168.1.1/lib/js/common.js, line 1096: unreachable code after return statement
+JavaScript warning: http://192.168.1.1/lib/js/menuTree.js, line 144: unreachable code after return statement
+JavaScript warning: http://192.168.1.1/lib/js/menuTree.js, line 258: unreachable code after return statement
+JavaScript warning: http://192.168.1.1/lib/js/common.js, line 1096: unreachable code after return statement
+JavaScript warning: http://192.168.1.1/lib/js/menuTree.js, line 258: unreachable code after return statement
+JavaScript warning: http://192.168.1.1/lib/js/common.js, line 1096: unreachable code after return statement
+JavaScript warning: http://192.168.1.1/lib/js/common.js, line 1096: unreachable code after return statement
+JavaScript warning: http://192.168.1.1/lib/js/common.js, line 1096: unreachable code after return statement
+JavaScript warning: http://192.168.1.1/lib/js/common.js, line 1096: unreachable code after return statement
+JavaScript warning: http://192.168.1.1/lib/js/common.js, line 1096: unreachable code after return statement
+JavaScript warning: http://192.168.1.1/lib/js/common.js, line 1096: unreachable code after return statement
+JavaScript warning: http://192.168.1.1/lib/js/common.js, line 1096: unreachable code after return statement
+JavaScript warning: http://192.168.1.1/lib/js/common.js, line 1096: unreachable code after return statement
+JavaScript warning: http://192.168.1.1/lib/js/common.js, line 1096: unreachable code after return statement
+JavaScript warning: http://192.168.1.1/lib/js/menuTree.js, line 144: unreachable code after return statement
+JavaScript warning: http://192.168.1.1/lib/js/menuTree.js, line 258: unreachable code after return statement
+JavaScript warning: http://192.168.1.1/lib/js/common.js, line 1096: unreachable code after return statement
+JavaScript warning: http://192.168.1.1/lib/js/menuTree.js, line 258: unreachable code after return statement
+JavaScript warning: http://192.168.1.1/lib/js/common.js, line 1096: unreachable code after return statement
+JavaScript warning: http://192.168.1.1/lib/js/common.js, line 1096: unreachable code after return statement
+JavaScript warning: http://192.168.1.1/lib/js/common.js, line 1096: unreachable code after return statement
+JavaScript warning: http://192.168.1.1/lib/js/common.js, line 1096: unreachable code after return statement
+JavaScript warning: http://192.168.1.1/lib/js/common.js, line 1096: unreachable code after return statement
+JavaScript warning: http://192.168.1.1/lib/js/common.js, line 1096: unreachable code after return statement
+JavaScript warning: http://192.168.1.1/lib/js/common.js, line 1096: unreachable code after return statement
+JavaScript warning: http://192.168.1.1/lib/js/common.js, line 1096: unreachable code after return statement
+1492080283917	addons.productaddons	WARN	Failed downloading via XHR, status: 0, reason: error
+JavaScript warning: http://192.168.1.1/lib/js/common.js, line 1096: unreachable code after return statement
+JavaScript warning: http://192.168.1.1/lib/js/menuTree.js, line 144: unreachable code after return statement
+JavaScript warning: http://192.168.1.1/lib/js/menuTree.js, line 258: unreachable code after return statement
+JavaScript warning: http://192.168.1.1/lib/js/common.js, line 1096: unreachable code after return statement
+JavaScript warning: http://192.168.1.1/lib/js/menuTree.js, line 258: unreachable code after return statement
+JavaScript warning: http://192.168.1.1/lib/js/common.js, line 1096: unreachable code after return statement
+JavaScript warning: http://192.168.1.1/lib/js/common.js, line 1096: unreachable code after return statement
+JavaScript warning: http://192.168.1.1/lib/js/common.js, line 1096: unreachable code after return statement
+JavaScript warning: http://192.168.1.1/lib/js/common.js, line 1096: unreachable code after return statement
+JavaScript warning: http://192.168.1.1/lib/js/common.js, line 1096: unreachable code after return statement
+JavaScript warning: http://192.168.1.1/lib/js/common.js, line 1096: unreachable code after return statement
+JavaScript error: http://192.168.1.1/lib/js/diag_ping.js, line 213: ReferenceError: event is not defined
+JavaScript error: http://192.168.1.1/lib/js/diag_ping.js, line 213: ReferenceError: event is not defined
+JavaScript error: http://192.168.1.1/lib/js/diag_ping.js, line 213: ReferenceError: event is not defined
+JavaScript error: http://192.168.1.1/lib/js/diag_ping.js, line 213: ReferenceError: event is not defined
+JavaScript error: http://192.168.1.1/lib/js/diag_ping.js, line 213: ReferenceError: event is not defined
+JavaScript error: http://192.168.1.1/lib/js/diag_ping.js, line 213: ReferenceError: event is not defined
+JavaScript error: http://192.168.1.1/lib/js/diag_ping.js, line 213: ReferenceError: event is not defined
+JavaScript error: http://192.168.1.1/lib/js/diag_ping.js, line 213: ReferenceError: event is not defined
+JavaScript error: http://192.168.1.1/lib/js/diag_ping.js, line 213: ReferenceError: event is not defined
+JavaScript error: http://192.168.1.1/lib/js/diag_ping.js, line 213: ReferenceError: event is not defined
+JavaScript error: http://192.168.1.1/lib/js/diag_ping.js, line 213: ReferenceError: event is not defined
+JavaScript error: http://192.168.1.1/lib/js/diag_ping.js, line 213: ReferenceError: event is not defined
+JavaScript error: http://192.168.1.1/lib/js/diag_ping.js, line 213: ReferenceError: event is not defined
+[Child 2976] WARNING: pipe error: 109: file c:/builds/moz2_slave/m-rel-w32-00000000000000000000/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 345
+[Child 2976] WARNING: pipe error: 109: file c:/builds/moz2_slave/m-rel-w32-00000000000000000000/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 345
+ned
+JavaScript error: http://192.168.1.1/lib/js/diag_ping.js, line 213: ReferenceError: event is not defined
+JavaScript error: http://192.168.1.1/lib/js/diag_ping.js, line 213: ReferenceError: event is not defined
+JavaScript error: http://192.168.1.1/lib/js/diag_ping.js, line 213: ReferenceError: event is not defined
+[Child 8772] WARNING: pipe error: 109: file c:/builds/moz2_slave/m-rel-w32-00000000000000000000/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 345
+[Child 8772] WARNING: pipe error: 109: file c:/builds/moz2_slave/m-rel-w32-00000000000000000000/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 345
+m/src/chrome/common/ipc_channel_win.cc, line 345
+[Child 700] WARNING: pipe error: 109: file c:/builds/moz2_slave/m-rel-w32-00000000000000000000/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 345
