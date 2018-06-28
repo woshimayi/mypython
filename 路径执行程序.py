@@ -8,3 +8,6 @@ import win32api
 # subprocess.call(['C:\\Program Files\\TeamViewer\\TeamViewer.exe'])
 # os.system('"C:\\Program Files\\TeamViewer\\TeamViewer.exe"')
 # win32api.WinExec('C:\\Program Files\\TeamViewer\\TeamViewer.exe')
+
+
+os.system('C:\\Windows\\System32\\calc.exe')
