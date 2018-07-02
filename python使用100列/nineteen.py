@@ -1,17 +1,34 @@
 # -*- coding: UTF-8 -*-
 
-tn = 0
-sn = []
 
-n = int(input('n=:'))
-a = int(input('a=:'))
+# from sys import stdout
+# for j in range(2,1001):
+#     k = []
+#     n = -1
+#     s = j
+#     for i in range(1,j):
+#             if j % i == 0:
+#                 n += 1
+#                 s -= i
+#                 k.append(i)
+    
+#     if s == 0:
+#         print(j)
+#         for i in range(n):
+#             stdout.write(str(k[i]))
+#             stdout.write(' ')
+#         print(k[n])
+# ================================================
 
-for conut in range(n):
-	tn = tn + a
-	a =  a *10
-	sn.append(tn)
-	print(tn)
+for j in range(2,1001):
+	k = []
+	sum = 0
+	# print(j)
+	for i in range(1, j):
+		if j%i == 0:
+			sum += i
+			k.append(i)
 
-sn  = reduce(lambda x,y : x+y, sn)
-
-print(sn)
+	if j == sum:
+		print(k)
+		print(j)
