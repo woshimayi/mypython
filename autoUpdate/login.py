@@ -17,7 +17,7 @@ import win32con
 
 
 import telnetlib 
-import SendKeys
+# import SendKeys
 import unittest, time, re, datetime
 
 import selenium.webdriver.support.ui as UI
@@ -29,8 +29,8 @@ from selenium.webdriver.support.select import Select
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.support.ui import WebDriverWait
 
-from inLine import execute_shell_telnet
-from inLine import getCurStartupartition
+# from inLine import execute_shell_telnet
+# from inLine import getCurStartupartition
 
 
 
@@ -47,7 +47,7 @@ upgrade_file_path = 'D:\linux-file\download\\18.96838GWOVS_ct_e4g1sgw_70ad435d.w
 
 class autoUpdate(object):
     def loginAcs(self, loginurl=login_url, mainurl = mainurl, username = user_name, passwd = pass_wd):
-        print "==login==="
+        print("==login===")
         driver = webdriver.Firefox()
         driver.implicitly_wait(10)
         driver.maximize_window()

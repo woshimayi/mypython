@@ -45,7 +45,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 
 def execute_shell_telnet(shellcmd=None,data=None):
 	try:
-		print 'data is %s' % data 
+		print('data is %s' % data )
 		tn = telnetlib.Telnet(Host)
 		
 		tn.read_until('Login')
@@ -71,13 +71,13 @@ def execute_shell_telnet(shellcmd=None,data=None):
 		tn.close()
 
 		data.append(content)
-		print 'data is %s ' % data
-		print __file__,sys._getframe().f_lineno
+		print('data is %s ' % data)
+		print(__file__,sys._getframe().f_lineno)
 		return True
-	except Exception,e:
-		print e
-		print 'data is %s ' % data
-		print __file__,sys._getframe().f_lineno
+	except e:
+		print(e)
+		print('data is %s ' % data)
+		print( __file__,sys._getframe().f_lineno)
 		return False
 
 
@@ -86,41 +86,41 @@ def getCurStartupartition():
 		partinfo = None
 		
 		if 1:
-			print __file__,sys._getframe().f_lineno   #####################
+			print(__file__,sys._getframe().f_lineno)   #####################
 			if True is execute_shell_telnet(shellcmd = 's BootImage\n', data=partinfo):
 				index = partinfo[0].find("BootImage:")
-				print index
-				print __file__,sys._getframe().f_lineno
+				print(index)
+				print(__file__,sys._getframe().f_lineno)
 				if -1  == index:
-					print 'error: fail :get startup part info '
+					print('error: fail :get startup part info ')
 					raise
 				else:
 					partition_no =  partinfo[0][index + 12: index + 13]  # 2
-					print "here is :",__file__,sys._getframe().f_lineno	
+					print("here is :",__file__,sys._getframe().f_lineno	)
 					if '1' is partition_no or '2' is partition_no:
-						print partinfo_no
+						print(partinfo_no)
 						return partition_no
 					else:
-						print 'get startup partition index is error %s' % partition_no
+						print('get startup partition index is error %s' % partition_no)
 						return False
 
 			elif 1:
-				print __file__,sys._getframe().f_lineno	#####################
+				print(__file__,sys._getframe().f_lineno)	#####################
 				index = partinfo[0].find(" :")
 				if -1  == index:
-					print 'error: fail :get startup part info'
+					print('error: fail :get startup part info')
 					raise
 				else:
 					partition_no =  partinfo[0][index + 3: index + 4]
 					if '1' is partition_no or '0' is partition_no:
-						print partinfo_no
+						print(partinfo_no)
 						return partition_no
 					else:
-						print 'get startup partition index is error %s' % partition_no
+						print( ('get startup partition index is error %s' % partition_no)
 						return False
-	except Exception, e:
-		print e
-		print __file__,sys._getframe().f_lineno	
+	except:
+		print(e)
+		print(__file__,sys._getframe().f_lineno	)
 		return False
 
 
@@ -128,9 +128,9 @@ class autoTest(object):
 	def __init__(self, config = None):
 	 	if config is None:
 			config = ''
-			print '================warn============'
-			print 'warn: config use default config fron templateConfig.py '
-			print '================================'
+			print( '================warn============')
+			print( 'warn: config use default config fron templateConfig.py ')
+			print( '================================')
 
 		self.functbl = []
 		self.driver = None
@@ -139,7 +139,7 @@ class autoTest(object):
 
 
 	def loginUser(self, url=None, mainurl=None, username=None, passwd=None):
-		print '=====username====='
+		print( '=====username=====')
 		driver = webdriver.Firefox()
 		driver.implicitly_wait(10)
 		driver.maximize_window()
@@ -161,13 +161,13 @@ class autoTest(object):
 			return True
 
 	# except Exception,e:
-	# 	print e
+	# 	print( e)
 	# 	self.driver = None
 	# 	retrun False
 
 
 	def _enableTelnet(self):
-		print '=====telnetcom====='
+		print( '=====telnetcom=====')
 		try:
 			# self.telnet_count = self.telnet_count  + 1
 			# if self.telnet_count > 3:
@@ -179,7 +179,7 @@ class autoTest(object):
 			self.driver.get(serice_ctrl_url)
 
 			if True is self.driver.find_element_by_xpath("//*[@value = 'TELNET']").is_selected():
-				print 'telnet is checked'
+				print( 'telnet is checked')
 				return True
 			
 			self.driver.find_element_by_xpath("//*[@value = 'TELNET']").click()
@@ -199,20 +199,20 @@ class autoTest(object):
 				return True
 			else:
 				raise
-			print '=====telnet===over====='
+			print( '=====telnet===over=====')
 		except Exception,e:
 
 			return False
 
 
 	def _enable_tftp(self):
-		print '=====tftp====='
+		print( '=====tftp=====')
 		try:
 			time.sleep(3)
 			self.driver.get(serice_ctrl_url)
 			
 			if True is self.driver.find_element_by_xpath("//*[@value = 'TFTP']").is_selected():
-				print 'tftp is checked'
+				print( 'tftp is checked'
 				return True
 
 			time.sleep(1)
@@ -226,7 +226,7 @@ class autoTest(object):
 			return True
 			
 		except Exception as e:
-			print e
+			print( e)
 			raise
 		
 
@@ -236,8 +236,8 @@ class autoTest(object):
 		try:
 			self.functbl.append(func)
 		except Exception,e:
-			print 'register function error:%s'%func
-			print e
+			print( 'register function error:%s'%func
+			print( e
 			raise 
 
 
@@ -246,27 +246,27 @@ class autoTest(object):
 		try:
 			for i in range(0, len(self.functbl)):
 				func=self.functbl[i]
-				print 'start %d st test:%s function'%((i + 1), func.__name__)
+				print( 'start %d st test:%s function'%((i + 1), func.__name__))
 				if True is func():
-					print 'success'
+					print( 'success')
 				else:
-					print 'failed'
+					print( 'failed')
 		except Exception,e:
-			print e
+			print( e)
 			return False
 
 	
     
 
 	def local_kernel_web_update(self):
-		print '=====update====='
+		print( '=====update=====')
 		try:
 			if False is self._enableTelnet():
-				print 'error: enable telnet error'
+				print( 'error: enable telnet error')
 				return False
 
 			partition_index = getCurStartupartition()
-			print partition_index
+			print( partition_index)
 
 			time.sleep(1)
 			
@@ -310,7 +310,7 @@ class autoTest(object):
 			time.sleep(10)
 
 			# if False is self._enableTelnet():
-			# 	print 'error: enable telnet error'
+			# 	print( 'error: enable telnet error')
 			# 	return False
 
 			# partition_index2  =  getCurStartupartition()
@@ -318,15 +318,15 @@ class autoTest(object):
 			# 	return False
 
 			# if partition_index1 is partition_index2:
-			# 	print 'error: updata failed startup partion is the in upgradng process %s\n' % partition_index2
+			# 	print( 'error: updata failed startup partion is the in upgradng process %s\n' % partition_index2)
 			# 	return False
 			
 			# if self.driver is not None:
 			# 	self.driver.quit()
 			
-			# print e, 'local '
+			# print( e, 'local ')
 			# return False
-			print '=====upgradng_success====='
+			print( '=====upgradng_success=====')
 		except Exception,e:
 			if self.driver is not None:
 				# self.driver.quit()
@@ -334,7 +334,7 @@ class autoTest(object):
 
 
 	def wanConnection(self, wanName = 'zhengsen', wanPasswd = ''):
-		print '=====wan====='
+		print( '=====wan=====')
 		try:
 			self.driver.get(mainurl)
 			time.sleep(1)
@@ -374,7 +374,7 @@ class autoTest(object):
 
 
 	def createWanConnection(self,closeIE = True, conn_mode= 'Route', serivice_mode = "INTERNET", ip_mode = 'IPv4', mtu = '1492', vlan_flag = True, vlan_id = '1007'):
-		print '=====Wanconnection====='
+		print( '=====Wanconnection=====')
 		try:
 			
 			self.driver.get(mainurl)
@@ -386,7 +386,7 @@ class autoTest(object):
 			self.driver.find_element_by_id('MENU_THD_NetWan').click()
 			time.sleep(0.5)
 
-			print '===WAN_SEL_WanLinkName==='
+			print( '===WAN_SEL_WanLinkName===')
 			self.driver.switch_to_frame("mainFrameid") #窗口界面跳转
 			time.sleep(1)
 
@@ -397,7 +397,7 @@ class autoTest(object):
 
 			#2：success
 			# sel = self.driver.find_element_by_id('WAN_SEL_WanLinkName')
-			# print sel
+			# print( sel)
 			# Select(sel).select_by_value('8')
 
 			#3：success
@@ -452,7 +452,7 @@ class autoTest(object):
 			# 	pass
 			
 			if True is self.driver.find_element_by_id("WAN_CHX_Vlan").is_selected():
-				print 'vlan is checked'
+				print( 'vlan is checked')
 			else:
 				self.driver.find_element_by_id("WAN_CHX_Vlan").click()
 				time.sleep(0.5)
@@ -462,7 +462,7 @@ class autoTest(object):
 			self.driver.find_element_by_id('BTN_Apply').click()
 			time.sleep(3)
 
-			print '=====Wanconnection-success====='
+			print( '=====Wanconnection-success=====')
 		except Exception as e:
 			raise
 
@@ -480,7 +480,7 @@ class autoTest(object):
 			# self.driver.find_element_by_id('mainFrameid').click()  #mainframid 点击进入设置页面
 			# time.sleep(0.5)
 
-			print '1'
+			print( '1')
 			self.driver.switch_to_frame("mainFrameid")   #窗口界面跳转
 			time.sleep(1)
 
@@ -496,7 +496,7 @@ class autoTest(object):
 			sel = self.driver.find_element_by_id('DIAG_DIV_PingResult')
 			print(sel)
 			# re = ping.find_element_by_xpath('Can not resolve address!')
-			# print re
+			# print( re)
 
 		except Exception as e:
 			raise
@@ -524,4 +524,4 @@ if __name__ == '__main__':
 			
 		b.run()
 	else:
-		print 'reserve'
+		print( 'reserve')
