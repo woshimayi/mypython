@@ -1,0 +1,119 @@
+{
+  "id": "0118e76a-5f82-4ec0-a228-8d43a7d7015e",
+  "name": "Untitled Project",
+  "url": "http://192.168.1.1",
+  "tests": [{
+    "id": "a0464299-8aa0-4232-a0f7-a3d615520d20",
+    "name": "Untitled",
+    "commands": [{
+      "id": "42b3a2db-8df4-4c7d-9558-db519dde58d9",
+      "comment": "",
+      "command": "open",
+      "target": "/login.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2affd5c8-4a24-4417-a91d-bb920e84b082",
+      "comment": "",
+      "command": "clickAt",
+      "target": "id=LOGIO_TEXT_UserName",
+      "targets": [
+        ["id=LOGIO_TEXT_UserName", "id"],
+        ["name=username", "name"],
+        ["css=#LOGIO_TEXT_UserName", "css"],
+        ["xpath=//input[@id='LOGIO_TEXT_UserName']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "40,6"
+    }, {
+      "id": "9540cbdc-4fe5-46a9-8b02-77779ebdbdb2",
+      "comment": "",
+      "command": "type",
+      "target": "id=LOGIO_TEXT_UserName",
+      "targets": [
+        ["id=LOGIO_TEXT_UserName", "id"],
+        ["name=username", "name"],
+        ["css=#LOGIO_TEXT_UserName", "css"],
+        ["xpath=//input[@id='LOGIO_TEXT_UserName']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "root"
+    }, {
+      "id": "54375e96-59c5-4b62-8537-04d90c98d29e",
+      "comment": "",
+      "command": "type",
+      "target": "id=LOGIO_PWD_Password",
+      "targets": [
+        ["id=LOGIO_PWD_Password", "id"],
+        ["name=password", "name"],
+        ["css=#LOGIO_PWD_Password", "css"],
+        ["xpath=//input[@id='LOGIO_PWD_Password']", "xpath:attributes"],
+        ["xpath=//tr[6]/td[3]/input", "xpath:position"]
+      ],
+      "value": "admin"
+    }, {
+      "id": "7654f63a-f70d-4676-a9d3-ec929b4e18fc",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=LOGIO_PWD_Password",
+      "targets": [
+        ["id=LOGIO_PWD_Password", "id"],
+        ["name=password", "name"],
+        ["css=#LOGIO_PWD_Password", "css"],
+        ["xpath=//input[@id='LOGIO_PWD_Password']", "xpath:attributes"],
+        ["xpath=//tr[6]/td[3]/input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "27267323-194c-4de1-b3ea-1bbec8d3fc9f",
+      "comment": "",
+      "command": "clickAt",
+      "target": "name=filename",
+      "targets": [
+        ["name=filename", "name"],
+        ["css=input[name=\"filename\"]", "css"],
+        ["xpath=//input[@name='filename']", "xpath:attributes"],
+        ["xpath=//div[@id='Content1']/form/table/tbody/tr/td[2]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "49,16"
+    }, {
+      "id": "c0f9bda6-3d53-4b71-a529-e2f58b4ba81e",
+      "comment": "",
+      "command": "type",
+      "target": "name=filename",
+      "targets": [
+        ["name=filename", "name"],
+        ["css=input[name=\"filename\"]", "css"],
+        ["xpath=//input[@name='filename']", "xpath:attributes"],
+        ["xpath=//div[@id='Content1']/form/table/tbody/tr/td[2]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "C:\\fakepath\\MTK_GPON-MTK5B-MBQK-ALCL-R01B010D657eacb9-CN.squashfs.upf"
+    }, {
+      "id": "4f74126a-0041-44c6-b12a-1e9350aedb5a",
+      "comment": "",
+      "command": "clickAt",
+      "target": "id=saveapplyBtn",
+      "targets": [
+        ["id=saveapplyBtn", "id"],
+        ["css=#saveapplyBtn", "css"],
+        ["xpath=//input[@id='saveapplyBtn']", "xpath:attributes"],
+        ["xpath=//div[@id='Content1']/form/p/input", "xpath:idRelative"],
+        ["xpath=//p/input", "xpath:position"]
+      ],
+      "value": "22,14"
+    }]
+  }],
+  "suites": [{
+    "id": "f9418d4c-b060-42e9-a214-f595e81b878c",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["a0464299-8aa0-4232-a0f7-a3d615520d20"]
+  }],
+  "urls": ["http://192.168.1.1/"],
+  "plugins": [],
+  "version": "1.0"
+}
