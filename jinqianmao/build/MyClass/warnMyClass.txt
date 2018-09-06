@@ -1,0 +1,35 @@
+missing module named org - imported by pickle, /home/zs/Documents/mypython/jinqianmao/MyClass.py
+excluded module named _frozen_importlib - imported by importlib, importlib.abc, /home/zs/Documents/mypython/jinqianmao/MyClass.py
+missing module named _frozen_importlib_external - imported by importlib._bootstrap, importlib, importlib.abc, /home/zs/Documents/mypython/jinqianmao/MyClass.py
+missing module named _winreg - imported by platform, selenium.webdriver.firefox.firefox_binary, /home/zs/Documents/mypython/jinqianmao/MyClass.py
+missing module named _scproxy - imported by urllib.request
+missing module named java - imported by platform, /home/zs/Documents/mypython/jinqianmao/MyClass.py
+missing module named 'java.lang' - imported by platform, xml.sax._exceptions, /home/zs/Documents/mypython/jinqianmao/MyClass.py
+missing module named vms_lib - imported by platform, /home/zs/Documents/mypython/jinqianmao/MyClass.py
+missing module named msvcrt - imported by subprocess, getpass, /home/zs/Documents/mypython/jinqianmao/MyClass.py
+missing module named _winapi - imported by subprocess, /home/zs/Documents/mypython/jinqianmao/MyClass.py
+missing module named winreg - imported by platform, mimetypes, urllib.request, selenium.webdriver.firefox.firefox_binary, /home/zs/Documents/mypython/jinqianmao/MyClass.py
+missing module named nt - imported by os, ntpath, shutil, /home/zs/Documents/mypython/jinqianmao/MyClass.py
+missing module named _dummy_threading - imported by dummy_threading, /home/zs/Documents/mypython/jinqianmao/MyClass.py
+missing module named 'org.python' - imported by copy, xml.sax, /home/zs/Documents/mypython/jinqianmao/MyClass.py
+missing module named errorhandler - imported by xlutils.filter
+missing module named guppy - imported by xlutils.filter
+missing module named StringIO - imported by selenium.webdriver.remote.webelement, urllib3.packages.six, xlutils.compat
+missing module named elementtree - imported by xlrd.xlsx
+missing module named lxml - imported by xlrd.xlsx
+missing module named cElementTree - imported by xlrd.xlsx
+missing module named cStringIO - imported by selenium.webdriver.firefox.firefox_profile, xlrd.timemachine
+missing module named copy_reg - imported by cStringIO
+missing module named urllib2 - imported by selenium.webdriver.common.utils, selenium.webdriver.common.service
+missing module named 'ctypes.macholib' - imported by ctypes.util
+missing module named netbios - imported by uuid
+missing module named win32wnet - imported by uuid
+missing module named urlparse - imported by selenium.webdriver.remote.remote_connection
+runtime module named urllib3.packages.six.moves - imported by http.client, urllib3.connectionpool, urllib3.util.response, 'urllib3.packages.six.moves.urllib', urllib3.response, urllib3.util.queue
+missing module named backports - imported by urllib3.packages.ssl_match_hostname
+missing module named _abcoll - imported by urllib3.packages.ordered_dict
+missing module named dummy_thread - imported by urllib3.packages.ordered_dict
+missing module named thread - imported by urllib3.packages.ordered_dict
+missing module named "'urllib3.packages.six.moves.urllib'.parse" - imported by urllib3.request, urllib3.poolmanager
+missing module named Queue - imported by urllib3.util.queue
+missing module named httplib - imported by selenium.webdriver.safari.webdriver, selenium.webdriver.blackberry.webdriver, selenium.webdriver.webkitgtk.webdriver
