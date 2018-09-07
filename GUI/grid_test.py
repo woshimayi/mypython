@@ -62,7 +62,8 @@ check3.grid(column=2, row=4, sticky=tk.W)
 scrolW = 50
 scrolH = 5
 scr = scrolledtext.ScrolledText(win, width=scrolW, height=scrolH, wrap=tk.WORD)
-scr.grid(column=0, columnspan=10)
+# scr.grid(column=0, sticky='WE', columnspan=3) # 靠近边框
+scr.grid(column=0, columnspan=3)   #  columnspan 占据列数
 
 colores = ['Blue', 'Gold', 'Red']
 # create three radiobutton
@@ -79,7 +80,91 @@ def radCall():
 for col in  range(3):
     curRad = 'Rad' + str(col)
     curRad = tk.Radiobutton(win, text=colores[col], variable=radVar, value=col, command=radCall)
-    curRad.grid(column=col, row=3, sticky=tk.W)
+    curRad.grid(column=col, row=3, sticky=tk.S)
+
+# ==========================================================
+labellsFrom = ttk.LabelFrame(win, text='Label in a Frame')
+labellsFrom.grid(column=0, row=7, padx=10, pady=10, sticky=tk.E) # pad 周围ｓｐａｃｅ的宽度
+
+ttk.Label(labellsFrom, text='Label1').grid(column=0, row=0)
+ttk.Label(labellsFrom, text='Label2').grid(column=0, row=1)
+ttk.Label(labellsFrom, text='Label3').grid(column=0, row=2)
+
+# 添加space
+for child in labellsFrom.winfo_children():
+    child.grid_configure(padx=0, pady=10)  #宽度和高度
+# ===========================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 win.mainloop()
