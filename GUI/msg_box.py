@@ -9,6 +9,7 @@ from tkinter import messagebox as mBox
 win = Tk()
 win.title('MenuBar')
 win.geometry('300x400')
+win.iconbitmap(r'.\123.ico')
 
 
 menuBar = Menu(win)
