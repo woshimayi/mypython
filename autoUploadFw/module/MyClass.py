@@ -26,8 +26,8 @@ from selenium.webdriver.support.ui import WebDriverWait
 
 
 
-user_name = 'CMCCAdmin'
-pass_wd = 'aDm8H%MdA'
+user_name = 'root'
+pass_wd = 'root'
 
 login_url = 'http://192.168.1.1/cgi-bin/index2.asp'
 mainurl   ='http://192.168.1.1/cgi-bin/content.asp'
