@@ -7,7 +7,7 @@
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-import sys
+import sys, time
 
 
 class Ui_Form(object):
@@ -17,25 +17,36 @@ class Ui_Form(object):
         self.pushButton = QtWidgets.QPushButton(Form)
         self.pushButton.setGeometry(QtCore.QRect(50, 30, 75, 23))
         self.pushButton.setObjectName("pushButton")
+        print(self.pushButton)
+
         self.checkBox = QtWidgets.QCheckBox(Form)
         self.checkBox.setGeometry(QtCore.QRect(60, 180, 71, 16))
         self.checkBox.setObjectName("checkBox")
+        print(self.checkBox)
+
         self.buttonBox = QtWidgets.QDialogButtonBox(Form)
         self.buttonBox.setGeometry(QtCore.QRect(50, 240, 156, 23))
         self.buttonBox.setStandardButtons(QtWidgets.QDialogButtonBox.Cancel|QtWidgets.QDialogButtonBox.Ok)
         self.buttonBox.setObjectName("buttonBox")
+        print(self.buttonBox)
+
         self.listView = QtWidgets.QListView(Form)
         self.listView.setGeometry(QtCore.QRect(200, 70, 141, 121))
         self.listView.setObjectName("listView")
+        print(self.buttonBox)
 
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
 
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
-        Form.setWindowTitle(_translate("Form", "Form"))
+        Form.setWindowTitle(_translate("Form", "FIRST"))
+
         self.pushButton.setText(_translate("Form", "PusBox"))
+        SELF.pushButton.
+        print("1")
         self.checkBox.setText(_translate("Form", "CheckBox"))
+        print("2")
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
