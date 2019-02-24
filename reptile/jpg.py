@@ -9,7 +9,7 @@ headers = {
 		'authorization': ""
 		}
 
-url = 'https://cn.bing.com/images/search?q=%E6%9E%97%E4%BE%9D%E6%99%A8&FORM=ISTRTH&id=BB5A4792050ABE8D7268AA4CA4517F6287A45DE5&cat=%E6%98%8E%E6%98%9F&lpversion='
+url = 'https://cn.bing.com/images/trending?form=Z9LH'
 r = requests.get(url, headers=headers)
 # print(r.text)
 r.encoding='utf-8'
@@ -48,21 +48,19 @@ def mk_dir(path):
 		os.chdir(path)
 
 
-def get_next_url():
-	base_url = 'https://cn.bing.com/'
-	# 获取首页中的连接地址
-	for jpg_url in soup.find_all('a'):
+# def get_next_url():
+# 获取首页中的连接地址
+base_url = 'https://cn.bing.com/'
+for jpg_url in soup.find_all('a'):
+	if '美女' in jpg_url['href']:
 		if 'http' in jpg_url['href']:
-			return jpg_url['href']
+			print(jpg_url['href'])
 			# print('成功')
 		else:
-			return base_url+jpg_url['href']
+			print(base_url+jpg_url['href'])
 
 
 # 进行连接地址post请求参数组合
-soup=BeautifulSoup(r.text,"lxml")
-soup.prettify()
-i = 0
 for jpg_url in soup.find_all('img'):
 	i += 1
 	if 'http'  in jpg_url['src']:
