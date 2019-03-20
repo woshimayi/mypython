@@ -101,6 +101,9 @@ class BeautifulPicture:
 				workbook.save(r'./bing_pic.xls')
 
 
+		table1 = data.sheets()[]
+		nrows = table1.nrows
+
 			# 	if jpg_next_next_next_url:
 			# 		r2 = requests.get(jpg_next_next_next_url, headers=self.headers)
 			# 		r2.encoding='utf-8'
