@@ -1,0 +1,92 @@
+digraph struct{
+    node[shape=record]
+    
+    subgraph cdev{
+        "struct cdev"
+        a  [label = "{<f0> struct kobject kobj\n|<f1> struct module * owner\n|<f2> struct file_operations *ops\n|<f3> struct list_head list\n|<f4> dev_t dev\n|<f5> unsigned int count\n}"];
+        b  [label = "{<f0> MKDEV(dev_t dev)\n|<f1> MINOR(dev_t dev)\n}"]
+    }
+
+    a:f4 -> b 
+    a:f2 -> file_operations
+
+    subgraph cdev_init{
+        "void cdev_init(struct cdev *cdev, struct file_operations *fops)
+        {
+            memset(cdev, 0, sizeof *cdev);
+            INIT_LIST_HEAD(&cdev->list);
+            kobject_init(&cdev->kobj, &ktype_cdev_default);
+            cdev->ops = fops; /* 将传入的文件操作结构体指针赋值给 cdev 的 ops*/
+        }"
+    }
+
+    subgraph cdev_alloc{
+        "struct cdev *cdev_alloc(void)
+        {
+            struct cdev *p = kzalloc(sizeof(struct cdev), GFP_KERNEL);
+            if (p) 
+            {
+                INIT_LIST_HEAD(&p->list);
+                kobject_init(&p->kobj, &ktype_cdev_dynamic);
+            }
+            return p;
+        }"
+    }
+
+    subgraph cdev_register{
+        "register_chrdev_region(dev_t from, unsigned count, const char *name)[已知设备号] 
+        alloc_chrdev_region(dev_t *dev, unsigned baseminor, unsigned count,
+        const char *name)[未知设备号] 
+        cdev_add()"
+        "cdev_del() 
+        unregister_cdev_region(dev_t from, unsigned count)"
+    }
+
+    subgraph file_operations
+    {
+        "
+        struct file_operations {
+            struct module *owner;
+            loff_t (*llseek) (struct file *, loff_t, int);
+            ssize_t (*read) (struct file *, char __user *, size_t, loff_t *);
+            ssize_t (*write) (struct file *, const char __user *, size_t, loff_t *);
+            ssize_t (*aio_read) (struct kiocb *, const struct iovec *, unsigned long, loff_t);
+            ssize_t (*aio_write) (struct kiocb *, const struct iovec *, unsigned long, loff_t);
+            int (*iterate) (struct file *, struct dir_context *);
+            unsigned int (*poll) (struct file *, struct poll_table_struct *);
+            long (*unlocked_ioctl) (struct file *, unsigned int, unsigned long);
+            long (*compat_ioctl) (struct file *, unsigned int, unsigned long);
+            int (*mmap) (struct file *, struct vm_area_struct *);
+            int (*open) (struct inode *, struct file *);
+            int (*flush) (struct file *, fl_owner_t id);
+            int (*release) (struct inode *, struct file *);
+            int (*fsync) (struct file *, loff_t, loff_t, int datasync);
+            int (*aio_fsync) (struct kiocb *, int datasync);
+            int (*fasync) (int, struct file *, int);
+            int (*lock) (struct file *, int, struct file_lock *);
+            ssize_t (*sendpage) (struct file *, struct page *, int, size_t, loff_t *, int);
+            unsigned long (*get_unmapped_area)(struct file *, unsigned long, unsigned long,
+                            unsigned long, unsigned long);
+            int (*check_flags)(int);
+            int (*flock) (struct file *, int, struct file_lock *);
+            ssize_t (*splice_write)(struct pipe_inode_info *, struct file *, loff_t *, size_t, unsigned int);
+            ssize_t (*splice_read)(struct file *, loff_t *, struct pipe_inode_info *, size_t, unsigned int);
+            int (*setlease)(struct file *, long, struct file_lock **);
+            long (*fallocate)(struct file *file, int mode, loff_t offset,
+            loff_t len);
+            int (*show_fdinfo)(struct seq_file *m, struct file *f);
+        };"
+    }
+
+    subgraph cpoy{
+        "unsigned long copy_from_user(void *to, const void _ _user *from, unsigned long count);
+         unsigned long copy_to_user(void _ _user *to, const void *from, unsigned long count)
+         put_user(val, (int*), arg)
+         get_user(val, (int *), arg)
+         "
+
+    }
+
+
+
+}
