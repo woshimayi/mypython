@@ -43,7 +43,7 @@ class Ui_Form(object):
         Form.setWindowTitle(_translate("Form", "FIRST"))
 
         self.pushButton.setText(_translate("Form", "PusBox"))
-        self.pushButton.
+        # self.pushButton.
         print("1")
         self.checkBox.setText(_translate("Form", "CheckBox"))
         print("2")
