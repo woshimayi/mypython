@@ -21,19 +21,24 @@ from selenium.webdriver.support.select import Select
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.support.ui import WebDriverWait
 
+import telnetlib
+import threading
+
 # from inLine import execute_shell_telnet
 # from inLine import getCurStartupartition
 
 
 
-user_name = 'root'
-pass_wd = 'root'
+user_name = 'telecomadmin'
+pass_wd = 'nE7jA%5m'
 
-login_url = 'http://192.168.1.1/cgi-bin/index2.asp'
-mainurl   ='http://192.168.1.1/cgi-bin/content.asp'
+login_url = 'http://192.168.1.1/login.html'
+mainurl   ='http://192.168.1.1/main.html'
 serice_ctrl_url   = 'http://192.168.1.1/scsrvcntr.html'
-local_updata_url  = 'http://192.168.1.1/cgi-bin/upgrade.asp'
-upgrade_file_path = 'D:\python27\login_html\\123.txt'
+local_updata_url  = 'http://192.168.1.1/upload.html'
+upgrade_file_path = r'\123.upf'
+upgrade_file_path_1 = r'\456.upf'
+factoryurl = 'http://192.168.1.1/wan_status.html'
 
 
 
@@ -46,7 +51,7 @@ class autoTest(object):
 		# self.driver = None
 		# self.telnet_count  = None
 		# self.tftp_count  = 0
-		self.driver = webdriver.Firefox()
+		self.driver = webdriver.Chrome()
 		self.driver.implicitly_wait(3)
 		self.driver.maximize_window()
 
@@ -55,22 +60,23 @@ class autoTest(object):
 		print('=====login=====')
 		self.driver.get(loginurl)
 		time.sleep(1)
-
+		print(self.driver.current_url)
 		if loginurl == self.driver.current_url:   #获取当前页面的网址
-			self.driver.find_element_by_id('Username').clear()  #清理
-			self.driver.find_element_by_id('Username').send_keys(username)
-			self.driver.find_element_by_id("Password").clear()   #清除对象的内容
-			self.driver.find_element_by_id("Password").send_keys(passwd)   #在对象上模拟按键键入
-			self.driver.find_element_by_id("btnSubmit").click()   #点击
-			time.sleep(0.5)
-
-		if mainurl != self.driver.current_url:   #获取当前页面的网址
-			self.driver.find_element_by_id('Username').clear()  #清理
-			self.driver.find_element_by_id('Username').send_keys(username)
-			self.driver.find_element_by_id("Password").clear()   #清除对象的内容
-			self.driver.find_element_by_id("Password").send_keys(passwd)   #在对象上模拟按键键入
-			self.driver.find_element_by_id("btnSubmit").click()   #点击
-			time.sleep(0.5)
+			print("aaaaaaa")
+			self.driver.find_element_by_id('LOGIO_TEXT_UserName').clear()  #清理
+			self.driver.find_element_by_id('LOGIO_TEXT_UserName').send_keys(user_name)
+			self.driver.find_element_by_id("LOGIO_PWD_Password").clear()   #清除对象的内容
+			self.driver.find_element_by_id("LOGIO_PWD_Password").send_keys(pass_wd)   #在对象上模拟按键键入
+			self.driver.find_element_by_id("BTN_Login").click()   #点击
+			time.sleep(1)
+		# if mainurl != self.driver.current_url:   #获取当前页面的网址
+		# 	print("bbbbbbb")
+		# 	self.driver.find_element_by_id('LOGIO_TEXT_UserName').clear()  #清理
+		# 	self.driver.find_element_by_id('LOGIO_TEXT_UserName').send_keys(user_name)
+		# 	self.driver.find_element_by_id("LOGIO_PWD_Password").clear()   #清除对象的内容
+		# 	self.driver.find_element_by_id("LOGIO_PWD_Password").send_keys(pass_wd)   #在对象上模拟按键键入
+		# 	self.driver.find_element_by_id("BTN_Login").click()   #点击
+		# 	time.sleep(0.5)
 		else:
 			print('login success')
 
@@ -170,7 +176,7 @@ class autoTest(object):
 			return False
 		
 
-	def local_kernel_web_update(self):
+	def local_kernel_web_update(self, upgradefilepath=upgrade_file_path):
 		print('=====update=====')
 		try:
 			# if False is self._enableTelnet():
@@ -192,15 +198,19 @@ class autoTest(object):
 			self.driver.get(local_updata_url)
 			# print("here is :",__file__,sys._getframe().f_lineno)
 			time.sleep(0.5)
-			
-			self.driver.find_element_by_xpath("//*[@value = '4']").click()
+			print(os.getcwd()+upgradefilepath)
+			self.driver.find_element_by_name("filename").send_keys(os.getcwd()+upgradefilepath)
 			time.sleep(0.3)
-			self.driver.find_element_by_name("FW_UploadFile").click()
+			self.driver.find_element_by_id("saveapplyBtn").click()
 			time.sleep(0.3)
+			# self.driver.find_element_by_name("FW_UploadFile").click()
+			# time.sleep(0.3)
+
+
 			# param1：窗口类名
 			# param2：窗口的标题
 			# return： 返回窗口的句柄，失败返回0
-			dialog =       win32gui.FindWindow('#32770', u'文件上传')  # 对话框
+			# dialog =       win32gui.FindWindow('#32770', u'文件上传')  # 对话框
 
 			# param1：要查找子窗口的父窗口句柄 为0则函数一桌面为父窗口，查找桌面的所有子窗口
 			# param2：子窗口句柄 子窗口必须是parent 窗口的直接子窗口
@@ -208,25 +218,24 @@ class autoTest(object):
 			# parent4：窗口名
 			# 如果 child 是0 查找从parent 窗口的直接子窗口开始
 			# 如果parent 和child 同时 为0 则函数从所有的顶层窗口及消息开始
-			ComboBoxEx32 = win32gui.FindWindowEx(dialog, 0, 'ComboBoxEx32', None)   #寻找 文件上传的 子对话框
+			# ComboBoxEx32 = win32gui.FindWindowEx(dialog, 0, 'ComboBoxEx32', None)   #寻找 文件上传的 子对话框
  
-			ComboBox =     win32gui.FindWindowEx(ComboBoxEx32, 0, 'ComboBox', None)  #是edit框和下拉框的组合
+			# ComboBox =     win32gui.FindWindowEx(ComboBoxEx32, 0, 'ComboBox', None)  #是edit框和下拉框的组合
 
-			Edit = 	       win32gui.FindWindowEx(ComboBox, 0, 'Edit', None)  # 上面三句依次寻找对象，直到找到输入框Edit对象的句柄
+			# Edit = 	       win32gui.FindWindowEx(ComboBox, 0, 'Edit', None)  # 上面三句依次寻找对象，直到找到输入框Edit对象的句柄
 			
-			button =       win32gui.FindWindowEx(dialog, 0, 'Button', None)  # 确定按钮Button
+			# button =       win32gui.FindWindowEx(dialog, 0, 'Button', None)  # 确定按钮Button
 
-			win32gui.SendMessage(Edit, win32con.WM_SETTEXT, None, 'D:\资料\公司资料\hangyan\\tclinux_osgi.bin')  # 往输入框输入绝对地址
+			# win32gui.SendMessage(Edit, win32con.WM_SETTEXT, None, upgrade_file_path)  # 往输入框输入绝对地址
 			
-			win32gui.SendMessage(dialog, win32con.WM_COMMAND, 1, button)  # 按button
+			# win32gui.SendMessage(dialog, win32con.WM_COMMAND, 1, button)  # 按button
 
-			# self.find_element_by_xpath("input[@value = 'Update Software']").click()  #updata software
+			# # self.find_element_by_xpath("input[@value = 'Update Software']").click()  #updata software
 
-			self.driver.find_element_by_id('btnOK').click()
-			print("upgrade success :",sys._getframe().f_lineno)
-			time.sleep(80)
-			print(self.driver.close())
-			print("web close :",sys._getframe().f_lineno)
+			# self.driver.find_element_by_id('btnOK').click()
+			# print("upgrade success :",sys._getframe().f_lineno)
+			# time.sleep(80)
+			# print("web close :",sys._getframe().f_lineno)
 			# print("web quit :",__file__,sys._getframe().f_lineno)
 			# print("here is :",__file__,sys._getframe().f_lineno)
 			# self.driver.quit()
@@ -385,20 +394,130 @@ class autoTest(object):
 		finally:
 			pass		
 
+	def getMacAddr(self, num):
+		try:
+			import xlrd
+			import xlutils.copy
+
+			self.driver.get(factoryurl)
+			time.sleep(1)
+			macAddr = self.driver.find_element_by_xpath('//*[@id="MacAddr"]').get_attribute("value")
+			print(macAddr)
+
+			data = xlrd.open_workbook(r'.\20180821.xlsx')
+			ws = xlutils.copy.copy(data)
+			table = ws.get_sheet(0) 
+			table.write(num,8, macAddr)
+			ws.save(r'.\20180821.xlsx')
+				
+		except Exception as e:
+			raise e
+
+	def getWanAddr(self, num):
+		try:
+			import xlrd
+			import xlutils.copy
+
+			self.driver.get(factoryurl)
+			time.sleep(1)
+			wanAddr = self.driver.find_element_by_xpath('//*[@id="WAN_InfoTbody"]/tr[1]/td[10]').text
+			if wanAddr is None:
+				raise e
+
+			print(wanAddr)
+
+			data = xlrd.open_workbook(r'.\20180821.xlsx')
+			ws = xlutils.copy.copy(data)
+			table = ws.get_sheet(0)
+			table.write(num,0, wanAddr)
+			table.write(num,8, wanAddr)
+			ws.save(r'.\20180821.xlsx')
+				
+		except Exception as e:
+			raise e
+
+	def _enableTelnet(self):
+		print('=====telnetcom=====')
+		try:
+			# self.telnet_count = self.telnet_count	 + 1
+			# if self.telnet_count > 3:
+				# raise
+
+			# if False is self._login(url=self.main_url,username=self.telnet_name, passewd=self.telnet_passwd):
+			#	print 'Error: login error'
+			#	raise
+
+			self.driver.get(serice_ctrl_url)
+			time.sleep(1)
+
+			if True is self.driver.find_element_by_xpath("//*[@value = 'TELNET']").is_selected():
+				return True
+			
+			self.driver.find_element_by_xpath("//*[@value = 'TELNET']").click()
+			time.sleep(0.4)
+			self.driver.find_element_by_id('saveApplyCtx').click()
+			time.sleep(0.3)
+			# self.driver.quit()
+			# self.driver =None
+
+			if True is enable_telnet():
+				# self.telnet_count =  0
+				return True
+			else:
+				raise
+			if True is enable_count():
+				self.telnet_count = 0
+				return True
+			else:
+				raise
+			print('=====telnet===open=====')
+		except Exception:
+
+			return False
+
+def do_telnet(Host, username, password, finish, commands):
+	'''Telnet远程登录：Windows客户端连接Linux服务器'''
+
+	# 连接Telnet服务器
+	tn = telnetlib.Telnet(Host, port=23, timeout=10)
+	tn.set_debuglevel(2)
+	# 输入登录用户名
+	tn.read_until('VosLogin: '.encode())
+	tn.write(username.encode() + b'\n')
+	# 输入登录密码
+	tn.read_until('Password: '.encode())
+	tn.write(password.encode() + b'\n')
+	# 登录完毕后执行命令
+	tn.read_until(finish.encode())
+	for command in commands:
+		#print('cmd')
+		tn.write(b'%s\n' % command.encode())
+	
+	#执行完毕后，终止Telnet连接（或输入exit退出）
+	tn.read_until(finish.encode())
+	tn.close() # tn.write('exit\n')
+
 
 if __name__ == '__main__':
-	for i in range(2000):
-		print(i)
-		if len(sys.argv) == 2:
-			b = autoTest(sys.argv[1])
-		else:
-			b = autoTest()
-			b.loginUser()
-			b.local_kernel_web_update()
-			time.sleep(100)
-			# b._enableTelnet()
-			# b._enable_tftp()
-			# b.wanConnection()
-			# b.createWanConnection()
-			# b.pingWan()
-			
+	Host = '192.168.1.1' # Telnet服务器IP
+	username = 'telnetadmin'   # 登录用户名
+	password = 'telnetadmin'  # 登录密码
+	finish = 'S304# '	   # 命令提示符
+	Num = 0
+	if len(sys.argv) == 2:
+		b = autoTest(sys.argv[1])
+	else:
+		b = autoTest()
+
+	while 1:
+		b.loginUser()
+		b.getWanAddr(Num)
+		b._enableTelnet()
+		commands = ['tr69c reboot\r\n', 'exit\r\n']
+		th1 = threading.Thread(target=do_telnet, args=(Host, username, password, finish, commands))
+		th1.start()
+		th1.join(5)	 ##5秒超时时间
+		time.sleep(120)
+		Num = Num + 1
+
+
