@@ -1,6 +1,7 @@
 import sys
 from PyQt5.QtWidgets import QMainWindow, QApplication, QPushButton, QTextEdit, QAction, QFileDialog
 from PyQt5.QtGui import QIcon
+from PyQt5 import sip
 
 class Example(QMainWindow):
 	"""docstring for ExQMainWindow"""
