@@ -2,7 +2,7 @@ from bs4 import BeautifulSoup
 from bs4 import NavigableString
 import requests
 import re
-
+import time
 headers = {
 		'User-Agent': "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.96 Safari/537.36",
 		'authorization': ""
@@ -14,7 +14,7 @@ proxies = {
 }
 
 
-r = requests.get('https://cn.bing.com/images/search?cat=%u7f8e%u5973&lpversion=&q=%E6%B8%85%E7%BA%AF%E5%B0%91%E5%A5%B3&qft=+filterui:imagesize-wallpaper&FORM=IRFLTR', headers=headers)
+r = requests.get('https://cn.bing.com/', headers=headers)
 # print(r.text)
 r.encoding='utf-8'
 
@@ -35,13 +35,17 @@ and they lived at the bottom of a well.</p>
 
 
 soup=BeautifulSoup(r.text,"lxml")
-soup.prettify()
+# print(soup.prettify())
 
 
-for jpg_url in soup.find_all('a'):
-	if 'http' in jpg_url['href']:
-		print(jpg_url['href'])
-		print('成功')
+print('https://cn.bing.com'+soup.link.get('href'))
+
+
+
+# for jpg_url in soup.find_all('a'):
+# 	if 'http' in jpg_url['href']:
+# 		print(jpg_url['href'])
+# 		print('成功')
 
 
 
@@ -147,11 +151,11 @@ print()
 print()
 
 
-# img = requests.get('/sa/simg/SharedSpriteDesktopRewards_022118.png')
-# f = open('123.jpg', 'wb')
-# f.write(img.content)
-# print('123', '保存成功')
-# f.close()
+img = requests.get('https://cn.bing.com'+soup.link.get('href'))
+f = open(str(time.strftime("%Y%m%d%H%M%S", time.localtime()))+'.jpg', 'wb')
+f.write(img.content)
+print('123', '保存成功')
+f.close()
 
 # soup=BeautifulSoup(html_doc,"lxml")
 # print(soup.a)
