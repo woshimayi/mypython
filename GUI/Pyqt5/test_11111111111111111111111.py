@@ -24,31 +24,30 @@ class Tetris(QMainWindow):
         self.initUI()
         
         
-    def initUI(self):    
+    def initUI(self):
         '''initiates application UI'''
 
         self.tboard = Board(self)
         self.setCentralWidget(self.tboard)
 
-        self.statusbar = self.statusBar()        
+        self.statusbar = self.statusBar()
         self.tboard.msg2Statusbar[str].connect(self.statusbar.showMessage)
         
-        self.tboard.start()
+        # self.tboard.start()
         
-        self.resize(180, 380)
         self.center()
-        self.setWindowTitle('Tetris')        
+        self.resize(380, 600)
+        self.setWindowTitle('Tetris')
         self.show()
-        
 
     def center(self):
         '''centers the window on the screen'''
-        
-        screen = QDesktopWidget().screenGeometry()
+
+        screen = QDesktopWidget().screenGeometry()  # screenGeometry size
         size = self.geometry()
         self.move((screen.width()-size.width())/2, 
-            (screen.height()-size.height())/2)
-        
+                 (screen.height()-size.height())/2)
+
 
 class Board(QFrame):
     
@@ -121,7 +120,7 @@ class Board(QFrame):
         self.newPiece()
         self.timer.start(Board.Speed, self)
 
-        
+
     def pause(self):
         '''pauses game'''
         
@@ -159,7 +158,6 @@ class Board(QFrame):
                         boardTop + i * self.squareHeight(), shape)
 
         if self.curPiece.shape() != Tetrominoe.NoShape:
-            
             for i in range(4):
                 
                 x = self.curX + self.curPiece.x(i)
@@ -519,7 +517,6 @@ class Shape(object):
 
 
 if __name__ == '__main__':
-    
     app = QApplication([])
     tetris = Tetris()    
     sys.exit(app.exec_())

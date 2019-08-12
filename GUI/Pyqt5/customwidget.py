@@ -92,16 +92,18 @@ class Example(QWidget):
 		sld.setValue(75)
 		sld.setGeometry(30, 30, 150 ,20)
 
-		self.c = Communicate()
-		self.wid = BurningWidget()
-		self.c.updateBW[int].connect(self.wid.setValue)
+		# self.c = Communicate()
+		# self.wid = BurningWidget()
+		# self.c.updateBW[int].connect(self.wid.setValue)
 
-		sld.valueChanged[int].connect(self.changeValue)
-		hbox = QHBoxLayout()
-		hbox.addWidget(self.wid)
+		# sld.valueChanged[int].connect(self.changeValue)
+		# hbox = QHBoxLayout()
+		# hbox.addWidget(self.wid)
+
 		vbox = QVBoxLayout()
+
 		vbox.addStretch(1)
-		vbox.addLayout(hbox)
+		# vbox.addLayout(hbox)
 		self.setLayout(vbox)
 
 
@@ -111,7 +113,7 @@ class Example(QWidget):
 
 	def changeValue(self, value):
 		self.c.updateBW.emit(value)
-		self.wid.repaint()
+		# self.wid.repaint()
 
 if __name__ == "__main__":
 	app = QApplication(sys.argv)

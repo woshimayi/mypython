@@ -3,31 +3,29 @@ from PyQt5.QtWidgets import QMainWindow, QApplication, QCheckBox
 from PyQt5.QtCore import Qt
 
 
-
 class Example(QMainWindow):
-	"""docstring for ExQMainWindow"""
-	def __init__(self):
-		super().__init__()
+    """docstring for ExQMainWindow"""
 
-		self.initUI()
+    def __init__(self):
+        super().__init__()
 
-	def  initUI(self):
-		cb = QCheckBox('Show title', self)
-		cb.move(20 , 20)
-		cb.toggle()
-		cb.stateChanged.connect(self.changeTitle)
+        self.initUI()
 
-		self.setGeometry(300, 300, 200, 200)
-		self.setWindowTitle("statusBar")
-		self.show()
+    def initUI(self):
+        cb = QCheckBox('Show title', self)
+        cb.move(20, 20)
+        cb.toggle()
+        cb.stateChanged.connect(self.changeTitle)
 
-	def changeTitle(self, state):
-		if state == Qt.Checked:
-			self.setWindowTitle('QCheckBox')
-		else:
-			self.setWindowTitle(' ')
+        self.setGeometry(300, 300, 200, 200)
+        self.setWindowTitle("statusBar")
+        self.show()
+
+    def changeTitle(self, state):
+        if state == Qt.Checked:
+            self.setWindowTitle('QCheckBox')
 
 if __name__ == "__main__":
-	app = QApplication(sys.argv)
-	ex = Example()
-	sys.exit(app.exec_())
+    app = QApplication(sys.argv)
+    ex = Example()
+    sys.exit(app.exec_())

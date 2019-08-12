@@ -1,7 +1,7 @@
-import  sys, random
+import sys
+import random
 from PyQt5.QtWidgets import QMainWindow, QFrame, QDesktopWidget, QApplication
 from PyQt5.QtCore import Qt, QBasicTimer, pyqtSignal
-
 
 
 class Tetris(QMainWindow):
@@ -30,9 +30,9 @@ class Tetris(QMainWindow):
 
         screen = QDesktopWidget().screenGeometry()
         size = self.geometry()
-        self.move(screen.width()-size.width()/2, (screen.height()-size.height()/2))
-
-
+        self.move(
+            screen.width() - size.width() / 2,
+            (screen.height() - size.height() / 2))
 
 
 class Board(QFrame):

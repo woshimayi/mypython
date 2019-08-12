@@ -2,7 +2,7 @@ import sys
 from PyQt5.QtWidgets import QApplication, QPushButton, QWidget
 from PyQt5.QtCore import Qt, QMimeData
 from PyQt5.QtGui import QDrag
-
+from PyQt5 import sip
 
 
 class Button(QPushButton):

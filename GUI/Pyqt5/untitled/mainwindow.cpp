@@ -12,3 +12,18 @@ MainWindow::~MainWindow()
 {
     delete ui;
 }
+
+void MainWindow::on_pushButton_clicked()
+{
+
+}
+
+void MainWindow::on_toolBox_destroyed()
+{
+
+}
+
+void MainWindow::on_pushButton_clicked(bool checked)
+{
+
+}
