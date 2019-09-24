@@ -5,7 +5,7 @@ Module implementing MainWindow.
 """
 
 from PyQt5.QtCore import pyqtSlot
-from PyQt5.QtWidgets import QMainWindow, QApplication, QLineEdit
+from PyQt5.QtWidgets import QMainWindow, QApplication, QLineEdit, QLabel, QWidget
 from PyQt5 import QtGui, QtCore
 from Ui_list import Ui_MainWindow
 
@@ -40,9 +40,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         """
         # TODO: not implemented yet
         # raise NotImplementedError
-        if self.lineEdit.text():
-            print(self.lineEdit.text())
-        
+
         # r = requests.get('https://cn.bing.com/', headers=headers)
         # r.encoding='utf-8'
         # soup=BeautifulSoup(r.text,"lxml")
@@ -52,13 +50,27 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         # f = open(jpg, 'wb')
         # f.write(img.content)
         # f.close()
+        # 
+        self.label = QLabel()
+        self.label.setGeometry(160, 90, 0, 0)
+        self.label.setObjectName("label")
+        self.label.setText("sssssssssss")
 
-        self.pixmap = QtGui.QPixmap("1.jpg")
-        self.label.setGeometry(0, 50, 600, 100)
+        self.pixmap = QtGui.QPixmap("10.jpg")
 
-        self.scaredPixmap = self.pixmap.scaled(self.pixmap.width(), self.pixmap.height(), aspectRatioMode=QtCore.Qt.KeepAspectRatio)
-        # self.label
-        self.label.setPixmap(self.scaredPixmap)
+        self.width = self.pixmap.width()/200
+        self.height = self.pixmap.height()/200
+
+        print(self.width, self.height)
+
+        if self.width > self.height:
+            print("width")
+            self.label.setGeometry(0, 50, self.pixmap.width()/self.width, self.pixmap.height()/self.width)
+        else:
+            print("height")
+            self.label.setGeometry(0, 50, self.pixmap.width()/self.height, self.pixmap.height()/self.height)
+
+        self.label.setPixmap(self.pixmap)
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
