@@ -5,7 +5,7 @@ Module implementing MainWindow.
 """
 
 from PyQt5.QtCore import pyqtSlot
-from PyQt5.QtWidgets import QMainWindow, QApplication, QLineEdit, QLabel, QWidget
+from PyQt5.QtWidgets import QMainWindow, QApplication, QLineEdit, QLabel, QWidget, QGridLayout, QDialog, QPushButton
 from PyQt5 import QtGui, QtCore
 from Ui_list import Ui_MainWindow
 
@@ -29,10 +29,12 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         
         @param parent reference to the parent widget
         @type QWidget
-        """
+        """ 
         super(MainWindow, self).__init__(parent)
         self.setupUi(self)
-    
+
+
+
     @pyqtSlot()
     def on_pushButton_clicked(self):
         """
@@ -51,30 +53,35 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         # f.write(img.content)
         # f.close()
         # 
-        self.label = QLabel()
-        self.label.setGeometry(160, 90, 0, 0)
-        self.label.setObjectName("label")
-        self.label.setText("sssssssssss")
+        btncont = self.layout.count()
+        print(btncont)
 
-        self.pixmap = QtGui.QPixmap("10.jpg")
+        label = QLabel(str(btncont)+".jpg", self)
+        label.setScaledContents(True)
+        self.layout.addWidget(label)
 
-        self.width = self.pixmap.width()/200
-        self.height = self.pixmap.height()/200
+        pixmap = QtGui.QPixmap(str(btncont)+".jpg")
 
-        print(self.width, self.height)
+        width = pixmap.width()/200
+        height = pixmap.height()/200
 
-        if self.width > self.height:
+        print(width, height)
+        print(pixmap.width(), pixmap.height())
+
+        if width > height:
             print("width")
-            self.label.setGeometry(0, 50, self.pixmap.width()/self.width, self.pixmap.height()/self.width)
+            label.setGeometry(0, btncont*210, pixmap.width()/width, pixmap.height()/width)
         else:
             print("height")
-            self.label.setGeometry(0, 50, self.pixmap.width()/self.height, self.pixmap.height()/self.height)
+            label.setGeometry(0, 50, pixmap.width()/height, pixmap.height()/height)
 
-        self.label.setPixmap(self.pixmap)
+        label.setPixmap(pixmap)
+
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     ui = MainWindow()
     ui.show()
     sys.exit(app.exec_())
+
 
