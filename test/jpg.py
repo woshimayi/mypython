@@ -152,7 +152,8 @@ print()
 
 
 img = requests.get('https://cn.bing.com'+soup.link.get('href'))
-f = open(str(time.strftime("%Y%m%d%H%M%S", time.localtime()))+'.jpg', 'wb')
+jpg = str(time.strftime("%Y%m%d%H%M%S", time.localtime()))+'.jpg'
+f = open(jpg, 'wb')
 f.write(img.content)
 print('123', '保存成功')
 f.close()

@@ -25,7 +25,7 @@ class Ui_MainWindow(QDialog):
         self.lineEdit.setObjectName("lineEdit")
 
         self.layout = QtWidgets.QGridLayout(self.centralWidget)
-        self.layout.addWidget(self.pushButton, 0, 1)
+        # self.layout.addWidget(self, 0, 1)
         self.setLayout(self.layout)
 
         MainWindow.setCentralWidget(self.centralWidget)

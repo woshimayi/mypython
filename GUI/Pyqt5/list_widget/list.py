@@ -54,28 +54,34 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         # f.close()
         # 
         btncont = self.layout.count()
+        if 10 < btncont:
+            return
+
         print(btncont)
-
         label = QLabel(str(btncont)+".jpg", self)
+        self.layout.addWidget(label, 0, 1)
+        # self.setLayout(self.layout)
         label.setScaledContents(True)
-        self.layout.addWidget(label)
-
         pixmap = QtGui.QPixmap(str(btncont)+".jpg")
 
-        width = pixmap.width()/200
+        width =  pixmap.width()/200
         height = pixmap.height()/200
 
         print(width, height)
         print(pixmap.width(), pixmap.height())
 
-        if width > height:
-            print("width")
-            label.setGeometry(0, btncont*210, pixmap.width()/width, pixmap.height()/width)
-        else:
-            print("height")
-            label.setGeometry(0, 50, pixmap.width()/height, pixmap.height()/height)
+        # if width > height:
+        #     print("width")
+        #     label.setGeometry(0, 50, pixmap.width()/width, pixmap.height()/width)
+        # else:
+        #     print("height")
+        #     label.setGeometry(0, 50, pixmap.width()/height, pixmap.height()/height)
 
         label.setPixmap(pixmap)
+
+        self.layout.addWidget(label)
+
+
 
 
 if __name__ == "__main__":

@@ -17,7 +17,7 @@ buf=("POST %s HTTP/1.1\r\n"
 "\r\n" % (PAGE,HOST))
  
 socks=[]
- 
+
 def conn_thread():
 	global socks
 	for i in range(0,MAX_CONN):

@@ -76,24 +76,26 @@ k = 0;
 
 # print(i)
 
+# 遍历目录
 def function(dir, file):
 	print("==========os.walk================")
 	index = 1  
 
 	for root,dirs,files in os.walk(dir):
-		# print("第",index,"层")
+		print("第",index,"层")
 		index += 1
 		for filepath in files:
+			print(os.path.splitext(filepath)[1])
 			if os.path.splitext(filepath)[0] == file:
-			 # == file and os.path.splitext(filepath)[1] == '.exe':
-				exec = os.path.join(root,filepath)
-				os.startfile(exec)
+				if file and os.path.splitext(filepath)[1] == '.exe':
+					exec = os.path.join(root,filepath)
+					os.startfile(exec)
 		for sub in dirs:
 			pass
-			# print('dir', os.path.join(root,sub))
+			print('dir', os.path.join(root,sub))
 
 
 if __name__=="__main__":
-	file = input("Enter your input: ")
-	print(file)
-	function(dir, file)
+	# file = input("Enter your input: ")
+	# print(file)
+	function(dir,r".jpg")
