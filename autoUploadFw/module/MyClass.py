@@ -513,10 +513,11 @@ if __name__ == '__main__':
 		b.loginUser()
 		b.getWanAddr(Num)
 		b._enableTelnet()
-		commands = ['tr69c reboot\r\n', 'exit\r\n']
+		# commands = ['gponshell', 'twmanu', 'twmanu', 'omci', 'show omci receive packets', 'q', 'tr69c reboot']
+		commands = ['tr69c reboot']
 		th1 = threading.Thread(target=do_telnet, args=(Host, username, password, finish, commands))
 		th1.start()
-		th1.join(5)	 ##5秒超时时间
+		th1.join(10)	 ##5秒超时时间
 		time.sleep(120)
 		Num = Num + 1
 
