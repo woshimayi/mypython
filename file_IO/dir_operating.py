@@ -30,7 +30,7 @@ import sys
 # print('C:\\Windows\\System32')
 
 
-dir = 'D:'
+dir = r'C:\Users\zs\Pictures'
 
 # 打开搜索到的所有程序
 # for x in os.listdir(dir):
@@ -76,26 +76,27 @@ k = 0;
 
 # print(i)
 
-# 遍历目录
+# 遍历目录 找出具体某些类型的文件
+# 
+dir = r'C:\Users\zs\Pictures'
+
 def function(dir, file):
 	print("==========os.walk================")
 	index = 1  
-
+	print(file)
 	for root,dirs,files in os.walk(dir):
-		print("第",index,"层")
+		# print("第",index,"层")
 		index += 1
 		for filepath in files:
-			print(os.path.splitext(filepath)[1])
-			if os.path.splitext(filepath)[0] == file:
-				if file and os.path.splitext(filepath)[1] == '.exe':
-					exec = os.path.join(root,filepath)
-					os.startfile(exec)
+			# print(os.path.splitext(filepath)[0], os.path.splitext(filepath)[1])
+			if os.path.splitext(filepath)[1] in file:
+				print('file', os.path.join(root,filepath))
+					# os.startfile(exec)  # 执行文件
 		for sub in dirs:
-			pass
 			print('dir', os.path.join(root,sub))
 
 
 if __name__=="__main__":
 	# file = input("Enter your input: ")
 	# print(file)
-	function(dir,r".jpg")
+	function(dir,[".jpg", ".jepg", ".png", ".gif"])
