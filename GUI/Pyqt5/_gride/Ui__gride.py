@@ -10,7 +10,8 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import QScrollArea, QWidget, QVBoxLayout, QApplication, QScrollArea
 
-import os, sys
+import os
+import sys
 
 Audio = []
 Pictures = [".jpg", ".jepg", ".png", ".gif", ".bmp"]
@@ -35,7 +36,6 @@ class Ui_MainWindow(QScrollArea):
         # self.gridLayoutWidget.setVisible(True)
         # self.gridLayoutWidget.setObjectName("gridLayoutWidget")
 
-
         # 获取显示器分辨率大小
         self.desktop = QApplication.desktop()
         self.screenRect = self.desktop.screenGeometry()
@@ -44,7 +44,8 @@ class Ui_MainWindow(QScrollArea):
 
         # 创建滚动条窗口
         self.topFiller = QtWidgets.QWidget(self.centralWidget)
-        self.topFiller.setMinimumSize(self.desktop_width-80, 10000)  # 设置滚动条的尺寸
+        self.topFiller.setMinimumSize(
+            self.desktop.width()-80, self.desktop.height()*6)  # 设置滚动条的尺寸
 
         # 创建一个滚动条
         self.scroll = QScrollArea()
@@ -69,42 +70,44 @@ class Ui_MainWindow(QScrollArea):
         print("==========os.walk================")
         index = 1
         print(file)
-        positions = [(i*200, j*200) for i in range(100) for j in range(6)]
+        positions = [(i * 200, j * 200) for i in range(50) for j in range(7)]
         for root, dirs, files in os.walk(dir):
             for filepath, position in zip(files, positions):
-                if os.path.splitext(filepath)[1] in file:
-                    index += 1
+                if os.path.splitext(filepath)[-1] in file:
                     self.pixmap = QtGui.QPixmap(os.path.join(root, filepath))
-                    print(index, position, 'file', os.path.join(root, filepath), self.pixmap.width(), self.pixmap.height())
-                    self.pixmap.scaled(
-                        self.pixmap.width() / 200,
-                        self.pixmap.height() / 200,
-                        QtCore.Qt.KeepAspectRatio)
-
                     if 0 == self.pixmap.width() and 0 == self.pixmap.height():
                         continue
-                    width = self.pixmap.width() / 200
-                    height = self.pixmap.height() / 200
-
-                    self.label = QtWidgets.QLabel(self.topFiller)
-                    self.label.setScaledContents(True)
-                    self.label.setObjectName("label")
-                    self.label.setText("TextLabel")
-
-                    if width > height:
-                        print("width")
-                        self.label.setGeometry(
-                            *position,
-                            self.pixmap.width() / width,
-                            self.pixmap.height() / width)
                     else:
-                        print("height")
-                        self.label.setGeometry(
-                            *position,
-                            self.pixmap.width() / height,
-                            self.pixmap.height() / height)
+                        print(index, position, 'file', os.path.join(root,filepath), self.pixmap.width(),self.pixmap.height())
+                        self.pixmap.scaled(
+                            self.pixmap.width() / 200,
+                            self.pixmap.height() / 200,
+                            QtCore.Qt.KeepAspectRatio)
 
-                    self.label.setPixmap(self.pixmap)
+                        width = self.pixmap.width() / 200
+                        height = self.pixmap.height() / 200
+
+                        self.label = QtWidgets.QLabel(self.topFiller)
+                        self.label.setScaledContents(True)
+                        self.label.setObjectName("label")
+                        self.label.setText("TextLabel")
+
+                        if width > height:
+                            print("width")
+                            self.label.setGeometry(QtCore.QRect(
+                                position[1], position[0],
+                                self.pixmap.width() / width,
+                                self.pixmap.height() / width))
+                        else:
+                            print("height")
+                            self.label.setGeometry(QtCore.QRect(
+                                position[1], position[0],
+                                self.pixmap.width() / height,
+                                self.pixmap.height() / height))
+
+                        # self.label.setPixmap(self.pixmap)
+                        self.label.setText(str(index)+"    label")
+                        index += 1
 
 
 if __name__ == "__main__":
