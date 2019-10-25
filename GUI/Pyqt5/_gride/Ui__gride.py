@@ -105,8 +105,8 @@ class Ui_MainWindow(QScrollArea):
                                 self.pixmap.width() / height,
                                 self.pixmap.height() / height))
 
-                        # self.label.setPixmap(self.pixmap)
-                        self.label.setText(str(index)+"    label")
+                        self.label.setPixmap(self.pixmap)
+                        # self.label.setText(str(index)+"    label")
                         index += 1
 
 

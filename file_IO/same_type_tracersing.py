@@ -8,7 +8,7 @@ import os, sys
 dir = r'C:\Users\zs\Pictures'
 
 Audio = []
-Pictures = [".jpg", ".jepg", ".png", ".gif"]
+Pictures = [".jpg", ".jepg", ".png", ".gif", "bmp"]
 folder = []
 Document = []
 Executable = []

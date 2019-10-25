@@ -6,7 +6,7 @@ Created on 2018年2月4日
 @author: Irony."[讽刺]
 @site: https://pyqt5.com , https://github.com/892768447
 @email: 892768447@qq.com
-@file: TencentMovieHotPlay
+@file: TencentMovieHotPlay_Flow
 @description: 
 '''
 import os
@@ -15,15 +15,21 @@ import webbrowser
 
 from PyQt5.QtCore import QSize, Qt, QUrl, QTimer, pyqtSignal
 from PyQt5.QtGui import QPainter, QFont, QLinearGradient, QGradient, QColor,\
-     QBrush, QPaintEvent, QPixmap
+    QBrush, QPaintEvent, QPixmap
 from PyQt5.QtNetwork import QNetworkAccessManager, QNetworkRequest
 from PyQt5.QtSvg import QSvgWidget
 from PyQt5.QtWidgets import QWidget, QApplication, QVBoxLayout, QLabel,\
-     QHBoxLayout, QSpacerItem, QSizePolicy, QScrollArea, QGridLayout,\
-     QAbstractSlider
+    QHBoxLayout, QSpacerItem, QSizePolicy, QScrollArea, QAbstractSlider
+
+from PyQt5.QtCore import QPoint, QRect, QSize, Qt
+from PyQt5.QtWidgets import (QApplication, QLayout, QPushButton, QSizePolicy,
+                             QWidget)
 
 from lxml.etree import HTML  # @UnresolvedImport
 
+
+__Author__ = "By: Irony.\"[讽刺]\nQQ: 892768447\nEmail: 892768447@qq.com"
+__Copyright__ = "Copyright (c) 2018 Irony.\"[讽刺]"
 __Version__ = "Version 1.0"
 
 # offset=0,30,60,90
@@ -71,10 +77,119 @@ Svg_icon_loading = '''<svg width="100%" height="100%" viewBox="0 0 38 38" xmlns=
 Actor = '''<a href="{href}" target="_blank" title="{title}" style="text-decoration: none;font-size: 12px;color: #999999;">{title}</a>&nbsp;'''
 
 
+
+
+
+class Window(QWidget):
+    def __init__(self):
+        super(Window, self).__init__()
+
+        flowLayout = FlowLayout()
+        flowLayout.addWidget(QPushButton("Short"))
+        flowLayout.addWidget(QPushButton("Longer"))
+        flowLayout.addWidget(QPushButton("Different text"))
+        flowLayout.addWidget(QPushButton("More text"))
+        flowLayout.addWidget(QPushButton("Even longer button text"))
+        self.setLayout(flowLayout)
+
+        self.setWindowTitle("Flow Layout")
+
+
+
+class FlowLayout(QLayout):
+    def __init__(self, parent=None, margin=0, spacing=-1):
+        super(FlowLayout, self).__init__(parent)
+
+        if parent is not None:
+            self.setContentsMargins(margin, margin, margin, margin)
+
+        self.setSpacing(spacing)
+
+        self.itemList = []
+
+    def __del__(self):
+        item = self.takeAt(0)
+        while item:
+            item = self.takeAt(0)
+
+    def addItem(self, item):
+        self.itemList.append(item)
+
+    def count(self):
+        return len(self.itemList)
+
+    def itemAt(self, index):
+        if index >= 0 and index < len(self.itemList):
+            return self.itemList[index]
+
+        return None
+
+    def takeAt(self, index):
+        if index >= 0 and index < len(self.itemList):
+            return self.itemList.pop(index)
+
+        return None
+
+    def expandingDirections(self):
+        return Qt.Orientations(Qt.Orientation(0))
+
+    def hasHeightForWidth(self):
+        return True
+
+    def heightForWidth(self, width):
+        height = self.doLayout(QRect(0, 0, width, 0), True)
+        return height
+
+    def setGeometry(self, rect):
+        super(FlowLayout, self).setGeometry(rect)
+        self.doLayout(rect, False)
+
+    def sizeHint(self):
+        return self.minimumSize()
+
+    def minimumSize(self):
+        size = QSize()
+
+        for item in self.itemList:
+            size = size.expandedTo(item.minimumSize())
+
+        margin, _, _, _ = self.getContentsMargins()
+
+        size += QSize(2 * margin, 2 * margin)
+        return size
+
+    def doLayout(self, rect, testOnly):
+        x = rect.x()
+        y = rect.y()
+        lineHeight = 0
+
+        for item in self.itemList:
+            wid = item.widget()
+            spaceX = self.spacing() + wid.style().layoutSpacing(QSizePolicy.PushButton,
+                                                                QSizePolicy.PushButton, Qt.Horizontal)
+            spaceY = self.spacing() + wid.style().layoutSpacing(QSizePolicy.PushButton,
+                                                                QSizePolicy.PushButton, Qt.Vertical)
+            nextX = x + item.sizeHint().width() + spaceX
+            if nextX - spaceX > rect.right() and lineHeight > 0:
+                x = rect.x()
+                y = y + lineHeight + spaceY
+                nextX = x + item.sizeHint().width() + spaceX
+                lineHeight = 0
+
+            if not testOnly:
+                item.setGeometry(QRect(QPoint(x, y), item.sizeHint()))
+
+            x = nextX
+            lineHeight = max(lineHeight, item.sizeHint().height())
+
+        return y + lineHeight - rect.y()
+
 class CoverLabel(QLabel):
 
     def __init__(self, cover_path, cover_title, video_url, *args, **kwargs):
         super(CoverLabel, self).__init__(*args, **kwargs)
+#         super(CoverLabel, self).__init__(
+#             '<html><head/><body><img src="{0}"/></body></html>'.format(os.path.abspath(cover_path)), *args, **kwargs)
         self.setCursor(Qt.PointingHandCursor)
         self.setScaledContents(True)
         self.setMinimumSize(220, 308)
@@ -101,18 +216,18 @@ class CoverLabel(QLabel):
             painter.save()
             fheight = self.fontMetrics().height()
             # 底部矩形框背景渐变颜色
-            bottomRectColor = QLinearGradient(
-                rect.width() / 2, rect.height() - 24 - fheight,
-                rect.width() / 2, rect.height())
-            bottomRectColor.setSpread(QGradient.PadSpread)
-            bottomRectColor.setColorAt(0, QColor(255, 255, 255, 70))
-            bottomRectColor.setColorAt(1, QColor(0, 0, 0, 50))
+            # bottomRectColor = QLinearGradient(
+            #     rect.width() / 2, rect.height() - 24 - fheight,
+            #     rect.width() / 2, rect.height())
+            # bottomRectColor.setSpread(QGradient.PadSpread)
+            # bottomRectColor.setColorAt(0, QColor(255, 255, 255, 70))
+            # bottomRectColor.setColorAt(1, QColor(0, 0, 0, 50))
             # 画半透明渐变矩形框
-            painter.setPen(Qt.NoPen)
-            painter.setBrush(QBrush(bottomRectColor))
-            painter.drawRect(rect.x(), rect.height() - 24 -
-                             fheight, rect.width(), 24 + fheight)
-            painter.restore()
+            # painter.setPen(Qt.NoPen)
+            # painter.setBrush(QBrush(bottomRectColor))
+            # painter.drawRect(rect.x(), rect.height() - 24 -
+            #                  fheight, rect.width(), 24 + fheight)
+            # painter.restore()
             # 距离底部一定高度画文字
             font = self.font() or QFont()
             font.setPointSize(8)
@@ -128,17 +243,17 @@ class ItemWidget(QWidget):
     def __init__(self, cover_path, figure_info, figure_title,
                  figure_score, figure_desc, figure_count, video_url, cover_url, img_path, *args, **kwargs):
         super(ItemWidget, self).__init__(*args, **kwargs)
-        self.setMaximumSize(220, 380)
-        self.setMaximumSize(220, 380)
+        self.setMaximumSize(220, 420)
+        self.setMaximumSize(220, 420)
         self.img_path = img_path
         self.cover_url = cover_url
         layout = QVBoxLayout(self)
-        layout.setContentsMargins(0, 0, 0, 0)
+        layout.setContentsMargins(10, 20, 10, 0)
         # 图片label
         self.clabel = CoverLabel(cover_path, figure_info, video_url, self)
         layout.addWidget(self.clabel)
 
-        # 片名和分数
+        片名和分数
         flayout = QHBoxLayout()
         flayout.addWidget(QLabel(figure_title, self))
         flayout.addItem(QSpacerItem(
@@ -156,8 +271,7 @@ class ItemWidget(QWidget):
         count_icon.setMaximumSize(16, 16)
         count_icon.load(Svg_icon_play_sm)
         blayout.addWidget(count_icon)
-        blayout.addWidget(
-            QLabel(figure_count, self, styleSheet="color: #999999;"))
+        blayout.addWidget(QLabel(figure_count, self, styleSheet="color: #999999;"))
         layout.addLayout(blayout)
 
     def setCover(self, path):
@@ -167,7 +281,7 @@ class ItemWidget(QWidget):
 
     def sizeHint(self):
         # 每个item控件的大小
-        return QSize(220, 380)
+        return QSize(220, 420)
 
     def event(self, event):
         if isinstance(event, QPaintEvent):
@@ -189,8 +303,7 @@ class GridWidget(QWidget):
 
     def __init__(self, *args, **kwargs):
         super(GridWidget, self).__init__(*args, **kwargs)
-        self._layout = QGridLayout(self, spacing=20)
-        self._layout.setContentsMargins(20, 20, 20, 20)
+        self._layout = FlowLayout(self)  # 使用自定义流式布局
         # 异步网络下载管理器
         self._manager = QNetworkAccessManager(self)
         self._manager.finished.connect(self.onFinished)
@@ -224,10 +337,6 @@ class GridWidget(QWidget):
         self._parseHtml(html)
         self.loadStarted.emit(False)
 
-    def splist(self, src, length):
-        # 等分列表
-        return (src[i:i + length] for i in range(len(src)) if i % length == 0)
-
     def _parseHtml(self, html):
         #         encoding = chardet.detect(html) or {}
         #         html = html.decode(encoding.get("encoding","utf-8"))
@@ -237,47 +346,34 @@ class GridWidget(QWidget):
         if not lis:
             self.Page = -1  # 后面没有页面了
             return
-        lack_count = self._layout.count() % 30  # 获取布局中上次还缺几个5行*6列的标准
-        row_count = int(self._layout.count() / 6)  # 行数
-        print("lack_count:", lack_count)
-        self.Page += 1  # 自增+1
-        if lack_count != 0:  # 上一次没有满足一行6个,需要补齐
-            lack_li = lis[:lack_count]
-            lis = lis[lack_count:]
-            self._makeItem(lack_li, row_count)  # 补齐
-            if lack_li and lis:
-                row_count += 1
-                self._makeItem(lis, row_count)  # 完成剩下的
-        else:
-            self._makeItem(lis, row_count)
+        self.Page += 1
+        self._makeItem(lis)
 
-    def _makeItem(self, li_s, row_count):
-        li_s = self.splist(li_s, 6)
-        for row, lis in enumerate(li_s):
-            for col, li in enumerate(lis):
-                a = li.find("a")
-                video_url = a.get("href")  # 视频播放地址
-                img = a.find("img")
-                cover_url = "http:" + img.get("r-lazyload")  # 封面图片
-                figure_title = img.get("alt")  # 电影名
-                figure_info = a.find("div/span")
-                figure_info = "" if figure_info is None else figure_info.text  # 影片信息
-                figure_score = "".join(li.xpath(".//em/text()"))  # 评分
-                # 主演
-                figure_desc = "<span style=\"font-size: 12px;\">主演：</span>" + \
-                    "".join([Actor.format(**dict(fd.items()))
-                             for fd in li.xpath(".//div[@class='figure_desc']/a")])
-                # 播放数
-                figure_count = (
-                    li.xpath(".//div[@class='figure_count']/span/text()") or [""])[0]
-                path = "cache/{0}.jpg".format(
-                    os.path.splitext(os.path.basename(video_url))[0])
-                cover_path = "Data/pic_v.png"
-                if os.path.isfile(path):
-                    cover_path = path
-                iwidget = ItemWidget(cover_path, figure_info, figure_title,
-                                     figure_score, figure_desc, figure_count, video_url, cover_url, path, self)
-                self._layout.addWidget(iwidget, row_count + row, col)
+    def _makeItem(self, lis):
+        for li in lis:
+            a = li.find("a")
+            video_url = a.get("href")  # 视频播放地址
+            img = a.find("img")
+            cover_url = "http:" + img.get("r-lazyload")  # 封面图片
+            figure_title = img.get("alt")  # 电影名
+            figure_info = a.find("div/span")
+            figure_info = "" if figure_info is None else figure_info.text  # 影片信息
+            figure_score = "".join(li.xpath(".//em/text()"))  # 评分
+            # 主演
+            figure_desc = "<span style=\"font-size: 12px;\">主演：</span>" + \
+                "".join([Actor.format(**dict(fd.items()))
+                         for fd in li.xpath(".//div[@class='figure_desc']/a")])
+            # 播放数
+            figure_count = (
+                li.xpath(".//div[@class='figure_count']/span/text()") or [""])[0]
+            path = "cache/{0}.jpg".format(
+                os.path.splitext(os.path.basename(video_url))[0])
+            cover_path = "Data/pic_v.png"
+            if os.path.isfile(path):
+                cover_path = path
+            iwidget = ItemWidget(cover_path, figure_info, figure_title,
+                                 figure_score, figure_desc, figure_count, video_url, cover_url, path, self)
+            self._layout.addWidget(iwidget)
 
 
 class Window(QScrollArea):

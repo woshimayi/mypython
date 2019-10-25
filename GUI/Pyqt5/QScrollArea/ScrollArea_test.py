@@ -28,7 +28,6 @@ class MainWindow(QMainWindow):
         w.setLayout(self.vbox)
         self.resize(250, 2000)
 
-
         self.desktop = QApplication.desktop()
  
         #获取显示器分辨率大小
@@ -46,10 +45,10 @@ if __name__ == "__main__":
     # mainwindow.show()
     # sys.exit(app.exec_())
 
-    positions = [(i, j) for i in range(20) for j in range(10)]
-    pos = [(i, j) for i in range(20) for j in range(20)]
-    for position, po in zip(positions, pos):
-        print(position[0], position[1], position)
+    positions = [(i, j) for i in range(6) for j in range(10)]
+    # pos = [(i, j) for i in range(20) for j in range(20)]
+    for position in positions:
+        print(position[0], position[1], *position)
 
 
         

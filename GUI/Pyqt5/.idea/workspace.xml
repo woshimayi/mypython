@@ -2,45 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6850a7e0-1e28-435a-9c55-d7b0671ac90c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Pyqt5.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Python+Cookbook/1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Python+Cookbook/2_string.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainwindow.ui" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../autoUploadFw/module/20180821.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../autoUploadFw/module/20180821.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../autoUploadFw/module/MyClass.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../autoUploadFw/module/MyClass.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../autoUploadFw/module/dist/123.upf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../autoUploadFw/module/dist/dist.rar" beforeDir="false" afterPath="$PROJECT_DIR$/../../autoUploadFw/module/dist/dist.rar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../file_IO/dir_operating.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../file_IO/dir_operating.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../saolei.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../temp.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../test/20190322095747.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../test/demo.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../test/dist/20190322095822.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../test/dist/20190323155223.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../test/dist/20190325093206.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../test/dist/20190328170115.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../test/dist/20190331165633.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../test/dist/20190401141405.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../test/dist/20190402091955.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../test/dist/20190403100836.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../test/dist/20190409113621.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../test/dist/20190418152122.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../test/dist/20190423192236.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../test/dist/20190618112959.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../test/dist/20190619093448.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../test/dist/20190625111233.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../test/dist/20190626093956.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../test/dist/20190710154756.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../test/dist/20190715115146.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../test/dist/20190716103109.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../test/dist/20190717094432.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../test/dist/20190718165953.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../test/dist/20190719091900.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../test_a.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../win_api/beautifulsoup.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../win_api/copy_mv.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../win_api/copy_mv.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HotPlaylist.py" beforeDir="false" afterPath="$PROJECT_DIR$/HotPlaylist.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/QScrollArea/ScrollArea_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/QScrollArea/ScrollArea_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_gride/Ui__gride.py" beforeDir="false" afterPath="$PROJECT_DIR$/_gride/Ui__gride.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hello/.eric6project/hello.e4q" beforeDir="false" afterPath="$PROJECT_DIR$/hello/.eric6project/hello.e4q" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hello/.eric6project/hello.e6t" beforeDir="false" afterPath="$PROJECT_DIR$/hello/.eric6project/hello.e6t" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/list_widget/.eric6project/list.e4q" beforeDir="false" afterPath="$PROJECT_DIR$/list_widget/.eric6project/list.e4q" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/list_widget/.eric6project/list.e6t" beforeDir="false" afterPath="$PROJECT_DIR$/list_widget/.eric6project/list.e6t" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../file_IO/same_type_tracersing.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../file_IO/same_type_tracersing.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -51,39 +23,37 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/list_widget/Ui_list.py">
+        <entry file="file://$PROJECT_DIR$/../../Python+Cookbook/1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="27" selection-start-line="27" selection-end-line="27" />
+            <state relative-caret-position="380">
+              <caret line="315" lean-forward="true" selection-start-line="315" selection-end-line="315" />
               <folding>
-                <element signature="e#235#277#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/list_widget/list.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="40">
-              <caret line="68" selection-start-line="68" selection-end-line="68" />
-              <folding>
-                <element signature="e#66#99#0" expanded="true" />
+                <element signature="e#0#43#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/img_display.py">
+        <entry file="file://$PROJECT_DIR$/../../Python+Cookbook/2_string.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="38" lean-forward="true" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
+            <state relative-caret-position="594">
+              <caret line="79" column="34" lean-forward="true" selection-start-line="79" selection-start-column="34" selection-end-line="79" selection-end-column="34" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>cover_title</find>
+      <find>QFont</find>
+      <find>portfolie</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
@@ -97,13 +67,18 @@
         <option value="$PROJECT_DIR$/list_widget/list.py" />
         <option value="$PROJECT_DIR$/list_widget/Ui_list.py" />
         <option value="$PROJECT_DIR$/img_display.py" />
+        <option value="$PROJECT_DIR$/HotPlaylist.py" />
+        <option value="$PROJECT_DIR$/_gride/Ui__gride.py" />
+        <option value="$PROJECT_DIR$/QButton/Ui_Button_test.py" />
+        <option value="$PROJECT_DIR$/../../Python+Cookbook/1.py" />
+        <option value="$PROJECT_DIR$/../../Python+Cookbook/2_string.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-8" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="1272" />
     <option name="y" value="-8" />
-    <option name="width" value="1232" />
+    <option name="width" value="1296" />
     <option name="height" value="1040" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -112,14 +87,34 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Pyqt5" type="b2602c69:ProjectViewProjectNode" />
+              <item name="python27" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Pyqt5" type="b2602c69:ProjectViewProjectNode" />
+              <item name="python27" type="462c0819:PsiDirectoryNode" />
+              <item name="module" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Pyqt5" type="b2602c69:ProjectViewProjectNode" />
+              <item name="python27" type="462c0819:PsiDirectoryNode" />
+              <item name="Python+Cookbook" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../test/client_camera.py" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../.." />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Console Font" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -133,8 +128,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.img_display">
-    <configuration name="Ui_list" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.2_string">
+    <configuration name="1" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Pyqt5" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -142,11 +137,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/list_widget" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../../Python+Cookbook" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/list_widget/Ui_list.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../../Python+Cookbook/1.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -155,7 +150,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="img_display" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="2_string" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Pyqt5" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../../Python+Cookbook" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../../Python+Cookbook/2_string.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="HotPlaylist" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Pyqt5" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -167,7 +183,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/img_display.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/HotPlaylist.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -176,7 +192,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="list" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="Ui_Button_test" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Pyqt5" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -184,11 +200,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/list_widget" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/QButton" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/list_widget/list.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/QButton/Ui_Button_test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -197,28 +213,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="pixmap_test" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Pyqt5" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pixmap_test.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="statusbar" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="button_close" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Pyqt5" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -230,7 +225,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/statusbar.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/button_close.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -241,11 +236,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.img_display" />
-        <item itemvalue="Python.list" />
-        <item itemvalue="Python.Ui_list" />
-        <item itemvalue="Python.statusbar" />
-        <item itemvalue="Python.pixmap_test" />
+        <item itemvalue="Python.2_string" />
+        <item itemvalue="Python.1" />
+        <item itemvalue="Python.Ui_Button_test" />
+        <item itemvalue="Python.HotPlaylist" />
+        <item itemvalue="Python.button_close" />
       </list>
     </recent_temporary>
   </component>
@@ -262,24 +257,33 @@
     </task>
     <servers />
   </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1227" height="1040" extended-state="7" />
+    <frame x="1272" y="-8" width="1296" height="1040" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16470589" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12470215" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.1771177" />
+      <window_info active="true" anchor="bottom" x="10" y="431" width="1190" height="161" id="Run" order="2" visible="true" weight="0.20572057" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32893288" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32893288" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32893288" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Python Console" order="10" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.32893288" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -370,10 +374,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.PyCharmCE2019.1/system/python_stubs/-861411949/PyQt5/QtWidgets/QLabel.py">
+    <entry file="file://$PROJECT_DIR$/img_display.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="258" column="8" selection-start-line="258" selection-start-column="8" selection-end-line="258" selection-end-column="8" />
+        <state relative-caret-position="300">
+          <caret line="20" column="38" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/list_widget/list.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="64" column="30" selection-start-line="64" selection-start-column="23" selection-end-line="64" selection-end-column="30" />
+          <folding>
+            <element signature="e#66#99#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -387,22 +401,135 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/list_widget/list.py">
+    <entry file="file://$PROJECT_DIR$/QScrollArea/ScrollArea_test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="68" selection-start-line="68" selection-end-line="68" />
+        <state relative-caret-position="320">
+          <caret line="16" column="17" lean-forward="true" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
           <folding>
-            <element signature="e#66#99#0" expanded="true" />
+            <element signature="e#0#10#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/img_display.py">
+    <entry file="file://$PROJECT_DIR$/button_close.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="38" lean-forward="true" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
+        <state relative-caret-position="640">
+          <caret line="34" column="18" selection-start-line="34" selection-start-column="18" selection-end-line="34" selection-end-column="18" />
+          <folding>
+            <element signature="e#156#166#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/.PyCharmCE2019.1/system/python_stubs/-861411949/PyQt5/QtWidgets/QWidget.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="849" column="83" lean-forward="true" selection-start-line="849" selection-start-column="83" selection-end-line="849" selection-end-column="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HotPlaylist.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-454">
+          <caret line="317" lean-forward="true" selection-start-line="317" selection-end-line="317" />
+          <folding>
+            <element signature="e#225#234#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharmCE2019.1/system/python_stubs/-861411949/PyQt5/QtWidgets/QLabel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="168" lean-forward="true" selection-start-line="168" selection-end-line="168" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/QButton/Ui_Button_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2460">
+          <caret line="123" lean-forward="true" selection-start-line="123" selection-end-line="123" />
+          <folding>
+            <element signature="e#398#407#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_gride/Ui__gride.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="39" column="45" lean-forward="true" selection-start-line="39" selection-start-column="45" selection-end-line="39" selection-end-column="45" />
+          <folding>
+            <element signature="e#232#274#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../git_template">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../setup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../module/hello.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../module/typedef.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../Python+Cookbook/1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="315" lean-forward="true" selection-start-line="315" selection-end-line="315" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../Python+Cookbook/2_string.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="79" column="34" lean-forward="true" selection-start-line="79" selection-start-column="34" selection-end-line="79" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>
