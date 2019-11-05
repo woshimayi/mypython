@@ -31,9 +31,9 @@ int test()
 	printf("4! == %d\n", fac(4));
 	printf("8! == %d\n", fac(8));
 	printf("12! == %d\n", fac(12));
-	strcpy_s(s, 1024, "abcdef");
+	strncpy(s, "abcdef", 1024);
 	printf("reversing 'abcdef', we get '%s'\n", reverse(s));
-	strcpy_s(s, 1024, "madam");
+	strncpy(s,"madam", 1024);
 	printf("reversing 'madam', we get '%s'\n", reverse(s));
 	return 0;
 }
@@ -58,7 +58,7 @@ static PyObject* Extest_doppel(PyObject *self, PyObject *args)
 		return NULL;
 	}
 	
-	retval = (PyObject*)Py_BuildValue("ss", orig_str, dupe_str=reverse(_strdup(orig_str)));
+	retval = (PyObject*)Py_BuildValue("ss", orig_str, dupe_str=reverse(strdup(orig_str)));
 	free(dupe_str);
 	return retval;
 }
