@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Project SYSTEM "Project-5.1.dtd">
 <!-- eric project file for project Button_test -->
-<!-- Saved: 2019-10-21, 16:25:06 -->
+<!-- Saved: 2019-10-28, 14:45:10 -->
 <!-- Copyright (C) 2019 ,  -->
 <Project version="5.1">
   <Language></Language>
@@ -13,8 +13,12 @@
   <Email></Email>
   <Eol index="0"/>
   <Sources>
+    <Source>Ui_Button_test.py</Source>
     <Source>__init__.py</Source>
   </Sources>
+  <Forms>
+    <Form>Button_test.ui</Form>
+  </Forms>
   <Vcs>
     <VcsType>None</VcsType>
   </Vcs>

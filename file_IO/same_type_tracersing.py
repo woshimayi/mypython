@@ -5,7 +5,6 @@ import os, sys
 
 # 遍历目录 找出某些类型的文件
 
-dir = r'C:\Users\zs\Pictures'
 
 Audio = []
 Pictures = [".jpg", ".jepg", ".png", ".gif", "bmp"]
@@ -13,7 +12,7 @@ folder = []
 Document = []
 Executable = []
 
-
+dir = r'C:\Users\zs\Pictures'
 
 def function(dir, file):
 	print("==========os.walk================")
