@@ -1,6 +1,6 @@
 import sys
 from PyQt5.QtWidgets import QWidget, QApplication
-from PyQt5.QtGui import QPainter, QPen, QColor, QBrush
+from PyQt5.QtGui import QPainter, QPen, QColor
 from PyQt5.QtCore import Qt
 
 class Example(QWidget):
@@ -23,8 +23,7 @@ class Example(QWidget):
 	def paintEvent(self, e):
 		qp = QPainter()
 		qp.begin(self)
-		# self.drawLines(qp)
-		self.drawCircle(qp)
+		self.drawLines(qp)
 		qp.end()
 
 	def drawLines(self, qp):
@@ -41,15 +40,6 @@ class Example(QWidget):
 
 		qp.setPen(QPen(QColor(255, 0, 0), 2))
 		qp.drawLine(self.width / 2, self.height / 2, self.width / 2, self.height / 2)
-
-
-
-	def drawCircle(self, qp):
-		qp.setPen(QPen(Qt.red, 2, Qt.SolidLine))
-
-		qp.drawEllipse(self.width / 2, self.height / 2, 40, 40)
-		qp.drawEllipse(self.width/2, self.height/2,     20, 20)
-
 
 		# pen.setStyle(Qt.DashLine)
 		# qp.setPen(pen)
