@@ -39,7 +39,7 @@ def CreateDirectory(DirectoryName):
     for l in DirectoryName:  # 如果文件夹名不为空，剔除其中的“/”
         if l != "/" and l != "\\":
             DirectoryNameNew.append(l)
-    root = r"E:\Python妹子图"
+    root = r".\妹子图"
     path = root + "".join(DirectoryNameNew)  # join将列表转为为字符串
     print("创建相册" + root + "".join(DirectoryNameNew))
     try:
@@ -240,4 +240,4 @@ if __name__ == '__main__':
             # print(XiangCePageUrl.index(xiangcepageurllist))
             GetPageImageUrl(xiangcepageurllist, mypath,
                             XiangCe.get(xiangceurllist))
-            time.sleep(1)
+            time.sleep(0.5)
