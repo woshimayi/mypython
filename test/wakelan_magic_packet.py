@@ -72,8 +72,6 @@ def send_magic_packet(*macs, **kwargs):
         raise TypeError('send_magic_packet() got an unexpected keyword '
                         'argument {!r}'.format(k))
 
-
-
     for mac in macs:
         packet = create_magic_packet(mac)
         packets.append(packet)
@@ -82,9 +80,10 @@ def send_magic_packet(*macs, **kwargs):
     sock.setsockopt(socket.SOL_SOCKET, socket.SO_BROADCAST, 1)
 
     # 如果输入的是域名，将域名转换为IP
-    ipv4_regex = re.compile(r'(?:25[0-5]|2[0-4]\d|[0-1]?\d?\d)(?:\.(?:25[0-5]|2[0-4]\d|[0-1]?\d?\d)){3}',re.IGNORECASE)
+    ipv4_regex = re.compile(
+        r'(?:25[0-5]|2[0-4]\d|[0-1]?\d?\d)(?:\.(?:25[0-5]|2[0-4]\d|[0-1]?\d?\d)){3}', re.IGNORECASE)
     if not ipv4_regex.match(ip):
-        ip=socket.gethostbyname(ip)
+        ip = socket.gethostbyname(ip)
     sock.connect((ip, port))
     for packet in packets:
         sock.send(packet)
