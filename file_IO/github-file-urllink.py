@@ -1,4 +1,4 @@
-# codeing=utf-8
+# -*- coding: UTF-8 -*-
 
 # <!DOCTYPE html>
 # <html lang="en">
@@ -9,11 +9,10 @@
 # <body>
 # 	<a href="http://www.baidu.com" target="_blank">百度网</a>
 # </body>
-# </html> 
-
+# </html>
+import linecache
 import os
 import sys
-
 
 
 html = """
@@ -73,7 +72,7 @@ htmlTail = """
 """
 
 
-dir  = r'/home/zs/Doc/mypython/'
+dir  = r'/home/zs/Doc/mypython/GUI'
 githubPrefix = r'https://github.com/woshimayi/mypython/blob/master/'
 
 def function(dir, file):
@@ -91,9 +90,21 @@ def function(dir, file):
 				for filepath in files:
 					if os.path.splitext(filepath)[1] in file:
 						githuburl = githubPrefix + root.split('/', 5)[5] + "/"+ filepath
-						# print(githuburl)
-						f.write("		<p><a href=\"" + githuburl + "\" target=\"_blank\">"+filepath+"</a></p>\n")
+						# 添加文件功能描述
+						getline_desc = root + "/" + filepath
+						desc = linecache.getline(getline_desc, 10).strip()
 						# print('github link url', githuburl)
+
+						print("============", filepath)
+						try:
+							if 'desc' in desc:
+								print('desc', desc, filepath)
+								url = desc.split(':')[-1]
+								f.write(u"		<p><a href=\"" + githuburl + "\" target=\"_blank\">" + filepath + ": " + url +"</a></p>\n")
+							else:
+								f.write(u"		<p><a href=\"" + githuburl + "\" target=\"_blank\">" + filepath + "</a></p>\n")
+						except:
+							pass
 						# os.startfile(exec)  # 执行文件
 			# for sub in dirs:
 			# 	print('dir', os.path.join(root,sub))
