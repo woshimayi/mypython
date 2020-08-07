@@ -73,7 +73,7 @@ htmlTail = """
 
 
 dir  = r'/home/zs/Doc/mypython/GUI'
-githubPrefix = r'https://github.com/woshimayi/mypython/blob/master/'
+githubPrefix = r'https://github.com/woshimayi/mypython/'
 
 def function(dir, file):
 	print("==========os.walk================")
@@ -82,30 +82,31 @@ def function(dir, file):
 		f.write(html)
 
 		for root,dirs,files in os.walk(dir):
-			# print("root=%s, dirs=%s, files=%s" % (root, dirs, files))
-			githubDir = githubPrefix + root.split('/', 5)[5]
+			print("root=%s, dirs=%s, files=%s" % (root, dirs, files))
+			githubDir = githubPrefix + root
 			if ".git" not in githubDir:
-				f.write("	<p><h3><a href=\""+githubDir+"\" target=\"_blank\">"+root.split('/', 5)[5]+"</a></h3></p>")
-			if 5 <= len(root.split('/', 5)):
-				for filepath in files:
-					if os.path.splitext(filepath)[1] in file:
-						githuburl = githubPrefix + root.split('/', 5)[5] + "/"+ filepath
-						# 添加文件功能描述
-						getline_desc = root + "/" + filepath
-						desc = linecache.getline(getline_desc, 10).strip()
-						# print('github link url', githuburl)
+				f.write("	<p><h3><a href=\""+githubDir+"blob/master/"+ "\" target=\"_blank\">"+root+"</a></h3></p>")
 
-						print("============", filepath)
-						try:
-							if 'desc' in desc:
-								print('desc', desc, filepath)
-								url = desc.split(':')[-1]
-								f.write(u"		<p><a href=\"" + githuburl + "\" target=\"_blank\">" + filepath + ": " + url +"</a></p>\n")
-							else:
-								f.write(u"		<p><a href=\"" + githuburl + "\" target=\"_blank\">" + filepath + "</a></p>\n")
-						except:
-							pass
-						# os.startfile(exec)  # 执行文件
+			for filepath in files:
+				if os.path.splitext(filepath)[1] in file:
+					githuburl = githubPrefix + root + "/"+ filepath
+					# 添加文件功能描述
+					# getline_desc = root + "/" + filepath
+					# desc = linecache.getline(getline_desc, 10).strip()
+					# print('github link url', githuburl)
+
+					# print("============", filepath)
+					# try:
+					# 	if 'desc' in desc:
+					# 		print('desc', desc, filepath)
+					# 		url = desc.split(':')[-1]
+					# 		f.write(u"		<p><a href=\"" + githuburl + "\" target=\"_blank\">" + filepath + ": " + url +"</a></p>\n")
+					# 	else:
+					# 		f.write(u"		<p><a href=\"" + githuburl + "\" target=\"_blank\">" + filepath + "</a></p>\n")
+					# except:
+					# 	pass
+					# os.startfile(exec)  # 执行文件
+					f.write(u"		<p><a href=\"" + githuburl + "\" target=\"_blank\">" + filepath + "</a></p>\n")
 			# for sub in dirs:
 			# 	print('dir', os.path.join(root,sub))
 		f.write(htmlTail)
@@ -114,6 +115,11 @@ def function(dir, file):
 if __name__=="__main__":
 	# file = input("Enter your input: ")
 	# print(file)
-	# if len(sys.argv) == 3:
+	print(len(sys.argv))
+	if len(sys.argv) < 2:
+		print("fail get error < 2")
+		sys.exit()
+	dir = sys.argv[1]
+	print(dir)
 	function(dir, [".py"])
 	print("finsh")

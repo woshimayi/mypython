@@ -3,4 +3,6 @@
 *.doc
 *.jpg
 build/
-
+*.bak
+*.spec
+.idea/
