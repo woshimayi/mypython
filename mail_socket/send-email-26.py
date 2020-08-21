@@ -22,11 +22,11 @@ def send_email(file):
     global send_flag
 
     # sender是邮件发送人邮箱，passWord是服务器授权码，mail_host是服务器地址（这里是QQsmtp服务器）
-    sender = 'xxxxxxxxxxxxxxxxx@qq.com'
-    passWord = 'xxxxxxxxxxxxxxxxxxx'
+    sender = 'xxxxxxxx@qq.com'
+    passWord = 'idsxvkjpyugbebei'
     mail_host = 'smtp.qq.com'
     # receivers是邮件接收人，用列表保存，可以添加多个
-    receivers = ['xxxxxxxxxxxxxxxx@qq.com']
+    receivers = ['xxxxxxxx@qq.com']
     send_flag = 1
 
     # 设置email信息
@@ -87,20 +87,37 @@ def send_email(file):
 
 def progress_bar():
     global send_flag
+    flag_tmp = 0
     while 1:
         print("\r", end="")
-        if send_flag != 5:
-            for i in range(0, 80):
+        if flag_tmp == send_flag:
+            continue
+        else:
+            flag_tmp = send_flag
+        # print(send_flag, flag_tmp)
+
+        if flag_tmp < 4:
+            for i in range(0, 21):
                 print("\r", end="")
                 print("{}%: ".format(i), "▋" * (i // 2), 'send email', end="")
                 sys.stdout.flush()
-                time.sleep(0.01)
+                time.sleep(0.1)
                 i = i + 1
-        else:
-            print("{}%: ".format(100), "▋" * (100 // 2), 'Success!', end="")
-            sys.stdout.flush()
-            time.sleep(0.01)
-        if send_flag == 5:
+        elif flag_tmp == 4:
+            for i in range(20, 81):
+                print("\r", end="")
+                print("{}%: ".format(i), "▋" * (i // 2), 'send email', end="")
+                sys.stdout.flush()
+                time.sleep(0.1)
+                i = i + 1
+        elif flag_tmp == 5:
+            for i in range(80, 101):
+                print("\r", end="")
+                print("{}%: ".format(i), "▋" * (i // 2), 'send email', end="")
+                sys.stdout.flush()
+                time.sleep(0.1)
+                i = i + 1
+        if flag_tmp == 5:
             break
 
 
@@ -121,8 +138,13 @@ if __name__ == "__main__":
 
     th1.start()
     th2.start()
+    threads=[]
+    threads.append(th1)
+    threads.append(th2)
 
-    th1.join(2)
-    th2.join(2)
+    for t in threads:
+        th1.join()
+    # print('退出主线程')
+
     Beep(500, 300)
     sys.exit()

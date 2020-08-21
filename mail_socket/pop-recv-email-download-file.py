@@ -1,5 +1,6 @@
 import logging
 import smtplib
+import sys
 import time
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
@@ -8,14 +9,12 @@ from email.header import decode_header, Header
 from email.utils import parseaddr
 import poplib
 
-
 # 设置logging的等级以及打印格式
-# logging.basicConfig(
-#     level=logging.DEBUG,
-# format='%(asctime)s - %(filename)s[line:%(lineno)d] - %(levelname)s:
-# %(message)s')
+from digital_my import BeautifulPicture
+
 logging.basicConfig(
-    level=logging.ERROR)
+    level=logging.ERROR,
+    format='[%(funcName)s:%(lineno)d] - %(levelname)s: %(message)s')
 
 
 class Auto_ctrl(object):
@@ -24,8 +23,8 @@ class Auto_ctrl(object):
     def __init__(self):
         logging.debug('==== recv email ====')
         # 输入邮件地址, 口令和POP3服务器地址:
-        self.email = 'xxxxxxxxxx@qq.com'
-        self.password = 'xxxxxxxxxxxxxxxx'  # 这个密码不是邮箱登录密码，是pop3服务密码
+        self.email = 'xxxxxxxxxxxx@qq.com'
+        self.password = 'xxxxxxxxxxxxxxxxxx'  # 这个密码不是邮箱登录密码，是pop3服务密码
         self.pop3_server = 'pop.qq.com'
         self.email_num = 0
 
@@ -98,13 +97,14 @@ class Auto_ctrl(object):
         index = len(mails)
         logging.error('未读邮件的数量 %s: 已知邮件: %s', index, self.email_num)
 
-        if self.email_num == 0: # 程序初始化
+        if self.email_num == 0:  # 程序初始化
             self.email_num = index
             return
-        elif self.email_num < index: # 接受新邮件
+        elif self.email_num < index:  # 接受新邮件
             self.email_num = index
             pass
-        elif self.email_num == index: #
+        elif self.email_num >= index:
+            self.email_num = index
             return
 
         ctrl = []
@@ -142,7 +142,7 @@ class Auto_ctrl(object):
         # passWord = 'xxxxxxxxxxxxxxxx'
         mail_host = 'smtp.qq.com'
         # receivers是邮件接收人，用列表保存，可以添加多个
-        receivers = ['xxxxxxxxxx@qq.com']
+        receivers = ['xxxxxxxxxxxxxx@qq.com']
 
         # 设置email信息
         msg = MIMEMultipart()
@@ -177,11 +177,45 @@ class Auto_ctrl(object):
 
 if __name__ == '__main__':
     A = Auto_ctrl()
+    base_url = 'https://www.dgtle.com/'
+
     while True:
-        time.sleep(30)
         logging.error('sleep 30 secend')
         ctrl = A.recv_email()
-        if ctrl:
+        logging.error(ctrl)
+        if not ctrl:
+            time.sleep(30)
+            continue
+
+        if 'dgtle' in ctrl[3]:
             logging.error(ctrl)
-            A.send_email("abcdefghijklmnopquvwxyz")
+
+            tmp_index = ctrl[3].split('\r\n')
+            for i in range(len(tmp_index)):
+                logging.error('tmp %s' % tmp_index[i])
+                url = ''
+                if 'http' in tmp_index[i]:
+                    logging.error('tmp %s' % tmp_index[i])
+                    if 'opser.wap.dgtle' in tmp_index[i] or 'm.dgtle' in tmp_index[i]:
+                        if 'interestTopicDetails' in tmp_index[i]:
+                            logging.error('interestTopicDetails %s ' %
+                                          tmp_index[i].split('/')[-1])
+                            url = base_url + 'inst-' + \
+                                tmp_index[i].split('/')[-1] + '-1.html'
+                        elif 'article' in tmp_index[i]:
+                            url = base_url + 'article-' + \
+                                tmp_index[i].split('/')[-1] + '-1.html'
+                    else:
+                        logging.error('web %s' % tmp_index[i])
+                        url = tmp_index[i]
+                    break
+
+            if url:
+                path = r'./get_pic' + \
+                       str(time.strftime("%Y%m%d%H%M%S", time.localtime()))
+                logging.error('url %s' % url)
+                be = BeautifulPicture()
+                be.mk_dir(path)
+                be.get_pic(url)
+                A.send_email(tmp_index[0])
             ctrl.clear()
