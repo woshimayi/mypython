@@ -22,11 +22,11 @@ def send_email(file):
     global send_flag
 
     # sender是邮件发送人邮箱，passWord是服务器授权码，mail_host是服务器地址（这里是QQsmtp服务器）
-    sender = 'xxxxxxxx@qq.com'
-    passWord = 'idsxvkjpyugbebei'
+    sender = 'xxxxxxxxxxx@qq.com'
+    passWord = 'xxxxxxxxxxxxxxx'
     mail_host = 'smtp.qq.com'
     # receivers是邮件接收人，用列表保存，可以添加多个
-    receivers = ['xxxxxxxx@qq.com']
+    receivers = ['xxxxxxxxxxxx@qq.com', 'xxxxxxxxxxxxxxx@xxxxx.cn', 'xxxxxxxxxxxxxx@xxxxx.cn']
     send_flag = 1
 
     # 设置email信息
@@ -71,11 +71,20 @@ def send_email(file):
         # s.set_debuglevel(1)
         s.login(sender, passWord)
         send_flag = 4
-        # 给receivers列表中的联系人逐个发送邮件
-        for i in range(len(receivers)):
-            to = receivers[i]
-            msg['To'] = to
-            s.sendmail(sender, to, msg.as_string())
+        if msg_content.split('.')[-1] in ['txt', 'html', 'pdf', 'epub', 'mobi', 'azw3']:
+            flag = True
+        else:
+            flag = False
+
+        if flag == True:
+            # 给receivers列表中的联系人逐个发送邮件
+            for i in range(len(receivers)):
+                to = receivers[i]
+                msg['To'] = to
+                s.sendmail(sender, to, msg.as_string())
+                print('Success!', end='')
+        else:
+            s.sendmail(sender, receivers[0], msg.as_string())
             print('Success!', end='')
         s.quit()
         send_flag = 5
