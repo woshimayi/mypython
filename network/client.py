@@ -10,4 +10,4 @@ port = 12345                # 设置端口好
 
 s.connect((host, port))
 print(s.recv(1024))
-s.close()  
+s.close()

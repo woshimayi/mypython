@@ -22,18 +22,18 @@ def send_email(file):
     global send_flag
 
     # sender是邮件发送人邮箱，passWord是服务器授权码，mail_host是服务器地址（这里是QQsmtp服务器）
-    sender = 'xxxxxxxxxxx@qq.com'
-    passWord = 'xxxxxxxxxxxxxxx'
+    sender = 'xxxxxxxxxxxxxxx.com'
+    passWord = 'xxxxxxxxxxxxxxxxxxx'
     mail_host = 'smtp.qq.com'
     # receivers是邮件接收人，用列表保存，可以添加多个
-    receivers = ['xxxxxxxxxxxx@qq.com', 'xxxxxxxxxxxxxxx@xxxxx.cn', 'xxxxxxxxxxxxxx@xxxxx.cn']
+    receivers = ['xxxxxxxxxxxxxxx@qq.com']
     send_flag = 1
 
     # 设置email信息
     msg = MIMEMultipart()
     # 邮件主题
     # msg['Subject'] = input(f"{'请输入邮件主题：'}")
-    msg['Subject'] = str(time.strftime("%Y%m%d%H%M%S", time.localtime()))
+    msg['Subject'] = str(time.strftime("%Y%m%d%H%M%S", time.localtime())) +': '+ filename
     # 发送方信息
     msg['From'] = sender
     # 邮件正文是MIMEText:
@@ -131,14 +131,14 @@ def progress_bar():
 
 
 if __name__ == "__main__":
-    if 2 != len(sys.argv):
-        print("get file fail")
-        sys.exit()
-
-    print(sys.argv[1])
+    # if 2 != len(sys.argv):
+    #     print("get file fail")
+    #     sys.exit()
+    #
+    # print(sys.argv[1])
     # input("input file:")
-    # file = r'C:\Users\zs\Pictures\105846277.jpg'
-    file = sys.argv[1]
+    file = r'C:\Users\zs\Pictures\105846277.jpg'
+    # file = sys.argv[1]
     # print(file.split('\\')[-1])
 
     Beep(400, 100)

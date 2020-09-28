@@ -23,9 +23,9 @@ class Auto_ctrl(object):
     def __init__(self):
         logging.debug('==== recv email ====')
         # 输入邮件地址, 口令和POP3服务器地址:
-        self.email = 'xxxxxxxxxxxx@qq.com'
-        self.password = 'xxxxxxxxxxxxxxxxxx'  # 这个密码不是邮箱登录密码，是pop3服务密码
-        self.pop3_server = 'pop.qq.com'
+        self.email = '@qq.com'
+        self.password = 'xxxxxxxxxxxxxxxx'  # 这个密码不是邮箱登录密码，是pop3服务密码
+        self.pop3_server = 'xxxxxxxxxxxx'
         self.email_num = 0
 
     def decode_str(self, s):
@@ -142,7 +142,7 @@ class Auto_ctrl(object):
         # passWord = 'xxxxxxxxxxxxxxxx'
         mail_host = 'smtp.qq.com'
         # receivers是邮件接收人，用列表保存，可以添加多个
-        receivers = ['xxxxxxxxxxxxxx@qq.com']
+        receivers = ['xxxxxxxxxxxxxx']
 
         # 设置email信息
         msg = MIMEMultipart()

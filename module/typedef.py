@@ -5,15 +5,18 @@
 
 
 def _provate_l(name):
-	return 'Hello ,%s' % name
+    return 'Hello ,%s' % name
+
 
 def _private_2(name):
-	return 'Hi, %s' % name
+    return 'Hi, %s' % name
+
 
 def greeting(name):
-	if len(name) > 3:
-		return _provate_l(name)
-	else:
-		return _private_2(name)
+    if len(name) > 3:
+        return _provate_l(name)
+    else:
+        return _private_2(name)
+
 
 print greeting("asdasdasdas")
