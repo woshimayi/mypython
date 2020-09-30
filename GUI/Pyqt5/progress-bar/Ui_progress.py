@@ -19,7 +19,7 @@ class Ui_MainWindow(object):
         self.centralWidget.setObjectName("centralWidget")
         self.progressBar = QtWidgets.QProgressBar(self.centralWidget)
         self.progressBar.setGeometry(QtCore.QRect(90, 50, 271, 23))
-        self.progressBar.setProperty("value", 24)
+        self.progressBar.setProperty("value", 0)
         self.progressBar.setObjectName("progressBar")
         self.pushButton = QtWidgets.QPushButton(self.centralWidget)
         self.pushButton.setGeometry(QtCore.QRect(170, 100, 75, 23))
@@ -28,37 +28,53 @@ class Ui_MainWindow(object):
         self.textBrowser.setGeometry(QtCore.QRect(20, 130, 381, 91))
         self.textBrowser.setObjectName("textBrowser")
         MainWindow.setCentralWidget(self.centralWidget)
-
+        
         self.timer = QBasicTimer()
         self.step = 0
-
+        self.send_flag = 0
+        
         self.retranslateUi(MainWindow)
-        self.pushButton.clicked.connect(self.doAction)
+        # self.pushButton.clicked.connect(self.doAction)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
-
+    
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.pushButton.setText(_translate("MainWindow", "PushButton"))
-        # self.progressBar.setValue(23)
-
+        self.pushButton.setText(_translate("MainWindow", "Start"))
+        self.doAction()
+        
     def timerEvent(self, e):
         if self.step >= 100:
-            self.timer.stop()
             self.pushButton.setText('Finshed')
+            self.timer.stop()
+            self.close()
             return
-    
-        self.step = self.step + 1
+
+        print(self.send_flag)
+        if self.send_flag < 4:
+            self.step = self.step + 1
+        elif self.send_flag == 4:
+            self.step = self.send_flag * 20 + 1
+            self.timer.stop()
+        elif self.send_flag >= 5:
+            self.step = self.send_flag * 20 + 1
+            self.timer.stop()
+
+        # print(self.step)
         self.progressBar.setValue(self.step)
 
+    
+    
     def doAction(self):
         if self.timer.isActive():
-            self.timer.stop()
+            # self.timer.stop()
             self.pushButton.setText('Start')
         else:
             self.timer.start(100, self)
-            self.pushButton.setText("Stop")
-        
+            # self.pushButton.setText("Stop")
+            
+    
+    
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)

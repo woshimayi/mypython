@@ -11,7 +11,7 @@ class Example(QMainWindow):
 
 	def  initUI(self):
 		self.pbar = QProgressBar(self)
-		self.pbar.setGeometry(30, 40, 200, 25)
+		self.pbar.setGeometry(30, 40, 200, 30)
 
 		self.btn = QPushButton('Start', self)
 		self.btn.move(40, 80)
@@ -20,7 +20,7 @@ class Example(QMainWindow):
 		self.timer = QBasicTimer()
 		self.step = 0
 
-		self.setGeometry(300, 300, 200, 200)
+		self.setGeometry(300, 300, 230, 230)
 		self.setWindowTitle("QprogressBar")
 		self.show()
 

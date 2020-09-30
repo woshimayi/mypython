@@ -45,7 +45,7 @@ class Ui_MainWindow(QScrollArea):
         # 创建滚动条窗口
         self.topFiller = QtWidgets.QWidget(self.centralWidget)
         self.topFiller.setMinimumSize(
-            self.desktop.width()-80, self.desktop.height()*6)  # 设置滚动条的尺寸
+            self.desktop.width() - 80, self.desktop.height() * 6)  # 设置滚动条的尺寸
 
         # 创建一个滚动条
         self.scroll = QScrollArea()
@@ -78,7 +78,15 @@ class Ui_MainWindow(QScrollArea):
                     if 0 == self.pixmap.width() and 0 == self.pixmap.height():
                         continue
                     else:
-                        print(index, position, 'file', os.path.join(root,filepath), self.pixmap.width(),self.pixmap.height())
+                        print(
+                            index,
+                            position,
+                            'file',
+                            os.path.join(
+                                root,
+                                filepath),
+                            self.pixmap.width(),
+                            self.pixmap.height())
                         self.pixmap.scaled(
                             self.pixmap.width() / 200,
                             self.pixmap.height() / 200,

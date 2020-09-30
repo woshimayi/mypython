@@ -14,13 +14,12 @@ from winsound import Beep
 send_flag = 0
 
 
-def send_email(file):
+def send_email(file, send_flag):
     if file is None:
         return
     # 发送文件名
     filename = file.split('\\')[-1]
-    global send_flag
-
+    
     # sender是邮件发送人邮箱，passWord是服务器授权码，mail_host是服务器地址（这里是QQsmtp服务器）
     sender = '2638288078@qq.com'
     passWord = 'idsxvkjpyugbebei'
@@ -143,7 +142,7 @@ if __name__ == "__main__":
 
     Beep(400, 100)
     th1 = threading.Thread(target=progress_bar)
-    th2 = threading.Thread(target=send_email, args=(file,))
+    th2 = threading.Thread(target=send_email, args=(file,send_flag,))
 
     th1.start()
     th2.start()

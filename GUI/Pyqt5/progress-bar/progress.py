@@ -5,14 +5,23 @@ Module implementing MainWindow.
 """
 import threading
 
-from PyQt5.QtCore import pyqtSlot
+from PyQt5.QtCore import pyqtSlot, QDateTime, QThread, pyqtSignal
 from PyQt5.QtWidgets import QMainWindow, QApplication
 from Ui_progress import Ui_MainWindow
 import sys, os
 from send_email import send_email
 
+class BackendThread(QThread):
+    # 通过类成员对象定义信号
+    update_date = pyqtSignal(str)
 
-send_flag = 0
+    # 处理业务逻辑
+    def run(self):
+        while True:
+            data = QDateTime.currentDateTime()
+            currTime = data.toString("yyyy-MM-dd hh:mm:ss")
+            self.update_date.emit( str(currTime) )
+            time.sleep(1)
 
 class MainWindow(QMainWindow, Ui_MainWindow):
     """
@@ -61,12 +70,6 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         @type int
         """
         # TODO: not implemented yet
-        # file = r'C:\Users\zs\Pictures\105846277.jpg'
-        #
-        # th2 = threading.Thread(target=send_email, args=(file,))
-        # th2.start()
-        # raise NotImplementedError
-        # self.progressBar.setValue(50)
 
 
     @pyqtSlot()
@@ -78,8 +81,12 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         print("doAction")
         # self.pushButton.setText("ssssssss")
         # self.textBrowser.setText("sdasdasdas")
-        # file = r'C:\Users\zs\Pictures\105846277.jpg'
-        # send_email(file)
+        if self.pushButton.text() == "Start":
+            file = r'C:\Users\zs\Pictures\105846277.jpg'
+            # th2 = threading.Thread(target=send_email, args=(file, self.send_flag,))
+            # th2.start()
+        elif self.pushButton.text() == "Finshed":
+            self.close()
         # raise NotImplementedError
         # print(self.progressBar.value())
         # self.progressBar.setValue(23)
