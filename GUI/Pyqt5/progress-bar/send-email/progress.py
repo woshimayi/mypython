@@ -1,17 +1,12 @@
 # -*- coding: utf-8 -*-
-'''
-@author: woshimayi
-@license: (C) Copyright 2015-2049, Node Supply Chain Manager Corporation Limited.
-@contact: 2638288078@qq.com
-@software: garner
-@file: progress.py
-@time: 2020/9/30
-@desc: pyqt5 send email progress
-'''
 
+"""
+Module implementing MainWindow.
+"""
 import threading
 import time
-from PyQt5.QtCore import pyqtSlot, QDateTime, QThread, pyqtSignal, QTimer
+
+from PyQt5.QtCore import pyqtSlot, QDateTime, QThread, pyqtSignal
 from PyQt5.QtWidgets import QMainWindow, QApplication, QDialog
 from Ui_progress import Ui_MainWindow
 
@@ -23,15 +18,12 @@ from email.mime.text import MIMEText
 from email.mime.base import MIMEBase
 from email.mime.multipart import MIMEMultipart
 
-from winsound import Beep
-
 
 class BackendThread(QThread):
     # 通过类成员对象定义信号
     update_date = pyqtSignal(int)
 
     """docstring for ClassName"""
-
     def __init__(self, filename):
         super(BackendThread, self).__init__()
         self.file = filename
@@ -42,21 +34,18 @@ class BackendThread(QThread):
         file_name = self.file.split('\\')[-1]
 
         # sender是邮件发送人邮箱，passWord是服务器授权码，mail_host是服务器地址（这里是QQsmtp服务器）
-        sender = 'xxxxxxxxxxxxxxxxxxxx'
-        passWord = 'xxxxxxxxxxxxxxxxxxxx'
-        mail_host = 'xxxxxxxxxxxxxxxxxxxx'
+        sender = '2638288078@qq.com'
+        passWord = 'idsxvkjpyugbebei'
+        mail_host = 'smtp.qq.com'
         # receivers是邮件接收人，用列表保存，可以添加多个
-        receivers = ['xxxxxxxxxxxxxxxxxxxx']
+        receivers = ['2638288078@qq.com']
         self.update_date.emit(1)
 
         # 设置email信息
         msg = MIMEMultipart()
         # 邮件主题
         # msg['Subject'] = input(f"{'请输入邮件主题：'}")
-        msg['Subject'] = str(
-            time.strftime(
-                "%Y%m%d%H%M%S",
-                time.localtime())) + ': ' + file_name
+        msg['Subject'] = str(time.strftime("%Y%m%d%H%M%S", time.localtime())) + ': ' + file_name
         # 发送方信息
         msg['From'] = sender
         # 邮件正文是MIMEText:
@@ -94,13 +83,12 @@ class BackendThread(QThread):
             # s.set_debuglevel(1)
             s.login(sender, passWord)
             self.update_date.emit(4)
-            if msg_content.split('.')[-1] in ['txt',
-                                              'html', 'pdf', 'epub', 'mobi', 'azw3']:
+            if msg_content.split('.')[-1] in ['txt', 'html', 'pdf', 'epub', 'mobi', 'azw3']:
                 flag = True
             else:
                 flag = False
-
-            if flag:
+    
+            if flag == True:
                 # 给receivers列表中的联系人逐个发送邮件
                 for i in range(len(receivers)):
                     to = receivers[i]
@@ -109,12 +97,12 @@ class BackendThread(QThread):
                     print('Success!', end='')
             else:
                 s.sendmail(sender, receivers[0], msg.as_string())
-                self.update_date.emit(5)
                 print('Success!', end='')
             s.quit()
+            self.update_date.emit(5)
+            # print ("All emails have been sent over!", end='')
         except smtplib.SMTPException as e:
             print("Falied,%s", e)
-            self.update_date.emit(6)
         # 登录并发送邮件
 
 
@@ -122,79 +110,78 @@ class MainWindow(QDialog, Ui_MainWindow):
     """
     Class documentation goes here.
     """
-
     def __init__(self, filename, parent=None):
         """
         Constructor
-
+        
         @param parent reference to the parent widget
         @type QWidget
         """
         super(MainWindow, self).__init__(parent)
         self.setupUi(self)
-        Beep(400, 100)
         self.filename = filename
         self.timeThread = BackendThread(self.filename)
         self.timeThread.update_date.connect(self.chang_time)
         self.timeThread.start()
-
+        
     @pyqtSlot(str)
     def on_progressBar_objectNameChanged(self, objectName):
         """
         Slot documentation goes here.
-
+        
         @param objectName DESCRIPTION
         @type str
         """
         # TODO: not implemented yet
         raise NotImplementedError
-
+    
     @pyqtSlot(str)
     def on_progressBar_windowIconTextChanged(self, iconText):
         """
         Slot documentation goes here.
-
+        
         @param iconText DESCRIPTION
         @type str
         """
         # TODO: not implemented yet
         raise NotImplementedError
 
+    
     @pyqtSlot(int)
     def on_progressBar_valueChanged(self, value):
         """
         Slot documentation goes here.
-
+        
         @param value DESCRIPTION
         @type int
         """
         # TODO: not implemented yet
 
     def chang_time(self, value):
-        self.progressBar.setValue(value * 20)
-        if value <= 4:
+        self.progressBar.setValue(value*20)
+        self.label.setText(str(value))
+        if value == 1:
+            self.label.setText("send email ready")
+        elif value >= 2 or value <= 4:
             self.label.setText("sending")
         elif value == 5:
             self.label.setText("send success")
-            QTimer.singleShot(1000, app.quit)
-            Beep(500, 300)
-            # self.close()
-        # else:
-        #     self.label.setText("send fail")
-        #     time.sleep(2)
-        #     self.close()
-
-
+            time.sleep(2)
+            self.close()
+    
 if __name__ == "__main__":
-    # if 2 != len(sys.argv):
-    #     print("get file fail")
-    #     sys.exit()
+    if 2 != len(sys.argv):
+        print("get file fail")
+        sys.exit()
 
-    # print(sys.argv[1])
-    # print(sys.argv)
-    # filename = sys.argv[1]
+    print(sys.argv[1])
+    # filename = r'C:\Users\zs\Pictures\微信图片_20200928180107.jpg'
+    print(sys.argv)
+    filename = sys.argv[1]
 
     app = QApplication(sys.argv)
     ui = MainWindow(filename)
     ui.show()
     sys.exit(app.exec_())
+    
+

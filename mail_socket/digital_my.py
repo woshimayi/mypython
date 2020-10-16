@@ -14,11 +14,13 @@ logging.basicConfig(
     level=logging.ERROR,
     format='[%(funcName)s:%(lineno)d] - %(levelname)s: %(message)s')
 
+
 class BeautifulPicture:
     def __init__(self):
         self.headers = {
             'User-Agent': "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.96 Safari/537.36",
             'authorization': ""}
+
     def __del__(self):
         logging.debug("del class")
 
@@ -49,17 +51,21 @@ class BeautifulPicture:
         soup.prettify()
         logging.debug('%s' % soup)
         i = 0
-        for jpg_url in soup.find_all('img'):
+        for jpg_url in soup.find_all(
+            'img',
+            class_=[
+                "rich_pages",
+                "item item-image",
+                "imgDeal"]):    # 添加 过滤参数，提高效率
             i += 1
-            # logging.debug(jpg_url['src'])
+            logging.error(jpg_url)
             time.sleep(0.5)
-            if 'http' in jpg_url['src']:
+            if 'http' in jpg_url['data-src'] or 'http' in jpg_url['src']:
                 logging.error(str(time.strftime("%Y%m%d%H%M%S",
-                                        time.localtime())) + str(i) + '.jpg')
-                self.save_img(
-                    jpg_url['src'], str(
-                        time.strftime(
-                            "%Y%m%d%H%M%S", time.localtime())) + str(i) + '.jpg')
+                                                time.localtime())) + '_' + str(i) + '.jpg')
+                self.save_img(jpg_url['data-src'],
+                              str(time.strftime("%Y%m%d%H%M%S",
+                                                time.localtime())) + '_' + str(i) + '.jpg')
         os.chdir('../')
 
     def get_next_url(self):
@@ -78,7 +84,10 @@ if __name__ == '__main__':
     be = BeautifulPicture()
     path = r'./get_pic' + str(time.strftime("%Y%m%d%H%M%S", time.localtime()))
     be.mk_dir(path)
-    url = r'https://www.dgtle.com/inst-1646420-1.html'
+    # url = r'https://mp.weixin.qq.com/s/h33VlNl9SF2-E1h6xm0uYA'
+    # url = r'https://mp.weixin.qq.com/s/dV9u9wStjhB9PSHweCg3jg'
+    # url = r'https://mp.weixin.qq.com/s/9j_7R6AvtdK5Uu4tdPlcTA'
+    url = r'https://www.dgtle.com/article-1589690-1.html'
     # index = url.split('/')[-1]
     # url = base_url+''+'inst-'+index+'-1.html'
     logging.debug(url)

@@ -38,8 +38,8 @@ class Ui_download(object):
 		self.progressBar.setProperty("value", 0)
 		self.progressBar.setAlignment(QtCore.Qt.AlignLeading | QtCore.Qt.AlignLeft | QtCore.Qt.AlignVCenter)
 		self.progressBar.setObjectName("progressBar")
-		
 		self.gridLayout.addWidget(self.progressBar, 1, 0, 1, 1)
+		
 		self.label = QtWidgets.QLabel(Dialog)
 		self.label.setObjectName("label")
 		

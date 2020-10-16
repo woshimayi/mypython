@@ -25,8 +25,8 @@ import sys
 import requests
 
 
-class downloadThread(QThread):
-	download_proess_signal = pyqtSignal(int)
+class downloadThread(QThread):   # 处理后台进程
+	download_proess_signal = pyqtSignal(int)    # 槽函数链接变量
 	
 	def __init__(self, download_url, filesize, fileobj, buffer):
 		super(downloadThread, self).__init__()
@@ -75,7 +75,7 @@ class download(QDialog, Ui_download):
 		self.auto_close = auto_close
 		self.download()
 	
-	def download(self):
+	def download(self):     # 主进程
 		self.filesize = requests.get(self.download_url, stream=True).headers['Content-Length']
 		# path = os.path.join(".update", os.path.basename(self.download_url))
 		self.fileobj = open("update.bin", 'wb')
@@ -83,7 +83,7 @@ class download(QDialog, Ui_download):
 		self.downloadThread.download_proess_signal.connect(self.change_progressbar_value)
 		self.downloadThread.start()
 	
-	def change_progressbar_value(self, value):
+	def change_progressbar_value(self, value):  # 槽函数处理进程
 		self.progressBar.setValue(value)
 		if self.auto_close and value == 100:
 			self.close()
