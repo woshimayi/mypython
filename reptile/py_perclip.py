@@ -1,3 +1,6 @@
+# python 复制剪贴板内容
+
+
 import pyperclip
 import time
 
