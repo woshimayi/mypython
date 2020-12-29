@@ -36,14 +36,11 @@ class Serial_My(object):
         
         self.serial_find()
 
-        self.ser = serial.Serial(self.portx, self.bps, timeout=self.timex)
-    
     def __del__(self):
         print('__del__')
     
     def serial_find(self):
         self.port_list = list(serial.tools.list_ports.comports())
-        # print(self.port_list)
 
         if len(self.port_list) == 0:
             print("无可用串口！")
@@ -54,6 +51,7 @@ class Serial_My(object):
 
         if 1 == len(self.open_port):
             self.portx = self.open_port[0].split(' ')[0]
+            self.ser = serial.Serial(self.portx, self.bps, timeout=self.timex)
     
     def serial_read(self):
         try:

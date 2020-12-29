@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 #!/usr/bin/env python
 # encoding: utf-8
 '''
@@ -10,6 +11,8 @@
 @desc: 下载数字尾巴图片
 '''
 
+
+import clipboard
 from bs4 import BeautifulSoup
 import requests
 import re
@@ -40,12 +43,11 @@ class BeautifulPicture:
 
     def save_img(self, url, name):
         img = requests.get(url)
-        print('1')
-        f = open(name, 'wb')
-        print('2')
-        f.write(img.content)
-        print(name, '保存成功')
-        f.close()
+        if len(img.content) > 30000:
+            f = open(name, 'wb')
+            f.write(img.content)
+            print(name, '保存成功')
+            f.close()
 
     def get_pic(self, url):
         r = requests.get(url, headers=self.headers, stream=True)
@@ -60,9 +62,10 @@ class BeautifulPicture:
         i = 0
         for jpg_url in soup.find_all('img'):
             i += 1
+
+            # print(jpg_url['src'])
             time.sleep(0.5)
-            if 'http' in jpg_url:
-                print(jpg_url)
+            if 'http' in jpg_url['src']:
                 # print(jpg_url['alt'])
                 print(str(time.strftime("%Y%m%d%H%M%S",
                                         time.localtime())) + str(i) + '.jpg')
@@ -85,8 +88,12 @@ if __name__ == '__main__':
     if len(sys.argv) < 3:
         print("argc less three")
     be = BeautifulPicture()
-    path = r'./get_pic' + str(time.strftime("%Y%m%d%H%M%S", time.localtime()))
+    os.chdir(r'C:/Users/zs-work/Pictures/')
+    print(os.getcwd())
+
+    path = r'E:/相册/上海2020/get_pic' + str(time.strftime("%Y%m%d%H%M%S", time.localtime()))
     be.mk_dir(path)
+
     # url = r'https://opser.wap.dgtle.com/#/interestTopicDetails/1646384'
     # index = url.split('/')[-1]
     # url = base_url+''+'inst-'+index+'-1.html'
@@ -94,3 +101,10 @@ if __name__ == '__main__':
     be.get_pic(sys.argv[1])
 
 
+    # url  = sys.argv[1]
+    url = clipboard.paste()
+    print(url)
+    if 'http' in url and 'html' in url:
+        be.get_pic(url)
+    else:
+        print('no html')

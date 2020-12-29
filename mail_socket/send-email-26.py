@@ -22,11 +22,11 @@ def send_email(file):
     global send_flag
 
     # sender是邮件发送人邮箱，passWord是服务器授权码，mail_host是服务器地址（这里是QQsmtp服务器）
-    sender = 'xxxxxxxxxxxxxxx.com'
-    passWord = 'xxxxxxxxxxxxxxxxxxx'
+    sender = '2638288078@qq.com'
+    passWord = 'idsxvkjpyugbebei'
     mail_host = 'smtp.qq.com'
     # receivers是邮件接收人，用列表保存，可以添加多个
-    receivers = ['xxxxxxxxxxxxxxx@qq.com']
+    receivers = ['2638288078@qq.com']
     send_flag = 1
 
     # 设置email信息
@@ -131,14 +131,14 @@ def progress_bar():
 
 
 if __name__ == "__main__":
-    # if 2 != len(sys.argv):
-    #     print("get file fail")
-    #     sys.exit()
+    if 2 != len(sys.argv):
+        print("get file fail")
+        sys.exit()
     #
-    # print(sys.argv[1])
+    print(sys.argv[1])
     # input("input file:")
-    file = r'C:\Users\zs\Pictures\105846277.jpg'
-    # file = sys.argv[1]
+    # file = r'C:\Users\zs-work\Pictures\wall.jpg'
+    file = sys.argv[1]
     # print(file.split('\\')[-1])
 
     Beep(400, 100)

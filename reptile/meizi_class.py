@@ -20,7 +20,7 @@ from collections import OrderedDict
 
 socket.setdefaulttimeout(5000)  # 设置全局超时函数
 
-sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='gb18030')
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8'
 
 # 设置不同的headers,伪装为不同的浏览器
 headers1 = {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:23.0) Gecko/20100101 Firefox/23.0',
