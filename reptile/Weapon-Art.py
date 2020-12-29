@@ -98,7 +98,7 @@ if __name__ == '__main__':
     path = r'./get_pic' + str(time.strftime("%Y%m%d%H%M%S", time.localtime()))
     be.mk_dir(path)
     # url = r'https://mp.weixin.qq.com/s/tOJBsu1F8YQAn7e1X1wJfA'
-    url = r'https://mp.weixin.qq.com/s/B5ctgRy6G9CyqudYsEyzXw'
+    url = r'https://mp.weixin.qq.com/s/rA-Ka-vcugPZ5Whu3LkjOA'
     
     # url = sys.argv[1]
     print(url)
