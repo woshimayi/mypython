@@ -16,10 +16,12 @@
 	},
 	"background": {
 		"scripts": [
-			"js/status.js"
+			"js/status.js",
+			"js/background.js"
 		]
 	},
 	"permissions": [
-		"https://www.google.com/"
+		"https://www.google.com/",
+		"contextMenus"
 	]
 }

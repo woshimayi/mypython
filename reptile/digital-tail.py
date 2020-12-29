@@ -1,3 +1,15 @@
+#!/usr/bin/env python
+# encoding: utf-8
+'''
+@author: woshimayi
+@license: (C) Copyright 2015-2049, Node Supply Chain Manager Corporation Limited.
+@contact: 2638288078@qq.com
+@software: garner
+@file: digital-tail.py
+@time:
+@desc: 下载数字尾巴图片
+'''
+
 from bs4 import BeautifulSoup
 import requests
 import re
@@ -41,24 +53,23 @@ class BeautifulPicture:
         # if int(r.headers['content-length']) < TOO_LONG:
         #     content = r.content
         #     print(content)
-        print(r.iter_content())
+        # print(r.iter_content())
         soup = BeautifulSoup(r.text, "lxml")
         soup.prettify()
-        print(soup)
+        # print(soup)
         i = 0
         for jpg_url in soup.find_all('img'):
             i += 1
-            print(jpg_url['src'])
             time.sleep(0.5)
-            if 'http' in jpg_url['src']:
-                print(jpg_url['alt'])
+            if 'http' in jpg_url:
+                print(jpg_url)
+                # print(jpg_url['alt'])
                 print(str(time.strftime("%Y%m%d%H%M%S",
                                         time.localtime())) + str(i) + '.jpg')
                 self.save_img(
                     jpg_url['src'], str(
                         time.strftime(
                             "%Y%m%d%H%M%S", time.localtime())) + str(i) + '.jpg')
-                # print('成功')
 
     def get_next_url(self):
 
@@ -71,15 +82,15 @@ class BeautifulPicture:
 
 
 if __name__ == '__main__':
-    # if len(sys.argv) < 3:
-    #     print("argc less three")
+    if len(sys.argv) < 3:
+        print("argc less three")
     be = BeautifulPicture()
     path = r'./get_pic' + str(time.strftime("%Y%m%d%H%M%S", time.localtime()))
     be.mk_dir(path)
     # url = r'https://opser.wap.dgtle.com/#/interestTopicDetails/1646384'
-    index = url.split('/')[-1]
-    url = base_url+''+'inst-'+index+'-1.html'
-    print(url)
-    be.get_pic(url)
+    # index = url.split('/')[-1]
+    # url = base_url+''+'inst-'+index+'-1.html'
+    print(sys.argv)
+    be.get_pic(sys.argv[1])
 
 
