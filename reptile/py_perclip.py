@@ -5,14 +5,14 @@ import pyperclip
 import time
 
 #稳定不出错
-class niubi():
-    def lihai(self):
+class Deamon():
+    def deamon(self):
         while True:
-            #jianting().main()
-            t = jianting().main()
+            #Clipboard().main()
+            t = Clipboard().main()
             print(t)
 
-class jianting():
+class Clipboard():
     def clipboard_get(self):
         """获取剪贴板数据"""
         data = pyperclip.paste() #主要这里差别
@@ -35,4 +35,4 @@ class jianting():
             time.sleep(0.2)
 
 if __name__ == '__main__':
-    niubi().lihai()
+    Deamon().deamon()
