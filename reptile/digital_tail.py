@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 #!/usr/bin/env python
 # encoding: utf-8
 '''
@@ -12,7 +11,7 @@
 '''
 
 
-import clipboard
+
 from bs4 import BeautifulSoup
 import requests
 import re
@@ -100,7 +99,7 @@ if __name__ == '__main__':
     print(sys.argv)
     be.get_pic(sys.argv[1])
 
-
+    import clipboard
     # url  = sys.argv[1]
     url = clipboard.paste()
     print(url)
