@@ -7,10 +7,10 @@ class Application(Frame):
 		self.createWindgets()
 
 	def createWidgets(self):
-        self.helloLabel = Label(self, text='Hello, world!')
-        self.helloLabel.pack()
-        self.quitButton = Button(self, text='Quit', command=self.quit)
-        self.quitButton.pack()
+		self.helloLabel = Label(self, text='Hello, world!')
+		self.helloLabel.pack()
+		self.quitButton = Button(self, text='Quit', command=self.quit)
+		self.quitButton.pack()
 
 app = Application()
 # 设置窗口标题:

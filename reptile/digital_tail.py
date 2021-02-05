@@ -72,6 +72,7 @@ class BeautifulPicture:
                     jpg_url['src'], str(
                         time.strftime(
                             "%Y%m%d%H%M%S", time.localtime())) + str(i) + '.jpg')
+        os.chdir('../')
 
     def get_next_url(self):
 

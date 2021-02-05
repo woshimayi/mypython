@@ -40,8 +40,6 @@ print(y["age"])
 '''
 
 # 读取json 文件为字符串
-
-
 def json_read(file):
     with open(file, 'r') as f:
         return json.load(f)
@@ -60,16 +58,14 @@ def json_find(file, key):
         print('file not access')
 
 
-# 格式化json 字符创到文件中
-
-
+# 格式化json 字符写到到文件中
 def json_write(file, key, value):
-    with open(file, 'r') as f:
-        data = json.load(f)
+    # with open(file, 'r') as f:
+    #     data = json.load(f)
 
     with open("c.json", 'w') as f:
         data1 = json.dumps(
-            data,
+            [{key: value}],
             ensure_ascii=False,
             indent=4,
             separators=(
@@ -80,11 +76,12 @@ def json_write(file, key, value):
 
 
 # json_find('c.json', 'description')
-# data = json_read('c.json')
-# print('data', data)
 # print('ssss', data['Region End']['description'])
 #
-# json_write('c.json', 'description', 'Folding Region End asd')
+json_write('c.json', 'description', 'Folding Region End asd')
+json_write('c.json', '111', '222')
+data = json_read('c.json')
+print('data', data)
 
 
 # date = [

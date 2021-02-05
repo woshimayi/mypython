@@ -9,3 +9,14 @@
 @time: 21/1/7 20:24
 @desc: 
 '''
+
+from scipy.misc import imread, imsave, imresize
+
+img = imread('img.jpg')
+print(img.dtype, img.shape)
+
+img_tinted = img * [1, 0.95, 0.9]
+
+img_tinted = imresize(img_tinted, (300, 300))
+
+imsave('123.jpg', img_tinted)

@@ -11,9 +11,10 @@ import os
 import time
 import keyboard
 import pyperclip
-from digital_tail import BeautifulPicture
+# from digital_tail import BeautifulPicture
+from Weapon_Art import BeautifulPicture
 
-
+from py_perclip import *
 
 
 
@@ -35,6 +36,7 @@ def action(url):
     print('下载结束')
     os.chdir(r'../')
     print(os.getcwd())
+    print()
     return True
 
 def test():
@@ -43,7 +45,8 @@ def test():
 
     print(url)
     # 过滤剪贴板内容是否符合条件
-    if 'http' in url and 'html' in url:
+    # if 'http' in url and 'html' in url:
+    if 'http' in url:
         print('download url: %s' % url)
         action(url)
     else:
@@ -53,6 +56,10 @@ def test():
 
 
 if __name__ == '__main__':
+
+
+    
+
     #按ctrl+c输出b
     keyboard.add_hotkey('ctrl+c', test)
     #wait里也可以设置按键，说明当按到该键时结束

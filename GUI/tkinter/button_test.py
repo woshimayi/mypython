@@ -7,7 +7,7 @@
 # 　　Button(根对象, [属性列表])
 
 from tkinter import *
-import tkinter as tk
+import tkinter as Tk
 root = Tk()
 
 root.title('hello world')
