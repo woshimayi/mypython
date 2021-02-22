@@ -62,9 +62,13 @@ class json_Dof():
         self.file = arg
         
 
+    # 读取json 文件为字符串
+    def read(self):
+        with open(self.file, 'r', encoding='utf-8') as f:
+            return json.load(f)
 
     # 追加字典到json文件中
-    def write(self, obj):
+    def add(self, obj):
         '''
         写入/追加json文件
         :param obj:
@@ -105,23 +109,47 @@ class json_Dof():
                           ',',
                           ':'))
 
-    # 读取json 文件为字符串
-    def read(self):
-        with open(self.file, 'r', encoding='utf-8') as f:
-            return json.load(f)
+    #
+    def delete(self, key):
+        L = self.find(key)
 
+    # #
+    # def change(self, key):
+    #
+    # #
+    # def search(self, key):
 
+    #
     def find(self, key):
         if os.access(self.file, os.F_OK):
             with open(self.file, 'r') as f:
-                dict = json.load(f)
-                # print('dict', dict)
-                for key1, value in dict.items():
-                    # print('key:%s, value:%s' % (key1, value))
-                    for key1, value1 in value.items():
-                        print('%s, %s' % (key1, value1))
+                array = json.load(f)
+                print('dict', array)
+                L = []
+                for dict in array:
+                    print('dict:%s, %s' % (dict['url'], dict['title']))
+                    if key == str(dict.key()) or key == str(dict.value()):
+                        L.append(dict)
+
+                return L
         else:
             print('file not access')
+
+    def blurry_find(self, key):
+        if os.access(self.file, os.F_OK):
+            with open(self.file, 'r') as f:
+                array = json.load(f)
+                print('dict', array)
+                L = []
+                for dict in array:
+                    print('dict:%s, %s' % (dict.key(), dict.value()))
+                    if key in str(dict.key()) or key in str(dict.value()):
+                        L.append(dict)
+
+                return L
+        else:
+            print('file not access')
+
 
 if __name__ == '__main__':
     
@@ -129,4 +157,6 @@ if __name__ == '__main__':
     obj = [{"url": 10, "title": "DATE"}]
     j = json_Dof('labels.json')
     
-    j.write(obj)
+    # j.add(obj)
+    L = j.find("10")
+    print('L', L[0]['url'])
