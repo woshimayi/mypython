@@ -339,13 +339,13 @@ class MainWindow(QtWidgets.QWidget):
         # self.dirTreeView.hideColumn(3)
         # DirTree事件响应
         # self.dirTreeView.selectionModel().selectionChanged.connect(self.dirTreeClicked)
-        self.dirTreeClicked()
         mainLayout = QtWidgets.QVBoxLayout()
         # mainSpliter.addWidget(self.dirTreeView)
         self.imageContainer = ImageContainer(mainSpliter)
         #        self.imageContainer.setGeometry(self.imageContainer.geometry().x(), self.imageContainer.geometry().y(), 100, self.imageContainer.geometry().height())
         self.imageContainer.setMinimumWidth(self.geometry().width() * 0.7)
         mainSpliter.addWidget(self.imageContainer)
+        self.dirTreeClicked()
         mainLayout.addWidget(mainSpliter)
         self.setLayout(mainLayout)
         sys.exit(app.exec_())
@@ -355,7 +355,8 @@ class MainWindow(QtWidgets.QWidget):
         self.imageContainer.clearAll()
         # 获取选择的路径
         # pathSelected = self.dirModel.filePath(self.dirTreeView.selectedIndexes()[0])
-        pathSelected = self.dirModel.filePath(r"C:\Users\zs\Pictures")
+        # pathSelected = self.dirModel.filePath(r"E:\picture")
+        pathSelected = r"E:\picture\get_pic20201229143355"
         print('pathSelected   ', pathSelected)
         # 遍历路径下的媒体文件
         for item in os.listdir(pathSelected):
