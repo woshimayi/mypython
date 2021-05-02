@@ -9,8 +9,7 @@
 @time:
 @desc: 下载数字尾巴图片
 '''
-
-
+import argparse
 
 from bs4 import BeautifulSoup
 import requests
@@ -41,12 +40,15 @@ class BeautifulPicture:
         os.chdir(path)
 
     def save_img(self, url, name):
-        img = requests.get(url)
-        if len(img.content) > 30000:
-            f = open(name, 'wb')
-            f.write(img.content)
-            print(name, '保存成功')
-            f.close()
+        if url is not None and 'http' in url:
+            img = requests.get(url, headers=self.headers, stream=True)
+            # print('img size: ', img.content)
+            if len(img.content) > 30000:
+                f = open(name, 'wb')
+                f.write(img.content)
+                print(name, '保存成功')
+                f.close()
+
 
     def get_pic(self, url):
         r = requests.get(url, headers=self.headers, stream=True)
@@ -59,19 +61,27 @@ class BeautifulPicture:
         soup.prettify()
         # print(soup)
         i = 0
+        print('aaa', soup.find_all('img'))
         for jpg_url in soup.find_all('img'):
             i += 1
 
-            # print(jpg_url['src'])
+            # print(jpg_url)
             time.sleep(0.5)
-            if 'http' in jpg_url['src']:
-                # print(jpg_url['alt'])
-                print(str(time.strftime("%Y%m%d%H%M%S",
-                                        time.localtime())) + str(i) + '.jpg')
-                self.save_img(
-                    jpg_url['src'], str(
-                        time.strftime(
-                            "%Y%m%d%H%M%S", time.localtime())) + str(i) + '.jpg')
+
+            if jpg_url.get('data-original') is not None and 'http' in jpg_url.get('data-original'):
+                tmp_url = jpg_url.get('data-original')
+            elif jpg_url.get('src') is not None and 'http' in jpg_url.get('src'):
+                tmp_url = jpg_url.get('src')
+            elif jpg_url.get('data-src') is not None and 'http' in jpg_url.get('data-src'):
+                tmp_url = jpg_url.get('data-src')
+            else:
+                continue
+
+            print('1', tmp_url)
+            picture_name = str(time.strftime("%Y%m%d%H%M%S", time.localtime())) + str(i) + '.jpg'
+            print(picture_name, end='')
+            self.save_img(tmp_url, picture_name)
+
         os.chdir('../')
 
     def get_next_url(self):
@@ -85,26 +95,79 @@ class BeautifulPicture:
 
 
 if __name__ == '__main__':
-    if len(sys.argv) < 3:
-        print("argc less three")
-    be = BeautifulPicture()
-    os.chdir(r'C:/Users/zs-work/Pictures/')
-    print(os.getcwd())
 
-    path = r'E:/相册/上海2020/get_pic' + str(time.strftime("%Y%m%d%H%M%S", time.localtime()))
-    be.mk_dir(path)
+    if 1:
+        parser= argparse.ArgumentParser()
+        # group = parser.add_mutually_exclusive_group()
 
-    # url = r'https://opser.wap.dgtle.com/#/interestTopicDetails/1646384'
-    # index = url.split('/')[-1]
-    # url = base_url+''+'inst-'+index+'-1.html'
-    print(sys.argv)
-    be.get_pic(sys.argv[1])
+        parser.add_argument("-v", "--version", action="store_true", default=0, help="otuput version info")
+        parser.add_argument("url", type=str, nargs="?", help="input the url")
+        # parser.add_argument("url", type=str, help="input the url")
+        parser.add_argument("-o", "--output", help="otuput specify dirctory")
+        parser.add_argument("-f", "--file", help="Get the url in file")
 
-    import clipboard
-    # url  = sys.argv[1]
-    url = clipboard.paste()
-    print(url)
-    if 'http' in url and 'html' in url:
+        # 添加到参数列表中
+        args = parser.parse_args()
+
+
+        if args.output:
+            directory = args.output
+        elif args.file:
+            file = args.file
+        else:
+            print("not args")
+
+        print(args)
+
+        if args.url is not None:
+            print(args.url)
+            url = args.url
+        else:
+            import clipboard
+            url = clipboard.paste()
+
+            print(url)
+            if 'http' in url and 'html' in url:
+                # be.get_pic(url)
+                print("sss")
+            else:
+                print('no html')
+
+        if args.output is not None:
+            os.chdir(directory)
+        print(os.getcwd())
+
+    if "bing" not in url:
+        path = r'get_pic' + str(time.strftime("%Y%m%d%H%M%S", time.localtime()))
+        be = BeautifulPicture()
+        be.mk_dir(path)
+
+        # 打开命令直接获取剪贴板内容，如果是url，直接下载
+        # import clipboard
+        # url = clipboard.paste()
+        # print(url)
+        # if 'http' in url and 'html' in url:
+        #     # be.get_pic(url)
+        #     print("sss")
+        # else:
+        #     print('no html')
+        # url = r'https://opser.wap.dgtle.com/article-detail/1642562'
+        if "opser.wap.dgtle" in url:
+            index = url.split('/')[-1]
+            print(index)
+            url = base_url + 'article-' + \
+                      url.split('/')[-1] + '-1.html'
         be.get_pic(url)
+    elif "bing" in url and 'http' in url:
+        url = r'https://api.dujin.org/bing/1920.php'
+
+        be = BeautifulPicture()
+        if os.path.isdir("bing-img") == False:
+            print('ssss')
+            be.mk_dir('bing-img')
+        else:
+            os.chdir("bing-img")
+        jpg = str(time.strftime("%Y%m%d%H%M%S", time.localtime())) + '_bing-img.jpg'
+        be.save_img(url, jpg)
     else:
-        print('no html')
+        print("exit")
