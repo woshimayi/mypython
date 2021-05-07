@@ -61,7 +61,7 @@ class BeautifulPicture:
         soup.prettify()
         # print(soup)
         i = 0
-        print('aaa', soup.find_all('img'))
+        # print('aaa', soup.find_all('img'))
         for jpg_url in soup.find_all('img'):
             i += 1
 
@@ -84,6 +84,41 @@ class BeautifulPicture:
 
         os.chdir('../')
 
+    def get_bing(self, url):
+        r = requests.get(url, headers=self.headers, stream=True)
+        r.encoding = 'utf-8'
+        # if int(r.headers['content-length']) < TOO_LONG:
+        #     content = r.content
+        #     print(content)
+        # print(r.iter_content())
+        soup = BeautifulSoup(r.text, "lxml")
+        soup.prettify()
+        # print(soup)
+        i = 0
+        # print('aaa', soup.find_all('img'))
+        for jpg_url in soup.find_all('a'):
+            i += 1
+
+            print(jpg_url)
+            time.sleep(0.5)
+
+            # if jpg_url.get('data-original') is not None and 'http' in jpg_url.get('data-original'):
+            #     tmp_url = jpg_url.get('data-original')
+            # elif jpg_url.get('src') is not None and 'http' in jpg_url.get('src'):
+            #     tmp_url = jpg_url.get('src')
+            # elif jpg_url.get('data-src') is not None and 'http' in jpg_url.get('data-src'):
+            #     tmp_url = jpg_url.get('data-src')
+            # elif
+            # else:
+            #     continue
+            #
+            # print('1', tmp_url)
+            # picture_name = str(time.strftime("%Y%m%d%H%M%S", time.localtime())) + str(i) + '.jpg'
+            # print(picture_name, end='')
+            # self.save_img(tmp_url, picture_name)
+
+        # os.chdir('../')
+
     def get_next_url(self):
 
         for jpg_url in soup.find_all('a'):
@@ -105,6 +140,7 @@ if __name__ == '__main__':
         # parser.add_argument("url", type=str, help="input the url")
         parser.add_argument("-o", "--output", help="otuput specify dirctory")
         parser.add_argument("-f", "--file", help="Get the url in file")
+        parser.add_argument("-b", "--bing", action="store_true", help="Get the url in file")
 
         # 添加到参数列表中
         args = parser.parse_args()
@@ -137,7 +173,25 @@ if __name__ == '__main__':
             os.chdir(directory)
         print(os.getcwd())
 
-    if "bing" not in url:
+
+    if 'bing' in url and 'http' in url:
+        print('bing picture')
+        path = r'get_pic' + str(time.strftime("%Y%m%d%H%M%S", time.localtime()))
+        be = BeautifulPicture()
+        be.mk_dir(path)
+        be.get_bing(url)
+    elif args.bing:
+        url = r'https://api.dujin.org/bing/1920.php'
+
+        be = BeautifulPicture()
+        if os.path.isdir("bing-img") == False:
+            print('ssss')
+            be.mk_dir('bing-img')
+        else:
+            os.chdir("bing-img")
+        jpg = str(time.strftime("%Y%m%d%H%M%S", time.localtime())) + '_bing-img.jpg'
+        be.save_img(url, jpg)
+    else:
         path = r'get_pic' + str(time.strftime("%Y%m%d%H%M%S", time.localtime()))
         be = BeautifulPicture()
         be.mk_dir(path)
@@ -158,16 +212,5 @@ if __name__ == '__main__':
             url = base_url + 'article-' + \
                       url.split('/')[-1] + '-1.html'
         be.get_pic(url)
-    elif "bing" in url and 'http' in url:
-        url = r'https://api.dujin.org/bing/1920.php'
 
-        be = BeautifulPicture()
-        if os.path.isdir("bing-img") == False:
-            print('ssss')
-            be.mk_dir('bing-img')
-        else:
-            os.chdir("bing-img")
-        jpg = str(time.strftime("%Y%m%d%H%M%S", time.localtime())) + '_bing-img.jpg'
-        be.save_img(url, jpg)
-    else:
-        print("exit")
+
