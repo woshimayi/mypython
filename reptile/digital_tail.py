@@ -159,6 +159,7 @@ if __name__ == '__main__':
             print(args.url)
             url = args.url
         else:
+            # 打开命令直接获取剪贴板内容，如果是url，直接下载
             import clipboard
             url = clipboard.paste()
 
@@ -173,7 +174,6 @@ if __name__ == '__main__':
             os.chdir(directory)
         print(os.getcwd())
 
-
     if 'bing' in url and 'http' in url:
         print('bing picture')
         path = r'get_pic' + str(time.strftime("%Y%m%d%H%M%S", time.localtime()))
@@ -181,11 +181,11 @@ if __name__ == '__main__':
         be.mk_dir(path)
         be.get_bing(url)
     elif args.bing:
+        # 获取bing 首页壁纸
         url = r'https://api.dujin.org/bing/1920.php'
 
         be = BeautifulPicture()
         if os.path.isdir("bing-img") == False:
-            print('ssss')
             be.mk_dir('bing-img')
         else:
             os.chdir("bing-img")
@@ -196,16 +196,6 @@ if __name__ == '__main__':
         be = BeautifulPicture()
         be.mk_dir(path)
 
-        # 打开命令直接获取剪贴板内容，如果是url，直接下载
-        # import clipboard
-        # url = clipboard.paste()
-        # print(url)
-        # if 'http' in url and 'html' in url:
-        #     # be.get_pic(url)
-        #     print("sss")
-        # else:
-        #     print('no html')
-        # url = r'https://opser.wap.dgtle.com/article-detail/1642562'
         if "opser.wap.dgtle" in url:
             index = url.split('/')[-1]
             print(index)
