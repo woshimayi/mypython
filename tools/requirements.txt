@@ -34,10 +34,6 @@ cloudpickle
 clyent
 colorama
 comtypes
-conda
-conda-build
-conda-package-handling
-conda-verify
 configparser
 contextlib2
 cryptography
@@ -98,20 +94,13 @@ llvmlite
 locket
 lxml
 Markdown
-MarkupSafe
 matplotlib
-mccabe
-menuinst
 mistune
-mkl-fft
-mkl-random
-mkl-service
 mock
 more-itertools
 mpmath
 msgpack
 multipledispatch
-navigator-updater
 nbclient
 nbconvert
 nbformat
@@ -141,7 +130,6 @@ pep8
 pexpect
 pickleshare
 Pillow
-pip
 pkginfo
 pluggy
 ply
@@ -152,7 +140,6 @@ py
 pycodestyle
 pycosat
 pycparser
-pycurl
 pydocstyle
 pyflakes
 pygame
@@ -162,7 +149,6 @@ pyinstaller-hooks-contrib
 pylint
 PyMySQL
 PyNaCl
-pyodbc
 pyOpenSSL
 pyparsing
 pyperclip
@@ -183,9 +169,6 @@ python-language-server
 pytz
 PyWavelets
 pywifi
-pywin32
-pywin32-ctypes
-pywinpty
 PyYAML
 pyzmq
 QDarkStyle
@@ -205,7 +188,6 @@ scipy
 seaborn
 selenium
 Send2Trash
-setuptools
 simplegeneric
 singledispatch
 sip
@@ -243,12 +225,10 @@ ujson
 unicodecsv
 urllib3
 usb
-vboxapi
 watchdog
 wcwidth
 webencodings
 Werkzeug
-wheel
 widgetsnbextension
 win-inet-pton
 win-unicode-console
@@ -256,7 +236,6 @@ wincertstore
 wrapt
 xlrd
 XlsxWriter
-xlwings
 xlwt
 xmltodict
 yapf
