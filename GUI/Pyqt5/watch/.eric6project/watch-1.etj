@@ -1,0 +1,36 @@
+{
+  "header": {
+    "comment": "eric tasks file for project watch-1",
+    "warning": "This file was generated automatically, do not edit.",
+    "saved": "2021-06-28, 02:08:40"
+  },
+  "ProjectScanFilter": "",
+  "Tasks": [
+    {
+      "summary": "WARNING: Any manual changes made to this file will be lost when pyuic5 is",
+      "description": "",
+      "priority": 1,
+      "lineno": 7,
+      "completed": false,
+      "created": 1624811098.7599552,
+      "type": 2,
+      "uid": "{e7bba81d-eecc-4107-9d21-89ac378b693e}",
+      "parent_uid": "",
+      "expanded": false,
+      "filename": "Z:\\mypython\\GUI\\Pyqt5\\watch\\Ui_mainwindow.py"
+    },
+    {
+      "summary": "TODO: not implemented yet",
+      "description": "",
+      "priority": 1,
+      "lineno": 46,
+      "completed": false,
+      "created": 1624817320.210416,
+      "type": 1,
+      "uid": "{5e3014c2-2d6c-4450-9384-810075c0f5dc}",
+      "parent_uid": "",
+      "expanded": false,
+      "filename": "Z:\\mypython\\GUI\\Pyqt5\\watch\\mainwindow.py"
+    }
+  ]
+}
