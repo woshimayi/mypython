@@ -13,7 +13,7 @@ import threading
 import time
 from PyQt5.QtCore import pyqtSlot, QDateTime, QThread, pyqtSignal, QTimer
 from PyQt5.QtWidgets import QMainWindow, QApplication, QDialog
-from Ui_progress import Ui_MainWindow
+from . Ui_progress import Ui_MainWindow
 
 import sys
 import smtplib
@@ -24,6 +24,8 @@ from email.mime.base import MIMEBase
 from email.mime.multipart import MIMEMultipart
 
 from winsound import Beep
+
+from . email_RW import Email_operate
 
 
 class BackendThread(QThread):
@@ -36,17 +38,24 @@ class BackendThread(QThread):
         super(BackendThread, self).__init__()
         self.file = filename
 
+        self.C = Email_operate('email.ini')
+
+        # sender是邮件发送人邮箱，passWord是服务器授权码，mail_host是服务器地址（这里是QQsmtp服务器）
+        print("zzzzzzzz", self.C.read_sendMail(), self.C.read_sendPass(), self.C.read_sendUser())
+        self.C.show()
+        self.sender = self.C.read_sendMail()
+        self.passWord = self.C.read_sendPass()
+        self.mail_host = self.C.read_sendUser()
+        # receivers是邮件接收人，用列表保存，可以添加多个
+        self.receivers = []
+        # self.receivers.append(self.C.read_sendMail())
+        print('self.receivers', self.C.read_recvMail().split())
+
     # 处理业务逻辑
     def run(self):
         # 发送文件名
         file_name = self.file.split('\\')[-1]
 
-        # sender是邮件发送人邮箱，passWord是服务器授权码，mail_host是服务器地址（这里是QQsmtp服务器）
-        sender = 'xxxxxxxxxxxxxxxxxxxx'
-        passWord = 'xxxxxxxxxxxxxxxxxxxx'
-        mail_host = 'xxxxxxxxxxxxxxxxxxxx'
-        # receivers是邮件接收人，用列表保存，可以添加多个
-        receivers = ['xxxxxxxxxxxxxxxxxxxx']
         self.update_date.emit(1)
 
         # 设置email信息
@@ -58,7 +67,7 @@ class BackendThread(QThread):
                 "%Y%m%d%H%M%S",
                 time.localtime())) + ': ' + file_name
         # 发送方信息
-        msg['From'] = sender
+        msg['From'] = self.sender
         # 邮件正文是MIMEText:
         # msg_content = input(f"{'请输入邮件主内容:'}")
         self.update_date.emit(2)
@@ -92,7 +101,7 @@ class BackendThread(QThread):
             # QQsmtp服务器的端口号为465或587
             s = smtplib.SMTP_SSL("smtp.qq.com", 465)
             # s.set_debuglevel(1)
-            s.login(sender, passWord)
+            s.login(self.sender, self.passWord)
             self.update_date.emit(4)
             if msg_content.split('.')[-1] in ['txt',
                                               'html', 'pdf', 'epub', 'mobi', 'azw3']:
@@ -102,13 +111,13 @@ class BackendThread(QThread):
 
             if flag:
                 # 给receivers列表中的联系人逐个发送邮件
-                for i in range(len(receivers)):
-                    to = receivers[i]
+                for i in range(len(self.receivers)):
+                    to = self.receivers[i]
                     msg['To'] = to
-                    s.sendmail(sender, to, msg.as_string())
+                    s.sendmail(self.sender, to, msg.as_string())
                     print('Success!', end='')
             else:
-                s.sendmail(sender, receivers[0], msg.as_string())
+                s.sendmail(self.sender, self.receivers[0], msg.as_string())
                 self.update_date.emit(5)
                 print('Success!', end='')
             s.quit()
@@ -186,13 +195,14 @@ class MainWindow(QDialog, Ui_MainWindow):
 
 
 if __name__ == "__main__":
-    # if 2 != len(sys.argv):
-    #     print("get file fail")
-    #     sys.exit()
+    if 2 != len(sys.argv):
+        print("get file fail")
+        sys.exit()
 
-    # print(sys.argv[1])
-    # print(sys.argv)
-    # filename = sys.argv[1]
+    print(sys.argv[1])
+    print(sys.argv)
+    filename = sys.argv[1]
+    # filename = r'./progress.e4p'
 
     app = QApplication(sys.argv)
     ui = MainWindow(filename)
