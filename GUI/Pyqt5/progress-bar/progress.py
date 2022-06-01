@@ -13,19 +13,20 @@ import threading
 import time
 from PyQt5.QtCore import pyqtSlot, QDateTime, QThread, pyqtSignal, QTimer
 from PyQt5.QtWidgets import QMainWindow, QApplication, QDialog
-from . Ui_progress import Ui_MainWindow
+from Ui_progress import Ui_MainWindow
 
 import sys
 import smtplib
 import threading
 from email import encoders
+
 from email.mime.text import MIMEText
 from email.mime.base import MIMEBase
 from email.mime.multipart import MIMEMultipart
 
 from winsound import Beep
 
-from . email_RW import Email_operate
+from email_RW import Email_operate
 
 
 class BackendThread(QThread):

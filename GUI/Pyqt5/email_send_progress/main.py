@@ -8,13 +8,12 @@
  * @LastEditTime: 2022/2/27 18:34
  * @Descripttion: 
 '''
-
-
+import os
 import threading
 import time
 from PyQt5.QtCore import pyqtSlot, QDateTime, QThread, pyqtSignal, QTimer
 from PyQt5.QtWidgets import QMainWindow, QApplication, QDialog
-from . UI.Ui_progress import Ui_MainWindow
+from UI.Ui_progress import Ui_MainWindow
 
 import sys
 import smtplib
@@ -39,8 +38,7 @@ class BackendThread(QThread):
     def __init__(self, filename):
         super(BackendThread, self).__init__()
         self.file = filename
-
-        self.C = Email_operate(r'config/email.ini')
+        self.C = Email_operate()
 
         # sender是邮件发送人邮箱，passWord是服务器授权码，mail_host是服务器地址（这里是QQsmtp服务器）
         print("zzzzzzzz", self.C.read_sendMail(), self.C.read_sendPass(), self.C.read_sendUser())
@@ -85,6 +83,7 @@ class BackendThread(QThread):
             with open(self.file, 'rb') as f:
                 # 设置附件的MIME和文件名，这里是jpg类型,可以换png或其他类型:
                 mime = MIMEBase('image', 'jpg', filename=file_name)
+
                 # 加上必要的头信息:
                 mime.add_header(
                     'Content-Disposition',

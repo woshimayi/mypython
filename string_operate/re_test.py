@@ -50,7 +50,25 @@ str = r'88-05-20-3434.345.567'
 print('4', pattern.search(str))
 
 
-pattern = re.compile(r'^(\(\d{2}\)|^\d{2}[.-]?)?(\d{3}[.-]?)?')
+# pattern = re.compile(r'^(\(\d{2}\)|^\d{2}[.-]?)?\d{3}[.-]?')
+pattern = re.compile(r'^(\(\d{2}\)[.-]?)?\d{3}[.-]?\d{4}$')
 str = r'(88)-345.5674'
 print('5', pattern.search(str))
+
+pattern = re.compile(r'^(\d{2}[.-]?)?\d{3}[.-]?\d{4}$')
+str = r'88-345.5674'
+print('6', pattern.search(str))
+
+
+pattern = re.compile(r'^(\(\d{2}\)|\d{2})[.-]?\d{3}[.-]?\d{4}$')
+str = r'(88)-345.5674'
+print('7', pattern.search(str))
+str = r'88-345.5674'
+print('7', pattern.search(str))
+
+
+pattern = re.compile(r'(\d{6}[,]?)+')
+str = r'104007,104007,104006,104001,104006'
+print('8', pattern.search(str))
+
 

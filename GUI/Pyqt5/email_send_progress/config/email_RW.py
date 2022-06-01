@@ -9,19 +9,6 @@
  * @LastEditTime: 2022/2/20 17:18
  * @Descripttion: 
 '''
-
-# !/usr/bin/env python
-# encoding: utf-8
-'''
-@author: caopeng
-@license: (C) Copyright 2013-2017, Node Supply Chain Manager Corporation Limited.
-@contact: deamoncao100@gmail.com
-@software: garner
-@file: test_dof.py
-@time: 2021/2/22 15:37
-@desc: ini file read write
-'''
-
 import configparser
 
 '''
@@ -107,7 +94,7 @@ config.write(open('example.ini', 'w'))
 class Email_operate(object):
     """docstring for Email_operate"""
 
-    def __init__(self, file):
+    def __init__(self, file=r'email.ini'):
         print("open conf file: ", file)
         super(Email_operate, self).__init__()
         self.file = file
