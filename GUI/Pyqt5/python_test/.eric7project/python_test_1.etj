@@ -1,0 +1,127 @@
+{
+  "header": {
+    "comment": "eric tasks file for project python_test_1",
+    "warning": "This file was generated automatically, do not edit.",
+    "saved": "2022-06-28, 17:49:02"
+  },
+  "ProjectScanFilter": "",
+  "Tasks": [
+    {
+      "summary": "TODO: not implemented yet",
+      "description": "",
+      "priority": 1,
+      "lineno": 343,
+      "completed": false,
+      "created": 1656409512.7394645,
+      "type": 1,
+      "uid": "{954844e5-1d9b-4000-80ec-710700312473}",
+      "parent_uid": "",
+      "expanded": false,
+      "filename": "Y:\\Documents\\mypython\\GUI\\Pyqt5\\python_test\\python_test.py"
+    },
+    {
+      "summary": "TODO: not implemented yet",
+      "description": "",
+      "priority": 1,
+      "lineno": 390,
+      "completed": false,
+      "created": 1656409512.7404404,
+      "type": 1,
+      "uid": "{2723e9b9-6cac-4ef2-a977-b0dcfc58bfec}",
+      "parent_uid": "",
+      "expanded": false,
+      "filename": "Y:\\Documents\\mypython\\GUI\\Pyqt5\\python_test\\python_test.py"
+    },
+    {
+      "summary": "TODO: not implemented yet",
+      "description": "",
+      "priority": 1,
+      "lineno": 403,
+      "completed": false,
+      "created": 1656409512.7414167,
+      "type": 1,
+      "uid": "{e5803cf1-1283-43d6-b5f5-e22d951bafd2}",
+      "parent_uid": "",
+      "expanded": false,
+      "filename": "Y:\\Documents\\mypython\\GUI\\Pyqt5\\python_test\\python_test.py"
+    },
+    {
+      "summary": "TODO: not implemented yet",
+      "description": "",
+      "priority": 1,
+      "lineno": 412,
+      "completed": false,
+      "created": 1656409512.7423928,
+      "type": 1,
+      "uid": "{e594c787-92d8-41ab-83d0-044dd4c85f85}",
+      "parent_uid": "",
+      "expanded": false,
+      "filename": "Y:\\Documents\\mypython\\GUI\\Pyqt5\\python_test\\python_test.py"
+    },
+    {
+      "summary": "TODO: not implemented yet",
+      "description": "",
+      "priority": 1,
+      "lineno": 421,
+      "completed": false,
+      "created": 1656409512.7433681,
+      "type": 1,
+      "uid": "{7ecb2dd9-33d8-477e-8096-e1792eb0a42a}",
+      "parent_uid": "",
+      "expanded": false,
+      "filename": "Y:\\Documents\\mypython\\GUI\\Pyqt5\\python_test\\python_test.py"
+    },
+    {
+      "summary": "TODO: not implemented yet",
+      "description": "",
+      "priority": 1,
+      "lineno": 431,
+      "completed": false,
+      "created": 1656409512.7443442,
+      "type": 1,
+      "uid": "{570fff6e-0572-4df8-babd-c2153f730308}",
+      "parent_uid": "",
+      "expanded": false,
+      "filename": "Y:\\Documents\\mypython\\GUI\\Pyqt5\\python_test\\python_test.py"
+    },
+    {
+      "summary": "TODO: not implemented yet",
+      "description": "",
+      "priority": 1,
+      "lineno": 439,
+      "completed": false,
+      "created": 1656409512.74532,
+      "type": 1,
+      "uid": "{d9801542-66cf-4e49-87f5-ea62639d981a}",
+      "parent_uid": "",
+      "expanded": false,
+      "filename": "Y:\\Documents\\mypython\\GUI\\Pyqt5\\python_test\\python_test.py"
+    },
+    {
+      "summary": "TODO: not implemented yet",
+      "description": "",
+      "priority": 1,
+      "lineno": 456,
+      "completed": false,
+      "created": 1656409512.748248,
+      "type": 1,
+      "uid": "{7b1d8b92-443e-4792-a157-878b2ae8122b}",
+      "parent_uid": "",
+      "expanded": false,
+      "filename": "Y:\\Documents\\mypython\\GUI\\Pyqt5\\python_test\\python_test.py"
+    },
+    {
+      "summary": "WARNING: Any manual changes made to this file will be lost when pyuic5 is",
+      "description": "",
+      "priority": 1,
+      "lineno": 7,
+      "completed": false,
+      "created": 1656409513.853093,
+      "type": 2,
+      "uid": "{2e196380-51b3-406c-8e26-dca523f21161}",
+      "parent_uid": "",
+      "expanded": false,
+      "filename": "Y:\\Documents\\mypython\\GUI\\Pyqt5\\python_test\\Ui_python_test.py"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "header": {
+    "comment": "eric tasks file for project wand_test",
+    "warning": "This file was generated automatically, do not edit.",
+    "saved": "2022-06-30, 13:57:44"
+  },
+  "ProjectScanFilter": "",
+  "Tasks": [
+    {
+      "summary": "WARNING: Any manual changes made to this file will be lost when pyuic5 is",
+      "description": "",
+      "priority": 1,
+      "lineno": 7,
+      "completed": false,
+      "created": 1656486621.4542408,
+      "type": 2,
+      "uid": "{de8f42db-7eb8-4d95-a295-e2be3f38e27c}",
+      "parent_uid": "",
+      "expanded": false,
+      "filename": "Y:\\Documents\\mypython\\GUI\\Pyqt5\\wand_test\\Ui_wand.py"
+    },
+    {
+      "summary": "TODO: not implemented yet",
+      "description": "",
+      "priority": 1,
+      "lineno": 61,
+      "completed": false,
+      "created": 1656486621.4600964,
+      "type": 1,
+      "uid": "{a8332c56-6eab-48a2-a7f0-6d5314877fd2}",
+      "parent_uid": "",
+      "expanded": false,
+      "filename": "Y:\\Documents\\mypython\\GUI\\Pyqt5\\wand_test\\wand.py"
+    }
+  ]
+}
