@@ -72,3 +72,15 @@ str = r'104007,104007,104006,104001,104006'
 print('8', pattern.search(str))
 
 
+pattern = re.compile(r'(^(\[(.*)]))(.*)')
+str = r'[迅雷下载www.2tu.cc]航班.BD1280高清中字.rmvb'
+print('9', pattern.search(str), '\t\t\t\t', pattern.search(str).groups()[-1])
+
+
+pattern = re.compile(r'(.*).mp4')
+str = r'[迅雷下载www.2tu.cc]航班.BD1280高清中字.rmvb'
+print('10', pattern.search(str), '\t\t\t\t', pattern.search(str).groups()[-1])
+
+
+
+
