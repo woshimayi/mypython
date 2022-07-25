@@ -89,6 +89,8 @@ class HttpdTest:
             'authorization': ""
         }
 
+        self.num = 0
+
         self.M = Meminfo(self.get_region())
         self.post_info(telnetUrl, data=telnetTrue)
 
@@ -178,7 +180,7 @@ class HttpdTest:
 
     def wanget_set(self):
         print("starting...")
-        num = 0
+        # num = 0
         try:
             L = []
             # get wan name list
@@ -215,9 +217,9 @@ class HttpdTest:
                 sleep(10)
                 self.get_list(get_url)
 
-            if 0 == num%5:
+            if 0 == self.num%5:
                 self.M.record()
-            num += 1
+            self.num += 1
 
 
         except Exception as err:
@@ -234,12 +236,14 @@ class HttpdTest:
 
 
 if __name__ == '__main__':
-    # print(be.get_region())
-
 
     be = HttpdTest()
+
     M = Meminfo(be.get_region())
     be.post_info(telnetUrl, data=telnetTrue)
+
+
+
     be.wanget_set()
 
     num = 0

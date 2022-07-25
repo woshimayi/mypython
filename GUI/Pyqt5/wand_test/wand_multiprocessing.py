@@ -7,14 +7,22 @@ import ctypes
 import inspect
 import sys
 import threading
+import time
+from multiprocessing import Process
 
-from PyQt5.QtCore import pyqtSlot, QDateTime, QTimer, pyqtSignal
+from PyQt5.QtCore import pyqtSlot, QDateTime, QTimer, pyqtSignal, QThread
 from PyQt5.QtGui import QTextCursor
 from PyQt5.QtWidgets import QWidget, QApplication
+
 
 from GUI.Pyqt5.wand_test.wand_test import HttpdTest
 from Ui_wand import Ui_Form
 
+# 多进程调用的函数必须放在modoule顶层
+def start_runstask():
+    be = HttpdTest()
+    while True:
+        be.wanget_set()
 
 class wand(QWidget, Ui_Form):
 
@@ -52,7 +60,8 @@ class wand(QWidget, Ui_Form):
 
         self.runStask.connect(self.stask)
 
-        self.be = HttpdTest()
+
+
 
 
     def showTime(self):
@@ -69,32 +78,40 @@ class wand(QWidget, Ui_Form):
             self.textBrowser.append("wand test start")
             self.textBrowser.moveCursor(QTextCursor.End)
             self.runStask.emit('hello')
+            self.isrun = True
 
 
-    def start_runstask(self, isrun):
-        while True:
-            if False == isrun:
-                self.be.__del__()
-                break
-            # self.be.wanget_set()
-            print("aaaaa")
+    # def start_runstask(self):
+    #     while self.isrun:
+    #         self.be.wanget_set()
+    #         print("aaaaa")
 
 
     def stask(self):
         print("ddddddddd")
         try:
             if self.isrun:
-                self.pushButton.setText("START")
-                self.pushButton.setStyleSheet("background-color: rgb(0, 255, 0);")
-                # self.isrun = False
-            else:
-                self.pushButton.setText("CANCEL")
-                self.pushButton.setStyleSheet("background-color: rgb(255, 0, 0);")
-                # self.isrun = True
+                # self.pushButton.setText("START")
+                # self.pushButton.setStyleSheet("background-color: rgb(0, 255, 0);")
 
-            self.th = threading.Thread(target=self.start_runstask, args=(self.isrun, ))
-            self.th.start()
-            self.th.join(5)  # 20秒超时时间
+                # self.th = threading.Thread(target=self.start_runstask)
+                # self.th.setDaemon()
+                # self.th.start()
+                # th = self.th
+                # self.stop_thread(th)
+                # self.th.join(5)  # 优先执行此线程 占用5 秒的cpu时间，5秒后进行cpu抢占执行
+
+                # self.th.start()
+                self.th = Process(target=start_runstask)
+                self.th.start()
+
+            else:
+                self.th.terminate()
+
+                # self.pushButton.setText("CANCEL")
+                # self.pushButton.setStyleSheet("background-color: rgb(255, 0, 0);")
+
+
         except Exception as e:
             print(e)
 

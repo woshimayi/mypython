@@ -15,6 +15,7 @@ import requests
 
 ip = "192.168.1.1"
 head = "application/x-www-form-urlencoded; charset=UTF-8"
+
 url = "http://192.168.1.1:17999"
 data = {"RPCMethod": "SetLocationInfo", "ID": "101", "Longitude": "110.21", "Latitude": "43.50508", "Elevation": "10",
         "HorizontalError": "65", "AltitudeError": "27", "AreaCode": "112441901001", "TimeStamp": "20220606222448",
@@ -60,9 +61,6 @@ class Buapp(object):
         # 3. 发送数据
         send_data = data
         tcp_socket.send(send_data.encode("utf-8"))
-
-        # send_data = tcp_socket.recv(1024, timeout=20)
-        # print('zzzzz', send_data)
 
         # 4. 关闭套接字
         tcp_socket.close()

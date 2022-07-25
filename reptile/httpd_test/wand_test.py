@@ -3,11 +3,14 @@
 import json
 import time
 from time import sleep
+import  telnetlib
 
 import requests
 import sys
 import os
 from bs4 import BeautifulSoup
+
+from telnet.telnet_cmcc import Meminfo
 
 ip = "192.168.1.1"
 head = "application/x-www-form-urlencoded; charset=UTF-8"
@@ -66,6 +69,13 @@ restoreDefault = "/setHbusData?path=hbus://mdm/RestoreDefault&msgType=201&userTa
 rest = {"path": "hbus://mdm/RestoreDefault", "para": {}}
 
 
+get_regionUrl = 'http://192.168.1.1/hgsreadme'
+
+telnetUrl = 'http://192.168.1.1/setObjs'
+enableTelnet = {"TelnetEnable":True,"TelnetWANEnable":False,"TelnetUserName":"CMCCAdmin","TelnetPassword":"aDm8H%MdA","fullPath":"InternetGatewayDevice.DeviceInfo.X_CMCC_ServiceManage."}
+telnetTrue = []
+telnetTrue.append(enableTelnet)
+
 def json_format(data):
     print(json.dumps(data, sort_keys="true", indent=4, separators=(",", ":")))
 
@@ -97,6 +107,7 @@ class HttpdTest:
         except:
             print("error ")
 
+
     def get_info(self, url):
         print("\t\tget", url)
         try:
@@ -115,6 +126,22 @@ class HttpdTest:
         except:
             print("error")
 
+    def get_region(self, url=get_regionUrl):
+        print("get region")
+        try:
+            r = requests.get(url, headers=self.headers, timeout=20)
+            r.encoding = 'utf-8'
+            # soup = BeautifulSoup(r.text, "lxml")
+            # soup.prettify()
+            if r.status_code == 200:
+                # print(r.text)
+                json_format(r.json())
+                j = r.json()
+                print(j['Region'])
+                return 'SMT' in j['Region']
+        except Exception as e:
+            print(e)
+
     def post_info(self, url, data):
         try:
             print("\t\tpost", url, data)
@@ -126,6 +153,11 @@ class HttpdTest:
                 # print(r.status_code)
         except:
             print("error ")
+
+    def upload_file(self, url, filepath):
+        files = {'file': open(filepath, 'rb')}
+        r = requests.post(url, files=files)
+        print(r.text)
 
 
 def wanget_set():
@@ -175,7 +207,12 @@ def wanget_set():
 
 if __name__ == '__main__':
     be = HttpdTest()
+    M = Meminfo(be.get_region())
 
+    be.post_info(telnetUrl, data=telnetTrue)
+    # print(be.get_region())
+
+    num = 0
     while 1:
         try:
             L = []
@@ -213,13 +250,18 @@ if __name__ == '__main__':
                 sleep(10)
                 be.get_list(get_url)
 
+            if 0 == num%5:
+                M.record()
+            num += 1
+
+
         except Exception as err:
             localtime = time.asctime(time.localtime(time.time()))
             print("out: ", localtime, err)
             # logfile = "wand_test"+
             fo = open("wand_test.log", "w")
             fo.write(localtime)
-            fo.write(err)
+            fo.write(str(err))
             fo.close()
         finally:
             localtime = time.asctime(time.localtime(time.time()))
