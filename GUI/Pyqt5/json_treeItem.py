@@ -7,7 +7,7 @@
 @software: garner
 @file: json_treeItem.py
 @time: 2022/07/0010 10:53
-@desc:
+@desc: 最小化到托盘
 '''
 
 # !/usr/bin/env python
@@ -21,7 +21,7 @@ from PyQt5.QtWidgets import (
     QLabel, QGridLayout, QWidget,
     QCheckBox, QSystemTrayIcon,
     QSpacerItem, QSizePolicy, QMenu, QAction, QStyle)
-from PyQt5.uic.properties import QtGui
+from PyQt5.uic.properties import QtGui, QtCore
 
 
 class MainWindow(QMainWindow):
@@ -70,6 +70,7 @@ class MainWindow(QMainWindow):
     # Override closeEvent, to intercept the window closing event
     # The window will be closed only if there is no check mark in the check box
     def closeEvent(self, event):
+        print("aaaa")
         event.ignore()
         self.hide()
         # self.tray_icon.showMessage(
@@ -83,7 +84,8 @@ class MainWindow(QMainWindow):
     def iconActived(self, reason):
         if reason == QSystemTrayIcon.DoubleClick:
             if self.isHidden():
-                self.show()
+                # self.show()
+                self.showNormal()
             else:
                 self.hide()
 
