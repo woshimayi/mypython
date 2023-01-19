@@ -12,7 +12,7 @@ if __name__ == "__main__":
 
 str_info = '''#########################################################################################################
      Author: baiyizhanshi
-      Email: 2638288078@qq.com
+      Email: xxxxxxxx@qq.com
 create Date: 
 
 

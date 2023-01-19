@@ -273,23 +273,34 @@ w = np.array([4,5])
 # a = np.arange(27).reshape(3,3,3)
 # print(a)
 
-a = np.array([[1,-1,2],[3,2,0]])
-print(a)
+# a = np.array([[1,-1,2],[3,2,0]])
+# print(a)
+#
+# v = np.array([[2,1,3]])
+# # print('v', v)
+# v1 = np.transpose(v)
+# print('v1', v1)
+#
+# y = np.dot(a, v1)
+# print('y', y)
+#
+# A = np.array([[2,1,-1],[3,0,1],[1,1,-1]])
+# b = np.transpose(np.array([[-3,5,-2]]))
+#
+#
+# y = np.linalg.solve(A, b)
+# print('y-', y)
 
-v = np.array([[2,1,3]])
-# print('v', v)
-v1 = np.transpose(v)
-print('v1', v1)
-
-y = np.dot(a, v1)
-print('y', y)
-
-A = np.array([[2,1,-1],[3,0,1],[1,1,-1]])
-b = np.transpose(np.array([[-3,5,-2]]))
 
 
-y = np.linalg.solve(A, b)
-print('y-', y)
+a = [1, 2, 3] ; b = [4, 5, 6]; c = [7, 8, 9]
+
+# 多个一维数组，一行一行堆叠形成一个二维数组（3x3）
+# 两个二维数组，构成三维数组（2x3x3）
+# 最后再用一个 [] 把整体括起来！
+w2 = np.array( [[a,b], [a,c], [a,a] ] )
+
+print(w2)
 
 
 

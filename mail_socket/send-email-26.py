@@ -33,11 +33,11 @@ def send_email(file):
     global send_flag
 
     # sender是邮件发送人邮箱，passWord是服务器授权码，mail_host是服务器地址（这里是QQsmtp服务器）
-    sender = '2638288078@qq.com'
+    sender = 'xxxxxxxx@qq.com'
     passWord = 'idsxvkjpyugbebei'
     mail_host = 'smtp.qq.com'
     # receivers是邮件接收人，用列表保存，可以添加多个
-    receivers = ['2638288078@qq.com']
+    receivers = ['xxxxxxxx@qq.com']
     send_flag = 1
 
     # 设置email信息

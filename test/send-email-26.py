@@ -18,11 +18,11 @@ def send_email(file):
     filename = file.split('\\')[-1]
 
     #sender是邮件发送人邮箱，passWord是服务器授权码，mail_host是服务器地址（这里是QQsmtp服务器）
-    sender = '2638288078@qq.com'
+    sender = 'xxxxxxxx@qq.com'
     passWord = 'dajqsprqcbececgf'
     mail_host = 'smtp.qq.com'
     #receivers是邮件接收人，用列表保存，可以添加多个
-    receivers = ['2638288078@qq.com','2638288078@qq.com']
+    receivers = ['xxxxxxxx@qq.com','xxxxxxxx@qq.com']
 
     #设置email信息
     msg = MIMEMultipart()
@@ -101,11 +101,11 @@ def send_email(file):
     filename = file.split('\\')[-1]
 
     #sender是邮件发送人邮箱，passWord是服务器授权码，mail_host是服务器地址（这里是QQsmtp服务器）
-    sender = '2638288078@qq.com'
+    sender = 'xxxxxxxx@qq.com'
     passWord = 'xxxxxxxxxxxxxxxx'
     mail_host = 'smtp.qq.com'
     #receivers是邮件接收人，用列表保存，可以添加多个
-    receivers = ['2638288078@qq.com','2638288078@qq.com']
+    receivers = ['xxxxxxxx@qq.com','xxxxxxxx@qq.com']
 
     #设置email信息
     msg = MIMEMultipart()

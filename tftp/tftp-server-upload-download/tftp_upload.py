@@ -3,7 +3,7 @@
 '''
 @author: woshimayi
 @license: (C) Copyright 2015-2049, Node Supply Chain Manager Corporation Limited.
-@contact: 2638288078@qq.com
+@contact: xxxxxxxx@qq.com
 @software: garner
 @file: tftp_upload.py
 @time: 20/12/8 19:16

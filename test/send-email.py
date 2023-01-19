@@ -16,7 +16,7 @@ def PP():
 
 
 From = 'zhengsen@twsz.com'
-To = '2638288078@qq.com'
+To = 'xxxxxxxx@qq.com'
 file_name = 'D:\\timeview.jpg'
 PP()
 server = smtplib.SMTP('mailsh.twsz.com')

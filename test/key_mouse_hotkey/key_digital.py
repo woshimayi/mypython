@@ -3,7 +3,7 @@
 '''
 @author: woshimayi
 @license: (C) Copyright 2015-2049, Node Supply Chain Manager Corporation Limited.
-@contact: 2638288078@qq.com
+@contact: xxxxxxxx@qq.com
 @software: garner
 @file: key_digital.py
 @time: 20/12/30 20:28
