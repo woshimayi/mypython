@@ -1,0 +1,105 @@
+[
+	{
+		"description":{
+			"name":"PRODUCT",
+			"prompt":"Please choose the target board(PROFILE):",
+			"comments":"",
+			"configFile":"",
+			"defaultValue":"TEWA-870G",
+			"configLevel":1
+		},
+		"options":[
+			{"name":"TEWA-870G", "fullName":"96846GO FG-B620",
+				"bindProperty":{
+					"PROFILE":"96846GO",
+					"ProductType":"GPON"
+				}
+			},
+			{"name":"TY-FS802G", "fullName":"68552CGWV_DDR3 FG-BAM0(DDR3)",
+				"bindProperty":{
+					"PROFILE":"68552CGWV_D3",
+					"BUILD_WIFI":"@y",
+					"BUILD_VOIP":"@y",
+					"ProductType":"GPON"
+				}
+			},
+			{"name":"TY-FS803G", "fullName":"68252CGW FG-BBM1",
+				"bindProperty":{
+					"PROFILE":"68252CGW",
+					"BUILD_OSGI":"@y",
+					"BUILD_WIFI":"@y",
+					"BUILD_VOIP":"@y",
+					"ProductType":"GPON"
+				}
+			},
+			{"name":"TY-FS802G", "fullName":"68552CGWV FG-BAM1",
+				"bindProperty":{
+					"PROFILE":"68552CGWV",
+					"BUILD_OSGI":"@y",
+					"BUILD_WIFI":"@y",
+					"BUILD_VOIP":"@y",
+					"ProductType":"GPON"
+				}
+			}
+		]
+	},
+	{
+		"description":{
+			"name":"CUSTOMER",
+			"prompt":"Please choose the customer:",
+			"comments":"",
+			"configFile":"",
+			"defaultValue":"CM",
+			"configLevel":2
+		},
+		"options":[
+			{"name":"CM", "fullName":"ChinaMobile"},
+			{"name":"CT", "fullName":"ChinaTelecom"},
+			{"name":"CU", "fullName":"ChinaUnicom"}
+		]
+	},
+	{
+		"description":{
+			"name":"enterpriseRouter",
+			"prompt":"enterprise router?",
+			"comments":"",
+			"configFile":"No",
+			"defaultValue":"No",
+			"configLevel":3
+		},
+		"options":[
+			{"name":"No", "fullName":"", "value":0},
+			{"name":"Yes", "fullName":"", "value":1}
+		]
+	},
+	{
+		"description":{
+			"name":"makeProductionImg",
+			"prompt":"Make production img?",
+			"comments":"",
+			"configFile":"",
+			"defaultValue": "No",
+			"configLevel":3
+		},
+		"options":[
+			{"name":"No", "fullName":"", "value":0},
+			{"name":"Yes", "fullName":"", "value":1}
+		]
+	},
+	{
+		"description":{
+			"name":"buildImgSpeed",
+			"prompt":"How fast to build image?",
+			"comments":"",
+			"configFile":"",
+			"defaultValue": "level 1",
+			"configLevel":2
+		},
+		"options":[
+			{"name":"level 1", "fullName":"the fastest speed", "value":1},
+			{"name":"level 2", "fullName":"the second speed",  "value":2},
+			{"name":"level 3", "fullName":"the nomal speed(fully build)", "value":3},
+			{"name":"level 4", "fullName":"the slowest speed(fully check and build)", "value":4}
+		]
+	}
+]

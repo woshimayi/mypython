@@ -10,13 +10,13 @@ import threading
 import time
 from multiprocessing import Process
 
+from PyQt5 import QtCore
 from PyQt5.QtCore import pyqtSlot, QDateTime, QTimer, pyqtSignal, QThread
 from PyQt5.QtGui import QTextCursor
-from PyQt5.QtWidgets import QWidget, QApplication
-
+from PyQt5.QtWidgets import QWidget, QApplication, QMessageBox, QMenu, QSystemTrayIcon, QStyle, QAction
 
 from GUI.Pyqt5.wand_test.wand_test import HttpdTest
-from Ui_wand import Ui_Form
+from GUI.Pyqt5.wand_test.Ui_wand import Ui_Form
 
 
 class WorkThread(QThread):
@@ -38,6 +38,18 @@ class WorkThread(QThread):
         self.wait()
         self.terminate()
 
+class WorkTimer(QThread):
+    sinOut = pyqtSignal(str)
+    def __init__(self):
+        super().__init__()
+
+    def run(self):
+        self.sinOut.emit('out')
+
+    def stop(self):
+        self.quit()
+        self.wait()
+        self.terminate()
 
 
 class wand(QWidget, Ui_Form):
@@ -57,6 +69,7 @@ class wand(QWidget, Ui_Form):
         super().__init__(parent)
         self.setupUi(self)
         self.isrun = False
+        self.num = 0
 
         # 定时器槽函数
         self.time = QTimer()
@@ -65,6 +78,22 @@ class wand(QWidget, Ui_Form):
 
         self.comboBox.addItems([f'{x:02}' for x in range(24)])
         self.comboBox_2.addItems([f'{x:02}' for x in range(60)])
+
+        # 任务栏 start
+        self.tray_icon = QSystemTrayIcon(self)
+        self.tray_icon.setIcon(
+            self.style().standardIcon(QStyle.SP_ComputerIcon))
+
+        quit_action = QAction("Exit", self)
+        quit_action.triggered.connect(QApplication.instance().quit)
+
+        tray_menu = QMenu()
+        tray_menu.addAction(quit_action)
+        self.tray_icon.setContextMenu(tray_menu)
+        self.tray_icon.show()
+
+        self.tray_icon.activated[QSystemTrayIcon.ActivationReason].connect(self.iconActived)
+        # 任务栏 end
 
         time = QDateTime.currentDateTime()
         timeDisplay = time.toString('hh:mm')
@@ -76,8 +105,29 @@ class wand(QWidget, Ui_Form):
 
         self.runStask.connect(self.stask)
 
-        self.th = WorkThread()
-        self.th.sinOut.connect(self.append_text)
+        # self.th = WorkThread()
+        # self.th.sinOut.connect(self.append_text)
+
+    # 关闭窗口事件 重写
+    def closeEvent(self, event):
+        print("aaaa")
+        event.ignore()
+        self.hide()
+        # self.tray_icon.showMessage(
+        #     "Tray Program",
+        #     "Application was minimized to Tray",
+        #     QSystemTrayIcon.Information,
+        #     2000
+        # )
+
+    # 双击托盘图标还原程序
+    def iconActived(self, reason):
+        if reason == QSystemTrayIcon.DoubleClick:
+            if self.isHidden() or self.isMinimized():
+                # self.show()
+                self.showNormal()
+            else:
+                self.hide()
 
     def showTime(self):
         # 获取系统当前时间
@@ -87,14 +137,18 @@ class wand(QWidget, Ui_Form):
         timeDisplay = time.toString('hh:mm')
 
         clock = self.comboBox.currentText() + ':' + self.comboBox_2.currentText()
-        # print(timeDisplay, self.comboBox.currentText() + ':'+ self.comboBox_2.currentText())
+        print(timeDisplay, self.comboBox.currentText() + ':'+ self.comboBox_2.currentText(), self.isrun)
+        if self.num < 59 and self.isrun:
+            self.num += 1
+        else:
+            self.num = 0
+            self.isrun = False
 
         if timeDisplay == clock and self.checkBox.isChecked() and False == self.isrun:
             self.textBrowser.append("wand test start")
             self.textBrowser.moveCursor(QTextCursor.End)
-            self.runStask.emit('hello')
             self.isrun = True
-
+            self.runStask.emit('hello')
 
     def append_text(self, text):
         print(text)
@@ -105,14 +159,27 @@ class wand(QWidget, Ui_Form):
         print("ddddddddd")
         try:
             if self.isrun:
-                if not self.th:
-                    self.th = WorkThread()
-                self.th.start()
+                # if self.isMinimized():
+                #     self.setWindowState(
+                #         self.windowState() & ~QtCore.Qt.WindowMinimized | QtCore.Qt.WindowActive | QtCore.Qt.WindowStaysOnTopHint )  # 任何状态下的弹出
+                # # elif self.isHidden():
+                # else:
+                #     self.showNormal()              # 只限再任务栏的弹出
 
+                if self.isHidden():
+                    self.showNormal()
+                else:
+                    self.setWindowState(
+                                self.windowState() & ~QtCore.Qt.WindowMinimized | QtCore.Qt.WindowActive)  # 任何状态下的弹出
+
+                # self.setWindowState(self.windowState() & ~QtCore.Qt.WindowMinimized | QtCore.Qt.WindowActive)     # 任何状态下的弹出
+                msg_box = QMessageBox.question(self, 'time out', 'wan test', QMessageBox.Yes | QMessageBox.No)
+                if msg_box == QMessageBox.Yes or msg_box == QMessageBox.Yes:
+                    msg_box.exec_()
+                    print("zzzzz true")
+                    self.isrun = True
             else:
-                self.th.requestInterruption()
-
-
+                pass
         except Exception as e:
             print(e)
 
@@ -149,6 +216,7 @@ class wand(QWidget, Ui_Form):
         """
         # TODO: not implemented yet
         self.checkBox.setChecked(True)
+        self.isrun = False
     
     @pyqtSlot(str)
     def on_comboBox_2_currentTextChanged(self, p0):
@@ -160,6 +228,7 @@ class wand(QWidget, Ui_Form):
         """
         # TODO: not implemented yet
         self.checkBox.setChecked(True)
+        self.isrun = False
 
 
 if __name__ == "__main__":

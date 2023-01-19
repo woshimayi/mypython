@@ -72,7 +72,7 @@ class wand(QWidget, Ui_Form):
         self.isrun = False
         self.th = ''
 
-        # 任务栏
+        # 任务栏 start
         self.tray_icon = QSystemTrayIcon(self)
         self.tray_icon.setIcon(
             self.style().standardIcon(QStyle.SP_ComputerIcon))
@@ -81,17 +81,19 @@ class wand(QWidget, Ui_Form):
 
         quit_action = QAction("Exit", self)
         quit_action.triggered.connect(QApplication.instance().quit)
-        tray_menu = QMenu()
-        tray_menu.addAction(quit_action)
-        self.tray_icon.setContextMenu(tray_menu)
-        self.tray_icon.show()
 
         tray_menu = QMenu()
         tray_menu.addAction(quit_action)
         self.tray_icon.setContextMenu(tray_menu)
         self.tray_icon.show()
+
+        # tray_menu = QMenu()
+        # tray_menu.addAction(quit_action)
+        # self.tray_icon.setContextMenu(tray_menu)
+        # self.tray_icon.show()
 
         self.tray_icon.activated[QSystemTrayIcon.ActivationReason].connect(self.iconActived)
+        # 任务栏 end
 
         # 定时器槽函数
         self.time = QTimer()
@@ -189,6 +191,7 @@ class wand(QWidget, Ui_Form):
             self.pushButton.setStyleSheet("background-color: rgb(0, 255, 0);")
             self.isrun = False
             self.runStask.emit('hello')
+            ui.close()
 
     @pyqtSlot(str)
     def on_comboBox_currentTextChanged(self, p0):

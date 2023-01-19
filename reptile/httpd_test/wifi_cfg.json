@@ -1,0 +1,10 @@
+[
+    {
+        "url_conn":"http://172.16.80.4/anysize/100k",
+        "download_url":"http://172.16.80.4/anysize/100k",
+        "ssid":[
+            "CMCC-5g-fangchao"
+        ],
+        "password":"12345678"
+    }
+]

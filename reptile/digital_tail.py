@@ -59,7 +59,7 @@ class BeautifulPicture:
         # print(r.iter_content())
         soup = BeautifulSoup(r.text, "lxml")
         soup.prettify()
-        # print(soup)
+        print(soup)
         i = 0
         # print('aaa', soup.find_all('img'))
         for jpg_url in soup.find_all('img'):
@@ -164,7 +164,8 @@ if __name__ == '__main__':
             url = clipboard.paste()
 
             print(url)
-            if 'http' in url and 'html' in url:
+            # if 'http' in url and 'html' in url:
+            if 'http' in url:
                 # be.get_pic(url)
                 print("sss")
             else:

@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-
+import platform
 import smtplib
 import threading
 from email import encoders
@@ -13,6 +13,17 @@ from winsound import Beep
 
 send_flag = 0
 
+def system_linux():
+    if 'Windows' == platform.system():
+        return True
+    else:
+        return False
+
+def dof_beep(frequency, duration):
+    if system_linux():
+        Beep(frequency, duration)
+    else:
+        os.system('beep -f %d -l %d' % (frequency, duration))
 
 def send_email(file):
     if file is None:
@@ -141,7 +152,7 @@ if __name__ == "__main__":
     file = sys.argv[1]
     # print(file.split('\\')[-1])
 
-    Beep(400, 100)
+    dof_beep(400, 100)
     th1 = threading.Thread(target=progress_bar)
     th2 = threading.Thread(target=send_email, args=(file,))
 
@@ -155,5 +166,5 @@ if __name__ == "__main__":
         th1.join()
     # print('退出主线程')
 
-    Beep(500, 300)
+    dof_beep(500, 300)
     sys.exit()
