@@ -7,7 +7,7 @@
 @software: garner
 @file: digital-tail.py
 @time:
-@desc: 下载数字尾巴图片
+@desc: 下载数字尾巴 微信公众号 bing首页 等一些图片保存到文件夹中
 '''
 import argparse
 
@@ -59,9 +59,9 @@ class BeautifulPicture:
         # print(r.iter_content())
         soup = BeautifulSoup(r.text, "lxml")
         soup.prettify()
-        print(soup)
+        # print(soup)
         i = 0
-        # print('aaa', soup.find_all('img'))
+        # print('aaa', len(soup.find_all('img')))
         for jpg_url in soup.find_all('img'):
             i += 1
 
@@ -102,21 +102,6 @@ class BeautifulPicture:
             print(jpg_url)
             time.sleep(0.5)
 
-            # if jpg_url.get('data-original') is not None and 'http' in jpg_url.get('data-original'):
-            #     tmp_url = jpg_url.get('data-original')
-            # elif jpg_url.get('src') is not None and 'http' in jpg_url.get('src'):
-            #     tmp_url = jpg_url.get('src')
-            # elif jpg_url.get('data-src') is not None and 'http' in jpg_url.get('data-src'):
-            #     tmp_url = jpg_url.get('data-src')
-            # elif
-            # else:
-            #     continue
-            #
-            # print('1', tmp_url)
-            # picture_name = str(time.strftime("%Y%m%d%H%M%S", time.localtime())) + str(i) + '.jpg'
-            # print(picture_name, end='')
-            # self.save_img(tmp_url, picture_name)
-
         # os.chdir('../')
 
     def get_next_url(self):
@@ -151,7 +136,7 @@ if __name__ == '__main__':
         elif args.file:
             file = args.file
         else:
-            print("not args")
+            pass
 
         print(args)
 
@@ -167,7 +152,7 @@ if __name__ == '__main__':
             # if 'http' in url and 'html' in url:
             if 'http' in url:
                 # be.get_pic(url)
-                print("sss")
+                pass
             else:
                 print('no html')
 
@@ -197,11 +182,16 @@ if __name__ == '__main__':
         be = BeautifulPicture()
         be.mk_dir(path)
 
-        if "opser.wap.dgtle" in url:
-            index = url.split('/')[-1]
-            print(index)
-            url = base_url + 'article-' + \
-                      url.split('/')[-1] + '-1.html'
+        # mobil url to pc url
+        # if "opser.wap.dgtle" in url or "m.dgtle.com" in url:
+        #     index = url.split('/')[-1]
+        #     print(index)
+        #     url = base_url + 'article-' + \
+        #               url.split('/')[-1] + '-1.html'
         be.get_pic(url)
+
+    # remove empty dir
+    if 0 == len(os.listdir(path)):
+        os.rmdir(path)
 
 
