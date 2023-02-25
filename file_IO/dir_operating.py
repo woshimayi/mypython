@@ -1,26 +1,26 @@
 # -*- coding: utf-8 -*-
-
+import logging
 import os
 import re
 import shutil
 import sys
 
-# print(os.name)
-# print(os.environ)
-# print(os.environ.get('PATH'))
-# print(os.path.abspath('.'))
+# logging.debug(os.name)
+# logging.debug(os.environ)
+# logging.debug(os.environ.get('PATH'))
+# logging.debug(os.path.abspath('.'))
 
 # curron_dir = os.path.abspath('.')
 # mkdir = os.path.join(curron_dir, 'test_dir')
 
-# print(os.path.split(mkdir))
-# print(os.path.splitext(mkdir))
+# logging.debug(os.path.split(mkdir))
+# logging.debug(os.path.splitext(mkdir))
 
 # if id('test_dir') == id(os.path.split(mkdir)):
-# 	print("cunzai")
+# 	logging.debug("cunzai")
 # else:
 # 	os.mkdir(mkdir)
-# 	print("sd")
+# 	logging.debug("sd")
 # os.rmdir(mkdir)
 
 # os.rename('test_123', 'test_dir')
@@ -28,30 +28,34 @@ import sys
 
 # for x in os.listdir('.'):
 # 	if os.path.isdir(x):
-# 		print(x)
+# 		logging.debug(x)
 
-# print('C:\\Windows\\System32')
+# logging.debug('C:\\Windows\\System32')
 
 
 dir = r'V:/'
 # 打开搜索到的所有程序
 # for x in os.listdir(dir):
-# 	# print('dir:\t\t', x)
+# 	# logging.debug('dir:\t\t', x)
 # 	if os.path.isdir(dir):
-# 		print('dir:\t\t\t\t', x)
+# 		logging.debug('dir:\t\t\t\t', x)
 # 	if os.path.splitext(x)[1]=='.exe':
 # 		y = os.path.join(dir, x)
-# 		print(y)
+# 		logging.debug(y)
 
 
 # 循环打开程序
 # for z in range(10):
-# 	print(z)
+# 	logging.debug(z)
 # 	os.startfile('calc')
 
 
 i = 0;
 k = 0;
+
+logging.basicConfig(
+    level=logging.DEBUG,
+    format='[%(funcName)s:line:%(lineno)d] - %(levelname)s: %(message)s')
 
 
 def gci(dir):
@@ -60,24 +64,24 @@ def gci(dir):
 
     for x in os.listdir(dir):
         if os.path.isdir(x):
-            print(x)
+            logging.debug(x)
             k = k + 1
-            print(k, end='')
+            logging.debug(k, end='')
 
             y = os.path.join(dir, x)
-            print(':', y)
-            print(os.listdir(y))
+            logging.debug(':', y)
+            logging.debug(os.listdir(y))
 
         elif os.path.isfile(x):
             y = os.path.join(dir, x)
             # i = i + 1
-            # print(i, end='')
-            print('::' + y)
+            # logging.debug(i, end='')
+            logging.debug('::' + y)
 
 
-# print(dir)
+# logging.debug(dir)
 # gci(dir)
-# print(i)
+# logging.debug(i)
 
 # 遍历目录 找出具体某些类型的文件
 
@@ -103,24 +107,27 @@ class GetDirAllFileInfo(object):
         """
         显示所有文件
         """
-        print("==========os.walk================")
+        logging.debug("==========os.walk================")
         index = 1
         os.chdir(self.dir)
         L = []
         for root, dirs, files in os.walk(dir):
             for file in files:
-                print(os.path.splitext(file)[0], '\t\t\t\t', os.path.splitext(file)[1])
+                # logging.debug("%s %s" % (os.path.splitext(file)[0], os.path.splitext(file)[1]))
                 L.append(os.path.splitext(file)[1])
                 # pattern = re.compile(r'(^(\[(.*)]))(.*)')
-                # if pattern.search(file):
-                #     print(file)
-                #     print('9\t\t\t\t', pattern.search(file).groups()[-1].strip(' .'))
-                # dstfile = pattern.search(file).groups()[-1].strip(' .')
-                #
-                # srcfile = self.win2unixformat(os.path.join(root, file))
-                # dstfilepath = self.win2unixformat(os.path.join(root, dstfile))
-                #
-                # os.rename(srcfile, dstfilepath)
+                # pattern = re.compile(r'(^(阳光(.*)com))(.*)')
+                pattern = re.compile(r'((迅雷之家(.*)com))(.*)')
+                if pattern.search(file):
+                    logging.debug('8\t\t\t\t %s |\t\t\t %s ' % (file, pattern.search(file).groups()[-1].strip(' .')))
+                    dstfile = pattern.search(file).groups()[-3].strip(' .')
+                    logging.debug('%s' % (file.split(dstfile)[0].strip('.') + file.split(dstfile)[-1]))
+                    dstfile = file.split(dstfile)[0].strip('.') + file.split(dstfile)[-1]
+
+                    srcfile = self.win2unixformat(os.path.join(root, file))
+                    dstfilepath = self.win2unixformat(os.path.join(root, dstfile))
+                    logging.debug("%s %s" % (srcfile, dstfilepath))
+                    os.rename(srcfile, dstfilepath)
 
                 index += 1
         return L
@@ -130,44 +137,41 @@ class GetDirAllFileInfo(object):
         过滤后缀列表重命名
         :param filters: 过滤后缀列表
         """
-        print("==========os.walk================")
+        logging.debug("==========os.walk================")
         index = 0
-        print(filters)
+        logging.debug(filters)
         os.chdir(self.dir)
 
         for root, dirs, files in os.walk(dir):
             for file in files:
                 suffix = os.path.splitext(file)[1]
-                # print(suffix)
+                # logging.debug(suffix)
                 # if suffix in filters:
                 if suffix in filters:
-                    print(file)
+                    # logging.debug(file)
                     index += 1
                     pattern = re.compile(r'(^(\[(.*)]))(.*)')
                     # pattern = re.compile(r'(.*).mp4$')
                     if pattern.search(file):
-                        print(file)
-                        print('9\t\t\t\t', pattern.search(file).groups()[-1].strip(' .'))
+                        logging.debug(file)
+                        logging.debug('9\t\t\t\t %s' % pattern.search(file).groups()[-1].strip(' .'))
                         dstfile = pattern.search(file).groups()[-1].strip(' .')
 
                         try:
                             srcfile = self.win2unixformat(os.path.join(root, file))
                             dstfilepath = self.win2unixformat(os.path.join(root, dstfile))
                             # dstfilepath = self.win2unixformat(os.path.join(root, file)) + '.mp4'
-                            print(srcfile, '\t\t\t\t', dstfilepath)
-
+                            logging.debug("%s %s" % (srcfile, dstfilepath))
                             os.rename(srcfile, dstfilepath)
 
                         except Exception as e:
-                            print(e)
-
-
+                            logging.debug(e)
                 else:
                     srcfile = self.win2unixformat(os.path.join(root, file))
-                    # print(srcfile)
+                    # logging.debug(srcfile)
                     # shutil.move(srcfile, dstdir)
 
-        print('total num: ', index)
+        logging.debug('total num: %s' % index)
 
     def filesfiltermove(self, filters, dstdir, index=1):
         """
@@ -175,8 +179,8 @@ class GetDirAllFileInfo(object):
         :param filters:  过滤后缀列表
         :param dstdir:   目标文件夹
         """
-        print("==========os.walk================")
-        print(filters)
+        logging.debug("==========os.walk================")
+        logging.debug(filters)
         os.chdir(self.dir)
 
         if os.path.exists(dstdir):
@@ -186,56 +190,56 @@ class GetDirAllFileInfo(object):
 
         i = 0
         for root, dirs, files in os.walk(dir, topdown=True):
-            print("第", i, "层")
+            logging.debug("第", i, "层")
             if index == i:
                 break
 
             for file in files:
-                # print('file list %s %s' % (os.path.splitext(file)[0], os.path.splitext(file)[1]))
+                # logging.debug('file list %s %s' % (os.path.splitext(file)[0], os.path.splitext(file)[1]))
                 suffix = os.path.splitext(file)[1]
 
                 if suffix in filters:
                     try:
                         srcfile = self.win2unixformat(os.path.join(root, file))
-                        print(srcfile)
+                        logging.debug(srcfile)
                         # shutil.move(srcfile, dstdir)
                     except Exception as e:
-                        print(e)
+                        logging.debug(e)
                     index += 1
             i += 1
-        print('\ntotal num: ', index)
+        logging.debug('\ntotal num: ', index)
 
     def filesfilterdel(self, filters):
         """
         过滤指定后缀文件进行删除
         :param filters:
         """
-        print("==========os.walk================")
+        logging.debug("==========os.walk================")
         index = 0
-        print(filters)
+        logging.debug(filters)
         os.chdir(self.dir)
 
         for root, dirs, files in os.walk(dir):
             for file in files:
-                # print('file list %s %s' % (os.path.splitext(file)[0], os.path.splitext(file)[1]))
+                # logging.debug('file list %s %s' % (os.path.splitext(file)[0], os.path.splitext(file)[1]))
                 suffix = os.path.splitext(file)[1]
 
                 if suffix in filters:
                     try:
-                        print(file)
+                        logging.debug(file)
                         srcfile = self.win2unixformat(os.path.join(root, file))
                         os.remove(srcfile)
                     except Exception as e:
-                        print(e)
+                        logging.debug(e)
                     index += 1
-        print('\ntotal num: ', index)
+        logging.debug('\ntotal num: %s' % index)
 
     def dirfilesmove2root(self, index):
         """
         移动文件夹中单文件到根目录  删除空目录
         :param index:
         """
-        print("==========os.walk================")
+        logging.debug("==========os.walk================")
         i = 0
         os.chdir(self.dir)
         for root, dirs, files in os.walk(dir):
@@ -243,25 +247,25 @@ class GetDirAllFileInfo(object):
                 break
 
             for sub in dirs:
-                print('\t\tdir:', os.path.join(root, sub))
+                # logging.debug('\t\tdir: %s' % os.path.join(root, sub))
                 subnum = len(os.listdir(sub))
                 if os.path.isdir(sub) and (1 == subnum):
-                    # print(os.listdir(sub), len(os.listdir(sub)))
+                    # logging.debug(os.listdir(sub), len(os.listdir(sub)))
                     for j in range(subnum):
                         try:
-                            # print('move:', os.path.join(root, sub, os.listdir(sub)[j]))
+                            # logging.debug('move:', os.path.join(root, sub, os.listdir(sub)[j]))
                             result = self.win2unixformat(os.path.join(root, sub, os.listdir(sub)[j]))
-                            print('move', result)
+                            logging.debug('move %s' % result)
                             shutil.move(result, self.dir)
                         except Exception as e:
-                            print(e)
+                            logging.debug(e)
                 elif 0 == subnum:
                     try:
                         result = self.win2unixformat(os.path.join(root, sub))
-                        print('del', result)
+                        logging.debug('del', result)
                         os.rmdir(result)
                     except Exception as e:
-                        print(e)
+                        logging.debug(e)
             i += 1
 
     def alldirs(self, index):
@@ -269,47 +273,40 @@ class GetDirAllFileInfo(object):
         显示所有目录
         :param index:
         """
-        print("==========os.walk================")
+        logging.debug("==========os.walk================")
         i = 0
         os.chdir(self.dir)
         for root, dirs, files in os.walk(dir):
             if index == i:
                 break
             for sub in dirs:
-                print('\t\tdir:', os.path.join(root, sub))
+                logging.debug('\t\tdir:', os.path.join(root, sub))
                 if os.path.isdir(sub):
-                    print(len(os.listdir(sub)))
+                    logging.debug(len(os.listdir(sub)))
             i += 1
 
     def allroots(self):
         """
         # 所有目录
         """
-        print("==========os.walk================")
+        logging.debug("==========os.walk================")
         index = 1
-        # print(filters)
+        # logging.debug(filters)
         os.chdir(self.dir)
         for root, dirs, files in os.walk(dir):
-            # print("第",index,"层\t\t")
-            print(root, len(os.listdir(root)))
+            # logging.debug("第",index,"层\t\t")
+            logging.debug(root, len(os.listdir(root)))
 
             index += 1
 
 
 if __name__ == "__main__":
-    print('start run ....')
-    dir = r'V:/'
-    # dir = r'C:/Users/zs-mobile/Pictures'
-    # dir = r'E:/相册'
-    F = GetDirAllFileInfo(dir)
-    # F.allfiles()
-
     video = ['.mp4', '.avi', '.flv', '.mpg', '.mkv', '.wmv', '.m2ts', '.webm', '.asf', '.m4v', '.rmvb', '.vob',
              '.ogv', '.gif']
 
     exe = ['.exe', '.msi']
 
-    delfile = ['.torrent']
+    delfile = ['.torrent', '.nfo', '.jpg', '.png']
 
     picture = ['.jpg', '.png', '.ebp', '.mp', '.cx', '.if', '.if', '.peg', '.ga', '.xif', '.px', '.vg', '.sd', '.dr',
                '.cd', '.xf', '.fo', '.ps', '.i', '.ng', '.dri', '.aw', '.mf', '.lic', '.mf', '.co', '.vif', '.pn']
@@ -328,14 +325,20 @@ if __name__ == "__main__":
                    '.yz1', '.z', '.zap', '.zip', '.zipx', '.zix', '.zoo', '.zz', 'exe']
 
     music = ['.mp3', '.ogg', '.wav', '.aac', '.flac', '.mov']
+    logging.debug('start run ....')
 
-    F.allfilesfilterrename(video)
-    # F.filesfiltermove(music, r'V:/MUSIC')
-    # F.filesfiltermove(exe, r'V:/EXE')
-    # F.filesfiltermove(video, r'V:/EXE')
-    # F.filesfilterdel(delfile)
-    # F.dirfilesmove2root(1)
-    # F.allroots()
-    # L = F.allfiles()
+    dirs = [r'N:/', r'V:/']
+    # dir = r'C:/Users/zs-mobile/Pictures'
+    # dir = r'E:/相册'
 
-    # print(list(set(L)))
+    for dir in dirs:
+        F = GetDirAllFileInfo(dir)
+        F.filesfilterdel(delfile)
+        F.dirfilesmove2root(1)
+        F.allfilesfilterrename(video)
+        # F.filesfiltermove(music, r'V:/MUSIC')
+        # F.filesfiltermove(exe, r'V:/EXE')
+        # F.filesfiltermove(video, r'V:/EXE')
+        # F.allroots()
+        L = F.allfiles()
+        logging.debug(list(set(L)))
