@@ -77,7 +77,7 @@ class BeautifulPicture:
             else:
                 continue
 
-            print('1', tmp_url)
+            # print('1', tmp_url)
             picture_name = str(time.strftime("%Y%m%d%H%M%S", time.localtime())) + str(i) + '.jpg'
             print(picture_name, end='')
             self.save_img(tmp_url, picture_name)
@@ -183,11 +183,12 @@ if __name__ == '__main__':
         be.mk_dir(path)
 
         # mobil url to pc url
-        # if "opser.wap.dgtle" in url or "m.dgtle.com" in url:
-        #     index = url.split('/')[-1]
-        #     print(index)
-        #     url = base_url + 'article-' + \
-        #               url.split('/')[-1] + '-1.html'
+        if "ins-detail" in url:
+            index = url.split('/')[-1]
+            print(index)
+            url = base_url + 'article-' + \
+                      url.split('/')[-1] + '-1.html'
+            print(url)
         be.get_pic(url)
 
     # remove empty dir

@@ -7,7 +7,7 @@
  * @Date: 2022/8/23 19:47
  * @LastEditors: sueRimn
  * @LastEditTime: 2022/8/23 19:47
- * @Descripttion: 
+ * @Descripttion:  定期截指定屏幕
 '''
 import time
 
@@ -25,7 +25,7 @@ if __name__ == '__main__':
             ss_img.save(log_file)
             num = num + 1
             print('    end')
-            time.sleep(60)
+            time.sleep(3)
         except Exception as e:
             print(e)
 
