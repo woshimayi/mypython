@@ -282,6 +282,9 @@ class Meminfo(object):
                     'bs /b/z',
                     'bs /b/c port/index=wan0 pkt_size_stat_en=yes', 'bs /b/e port/index=wan0',
                     'bs /b/e port/index=lan0',
+                    'bs /b/e port/index=lan1',
+                    'bs /b/e port/index=lan2',
+                    'bs /b/e port/index=lan3',
                     'conr add', 'ethswctl -c mibdump -a', 'conr del']
 
         th = threading.Thread(target=self.do_telnet,

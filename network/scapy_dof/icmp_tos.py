@@ -12,10 +12,11 @@
 import time
 from random import randint
 from scapy.all import *
+import scapy.contrib.igmp
 
 # self.th = Process(target=start_runstask)
 # self.th.start()
-from scapy.layers.l2 import Dot1Q
+from scapy.layers.l2 import Dot1Q, Ether
 
 
 def scapy_ping(host):
@@ -38,9 +39,12 @@ def scapy_udp(host, port):
     seq_ping = randint(1, 65535)  # 随机产生ping序列号位
     data = b"welcome aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaazzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzwelcome\r\n"
     # ping指令会使用ICMP传输协议,ICMP报文中要封装IP头部
-    packet = IP(src='192.168.1.100', dst=host, tos=4, ttl=64, id=id_ip)/UDP(sport=sport, dport=port)/data
+    # packet = IP(src='192.168.1.100', dst=host, tos=4, ttl=64, id=id_ip)/UDP(sport=sport, dport=port)/data
+    # packet_1 = IP(src='192.168.1.100', dst=host, tos=8, ttl=64, id=id_ip) / UDP(sport=sport, dport=port) / data
+    packet_1 =  scapy.contrib.igmp.IGMP()
     while True:
-        res = send(packet)
+        # res = send(packet)
+        res = send(packet_1)
         if res:
             print('[*] ' + host + ' is active')
 

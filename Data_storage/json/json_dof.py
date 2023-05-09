@@ -219,7 +219,11 @@ def json_compare(file_1, file_2):
                                     print('\t\t\t\t', value_old[ite_new], valu_new, end='\t\t\t')
                                     print('\t\t\t', ite_new, int(valu_new) - int(value_old[ite_new]))
                                     ite_vlaue = int(valu_new) - int(value_old[ite_new])
-                                    ite_key[ite_new] = ite_vlaue
+                                    if ite_vlaue < 0:
+                                        ite_key[ite_new] = ite_vlaue + 2**32
+                                    else:
+                                        ite_key[ite_new] = ite_vlaue
+
                             else:
                                 if isinstance(valu_new, dict):
                                     ite_key[ite_new] = valu_new
@@ -321,7 +325,7 @@ if __name__ == '__main__':
 
     '''
 
-    json_compare(r'wand_test_record20230307111458.json', r'wand_test_record20230307111607.json')
+    json_compare(r'wand_test_record20230422160135.json', r'wand_test_record20230423130750.json')
 
 
 
