@@ -29,42 +29,59 @@ action_2 = {
     }
 }
 
-add_int = {"path": "hbus://wan/editWan","para": {"WanName": "create_new_wan", "Enable": True, "LanInterface": "", "VLANMode": 2, "VLANIDMark": 6,
+add_int = {"path": "hbus://wan/editWan",
+           "para": {"WanName": "create_new_wan", "Enable": True, "LanInterface": "", "VLANMode": 2, "VLANIDMark": 6,
                     "802-1pMark": 0, "LanInterface-DHCPEnable": 1, "IPMode": 1, "NATEnabled": True, "MTU": 1460,
                     "ConnectionType": "IP_Routed", "AddressingType": "DHCP", "ServiceList": "INTERNET"}}
-add_tr69 = {"path": "hbus://wan/editWan","para": {"WanName": "create_new_wan", "Enable": True, "LanInterface": "", "VLANMode": 2, "VLANIDMark": 6,
+add_tr69 = {"path": "hbus://wan/editWan",
+            "para": {"WanName": "create_new_wan", "Enable": True, "LanInterface": "", "VLANMode": 2, "VLANIDMark": 6,
                      "802-1pMark": 0, "MulticastVlan": -1, "IPMode": 1, "MTU": 1460, "ConnectionType": "IP_Routed",
                      "AddressingType": "DHCP", "ServiceList": "TR069"}}
-add_voip = {"path": "hbus://wan/editWan","para": {"WanName": "create_new_wan", "Enable": True, "LanInterface": "", "VLANMode": 2, "VLANIDMark": 6,
+add_voip = {"path": "hbus://wan/editWan",
+            "para": {"WanName": "create_new_wan", "Enable": True, "LanInterface": "", "VLANMode": 2, "VLANIDMark": 6,
                      "802-1pMark": 0, "IPMode": 1, "MTU": 1460, "ConnectionType": "IP_Routed", "AddressingType": "DHCP",
                      "ServiceList": "VOIP"}}
-edit_ipoe = {"path": "hbus://wan/editWan","para": {"WanName": "1", "Enable": True, "LanInterface": "", "VLANMode": 2, "VLANIDMark": 6,
+edit_ipoe = {"path": "hbus://wan/editWan",
+             "para": {"WanName": "1", "Enable": True, "LanInterface": "", "VLANMode": 2, "VLANIDMark": 6,
                       "802-1pMark": 0, "MulticastVlan": -1, "LanInterface-DHCPEnable": 1, "IPMode": 1,
                       "NATEnabled": True, "MTU": 1500, "ConnectionType": "IP_Routed", "AddressingType": "DHCP",
                       "ServiceList": "INTERNET"}}
-edit_pppoe = {"path": "hbus://wan/editWan","para": {"WanName": "2", "Enable": True, "LanInterface": "", "VLANMode": 2, "VLANIDMark": 200,
+edit_pppoe = {"path": "hbus://wan/editWan",
+              "para": {"WanName": "2", "Enable": True, "LanInterface": "", "VLANMode": 2, "VLANIDMark": 200,
                        "802-1pMark": 0, "MulticastVlan": -1, "LanInterface-DHCPEnable": 1, "IPMode": 1,
                        "NATEnabled": True, "MTU": 1460, "ConnectionType": "PPPoE_Routed", "Username": "test16",
                        "Password": "test16", "ConnectionTrigger": "AlwaysOn", "ServiceList": "INTERNET"}}
 
-add_xw_wan = {"path": "hbus://wan/editWan","para": {"WanName": "create_new_wan", "Enable": True, "LanInterface": "", "VLANMode": 2,
+add_xw_wan = {"path": "hbus://wan/editWan",
+              "para": {"WanName": "create_new_wan", "Enable": True, "LanInterface": "", "VLANMode": 2,
                        "VLANIDMark": 1800, "802-1pMark": 0, "IPMode": 2, "MTU": 1500, "ConnectionType": "IP_Routed",
                        "ServiceList": "TR069", "IPv6IPAddressOrigin": "DHCPv6", "IPv6PrefixDelegationEnabled": True,
                        "IPv6PrefixOrigin": "PrefixDelegation", "IPv6DsliteEnable": False}}
 
-add_tc = {"path": "hbus://wan/editWan","para": {"WanName": "create_new_wan", "Enable": True, "LanInterface": "", "VLANMode": 2, "VLANIDMark": 1801,
+add_tc = {"path": "hbus://wan/editWan",
+          "para": {"WanName": "create_new_wan", "Enable": True, "LanInterface": "", "VLANMode": 2, "VLANIDMark": 1801,
                    "802-1pMark": 0, "MulticastVlan": -1, "LanInterface-DHCPEnable": True, "IPMode": 1,
                    "NATEnabled": True, "MTU": 1500, "ConnectionType": "IP_Routed", "AddressingType": "Static",
                    "ExternalIPAddress": "30.30.30.30", "SubnetMask": "255.255.255.0", "DefaultGateway": "30.30.30.30",
                    "DNSServers": "30.30.30.30", "ServiceList": "INTERNET"}}
 
-add_br_inter = {"path": "hbus://wan/editWan","para": {"WanName": "create_new_wan", "Enable": True, "LanInterface": "LAN2", "VLANMode": 2,
-                         "VLANIDMark": 6,"802-1pMark": 0, "MulticastVlan": -1, "IPMode": 1, "MTU": 1500,
-                         "ConnectionType": "IP_Bridged","ServiceList": "INTERNET"}}
+add_br_inter = {"path": "hbus://wan/editWan",
+                "para": {"WanName": "create_new_wan", "Enable": True, "LanInterface": "LAN2", "VLANMode": 2,
+                         "VLANIDMark": 6, "802-1pMark": 0, "MulticastVlan": -1, "IPMode": 1, "MTU": 1500,
+                         "ConnectionType": "IP_Bridged", "ServiceList": "INTERNET"}}
 
-add_br_other = {"path": "hbus://wan/editWan","para": {"WanName": "create_new_wan", "Enable": True, "LanInterface": "LAN1,LAN4", "VLANMode": 2,
+add_br_other = {"path": "hbus://wan/editWan",
+                "para": {"WanName": "create_new_wan", "Enable": True, "LanInterface": "LAN1,LAN4", "VLANMode": 2,
                          "VLANIDMark": 6, "802-1pMark": 0, "MulticastVlan": -1, "IPMode": 1, "MTU": 1500,
                          "ConnectionType": "IP_Bridged", "ServiceList": "OTHER"}}
+
+add_int_tc_ipv6 = {"path": "hbus://wan/editWan",
+                   "para": {"WanName": "create_new_wan", "Enable": True, "LanInterface": "", "VLANMode": 2,
+                            "VLANIDMark": 1801, "802-1pMark": 0, "MulticastVlan": -1, "LanInterface-DHCPEnable": True,
+                            "IPMode": 2, "NPTv6Enable": True, "MTU": 1500, "ConnectionType": "IP_Routed",
+                            "ServiceList": "INTERNET", "IPv6IPAddressOrigin": "Static", "IPv6IPAddress": "3000::2/64",
+                            "IPv6DNSServers": "3000::2", "IPv6PrefixOrigin": "Static", "IPv6Prefix": "2010::2/64",
+                            "IPv6DefaultGateway": "3000::2", "IPv6DsliteEnable": False}}
 
 # get wan name
 get_url = "http://192.168.1.1/getHbusData?path=hbus://wan/getWan&msgType=213&userTagData=1"
@@ -102,9 +119,12 @@ telnetTrue.append(enableTelnet)
 getChallengeStr_url = 'http://192.168.1.1//getChallengeStr'
 login_url = 'http://192.168.1.1/lgDevice?userName=CMCCAdmin&responseChallenge=424e8cacd1dd80787cdc74b7e3a4fa56'
 
-
 skip_auth = 'http://192.168.1.1/debug'
-skip_auth_data = {"EnableWebDataLog":False,"EnableLogHtmlEle":False,"DisableCommitData":False,"EnableConsolelog":False,"EnableHttpdDebug":False,"EnableSkipAuth":True,"EnableHttpdHbusData":False,"EnableHttpdHbusCmd":False,"EnableDownloadFile":False,"DisablePing":False}
+skip_auth_data = {"EnableWebDataLog": False, "EnableLogHtmlEle": False, "DisableCommitData": False,
+                  "EnableConsolelog": False, "EnableHttpdDebug": False, "EnableSkipAuth": True,
+                  "EnableHttpdHbusData": False, "EnableHttpdHbusCmd": False, "EnableDownloadFile": False,
+                  "DisablePing": False}
+
 
 def json_format(data):
     print(json.dumps(data, sort_keys="true", indent=4, separators=(",", ":")))
@@ -255,8 +275,6 @@ class HttpdTest:
     def login(self):
         self.post_info(skip_auth, skip_auth_data)
 
-
-
     def wanget_set(self):
         print("starting...")
 
@@ -324,7 +342,7 @@ if __name__ == '__main__':
         sleep(1)
         # get wan name info
         if len(L) > 0:
-        # if False:
+            # if False:
             # for j in range(20):
             #     print("show ", j, end=' ')
             #     for k in L:

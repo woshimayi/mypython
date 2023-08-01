@@ -175,7 +175,6 @@ class HandleLog:
         self.__console('critical', message)
 
 
-
 if __name__ == '__main__':
     pass
     log = HandleLog(is_console=True, is_save=False)

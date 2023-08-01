@@ -325,7 +325,7 @@ if __name__ == '__main__':
 
     '''
 
-    json_compare(r'wand_test_record20230422160135.json', r'wand_test_record20230423130750.json')
+    json_compare(r'wand_test_record20230511145934.json', r'wand_test_record20230511150155.json')
 
 
 

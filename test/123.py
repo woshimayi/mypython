@@ -9,3 +9,14 @@
 @time: 2020/8/1 15:33
 @desc: ssssssssssss
 '''
+
+import  os
+import sys
+
+import logging
+
+gitinfo = os.popen('git config remote.origin.url')
+print(gitinfo.read().strip('\n'))
+
+logging.error("ssss")
+
