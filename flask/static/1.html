@@ -1,0 +1,60 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Account setup</title>
+<link href="lib/css/colors.css" type="text/css" rel="stylesheet" />
+<link href="lib/css/content.css" type="text/css" rel="stylesheet" />
+<script language="javascript" src="lib/js/jquery.js"></script>
+<script language="javascript" src="lib/js/common.js"></script>
+<script language="javascript" src="lib/js/util.js"></script>
+<script language="javascript" src="lib/js/account_setup.js"></script>
+</head>
+<body>
+<img class="load" id="loadPic" src="pic/loading.gif">
+<h3 class="titleCtx" id="ACCOUNT_Title"></h3>
+<form>
+  <div id="ACCOUNT_DIV_BlockChange" style="display:none">
+    <p id="ACCOUNT_UserManagementInfo1"></p>
+    <p id="ACCOUNT_UserManagementInfo2"></p>
+    <p id="ACCOUNT_UserManagementInfo3"></p>
+    <br/>
+    <p id="ACCOUNT_UserManagementInfo4"></p>
+    <br/>
+  </div>
+  <div id="ACCOUNT_DIV_BlockChange2" style="display:none">
+    <p id="ACCOUNT_UserManagementInfo5"></p>
+    <br/>
+    <p id="ACCOUNT_UserManagementInfo6"></p>
+    <p id="ACCOUNT_UserManagementInfo7"></p>
+  </div>
+  <table border="0" cellpadding="0" cellspacing="0" id="ACCOUNT_TB_AccountSwitch">
+  <tr><td><input type="radio" name="ACOUNT_RADIO_AccountType" checked></td><td id="ACCOUNT_UserAccountType"></td></tr>
+  <tr><td><input type="radio" name="ACOUNT_RADIO_AccountType"></td><td id="ACCOUNT_AdminAccountType"></td></tr>
+  <tr><td>&nbsp;</td><td>&nbsp;</td></tr>
+  <tr><td>&nbsp;</td><td>&nbsp;</td></tr>
+  </table>
+  <table border="0" cellpadding="0" cellspacing="0">
+    <tr>
+      <td width="120" id="ACCOUNT_OriginalUserName"></td>
+      <td><input id='ACCOUNT_TEXT_OldUserName' type="text" style="width:140px" maxlength="16" disabled='true'></td>
+    </tr>
+    <tr id="ACCOUNT_TrChange" style="display:none">
+      <td width="120" id="ACCOUNT_OriginalUserPassword"></td>
+      <td><input id='ACCOUNT_PWD_OldUserPassword' type="password" style="width:140px" maxlength="16"></td>
+    </tr>
+    <tr>
+      <td p id="ACCOUNT_P_NewPassword"></td>
+      <td><input id='ACCOUNT_PWD_NewPassword' type="password" style="width:140px" maxlength="16"></td>
+    </tr>
+    <tr>
+      <td p id="ACCOUNT_P_ConfirmPassword"></td>
+      <td><input id='ACCOUNT_PWD_ConfirmPassword' type='password' style="width:140px" maxlength="16"></td>
+    </tr>
+  </table>
+  <br>
+  <center>
+    <input class="buttonX" type='button' id="BTN_Apply">
+  </center>
+</form>
+</body>
+</html>

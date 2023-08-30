@@ -11,7 +11,7 @@
 import sqlite3
 
 # 链接数据库，若数据库不存在则创建
-con = sqlite3.connect(r"123.db")
+con = sqlite3.connect(r"456.db")
 
 # 在内存中创建数据库
 # con = sqlite3.connect(":memory:")
@@ -19,8 +19,10 @@ con = sqlite3.connect(r"123.db")
 # 创建游标对象
 cur = con.cursor()
 
+mytable = 'git_commit'
+
 # 新建表abc，包含id，name，age三列，sqlite可以省略类型,ID为主键（主键不能重复）并且不能为空，若已有该表则报错
-# cur.execute("CREATE TABLE commit(id TEXT PRIMARY KEY NOT NULL,name TEXT,age INT)")
+# cur.execute("CREATE TABLE {}(id INT PRIMARY KEY NOT NULL,commit_hash TEXT,date TEXT, name TEXT, desc INT)".format(mytable))
 
 # 新建表xyz，若已有该表则忽略，
 # cur.execute("CREATE TABLE IF NOT EXISTS xyz(id TEXT PRIMARY KEY NOT NULL,name TEXT,age INT)")
@@ -39,10 +41,11 @@ cur = con.cursor()
 
 # 在表mytable中插入一条记录,两种方法，一般用第二种方法，较为安全
 # cur.execute("INSERT INTO mytable (id,name) VALUES ('0','狗蛋')")
-cur.execute("INSERT INTO mytable(id,name) VALUES(?,?)",("1","张三丰"))
+# cur.execute("INSERT INTO mytable(id,name) VALUES(?,?)",("1","张三丰"))
 
 # 在表mytable中插入一条记录，若存在即忽略
-cur.execute("INSERT OR IGNORE INTO mytable (id,name) VALUES ('0','狗蛋')")
+# cur.execute("INSERT OR IGNORE INTO mytable (id,name) VALUES ('0','狗蛋')")
+# cur.execute("INSERT OR IGNORE INTO mytable(id,name) VALUES(?,?)",('0',"狗蛋"))
 
 # 在表mytable中插入多条记录
 # info = [("2","张无忌"),("3","谢逊"),("4","令狐冲")]
@@ -55,8 +58,8 @@ cur.execute("INSERT OR IGNORE INTO mytable (id,name) VALUES ('0','狗蛋')")
 # cur.executescript(sql_script)
 
 # 查询数据
-cur.execute("SELECT id,name FROM mytable")
-cur.execute("SELECT * FROM mytable")
+cur.execute("SELECT id,name FROM {}".format(mytable))
+cur.execute("SELECT * FROM {}".format(mytable))
 
 # 获取查询结果集中所有（剩余）的行，返回一个列表
 print(cur.fetchall())
@@ -71,6 +74,28 @@ print(cur.fetchall())
 # n = cur.execute("delete from mytable where id=?",("1",)) #逗号不能省，元组元素只有一个的时候一定要加逗号
 # print("删除{num}行记录".format(num = n.rowcount))
 
+def commit_sort_1():
+    # fw = open(r'commit_tmp_1.txt', 'w', encoding='utf-8')
+    with open(r'../../flask/tar.txt', 'r', encoding='utf-8') as f:
+        a = f.readlines()
+        count = len(a)
+        print(count)
+        for line in a:
+            count -= 1
+            print(count, line.split(' ', 3))
+            commit_hash = line.split(' ', 3)[0]
+            date = line.split(' ', 3)[1]
+            name = line.split(' ', 3)[2]
+            desc = line.split(' ', 3)[3]
+            # fw.write(line)
+            exec = "INSERT OR IGNORE INTO {}(id,commit_hash,date,name,desc) VALUES(?,?,?,?,?)".format(mytable)
+            cur.execute(exec, (count, commit_hash, date, name, desc))
+
+    f.close()
+    # fw.close()
+
+commit_sort_1()
+
 # 事务提交，保存修改内容。
 con.commit()
 
@@ -79,6 +104,8 @@ con.commit()
 
 # 数据库关闭，不自动提交保存。如果在关闭数据库连接之前没有调用 commit()，那么你的修改将会丢失！
 con.close()
+
+
 
 
 if __name__ == '__main__':

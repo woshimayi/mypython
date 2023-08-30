@@ -3,10 +3,9 @@ import struct
 import time
 
 
-
 def wake_up(mac='DC-4A-3E-78-3E-0A'):
     MAC = mac
-    BROADCAST = "192.168.0.255"
+    BROADCAST = "192.168.2.255"
     if len(MAC) != 17:
         raise ValueError("MAC address should be set as form 'XX-XX-XX-XX-XX-XX'")
     mac_address = MAC.replace("-", '')
@@ -32,5 +31,6 @@ def wake_up(mac='DC-4A-3E-78-3E-0A'):
     except Exception as e:
 
         print(e)
+
 
 wake_up("2c-53-4a-03-99-fb")

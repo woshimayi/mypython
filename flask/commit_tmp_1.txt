@@ -1,0 +1,396 @@
+266644fbbbd2ec4ab2fc07f9e1e0a24dec6b91b1 2023-08-01/17:00:38 chenxi 问题描述: 在rcS中增加hgsinit
+be06785dd0366b49a2bf30012444f9cee4bb598c 2023-08-01/16:12:22 zhangkangkang modify start_java.sh file mode
+b2ce0596a582bb4a0f4fc2f015510850d3faff34 2023-08-01/15:12:34 lijiangang Merge branch 'hisi_096' of http://172.16.8.160:8091/HSAN_091 into hisi_096
+1c95509fd1896b1aab99a6c6b2059355db006d09 2023-08-01/15:11:02 lijiangang 问题描述：优化插件权限下发流程（HSCP2023072634500）
+7f34fa440f6e797bae84e52027a65e037a6b864e 2023-08-01/14:48:52 chenxi 问题描述: 增加hgsinit模块
+2f58dce993ed9f1ae727ebcdf40434f033b6f868 2023-08-01/14:09:29 zhangxingwu Revert "Revert "问题描述: fix issue of set default config when reboot""
+8b9dc5641e7a0c95112b4db2831823a3da015938 2023-08-01/13:55:31 zhangxingwu Revert "问题描述: fix issue of set default config when reboot"
+38b10beb28598df36b7d2598f2daf094a21d8fdd 2023-08-01/13:26:55 zhangxingwu Merge branch 'hisi_096' of http://172.16.8.160:8091/HSAN_091 into hisi_096
+51325121a733d55d44a11126a232b7e7407e48d7 2023-08-01/13:26:07 zhangxingwu 问题描述: 配合仪表测试， 下行10G 不限速
+d8acc37733bc098d07a2b77697b9ccc928850888 2023-08-01/11:13:11 zhangtiansheng 问题描述:修改无线有数据流时闪灯
+841c2bf8d4f1240a37535012f5e241f210aa4da2 2023-08-01/11:07:34 liuhongwen 问题描述: fix issue of set default config when reboot
+ad35a6a93a221aa356d2d4ca5f733d1c4b68bdb0 2023-08-01/00:02:02 lijiangang 问题描述:删除错误的提交
+f1f4172b4ec7e5ff077e59b12b083691a86a774b 2023-07-31/23:54:22 lijiangang 问题描述:中兴 olt下，获取当前ONU下以太网端口学习MAC地址 mac地址学习方式状态不对
+2eb2a4515e782ea42e350faa44d1df27123b7b6c 2023-07-31/23:40:56 lijiangang 问题描述:平台安装卸载等插件操作时去访问web页面非常卡几乎无法访问特别是访问查看插件状态的页面
+ac908edd87e008673593e4268446fb44a325f98b 2023-07-31/23:27:08 lijiangang 问题描述:平台安装卸载等插件操作时去访问web页面非常卡几乎无法访问特别是访问查看插件状态的页面
+bbab9e2a94ebc5f9c6d93c5bdac4138a14a3093b 2023-07-31/20:19:44 zhangxingwu Merge branch 'hisi_096' of http://172.16.8.160:8091/HSAN_091 into hisi_096
+dfdfe69c4bde246d483d50c52b6f719da9323fb0 2023-07-31/20:18:16 zhangxingwu 问题描述: low power, CM, 0000, 根据配置 wan 链接特征 & 4个网关 link up 进入 P1状态
+625cd4d182a9c6b3a45519d5683f0ceff251ecf1 2023-07-31/17:24:36 chenxi 问题描述: 修改html文件的默认搜索路径
+620cfeebb96153b05cd0671c56114cb2c5658cb8 2023-07-31/17:14:49 fangchao 问题描述: fix hg_net_summary command Permission denied.
+df8a0a9ab7a79b787c4c85fb186c500b7d1d9729 2023-07-31/17:00:42 zhengsen 问题描述: unset git config filemode
+1e3a616ec39d4831c3a27b66f17ce53a49f69c8b 2023-07-31/16:49:56 fangchao 问题描述: fix lan host info speed error(2nd).
+17d8b7ccd8636a979046c4ffbb2e999310e8e8a3 2023-07-31/16:07:34 zhengsen 问题描述: tr069 inform info fix
+ecb0ce0450230b044bf736f8796379336d5e2563 2023-07-31/15:22:07 chenxi 问题描述: 增加自己的html文件
+371cb233443ee957556f1d2ff0a88a30cbe72b65 2023-07-31/13:53:59 liuhongwen 问题描述: update boot script for fac
+696fb0ca5c98dfd4b658dc0aeea4baf91776c3f1 2023-07-31/13:27:05 gejunhua IGMP,CM,YINC-205,merge hisi 2nd patch of HSCP2023072434238,CR:None
+5773026200f0981f3092675f0166b0037cbd8943 2023-07-31/11:41:42 chenxi 问题描述: 增加hghttpd模块
+9fd52c78191bbd28d67ac2decfce5995c9ce899a 2023-07-31/11:32:02 lijiangang Git ignore build_profile.
+708a7a18ac24700e9ea0d8dcf0a42ef3d44c02b3 2023-07-31/11:25:43 zhengsen 问题描述: 去掉InternetGatewayDevice.LANDevice.1.X_CMCC_WLANShare.节点
+d61fdb4f393c7604b4491bec022fa3d7a0e1d9e9 2023-07-30/17:22:10 fangchao 问题描述: add hg_net_summary command to fix pon statistics show incorrect after long time running.
+e7e01dd7c6ac10b21d7ca961826fe82d3b5e2661 2023-07-29/18:51:48 chenxi 问题描述: 增加buildopt.mk文件
+015399441bd55755104ab01d4a19cfacebb8400b 2023-07-29/18:38:54 chenxi 问题描述: 增加jsontest模块
+017d5ab6c73f21cf47ebb3100a73d42dc9dd1298 2023-07-29/18:21:50 chenxi 问题描述: 增加make.hgs文件
+26ec552589de19f3289b68405104013e61490978 2023-07-29/14:32:53 zhangxingwu 问题描述: low power, CM,0000, 开启dmz 并且4个网口 link up 状态进入p1
+5beb300195c2c9626ff80773ead9451f43a796e4 2023-07-28/23:50:59 zhangtiansheng 解决问题：CP2023072534325_web升级app缓存擦除
+4b9e75d50f79ffe52d82078969c6821d0e868e1c 2023-07-28/23:44:24 zhangtiansheng 问题描述: HSCP2023072134112 添加AirtimeFairEnable
+0dd4abc657686f4021fd1cc4a1a3c077a2cb1b22 2023-07-28/21:37:16 fangchao 问题描述: NPTv6,CM,YINC-191,merge hisi patch(HSCP2023072734516) fix NPTv6 fail,CR:None
+3f7174fce6515f28eaed5d9657202e2caba2f914 2023-07-28/20:47:24 wangling 问题描述: merge a patch to fix mirror can't be closed
+78dedd0d9da1e20102bea516885c1f20b3bab9e6 2023-07-28/20:02:22 liuhongwen Revert "问题描述: modify build fac by '-m fac'"
+695799d09d60b06f51a6aa6685d13eab7630a32d 2023-07-28/20:02:08 liuhongwen Revert "问题描述: compile fac fault tolerant"
+dcca9a499f4870745cbbac904287a8478e9a1aea 2023-07-28/19:13:36 wangling 问题描述: merge a patch to fix the bug that lanInterface info and dhcp info are failed to display on the page
+821c01ceb5896fd0d44d356c58f8fa122f222403 2023-07-28/18:23:49 zhangtiansheng Merge branch 'hisi_096' of http://172.16.8.160:8091/HSAN_091 into hisi_096
+b80adae73e77e05d5e5ea1f55b48e5dbb1e61fde 2023-07-28/18:21:55 zhangtiansheng 问题描述:修改wps灯状态
+29b5859ca4d28a600e13dbf05c275ca9e02b1e3c 2023-07-28/17:47:30 gejunhua IGMP,CM,YINC-205,merge hisi patch(HSCP2023072434238),CR:None
+1c1bbf1894b6ca2408b39927c1947c311f0097cc 2023-07-28/17:35:14 chenxi Merge branch 'hisi_096' of http://172.16.8.160:8091/HSAN_091 into hisi_096
+6078b5ff1399bf223f3cec9ff33c5ca118b1bcd3 2023-07-28/17:33:51 chenxi 问题描述: 添加minihttpd的源代码，并且支持模块化编译
+aa7f355c90ba77ba8e05c9b6e6f6bb7585e1ca6e 2023-07-28/17:19:05 zhengsen 问题描述: compile fac fault tolerant
+df88b83bb183072a8c2d5df7301a1463bebcaec4 2023-07-28/16:15:13 liuhongwen 问题描述: modify lan sequency for xg no wifi
+9dd6f189eb5eadc13a5e055117842f0ba84312d7 2023-07-28/10:24:06 wangling 问题描述: merge a patch to show productdate to replace release time on deviceInfo page
+d8319fcb8f1fb55f966aa91e3f757badba1992be 2023-07-28/10:14:39 zhangkangkang revert last getExceptionInfo modify in 338 for cmccdpi 4.3.0.T6 fixed
+40ed2b4d01db430967a9932bb87419615c7e0f71 2023-07-28/10:04:34 zhangxingwu 问题描述: ko, CM,00000,添加可执行权限
+50d31d0c37961ad31fda6720a2d4b47641146f4d 2023-07-28/09:39:14 liuhongwen 问题描述: modify build fac by '-m fac'
+903e565905f0db3469bb78005642b65a648b43d4 2023-07-27/20:40:01 liuhongwen 问题描述: modify wlan to compatible with fac
+e5cf3767c9490df2355292d37d8dcc9f27278767 2023-07-27/19:24:20 zhangkangkang modify for getStorageInfo takes long time
+254d1e7b317da6ab63c8d902c719542eae8934e6 2023-07-27/11:42:07 zhangkangkang modify pon ac_regtime format, add ms
+8a91bcb90609e54d5d6783d5141a6bf568e2aa12 2023-07-27/11:17:54 liuhongwen 问题描述: [200~修改不同fem应对，femid：0 EPA，1 IPA，默认为0
+4af998d64b82253655fe7b94b18fd667ab88d1c9 2023-07-26/22:46:14 zhangxingwu 问题描述: 添加可执行权限
+9bfa23d0c11a05bcd50d796e983917186afca01e 2023-07-26/21:03:44 zhangxingwu 问题描述: low power, CM ,0000, low power test
+f708d5066c7d25c3817490103fe22c8cce09de48 2023-07-26/19:46:31 zhangkangkang modify getExceptionInfo add default String for cmccdpi test
+271c6e30516add3c960d5de3fdde71a483f18301 2023-07-26/19:38:52 fangchao 问题描述: change olt upgrade firmware version.
+cb8374b20cb514229379fd5661bc2e1667689d18 2023-07-26/16:12:39 zhengsen 问题描述: change cpu rate (pps)
+7146fe85689c6ef2abe6b8243338d7c867469b0a 2023-07-11/09:49:37 zhengsen 问题描述: 激活ONU基于IPv6源IP地址不同，标记Traffic Class，结果不对
+0291facaf0de79d23a1cd533d1d1b6d01ab51d49 2023-07-18/11:41:43 zhengsen 问题描述: change mtu max value 1900
+b5fe66e6fe70181f35540024c7ad35b809c07855 2023-07-18/11:19:25 zhengsen 问题描述: fix wan mtu range 128-1900
+200243a9a490af0229012be02cf76698a559f21e 2023-07-14/14:45:09 liuhongwen 问题描述: No break line according to tester's suggest
+c95b42cce04e7c2dfd8883073298d68f31bf1a90 2023-07-26/15:27:14 zhangkangkang modify pon ac_regtime format, add ms
+700b036cc595563742d8e8b4c3bbfbd275c72bcf 2023-07-26/14:23:38 zhangkangkang wlanhost add WifiChannelWidth WifiMaxChannelWidth for compatible cmccdpi TB:YINC-164
+73a72589a7ba7105c9bb1197a78008e416d73ff7 2023-07-26/14:14:24 liuhongwen 问题描述: add preconfig for board that have 1 usb port, update nowifi config
+ef03d431bcdea0f472575560f4fd95eef772f041 2023-07-26/12:23:31 zhangxingwu 问题描述:  testcenter, CM, 000, 配合测试性能打流 加载byteLimit
+34e52a187b9dc27ddbb5fa68083422f4cd56ef40 2023-07-26/11:37:55 zhangxingwu 问题描述:  testcenter, CM, 000, 配合测试性能打流  xml 错误
+f64c00a59480f83e959d48c59b8cbf5aee1fef89 2023-07-26/11:04:21 zhangxingwu 问题描述:testcenter, CM, 000, 配合测试性能打流 ,xml 提交错误
+4543d03554d4d0a9c1429db475dfa3d6a725242c 2023-07-26/10:12:14 zhangxingwu 问题描述:testcenter, CM, 000, 配合测试性能打流
+40f7f4ef406bc2601a3a63c9df572a07024b475e 2023-07-26/09:47:14 zhangxingwu 问题描述:lowpower , CM, 0000,  patch from HSCP2023070332307 hi_lp & hi_lpp
+399d80d17b4b6807c3189a78346b8f8ee6365ba9 2023-07-25/23:17:50 chenxi 问题描述: 增加minihttpd,showmem,showifindex
+72f2b5026e57e9a63f57bca204ba976d9ead79b6 2023-07-22/18:36:43 liuhongwen 问题描述: modify usb led for emei
+537a4da4a745181ade9ff9a1d1e0997603e1ebcb 2023-07-21/20:03:36 liuhongwen 问题描述: build factory by ' -fac y '
+484717da436fbb97603cb93d7a39b1d9f06405f6 2023-07-25/21:21:18 zhangkangkang modify for intra ping fail YINC-152
+b43c2d7d79460e28f140ad43a76ac3475ace485f 2023-07-25/21:18:41 zhangkangkang no wifi gateway register fail
+b8dadcefea2550c831a1f6a4717cce00cf5cb9a5 2023-07-25/21:11:27 zhangkangkang Merge branch 'hisi_096' of http://172.16.8.160:8091/HSAN_091 into hisi_096
+eed065d27982ba7faea184dfb6546ce58fe748f5 2023-07-25/21:10:54 zhangkangkang add tcpdump for debug
+f0e6efe9dde8c663f047e86efb9d28f19a8e5c8d 2023-07-24/14:46:40 wangling 问题描述:fix the bug that can't close mirror function on the web page
+1d185f8cbc42e2615973ae98d12d72e423b1e547 2023-07-14/15:26:46 wangling 问题描述:rename hiverion.html to readme.html
+cc87e8a5f85c7178a612eb1f6075a385db6ae86d 2023-07-14/13:43:50 wangling 问题描述: get version info from hg_version
+d1134697ad6b51a74f36506b231f014e847079e9 2023-07-13/17:07:47 wangling 问题描述:fix an issue that the multicast VLAN can not be displayed on the page when it is -1
+34b86e42bbdaf424ff82ccd7eca5e20cdf82a52a 2023-07-13/11:19:31 wangling 问题描述: add hiversion.html to show the version info of the software
+2935b8c74478806d5b9ac36bd0a7c534cc49b9b4 2023-07-25/21:01:56 liuhongwen 问题描述: for flash adaption.
+b06ec54817e886429e16a1414874f8fa620a888d 2023-07-25/20:59:11 zhangkangkang modify start_java.sh adding debug flag,comment out no use debug log
+61e17709e3aa5515a74e986c356a280a08597a92 2023-07-25/20:58:16 fangchao 问题描述: add chip check, do not upgrade firmware when chip is not same.
+30cb30697c5c8847edbead0b372aeb1eccbf78a9 2023-07-25/20:56:44 wangling 问题描述: fix an issue that the multicast VLAN can not be displayed on the page when it is -1
+4cd5a6a1562b73a3ee8405d8ca582202f9b8675d 2023-07-25/20:55:31 fangchao Merge branch 'hisi_096' of http://172.16.8.160:8091/HSAN_091 into hisi_096
+c89f7a8b602e1ba0147d5e0700d5528d66a07a9b 2023-07-25/20:55:19 fangchao 问题描述: fix olt upgrade firmware sometimes will fail when activemode is immediate.
+049bbe2e8716ed60922372b33df3357ac840a9f1 2023-07-25/20:54:52 liuhongwen 问题描述: for flash adaption.
+eca8bb620a33bd56401ac88aaa55a39f57d43a55 2023-07-25/20:53:48 zhangkangkang Add zebra for rip test
+052d069ae553dbc42ac9462d286b7b15a4b261d0 2023-07-25/20:52:23 fangchao 问题描述: fix lan host info speed error.
+0c11708c0107a81a2cea17f2391da0cf05b63fa4 2023-07-25/11:35:03 lijiangang For Intel 31001 ring voltage and peak2peak.
+a2a568149ac8dc2c6312aa5a1d9e03004914451a 2023-07-24/15:07:08 lijiangang For SiliconLabs ProSLIC SPI read&write protection.
+b49ebd570d122effed672a2e1e9db7508c4a2589 2023-07-25/20:47:27 fangchao Merge branch 'hisi_096' of http://172.16.8.160:8091/HSAN_091 into hisi_096
+5f64ec441bd2d07ab9a31e92be2e46707b75c809 2023-07-25/20:46:56 fangchao 问题描述: support upgrade firmware only include kernel or rootfs.
+0f0cea6c28ef214da66132585645fed597b29c0a 2023-07-09/00:55:13 lijiangang * loid/password can be visible on page
+763bfcda9a90a771370aa6203485a6b3bf7fdf32 2023-07-25/20:45:35 zhangtiansheng 问题描述:添加无线wps的相关修改
+7282a0772fa2c758853b5c0d68387abe0fca455b 2023-07-25/20:43:33 liuhongwen 问题描述: merge 094 changes for hardward adaption.
+0595a2b1b7c50418338409f1068618e8ac8e4e9b 2023-07-19/14:03:58 zhengsen 问题描述: tr069 inform 参数上报更新
+8d1935ef5af1b1c983f0ab0f9485628a96e6612a 2023-07-23/15:50:18 zhengsen 问题描述: 激活ONU基于IPv6源IP地址不同，标记Traffic Class，结果不对
+2c5e83c41a68a5a90c3ff4748bbb249f3a4e932d 2023-07-25/20:27:32 zhangtiansheng 问题描述:更新无线基础参数
+b2d15b174590772e9f0a9a7c9d6a369b1a1bedbb 2023-07-09/00:10:19 lijiangang Adapted SI32192 SLIC driver.
+86933b406b945de78be29a70e51940dc6c55ea96 2023-07-25/20:15:59 chenxi import raw B096 SDK
+e93bbc717e8cd983b25cbe7a1b4fd0d5eebeb4cc 2023-07-25/17:53:37 chenxi Merge branch 'hisi_095' of http://172.16.8.160:8091/HSAN_091 into hisi_095
+b7b68e8c444a5535da7ba74f2dab9eb25ed104b7 2023-07-25/17:50:18 chenxi 问题描述:增加minihttpd,showifindex,showmem几个文件的可执行权限
+5158f950ffcf66f7464e0f1fff091d2cc03ec4a4 2023-07-25/17:44:43 zhangxingwu Merge branch 'hisi_095' of http://172.16.8.160:8091/HSAN_091 into hisi_095
+4fe0c1c5860a0903dcb409928dae58599ef040f6 2023-07-25/17:42:52 zhangxingwu 问题描述: low power, CM,0000, gpio48  default low
+0baa97ac5f52ab9c7054b768af50193b0f60df14 2023-07-25/16:26:28 zhangkangkang modify for start smart_manage when wan up
+a5d1c9be72bdd91878b585492b8e620a7a119fb4 2023-07-25/15:55:03 liuhongwen 问题描述: modify for factory images build
+3cabac3b90d1c8d274b1fc395616d721cdf45c25 2023-07-25/14:54:26 zhangxingwu 问题描述: low power, CM, 0000, default gpio 43 high & gpio 72 low
+047bdde38a4a73a701c5fa7dd28316adea6d6c50 2023-07-25/14:51:39 zhangxingwu Merge branch 'hisi_095' of http://172.16.8.160:8091/HSAN_091 into hisi_095
+3cf8df420463d5031fdc11547b2678982e980dd9 2023-07-25/14:51:00 zhangxingwu 问题描述: testcenter, CM, 000, 配合测试可以循环打流
+194e780627e9e3f20e4e08538d48763e4b4390eb 2023-07-25/12:03:53 zhangkangkang ntra ping faili #2 YINC-152
+2b77e6dfae947c2e011280868a4ec9a74db67a71 2023-07-25/11:35:03 lijiangang For Intel 31001 ring voltage and peak2peak.
+4de14706ad10b5d2988696b385774fa3fcaafd61 2023-07-25/11:16:53 zhangkangkang modify for intra ping fail YINC-152
+f16a81171210fee86b4d6e03d48be88d217cda4d 2023-07-24/19:31:53 chenxi 问题描述: add minihttpd
+0a3555ef4cbb6a03e32e1eceb1d68cee2337b928 2023-07-24/17:39:06 fangchao 问题描述: SYS,CM,YINC-186,解决升级主备分区版本号问题2(Issue No.HSCP2023071433469),CR:None
+ac3b26472e513c9d11762eb132aab930c3b76cb9 2023-07-24/16:28:27 fangchao 问题描述: add chip check, do not upgrade firmware when chip is not same.
+282b3ca6df0bde4fae16cbd949465dbc91982088 2023-07-24/15:39:22 liuhongwen 问题描述: for power save mode. #2
+92d29ade91269782839d1b737c8727c82812130f 2023-07-24/15:07:08 lijiangang For SiliconLabs ProSLIC SPI read&write protection.
+f269bead430ec84b261ac576d35587c3469f77a4 2023-07-24/14:51:01 liuhongwen 问题描述: for power save mode
+e49dfe238f97bb6946e63f7fcdfea0a9850cde85 2023-07-24/14:46:40 wangling 问题描述:fix the bug that can't close mirror function on the web page
+947fc7330dc30e2f68d80c7fff42475aec172711 2023-07-24/14:40:31 zhangkangkang smart_manage compatible long connection
+21aae6e0d7d6a456e82e06fb48b92e046ad9a249 2023-07-24/13:27:19 zhangxingwu Merge branch 'hisi_095' of http://172.16.8.160:8091/HSAN_091 into hisi_095
+59e2e92f27eab91dd338ffd1cc7f588d161311e9 2023-07-24/13:26:52 zhangxingwu 问题描述: ko, CM, 0000 , 添加可执行属性
+d1836ee92cdd150ffac67e7151ca92392aae48c3 2023-07-24/11:13:51 zhangkangkang no wifi gateway register fail
+c3a40f79e7f3c737b0a587b3ace2f952c09c8882 2023-07-24/11:02:53 gejunhua SYS,CM,0000,fix lan sequence error,CR;None
+0291f9453b508f80388572974db7a3e2420259ff 2023-07-24/10:13:03 zhangxingwu 问题描述: testcenter, CM, 0000, 打流配合测试需要 , CR:None
+1c1bd499b0938464abfc3bac6ee68e22b9dded06 2023-07-24/09:44:07 zhangkangkang getLANHostInfoByMAC not report offline lanhost for dpi subDeviceInfo
+8a4a1faaed6d6d620a48bb2ed0fa4761da798a85 2023-07-23/17:58:42 fangchao 问题描述: fix olt upgrade firmware sometimes will fail when activemode is immediate.
+b7260e02c07ee9f1aa58cdb43d3f6d1d83704310 2023-07-23/17:24:16 zhangkangkang modify tcp mirror rule index error
+478b1ef498d6b35c776fade7f3c08773f1a5ff39 2023-07-23/17:17:09 fangchao 问题描述:fix lan host info speed error.
+93e59f9a3a6de53c605b8b3f49dfae969f2a83d1 2023-07-23/15:50:18 zhengsen 问题描述: 激活ONU基于IPv6源IP地址不同，标记Traffic Class，结果不对
+fda8a1ecacaf715def3c9d53c48e2ea0621e85a6 2023-07-23/14:40:17 zhengsen 问题描述: fix wan status change send msg to tr069
+dcbdf92bdefff988b092e856b0b8d5485ad4ed6a 2023-07-23/11:59:30 zhangkangkang apply HSCP2023071333344 patch for vxlan不支持配置IPv6地址
+4a30e7c2ff0255bcee04dacd589750632e779d86 2023-07-23/11:47:00 zhangkangkang apply HSCP2023072134041 patch for osgitest fail
+518a583ca6a9c4dc4c8cb6234926d0aa9064857a 2023-07-22/22:40:50 lijiangang patch, CM, HSCP2023071833660, lan侧访问wan侧地址，从tr069 wan地址转出去
+0f415849a442bbe8877ac01bb392d7cfd309e68d 2023-07-22/18:36:43 liuhongwen 问题描述: modify usb led for emei
+ad7a4d14cb0fe3647c8b674de04e9c96f835293e 2023-07-22/18:23:52 zhangxuesheng 问题描述:OMCI,CM,YINC-200,TR69模式下OLT还能获取语音统计信息(Issue No.HSCP2023072134035),CR:None
+eccd9dbe044d6d29d842cb792df74a9cd5276a52 2023-07-22/16:15:25 zhangxingwu 问题描述: patch, CM, HSCP2023071133056, 不开启dslite功能，dhcpv6报文的option也携带了option 64(722新增)
+8c8f41d35ed1bf91587e605bc37573941f5539a8 2023-07-22/15:45:07 zhangxingwu Merge branch 'hisi_095' of http://172.16.8.160:8091/HSAN_091 into hisi_095
+929e69aae8602b045a37f5b8a94f16eca357c82f 2023-07-22/15:44:38 zhangxingwu 问题描述:patch, CM, HSCP2023071233091_智能网关dhcpv6 server不给下面的路由器分配pd的功能
+334a60e6d7d94845b0524f1f3ed6625991020647 2023-07-22/15:25:32 liuhongwen 问题描述: 更新无线ini文件 07.22
+a0fc757452087abcca9ad9790c3fb64d567542fe 2023-07-22/14:51:47 zhangxingwu 问题描述: patch, CM ,HSCP2023071833646, 修复新建3条internet(有创建一条v4的internet)的wan和一条tr069的wan端口web显示还是有问题
+2a0b4008356a5d4cc4f425d936d29b84be6bc7e7 2023-07-22/13:30:39 liuhongwen 问题描述: modify lan sequence according to new ID
+b36fda0f62a390de5bf0d855a9143e71f2d489d5 2023-07-22/13:19:17 liuhongwen 问题描述: for build info duplicated
+0ea368d0d4ea80259fa6d0bcf1e21a88ec390d1c 2023-07-22/12:50:20 zhangxuesheng 问题描述:OSGI,CM,YINC-189,手动按照插件cmccdpi后网关断电重启插件恢复到默认(Issue No.HSCP2023072033920),CR:None
+2681ae598f170852b79e56c8a8422900d2cd8de6 2023-07-22/12:37:53 zhangxuesheng OSGI,CM,YINC-139 YINC-173,,解决升解决插件升级问题(Issue No.HSCP2023071233122),CR:None
+444be7fcd728952ffdb988d44cd1ed2e92a1f5be 2023-07-22/10:43:52 chenxi 问题描述: 增加showmem和showifindex两个脚本命令
+d75012b64e38def39aaa8cb8b7faa06eef9ec516 2023-07-21/21:54:18 zhangxuesheng  SYS,CM,YINC-186,解决升级主备分区版本号问题(Issue No.HSCP2023071433469),CR:None
+d2a056165601142a80facd5cca50982c5f163278 2023-07-21/21:24:25 zhangtiansheng 问题描述:更新无线ini文件
+ec2716a98a90997ef4e2d7016a805c0543767fab 2023-07-21/20:54:52 zhangxingwu Merge branch 'hisi_095' of http://172.16.8.160:8091/HSAN_091 into hisi_095
+e4661aa75d4f15092056f19f39ab0fb546f02db2 2023-07-21/20:53:49 zhangxingwu 问题描述: patch, CM ,HSCP2023071233091 , dhcpv6 server for pd, CR:None
+ecbfc5479edb2d9cd967f3da2d9f900ba58935df 2023-07-21/20:03:36 liuhongwen 问题描述: build factory by ' -fac y '
+63ae8db11d00b73dc3e7617c1549016e260d8864 2023-07-21/19:46:27 zhengsen 问题描述: tr069 inform 参数上报更新
+5522db7c81c37a7f23230e87cc31c1fbaec17271 2023-07-21/19:24:48 zhangkangkang add tcpdump for debug
+e0d1fa6b2918710bdf2751fc44f0f39dd1c48c96 2023-07-21/18:15:13 zhangxingwu 问题描述:
+95a4e55e4249cc38b858a9b96446a2389f3a3cd8 2023-07-21/17:08:20 fangchao 问题描述:fix olt upgrade firmware fail that caused by file too big, image only include rootfs.
+e6a3e197350d90dd0712a8764addc06591df97e0 2023-07-21/16:54:59 fangchao 问题描述:support upgrade firmware only include kernel or rootfs.
+9606527e21c6f86b52d14e16f9d1b74e9aa848ef 2023-07-21/12:01:06 zhangkangkang OSGI SPEEDTEST,CM,0000,merge hisi patch(Issue No.HSCP2023070432357),CR:None
+d58ae8dc62b9dfc1997c964e55f0b7f1be0f25e9 2023-07-21/09:56:49 liuhongwen 问题描述: merge hsan_boot for first boot status.
+c412c5a93b5ee305dc913c4567aac7d2097a8996 2023-07-21/00:58:21 zhangxingwu Merge branch 'hisi_095' of http://172.16.8.160:8091/HSAN_091 into hisi_095
+769e3845ebcc9729a0226ae47b5a416fe7f5479f 2023-07-21/00:57:21 zhangxingwu 问题描述:testcenter, CM, 000, for testercenter test, CR:None
+ec3294db441339b001d87864bd4799741f07d8f6 2023-07-20/19:17:24 zhangxuesheng OMCI,CM,YINC-194,merge hisi patch(Issue No.HSCP2023071933766),CR:None
+271d13924f74d3f842c5243c7048a1939e129349 2023-07-20/17:54:39 liuhongwen 问题描述: update default bob cfg 解决方法:
+6b82f7348abd2dd215c82f0afd0bacc669f7551f 2023-07-20/17:48:56 liuhongwen 问题描述: modify to i2c write 8Bytes per time for power cycle. change dir for backup ini .
+6f7d84ba09184ec90bf52734e95282552f13ab68 2023-07-20/15:39:28 liuhongwen 问题描述: update default cfg for 97B
+c09d15b7bd4c727c04663cc276dca16a96fc6fb0 2023-07-20/15:07:59 zhangxingwu 问题描述: patch, CM, patch from HSCP2023070332307 2023-07-19 10:45:17 , CR:None
+9b61b073ad5c85e8dcd44c522a8b6f26b4ab66aa 2023-07-20/13:53:10 zhangkangkang make sure cpuRate < 10 ,ramRate < 30
+769d541ba4d5bb6b91dbd07e4b0a9ea85fcbce37 2023-07-20/10:40:20 zhangkangkang merge patch from HSCP2023071333263
+1b4ed7288843702428a5a89bf9dc4c23b82ff948 2023-07-20/09:52:50 zhangkangkang modify pon last_regist_time and wlanhost WiFiMaxChannelWidth
+10ddb75d588639ad83071d98d65eb43f6d6a96e3 2023-07-20/09:36:28 liuhongwen 问题描述: modify default sysinfo
+aad19d50d4a396431c14418f80af4e26e2c41682 2023-07-20/00:27:24 gejunhua TR69,CM,YINC-192,merge hisi patch(Issue No.HSCP2023071833743),CR:None
+c34eba27e9f618eedac68d23ec84201d2aa056ff 2023-07-20/00:10:49 gejunhua WAN,CM,0000,merge hisi patch(Issue No.HSCP2023071833646),CR:None
+d487dd847475f15f930e725290d5e4618133191d 2023-07-20/00:04:14 gejunhua UPGRADE,CM,YINC-186,merge hisi patch(Issue No.HSCP2023071433469),CR:None
+7b850f8911c2a387ec915873e1aa825be44852be 2023-07-19/23:57:37 gejunhua IGMP,CM,YINC-174,merge hisi patch(Issue No.HSCP2023071333324),CR:None
+313fc24eb3380e3acce3c4ed36e462be373e56b2 2023-07-19/23:45:49 gejunhua Merge branch 'hisi_095' of http://172.16.8.160:8091/HSAN_091 into hisi_095
+e42a4a549b21462a7383c74ca30db89aa25d906d 2023-07-19/23:38:11 gejunhua OSGI SPEEDTEST,CM,0000,merge hisi patch(Issue No.HSCP2023070332259),CR:None
+32a37b4faa54455bef16156738d505b6f72dd201 2023-07-19/23:38:11 gejunhua OSGI SPEEDTEST,CM,0000,merge hisi patch(Issue No.HSCP2023070432357),CR:None
+2c17081553f4e1f21e680c16f4a4f07437021099 2023-07-19/14:51:55 zhengsen 问题描述: [PATCH] 上报值改成TRUE 或者FALSE
+4107abdbdfb84512a7945df498aa33ee74a06152 2023-07-19/14:03:58 zhengsen 问题描述: tr069 inform 参数上报更新
+cca6c0b0e10409600198412f14a70992f91cbd8d 2023-07-19/13:44:00 zhangxingwu 问题描述:ipv6, patch, HSCP2023071133056, don't request AFTR option when dslite enable, CR:NOne"
+7c50d45b32e4e374fce7afcd44dc08a8f25aa001 2023-07-19/11:37:21 zhengsen 问题描述: [PATCH]  新增tr069节点 InternetGatewayDevice.LANDevice.{i}.LANEthernetInterfaceConfig.X_CMCC_LANAbility
+ec75fd3346f6cbbb09dd3c597324b149f237303c 2023-07-19/11:05:13 zhangxingwu 问题描述:PON,PATCH,CM,YINC-188,merge hisi patch for ploam
+312ea5732e2158e2e14bd7e3a1e0bc42584d438a 2023-07-19/10:32:05 zhengsen 问题描述: X_CMCC_ServiceList为IPTV，通过RMS查询为空
+87a3a35676390de5a675b849dbc71d0807c0bfc2 2023-07-19/09:41:31 gejunhua IGMP,PATCH,CM,YINC-159,YINC-176,merge hisi patch fix igmp can not play if change bridge wan,CR:None
+d32204ad20bde266bfd69010626459f1ca31172e 2023-07-18/19:15:58 liuhongwen 问题描述: i2c write 16Bytes per time.
+bcdf3a704804cb26100c80ba68bcbe9cb1a0a75a 2023-07-18/19:05:21 zhangtiansheng 问题描述:修复功耗时，wifi断流问题
+f4d6143730b506fdeec372470c54586d3b1798c4 2023-07-18/18:45:28 zhangkangkang modify aucSpecVersion to iHGU_2.4.0
+3e13a64c4e7c0e484dfc83d4c61f2bb7aa5af309 2023-07-18/17:45:19 zhengsen 问题描述: fix hgid to revision
+0107102327fa717be4d5422cfd22f4f42118c808 2023-07-18/16:40:48 chenxi 问题描述: 修改hg_version中的一些关键字
+e8d2d739844be63ae87c28e454d9402785946338 2023-07-18/16:22:24 zhangkangkang modify traffic mirror should start from ip layer
+e2c5bda5cf1a318f157845739cf29e04b62a3dbf 2023-07-18/13:34:20 zhangtiansheng 问题描述:修改wps按键时间和闪灯机制
+4d52cefc43cb72a3b370f2b8a40f5761c2a84ce5 2023-07-18/13:11:59 zhangkangkang modify for string null cause jvm crash
+9185e12369e1d770680ebcc40b39e685ae9291e6 2023-07-18/11:41:43 zhengsen 问题描述: change mtu max value 1900
+3c6ace0f1b84249a95f7bbb231d3f79043256d54 2023-07-18/11:19:25 zhengsen 问题描述: fix wan mtu range 128-1900
+4b3f80cd2519f2aaff7b301fc200e34b77234fda 2023-07-18/09:53:11 zhangtiansheng 问题描述:修改wps点亮时间点
+229e5671402e31a07fc111809f4a258735d27903 2023-07-17/20:09:34 zhangkangkang modify filemode to 777
+f19f3d434b0d4c66b1b7e6b5ce9a4db556b93272 2023-07-17/18:59:27 zhengsen 问题描述: compile error
+0698a5d9788335f460e65f3f0976ed97a0d79e6a 2023-07-17/16:22:47 zhangkangkang add osgi account to root group
+82260208cbf1a9be95ea0e46c0b1aee51d5d64fd 2023-07-17/15:59:14 zhangtiansheng 问题描述:修复无线wps led状态对应
+d3c520293199b9692934f9871b075f3ea11d7d77 2023-07-17/14:56:01 zhengsen 问题描述: add inform node SoftwareCompileDate
+e34f387d0055122e315e450533c6a84f34c96f1b 2023-07-17/13:33:55 liuhongwen 问题描述: delete cached files that generated by compile
+1e0d8e1b63ec3866763f5ea1300e52acf60586a4 2023-07-17/12:30:27 liuhongwen 问题描述: Adjust bootdelay to 1
+a953b880db3b0358c2605980b7ccf9b7db61853f 2023-07-17/11:21:26 zhangkangkang modify start_java.sh adding debug flag,comment out no use debug log
+0f18ea84ebfa49300aea57677f98c8156e8f1c3c 2023-07-17/11:13:34 zhangkangkang Add zebra for rip test
+193c4afef857a8be9859fa037fff4f69afc7bf50 2023-07-16/18:01:44 zhengsen 问题描述: change images file name
+2f0a48f5c1265538ba3c66c27b2f678507927236 2023-07-16/10:39:15 zhangtiansheng 问题描述:更新095上的无线基础参数(update wifi ini)
+2f0e0150f0d60812f3e7273d3495f67a02515d27 2023-07-15/20:56:05 liuhongwen 问题描述: merge build script
+5e9b8a22796c89a24fb93772275dc6aa5312439c 2023-07-11/09:49:37 zhengsen 问题描述: 激活ONU基于IPv6源IP地址不同，标记Traffic Class，结果不对
+b42163d7e6cf258ffe6960006c86af73d2b4509d 2023-07-10/16:35:07 zhengsen 问题描述: 首次注册RMS，tr069 上报去掉多余节点
+ee74503032486ba7eb0f9b9ec8159d27f8d6cfa2 2023-07-15/20:13:48 zhangxuesheng Merge branch 'hisi_095' of http://172.16.8.160:8091/HSAN_091 into hisi_095
+53daa8dba26ac3ae21c17d5eee5a1d744f20a316 2023-07-09/00:55:13 lijiangang * loid/password can be visible on page
+8d0ac88b0d08a0090ebd576e9c88d5bfcfea6dd0 2023-07-14/16:53:11 zhengsen 问题描述: images add hg id
+b251fd054e26899a4c911dee1568980fb3208350 2023-07-14/14:45:09 liuhongwen 问题描述: No break line according to tester's suggest
+bb6a7ef414180497dda81679d5f17f9a55750e36 2023-07-12/18:13:31 liuhongwen 问题描述: Case compatible for vendor_id
+405654a68269cb1679029ac5c7b0b4755525db14 2023-07-13/17:53:09 zhangxuesheng 问题描述:YINC-177, set VXLANConfig.{i}.MaxMTUSize default value to 1440
+df514f6e2bda88f853f4e4bc50f005a74fa9933f 2023-07-15/19:11:22 wangling Merge branch 'hisi_095' of http://172.16.8.160:8091/HSAN_091 into hisi_095 merge changes from hi_094
+522481a2bfd50409b5676a059f98b3273176a3f3 2023-07-15/19:10:13 lijiangang Merge branch 'hisi_095' of http://172.16.8.160:8091/HSAN_091 into hisi_095
+9d7921a2e3f0d7ffa736081aed7b76b9f3e1df1d 2023-07-15/19:09:39 lijiangang Merge branch 'hisi_095' of http://172.16.8.160:8091/HSAN_091 into hisi_095
+0b3dce2e72f175bd7da36dd9be903484bc5789e7 2023-07-15/19:09:39 liuhongwen 问题描述: add gitignore
+93289c9af42e2a189732f6f16d89b7b713f44cf4 2023-07-09/00:10:19 lijiangang Adapted SI32192 SLIC driver.
+c8f78908aea6c09e01c19ac9f2b97c82805c6df2 2023-07-15/19:05:59 liuhongwen 问题描述:  merge 094 changes for hardward adaption.
+6909b597a0bcebaab2899809f566a697ecb54bca 2023-07-15/18:56:22 wangling Merge branch 'hisi_095' of http://172.16.8.160:8091/HSAN_091 into hisi_095 merge changes from hisi_094
+8484bc3ff85c01dc99ffc658fc429be22a33057b 2023-07-15/18:42:32 gejunhua delete hisi tar file
+89fb1f2b98471fc0bfeb171445e935d8c1503c53 2023-07-14/15:26:46 wangling 问题描述:rename hiverion.html to readme.html
+af94f5e1af313a91644243c9063e8f214b70a36a 2023-07-14/13:43:50 wangling 问题描述: get version info from hg_version
+9a4b67778e8ed6163588d74585e5b8073bfa374e 2023-07-13/17:07:47 wangling 问题描述:fix an issue that the multicast VLAN can not be displayed on the page when it is -1
+34b3fd75743ece02e464f64cd8f683f983b57feb 2023-07-13/11:19:31 wangling 问题描述: add hiversion.html to show the version info of the software
+0c7d84b231b601c0abe3144eb002b30b219961f1 2023-07-15/18:13:16 lijiangang Delete output.
+1d236c4aae72bcfedd24e4ac3f3ad9d64bae5141 2023-07-15/18:12:22 chenxi import raw 095 SDK
+71da4a30d5359b395946975c1bdac96f9e0ecce9 2023-07-15/18:08:06 lijiangang Add 095.
+5465dbc9a43733499d4ffaf1a14b6bdec1f30071 2023-07-15/18:04:23 lijiangang Remove 094.
+97558200e37841e1cdb1e53384e8f77f8b2ea6d8 2023-07-14/19:57:21 zhangkangkang getwlanhostinfo add WiFiChannelWidth WiFiMaxChannelWidth MaxStandard
+6b4d589c322767f2fe63f81e6c5ad6a563715283 2023-07-14/16:53:11 zhengsen 问题描述: images add hg id
+6b25205ac732a33a42090f3d8a2a9a78682b0ca9 2023-07-14/15:26:46 wangling 问题描述:rename hiverion.html to readme.html
+f92884e02288d7a17227540bfd20a0ee7f81f595 2023-07-14/15:21:22 zhangkangkang Merge branch 'hisi_094' of http://172.16.8.160:8091/HSAN_091 into hisi_094
+29a6ac8a9dfbbba5f57f1f12e26fd72bf19680f1 2023-07-14/15:20:34 zhangkangkang getLANHostInfo Add MaxLanRate
+685c3fe12986c90c23ba640615e36204903a3b1a 2023-07-14/14:45:09 liuhongwen 问题描述: No break line according to tester's suggest
+77ecf3f638d3f6a07da622b31dda45247ba56ba3 2023-07-14/13:43:50 wangling 问题描述: get version info from hg_version
+0bacd2355b360b0bdab62536814c17b202b450d1 2023-07-14/11:53:22 liuhongwen 问题描述: 修改gpio对应emei丝印变动
+99114beedeb7d74a7c1a837502f1964c1f34f3fa 2023-07-14/10:08:31 zhengsen 问题描述: add mapping between commit and hgid
+fa97de92a4929833e8fbaa1a5ca0c797a73abe8c 2023-07-13/17:53:09 zhangxuesheng 问题描述:YINC-177, set VXLANConfig.{i}.MaxMTUSize default value to 1440
+c1c733187e0117f801e2ad6fe47270f9ff0333cc 2023-07-13/17:07:47 wangling 问题描述:fix an issue that the multicast VLAN can not be displayed on the page when it is -1
+8e6c64b31156a8c56d9a057bcac810c03929249b 2023-07-13/15:47:47 liuhongwen 问题描述:For emei wifi factory test.
+dc383e191ebd79457a6cb57ee127462487f41354 2023-07-13/14:14:13 gejunhua change default sysinfo.xml
+e027b0d370c7221d3da17c961dab8c14001507fa 2023-07-13/11:19:31 wangling 问题描述: add hiversion.html to show the version info of the software
+f374eed3beb1b651284a2dfeeea0090c86fec5cd 2023-07-13/10:24:03 zhangkangkang modify start_java.sh adding debug flag
+4001462503e9af3247639259a3efd561ba27130a 2023-07-13/09:44:40 zhangkangkang comment out no use debug log
+00011bb9ae8ffb6e0614a7c79628257fde9887f6 2023-07-12/18:13:31 liuhongwen 问题描述: Case compatible for vendor_id
+ab876b529a1b8d77559c3e5cf76d7460df538c95 2023-07-12/17:05:47 liuhongwen 问题描述:add ignored files
+3ded2117dc1a4706d7ea2c2d66a7de8719b5275d 2023-07-12/16:25:50 zhangkangkang Merge branch 'hisi_094' of http://172.16.8.160:8091/HSAN_091 into hisi_094
+08f7a802552337c15fb8c9d60557e9eb6e2913b5 2023-07-12/16:23:19 zhangkangkang modify offline Lanhosts should less than 10
+6f0a3f835349a18c797e1244bd0bb6fdfbf5afe0 2023-07-12/14:23:09 zhangxw add gitignore
+f6988763282ce9748f664765c7e9e021a162f795 2023-07-12/13:50:51 fangchao 问题描述:add olt upgrade firmware.
+c213337ca28d0f81ea595fc613855a80bfafe85b 2023-07-12/10:47:45 zhangkangkang getDeviceInfo Add SpecVersion
+de7f3c2ec1c4139288b641528ed16bf3aed33389 2023-07-11/22:09:59 lijiangang Adapted LAN and WLAN port.
+5922beab312106178ad540e9cf6a63c411734d47 2023-07-12/11:18:59 liuhongwen 问题描述:update bob config for emei, open telnet by default
+f165ff489508aa73e0bf1449e3b32bed7ec30d9e 2023-07-12/10:47:45 zhangkangkang getDeviceInfo Add SpecVersion
+d92552890b404a8b9b55d25145a8ae8707f385ac 2023-07-12/10:43:45 liuhongwen 问题描述:bob,不读0x7b-0x7f,解决4、5表被清空问题
+7cc2774db18c22dd4b4bdc311d6684268bde3edb 2023-07-11/22:09:59 lijiangang Adapted LAN and WLAN port.
+5541ea864962316330fcfa014eee6af205e8bc8e 2023-07-11/21:15:54 lijiangang For xiling wifi factory test.
+ba5c0f745baa150d3605eb87db9afca8d7833c9e 2023-07-11/16:34:13 zhengsen 问题描述: change the default version of compilation options
+7b5dfc255241747de3c432c2d04816874d2bb0f3 2023-07-11/11:35:55 zhengsen 问题描述: add hg_version file
+83778a7f7ab38c8d9463f498e9e3cd43ccb48864 2023-07-11/09:49:37 zhengsen 问题描述: 激活ONU基于IPv6源IP地址不同，标记Traffic Class，结果不对
+b5afac3a0aa0dbadd3505346d90694dddc809bb9 2023-07-10/23:21:04 liuhongwen 问题描述:update bob ini for emei, temprately set password for fac
+d97713a1ff28630515acd2e066001d2153604289 2023-07-10/20:59:27 liuhongwen 问题描述:update bob ini for emei
+0f840abea905093fe60f16af5b40a56b2d78f0ec 2023-07-10/18:50:13 liuhongwen 问题描述:adjust partition_lst for emei,#2
+80ad41a7406c5fcf7dd0f7a17b1a409c9587c874 2023-07-10/16:11:24 liuhongwen 问题描述: adjust partition_lst for emei
+1bd622a71705e69b7c36e6c2d6749d06e3a1d6a3 2023-07-10/19:55:09 lijiangang Modified default slic boost.
+d2505983ba06e7391b925504f80c9b55d903c1ca 2023-07-10/19:53:03 zhangkangkang modify for nowifi gateway apitest
+785319897d9cb4e32c41d11b0e7b3022d333dc31 2023-07-10/18:50:13 liuhongwen 问题描述:adjust partition_lst for emei,#2
+714c645915333fae90dc25a02e4affce62b0070b 2023-07-10/16:11:24 liuhongwen 问题描述: adjust partition_lst for emei
+6b3862d334ba21fe9783019750210db739c3e967 2023-07-10/18:16:18 zhengsen 问题描述: change hi_version format
+cd2dc3ca9a5d7cd93aaaa660c53c8973c87a56a4 2023-07-10/17:34:50 lijiangang Compile error.
+97ec06d2e7b29565965c4c36f303871b9544eba9 2023-07-10/16:35:07 zhengsen 问题描述: 首次注册RMS，tr069 上报去掉多余节点
+c0b9e980d581d5d76d4269d060fd8cbf5b0a4dae 2023-07-10/11:12:06 lijiangang For slic boost issues as vendorid or boardid is wrong.
+5b1babcc5d02da05d854558e029a50174529eb42 2023-07-10/10:46:30 zhangtiansheng 问题描述: 更新无线参数
+b8039c20b1442812b5f6b250a1d1f2f7c8a47d5a 2023-07-10/09:37:08 zhangtiansheng 问题描述: 更新无线
+2eb6dbc0728c79820b3b0ad9b666b02dae820786 2023-07-09/20:50:14 zhengsen 问题描述: fix web time show error
+5617c63d5edaad84b5cb895a6b7220252745c690 2023-07-09/20:13:16 zhengsen 问题描述: fix web show fail
+24867a90dcbd7d59c5bdd73af45219ed886a2df9 2023-07-09/13:45:08 zhengsen 问题描述: build error
+0f8c3fb07b394603c91ee177b8414b65263ac83e 2023-07-09/12:42:01 zhangtiansheng 问题描述:
+b1e97d8f63aae6288056b7165a991328950b3190 2023-07-09/00:55:13 lijiangang * loid/password can be visible on page
+3ae92ae5d2e8d7436894eac2f9ad2f063fa73b75 2023-07-09/00:26:48 lijiangang Compile error.
+327432fc98d2806a2451f6bfd4ddae172cbdd43b 2023-07-09/00:10:41 lijiangang Merge branch 'hisi_094' of http://172.16.8.160:8091/HSAN_091 into hisi_094
+c775a0f52dcce8aeb5810cbdbb61d9c0fd3ab2c1 2023-07-09/00:10:19 lijiangang Adapted SI32192 SLIC driver.
+2ce62c6970a096cf76465507144e88d1a8b5dfd9 2023-07-08/23:56:51 liuhongwen 问题描述:merge 093 changes for hardward adaption.
+0b17ca0909715c7cc73702c0f94446fc066b78ca 2023-07-08/23:07:34 chenxi init import 094 raw SDK
+33e17e4171e960814db9e393dc66b772e10ec20c 2023-07-08/22:10:46 lijiangang * Adapted SI32192 SLIC driver
+0cd4f1b2296ccc2b1300cda05e59aee156da6fd6 2023-07-08/21:14:59 wangling loid/password can be visible on page
+c6cee10cbedcfe6e37b246428114bb456bebfc2f 2023-07-08/20:58:33 wangling display Chinese log information in English
+6b76c024b3987707750e2623731996dd72818824 2023-07-08/20:55:37 liuhongwen 问题描述:merge build tool changes
+5c8d5b66aef82e31da130524f07b6130d20117cb 2023-07-08/20:45:45 liuhongwen 问题描述:merge 093 changes for hardward adaption.
+d3ffd165b4d250a40fc955637505fa25db3ca4fa 2023-07-08/20:32:36 wangling 问题描述:
+d358b5ce598af69a48b9c6d003c67374a5cabf99 2023-06-28/15:23:28 liuhongwen 问题描述:增加vendorid后烧录文件启动出错 解决方法:修改config文件中BOARD_TYPE与之对应，后面的数字为board_id
+57df2a1b0bdf7b6e287c6b1e5e08f27ebeeef9cc 2023-06-27/16:14:19 liuhongwen 默认vendorid改为scty,添加相应配置文件
+b73b45e33ea6432f61b11c95fc3d167c5a6a6ab5 2023-06-26/18:14:52 liuhongwen 修改烧录文件制作脚本
+1435beb4ebf3f6fad9172cc42b2689e534eee630 2023-06-26/15:04:10 liuhongwen Adjust gpio for xiling
+601fd9a028762dc4115108a3c609803bbf13faca 2023-06-21/10:09:02 liuhongwen 问题描述：适配flash，调整gpio
+7b4dc2f40557e948bdb6ab4b99c1c8d54343900d 2023-07-08/19:13:13 zhengsen 问题描述: add 094 new sdk
+42f7d7ef468eb74b3edf03da6cf076d1537d26ad 2023-07-08/19:10:24 zhengsen 问题描述: delete old mster
+9b0267cb17c9dfeaadd0b48b5e0deb6fbdd30b48 2023-07-08/18:55:19 liuhongwen 问题描述:update wlan config for emei, optimize fac flow path
+38924fb607e4c6481cf82c780c940342ceffa260 2023-07-08/17:47:44 liuhongwen 问题描述:change xiling to 4GE mode
+a3ee2784bd21242b807e571424d58fd8c328cfbe 2023-07-08/16:06:20 wangling 问题描述:loid/password can be visible on page
+41ff54f744831d171f38af9b8bab68239f2e109e 2023-07-08/12:57:55 liuhongwen 问题描述: 更新xiling无线默认参数
+50196791d04f47757d259c98417492a8e7d017b7 2023-07-08/11:59:58 lijiangang For bob parameters was deleted while board.xml reloaded.
+763cac53936346995ceaa048a0f89e799ba3a3bd 2023-07-07/19:31:51 fangchao 问题描述: add software version and hardware version.
+e0a9b5af68a57e8f25e8d5e7044d4d70081c89d0 2023-07-07/19:29:01 liuhongwen 问题描述:b080工厂调试适配, wifi, bob. 说明：emei需设置vendorid 为hsan
+e92228ce0d2b8ea6a6176373ceb4462a1a29dd7f 2023-07-07/18:11:16 liuhongwen Merge branch 'HSAN_093' of http://172.16.8.160:8091/HSAN_091 into HSAN_093
+17386157037576ec43c918a0f04672719af132d1 2023-07-07/17:08:56 lijiangang Add preconfig.
+6e599ebf9db460cdb2ac61b817d1182fcfb596c5 2023-07-07/16:08:50 liuhongwen 问题描述:update bob ini file
+054931b6785946c06548e2dd2b65b32c251f18b6 2023-07-07/15:16:56 lijiangang Modified for format issue of sysinfo.xml.
+3c91608ac34548c8f7e21d483ad6ddf4ffb645bd 2023-07-06/16:09:14 wangling 问题描述:  display Chinese log information in English
+3b2458ff5fd60c9a7dbf3ba544adae82254e93b2 2023-07-06/14:40:39 lijiangang Merge branch 'HSAN_093' of http://172.16.8.160:8091/HSAN_091 into HSAN_093
+e18c04a4753b86548148c0ff55b263ed78a8297a 2023-07-06/13:49:46 lijiangang Modified config.
+d12954af696bfe1abe07d78cdd1f6f8225bdcdcd 2023-07-06/13:18:19 zhengsen 问题描述: 产生升级失败的告警之后104058之后，重启设备，不会产生104001 的重启告警
+4c1e74d8efb65555ced11c2ece8f6613d37cc10b 2023-07-06/11:18:19 liuhongwen 问题描述: modify bob type BOB2 for emei, eeprom change to 0 by default
+659dd2016902ba707e67dc83391e961a5870c3bf 2023-07-06/11:15:05 zhengsen 问题描述: 首次注册RMS，tr069 上报去掉多余节点
+08f3f3f234b9aad8fbd5b4a6fa5a3a84001758fc 2023-07-06/10:41:55 zhangtiansheng Merge branch 'HSAN_093' of http://172.16.8.160:8091/HSAN_091 into HSAN_093
+ed74d6db469085972e16c31c89fa0b6408271889 2023-07-06/10:32:39 liuhongwen 问题描述: bob default config
+63aec67677f1c830963e562ff16777f156073d77 2023-07-06/10:31:41 zhangtiansheng 问题描述: 无线参数更新(update wifi ini)
+5fdadce48c78e908d08f8ff0562f4e4c4d6ce736 2023-07-05/20:16:58 liuhongwen Merge branch 'HSAN_093' of http://172.16.8.160:8091/HSAN_091 into HSAN_093
+f7654bd73bdf5f69ec478b62463052764d558f03 2023-07-05/20:13:36 liuhongwen 问题描述:Modify emei dts error
+7d6afb025ef0504ae51abebfd39e9e3110f6fafe 2023-07-05/19:03:15 liuhongwen Merge branch 'HSAN_093' of http://172.16.8.160:8091/HSAN_091 into HSAN_093
+8da4598af24bfa80b1063ea333d308f5e740c981 2023-07-05/18:02:54 liuhongwen 问题描述: modify config_xiling.xml format error
+1e6729d356c6a3c9fc8c299579ed5bbf7646e3ec 2023-07-04/13:38:35 liuhongwen 问题描述:Modify for distinguishing burning images between emei and xiling
+d15b84b00745d581706da404dd4ffcb2c3cbce53 2023-07-03/20:04:15 liuhongwen 问题描述: modify for emei 有频&无频
+7e51b60200c7fd1ff0bfdd3f7fe92ad9c0c99f53 2023-06-30/20:06:14 liuhongwen 问题描述: modify 2.5G phy for 10GW6
+393dea01601c033b4e711ed1d2241d67c4a49c29 2023-06-30/10:31:04 liuhongwen 问题描述: 工厂生产第一次启动时初始化网口4，开启telnet 解决方法:
+48edc898f9367642ba59489a7a463431714be29c 2023-06-29/19:35:43 liuhongwen 问题描述:Add dts scty_gpon2 for emei
+1ef31e7b5d2c85ea025c6d4195bbd0199c5704dc 2023-06-29/15:13:15 liuhongwen 问题描述:保留demo板配置
+0ecd0153dae818feafc76db175d43c0e38c2b73e 2023-06-28/15:23:28 liuhongwen 问题描述:增加vendorid后烧录文件启动出错. 解决方法:修改config文件中BOARD_TYPE与之对应，后面的数字为board_id
+9511dbd6d0ed7eb888c1a1d756db81242b2bc7a6 2023-06-27/16:14:19 liuhongwen 默认vendorid改为scty,添加相应配置文件
+605fbea0b97d0733d3be85bbd1c5ca6cca056e73 2023-06-26/18:14:52 liuhongwen 修改烧录文件制作脚本
+6d6b3274998125b902ff8e00f3a7d5c5db5584e9 2023-06-21/10:09:02 liuhongwen 问题描述：适配flash，调整gpio
+438b6209b1cef4fe08d58c85843f996df36ee0d4 2023-06-28/15:29:39 liuhongwen 问题描述: 添加文档路径docs 解决方法:
+9f17c9545c6823c6af17720b036e2d43a18fe77b 2023-06-28/15:23:28 liuhongwen 问题描述: 增加vendorid后烧录文件启动出错 解决方法: 修改config文件中BOARD_TYPE与之对应，后面的数字为board_id
+2f6ebbb69911c9a9c61363a5e8a85080cd9ca66c 2023-06-27/16:14:19 liuhongwen 默认vendorid改为scty,添加相应配置文件
+3cd6c3b32fc92797e35cb8c762bb770f7645f88b 2023-06-26/18:14:52 liuhongwen 修改烧录文件制作脚本
+f6a69c088fb1995ae59565e77913a20603bd7444 2023-06-26/15:04:10 liuhongwen Adjust gpio for xiling
+ebc37d4e7048f95188cf9a2fa543a2649a3af2cf 2023-06-26/13:40:21 liuhongwen Add empty dirs
+b9495185cb65accc5d15290ef52140b89064c3b7 2023-06-21/10:09:02 liuhongwen 问题描述：适配flash，调整gpio
+6f28a373e3068da546543979301ef4b11c04a175 2023-07-05/15:44:08 zhengsen 问题描述: add git config script
+b6562bfa237d2b22a14e2a2ce6fe01784ae6bc2d 2023-07-05/15:37:50 zhengsen 问题描述: add git config script
+65184b18073a50e0c13cdd77a3499ecb1e80883b 2023-07-05/15:21:33 gejunhua Merge branch 'HSAN_093' of http://172.16.8.160:8091/HSAN_091 into HSAN_093
+0fa6be18e8ce1f3e2da3f354c95c7ca6a13853b9 2023-07-05/15:10:09 gejunhua add images link,#2
+761faf175934d06de1053f7e516ab8ff16f01bcb 2023-07-05/14:47:29 zhengsen 问题描述: add 080 code
+86238a08c3058862aa220faaeef09de2d3373121 2023-07-05/14:39:46 zhengsen 问题描述: delete old 091 master code
+fd48464a67e4461beba6d452747d61b62a031c77 2023-07-05/14:29:15 wangling fix an issue that the multicast VLAN can not be displayed on the page when it is -1
+8d22facf5366d1187af8c41d7840de3809ff1164 2023-07-04/17:44:37 liuhongwen 问题描述:boot点灯
+e436cf36e67f1ca2e19f33f4ef53c83d1fef9e05 2023-07-04/17:06:13 zhangkangkang Merge branch 'HSAN_093' of http://172.16.8.160:8091/HSAN_091 into HSAN_093
+8942f57b35fdc8ec81e245dc8d5cbb65617a81e0 2023-07-04/17:04:33 zhangkangkang Modify for rip test
+d6feecc7918bab22e2ca0a86c3280035e0c4910f 2023-07-04/15:59:50 zhengsen 问题描述: add images link, copy commit_msg to hook
+2d837f90acc09b9ab308dd9ccbd5ad8c25be9427 2023-07-04/14:33:30 lijiangang Adapted to Intel 31001 Slic.
+914d5ffda61fa1a34e925614939122afbcaad82b 2023-07-04/14:29:24 lijiangang Merge branch 'HSAN_093' of http://172.16.8.160:8091/HSAN_091 into HSAN_093
+8adca9fce2ac20c73c4eacb2eb4e4948049b84ed 2023-07-04/14:28:28 lijiangang Modified for VoIP ringing frequency and time
+98204633fb2caab5ddab268c1e22223f87f8e0fc 2023-07-04/13:38:35 liuhongwen 问题描述:Modify for distinguishing burning images between emei and xiling
+51b6da87a0481559c239ea9c920008947e80e483 2023-07-03/20:06:10 liuhongwen Merge branch 'HSAN_093' of http://172.16.8.160:8091/HSAN_091 into HSAN_093
+d629ff91eec72bf4b1819881c61b57e42a01fd9e 2023-07-03/20:04:15 liuhongwen 问题描述: modify for emei 有频&无频
+a2de53b79c687d06d1b4300283a17c39b4135722 2023-07-03/18:45:45 zhengsen 问题描述: delete log
+b7acefc1faf437c75020e24d68a9d79115e47c1b 2023-07-03/18:43:24 zhengsen 问题描述: change hook add Hg-Id
+bca41ccebcc947a82700246b6efa7739d5b39bcb 2023-07-03/16:52:00 zhengsen 问题描述: add git info and auto build fw
+19fdb96395254defea8eec4a366aa8820828e187 2023-07-03/13:45:54 lijiangang Merge branch 'HSAN_093' of http://172.16.8.160:8091/HSAN_091 into HSAN_093
+1fa6960016cad0bec9cea3294dfdb814a7a032bb 2023-07-03/13:43:55 lijiangang For tr069 node issue.
+f456e64dca838a454f0820806293d01bd824eec0 2023-07-02/17:43:05 zhangkangkang Merge branch 'HSAN_093' of http://172.16.8.160:8091/HSAN_091 into HSAN_093
+2ab1a86bb9a8303c4e6e9b71e7909d89f3bfa459 2023-07-02/17:32:29 zhangkangkang Add zebra for rip test
+97eb6a2b7698b48ec760b013410db9646270dce1 2023-07-01/13:49:46 liuhongwen Merge branch 'HSAN_093' of http://172.16.8.160:8091/HSAN_091 into HSAN_093
+603500479628eb76ac02d00d144900d133f23d6d 2023-07-01/12:45:59 lijiangang For VoIP LED and USB.
+9b1d9eb3114a2db78112af77a9f65e0f245c4bb3 2023-07-01/09:31:26 lijiangang Adapted SI32192 SLIC driver
+3a1f1c9d8c0d5dc4e064118e6803f8ccce8c0321 2023-06-30/20:06:14 liuhongwen 问题描述: modify 2.5G phy for 10GW6
+49f1a0246c1e2a7be343aac3ce50d8593cc2bfcd 2023-06-30/10:35:41 liuhongwen Merge branch 'HSAN_093' of http://172.16.8.160:8091/HSAN_091 into HSAN_093
+39450bb0b4c173c5f3d7f5860a3b875f55d2d84d 2023-06-30/10:31:04 liuhongwen 问题描述: 工厂生产第一次启动时初始化网口4，开启telnet 解决方法:
+ab5085753512921eed83631f23577a148e71f879 2023-06-29/19:35:43 liuhongwen 问题描述:Add dts scty_gpon2 for emei
+4421bf57844f5b986049e3de38263d78778a15d9 2023-06-29/15:13:15 liuhongwen 问题描述:保留demo板配置
+e511aa53d20b7d2c97bfab1b7220743fdffb2ae8 2023-06-28/15:23:28 liuhongwen 问题描述:增加vendorid后烧录文件启动出错. 解决方法:修改config文件中BOARD_TYPE与之对应，后面的数字为board_id
+7b406036421e3b867ea9f31231c633bfe01fe71a 2023-06-27/16:14:19 liuhongwen 默认vendorid改为scty,添加相应配置文件
+995227020ed5d62e23573d2a789487d832c2e2c8 2023-06-26/18:14:52 liuhongwen 修改烧录文件制作脚本
+7376297048b9ce59a686fc784b689ad803aafb08 2023-06-21/10:09:02 liuhongwen 问题描述：适配flash，调整gpio
+736e9efc45653a18331d112fff7c7d90775b28c9 2023-06-29/11:54:23 zhengsen 问题描述: add new code HSAN_093
+b7faa0cd923e1a259ff9c8c3da66028777f2ac07 2023-06-29/11:44:47 zhengsen 问题描述: delete 901 branch old code
+aa6c5b9590b16f25563b28fbb2664e9201a7556a 2023-06-28/16:55:01 liuhongwen 修改commit msg. Merge branch 'master' of http://172.16.8.160:8091/HSAN_091
+682cf2d64f1fb12e6c83247dd1b9e5cbad2bfe88 2023-06-28/15:29:39 liuhongwen 问题描述:添加文档路径docs 解决方法:
+0782ffb351f9674c5c32d5e0f743b9171b8d5305 2023-06-28/15:23:28 liuhongwen 问题描述:增加vendorid后烧录文件启动出错 解决方法:修改config文件中BOARD_TYPE与之对应，后面的数字为board_id
+da82561a0bc4668ae1b539a23c70d4c3e8d664f1 2023-06-28/15:29:39 liuhongwen 问题描述: 添加文档路径docs 解决方法:
+d00a7637b9b96b7ea147b9957d01bc61622e0028 2023-06-28/15:23:28 liuhongwen 问题描述: 增加vendorid后烧录文件启动出错 解决方法: 修改config文件中BOARD_TYPE与之对应，后面的数字为board_id
+8bc8242943a1ad7eb0244a3d845d271f3ca024a9 2023-06-27/16:14:19 liuhongwen 默认vendorid改为scty,添加相应配置文件
+25fccfa3cc36b70360e74a15fb59c804caf800d7 2023-06-26/18:14:52 liuhongwen 修改烧录文件制作脚本
+7a865c7ff6026b0dbdb7ed7c2f851dfe575bf8b6 2023-06-26/15:04:10 liuhongwen Adjust gpio for xiling
+e41d1bfe8f99b3855236781cafa7947ff4238c62 2023-06-26/13:40:21 liuhongwen Add empty dirs
+49412e1f484928a71358cd5d229eb9df5ec188b8 2023-06-21/10:09:02 liuhongwen 问题描述：适配flash，调整gpio
+02c2b34984fdae55bf2cd5a374db19edebad66f9 2023-06-19/14:13:05 zhengsen 问题描述: add git commit template
+1e156272ad22bd9ec3e573c3a4d377c48755f16d 2023-06-19/13:54:10 zhengsen 问题描述ï¼add SDK 091
+20332069638ac0c03f50ba85c98da7f9111a6092 2023-06-19/05:15:04 zhengsen Initial empty repository
