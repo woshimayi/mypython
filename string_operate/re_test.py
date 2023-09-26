@@ -77,10 +77,23 @@ str = r'[迅雷下载www.2tu.cc]航班.BD1280高清中字.rmvb'
 print('9', pattern.search(str), '\t\t\t\t', pattern.search(str).groups()[-1])
 
 
-pattern = re.compile(r'(.*).mp4')
+pattern = re.compile(r'(^(\[(.*)]))(.*)')
 str = r'[迅雷下载www.2tu.cc]航班.BD1280高清中字.rmvb'
+print('9', pattern.search(str), '\t\t\t\t', pattern.search(str).groups()[-1])
+
+
+pattern = re.compile(r'(^(阳光电影dygod.org\.))(.*)')
+str = r'阳光电影dygod.org.疾速营救.2023.BD.1080P.中英双字.mkv'
+# print('10', pattern.search(str), '\t\t\t\t', pattern.search(str).groups())
 print('10', pattern.search(str), '\t\t\t\t', pattern.search(str).groups()[-1])
 
 
-
+re_patterns = [r'(^(\[(.*)]))(.*)', r'(^(阳光电影dygod.org\.))(.*)']
+str = [r'[迅雷下载www.2tu.cc]航班.BD1280高清中字.rmvb', r'阳光电影dygod.org.疾速营救.2023.BD.1080P.中英双字.mkv']
+for l in str:
+    print(l)
+    for tmp in re_patterns:
+        pattern = re.compile(tmp)
+        if pattern.search(l):
+            print('10', pattern.search(l), '\t\t\t\t', pattern.search(l).groups()[-1])
 
