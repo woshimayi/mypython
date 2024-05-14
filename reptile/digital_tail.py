@@ -61,26 +61,68 @@ class BeautifulPicture:
         soup.prettify()
         # print(soup)
         i = 0
-        # print('aaa', len(soup.find_all('img')))
+        print('aaa', len(soup.find_all('img')))
         for jpg_url in soup.find_all('img'):
             i += 1
-
-            # print(jpg_url)
             time.sleep(0.5)
 
-            if jpg_url.get('data-original') is not None and 'http' in jpg_url.get('data-original'):
-                tmp_url = jpg_url.get('data-original')
-            elif jpg_url.get('src') is not None and 'http' in jpg_url.get('src'):
+            if jpg_url.get('src') is not None and 'http' in jpg_url.get('src'):
                 tmp_url = jpg_url.get('src')
             elif jpg_url.get('data-src') is not None and 'http' in jpg_url.get('data-src'):
                 tmp_url = jpg_url.get('data-src')
             else:
                 continue
 
-            # print('1', tmp_url)
+            print('1', tmp_url)
             picture_name = str(time.strftime("%Y%m%d%H%M%S", time.localtime())) + str(i) + '.jpg'
             print(picture_name, end='')
             self.save_img(tmp_url, picture_name)
+
+        os.chdir('../')
+
+    def get_dgtle_pic(self, url):
+        r = requests.get(url, headers=self.headers, stream=True)
+        r.encoding = 'utf-8'
+        # if int(r.headers['content-length']) < TOO_LONG:
+        #     content = r.content
+        #     print(content)
+        # print(r.iter_content())
+        soup = BeautifulSoup(r.text, "lxml")
+        soup.prettify()
+        # print(soup)
+        i = 0
+        print('aaa', len(soup.find_all('img')))
+        for jpg_url in soup.find_all('img', class_='img-cover img-layz'):
+            i += 1
+            time.sleep(0.5)
+            print(jpg_url)
+
+            if jpg_url.get('data-original') is not None and 'http' in jpg_url.get('data-original'):
+                tmp_url = jpg_url.get('data-original')
+            else:
+                continue
+
+            print('1', tmp_url)
+            picture_name = str(time.strftime("%Y%m%d%H%M%S", time.localtime())) + str(i) + '.jpg'
+            print(picture_name, end='')
+            self.save_img(tmp_url, picture_name)
+
+        for jpg_url in soup.find_all('img'):
+            i += 1
+            time.sleep(0.5)
+            print(jpg_url)
+
+            if jpg_url.get('src') is not None and 'http' in jpg_url.get('src'):
+                tmp_url = jpg_url.get('src')
+            else:
+                continue
+
+            print('1', tmp_url)
+            picture_name = str(time.strftime("%Y%m%d%H%M%S", time.localtime())) + str(i) + '.jpg'
+            print(picture_name, end='')
+            self.save_img(tmp_url, picture_name)
+
+
 
         os.chdir('../')
 
@@ -130,7 +172,7 @@ if __name__ == '__main__':
         # 添加到参数列表中
         args = parser.parse_args()
 
-
+        directory = os.getcwd()
         if args.output:
             directory = args.output
         elif args.file:
@@ -181,15 +223,22 @@ if __name__ == '__main__':
         path = r'get_pic' + str(time.strftime("%Y%m%d%H%M%S", time.localtime()))
         be = BeautifulPicture()
         be.mk_dir(path)
+        open_dir = "explorer.exe" + " " + directory + '\\' + path
+        print(open_dir)
 
         # mobil url to pc url
-        if "ins-detail" in url:
-            index = url.split('/')[-1]
-            print(index)
-            url = base_url + 'article-' + \
-                      url.split('/')[-1] + '-1.html'
-            print(url)
-        be.get_pic(url)
+        if "dgtle.com" in url:
+            if "article-detail" in url:
+                index = url.split('/')[-1]
+                print(index)
+                url = base_url + 'article-' + \
+                          url.split('/')[-1] + '-1.html'
+                print(url)
+            be.get_dgtle_pic(url)
+            os.system(open_dir)
+        else:
+            be.get_pic(url)
+            os.system(open_dir)
 
     # remove empty dir
     if 0 == len(os.listdir(path)):

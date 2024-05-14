@@ -16,9 +16,26 @@ ip = "192.168.1.1"
 head = "application/x-www-form-urlencoded; charset=UTF-8"
 
 url = "http://192.168.1.1:17999"
-data = {"RPCMethod": "SetLocationInfo", "ID": "101", "Longitude": 110.21, "Latitude": 43.50508, "Elevation": 10,
+data = {"RPCMethod": "SetLocationInfo", "ID": "102", "Longitude": 110.23, "Latitude": 43.50508, "Elevation": 10,
         "HorizontalError": 65, "AltitudeError": 27, "AreaCode": "112441901001", "TimeStamp": "20220606222448",
         "GISDigest": "9A1B6C7E804A31A6"}
+
+data1 = {"RPCMethod": "SetLocationInfo", "ID": 3, "Longitude": 127.48376, "Latitude": 29.46922, "Elevation": 0,
+         "HorizontalError": 30, "AltitudeError": 87, "AreaCode": "110757101002", "TimeStamp": "1713889008",
+         "GISDigest": "D605C1BB00A62541"}
+
+data3 = {
+    "RPCMethod": "SetLocationInfo",
+    "ID": 5,
+    "Longitude": 106.836710,
+    "Latitude": 36.818850,
+    "Elevation": 0,
+    "HorizontalError": 40,
+    "AltitudeError": 58,
+    "AreaCode": "530116401002",
+    "TimeStamp": "1714059600",
+    "GISDigest": "C9135485B95FBF3F"
+}
 
 
 def json_format(data):
@@ -68,8 +85,8 @@ class Buapp(object):
 if __name__ == '__main__':
     print('Hello world')
     F = Buapp()
-    json_format(data)
+    json_format(data3)
     # print(data)
-    print(json.dumps(data))
+    print(json.dumps(data3))
     # F.post_info(url, data)
-    F.client_tcp(json.dumps(data))
+    F.client_tcp(json.dumps(data3))

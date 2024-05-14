@@ -198,6 +198,9 @@ class Pkg(object):
 
 
 if __name__ == '__main__':
+
+
+
     be = HttpdTest()
     be.post_info(telnetUrl, data=telnetTrue)
 

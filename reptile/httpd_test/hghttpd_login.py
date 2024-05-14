@@ -1,5 +1,15 @@
 #!/usr/bin/env python
 # encoding: utf-8
+'''
+@author: caopeng
+@license: (C) Copyright 2013-2049, Node Supply Chain Manager Corporation Limited.
+@contact: woshidamayi@gmail.com
+@software: dof
+@file: hghttpd_login.py.py
+@time: 24/3/27 20:26
+@desc:
+'''
+
 import json
 import time
 from time import sleep
@@ -33,6 +43,7 @@ add_int = {"path": "hbus://wan/editWan",
            "para": {"WanName": "create_new_wan", "Enable": True, "LanInterface": "", "VLANMode": 2, "VLANIDMark": 6,
                     "802-1pMark": 0, "LanInterface-DHCPEnable": 1, "IPMode": 1, "NATEnabled": True, "MTU": 1460,
                     "ConnectionType": "IP_Routed", "AddressingType": "DHCP", "ServiceList": "INTERNET"}}
+
 add_tr69 = {"path": "hbus://wan/editWan",
             "para": {"WanName": "create_new_wan", "Enable": True, "LanInterface": "", "VLANMode": 2, "VLANIDMark": 6,
                      "802-1pMark": 0, "MulticastVlan": -1, "IPMode": 1, "MTU": 1460, "ConnectionType": "IP_Routed",
@@ -41,18 +52,42 @@ add_voip = {"path": "hbus://wan/editWan",
             "para": {"WanName": "create_new_wan", "Enable": True, "LanInterface": "", "VLANMode": 2, "VLANIDMark": 6,
                      "802-1pMark": 0, "IPMode": 1, "MTU": 1460, "ConnectionType": "IP_Routed", "AddressingType": "DHCP",
                      "ServiceList": "VOIP"}}
-edit_ipoe = {"path": "hbus://wan/editWan",
-             "para": {"WanName": "1", "Enable": True, "LanInterface": "", "VLANMode": 2, "VLANIDMark": 6,
-                      "802-1pMark": 0, "MulticastVlan": -1, "LanInterface-DHCPEnable": 1, "IPMode": 1,
-                      "NATEnabled": True, "MTU": 1500, "ConnectionType": "IP_Routed", "AddressingType": "DHCP",
-                      "ServiceList": "INTERNET"}}
-edit_pppoe = {"path": "hbus://wan/editWan",
-              "para": {"WanName": "2", "Enable": True, "LanInterface": "", "VLANMode": 2, "VLANIDMark": 200,
-                       "802-1pMark": 0, "MulticastVlan": -1, "LanInterface-DHCPEnable": 1, "IPMode": 1,
-                       "NATEnabled": True, "MTU": 1460, "ConnectionType": "PPPoE_Routed", "Username": "test16",
-                       "Password": "test16", "ConnectionTrigger": "AlwaysOn", "ServiceList": "INTERNET"}}
+edit_ipoe_v4 = {"path": "hbus://wan/editWan",
+                "para": {"WanName": "1", "Enable": True, "LanInterface": "", "VLANMode": 2, "VLANIDMark": 6,
+                         "802-1pMark": 0, "MulticastVlan": -1, "LanInterface-DHCPEnable": 1, "IPMode": 1,
+                         "NATEnabled": True, "MTU": 1500, "ConnectionType": "IP_Routed", "AddressingType": "DHCP",
+                         "ServiceList": "INTERNET"}}
+edit_ipoe_v6 = {"path": "hbus://wan/editWan",
+                "para": {"WanName": "1", "Enable": True, "LanInterface": "", "VLANMode": 2, "VLANIDMark": 6,
+                         "802-1pMark": 0, "MulticastVlan": -1, "LanInterface-DHCPEnable": 1, "IPMode": 2,
+                         "NATEnabled": True, "MTU": 1500, "ConnectionType": "IP_Routed", "AddressingType": "DHCP",
+                         "ServiceList": "INTERNET"}}
 
-tc_obj_v4 = {"path": "hbus://wan/editWan",
+edit_ipoe_v46 = {"path": "hbus://wan/editWan",
+                 "para": {"WanName": "1", "Enable": True, "LanInterface": "", "VLANMode": 2, "VLANIDMark": 6,
+                          "802-1pMark": 0, "MulticastVlan": -1, "LanInterface-DHCPEnable": 1, "IPMode": 3,
+                          "NATEnabled": True, "MTU": 1500, "ConnectionType": "IP_Routed", "AddressingType": "DHCP",
+                          "ServiceList": "INTERNET"}}
+
+edit_pppoe_v4 = {"path": "hbus://wan/editWan",
+                 "para": {"WanName": "2", "Enable": True, "LanInterface": "", "VLANMode": 2, "VLANIDMark": 200,
+                          "802-1pMark": 0, "MulticastVlan": -1, "LanInterface-DHCPEnable": 1, "IPMode": 1,
+                          "NATEnabled": True, "MTU": 1460, "ConnectionType": "PPPoE_Routed", "Username": "test16",
+                          "Password": "test16", "ConnectionTrigger": "AlwaysOn", "ServiceList": "INTERNET"}}
+
+edit_pppoe_v6 = {"path": "hbus://wan/editWan",
+                 "para": {"WanName": "2", "Enable": True, "LanInterface": "", "VLANMode": 2, "VLANIDMark": 200,
+                          "802-1pMark": 0, "MulticastVlan": -1, "LanInterface-DHCPEnable": 1, "IPMode": 2,
+                          "NATEnabled": True, "MTU": 1460, "ConnectionType": "PPPoE_Routed", "Username": "test16",
+                          "Password": "test16", "ConnectionTrigger": "AlwaysOn", "ServiceList": "INTERNET"}}
+
+edit_pppoe_v46 = {"path": "hbus://wan/editWan",
+                  "para": {"WanName": "2", "Enable": True, "LanInterface": "", "VLANMode": 2, "VLANIDMark": 200,
+                           "802-1pMark": 0, "MulticastVlan": -1, "LanInterface-DHCPEnable": 1, "IPMode": 3,
+                           "NATEnabled": True, "MTU": 1460, "ConnectionType": "PPPoE_Routed", "Username": "test16",
+                           "Password": "test16", "ConnectionTrigger": "AlwaysOn", "ServiceList": "INTERNET"}}
+
+tc_obj = {"path": "hbus://wan/editWan",
           "para": {"WanName": "create_new_wan", "Enable": True, "LanInterface": "", "VLANMode": 2, "VLANIDMark": 900,
                    "802-1pMark": 0, "MulticastVlan": -1, "LanInterface-DHCPEnable": True, "IPMode": 1,
                    "NATEnabled": True, "MTU": 1500, "ConnectionType": "IP_Routed", "AddressingType": "Static",
@@ -75,20 +110,22 @@ edit_br_other = {"path": "hbus://wan/editWan",
                           "ConnectionType": "IP_Bridged", "ServiceList": "OTHER"}}
 
 # get wan name
-get_url = "http://192.168.1.1/getHbusData?path=hbus://wan/getWan&msgType=213&userTagData=1"
+get_url = "http://192.168.1.1/getHbusData?path=hbus://mdm/getWan&msgType=213&userTagData=1"
 
 # post
-add_url = "http://192.168.1.1/setHbusData?path=hbus://wan/editWan&msgType=213&userTagData=2"
+add_url = "http://192.168.1.1/setHbusData?path=hbus://mdm/editWan&msgType=213&userTagData=2"
 
 # post wan info
-get_info_url = "http://192.168.1.1/setHbusData?path=hbus://wan/getWan&msgType=213&userTagData=3&waitTimeoutMs=5000&wanIndex=1"
+get_info_url = "http://192.168.1.1/setHbusData?path=hbus://mdm/getWan&msgType=213&userTagData=3&waitTimeoutMs=5000&wanIndex=1"
 
 # post del
-del_info_url = "http://192.168.1.1/setHbusData?path=hbus://wan/editWan&msgType=213&userTagData=4&waitTimeoutMs=5000&wanIndex=1"
+del_info_url = "http://192.168.1.1/setHbusData?path=hbus://mdm/editWan&msgType=213&userTagData=4&waitTimeoutMs=5000&wanIndex=1"
 
 restoreDefault = "/setHbusData?path=hbus://mdm/RestoreDefault&msgType=201&userTagData=7&waitTimeoutMs=5000"
 
 rest = {"path": "hbus://mdm/RestoreDefault", "para": {}}
+
+login_html = "http://192.168.1.1/lgDevice?userName=CMCCAdmin&responseChallenge=fdf61f287194d3b338612b2705b2a04f"
 
 get_regionUrl = 'http://192.168.1.1/hgsreadme'
 
@@ -109,6 +146,18 @@ class HttpdTest:
             'User-Agent': "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.96 Safari/537.36",
             'authorization': ""
         }
+
+    def login(self, url):
+        try:
+            r = requests.get(url, headers=self.headers, timeout=20)
+            r.encoding = 'utf-8'
+            # soup = BeautifulSoup(r.text, "lxml")
+            # soup.prettify()
+            print("\t\tget login info")
+            if r.status_code == 200:
+                print(r.json()['message'])
+        except:
+            print('login fail')
 
     def get_list(self, url):
         try:
@@ -213,9 +262,9 @@ def wanget_set():
                     be.get_list(get_url)
 
             # add wan
-            obj = [add_int, add_tr69, add_voip, edit_pppoe, edit_ipoe]
-            obj_no_voip = [add_int, add_tr69, add_int, edit_pppoe, edit_ipoe]
-            obj_tc = [tc_obj_v4]
+            obj = [add_int, add_tr69, add_voip, edit_pppoe_v4, edit_ipoe_v4]
+            obj_no_voip = [add_int, add_tr69, add_int, edit_pppoe_v46, edit_ipoe_v4]
+            obj_tc = [tc_obj]
             for i in obj_tc:
                 print("add = ", i, end='')
                 # json_format(add_url)
@@ -233,7 +282,8 @@ if __name__ == '__main__':
     M = Meminfo(be.get_region())
 
     be.post_info(telnetUrl, data=telnetTrue)
-    # print(be.get_region())
+    print(be.get_region())
+    be.login(login_html)
 
     num = 0
     while 1:
@@ -263,9 +313,11 @@ if __name__ == '__main__':
                     be.get_list(get_url)
 
             # add wan
-            obj = [add_int, add_tr69, add_voip, edit_pppoe, edit_ipoe]
-            obj_no_voip = [add_int, add_tr69, add_int, edit_pppoe, edit_ipoe]
-            obj_tc = [add_tr69, add_int, add_br_other, add_voip, tc_obj_v4, edit_ipoe, edit_pppoe, edit_br_other]
+            obj = [add_tr69, add_tr69, add_tr69, add_voip, add_voip]
+            obj_no_voip = [add_int, add_tr69, add_int, edit_pppoe_v46, edit_ipoe_v4]
+            obj_tc = [add_tr69, add_int, add_int, add_br_other, add_voip,
+                      edit_ipoe_v4, edit_ipoe_v6, edit_ipoe_v46,
+                      edit_pppoe_v4, edit_pppoe_v6, edit_pppoe_v46, edit_br_other]
             for i in obj_tc:
                 print("add = ", i, end='')
                 # json_format(add_url)
@@ -290,6 +342,3 @@ if __name__ == '__main__':
         finally:
             localtime = time.asctime(time.localtime(time.time()))
             print("out: ", localtime)
-
-# if __name__ != '__main__':
-#     wanget_set()
