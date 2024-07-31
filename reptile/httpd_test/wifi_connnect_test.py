@@ -151,6 +151,8 @@ class WifiTest:
 
     def download(self, url=download_url):
         try:
+            if url is None:
+                return
             print('\t\t' + time.strftime("%Y%m%d-%H:%M:%S", time.localtime()) + '    ', end='',flush=True)
             tmp_file = r'QQ.exe'
             if os.access(tmp_file, os.F_OK):

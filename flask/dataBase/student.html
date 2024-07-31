@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>学生信息</title>
+</head>
+<body>
+    <form action="{{ url_for('add') }}" method="post">
+        <h3>学生信息
+            {% with msgs=get_flashed_messages() %}
+                {% if msgs %}
+                    {% for msg in msgs %}
+                        <p style="color:red;">{{ msg }}</p>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+        </h3>
+        <p>Name <input type = "text" name = "name" /></p>
+        <p>address <textarea type = "text" name = "address"></textarea></p>
+        <p>city <input type = "text" name = "city" /></p>
+        <p>pin <input type ="text" name = "pin" /></p>
+        <p><input type = "submit" value = "submit" /></p>
+    </form>
+</body>
+</html>

@@ -44,13 +44,13 @@ def send_udp(host, port, dstmac='94:c6:91:02:56:d6'):
     seq_ping = randint(1, 65535)  # 随机产生ping序列号位
     data = b"welcome aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaazzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzwelcome\r\n"
     # ping指令会使用ICMP传输协议,ICMP报文中要封装IP头部
-    # packet = IP(src='192.168.1.100', dst=host, tos=4, ttl=64, id=id_ip)/UDP(sport=sport, dport=port)/data
+    packet = IP(src='192.168.1.100', dst=host, tos=4, ttl=64, id=id_ip)/UDP(sport=sport, dport=port)/data
     # packet_1 = IP(src='192.168.1.100', dst=host, tos=8, ttl=64, id=id_ip) / UDP(sport=sport, dport=port) / data
-    packet_1 = IP(src='2010::3', dst=host, tos=8, ttl=64, id=id_ip) / UDP(sport=sport, dport=port) / data
+    # packet_1 = IP(src='2010::3', dst=host, tos=8, ttl=64, id=id_ip) / UDP(sport=sport, dport=port) / data
     # packet_1 =  scapy.contrib.igmp.IGMP()
     while True:
         # res = send(packet)
-        res = send(packet_1, iface='lan')
+        res = send(packet, iface='lan')
         if res:
             print('[*] ' + host + ' is active')
 
@@ -96,11 +96,11 @@ if __name__ == '__main__':
     print('Hello world')
 
     # send_ping('180.101.50.242')
-    ipv6_pack()
+    # ipv6_pack()
     # send_ping('192.168.1.1')
     # send_udp('180.101.49.13', 1024)
     # send_udp('180.101.49.13', 1025)
-    # send_udp('180.101.49.12', 8080)
+    send_udp('180.101.49.12', 8080)
     # send_vlan('180.101.50.188', 8080)
     time.sleep(0.1)
     print("exit")

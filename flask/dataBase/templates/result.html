@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<script>
+</script>
+<head>
+    <meta charset="UTF-8">
+    <title>User List</title>
+</head>
+<body>
+    <div>
+		<a href="http://git-scm.com/" title="git homepage"></a><a href="http://172.16.8.140/admin/repos">Code Review</a> / <a href="http://172.16.8.140/gitweb?p=HSAN_091.git;a=summary">HSAN_091.git</a> / summary
+	</div>
+	<style>
+		table {
+			table-layout: fixed;
+			border-collapse: collapse;
+			border: 0;
+			padding: 0;
+		}
+
+		td {
+			font-size: 14px;
+			height: 30px;
+			vertical-align: middle;
+	        text-overflow:ellipsis;
+	        overflow: hidden;
+	        word-break:keep-all; 
+	        white-space:nowrap;
+		}
+	</style>
+    <table>
+        <tr>
+            <th>id</th>
+            <th>commit</th>
+            <th>auth</th>
+            <th>branch</th>
+            <th>date</th>
+            <th>log</th>
+        </tr>
+        {% for user in users %}
+        <tr>
+            <td>{{ user[0] - 1  }}</td>
+            <!-- <td>{{ user[1] }}</td> -->
+            <td><a id=commit href="{{ 'http://172.16.8.140/gitweb?p=HSAN_091.git;a=commit;h=' + user[1] }}">{{ user[1] }}</a></td>
+            <td><a id=auth   >{{ user[2] }}</a></td>
+            <!-- <td><a id=branch href="{{ 'http://172.16.8.140/gitweb?p=HSAN_091.git;a=shortlog;h=refs/heads/' + user[5].split('/')[-1] }}">{{ user[5].split('/')[-1] }}</a></td> -->
+            <td><a id=branch href="{{ '/branch/' + user[5] }}">{{ user[5] }}</a></td>
+            <td><a id=date   >{{ user[3].split('T')[0] }}</a></td>
+            <td><a id=log    >{{ user[4] }}</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
