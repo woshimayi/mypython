@@ -64,13 +64,14 @@ def send_vlan(host, port):
     # p = IP(tos=2, src='192.168.1.100', dst=host) / UDP(sport=sport, dport=port) / b'zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz'
     # p = Dot1Q(prio=0, vlan=0) / IP(tos=4, src='192.168.1.100', dst=host) / ICMP() / b'zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz'
     # p = Dot1Q(prio=0, vlan=0) / IP(tos=4, src='192.168.1.100', dst=host) / UDP(sport=sport, dport=port) / b'zzzzzzzzzzzzzzzzzz'
-    p = Ether(dst='2C:63:73:CD:CE:5C', type='VLAN') / Dot1Q(vlan=0) / IP(tos=4, src='192.168.1.100', dst=host, ttl=23) / UDP(sport=sport, dport=port) / b'zzzzzzzzzzzzzzzzzz'
-    # p = Dot1Q(vlan=0) / IP(tos=4, src='192.168.1.100', dst=host, ttl=23) / UDP(sport=sport, dport=port) / b'zzzzzzzzzzzzzzzzzz'
+    p = Ether(dst='04:1E:23:AA:DB:00') / Dot1Q(vlan=0, prio=4) / IP(tos=4, src='192.168.1.100', dst=host, ttl=23) / UDP(sport=sport, dport=port) / b'zzzzzzzzzzzzzzzzzz'
+    # p = Dot1Q(vlan=0, prio=4) / IP(tos=4, src='192.168.1.100', dst=host, ttl=23) / UDP(sport=sport, dport=port) / b'zzzzzzzzzzzzzzzzzz'
     # p = Dot1Q(vlan=0) / IP(tos=4, src='192.168.1.100', dst=host, ttl=23) / UDP(sport=sport, dport=port) / b'zzzzzzzzzzzzzzzzzz'
 
     while True:
-        res = sendp(p, inter=1/100000)
+        res = sendp(p, inter=1/100000, iface='lan')        # 发送带vlan的包必须带iface
         # res = sendpfast(p, pps=1000, loop=1000)
+        time.sleep(1)
         try:
             if res:
                 print(res + '|' + host + ' is active')
@@ -100,7 +101,7 @@ if __name__ == '__main__':
     # send_ping('192.168.1.1')
     # send_udp('180.101.49.13', 1024)
     # send_udp('180.101.49.13', 1025)
-    send_udp('180.101.49.12', 8080)
-    # send_vlan('180.101.50.188', 8080)
+    # send_udp('180.101.49.12', 8080)
+    send_vlan('180.101.50.188', 8080)
     time.sleep(0.1)
     print("exit")

@@ -1,5 +1,19 @@
-[
-    {
-        "111":"222"
-    }
-]
+{
+    "productName": "cmcc_hgu",
+    "productVersion": "HiSmartHub_1.1.T12.pon0",
+    "versionType": "release",
+    "productAuthor": "Hisilicon",
+    "sdkVersion": "HiSmartHub_1.1.T12.pon0",
+    "gitProject": "HSAN_091",
+    "gitBranch": "origin/t12",
+    "gitCommit": "70743d6e75d81f19f84b6af8bbbc7e9f71984cfe",
+    "CUSTOMER": "CM",
+    "Country": "CN",
+    "PROFILE": "tiangong2_cmcc_hgu_release",
+    "gitRevision": "5316",
+    "gitBuilder": "zhengsen",
+    "flashType": "nand",
+    "socInfo": "tiangong2",
+    "buildTime": "2024-11-08 11:51:44",
+    "factory": "n"
+}

@@ -1,0 +1,337 @@
+<object name="InternetGatewayDevice.X_CMCC_SmartGateway.TrafficQoSService." shortObjectName="HgTransferQosServiceObject" specSource="Unspecified" profile="Unspecified" supportLevel="Present" oid="4500" />
+
+
+
+
+<object name="InternetGatewayDevice.X_CMCC_SmartGateway.TrafficQoSService.Flow.{i}." shortObjectName="HgTrafficQosFlowObject" specSource="Custom" profile="Unspecified" supportLevel="DynamicInstances" />
+
+  <parameter name="Flow" type="unsignedInt" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" defaultValue="0" minValue="0" maxValue="7" />
+
+  <parameter name="UpSpeed" type="unsignedInt" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" />
+
+  <parameter name="DownSpeed" type="unsignedInt" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" />
+
+  <parameter name="RemarkDSCP" type="int" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" defaultValue="-1" maxValue="63" />
+
+  <parameter name="UsStats" type="unsignedInt" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" />
+
+  <parameter name="DsStats" type="unsignedInt" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" />
+
+  <parameter name="PolicerFlag" type="boolean" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" defaultValue="false" hideParameterFromAcs="true" />
+
+
+
+<object name="InternetGatewayDevice.X_CMCC_SmartGateway.TrafficQoSService.Classification.{i}." shortObjectName="HgTrafficQosClassificationObject" specSource="Custom" profile="Unspecified" supportLevel="DynamicInstances" pruneWriteToConfigFile="true"/>
+
+  <parameter name="Flow" type="unsignedInt" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" defaultValue="0" minValue="0" maxValue="7"/>
+
+  <parameter name="RemoteAddress" type="string" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" maxLength="32" />
+
+  <parameter name="RemotePort" type="string" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" maxLength="32" />
+
+  <parameter name="RemoteAddrIPAddrList" type="string" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" maxLength="2048"/>
+
+  <parameter name="RemoteAddrIP6AddrList" type="string" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" maxLength="2048"/>
+
+  <parameter name="RemoteAddrIPAddrNum" type="unsignedInt" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" defaultValue="0" minValue="0" maxValue="32"/>
+
+  <parameter name="RemoteAddrIP6AddrNum" type="unsignedInt" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" defaultValue="0" minValue="0" maxValue="32"/>
+
+
+
+<object name="InternetGatewayDevice.X_CMCC_SmartGateway.TransferServices." shortObjectName="HgTransServicesObject" specSource="Unspecified" profile="Unspecified" supportLevel="Present" />
+
+
+
+
+<object name="InternetGatewayDevice.X_CMCC_SmartGateway.TransferServices.TrafficMonitoringConfigService.{i}." shortObjectName="HgTrafficMonitorObject" specSource="Custom" profile="Unspecified" supportLevel="DynamicInstances" pruneWriteToConfigFile="true"/>
+
+  <parameter name="Index" type="unsignedInt" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" minValue="0" maxValue="255"/>
+  <parameter name="DestAddressList" type="string" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" maxLength="512"/>
+
+  <parameter name="Context" type="string" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" maxLength="512" />
+
+
+
+
+
+<object name="InternetGatewayDevice.X_CMCC_SmartGateway.TransferServices.TrafficForwardService.{i}." shortObjectName="HgTransTrafficForwardObject" specSource="Custom" profile="Unspecified" supportLevel="DynamicInstances" pruneWriteToConfigFile="true"/>
+
+  <parameter name="Index" type="unsignedInt" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" minValue="0" maxValue="255"/>
+
+  <parameter name="RemoteAddress" type="string" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" defaultValue="" maxLength="256" />
+
+  <parameter name="RemotePort" type="string" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" defaultValue="" maxLength="32" />
+
+  <parameter name="Protocol" type="string" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" hideParameterFromAcs="true" defaultValue="" validValuesArray="ipProtocol5Values" />
+
+  <parameter name="HostMAC" type="string" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" defaultValue="" maxLength="32" />
+
+  <parameter name="ForwardToIP" type="string" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" defaultValue="" maxLength="64" />
+
+  <parameter name="ForwardToPort" type="unsignedInt" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" defaultValue="0" />
+
+
+
+<object name="InternetGatewayDevice.X_CMCC_SmartGateway.TransferServices.TrafficMirrorService.{i}." shortObjectName="HgTrafficMirrorObject" specSource="Custom" profile="Unspecified" supportLevel="DynamicInstances" pruneWriteToConfigFile="true"/>
+
+  <parameter name="Index" type="unsignedInt" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" minValue="0" maxValue="255"/>
+  <parameter name="RemoteAddress" type="string" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" maxLength="256" />
+
+  <parameter name="RemotePort" type="string" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" maxLength="32" />
+
+  <parameter name="Direction" type="string" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" maxLength="32" />
+
+  <parameter name="Protocol" type="string" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" defaultValue="TCP" validValuesArray="ipProtocol5Values" />
+
+  <parameter name="HostMAC" type="string" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" maxLength="32" />
+
+  <parameter name="MirrorToIP" type="string" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" maxLength="64" />
+
+  <parameter name="MirrorToPort" type="unsignedInt" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" defaultValue="1024" minValue="1" maxValue="65535"/>
+
+  <parameter name="TcpHeadOnly" type="boolean" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" defaultValue="false" />
+  <parameter name="TcpRule" type="boolean" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" defaultValue="false" />
+  <parameter name="PacketNum" type="unsignedInt" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" defaultValue="0" />
+  <parameter name="PayloadType" type="string" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" defaultValue="IP" />
+
+
+
+
+<object name="InternetGatewayDevice.X_CMCC_SmartGateway.TransferServices.TrafficDetailProcessService.{i}." shortObjectName="HgTrafficDetailObject" specSource="Custom" profile="Unspecified" supportLevel="DynamicInstances" pruneWriteToConfigFile="true" />
+
+  <parameter name="Index" type="unsignedInt" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" minValue="0" maxValue="255" neverWriteToConfigFile="true"/>
+
+  <parameter name="RemoteAddress" type="string" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" maxLength="256"  neverWriteToConfigFile="true"/>
+
+  <parameter name="RemotePort" type="unsignedInt" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" defaultValue="80" minValue="1" maxValue="65535"  neverWriteToConfigFile="true"/>
+  <parameter name="Direction" type="string" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" maxLength="32"  neverWriteToConfigFile="true"/>
+
+  <parameter name="HostMAC" type="string" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" maxLength="32"  neverWriteToConfigFile="true"/>
+
+  <parameter name="MethodList" type="string" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" maxLength="32"  neverWriteToConfigFile="true"/>
+
+  <parameter name="StatuscodeList" type="string" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" maxLength="256"  neverWriteToConfigFile="true"/>
+
+  <parameter name="HeaderList" type="string" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" maxLength="1024"  neverWriteToConfigFile="true"/>
+
+  <parameter name="Context" type="string" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" maxLength="256"  neverWriteToConfigFile="true"/>
+
+
+
+
+<object name="InternetGatewayDevice.X_CMCC_SmartGateway.TransferServices.FastPathSpeedUpService.{i}." shortObjectName="FastPathSpeedUpService" specSource="Custom" profile="Unspecified" supportLevel="DynamicInstances" />
+
+  <parameter name="Index" type="unsignedInt" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" minValue="0" maxValue="31"/>
+
+  <parameter name="HostMAC" type="string" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" maxLength="32" />
+
+  <parameter name="UpSpeed" type="unsignedInt" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" />
+
+  <parameter name="DownSpeed" type="unsignedInt" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" />
+
+
+<object name="InternetGatewayDevice.X_CMCC_SmartGateway.TransferServices.AhsapiHostSpeedlimit.{i}." shortObjectName="HgAhsapiHostSpeedlimitObject" specSource="Custom" profile="Unspecified" supportLevel="DynamicInstances" />
+
+  <parameter name="Index" type="unsignedInt" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" minValue="0" maxValue="31"/>
+
+  <parameter name="HostMAC" type="string" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" maxLength="32" />
+
+  <parameter name="UpSpeed" type="unsignedInt" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" />
+
+  <parameter name="DownSpeed" type="unsignedInt" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" />
+
+  <parameter name="LimitedUrl" type="string" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" maxLength="1024" />
+
+  <parameter name="DeviceLimitMode" type="unsignedInt" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" minValue="0" maxValue="1"/>
+
+  <parameter name="DeviceLimitWeek" type="unsignedInt" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" minValue="0" maxValue="127"/>
+
+  <parameter name="DeviceLimitTimeOffset1" type="unsignedInt" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" minValue="0" maxValue="86400"/>
+
+  <parameter name="DeviceLimitTimeOffset2" type="unsignedInt" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" minValue="0" maxValue="86400"/>
+
+
+<object name="InternetGatewayDevice.X_CMCC_SmartGateway.TransferServices.AhsapiQos." shortObjectName="HgAhsapiQosObject" specSource="Custom" profile="Unspecified" supportLevel="DynamicInstances"  hideObjectFromAcs="true"/>
+
+  <parameter name="QosEnable" type="boolean" specSource="HG" profile="X_HG_CMCC:1" supportLevel="ReadWrite" defaultValue="True" />
+
+
+<object name="InternetGatewayDevice.X_CMCC_SmartGateway.TransferServices.AhsapiQos.DscpPriority.{i}." shortObjectName="HgAhsapiDscpPriorityObject" specSource="Custom" profile="Unspecified" supportLevel="DynamicInstances" />
+
+  <parameter name="Index" type="unsignedInt" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" minValue="0" maxValue="31"/>
+
+  <parameter name="QosPriority" type="unsignedInt" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" minValue="0" maxValue="7"/>
+
+  <parameter name="DscpEnable" type="boolean" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" defaultValue="True" />
+
+  <parameter name="DscpPriority" type="unsignedInt" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" minValue="0" maxValue="63"/>
+
+  <parameter name="SourceMac" type="string" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite"  maxLength="32" />
+
+  <parameter name="DestinationMac" type="string" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" maxLength="32" />
+
+  <parameter name="Vlan8021pEnable" type="boolean" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" defaultValue="True" />
+
+  <parameter name="Vlan8021p" type="unsignedInt" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" minValue="0" maxValue="63"/>
+
+  <parameter name="SourceIp" type="string" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite"  maxLength="128" />
+
+  <parameter name="SourcePort" type="unsignedInt" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" minValue="0" maxValue="65535"/>
+
+  <parameter name="DestinationIp" type="string" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite"  maxLength="128" />
+
+  <parameter name="DestinationPort" type="unsignedInt" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" minValue="0" maxValue="65535"/>
+
+  <parameter name="Protocol" type="string" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite"  maxLength="32"  validValuesArray="cmccIPFilterProtocolValues" />
+
+
+<object name="InternetGatewayDevice.X_CMCC_SmartGateway.TransferServices.AhsapiQos.VlanPriority.{i}." shortObjectName="HgAhsapiVlanPriorityObject" specSource="Custom" profile="Unspecified" supportLevel="DynamicInstances" />
+
+  <parameter name="Index" type="unsignedInt" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" minValue="0" maxValue="31"/>
+
+  <parameter name="QosPriority" type="unsignedInt" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" minValue="0" maxValue="7"/>
+
+  <parameter name="Vlan8021pEnable" type="boolean" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" defaultValue="True" />
+
+  <parameter name="Vlan8021p" type="unsignedInt" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" minValue="0" maxValue="63"/>
+
+  <parameter name="SourceIp" type="string" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite"  maxLength="128" />
+
+  <parameter name="SourcePort" type="unsignedInt" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" minValue="0" maxValue="65535"/>
+
+  <parameter name="DestinationIp" type="string" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite"  maxLength="128" />
+
+  <parameter name="DestinationPort" type="unsignedInt" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" minValue="0" maxValue="65535"/>
+
+  <parameter name="Protocol" type="string" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite"  maxLength="32"  validValuesArray="cmccIPFilterProtocolValues" />
+
+
+<object name="InternetGatewayDevice.X_CMCC_SmartGateway.TransferServices.AhsapiHttpSpeedTest.{i}." shortObjectName="HgAhsapiHttpSpeedTestObject" specSource="Custom" profile="Unspecified" supportLevel="DynamicInstances" />
+
+  <parameter name="SeqId" type="string" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite"  maxLength="128" />
+
+  <parameter name="HttpSpeedTestUrl" type="string" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite"  maxLength="128" />
+
+  <parameter name="httpSpeedTestTime" type="unsignedInt" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" minValue="0" maxValue="3600"/>
+    <description source="HG">unit: s </description>
+
+  <parameter name="httpSpeedTestInterval" type="string" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite"  maxLength="128" />
+    <description source="HG">unit: ms </description>
+
+  <parameter name="httpSpeedTestRate" type="string" specSource="Custom" profile="Unspecified" supportLevel="ReadOnly" maxLength="128" />
+    <description source="HG">Average rate </description>
+
+  <parameter name="transmitRatio" type="unsignedInt" specSource="Custom" profile="Unspecified" supportLevel="ReadOnly" minValue="0" maxValue="1" defaultValue="0" />
+    <description source="HG">event 0: runing  1: complete </description>
+
+
+<object name="InternetGatewayDevice.X_CMCC_SmartGateway.TransferServices.SSHServer." shortObjectName="HgSSHServerObject" specSource="Custom" profile="Unspecified" supportLevel="DynamicInstances" />
+
+  <parameter name="Enable" type="boolean" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite"  defaultValue="True" />
+
+  <parameter name="RemoteUrlV4" type="string" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite"  maxLength="128" />
+
+  <parameter name="RemoteUrlV6" type="string" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" maxLength="128"/>
+    <description source="HG">unit: s </description>
+
+  <parameter name="Timeout" type="unsignedInt" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite"  />
+    <description source="HG">unit: ms </description>
+
+  <parameter name="Pid" type="unsignedInt" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite"  />
+    <description source="HG">unit: pid </description>
+
+
+
+<object name="InternetGatewayDevice.X_CMCC_SmartGateway.TransferServices.RemoteSpeed." shortObjectName="HgRemoteSpeedObject" specSource="Custom" profile="Unspecified" supportLevel="DynamicInstances" />
+
+  <parameter name="SequenceId" type="string" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" maxLength="128"/>
+    <description source="HG">SequenceId</description>
+
+  <parameter name="RequestID" type="string" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" maxLength="128"/>
+	  <description source="HG">RequestID: space, maxlen:32, regex: [a-zA-Z0-9]    </description>
+
+  <parameter name="TestRange" type="string" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" maxLength="128"/>
+	  <description source="HG">speedtest range</description>
+
+  <parameter name="SrcMAC" type="string" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" maxLength="128"/>
+	  <description source="HG">SrcMAC</description>
+
+  <parameter name="DestMAC" type="string" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" maxLength="128"/>
+	  <description source="HG">DestMAC</description>
+
+  <parameter name="TestMode" type="unsignedInt" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" minValue="1" maxValue="2" defaultValue="1" />
+	  <description source="HG">speedtest mode :1:download    2:upload</description>
+
+  <parameter name="RemoteAddr" type="string" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" maxLength="128"/>
+	  <description source="HG">RemoteAddr: remote address or domain</description>
+
+  <parameter name="RemotePort" type="unsignedInt" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" />
+	  <description source="HG">optional</description>
+
+  <parameter name="Duration" type="unsignedInt" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite"  minValue="3" maxValue="60" defaultValue="10" />
+	  <description source="HG">speedtest timeout, default:10, min:3 max: 60 </description>
+
+  <parameter name="Tool" type="string" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" maxLength="128"  defaultValue="http" />
+	  <description source="HG">http or other protocal</description>
+
+  <parameter name="Protocol" type="string" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" maxLength="128" defaultValue="TCP" />
+	  <description source="HG">TCP or UDP</description>
+
+  <parameter name="Status" type="string" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" maxLength="128" />
+	  <description source="HG">0: success 1: fail</description>
+
+  <parameter name="ReportTime" type="string" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" maxLength="128" />
+	  <description source="HG">reponse time</description>
+
+  <parameter name="TaskID" type="unsignedInt" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" />
+	  <description source="HG">TaskID </description>
+
+
+
+
+  <object name="InternetGatewayDevice.X_CMCC_SmartGateway.TransferServices.BlinkQos." shortObjectName="BlinkQos" specSource="Custom" profile="Unspecified" supportLevel="DynamicInstances"  hideObjectFromAcs="true"/>
+
+    <parameter name="QosEnable" type="boolean" specSource="HG" profile="X_HG_CMCC:1" supportLevel="ReadWrite" defaultValue="True" />
+
+    <parameter name="QosParameter" type="string" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" maxLength="8" />
+
+
+  <object name="InternetGatewayDevice.X_CMCC_SmartGateway.TransferServices.BlinkQosType.{i}." shortObjectName="BlinkQosType" specSource="Custom" profile="Unspecified" supportLevel="DynamicInstances" />
+
+    <parameter name="QosPriority" type="unsignedInt" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" minValue="0" maxValue="7"/>
+
+    <parameter name="DscpEnable" type="boolean" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" defaultValue="True" />
+
+    <parameter name="DscpPriority" type="unsignedInt" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" minValue="0" maxValue="63" />
+
+    <parameter name="Vlan8021pEnable" type="boolean" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" defaultValue="True" />
+
+    <parameter name="Vlan8021p" type="unsignedInt" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite"  minValue="0" maxValue="7" />
+
+    <parameter name="SourceIp" type="string" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" maxLength="32" />
+
+    <parameter name="SourcePort" type="unsignedInt" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" minValue="0" maxValue="65535" />
+
+    <parameter name="DestinationIp" type="string" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" maxLength="128" />
+
+    <parameter name="DestinationPort" type="unsignedInt" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" minValue="0" maxValue="65535" />
+
+    <parameter name="Protocol" type="string" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite"  maxLength="64" />
+
+    <parameter name="SourceMac" type="string" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" maxLength="17"/>
+
+    <parameter name="DestinationMac" type="string" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite"  maxLength="17" />
+
+
+  <object name="InternetGatewayDevice.X_CMCC_SmartGateway.TransferServices.RemoteSpeed.RemoteStaSpeedResult.{i}." shortObjectName="HgRemoteStaSpeedResultObject" specSource="Custom" profile="Unspecified" supportLevel="DynamicInstances" />
+    <parameter name="MAC"  type="string" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" maxLength="128"/>
+    <parameter name="ReceiveBytes" type="unsignedInt" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" />
+    <parameter name="ReceiveRate" type="unsignedInt" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" />
+    <parameter name="SendBytes" type="unsignedInt" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" />
+    <parameter name="SendRate" type="unsignedInt" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" />
+    <parameter name="ReceiveLostPackets" type="unsignedInt" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" />
+    <parameter name="ReceiveTotalpackets" type="unsignedInt" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" />
+    <parameter name="SendLostPackets" type="unsignedInt" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" />
+    <parameter name="SendTotalpackets" type="unsignedInt" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" />
+    <parameter name="Latency" type="unsignedInt" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" />
