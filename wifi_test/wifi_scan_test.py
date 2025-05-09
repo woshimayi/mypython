@@ -7,7 +7,7 @@
 @software: garner
 @file: wifi_scan_test.py
 @time: 2022/10/10 14:03
-@desc:
+@desc: 扫描环境中的ssid
 '''
 
 from pywifi import const, PyWiFi, Profile

@@ -11,7 +11,7 @@
 import sqlite3
 
 # 链接数据库，若数据库不存在则创建
-con = sqlite3.connect(r"456.db")
+con = sqlite3.connect(r"sql_test.db")
 
 # 在内存中创建数据库
 # con = sqlite3.connect(":memory:")
@@ -58,11 +58,20 @@ mytable = 'git_commit'
 # cur.executescript(sql_script)
 
 # 查询数据
-cur.execute("SELECT id,name FROM {}".format(mytable))
-cur.execute("SELECT * FROM {}".format(mytable))
+cur.execute("SELECT title FROM {}".format('moviename'))
+# cur.execute("SELECT * FROM {}".format('moviename'))
 
 # 获取查询结果集中所有（剩余）的行，返回一个列表
-print(cur.fetchall())
+print(cur)
+
+for i in cur.fetchall():
+    print(i[0])
+    try:
+        with open(r'movieFile/' + i[0], 'w', encoding='utf-8') as file:
+            pass  # 不写入任何内容
+        print(f"空文件 '{i[0]}' 已成功创建。")
+    except Exception as e:
+        print(f"创建空文件时发生错误: {e}")
 
 # 修改记录，在id为3的记录中将该条记录的name字段内容修改为金毛狮王
 # cur.execute("UPDATE mytable SET name = ? where id = ?",("金毛狮王","3"))
@@ -94,10 +103,10 @@ def commit_sort_1():
     f.close()
     # fw.close()
 
-commit_sort_1()
+# commit_sort_1()
 
 # 事务提交，保存修改内容。
-con.commit()
+# con.commit()
 
 # 事务回滚，数据库回到上次提交保存的状态。
 # con.rollback()

@@ -1,0 +1,5 @@
+This line contains English words.
+这一行包含一些中文字符。
+还有一些中文词语：你好，世界！
+English again.
+混合了英文和中文：hello 你好 world。

@@ -149,28 +149,27 @@ class GetDirAllFileInfo(object):
                 # print(suffix)
                 # if suffix in filters:
                 if suffix in filters:
-                    # print(file)
+                    print(file)
                     index += 1
-                    pattern = re.compile(r'(^(\[(.*)]))(.*)')
-                    # pattern = re.compile(r'(.*).mp4$')
-                    if pattern.search(file):
-                        print(file)
-                        print('9\t\t\t\t %s' % pattern.search(file).groups()[-1].strip(' .'))
-                        dstfile = pattern.search(file).groups()[-1].strip(' .')
 
-                        try:
-                            srcfile = self.win2unixformat(os.path.join(root, file))
-                            dstfilepath = self.win2unixformat(os.path.join(root, dstfile))
-                            # dstfilepath = self.win2unixformat(os.path.join(root, file)) + '.mp4'
-                            print("%s %s" % (srcfile, dstfilepath))
-                            os.rename(srcfile, dstfilepath)
+                    patterns = [r'】(.*)|(^(\[(.*)]))(.*)', r'阳光电影www\.ygdy8\.com\.(.*)', r'阳光电影dygod\.org\.(.*)', r'^(.*?)\.迅雷之家\.www\.XL720\.com(.*)$']
 
-                        except Exception as e:
-                            print(e)
-                else:
-                    srcfile = self.win2unixformat(os.path.join(root, file))
-                    # print(srcfile)
-                    # shutil.move(srcfile, dstdir)
+                    for pattern in patterns:
+                        pat = re.compile(pattern)
+                        if pat.search(file):
+                            print('9\t\t\t\t ', pat.search(file).groups())
+                            # dstfile = pat.search(file).groups()[0] + pat.search(file).groups()[1]
+                            dstfile = "".join([x for x in pat.search(file).groups() if isinstance(x, str) and x is not None])
+
+                            try:
+                                srcfile = self.win2unixformat(os.path.join(root, file))
+                                dstfilepath = self.win2unixformat(os.path.join(root, dstfile))
+                                # dstfilepath = self.win2unixformat(os.path.join(root, file)) + '.mp4'
+                                print("%s %s" % (srcfile, dstfilepath))
+                                os.rename(srcfile, dstfilepath)
+
+                            except Exception as e:
+                                print(e)
 
         print('total num: %s' % index)
 
@@ -203,7 +202,7 @@ class GetDirAllFileInfo(object):
                     try:
                         srcfile = self.win2unixformat(os.path.join(root, file))
                         print(srcfile)
-                        # shutil.move(srcfile, dstdir)
+                        shutil.move(srcfile, dstdir)
                     except Exception as e:
                         print(e)
                     index += 1
@@ -254,10 +253,11 @@ class GetDirAllFileInfo(object):
                     # print(os.listdir(sub), len(os.listdir(sub)))
                     for j in range(subnum):
                         try:
-                            # print('move:', os.path.join(root, sub, os.listdir(sub)[j]))
+                            print('move:', os.path.join(root, sub, ''), root, sub, os.listdir(sub)[j])
                             result = self.win2unixformat(os.path.join(root, sub, os.listdir(sub)[j]))
                             print('move %s' % result)
                             shutil.move(result, self.dir)
+                            os.rmdir(os.path.join(root, sub, ''))    # delte empty dir
                         except Exception as e:
                             print(e)
                 elif 0 == subnum:
@@ -288,7 +288,7 @@ class GetDirAllFileInfo(object):
 
     def allroots(self):
         """
-        # 所有目录
+        # 所有目录下文件数量
         """
         print("==========os.walk================")
         index = 1
@@ -303,7 +303,7 @@ class GetDirAllFileInfo(object):
 
 if __name__ == "__main__":
     video = ['.mp4', '.avi', '.flv', '.mpg', '.mkv', '.wmv', '.m2ts', '.webm', '.asf', '.m4v', '.rmvb', '.vob',
-             '.ogv', '.gif']
+             '.ogv', '.gif', '.TS']
 
     exe = ['.exe', '.msi']
 
@@ -328,18 +328,19 @@ if __name__ == "__main__":
     music = ['.mp3', '.ogg', '.wav', '.aac', '.flac', '.mov']
     print('start run ....')
 
-    dirs = [r'N:/', r'V:/', r'F:/']
+    dirs = [r'E:/mypython_new/Data_storage/sql/movieFile']
+    dest_dirs = r'E:/mypython_new/Data_storage/sql/EXE'
     # dir = r'C:/Users/zs-mobile/Pictures'
     # dir = r'E:/相册'
 
     for dir in dirs:
         F = GetDirAllFileInfo(dir)
-        F.filesfilterdel(delfile)
+        # F.filesfilterdel(delfile)
         F.dirfilesmove2root(1)
-        F.allfilesfilterrename(video)
-        F.filesfiltermove(music, r'V:/MUSIC')
+        # F.allfilesfilterrename(video)
+        # F.filesfiltermove(music, r'V:/MUSIC')
         # F.filesfiltermove(exe, r'V:/EXE')
-        F.filesfiltermove(video, r'V:/EXE')
+        # F.filesfiltermove(video, dest_dirs)
         # F.allroots()
-        L = F.allfiles()
-        print(list(set(L)))
+        # L = F.allfiles()
+        # print(list(set(L)))
