@@ -59,7 +59,7 @@ class wifi(object):
                 has.append(i)  # 添加到has列表
                 if i.signal > -90:  # 信号强度<-90的wifi几乎连不上
                     wifi_list.append((i.ssid, i.signal))  # 添加到wifi列表
-                    print('wifi信号强度：%s，名称：%-30s BSSID:%-20s' % (i.signal, i.ssid, i.bssid))  # 输出wifi名称
+                    print('wifi信号强度：%s，名称：%-30s BSSID:%-20s FREQ:%-10s AKM:%-10s' % (i.signal, i.ssid, i.bssid, i.freq, i.akm))  # 输出wifi名称
         return sorted(wifi_list, key=lambda x: x[1], reverse=True)  # 按信号强度由高到低排序
 
     # 连接wifi

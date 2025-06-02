@@ -46,11 +46,12 @@ if __name__ == '__main__':
 
     for iface in ifname_list:
         if iface['ips']:
-            print(iface['index'], ' : ', iface['name'])
+            print(iface['win_index'], ' : ', iface['name'])
+
     index = input("input ifname index : ")
     for _iface in ifname_list:
         # print(_iface['name'], _iface['index'], _iface['ips'][0])
-        if int(index) == _iface['index']:
+        if int(index) == _iface['win_index']:
             ifname = _iface['name']
             srcIP = _iface['ips'][0]
             srcmac = _iface["mac"]
