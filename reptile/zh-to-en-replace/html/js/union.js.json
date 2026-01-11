@@ -1,0 +1,12 @@
+{
+    "升级失败!请点击<a href='/' target='_blank'>这里</a>重新到主页面进行升级!": "Upgrade failed! Please click <a href='/' target='_blank'>here</a> to go back to the main page to upgrade!",
+    "升级服务进程未响应!": "The upgrade service process is not responding!",
+    "无效的升级文件!": "Invalid update file!",
+    "升级文件校验成功!": "Upgrade file verification successful!",
+    "正在写入Flash...": "Writing to Flash...",
+    "写入flash失败!": "Writing to flash failed!",
+    "写入flash成功!": "Writing to flash successfully!",
+    "正在重启...": "Restarting...",
+    "<h3 class=\"text-danger\">网络已经断开!已经无法连接设备!</h3>": "<h3 class=\"text-danger\">The network has been disconnected! The device can no longer be connected!</h3>",
+    "<h6 class=\"text-primary\">当网络连接恢复时，请手动重新<a href=\"/\" style=\"color:#f00\">刷新</a>页面!</h6>": "<h6 class=\"text-primary\">When the network connection is restored, please manually <a href=\"/\" style=\"color:#f00\">refresh</a> the page!</h6>"
+}

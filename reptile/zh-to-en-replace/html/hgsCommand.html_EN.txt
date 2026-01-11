@@ -1,0 +1,3 @@
+Click the [Send] button to send the command and return to [Execution Results]
+Note: Do not execute commands such as top that are not completed or take too long to execute, as this will result in no results being returned and the connection being disconnected.
+Execution Results

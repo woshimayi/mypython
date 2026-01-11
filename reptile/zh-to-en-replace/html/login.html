@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+<title>中国移动</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link rel="stylesheet" href="css/bootstrap-4.3.1.min.css">
+<link rel="stylesheet" href="css/bootstrap-hg.css">
+<link rel="stylesheet" href="css/easyui.css">
+<link rel="stylesheet" href="css/icon.css">
+<link rel="stylesheet" href="css/login.css">
+
+<script src="js/customer.js"></script>
+<script src="js/customer_reg.js"></script>
+<script src="js/md5.js"></script>
+<script src="js/login.js"></script>
+
+</head>
+
+<body>
+	<nav class="navbar">
+        <img src="/img/login_logo_cm.png" alt="">
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<ul class="nav justify-content-end">
+			<!--需使用<a></a>，否则无法保持文字水平居中，会略为偏上-->
+			<li class="nav-item">
+				<a class="nav-link">网关名称:<span hgs_static_key="ProductType">全光组网终端</span></a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link">网关型号:<span hgs_static_key="ModelName">TEWA-700G</span></a>
+			</li>
+			<li class="nav-item"><a class="nav-link">欢迎您！</a>
+			</li>
+		</ul>
+	</nav>
+	
+	<div class="container" id="context">
+		<div id="LoginBox">
+			<br/>
+			<div id="promptInfo">&nbsp;</div>
+			<form >
+				<div class="input-group mb-3">
+					<div class="input-group-prepend">
+						<span class="input-group-text">用户</span>
+					</div>
+					<input type="text" class="form-control" id="UserAccount" placeholder="请输入用户名">
+				</div>
+				<div class="input-group mb-3">
+					<div class="input-group-prepend">
+						<span class="input-group-text">密码</span>
+					</div>
+					<input type="password" class="form-control" id="Password" placeholder="请输入密码"  autocomplete="off">
+				</div>
+				<div>
+					<button type="button" class="btn btn-primary" id="Login">&nbsp;&nbsp;登&nbsp;录&nbsp;&nbsp;</button>
+					<button type="button" class="btn btn-primary" id="Cancel">&nbsp;&nbsp;取&nbsp;消&nbsp;&nbsp;</button>
+					<button type="button" class="btn btn-primary" id="Reister">&nbsp;&nbsp;注&nbsp;册&nbsp;&nbsp;</button>
+				</div>
+				<br/>
+				<img src="img/mbclient.png" id="mobileClientPic"><img>
+				<div>下载手机客户端</div>
+
+			</form>
+		</div>
+	</div>
+
+	<div>&nbsp;</div>
+	<div class="foot_note">
+		<div class="col-12">
+			<div><span id="hgs_copyright">Copyright &copy;</span><span hgs_static_key="ShowCopyright">2001-2021 HGS. All rights reserved.</span></div>
+			<div id="session-row"><span>session-id:&nbsp;&nbsp;</span><span id="session-id"></span></div>
+		</div>
+	</div>
+	
+</body>
+
+</html>

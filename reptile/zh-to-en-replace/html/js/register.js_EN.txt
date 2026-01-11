@@ -1,0 +1,32 @@
+Registering OLT
+Obtaining management IP
+The management IP has been obtained and is connecting to the provincial digital home management platform
+Waiting for the provincial digital home management platform to issue business data
+The provincial digital home management platform is sending business data. Please do not turn off the power or unplug the optical fiber.
+Provincial digital home management platform is being issued
+ Business data, please do not cut off the power or unplug the optical fiber
+The business data of the provincial digital home management platform was successfully issued
+The business data of the provincial digital home management platform was successfully issued.
+ Business
+Already registered successfully, no need to register again
+Failed to register on OLT. Please check whether the optical signal light is off and whether the loid/password is correct.
+Failed to register on OLT, please check whether the optical signal light is off and whether the loid is correct
+Failed to register on OLT. Please check whether the optical signal light is off and the password is correct.
+The channel of the provincial digital home management platform is blocked, please contact the account manager or call 10086" or the IP address is not obtained
+The channel to the provincial digital home management platform is blocked. Please contact your account manager or call 10086
+Registration failed on the provincial digital home management platform, retrying
+If the registration on the provincial digital home management platform fails, please contact your account manager or call 10086
+If the provincial digital home management platform issues abnormal services, please contact your account manager or call 10086
+Error code 1, Password does not exist
+Error code 4, timeout
+Error code 5, already registered and no new work order to execute
+wait
+indivual
+wait
+indivual
+Please fill in
+Already registered successfully, no need to register again
+Loid
+Please enter LOID
+Please check
+Is the length correct?

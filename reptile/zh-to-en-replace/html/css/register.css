@@ -1,0 +1,102 @@
+#context {
+	height: 450px;
+}
+#backToLogin {
+	float: right;
+	font-size: 14px;
+}
+.register_box {
+	height: 350px;
+	width: 380px;
+	background-color: #e9ebed;
+	padding: 0 5px;
+	margin: 0 auto;
+	margin-top: 50px;
+}
+.register_box p {
+	font-size: .8rem;
+	margin: 0;
+}
+.button {
+	border: 1px solid #ced4da;
+	background-color: #e9ecef;
+}
+#save {
+	margin: 0 15px;
+}
+#reset {
+	margin: 0 15px;
+}
+.hideElm {
+	display: none;
+}
+.progress_color {
+	background-color: #fff;
+}
+#oltInfo {
+	text-align: center;
+	margin-bottom: 5px;
+}
+#eye_password {
+	position: absolute;
+	right: 12px;
+	top: 12px;
+	width: 20px;
+	height: 15px;
+}
+#back {
+	text-align: center;
+}
+#backToReg{
+	text-align: center;
+}
+.pwdLengthInfo{
+	font-style: italic;
+	color: #00f;
+	font-size: .8rem;
+}
+
+.pwdDiv{
+	position: relative;
+}
+.divCenter{
+	text-align: center;
+}
+.errInfo{
+	color: red;
+}
+.wid20{
+width:20%;
+}
+
+.wid30{
+width:30%;
+}
+
+.wid40{
+width:40%;
+}
+
+.wid50{
+width:50%;
+}
+
+.wid60{
+width:60%;
+}
+
+.wid70{
+width:70%;
+}
+
+.wid80{
+width:80%;
+}
+
+.wid90{
+width:90%;
+}
+
+.wid100{
+width:100%;
+}

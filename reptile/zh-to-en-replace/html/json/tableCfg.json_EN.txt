@@ -1,0 +1,357 @@
+Full Screen Display
+wan connection name
+IP address
+Connection Status
+Address acquisition method
+Primary DNS
+Backup DNS
+Subnet Mask
+Default Gateway
+Online time (seconds)
+MAC Address
+Connection failure reason
+wan connection name
+IP address
+Connection Status
+Address acquisition method
+Primary DNS
+Backup DNS
+Subnet Mask
+Default Gateway
+Online time (seconds)
+MAC Address
+Connection failure reason
+Full Screen Display
+wan connection name
+IPv6 Address
+Connection Status
+Address acquisition method
+Primary DNS
+Backup DNS
+Prefix address
+How to obtain prefix
+Gateway
+Enable DS-Lite
+AFTR Address
+Connection failure reason
+wan connection name
+IPv6 Address
+Connection Status
+Address acquisition method
+Primary DNS
+Backup DNS
+Prefix address
+How to obtain prefix
+Gateway
+Enable DS-Lite
+AFTR Address
+Connection failure reason
+name
+value
+name
+value
+Remark
+* Enable printing of WEB data logs in the browser
+* Enables printing of HTML element data in the browser
+*Do not submit data (for debugging only)
+* Enable serial port debugging
+* Enable HTTP debugging
+Skip user authentication
+* Print HBUS data
+* Print HBUS command line
+Enable downloading files
+Disable the ping process function
+Enable LAN-side viewing of Redis
+refresh
+interface
+Optical Router MAC
+Optical router IPTV port binding
+Not Binding
+refresh
+port
+Binding Mode
+Port Binding
+VLAN Binding
+VLAN Binding
+New
+delete
+refresh
+wan connection name
+Working Mode
+Tunnel peer address
+refresh
+LAN Name
+state
+rate
+Working Mode
+Number of bytes sent
+Number of bytes received
+Number of packets sent
+Number of received packets
+refresh
+interface
+Hostname
+Device Type
+Online time (seconds)
+Remaining lease time (seconds)
+refresh
+interface
+Hostname
+Device Type
+Online time (seconds)
+New
+delete
+refresh
+New
+delete
+refresh
+Source MAC
+Destination MAC
+New
+delete
+refresh
+Rule Name
+Enable
+yes
+no
+Source IP(starting)
+Source IP(stop)
+Destination IP (starting from)
+Destination IP(stop)
+protocol
+Source port (starting)
+Source port (stop)
+Destination port (starting)
+Destination Port(stop)
+New
+delete
+refresh
+WAN connection
+Enable
+yes
+no
+External IP
+External network port
+Intranet IP
+Intranet port
+protocol
+Lease seconds
+Remark
+name
+value
+name
+value
+refresh
+refresh
+Available sizes
+Available number
+Number in use
+Allocation times
+Process Name
+Ping times
+Number of unanswered pings
+Restart times
+New
+delete
+refresh
+Full Screen Display
+WAN connection
+Enable
+yes
+no
+Destination IP
+Destination Mask
+WAN connection
+Enable
+Destination IP
+Destination Mask
+New
+delete
+refresh
+Full Screen Display
+WAN connection
+Enable
+yes
+no
+Destination IPv6 prefix
+WAN connection
+Enable
+Destination IPv6 prefix
+name
+value
+Remark
+Enable port scanning protection
+Enable DOS attack protection (syn flood)
+Enable LAN-side attack defense
+refresh
+name
+value
+refresh
+refresh
+Frequency band
+Switch Status
+Interface Status
+Channel
+Authentication
+Encryption
+Number of bytes sent
+Number of bytes received
+Number of packets sent
+Number of received packets
+New
+delete
+refresh
+queue
+Priority
+Enable
+yes
+no
+refresh
+queue
+Enable
+yes
+no
+Weight(%)
+New
+delete
+refresh
+Business Name
+Priority Queue
+New
+delete
+refresh
+queue
+DSCP/TC value
+802.1p Value
+Priority Queue
+New
+delete
+refresh
+Full Screen Display
+Match Type
+Source MAC address
+Destination MAC address
+Source IP address
+Destination IP address
+Source Port
+Destination Port
+Stream type TC (0-255)
+Flow Label (0-1048575)
+Maximum
+Minimum
+protocol
+Match Type
+Maximum
+Minimum
+protocol
+refresh
+name
+state
+refresh
+Download log
+Deleting logs
+time
+Log Level
+log
+refresh
+Encoding
+Encoding priority (1-4)
+Enable
+yes
+no
+refresh
+Encoding
+Encoding priority (1-4)
+Enable
+yes
+no
+download
+delete
+refresh
+File name
+date
+size
+download
+delete
+refresh
+File name
+date
+size
+refresh
+Plugin Name
+Version
+state
+Open
+name
+value
+Remark
+Enable system logging
+* Enable system log serial port printing
+Enable WAN connection logging
+* Enable WAN connection log serial port printing
+Enable plugin logging
+* Enable plug-in log serial port printing
+Enable miscellaneous logging
+* Enable serial port printing of miscellaneous logs
+Enable WiFi log
+* Enable WIFI log serial port printing
+Enable OMCI logging
+* Enable OMCI log serial port printing
+Enable memory logging
+* Enable memory log serial port printing
+refresh
+Clear All
+name
+value
+Remark
+Software Version
+Hardware version
+Device Model
+Manufacturer Name
+refresh
+Region Abbreviation
+Full name of region
+Area Code
+refresh
+name
+value
+Remark
+MAC address, format xx:xx:xx:xx:xx:xx (uppercase and lowercase are acceptable)
+Manufacturer OUI, format xxxxxx, for example 00aa22, manufacturerOUI
+User PassworduserPassword
+SSID's shared key sharedKey
+Production DateproductionDate
+refresh
+name
+value
+Remark
+Device ID, uppercase and lowercase letters and numbers are acceptable
+refresh
+Self-check ID
+value
+Remark
+Macro Definition
+refresh
+value
+Remark
+Macro Definition
+refresh
+value
+Remark
+Macro Definition
+refresh
+value
+Remark
+Macro Definition
+refresh
+value
+Remark
+Macro Definition
+refresh
+value
+Remark
+Macro Definition
+refresh
+value
+Remark
+Macro Definition

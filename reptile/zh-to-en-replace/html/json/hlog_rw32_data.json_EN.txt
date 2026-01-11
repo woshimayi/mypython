@@ -1,0 +1,126 @@
+CPU usage
+uptime (unit: seconds)
+Monitoring system information recording interval (unit: seconds)
+Restart timestamp (seconds since 1970)
+Redis startup timestamp (uptime)
+The redis service is ready to connect (0-not ready, 1-ready)
+Enable or disable the ping process (1-enable, 0-disable)
+升级状态(0 - init, 1 - invalid image, 2 - valid image, 3 - flashing ver,4 - failed to flash, 5 - flash done, 6 - reboot, 7 - upload successfully,8 - preUpload img file)
+Enable or disable the hubs memory leak detection process (1-enable, 0-disable)
+Enable DNS spoofing (1-enable, 0-disable)
+FTP enable or disable (1-enable, 0-disable)
+Telnet enable or disable (0 - disable, 1 - local, 2 - remote, 3 - local + remote)
+TFTP download enable or disable (1-enable, 0-disable)
+Enable or disable old QOS rules (1-enable, 0-disable)
+Wan connection information change time
+The last time the wan connection information was changed
+xtables chain value
+HEX|iptables chain flag
+HEX|ebtables chain logo
+HEX|iptables chain flag starts
+HEX|iptables chain flag ends
+HEX|ebtables chain flag starts
+HEX|ebtables chain flag ends
+HEX|NAT rule preparation status (0x01 - POSTROUTING, 0x10 - post_snat)
+HEX|tr069 rule preparation status (0x01 - input, 0x10 - service_whitelist, 0x100 - hg_serv_whitelist, 0x1000 - hg_wan_accept_tr069)
+tr069 WAN connection mode (1 - IPv4, 2 - IPv6, 3 - IPv4 + IPv6)
+voip WAN connection mode (1 - IPv4, 2 - IPv6, 3 - IPv4 + IPv6)
+Uplink PON type (0-GPON; 1-XGPON)
+Uplink PON configuration type (0-GPON; 1-XGPON; 2-COMBO)
+FLOAT|PON RX power in dbm (valid only when PON is up)
+FLOAT|PON TX power in dbm (valid only when PON is up)
+Enable MIB commit debugging (0-disable, 1-enable)
+Firewall switch
+Firewall Level
+Current firewall switch
+Current firewall level
+Anti-DOS attack switch
+Anti-DOS attack advanced settings
+Anti-port scanning switch
+IPv6Session attack protection switch
+WAN to LAN IPv4 packet filtering switch (1-enable, 0-disable)
+WAN to LAN IPv4 packet filtering policy (1-whitelist, 0-blacklist)
+LAN to WAN IPv4 packet filtering switch (1-enable, 0-disable)
+LAN to WAN IPv4 packet filtering policy (1-whitelist, 0-blacklist)
+Internet PPP WAN Enables multiple Internet WAN nodes. The last setting will prevail.
+Interent ppp wan dialing method (1-ONDEMAND, 2-ALWAYSON, 3-MANUAL, 4-PROXY)
+If RMS is not registered, login is prohibited and the page will be redirected to the registration page (1-enable, 0-disable)
+RMS Registration Status
+SAMBA Switch
+Restart device time (uptime)
+Current MacFilter switch
+Current MacFilter mode
+Need to save MIB (0-not needed, 1-needed)
+Need to generate backup MIB file (0-not needed, 1-needed)
+Load configuration file type (0-none, 1-lastgood.xml, 2-backup_lastgood.xml, 3-backup_b_lastgood.xml)
+PPP system automatic restart switch
+PPP system restart interval
+Restart dnsmasq flag (0-do not restart, 1-restart)
+Enable fast restart of dnsmasq (0-no, 1-enabled)
+TR069 sets vlanid to 0 (0-not set, 1-set)
+Other wan sets vlanid to 0 (0-not set, 1-set)
+Limit on the number of notifications for online and offline events per cycle
+Soft probe optical power optimization enable (0-disabled, 1-enabled)
+Soft probe optical power optimization TX (unit: 0.1uW)
+Soft probe optical power optimization RX (unit: 0.1uW)
+Global index for newly created WAN connections
+Global ipversion capability
+UPNP enable or disable (1-enable, 0-disable)
+DMZ enable or disable (1-enable, 0-disable)
+wan common set (1-enable, 0-disable)
+wan common internet (1-enable, 0-disable)
+default wan broute (1-enable, 0-disable)
+L2TP ALG (1-enable, 0-disable)
+IPSEC ALG (1-enable, 0-disable)
+PPTP ALG (1-enable, 0-disable)
+FTP ALG (1-enable, 0-disable)
+SIP ALG (1-enable, 0-disable)
+RTSP ALG (1-enable, 0-disable)
+H323 ALG (1-enable, 0-disable)
+URL filtering switch (1-enable, 0-disable)
+URL filtering mode (1-whitelist, 0-blacklist)
+DHCP server ready (1-completed, 0-not completed)
+LAN bridge settings (0x11-enable, 0x10-disable)
+The wan_lan process polls the host list status
+RAM M and O bit flags 1-SLAAC_M1, 2-SLAAC_M0_O1, 3-SLAAC_M0_O0  
+Registration tag 1-web registration trigger 2-omciReboot
+macfilter list flags 0-macfilter is empty 1-macfilter content has been saved
+0-macfilter rules are cleared, 1-white rules are established, 2-black rules are established
+Network lock enable (1-on 0-off)
+The position of the power port relative to the network port (1-right, 0-left)
+IP|internet wan public network IP
+Gateway uplink mode (0-unknown, 1-pon, 2-eth, 3-2.4G, 4-5G, 5-MLD)
+Gateway uplink PON port type (0 - GPON, 1 - XGPON)
+Number of FTTR online sub-gateways
+FTTR sub-gateway connection status (0-initial state, 1-already connected to the main gateway)
+FTTR sub-gateway MESH networking status (0-offline 1-online)
+Whether the FTTR sub-gateway is allowed to allocate addresses to the LAN side (1-not allocated, 0-allocated)
+RSSI of the backhaul interface when FTTR sub-gateway is in MESH wireless networking
+Upgrade method (0-WEB, 1-TR069, 2-OMCI, 3-BLINK, 4-AOSNET)
+Firmware download percentage
+Firmware write percentage
+Firmware upgrade percentage
+Blink upgrade in steps (1-on 0-off)
+Blink takes over the upgrade task by itself (1-on 0-off)
+mdmd runs topology detection (0-enable, 1-disable)
+mdmd topo debug switch (0x1-RX enable, 0x2-Tx enable, 0x4-Gen Topo)
+The time when the plugin is started
+aosnet/blink plugin startup flag (0-not started, 1-started)
+UDHCPD (1-enable, 0-disable)
+2.4G wifi5 (1-enable, 0-disable)
+Last reboot source (see HG_DEVICE_LAST_REBOOT_FROM)
+IGMP configuration type (see HG_FTTR_IGMP_CONTROL_TYPE)
+Get the wan connection index through IPC hi_ipc wan_conn_idx_get
+FTTR management function (1-enabled, 0-disabled)
+FTTR management operation (1-enabled, 0-disabled)
+FTTR management test (1-enable, 0-disable)
+enable cache objs (1-enable, 0-disable)
+Last reboot reason (see HG_DEVICE_LAST_REBOOT_REASON)
+The main gateway dhcpd determines whether it is a sub-gateway based on the hostname (0-model; 1-Manufacturer; 2-two-)
+Maximum instance ID of the attached device
+Enable cached function (1-enable, 0-disable)
+Enable cached debug function (1-enable, 0-disable)
+Timestamp when third-party plugins are started (uptime)
+The number of nanoseconds required to generate the cache of the downstream device each time
+Get the nanoseconds required to get the nanoseconds itself
+Light attenuation compensation switch

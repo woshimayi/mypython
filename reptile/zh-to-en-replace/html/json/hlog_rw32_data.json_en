@@ -1,0 +1,747 @@
+[
+    [
+        105,
+        "CPU usage",
+        "HLOG_RW_CUR_CPU_USAGE"
+    ],
+    [
+        182,
+        "uptime (unit: seconds)",
+        "HLOG_RW_UPTIME"
+    ],
+    [
+        183,
+        "Monitoring system information recording interval (unit: seconds)",
+        "HLOG_RW_HUBSD_REC_INTERVAL"
+    ],
+    [
+        184,
+        "Restart timestamp (seconds since 1970)",
+        "HLOG_RW_NTP_REBOOT_TIMESTAMP"
+    ],
+    [
+        185,
+        "Redis startup timestamp (uptime)",
+        "HLOG_RW_REDIS_INIT_TIMESTAMP"
+    ],
+    [
+        186,
+        "The redis service is ready to connect (0-not ready, 1-ready)",
+        "HLOG_RW_REDIS_READY"
+    ],
+    [
+        193,
+        "Enable or disable the ping process (1-enable, 0-disable)",
+        "HLOG_RW_HBUS_ENABLE_PING_PROCESS"
+    ],
+    [
+        214,
+        "升级状态(0 - init, 1 - invalid image, 2 - valid image, 3 - flashing ver,4 - failed to flash, 5 - flash done, 6 - reboot, 7 - upload successfully,8 - preUpload img file)",
+        "HLOG_RW_UPGRADE_VER_STATUS"
+    ],
+    [
+        217,
+        "Enable or disable the hubs memory leak detection process (1-enable, 0-disable)",
+        "HLOG_RW_ENABLE_HBUS_MEM_LEACKAGE_CHECK"
+    ],
+    [
+        233,
+        "ignore configure secret",
+        "HLOG_RW_NO_CFG_SECRET"
+    ],
+    [
+        274,
+        "Enable DNS spoofing (1-enable, 0-disable)",
+        "HLOG_RW_DNS_CHEAT"
+    ],
+    [
+        282,
+        "SIP port",
+        "HLOG_RW_VOICE_SIP_PORT"
+    ],
+    [
+        283,
+        "H248 port",
+        "HLOG_RW_VOICE_H248_PORT"
+    ],
+    [
+        215,
+        "FTPD port",
+        "HLOG_RW_FTPD_PORT"
+    ],
+    [
+        216,
+        "TELNETD port",
+        "HLOG_RW_TELNETD_PORT"
+    ],
+    [
+        284,
+        "FTP enable or disable (1-enable, 0-disable)",
+        "HLOG_RW_FTPD_ENABLE"
+    ],
+    [
+        285,
+        "Telnet enable or disable (0 - disable, 1 - local, 2 - remote, 3 - local + remote)",
+        "HLOG_RW_TELNETD_ENABLE"
+    ],
+    [
+        352,
+        "TFTP download enable or disable (1-enable, 0-disable)",
+        "HLOG_RW_TFTP_DOWN_ENABLE"
+    ],
+    [
+        202,
+        "Enable or disable old QOS rules (1-enable, 0-disable)",
+        "HLOG_RW_ENABLE_OLD_QOS_RULE"
+    ],
+    [
+        267,
+        "Wan connection information change time",
+        "HLOG_RW_WAN_CONN_CHANGE_UPTIME"
+    ],
+    [
+        268,
+        "The last time the wan connection information was changed",
+        "HLOG_RW_MIB_WAN_CONN_CHANGE"
+    ],
+    [
+        269,
+        "xtables chain value",
+        "HLOG_RW_XTABLES_SUBCHAIN"
+    ],
+    [
+        279,
+        "HEX|iptables chain flag",
+        "HLOG_RW_IPTABLES_SUBCHAIN_FLAG"
+    ],
+    [
+        286,
+        "HEX|ebtables chain logo",
+        "HLOG_RW_EBTABLES_SUBCHAIN_FLAG"
+    ],
+    [
+        330,
+        "HEX|iptables chain flag starts",
+        "HLOG_RW_IPTABLES_SUBCHAIN_BEGIN"
+    ],
+    [
+        339,
+        "HEX|iptables chain flag ends",
+        "HLOG_RW_IPTABLES_SUBCHAIN_END"
+    ],
+    [
+        340,
+        "HEX|ebtables chain flag starts",
+        "HLOG_RW_EBTABLES_SUBCHAIN_BEGIN"
+    ],
+    [
+        349,
+        "HEX|ebtables chain flag ends",
+        "HLOG_RW_EBTABLES_SUBCHAIN_END"
+    ],
+    [
+        271,
+        "HEX|NAT rule preparation status (0x01 - POSTROUTING, 0x10 - post_snat)",
+        "HLOG_RW_NAT_RULE_READY"
+    ],
+    [
+        272,
+        "HEX|tr069 rule preparation status (0x01 - input, 0x10 - service_whitelist, 0x100 - hg_serv_whitelist, 0x1000 - hg_wan_accept_tr069)",
+        "HLOG_RW_TR069_RULE_READY"
+    ],
+    [
+        287,
+        "tr069 WAN connection mode (1 - IPv4, 2 - IPv6, 3 - IPv4 + IPv6)",
+        "HLOG_RW_TR069_IPMODE"
+    ],
+    [
+        288,
+        "voip WAN connection mode (1 - IPv4, 2 - IPv6, 3 - IPv4 + IPv6)",
+        "HLOG_RW_VOICE_IPMODE"
+    ],
+    [
+        418,
+        "Uplink PON type (0-GPON; 1-XGPON)",
+        "HLOG_RW_FTTR_UPLINK_PON_TYPE"
+    ],
+    [
+        428,
+        "Uplink PON configuration type (0-GPON; 1-XGPON; 2-COMBO)",
+        "HLOG_RW_FTTR_PON_CONF_TYPE"
+    ],
+    [
+        289,
+        "PON status(1-Initial-state, 2-Standby-state, 3-Serial-Number-state, 4-Ranging-state,5-Operation-state, 6-POPUP-state, 7-Emergency-Stop-state)",
+        "HLOG_RW_PON_STATUS"
+    ],
+    [
+        291,
+        "PON up uptime",
+        "HLOG_RW_PON_UP_UPTIME"
+    ],
+    [
+        292,
+        "PON up status(1 - up(O5 state),  0 - other state)",
+        "HLOG_RW_PON_IS_UP"
+    ],
+    [
+        293,
+        "FLOAT|PON RX power in dbm (valid only when PON is up)",
+        "HLOG_RW_PON_RX_POWER"
+    ],
+    [
+        422,
+        "FLOAT|PON TX power in dbm (valid only when PON is up)",
+        "HLOG_RW_PON_TX_POWER"
+    ],
+    [
+        290,
+        "Enable MIB commit debugging (0-disable, 1-enable)",
+        "HLOG_RW_DEBUG_MIB_COMMIT"
+    ],
+    [
+        297,
+        "Firewall switch",
+        "HLOG_RW_FIREWALL_ENABLE"
+    ],
+    [
+        298,
+        "Firewall Level",
+        "HLOG_RW_FIREWALL_LEVEL"
+    ],
+    [
+        299,
+        "Current firewall switch",
+        "HLOG_RW_RUN_FIREWALL_ENABLE"
+    ],
+    [
+        300,
+        "Current firewall level",
+        "HLOG_RW_RUN_FIREWALL_LEVEL"
+    ],
+    [
+        301,
+        "Anti-DOS attack switch",
+        "HLOG_RW_DDOS_ENABLE"
+    ],
+    [
+        351,
+        "Anti-DOS attack advanced settings",
+        "HLOG_RW_ADV_DDOS_ENABLE"
+    ],
+    [
+        302,
+        "Anti-port scanning switch",
+        "HLOG_RW_PORTSCAN_ENABLE"
+    ],
+    [
+        303,
+        "IPv6Session attack protection switch",
+        "HLOG_RW_IPV6SESSION_ENABLE"
+    ],
+    [
+        375,
+        "WAN to LAN IPv4 packet filtering switch (1-enable, 0-disable)",
+        "HLOG_RW_IPFILTER_IN_ENABLE"
+    ],
+    [
+        376,
+        "WAN to LAN IPv4 packet filtering policy (1-whitelist, 0-blacklist)",
+        "HLOG_RW_IPFILTER_IN_POLICY"
+    ],
+    [
+        377,
+        "LAN to WAN IPv4 packet filtering switch (1-enable, 0-disable)",
+        "HLOG_RW_IPFILTER_OUT_ENABLE"
+    ],
+    [
+        378,
+        "LAN to WAN IPv4 packet filtering policy (1-whitelist, 0-blacklist)",
+        "HLOG_RW_IPFILTER_OUT_POLICY"
+    ],
+    [
+        304,
+        "PPP dog write time",
+        "HLOG_RW_PPP_MONITOR_DOG"
+    ],
+    [
+        305,
+        "Internet PPP WAN Enables multiple Internet WAN nodes. The last setting will prevail.",
+        "HLOG_RW_INTERNET_PPP_ENABLE"
+    ],
+    [
+        306,
+        "Interent ppp wan dialing method (1-ONDEMAND, 2-ALWAYSON, 3-MANUAL, 4-PROXY)",
+        "HLOG_RW_INTERNET_PPP_TRIGGER"
+    ],
+    [
+        307,
+        "reboot flag",
+        "HLOG_RW_REBOOT_FLAG"
+    ],
+    [
+        308,
+        "If RMS is not registered, login is prohibited and the page will be redirected to the registration page (1-enable, 0-disable)",
+        "HLOG_RW_FORCE_REGISTER"
+    ],
+    [
+        309,
+        "RMS Registration Status",
+        "HLOG_RW_RMS_REGISTER_STATUS"
+    ],
+    [
+        310,
+        "SAMBA Switch",
+        "HLOG_RW_SAMBA_ENABLE"
+    ],
+    [
+        311,
+        "Restart device time (uptime)",
+        "HLOG_RW_REBOOT_UPTIME"
+    ],
+    [
+        312,
+        "Current MacFilter switch",
+        "HLOG_RW_MACFILTER_ENABLE"
+    ],
+    [
+        313,
+        "Current MacFilter mode",
+        "HLOG_RW_MACFILTER_MODE"
+    ],
+    [
+        314,
+        "Need to save MIB (0-not needed, 1-needed)",
+        "HLOG_RW_NEED_SAVE_MIB"
+    ],
+    [
+        321,
+        "Need to generate backup MIB file (0-not needed, 1-needed)",
+        "HLOG_RW_NEED_GEN_BK_CFG_FILE"
+    ],
+    [
+        322,
+        "Load configuration file type (0-none, 1-lastgood.xml, 2-backup_lastgood.xml, 3-backup_b_lastgood.xml)",
+        "HLOG_RW_LOAD_CFG_FILE_TYPE"
+    ],
+    [
+        315,
+        "PPP lcp recv echo replay time",
+        "HLOG_RW_PPP_RECV_REPLAY"
+    ],
+    [
+        316,
+        "PPP system automatic restart switch",
+        "HLOG_RW_PPP_AUTOREBOOT_ENABLE"
+    ],
+    [
+        317,
+        "PPP system restart interval",
+        "HLOG_RW_PPP_AUTOREBOOT_INTERVAL"
+    ],
+    [
+        318,
+        "Restart dnsmasq flag (0-do not restart, 1-restart)",
+        "HLOG_RW_RESTART_DNSMASQ"
+    ],
+    [
+        319,
+        "Enable fast restart of dnsmasq (0-no, 1-enabled)",
+        "HLOG_RW_ENABLE_RESTART_DNSMASQ"
+    ],
+    [
+        323,
+        "TR069 sets vlanid to 0 (0-not set, 1-set)",
+        "HLOG_RW_SET_VLANID0_TR069"
+    ],
+    [
+        324,
+        "Other wan sets vlanid to 0 (0-not set, 1-set)",
+        "HLOG_RW_SET_VLANID0_WAN"
+    ],
+    [
+        325,
+        "Limit on the number of notifications for online and offline events per cycle",
+        "HLOG_RW_EVENT_NOTIFY_PER_PERIOD_LIMIT"
+    ],
+    [
+        326,
+        "Soft probe optical power optimization enable (0-disabled, 1-enabled)",
+        "HLOG_RW_OPTIMIZE_ENABLE"
+    ],
+    [
+        327,
+        "Soft probe optical power optimization TX (unit: 0.1uW)",
+        "HLOG_RW_OPTIMIZE_TX"
+    ],
+    [
+        328,
+        "Soft probe optical power optimization RX (unit: 0.1uW)",
+        "HLOG_RW_OPTIMIZE_RX"
+    ],
+    [
+        329,
+        "Global index for newly created WAN connections",
+        "HLOG_RW_NEW_WAN_GLOBAL_INDEX"
+    ],
+    [
+        350,
+        "Global ipversion capability",
+        "HLOG_RW_GLOBAL_IP_VERSION"
+    ],
+    [
+        353,
+        "UPNP enable or disable (1-enable, 0-disable)",
+        "HLOG_RW_UPNP_ENABLE"
+    ],
+    [
+        354,
+        "DMZ enable or disable (1-enable, 0-disable)",
+        "HLOG_RW_DMZ_ENABLE"
+    ],
+    [
+        355,
+        "wan common set (1-enable, 0-disable)",
+        "HLOG_RW_WAN_COMMON_SET"
+    ],
+    [
+        356,
+        "wan common internet (1-enable, 0-disable)",
+        "HLOG_RW_WAN_COMMON_INTERNET_ENABLE"
+    ],
+    [
+        357,
+        "default wan broute (1-enable, 0-disable)",
+        "HLOG_RW_DEFAULT_WAN_BROUTE"
+    ],
+    [
+        358,
+        "L2TP ALG (1-enable, 0-disable)",
+        "HLOG_RW_ALG_L2TP"
+    ],
+    [
+        359,
+        "IPSEC ALG (1-enable, 0-disable)",
+        "HLOG_RW_ALG_IPSEC"
+    ],
+    [
+        360,
+        "PPTP ALG (1-enable, 0-disable)",
+        "HLOG_RW_ALG_PPTP"
+    ],
+    [
+        361,
+        "FTP ALG (1-enable, 0-disable)",
+        "HLOG_RW_ALG_FTP"
+    ],
+    [
+        362,
+        "SIP ALG (1-enable, 0-disable)",
+        "HLOG_RW_ALG_SIP"
+    ],
+    [
+        363,
+        "RTSP ALG (1-enable, 0-disable)",
+        "HLOG_RW_ALG_RTSP"
+    ],
+    [
+        364,
+        "H323 ALG (1-enable, 0-disable)",
+        "HLOG_RW_ALG_H323"
+    ],
+    [
+        365,
+        "URL filtering switch (1-enable, 0-disable)",
+        "HLOG_RW_URL_FILTER_ENABLE"
+    ],
+    [
+        366,
+        "URL filtering mode (1-whitelist, 0-blacklist)",
+        "HLOG_RW_URL_FILTER_MODE"
+    ],
+    [
+        367,
+        "DHCP server ready (1-completed, 0-not completed)",
+        "HLOG_RW_DHCP_SERVER_READY"
+    ],
+    [
+        368,
+        "LAN bridge settings (0x11-enable, 0x10-disable)",
+        "HLOG_RW_LAN_BRIDGE_SET"
+    ],
+    [
+        370,
+        "The wan_lan process polls the host list status",
+        "HLOG_RW_LOOP_HOST_STATE"
+    ],
+    [
+        371,
+        "SMT telnet ready",
+        "HLOG_RW_SMT_TELNET_READY"
+    ],
+    [
+        372,
+        "RMS connection status",
+        "HLOG_RW_RMS_STATUS"
+    ],
+    [
+        373,
+        "log source by option",
+        "HLOG_RW_LOG_SOURCE"
+    ],
+    [
+        374,
+        "RA M 和O 位标记 1-SLAAC_M1,2-SLAAC_M0_O1,3-SLAAC_M0_O0  ",
+        "HLOG_RW_RA_MO"
+    ],
+    [
+        382,
+        "注册标记 1-web注册触发  2-omciReboot ",
+        "HLOG_RW_REGISTER_FLAG"
+    ],
+    [
+        383,
+        "macfilter list flags 0-macfilter is empty 1-macfilter content has been saved",
+        "HLOG_RW_MACFILTER_LIST_FLAG"
+    ],
+    [
+        384,
+        "0-macfilter rules are cleared, 1-white rules are established, 2-black rules are established",
+        "HLOG_RW_MACFILTER_EBTABLES_FLAG"
+    ],
+    [
+        385,
+        "macfilter add client mac to black",
+        "HLOG_RW_MACFILTER_IF6_ADD_CLINET_MAC"
+    ],
+    [
+        386,
+        "macfilter enable and policy set flag",
+        "HLOG_RW_MACFILTER_OPT_FLAG"
+    ],
+    [
+        387,
+        "IF5 or IF6 or WEB enable and closed wifi set flag",
+        "HLOG_RW_IF56_OR_WEB_OPT_FLAG"
+    ],
+    [
+        388,
+        "wifi 2.4G enable",
+        "HLOG_RW_WLAN_2G_ENABLE"
+    ],
+    [
+        389,
+        "wifi 5G enable",
+        "HLOG_RW_WLAN_5G_ENABLE"
+    ],
+    [
+        390,
+        "1 reset short,2 reset long,3 reset complete,4 reset remote.",
+        "HLOG_RW_RESET_OPT_FLAG"
+    ],
+    [
+        394,
+        "omci init done",
+        "HLOG_RW_OMCI_INIT_DONE"
+    ],
+    [
+        404,
+        "Network lock enable (1-on 0-off)",
+        "HLOG_RW_LOCK_NET"
+    ],
+    [
+        405,
+        "The position of the power port relative to the network port (1-right, 0-left)",
+        "HLOG_RW_POWER_PORT_POSITION"
+    ],
+    [
+        406,
+        "IP|internet wan public network IP",
+        "HLOG_RW_INTERNET_IPV4_GLOBAL_IP"
+    ],
+    [
+        408,
+        "Gateway uplink mode (0-unknown, 1-pon, 2-eth, 3-2.4G, 4-5G, 5-MLD)",
+        "HLOG_RW_UPLINK_TYPE"
+    ],
+    [
+        418,
+        "Gateway uplink PON port type (0 - GPON, 1 - XGPON)",
+        "HLOG_RW_FTTR_UPLINK_PON_TYPE"
+    ],
+    [
+        409,
+        "Number of FTTR online sub-gateways",
+        "HLOG_RW_FTTR_SLAVE_ONLINE_COUNT"
+    ],
+    [
+        426,
+        "FTTR sub-gateway connection status (0-initial state, 1-already connected to the main gateway)",
+        "HLOG_RW_FTTR_SUBGW_CONNECT_STATUS"
+    ],
+    [
+        421,
+        "FTTR sub-gateway MESH networking status (0-offline 1-online)",
+        "HLOG_RW_MESH_STATUS"
+    ],
+    [
+        407,
+        "Whether the FTTR sub-gateway is allowed to allocate addresses to the LAN side (1-not allocated, 0-allocated)",
+        "HLOG_RW_FTTR_SLAVE_DISABLE_DHCPS"
+    ],
+    [
+        420,
+        "RSSI of the backhaul interface when FTTR sub-gateway is in MESH wireless networking",
+        "HLOG_RW_MESH_BH_RSSI"
+    ],
+    [
+        410,
+        "Upgrade method (0-WEB, 1-TR069, 2-OMCI, 3-BLINK, 4-AOSNET)",
+        "HLOG_RW_FIRMWARE_UPGRADE_TYPE"
+    ],
+    [
+        411,
+        "Firmware download percentage",
+        "HLOG_RW_FIRMWARE_DOWNLOAD_PERCENT"
+    ],
+    [
+        412,
+        "Firmware write percentage",
+        "HLOG_RW_FIRMWARE_WRITE_PERCENT"
+    ],
+    [
+        413,
+        "Firmware upgrade percentage",
+        "HLOG_RW_FIRMWARE_UPGRADE_PERCENT"
+    ],
+    [
+        414,
+        "Blink upgrade in steps (1-on 0-off)",
+        "HLOG_RW_BLINK_UPGRADE_SETP_BY_STEP"
+    ],
+    [
+        415,
+        "Blink takes over the upgrade task by itself (1-on 0-off)",
+        "HLOG_RW_BLINK_SELF_UPGRADE"
+    ],
+    [
+        417,
+        "mdmd runs topology detection (0-enable, 1-disable)",
+        "HLOG_RW_RUN_TOPO_DETECT"
+    ],
+    [
+        419,
+        "mdmd topo debug switch (0x1-RX enable, 0x2-Tx enable, 0x4-Gen Topo)",
+        "HLOG_RW_MDMD_TOPO_DEBUG_FLAG"
+    ],
+    [
+        427,
+        "The time when the plugin is started",
+        "HLOG_RW_FTTR_AOSNET_UPTIME"
+    ],
+    [
+        429,
+        "aosnet/blink plugin startup flag (0-not started, 1-started)",
+        "HLOG_RW_FTTR_PLUGIN_START_FLAG"
+    ],
+    [
+        431,
+        "UDHCPD (1-enable, 0-disable)",
+        "HLOG_RW_UDHCPD_ENABLE"
+    ],
+    [
+        433,
+        "2.4G wifi5 (1-enable, 0-disable)",
+        "HLOG_RW_AOSNET_WIFI5_ENABLE"
+    ],
+    [
+        434,
+        "Last reboot source (see HG_DEVICE_LAST_REBOOT_FROM)",
+        "HLOG_RW_LAST_RESET_TERMINAL"
+    ],
+    [
+        435,
+        "IGMP configuration type (see HG_FTTR_IGMP_CONTROL_TYPE)",
+        "HLOG_RW_FTTR_IGMP_CONTROL_TYPE"
+    ],
+    [
+        436,
+        "Get the wan connection index through IPC hi_ipc wan_conn_idx_get",
+        "HLOG_RW_WAN_CONN_INDEX"
+    ],
+    [
+        437,
+        "FTTR management function (1-enabled, 0-disabled)",
+        "HLOG_RW_FTTR_MF_ENABLE"
+    ],
+    [
+        438,
+        "FTTR management operation (1-enabled, 0-disabled)",
+        "HLOG_RW_FTTR_MF_RUN"
+    ],
+    [
+        439,
+        "FTTR management test (1-enable, 0-disable)",
+        "HLOG_RW_FTTR_MF_TEST"
+    ],
+    [
+        440,
+        "enable cache objs (1-enable, 0-disable)",
+        "HLOG_RW_ENABLE_HGCMS_CACHE_OBJS"
+    ],
+    [
+        441,
+        "update wan connection cache timestamp by main",
+        "HLOG_RW_U_WCACHE_TS_MAIN"
+    ],
+    [
+        442,
+        "update wan connection cache timestamp by backup",
+        "HLOG_RW_U_WCACHE_TS_BACKUP"
+    ],
+    [
+        443,
+        "Last reboot reason (see HG_DEVICE_LAST_REBOOT_REASON)",
+        "HLOG_RW_LAST_RESET_REASON"
+    ],
+    [
+        444,
+        "The main gateway dhcpd determines whether it is a sub-gateway based on the hostname (0-model; 1-Manufacturer; 2-two-)",
+        "HLOG_RW_FTTR_DHCPD_CHECK_SLAVE_TYPE"
+    ],
+    [
+        447,
+        "Maximum instance ID of the attached device",
+        "HLOG_RW_ONLINE_DEVS_MAX_INST_ID"
+    ],
+    [
+        448,
+        "Enable cached function (1-enable, 0-disable)",
+        "HLOG_RW_ENABLE_CACHED"
+    ],
+    [
+        449,
+        "Enable cached debug function (1-enable, 0-disable)",
+        "HLOG_RW_CACHED_DEBUG_FLAG"
+    ],
+    [
+        450,
+        "Timestamp when third-party plugins are started (uptime)",
+        "HLOG_RW_HBUSD_RUN_PLUGIN_UPTIME"
+    ],
+    [
+        451,
+        "The number of nanoseconds required to generate the cache of the downstream device each time",
+        "HLOG_RW_CACHED_RUN_NS"
+    ],
+    [
+        452,
+        "Get the nanoseconds required to get the nanoseconds itself",
+        "HLOG_RW_CACHED_GET_NS"
+    ],
+    [
+        453,
+        "Light attenuation compensation switch",
+        "HLOG_RW_OPT_RXADJUST_ENABLE"
+    ]
+]

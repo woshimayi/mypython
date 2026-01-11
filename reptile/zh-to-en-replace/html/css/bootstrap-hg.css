@@ -1,0 +1,457 @@
+body{
+	overflow-x: hidden;  /*不产生横向滚动条*/
+	font-size: 14px;
+}
+
+div2[class^=col-] {
+	border: solid 1px #cdd6cd;  /*让col-*产生淡淡的边框*/
+}
+
+div[class^=col-].left_margin{
+	border: 0;  /*左上角不产生边框*/
+}
+
+.foot_note [class^=col-]{
+	border: solid 0 rgb(131, 124, 124);    /*不让脚注行的col-*产生边框*/
+}
+
+.foot_note{
+	background-color: rgb(197, 218, 223);
+}
+
+hr {
+	border: solid 1px #ccc;
+	width: 100%;
+}
+
+#logo {
+	color: #8bb;  /*需要一点的背景色,便于浮雕字体的立体感更强*/
+	text-shadow: 1px 1px 1px #000, -1px -1px 1px #fff;
+}
+
+/*bg-info不能少，用于当宽度不足时，产生网格状的下拉按钮*/
+.bg-info{
+	/*必须使用!important，否则无法覆盖bootstrap.min.css中的声明，bootstrap.min.css背景色很深
+	这里需要浅色背景*/
+	background-color: rgb(238, 238, 238)!important;  
+}
+
+
+.nav-tabs .nav-link.active {
+	color: #dc3545;    /*顶部导航栏active按钮产生红色字体*/
+	background-color: #c4e8e8;  /*active按钮非常淡的背景色*/
+	border-color: #c4e8e8;    /*边界和背景色完全一致，避免过于花哨*/
+}
+
+.navbar {
+	padding: 0 5rem;           /*上下padding为0，便于border-bottom和active按钮融为一体,像盖子一样盖住内容
+								以便让读者明白内部全部是active按钮章节的内*/
+	background-color: #eee;  /*顶部导航栏非常淡的背景色*/
+	border-bottom: 5px solid #c4e8e8;  /*颜色和active按钮一致,融为一体*/
+}
+
+.navbar-dark .navbar-toggler-icon{
+	/*用于覆盖bootstrap.min.css中的下拉按钮，在bootstrap.min.css的下拉按钮颜色浅(stroke='rgba(255, 255, 255, 0.5)'适配深色背景)
+	这里使用深色(stroke='rgba(255, 0, 0, 0.5)'),适配浅色背景*/
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.container {
+	margin-top: 1rem;  /*内容与导航栏保持一定间距,显得紧凑并且清晰分明*/
+	width: 800px;
+	border: solid 1px #aaa;
+}
+
+.side_bar{
+	/*去掉左右内衬,节省空间,能够在一行显示更多文字*/
+	padding-left: 0;
+	padding-right: 0;
+	background: #e7e7e7; /*较淡的背景色*/
+}
+
+.nav-pills a{
+	font-size: .75rem; /*字体不要过大，避免药丸导航按钮文字换行*/
+}
+
+/*注意.nav-link:hover需要在.nav-link.active之前,避免灰色背景覆盖紫色active背景*/
+.side_bar .nav-pills .nav-link:hover{
+	background-color: #d8d8d8;/*鼠标移动时产生淡淡的灰色背景*/
+}
+
+.side_bar .nav-pills .nav-link.active {
+    color: #fff;
+    background-color: #7e7ed4;/*淡紫色背景表示当前激活条目*/
+}
+
+.side_bar .nav-link{
+	padding-right: 0;  /*尽量避免文字空间不够导致换行*/
+}
+
+.row table td{
+	font-size:  .75rem;
+}
+
+
+.code{
+	padding: .5em;
+	line-height: 1rem;  /*注意这里不用使用小数，避免浮动数运算产生误差，导致背景条纹位置产生偏差
+						若用rem，em无法避免小数，建议使用px为单位，例如16px, 32px*/
+	background: rgb(180, 228, 240);
+	background-size: auto 2rem;  /*注意这里一定是line-height的2倍,以便产生交错条纹,便于阅读代码*/
+	background-origin: content-box;
+	background-image: linear-gradient(rgba(0,0,0,.2) 50%, 
+						transparent 0);   /*交错条纹背景色一定要浅才便于阅读*/
+}
+
+
+.nav_main a.active{
+	background-color: rgb(180, 228, 240);
+}
+
+.nav_sub a.active{
+	color: rgb(233, 23, 23);
+}
+
+
+
+.nav_sub {
+	background-color: rgb(180, 228, 240);
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.left_margin{
+	background-color: #eee;
+	border: 0;
+	/*text-align: center;*/
+}
+
+#focus_page{
+	/*position: relative;
+    top: 20px;*/
+	position: absolute;
+	top: 20px;
+	left: 35px;
+	overflow: visible;
+	z-index: 10;
+}
+
+.page .nav-link {
+    padding: .5rem .5rem;  /*避免间距过大，三级菜单在一行放不下*/
+}
+
+.nav_sub a{
+	font-size: .75rem; /*比一级菜单字体略小一点*/
+}
+
+.content_input_title{
+	display: flex;
+	align-items: center; /*flex和center使文字水平居中*/
+}
+
+.content_input{
+	display: flex;
+	align-items: center; /*flex和center使其水平居中*/
+}
+
+/*注意:使用rem为单位，不要使用px,否则在IE11中字体过小*/
+.hgs_content .row .row{
+	height: 2rem;
+	font-size: .8rem;
+}
+
+.hgs_content select,input{
+	height: 1.3rem;
+	padding-left: 0;
+	padding-right: 0;
+	background-color: #d8d8d8;
+}
+
+.content_input input{
+	padding-left: 2px;
+	padding-right: 0;
+}
+
+.hgs_content .row input[type=button]{
+	width: 50px;
+	height: 28px;
+}
+
+.hgs_content .row input[type=button].wideBtn{
+	width: 80px;
+}
+
+.hgs_content .row input[type=button].widerBtn{
+	width: 120px;
+}
+
+.rowComments{
+	margin-left: 20px;
+	font-style: italic;
+	color: #00f;
+	font-size: .8rem;
+}
+
+.rowCommentsNoMargin{
+	font-style: italic;
+	color: #00f;
+	font-size: .8rem;
+}
+
+/*以下两个form相关不可少，否则input元素无法对齐*/
+.content_input form{
+	padding: 0;
+}
+
+form > input{
+	width: 100%;
+}
+
+.content_input_title{
+	/*padding-left: 0;*/
+	padding-right: 0;  /*以便显示更多的文字不换行*/
+}
+
+.muti_input .col-2,.col-3,.col-4{
+	/*减少padding，以便容纳更多的元素*/
+	padding-left: 10px;
+	padding-right: 0;
+	display: flex;
+	align-items: center; /*flex和center使其水平居中*/
+}
+
+/*.hgs_content不能少,否则无法覆盖掉.muti_input .col-3中padding为0的定义*/
+.hgs_content .commitBtn{ 
+	padding-left: 15px;
+	padding-right: 15px;
+	line-height: 14px;  /*使line-height等于button的高度，以便文字垂直居中*/
+}
+
+.hgs_textarea{
+	width: 100%;
+	font-family: Courier New;  /*等宽字体*/
+	font-size: .8rem;
+}
+
+.hgs_content .row input[type=button].btn {
+	width: fit-content;
+}
+
+.hgs_content .row a{
+	color: #f00;
+}
+
+#help p {
+	font-size: .8rem;
+}
+
+.eyePasswd {	
+	width: 15px;
+	height: 10px;
+	position: absolute;
+	right: 3px;
+}
+
+.clearPadding {
+	padding: 0;
+}
+
+.nav_main {
+	display: flex;
+	justify-content: space-between;
+}
+
+.ml-10 {
+	margin-left: -10px;
+}
+
+.align_c {
+	align-items: center;
+}
+.radio-10 {
+	width: 10px;
+}
+.hide {
+	display: none;
+}
+.meshTopo {
+	width:100%;
+	height: 90%;
+	min-height: 500px;
+}
+.meshDiagramDiv {
+	width:100%; 
+	height: 100%;
+}
+.minwidth115 {
+	min-width: 115px;
+}
+#qosService.height113 {
+	height: 113px;
+}
+.qosServiceTable {
+	border: 1px solid black; 
+	min-width: 115px;
+	max-width: 135px;
+}
+.DigitMapDialOption {
+	padding-top: 100px;
+	padding-bottom: 10px;
+}
+.DigitMapSaveBtnOption {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.wlantip {
+	color: red;
+	text-align: center;
+}
+#rssiThld.rssiThldClass{
+	display: none;
+}
+#relay_status_tip.relayStatusTipClass{
+	display: none;
+}
+.relaySsid {
+	border:none;
+	background: none;
+}
+.configRelayClass {
+	display: none;
+}
+.wifiScanTextClass {
+	text-align: center;
+	margin-bottom: 10px;
+}
+.red {
+	color: red
+}
+.width30 {
+	width: 30px;
+}
+.width100 {
+	width: 100%;
+}
+.scanResultListTableClass {
+	height: 200px; 
+	overflow-y: scroll; 
+	text-align: center;
+}
+.repeaterBtnDiv{
+	display: flex;
+	justify-content:space-evenly;
+}
+.bkg_green {
+	background-color: #5cb85c;
+}
+.selectUpgradeVerFileBtnClass {
+	height: 2em;
+}
+#upgradeVerBtn.upgradeVerBtnClass{
+	height: 1.6em;
+	width: 8em;
+	margin-top: 0.5em;
+}
+#upgradeCfgFileBtn.upgradeVerBtnClass{
+	height: 1.6em;
+	width: 8em;
+	margin-top: 0.5em;
+}
+#upgradeFileBtn.upgradeVerBtnClass{
+	height: 1.6em;
+	width: 8em;
+	margin-top: 0.5em;
+}
+#upgradeExeFileBtn.upgradeVerBtnClass{
+	height: 1.6em;
+	width: 8em;
+	margin-top: 0.5em;
+}
+#uploadCmsCfgBtn.upgradeVerBtnClass{
+	height: 1.6em;
+	width: 8em;
+	margin-top: 0.5em;
+}
+#exportCmsCfgBtn.upgradeVerBtnClass{
+	height: 1.6em;
+	width: 8em;
+	margin-top: 0.5em;
+}
+.helpInfo{
+	max-height: 660px;
+}
+.overflow{
+	overflow: auto;
+}
+.text_align_c {
+	text-align: center;
+}
+.content_muilty_input {
+	display: flex;
+	justify-content: space-evenly;
+}
+.meshThld_tips {
+	color: #548e88;
+	font-size: 11px;
+}
+/*
+以下是媒体查询，以适应不同设备，不同分辨率，不同尺寸的屏幕
+*/
+
+@media screen and (max-width: 2000px) {
+	#focus_page{
+		display: block;
+	}
+}
+
+@media screen and (max-width: 768px) {
+/*下面两条让padding减少，以便在小屏幕上导航条容纳更多的内容*/
+#main_nav {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+#main_nav a{
+	padding-left: .5rem;
+	padding-right: .5rem;
+}
+
+/*宽度较小时,不在focus_page中显示焦点标题*/
+#focus_page{
+	display: none;
+}
+
+}
+
+
+@media screen and (max-width: 576px) {
+	/*下面两条让更小屏幕时，字体更小，padding更小，以便一行navbar容纳更多内容*/
+	.navbar{
+		padding: 0;
+		font-size: .75rem;
+	}
+
+	.navbar a{
+		padding: 0;
+		padding-right: .4rem;
+	}
+
+	/*让container宽度更小,以便.sub_nav（二级子菜单容纳不下时能够换行），以下同*/
+	.container{
+		width: 100%;
+	}
+
+	h6 {
+		margin-left: -10px;
+	}
+}
+
+
+/*以下450px，400px，300px的屏幕要分开写,多数手机屏幕宽度落在这些区间
+以便更精细化处理*/
+@media screen and (max-width: 450px) {
+	.nav_sub{
+			width: 100%;
+	}
+}
+	

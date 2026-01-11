@@ -1,0 +1,5 @@
+[
+	[2, "HEX|子网关光纤组网在线列表", "HLOG_RW64_FTTR_SLAVE_ONLINE_LIST"],
+	[3, "HEX|子网关光纤组网时vpitv端口是否绑定桥接WAN标志", "HLOG_RW64_FTTR_SLAVE_IPTV_ENABLE"],
+	[4, "natived读取wan连接信息的时间", "HLOG_RW64_WAN_CONN_TIME"]
+]

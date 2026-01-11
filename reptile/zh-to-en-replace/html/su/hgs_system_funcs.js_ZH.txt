@@ -1,0 +1,23 @@
+开始上传文件!
+上传文件出错!错误码:
+, 错误描述:
+ 上传文件成功!
+非法的发送数据，JSON校验不合法!
+<div><input type="button" class="osgiUpdateBtn" value="刷新" function="
+<input type="button" class="osgiSaveBtn" value="保存" function="
+<div>发送数据(JSON格式):</div>
+<div>服务器回应数据:</div>
+非法的发送数据，JSON校验不合法!
+<div><input type="button" class="ahsapdUpdateBtn" value="刷新" function="
+<input type="button" class="ahsapdSaveBtn" value="保存" function="
+<div>发送数据(JSON格式): (注意:如果数据是只读的，请不要发送数据)</div>
+<div>服务器回应数据:</div>
+请只选中一行，再【下载】!
+请只选中一行，再【删除】!
+请只选中一行，再【下载】!
+请只选中一行，再【删除】!
+开始上传文件!
+上传文件出错!错误码:
+, 错误描述:
+ 上传文件成功!
+需要填写参数！

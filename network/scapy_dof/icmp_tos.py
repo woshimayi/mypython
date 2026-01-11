@@ -53,6 +53,7 @@ def send_udp(host, port, dstmac='94:c6:91:02:56:d6'):
         res = send(packet, iface='lan')
         if res:
             print('[*] ' + host + ' is active')
+        time.sleep(1)
 
 
 def send_vlan(host, port):
@@ -64,7 +65,7 @@ def send_vlan(host, port):
     # p = IP(tos=2, src='192.168.1.100', dst=host) / UDP(sport=sport, dport=port) / b'zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz'
     # p = Dot1Q(prio=0, vlan=0) / IP(tos=4, src='192.168.1.100', dst=host) / ICMP() / b'zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz'
     # p = Dot1Q(prio=0, vlan=0) / IP(tos=4, src='192.168.1.100', dst=host) / UDP(sport=sport, dport=port) / b'zzzzzzzzzzzzzzzzzz'
-    p = Ether(dst='04:1E:23:AA:DB:00') / Dot1Q(vlan=0, prio=4) / IP(tos=4, src='192.168.1.100', dst=host, ttl=23) / UDP(sport=sport, dport=port) / b'zzzzzzzzzzzzzzzzzz'
+    p = Ether(dst='24:8B:E0:E5:2D:78') / Dot1Q(vlan=400, prio=3) / IP(tos=4, src='192.168.1.100', dst=host, ttl=23) / UDP(sport=sport, dport=port) / b'zzzzzzzzzzzzzzzzzz'
     # p = Dot1Q(vlan=0, prio=4) / IP(tos=4, src='192.168.1.100', dst=host, ttl=23) / UDP(sport=sport, dport=port) / b'zzzzzzzzzzzzzzzzzz'
     # p = Dot1Q(vlan=0) / IP(tos=4, src='192.168.1.100', dst=host, ttl=23) / UDP(sport=sport, dport=port) / b'zzzzzzzzzzzzzzzzzz'
 
@@ -78,30 +79,33 @@ def send_vlan(host, port):
         except Exception as e:
             print(e)
 
-def ipv6_pack():
+def ipv6_pack(src, dest, protol):
     ipv6_packet = IPv6()
-    ipv6_packet.src = '3000::6100:de84:d70a:2983:1352'
-    ipv6_packet.dst = '3000::2'
+    ipv6_packet.src = src
+    ipv6_packet.dst = dest
     ipv6_packet.tc = 14  # Traffic class
     ipv6_packet.fl = 0x12345    # Flow label
-    ipv6_packet.nh = 17         # Next header field indicates UDP (17)
+    ipv6_packet.nh = protol         # Next header field indicates UDP (17)
     icmpv6_packet = ICMPv6EchoRequest()
     icmpv6_packet.data = 'Hello, World!'  # ICMPv6 Echo Request message
     ipv6_packet.add_payload(icmpv6_packet)
 
-    while True:
-        send(ipv6_packet, iface='lan')
+    # while True:
+    send(ipv6_packet, iface='lan')
+    time.sleep(1)
 
 
 if __name__ == '__main__':
     print('Hello world')
 
     # send_ping('180.101.50.242')
-    # ipv6_pack()
+    # while True:
+    #     ipv6_pack("3000::7900:7592:4226:c497:fd39", "3000::2", 17)
+    #     ipv6_pack("3000::7900:7592:4226:c497:fd39", "3000::2", 6)
     # send_ping('192.168.1.1')
     # send_udp('180.101.49.13', 1024)
     # send_udp('180.101.49.13', 1025)
     # send_udp('180.101.49.12', 8080)
-    send_vlan('180.101.50.188', 8080)
+    send_vlan('180.101.49.12', 8080)
     time.sleep(0.1)
     print("exit")

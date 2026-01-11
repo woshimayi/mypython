@@ -1,0 +1,10 @@
+Upgrade failed! Please click <a href='/' target='_blank'>here</a> to go back to the main page to upgrade!
+The upgrade service process is not responding!
+Invalid update file!
+Upgrade file verification successful!
+Writing to Flash...
+Writing to flash failed!
+Writing to flash successfully!
+Restarting...
+<h3 class="text-danger">The network has been disconnected! The device can no longer be connected!</h3>
+<h6 class="text-primary">When the network connection is restored, please manually <a href="/" style="color:#f00">refresh</a> the page!</h6>

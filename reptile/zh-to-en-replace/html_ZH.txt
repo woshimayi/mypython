@@ -1,0 +1,3 @@
+Click【New】Button to create newExamples。Select a row in the table，Click【delete】按钮delete选中的Examples。
+											可以直接选中已经save的Examples进行编辑Revise。
+											【New】or【Revise】均需要Click最下方的【save】Click to take effect。

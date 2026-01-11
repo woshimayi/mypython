@@ -1,0 +1,4 @@
+Restarting...
+Please note that please do not cut off the power during the restart process. Abnormal power outage may cause the device to fail to start normally!
+It will take about 60 seconds in total.
+The upgrade and restart will be completed in seconds, please wait patiently!

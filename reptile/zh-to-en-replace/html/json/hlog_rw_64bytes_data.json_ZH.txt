@@ -1,0 +1,12 @@
+IPv6地址
+lan ipv6 dhcpv6 起始地址
+lan ipv6 dhcpv6 结束地址
+INTERNET IPv6地址
+lan ipv6 AUTO地址
+lan ipv6 SLAAC地址
+FTTR子网关MESH上联设备的ALMAC
+FTTR子网关MESH无线组网时回传接口SSID
+FTTR子网关MESH无线组网时回传接口PWD
+FTTR子网关MESH无线组网时回传接口加密方式
+FTTR子网关上获取到的主网关的IP
+FTTR子网关上获取到的主网关的MAC

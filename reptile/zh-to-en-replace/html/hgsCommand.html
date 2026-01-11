@@ -1,0 +1,25 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<title>command</title>
+<meta http-equiv=content-type content="text/html; charset=utf-8">
+<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="css/union.css">
+<script src="js/union.js"></script>
+<script src="js/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+<p>点击【发送】按钮，发送命令，返回到【执行结果】中</p>
+<p class="rowComments">注意:不要执行top等没有结束或执行时间过长的命令，会导致没有返回结果，并且连接中断</p>
+<textarea rows="10" cols="160" class="hgs_textarea" id="command">
+</textarea>
+<p>
+	<input type="button" value="发送" id="sendCmd"></input>
+</p>
+<p>执行结果</p>
+<textarea rows="100" cols="160" class="hgs_textarea" readonly id="result">
+</textarea>
+
+</body>
+</html>

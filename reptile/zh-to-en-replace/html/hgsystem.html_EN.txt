@@ -1,0 +1,258 @@
+China Mobile
+Welcome!
+quit
+Upgraded version
+state
+state
+debug
+maintain
+log
+Manage MF
+help
+Device Information
+Network side information
+Memory
+flow
+Self-Test
+statistics
+Shared Memory
+Device Information
+Device Information
+Operators
+Device Model
+Equipment identification number
+Software Version
+Hardware version
+Version Information
+Click
+here
+Show in new window
+Click
+here
+Show in new window
+Click
+here
+Show in new window
+Click
+here
+Show in new window
+Click
+here
+Show in new window
+CPU usage
+Memory usage
+Process memory trend chart
+Java process memory trend chart
+System memory trend chart
+PON port traffic statistics
+Self-check status
+Self-check status display
+When the value is 1, it is normal; when the value is 0, it is abnormal. If there is no corresponding self-check ID, it means that this item has not been checked yet (maybe the timing has not come yet).
+32-bit statistics
+64-bit statistics
+4 bytes of shared memory
+8 bytes of shared memory
+16 bytes of shared memory
+64 bytes of shared memory
+hbus global message statistics
+hgcms statistics
+MIB operation statistics
+page
+Attack prevention
+Preconfiguration Files
+Device Information
+Page debugging switch
+Page debugging switch
+Items marked with * have an impact on performance and are only used for debugging
+OSGI debug switch
+OSGI on/off
+OSGI debug switch
+Debug information printing
+Enable or disable OSGi
+Running OSGI
+AOSNET debugging switch
+AOSNET debugging switch
+When the redirection switch is checked on, the page debugging data will be sent directly to the aosnet process. When it is unchecked, it will be sent to the natived process.
+Redirect page debug data
+Debug information printing
+Run the aosnet process
+Redis debugging switch
+Redis debugging switch
+LAN connection support
+Anti-attack switch
+Anti-attack debugging switch
+statistics
+Watchlist
+coredump file list
+hint:
+Select a line to download or delete the coredump file
+The coredump file will take up the plug-in flash space. If it takes up too much space, the plug-in will not work properly. Please delete it in time after downloading!
+Telnet Configuration
+Redirect
+Telnet Configuration
+Enable telnet
+Enable WAN side
+username
+password
+Redirect serial port output to telnet
+This function is temporarily unavailable! Please use command control redirection!
+Enable Redirects
+OMCI Image
+OMCI image configuration
+Mirror destination LAN port
+Network port 1
+Network port 2
+Network port 3
+Network port 4
+other
+Still effective after reboot
+List of preconfigured files
+List of pre-configuration files for debugging
+Please click the [Select File] button to select the configuration file
+hint:
+Select a row to download or delete the preconfiguration file.
+The pre-configuration file here is only used for debugging. Please delete it immediately after debugging is completed! Otherwise, the pre-configuration file in the version will not take effect!
+Modify device information
+Area Code
+Factory parameters
+Customize device information
+For debugging convenience, you can modify the device information such as software and hardware version numbers, which will take effect after restart! If it is empty, the original version information will be retained.
+After checking, click [Save] and it will take effect after restarting!
+The data legitimacy is not verified here, you need to ensure the legitimacy of the data yourself! After saving, [Refresh] to confirm whether the data is set successfully!
+upgrade
+Upgraded version
+Update Files
+Update executable files
+Please click the [Select File] button to select the upgrade version file!
+Please click the [Select File] button to select the update file!
+Please click the [Select File] button to select the updated executable file! (Automatically add executable attributes)
+Configuration
+process
+Export and Import
+Please click the [Select File] button to select the configuration file!
+You can also click here
+Full window display (XML format)
+Note: In some cases, because there are Chinese characters in the XML, due to Chinese character encoding, the browser may have format problems parsing the XML. Please click the plain text output below.
+You can also click here
+Full window display (text format)
+You can also click here
+Full window display (txt format)
+You can also click here
+Full window display (txt format)
+Process startup log
+Start delay adjustment
+Enable
+The format is: full path of the process + space + delay in seconds, one line for each process, for example:
+Logging
+Log switch
+System log
+System log
+Loop system logs (open up a certain amount of memory space, and the latest logs will overwrite the oldest logs)
+Click
+here
+Display system log in a new window
+WAN connection logs
+Circularly record WAN connection logs (open up a certain amount of memory space, and the latest log will overwrite the oldest log)
+Click
+here
+Display system log in a new window
+Plugin Logs
+Loop the plugin log (open up a certain amount of memory space, and the latest log will overwrite the oldest log)
+Click
+here
+Display system log in a new window
+Miscellaneous logs
+Loop recording of miscellaneous logs (open up a certain amount of memory space, and the latest log will overwrite the oldest log)
+Click
+here
+Display system log in a new window
+Wi-Fi Log
+Loop recording of miscellaneous logs (open up a certain amount of memory space, and the latest log will overwrite the oldest log)
+Click
+here
+Display system log in a new window
+omci log
+Loop recording of miscellaneous logs (open up a certain amount of memory space, and the latest log will overwrite the oldest log)
+Click
+here
+Display system log in a new window
+Memory log
+Loop recording of miscellaneous logs (open up a certain amount of memory space, and the latest log will overwrite the oldest log)
+Click
+here
+Display system log in a new window
+System log statistics
+System log statistics
+Click
+here
+Display the log's own statistics in a new window
+System Statistics
+System Statistics
+Displays the count statistics of a specific observation point. Each time it is called, the counter increases by 1.
+Click
+here
+Display system statistics in a new window
+Shared integer data
+Shared memory integer data
+Provides a shared memory to store and access 4-byte integer data. You need to apply for an ID before use.
+Click
+here
+Display shared memory integer data in a new window
+Log switch
+Enable or disable logging
+Items marked with * have an impact on performance and are only used for debugging
+statistics
+data
+All statistics
+Global Statistics
+Process Statistics
+Memory summary statistics
+Memory statistics by block
+Global Statistics
+Multi-process statistics
+Single process statistics
+Please click to select a row in the [Multi-process Statistics] table.
+Memory summary statistics
+Memory statistics by block
+Message Queues
+ping process
+Process List
+Data in the message queue
+Please select a line in [Process List]
+Data DUMP
+PING process statistics
+debug switch
+The higher the debug level (the larger the number), the more debug information
+Click here
+Turn off all debugging switches
+Click here
+Display debug switch level
+Click here
+Turn on debug level 1 switch
+Click here
+Turn on debug level 2 switch
+Click here
+Turn on debug level 3 switch
+Select the monitored process ipcId. When it is 0, no process is monitored. When it is not 0, only debug information matching the ipcId is output.
+hbus interprocess communication id
+Access
+Teleport
+networking
+address
+General
+General interface debugging
+Function Name
+Plugins
+Send data (JSON format): (Note: If the data is read-only, please do not send the data)
+Server response data:
+General interface debugging
+Extended interface debugging
+Debug Mode
+Send data (JSON format, refer to the interface specification)
+Server response data:
+Function Name
+Data Types
+Performance data reporting
+Alarm data reporting
+Send data (JSON format): (Note: If the data is read-only, please do not send the data)
+Server response data:

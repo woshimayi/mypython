@@ -1,0 +1,24 @@
+﻿<!DOCTYPE HTML>
+
+<html>
+<head>
+<title>command</title>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<link href="img/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+<link href="css/union.css" rel="stylesheet"/>
+<script src="js/union.js"></script>
+<script src="js/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+<p>Click the [Send] button to send the command and return to [Execution Results]</p>
+<p class="rowComments">Note: Do not execute commands such as top that are not completed or take too long to execute, as this will result in no results being returned and the connection being disconnected.</p>
+<textarea class="hgs_textarea" cols="160" id="command" rows="10">
+</textarea>
+<p>
+<input id="sendCmd" type="button" value="发送"/>
+</p>
+<p>Execution Results</p>
+<textarea class="hgs_textarea" cols="160" id="result" readonly="" rows="100">
+</textarea>
+</body>
+</html>

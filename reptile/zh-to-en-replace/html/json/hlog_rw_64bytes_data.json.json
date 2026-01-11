@@ -1,0 +1,14 @@
+{
+    "IPv6地址": "IPv6 Address",
+    "lan ipv6 dhcpv6 起始地址": "lan ipv6 dhcpv6 start address",
+    "lan ipv6 dhcpv6 结束地址": "lan ipv6 dhcpv6 end address",
+    "INTERNET IPv6地址": "INTERNET IPv6 address",
+    "lan ipv6 AUTO地址": "lan ipv6 AUTO address",
+    "lan ipv6 SLAAC地址": "lan ipv6 slaac address",
+    "FTTR子网关MESH上联设备的ALMAC": "ALMAC of FTTR Sub-Gateway MESH Uplink Device",
+    "FTTR子网关MESH无线组网时回传接口SSID": "SSID of the backhaul interface when FTTR sub-gateway is in MESH wireless networking",
+    "FTTR子网关MESH无线组网时回传接口PWD": "FTTR sub-gateway MESH wireless networking backhaul interface PWD",
+    "FTTR子网关MESH无线组网时回传接口加密方式": "FTTR sub-gateway MESH wireless networking backhaul interface encryption method",
+    "FTTR子网关上获取到的主网关的IP": "The IP address of the main gateway obtained on the FTTR sub-gateway",
+    "FTTR子网关上获取到的主网关的MAC": "MAC address of the main gateway obtained on the FTTR sub-gateway"
+}

@@ -1,0 +1,5 @@
+{
+    "HEX|子网关光纤组网在线列表": "HEX|Sub-gateway fiber optic networking online list",
+    "HEX|子网关光纤组网时vpitv端口是否绑定桥接WAN标志": "HEX|Whether the vpitv port is bound to the bridge WAN flag when the sub-gateway is fiber-optic networked",
+    "natived读取wan连接信息的时间": "Time when natived reads wan connection information"
+}

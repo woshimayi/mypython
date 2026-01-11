@@ -1,0 +1,311 @@
+support
+Not supported
+Open
+closure
+unknown
+The business has been established, please select another business!
+Create a new WAN connection
+vlan id should be an integer
+There is already a PPPoE, VLAN
+WAN connection
+There is already a PPPoE, VLAN
+WAN connection
+Multicast vlan should be an integer
+The legal range is 1-4094, -1 or 0 means not enabled, and other values ​​are illegal multicast VLANs!
+1-500 is an invalid MTU
+Business type cannot be empty!
+Already bound, cannot be bound again!
+Already bound, cannot be bound again!
+Already bound, cannot be bound again!
+<option value="INTERNET,VOIP" class="FEATURE_VOIP">Internet + Voice</option>
+<option value="create_new_wan" >Create a new WAN connection</option>
+yes
+no
+LAN uplink switched to optical uplink, and will be restarted to take effect! Are you sure to [restart the device]?
+Switch the optical uplink to LAN uplink, and the management address will be changed to 192.168.5.1, which will take effect after restart! Are you sure to [restart the device]?
+The optical uplink is switched to LAN uplink, and the reboot will take effect! After the reboot, the LAN side address will be changed to 192.168.100.1! Are you sure to [restart the device]?
+The binding port cannot be the optical router wired port!
+Reporting
+Report successfully
+Reporting process interrupted
+Report no response
+Not reported
+The remote connection process initiated by RMS is successful
+The remote connection process initiated by RMS is interrupted
+No remote connection request received
+Report successfully
+Reporting process interrupted
+Report no response
+Not reported
+The remote connection process initiated by RMS is successful
+The remote connection process initiated by RMS is interrupted
+No remote connection request received
+Indicates that the business has started to be issued
+Business issued successfully
+Service delivery failed
+No business is issued
+[Login password] must contain letters, numbers and special characters, without spaces!
+Clear failed! Error code:
+When [Port Binding] is selected in [Binding Mode], the VLAN binding parameters cannot be set.
+ !Please clear!
+Is an invalid parameter!
+Is an invalid VLAN value, the VLAN value must be between [1-4094]!
+The port has been bound!
+Please select a line and then delete it!
+Bridge Mode
+Routing Mode
+Illegal IP address
+Illegal IP address
+Invalid subnet mask
+Invalid gateway address
+Invalid gateway address
+Invalid parameter: IP address [
+], Subnet Mask[
+],Gateway[
+]Not in the same network segment!
+Connected
+Not connected
+Connected
+Not connected
+automatic
+automatic
+Full Duplex
+Half Duplex
+automatic
+automatic
+You can only create a new line at a time, please save before creating a new one!
+Please select a row and save!
+Please select a row and save!
+Illegal URL
+You can only create a new line at a time, please save before creating a new one!
+Please select a row and save!
+Please select a row and save!
+Is an illegal source MAC address
+Is an illegal destination MAC address
+At least one of the source MAC address or the destination MAC address must be filled in!
+The source MAC address and destination MAC address cannot be the same!
+You can only create a new line at a time, please save before creating a new one!
+Please select a row and save!
+Please select a row and save!
+[Rule Name] length cannot exceed 10 bytes!
+Illegal [Source IP (from)]
+Illegal [Source IP (stop)]
+Illegal [Destination IP (starting)]
+Illegal [Destination IP (stop)]
+[Source IP (end)] must be greater than or equal to [Source IP (start)]
+[Source IP (end)] must be greater than or equal to [Source IP (start)]
+Illegal [source port (starting)]
+Illegal [source port (stop)]
+Illegal [destination port (starting)]
+Illegal [Destination Port (Stop)]
+[Source port (end)] must be greater than or equal to [Source port (start)]
+[Destination Port (End)] must be greater than or equal to [Destination Port (Start)]
+You can only create a new line at a time, please save before creating a new one!
+Please create a WAN connection first, then create the virtual host configuration!
+Please select a row and save!
+Please select a row and save!
+【Note】The length cannot exceed 256 bytes!
+Illegal [External IP]
+Illegal [Intranet IP]
+Illegal [Lease Seconds], legal range 0-86400000
+Illegal [External Network Port], legal range 1-65555
+Illegal [Intranet Port], legal range 1-65555
+The IP address is illegal and should be in the same network segment as the LAN side IP!
+Please select at least one row before saving!
+You can only create a new line at a time, please save before creating a new one!
+Please select at least one row before saving!
+Illegal [MAX], please enter a value
+Integer between
+Illegal [Min], please enter a value
+Integer between
+The Max value cannot be less than the Min value
+Please select a row and save!
+[Match type] cannot be empty
+The [match type] record already exists and cannot be configured again
+The [match type] record already exists and cannot be configured again
+【MAX】cannot be empty
+【Min】cannot be empty
+[MAX] is illegal. All valid values ​​are listed in the drop-down box. Please click the drop-down box and select from it!
+[MIN] is illegal. All valid values ​​are listed in the drop-down box. Please click the drop-down box and select from it!
+When the match type is WANInterface, the [min] and [max] values ​​should be consistent.
+[MAX] is illegal. All valid values ​​are listed in the drop-down box. Please click the drop-down box and select from it!
+[MIN] is illegal. All valid values ​​are listed in the drop-down box. Please click the drop-down box and select from it!
+When the matching type is LANInterface, the [min] and [max] values ​​should be consistent.
+Illegal [MAX] MAC address
+Illegal [Min] MAC address
+[MAX] MAC address must not be less than [Min] MAC address
+Illegal [MAX] IP address
+Illegal [Min] IP address
+Illegal [MAX] IP address
+Illegal [Min] IP address
+【MAX】IP address must not be less than 【Min】IP address
+【MAX】IP address must not be less than 【Min】IP address
+[MAX] and [Min] should both be IPv4 or IPv6 addresses
+When the matching type is EtherType, the [min] and [max] values ​​should be consistent.
+[Protocol] cannot be empty
+[Protocol] is illegal, please select a valid protocol value from the drop-down box!
+You can only create a new line at a time, please save before creating a new one!
+Please select a row and save!
+There is no valid WAN connection. You need to establish a WAN connection first!
+All valid values ​​are listed in the drop-down box. Please click on the drop-down box and select from them!
+All valid values ​​are listed in the drop-down box. Please click on the drop-down box and select from them!
+All valid values ​​are listed in the drop-down box. Please click on the drop-down box and select from them!
+Please select a row and save!
+The business is repeated, please reset it!
+There are only two businesses at most and no more can be added!
+You can only create a new line at a time, please save before creating a new one!
+Please select a row and save!
+You can only create a new line at a time, please save before creating a new one!
+Please select a row and save!
+Please select a row and save!
+The sum of the weights of enabled queues should equal 100%!
+The rate is illegal, please re-enter!
+The user interface is illegal, please re-enter!
+The rate is illegal, please re-enter!
+The rate cannot be a negative number, please re-enter!
+The rate is illegal, please re-enter!
+The rate is illegal, please re-enter!
+The valid value of VLANID is 1-4094, please re-enter!
+The rate cannot be a negative number, please re-enter!
+The rate is illegal, please re-enter!
+The ip is illegal, it should be the ip1-ip2 address segment!
+The ip address is illegal!
+The ip address is illegal!
+The ip address is illegal!
+The ip address is illegal!
+The ip address is illegal!
+The rate is illegal, please re-enter!
+The rate cannot be a negative number, please re-enter!
+The rate is illegal, please re-enter!
+The user interface is illegal, please re-enter!
+The rate is illegal, please re-enter!
+The rate cannot be a negative number, please re-enter!
+The rate is illegal, please re-enter!
+The rate is illegal, please re-enter!
+The valid value of VLANID is 1-4094, please re-enter!
+The rate cannot be a negative number, please re-enter!
+The rate is illegal, please re-enter!
+The ip is illegal, it should be the ip1-ip2 address segment!
+The ip address is illegal!
+The ip address is illegal!
+The ip address is illegal!
+The ip address is illegal!
+The ip address is illegal!
+The rate is illegal, please re-enter!
+The rate cannot be a negative number, please re-enter!
+[User old password] cannot be empty!
+【User new password】cannot be empty!
+[Confirm new user password] cannot be empty!
+[User New Password] and [Confirm User New Password] are inconsistent!
+[User New Password] and [User Old Password] cannot be exactly the same!
+[User new password] length cannot be less than 8 characters!
+[User new password] must contain letters, numbers and special characters, without spaces!
+User password modified successfully
+The password has been changed successfully, and you will be redirected to the login page!
+【User old password】Error!
+[User New Password] and [User Old Password] cannot be exactly the same!
+The device will be restarted! It will take about 50 seconds to restart the device. Are you sure to [restart the device]?
+The number of days should be a positive integer
+The number of days should be a positive integer
+Restarting the device, please wait patiently for 40 seconds!
+Restarting the device failed! Error code:
+Restoring the default configuration will cause the device to restart! It takes about 50 seconds to restart the device. Are you sure to [Restore the default configuration]?
+The default configuration has been restored successfully! The device is restarting, please wait patiently for 40 seconds!
+Failed to restore default configuration! Error code:
+Restoring factory settings will cause the device to restart! It takes about 40 seconds to restart the device. Are you sure to [Restore factory settings]?
+Factory reset successful! Restarting the device, please wait patiently for 40 seconds!
+Restoring factory settings failed! Error code:
+The password must be at least 1 character long and at most
+characters!
+The password must be at least 1 character long and at most
+characters!
+no
+yes
+It is illegal [Destination IP]
+Illegal [Destination Mask]
+Please select at least one line and then [Delete]!
+Deletion failed! Error code:
+no
+yes
+Illegal [destination IPv6 prefix]
+Please select at least one line and then [Delete]!
+Deletion failed! Error code:
+<span>CMCC-</span><input type="input" class="col-5" maxlength="27" hgs_key="SSID">(length: 1~32)
+<input type="input" class="col-5" maxlength="32" hgs_key="SSID">(length: 1~32)
+<span>CMCC-</span><input type="input" class="col-5" maxlength="27" hgs_key="SSID">(length: 1~32)
+<input type="input" class="col-5" maxlength="32" hgs_key="SSID_5g">(length: 1~32)
+<span>CMCC-</span><input type="input" class="col-5" maxlength="27" hgs_key="SSID_5g">(length: 1~32)
+<input type="input" class="col-5" maxlength="32" hgs_key="SSID_5g">(length: 1~32)
+<span>CMCC-</span><input type="input" class="col-5" maxlength="27" hgs_key="SSID_5g">(length: 1~32)
+<input type="input" class="col-5" maxlength="32" hgs_key="SSID">(length: 1~32)
+<span>CMCC-</span><input type="input" class="col-5" maxlength="27" hgs_key="SSID">(length: 1~32)
+<input type="input" class="col-5" maxlength="32" hgs_key="SSID">(length: 1~32)
+<span>CMCC-</span><input type="input" class="col-5" maxlength="27" hgs_key="SSID">(length: 1~32)
+<input type="input" class="col-5" maxlength="32" hgs_key="SSID">(length: 1~32)
+<span>CMCC-</span><input type="input" class="col-5" maxlength="27" hgs_key="SSID">(length: 1~32)
+<input type="input" class="col-5" maxlength="32" hgs_key="SSID">(length: 1~32)
+<span>CMCC-</span><input type="input" class="col-5" maxlength="27" hgs_key="SSID">(length: 1~32)
+ type="input" class="col-5" maxlength="32" hgs_key="SSID">(length: 1~32)
+ type="input" class="col-5" maxlength="27" hgs_key="SSID">(length: 1~32)
+ type="input" class="col-5" maxlength="32" hgs_key="SSID">(length: 1~32)
+ type="input" class="col-5" maxlength="27" hgs_key="SSID">(length: 1~32)
+The 2.4G SSID can contain 1 to 32 digits or characters at most.
+2.4G SSID cannot be empty.
+The 5G SSID can contain 1 to 32 digits or characters.
+5G SSID cannot be empty.
+The SSID can contain 1 to 32 digits or characters.
+ssid cannot be empty.
+The SSID can contain 1 to 32 digits or characters.
+ssid cannot be empty.
+The SSID can contain 1 to 32 digits or characters.
+ssid cannot be empty.
+Open
+closure
+<td>Serial number</td>
+<td>Channel</td>
+<td>Frequency band</td>
+<td>Signal strength (dbm)</td>
+<td>Authentication method</td>
+Please turn on wireless relay first
+The WIFI parameters have been synchronized from the main gateway and cannot be modified.
+Connected
+Not connected
+All levels
+Are you sure you want to delete all log files?
+Failed to receive complete ping data or end marker within the specified time!
+Invalid parameter: IP address [
+Invalid parameter: IP address [
+Invalid parameter: IP address or domain name [
+Invalid parameter: IP address [
+Invalid parameter: IP address [
+Invalid parameter: IP address or domain name [
+The end address should be greater than the start address!
+Successful registration
+Not yet registered successfully
+IAD module error
+Access route is unavailable
+Access server is not responding
+Wrong account
+Unknown error
+<option value=-1>Do not modify</option>
+After executing this operation, the device needs to be restarted to ensure that the configuration data takes effect. Do you want to continue?
+[Address pool end address] must be greater than [Address pool start address]
+[Address pool end address] and [Address pool start address] are not in the same subnet!
+[IP address] is not in the same subnet as the address pool!
+The LAN side IP address cannot be in the allocation range of the address pool!
+You have changed the IP address. Changing the IP address will automatically restart the device. Are you sure to change the [IP address]?
+Please make sure your PC or other terminal and the newly modified IP [
+]In the same address segment, otherwise it cannot be accessed normally, are you sure?
+DNSServer1 cannot be empty!
+start up
+stop
+open
+close
+start up
+No mirror source port is selected!
+No mirroring destination port is selected!
+The mirror source port and destination port cannot be the same port!
+Start uploading files!
+ Upload file successfully!
+Error uploading file! Error code:
+, Error description:

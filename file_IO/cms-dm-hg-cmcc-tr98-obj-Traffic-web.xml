@@ -1,0 +1,93 @@
+<object name="InternetGatewayDevice.X_CMCC_IPSecVPN.IPsecConfig.{i}." shortObjectName="IPsecConfig" specSource="HG" profile="X_HG_CMCC:1" supportLevel="DynamicInstances" />
+    <description source="HG"></description>
+
+  <parameter name="Name" type="string" specSource="HG" profile="X_HG_CMCC:1" supportLevel="ReadWrite" maxLength="128" webtype="value" zhname="连接名称" />
+    <description source="HG"></description>
+
+  <parameter name="Enable" type="boolean" specSource="HG" profile="X_HG_CMCC:1" supportLevel="ReadWrite" defaultValue="True" webtype="bool" zhname="启用" />
+    <description source="HG"></description>
+
+  <parameter name="IPSecType" type="string" specSource="HG" profile="X_HG_CMCC:1" supportLevel="ReadWrite" maxLength="128" defaultValue="Site-to-Site" webtype="select" selval="Site-to-Site,PC-to-Site" zhname="组网模式" />
+    <description source="HG"></description>
+
+  <parameter name="RemoteSubnet" type="string" specSource="HG" profile="X_HG_CMCC:1" maxLength="128" supportLevel="ReadWrite" webtype="value" zhname="对端网关/掩码" />
+    <description source="HG"></description>
+
+  <parameter name="LocalSubnet" type="string" specSource="HG" profile="X_HG_CMCC:1" maxLength="128" supportLevel="ReadWrite" webtype="value" zhname="本地网关/掩码" />
+    <description source="HG"></description>
+
+  <parameter name="RemoteIP" type="string" specSource="HG" profile="X_HG_CMCC:1" maxLength="128" supportLevel="ReadWrite" webtype="value" zhname="对端IP" />
+    <description source="HG"></description>
+
+  <parameter name="RemoteDomain" type="string" specSource="HG" profile="X_HG_CMCC:1" maxLength="128" supportLevel="ReadWrite" webtype="value" zhname="对端域名" />
+    <description source="HG"></description>
+
+  <parameter name="ExchangeMode" type="string" specSource="HG" profile="X_HG_CMCC:1" supportLevel="ReadWrite" maxLength="128" defaultValue="Main" webtype="select" selval="Main,Aggressive" zhname="IKE协商方式" />
+    <description source="HG"></description>
+
+  <parameter name="IKEAuthenticationAlgorithm" type="string" specSource="HG" profile="X_HG_CMCC:1" supportLevel="ReadWrite" defaultValue="SHA1" webtype="select" selval="MD5,SHA1" zhname="IKE验证算法" />
+    <description source="HG"></description>
+
+  <parameter name="IKEAuthenticationMethod" type="string" specSource="HG" profile="X_HG_CMCC:1" supportLevel="ReadWrite" defaultValue="PreShareKey" webtype="select" selval="PreShareKey,RsaSignature" zhname="IKE验证方法" />
+    <description source="HG"></description>
+
+  <parameter name="IKEEncryptionAlgorithm" type="string" specSource="HG" profile="X_HG_CMCC:1" supportLevel="ReadWrite" defaultValue="DES" webtype="select" selval="DES,3DES,AES128,AES192,AES256" zhname="IKE加密算法" />
+    <description source="HG"></description>
+
+  <parameter name="IKEDHGroup" type="string" specSource="HG" profile="X_HG_CMCC:1" supportLevel="ReadWrite" defaultValue="Group1" webtype="select" selval="Group1,Group2,Group5,Group14" zhname="DH组" />
+    <description source="HG"></description>
+
+  <parameter name="IKEIDType" type="string" specSource="HG" profile="X_HG_CMCC:1" supportLevel="ReadWrite" defaultValue="IP" webtype="select" selval="IP,Name" zhname="IKE身份类型" />
+    <description source="HG"></description>
+
+  <parameter name="IKELocalName" type="string" specSource="HG" profile="X_HG_CMCC:1" supportLevel="ReadWrite" webtype="value" zhname="IKE本端名称" />
+    <description source="HG"></description>
+
+  <parameter name="IKERemoteName" type="string" specSource="HG" profile="X_HG_CMCC:1" supportLevel="ReadWrite" webtype="value" zhname="IKE对端名称" />
+    <description source="HG"></description>
+
+  <parameter name="IKEPreshareKey" type="string" specSource="HG" profile="X_HG_CMCC:1" supportLevel="ReadWrite" webtype="value" zhname="IKE预共享密钥" />
+    <description source="HG"></description>
+
+  <parameter name="IPSecOutInterface" type="string" specSource="HG" profile="X_HG_CMCC:1" supportLevel="ReadWrite" webtype="select"  selval="" zhname="出口" />
+    <description source="HG"></description>
+
+  <parameter name="IPSecEncapsulationMode" type="string" specSource="HG" profile="X_HG_CMCC:1" supportLevel="ReadWrite" defaultValue="Tunnel" webtype="select" selval="Tunnel,Transport" zhname="封装模式" />
+    <description source="HG"></description>
+
+  <parameter name="IPSecTransform" type="string" specSource="HG" profile="X_HG_CMCC:1" supportLevel="ReadWrite" defaultValue="ESP" webtype="select"  selval="AH,ESP" zhname="安全协议" />
+    <description source="HG"></description>
+
+  <parameter name="ESPAuthenticationAlgorithm" type="string" specSource="HG" profile="X_HG_CMCC:1" supportLevel="ReadWrite" defaultValue="MD5" webtype="select" selval="None,MD5,SHA1" zhname="验证算法" />
+    <description source="HG"></description>
+
+  <parameter name="ESPEncryptionAlgorithm" type="string" specSource="HG" profile="X_HG_CMCC:1" supportLevel="ReadWrite" defaultValue="3DES" webtype="select"  selval="DES,3DES,AES128,AES192,AES256" zhname="加密算法" />
+    <description source="HG"></description>
+
+  <parameter name="IPSecPFS" type="string" specSource="HG" profile="X_HG_CMCC:1" supportLevel="ReadWrite" defaultValue="None" webtype="select" selval="None,Group1,Group2,Group5,Group14" zhname="DH组" />
+    <description source="HG"></description>
+
+  <parameter name="IKESAPeriod" type="unsignedInt" specSource="HG" profile="X_HG_CMCC:1" supportLevel="ReadWrite" defaultValue="10800" minValue="1200" maxValue="86400" webtype="int" zhname="SA生命周期" />
+    <description source="HG"></description>
+
+  <parameter name="IPSecSATimePeriod" type="unsignedInt" specSource="HG" profile="X_HG_CMCC:1" supportLevel="ReadWrite" defaultValue="3600" minValue="600" maxValue="86400" webtype="int" zhname="SA时间生命周期" />
+    <description source="HG"></description>
+
+  <parameter name="IPSecSATrafficPeriod" type="unsignedInt" specSource="HG" profile="X_HG_CMCC:1" supportLevel="ReadWrite" defaultValue="1843200" minValue="2560" maxValue="536870912" webtype="int" zhname="SA流量生命周期" />
+    <description source="HG"></description>
+
+  <parameter name="AHAuthenticationAlgorithm" type="string" specSource="HG" profile="X_HG_CMCC:1" supportLevel="ReadWrite" defaultValue="MD5" webtype="select" selval="MD5,SHA1" zhname="AH验证算法" />
+    <description source="HG"></description>
+
+  <parameter name="DPDEnable" type="boolean" specSource="HG" profile="X_HG_CMCC:1" supportLevel="ReadWrite" defaultValue="False" webtype="bool"  zhname="DPD" />
+    <description source="HG"></description>
+
+  <parameter name="DPDThreshold" type="unsignedInt" specSource="HG" profile="X_HG_CMCC:1" supportLevel="ReadWrite" defaultValue="10" minValue="10" maxValue="3600" webtype="int" zhname="DPD空闲时间" />
+    <description source="HG"></description>
+
+  <parameter name="DPDRetry" type="unsignedInt" specSource="HG" profile="X_HG_CMCC:1" supportLevel="ReadWrite" defaultValue="5" minValue="2" maxValue="10" webtype="int" zhname="尝试间隔" />
+    <description source="HG"></description>
+
+  <parameter name="ConnectionStatus" type="string" specSource="HG" profile="X_HG_CMCC:1" supportLevel="ReadOnly" defaultValue="Unconfigured" validValuesArray="ConnectionStatusValues" zhname="" />
+    <description source="HG"></description>
+

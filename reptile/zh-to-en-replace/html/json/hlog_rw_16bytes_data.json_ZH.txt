@@ -1,0 +1,17 @@
+LAN IPv4地址
+LAN IPv4地址2
+LAN IPv4子网掩码
+IPv4掩码
+Tr069 WAN接口名称
+Voip WAN接口名称
+RADVD lease 时间
+INTERNET IPv4地址
+V4默认WAN接口名称
+V6默认WAN接口名称
+mesh是否使能(0-disable;1-enable)
+mesh角色(2-agent; 3-controller)
+NAS ip 地址
+NAS mac 地址
+子网关br0 获取的ip地址
+上联接口名称
+外置PHY型号

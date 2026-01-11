@@ -1,0 +1,1104 @@
+{
+    "comment": "Service package: Service class: Interface name: [function declaration, function return type, function parameters]",
+    "accessservices": {
+        "AccessInfoQueryService": {
+            "getPONIfPhyStatus": [
+                "String getPONIfPhyStatus();",
+                "String",
+                "",
+                "developer:chenxi,done"
+            ],
+            "getPONIfUpTime": [
+                "int getPONIfUpTime();",
+                "int",
+                "",
+                "developer:fangchao,done"
+            ],
+            "getPONIfRegisterStatus": [
+                "String getPONIfRegisterStatus();",
+                "String",
+                "",
+                "developer:fangchao,done"
+            ],
+            "getUplinkIfStats": [
+                "String getUplinkIfStats();",
+                "String",
+                "",
+                "developer:fangchao,done"
+            ],
+            "getWANIfList": [
+                "String getWANIfList();",
+                "String",
+                "",
+                "developer:chenxi,done"
+            ],
+            "getWANIfStats": [
+                "String getWANIfStats(int wanIndex);",
+                "String",
+                "int wanIndex",
+                "developer:fangchao,done"
+            ],
+            "getWANIfInfo": [
+                "String getWANIfInfo(int wanIndex);",
+                "String",
+                "int wanIndex",
+                "developer:fangchao,done"
+            ],
+            "getWanIfBandwidth": [
+                "String getWanIfBandwidth(int wanIndex);",
+                "String",
+                "int wanIndex",
+                "developer:fangchao,done"
+            ],
+            "getWANIfStatus": [
+                "String getWANIfStatus(int wanIndex);",
+                "String",
+                "int wanIndex",
+                "developer:fangchao,done"
+            ],
+            "getInternetWANIndex": [
+                "int getInternetWANIndex();",
+                "int",
+                "",
+                "developer:fangchao,done"
+            ]
+        },
+        "WanConfigService": {
+            "addWANIf": [
+                "int addWANIf(String VLANMode, String VLANIDMark, String ConnectionType);",
+                "int",
+                "String VLANMode, String VLANIDMark, String ConnectionType",
+                "developer:fangchao,done"
+            ],
+            "setWANIf": [
+                "int setWANIf(int wanIndex, String setParameter);",
+                "int",
+                "int wanIndex, String setParameter",
+                "developer:fangchao,done"
+            ],
+            "deleteWANIf": [
+                "int deleteWANIf(int wanIndex);",
+                "int",
+                "int wanIndex",
+                "developer:fangchao,done"
+            ]
+        },
+        "IPPingDiagnosticsService": {
+            "startIPPingDiagnostics": [
+                "int startIPPingDiagnostics(int wanIndex, String host, String pingParameter);",
+                "int",
+                "int wanIndex, String host, String pingParameter",
+                "developer:zhengsen,done"
+            ],
+            "getIPPingDiagnosticsResult": [
+                "String getIPPingDiagnosticsResult();",
+                "String",
+                "",
+                "developer:zhengsen,done"
+            ]
+        },
+        "TraceRouteDiagnosticsService": {
+            "startTraceRouteDiagnostics": [
+                "int startTraceRouteDiagnostics(int wanIndex, String host, String traceRouterParameter);",
+                "int",
+                "int wanIndex, String host, String traceRouterParameter",
+                "developer:zhengsen,done"
+            ],
+            "getTraceRouteDiagnosticsResult": [
+                "String getTraceRouteDiagnosticsResult();",
+                "String",
+                "",
+                "developer:zhengsen,done"
+            ]
+        },
+        "HttpDownloadDiagnosticsService": {
+            "startHttpDownloadDiagnostics": [
+                "int startHttpDownloadDiagnostics(int wanIndex, String URL, String HttpDownloadParameter);",
+                "int",
+                "int wanIndex, String URL, String HttpDownloadParameter",
+                "developer:chenxi,done"
+            ],
+            "getHttpDownloadDiagnosticsResult": [
+                "String getHttpDownloadDiagnosticsResult();",
+                "String",
+                "",
+                "developer:chenxi,done"
+            ]
+        },
+        "HttpUploadDiagnosticsService": {
+            "startHttpUploadDiagnostics": [
+                "int startHttpUploadDiagnostics(int wanIndex, String URL, String HttpDownloadParameter);",
+                "int",
+                "int wanIndex, String URL, String HttpDownloadParameter",
+                "developer:chenxi,done"
+            ],
+            "getHttpUploadDiagnosticsResult": [
+                "String getHttpUploadDiagnosticsResult();",
+                "String",
+                "",
+                "developer:chenxi,done"
+            ]
+        },
+        "IPDetectService": {
+            "detectIp": [
+                "String detectIp(String IP, String port, String type);",
+                "String",
+                "String IP, String port, String type",
+                "developer:chenxi"
+            ]
+        }
+    },
+    "transferservices": {
+        "TransferQueryService": {
+            "getVLANBindInfo": [
+                "String getVLANBindInfo();",
+                "String",
+                "",
+                "developer:chenxi,done"
+            ],
+            "getLayer3ForwardingStaticConfigInfo": [
+                "String getLayer3ForwardingStaticConfigInfo();",
+                "String",
+                "",
+                "developer:fangchao,done"
+            ],
+            "getIPv6Layer3ForwardingStaticConfigInfo": [
+                "String getIPv6Layer3ForwardingStaticConfigInfo();",
+                "String",
+                "",
+                "developer:fangchao,done"
+            ],
+            "getLayer3ForwardingCurrent": [
+                "String getLayer3ForwardingCurrent();",
+                "String",
+                "",
+                "developer:fangchao,done"
+            ],
+            "getIPv6Layer3ForwardingCurrent": [
+                "String getIPv6Layer3ForwardingCurrent();",
+                "String",
+                "",
+                "developer:fangchao,done"
+            ],
+            "getIPTVStatus": [
+                "String getIPTVStatus();",
+                "String",
+                "",
+                "developer:zhangxingwu,done"
+            ]
+        },
+        "VLANBindConfigService": {
+            "setVLANBind": [
+                "int setVLANBind(String lanInterface, String bind);",
+                "int",
+                "String lanInterface, String bind",
+                "developer:chenxi,done"
+            ],
+            "clearVLANBind": [
+                "int clearVLANBind(String lanInterface);",
+                "int",
+                "String lanInterface",
+                "developer:chenxi,done"
+            ]
+        },
+        "StaticLayer3ForwardingConfigService": {
+            "addLayer3ForwardingStatic": [
+                "int addLayer3ForwardingStatic(String DestIPAddress, String DestSubnetMask, String GatewayIPAddress, String Interface);",
+                "int",
+                "String DestIPAddress, String DestSubnetMask, String GatewayIPAddress, String Interface",
+                "developer:fangchao,done"
+            ],
+            "addIPv6Layer3ForwardingStatic": [
+                "int addIPv6Layer3ForwardingStatic(String DestIPPrefix, String NextHop, String Interface);",
+                "int",
+                "String DestIPPrefix, String NextHop, String Interface",
+                "developer:fangchao,done"
+            ],
+            "deleteLayer3ForwardingStatic": [
+                "int deleteLayer3ForwardingStatic(int index);",
+                "int",
+                "int index",
+                "developer:fangchao,done"
+            ],
+            "deleteIPv6Layer3ForwardingStatic": [
+                "int deleteIPv6Layer3ForwardingStatic(int index);",
+                "int",
+                "int index",
+                "developer:fangchao,done"
+            ]
+        },
+        "TrafficMonitoringConfigService": {
+            "addTrafficMonitoringDestAddress": [
+                "int addTrafficMonitoringDestAddress(String[] destAddressList, BundleContext context);",
+                "int",
+                "String[] destAddressList, BundleContext context",
+                "developer:zhengsen,done"
+            ],
+            "deleteTrafficMonitoringDestAddress": [
+                "int deleteTrafficMonitoringDestAddress(String[] destAddressList, BundleContext context);",
+                "int",
+                "String[] destAddressList, BundleContext context",
+                "developer:zhengsen,done"
+            ],
+            "getTrafficMonitoringDestAddressInfo": [
+                "String getTrafficMonitoringDestAddressInfo();",
+                "String",
+                "",
+                "developer:zhengsen,done"
+            ]
+        },
+        "TrafficQoSService": {
+            "addTrafficToFlow": [
+                "int addTrafficToFlow(String remoteAddress, String remotePort, int flow);",
+                "int",
+                "String remoteAddress, String remotePort, int flow",
+                "developer:zhengsen,done"
+            ],
+            "deleteTrafficFromFlow": [
+                "int deleteTrafficFromFlow(String remoteAddress, String remotePort, int flow);",
+                "int",
+                "String remoteAddress, String remotePort, int flow",
+                "developer:zhengsen,done"
+            ],
+            "deleteAllTrafficFromFlow": [
+                "int deleteAllTrafficFromFlow(int flow);",
+                "int",
+                "int flow",
+                "developer:zhengsen,done"
+            ],
+            "getTrafficInfoByFlow": [
+                "String getTrafficInfoByFlow(int flow);",
+                "String",
+                "int flow",
+                "developer:zhengsen,done"
+            ],
+            "getStatsByFlow": [
+                "String getStatsByFlow(int flow);",
+                "String",
+                "int flow",
+                "developer:zhengsen,done"
+            ],
+            "getSpeedByFlow": [
+                "String getSpeedByFlow(int flow);",
+                "String",
+                "int flow",
+                "developer:zhengsen,done"
+            ],
+            "setSpeedLimitByFlow": [
+                "int setSpeedLimitByFlow(int flow, int upSpeed, int downSpeed);",
+                "int",
+                "int flow, int upSpeed, int downSpeed",
+                "developer:zhengsen,done"
+            ],
+            "getSpeedLimitByFlow": [
+                "String getSpeedLimitByFlow(int flow);",
+                "String",
+                "int flow",
+                "developer:zhengsen,done"
+            ],
+            "setDSCPRemarkByFlow": [
+                "int setDSCPRemarkByFlow(int flow, int remarkDSCP);",
+                "int",
+                "int flow, int remarkDSCP",
+                "developer:zhengsen,done"
+            ],
+            "getDSCPRemarkByFlow": [
+                "int getDSCPRemarkByFlow(int flow);",
+                "int",
+                "int flow",
+                "developer:zhengsen,done"
+            ]
+        },
+        "TrafficForwardService": {
+            "addForwardRule": [
+                "int addForwardRule(String remoteAddress, String remotePort, String protocol, String hostMAC, String forwardToIP, int forwardToPort);",
+                "int",
+                "String remoteAddress, String remotePort, String protocol, String hostMAC, String forwardToIP, int forwardToPort",
+                "developer:zhengsen,done"
+            ],
+            "deleteForwardRule": [
+                "int deleteForwardRule(int ruleNum);",
+                "int",
+                "int ruleNum",
+                "developer:zhengsen,done"
+            ],
+            "deleteAllForwardRule": [
+                "int deleteAllForwardRule();",
+                "int",
+                "",
+                "developer:zhengsen,done"
+            ],
+            "getForwardRuleInfo": [
+                "String getForwardRuleInfo();",
+                "String",
+                "",
+                "developer:zhengsen,done"
+            ]
+        },
+        "TrafficMirrorService": {
+            "addMirrorRule": [
+                "int addMirrorRule(String remoteAddress, String remotePort, String direction, String protocol, String hostMAC, String mirrorToIP, int mirrorToPort);",
+                "int",
+                "String remoteAddress, String remotePort, String direction, String protocol, String hostMAC, String mirrorToIP, int mirrorToPort",
+                "developer:zhengsen,done"
+            ],
+            "deleteMirrorRule": [
+                "int deleteMirrorRule(int ruleNum);",
+                "int",
+                "int ruleNum",
+                "developer:zhengsen,done"
+            ],
+            "deleteAllMirrorRule": [
+                "int deleteAllMirrorRule();",
+                "int",
+                "",
+                "developer:zhengsen,done"
+            ],
+            "getMirroRuleInfo": [
+                "String getMirroRuleInfo();",
+                "String",
+                "",
+                "developer:zhengsen,done"
+            ]
+        },
+        "TrafficDetailProcessService": {
+            "addHTTPTrafficProcessRule": [
+                "int addHTTPTrafficProcessRule(String remoteAddress, int remotePort, String direction, String hostMAC, String[] methodList, String[] statuscodeList, String[] headerList, BundleContext context);",
+                "int",
+                "String remoteAddress, int remotePort, String direction, String hostMAC, String[] methodList, String[] statuscodeList, String[] headerList, BundleContext context",
+                "developer:zhengsen,done"
+            ],
+            "deleteHTTPTrafficProcessRule": [
+                "int deleteHTTPTrafficProcessRule(int ruleNum);",
+                "int",
+                "int ruleNum",
+                "developer:zhengsen,done"
+            ],
+            "deleteAllHTTPTrafficProcessRule": [
+                "int deleteAllHTTPTrafficProcessRule();",
+                "int",
+                "",
+                "developer:zhengsen,done"
+            ],
+            "getHTTPTrafficProcessRuleInfo": [
+                "String getHTTPTrafficProcessRuleInfo();",
+                "String",
+                "",
+                "developer:zhengsen,done"
+            ]
+        },
+        "L2TPVPNService": {
+            "vpnOn": [
+                "String vpnOn(String ServerIP, String Uname, String Upass);",
+                "String",
+                "String ServerIP, String Uname, String Upass",
+                "developer:wangsongchang"
+            ],
+            "vpnOff": [
+                "String vpnOff(String ServerIP);",
+                "String",
+                "String ServerIP",
+                "developer:wangsongchang"
+            ],
+            "getVpnStatCmd": [
+                "String getVpnStatCmd();",
+                "String",
+                "",
+                "developer:wangsongchang"
+            ],
+            "getConnectedIpList": [
+                "String getConnectedIpList();",
+                "String",
+                "",
+                "developer:wangsongchang"
+            ],
+            "addVpnDestIP": [
+                "int addVpnDestIP(String[] destIPList,  int vpnNum);",
+                "int",
+                "String[] destIPList, int vpnNum",
+                "developer:wangsongchang"
+            ],
+            "deleteVpnDestIP": [
+                "int deleteVpnDestIP(String[] destIPList, int vpnNum);",
+                "int",
+                "String[] destIPList, int vpnNum",
+                "developer:wangsongchang"
+            ]
+        }
+    },
+    "lanservices": {
+        "LANHostsInfoQueryService": {
+            "getGatewayName": [
+                "String getGatewayName();",
+                "String",
+                "",
+                "developer:chenxi,done"
+            ],
+            "getLANHostInfoByMAC": [
+                "String getLANHostInfoByMAC(String[] hostMAC);",
+                "String",
+                "String[] hostMAC",
+                "developer:chenxi,done"
+            ],
+            "getLANHostInfoByInterface": [
+                "String getLANHostInfoByInterface(String ConnectInterface);",
+                "String",
+                "String ConnectInterface",
+                "developer:chenxi,done"
+            ],
+            "getMacFilterMode": [
+                "int getMacFilterMode();",
+                "int",
+                "",
+                "developer:chenxi,done"
+            ],
+            "getLANHostInfoByClass": [
+                "String getLANHostInfoByClass(String hostClass);",
+                "String",
+                "String hostClass",
+                "developer:chenxi,done"
+            ],
+            "getLANHostStats": [
+                "String getLANHostStats(String[] hostMAC);",
+                "String",
+                "String[] hostMAC",
+                "developer:chenxi,done"
+            ],
+            "getLANHostSpeedLimitInfo": [
+                "String getLANHostSpeedLimitInfo(String[] hostMAC);",
+                "String",
+                "String[] hostMAC",
+                "developer:zhengsen"
+            ]
+        },
+        "LanNetworkNameConfigService": {
+            "setGatewayName": [
+                "int setGatewayName(String name);",
+                "int",
+                "String name",
+                "developer:chenxi,done"
+            ],
+            "setLANHostName": [
+                "int setLANHostName(String hostMAC, String hostName);",
+                "int",
+                "String hostMAC, String hostName",
+                "developer:chenxi,done"
+            ]
+        },
+        "LanHostSpeedLimitService": {
+            "setLANHostSpeedLimit": [
+                "int setLANHostSpeedLimit(String hostMAC, int upSpeed, int downSpeed);",
+                "int",
+                "String hostMAC, int upSpeed, int downSpeed",
+                "developer:zhengsen"
+            ]
+        },
+        "LanHostSpeedQueryService": {
+            "getLANHostSpeed": [
+                "String getLANHostSpeed(String hostMAC);",
+                "String",
+                "String hostMAC",
+                "developer:zhengsen"
+            ]
+        },
+        "LanNetworkAccessConfigService": {
+            "setMacFilterMode": [
+                "int setMacFilterMode(int mode);",
+                "int",
+                "int mode",
+                "developer:fangchao,done"
+            ],
+            "addLANHostToBlackList": [
+                "int addLANHostToBlackList(String[] hostMAC);",
+                "int",
+                "String[] hostMAC",
+                "developer:fangchao,done"
+            ],
+            "deleteLANHostFromBlackList": [
+                "int deleteLANHostFromBlackList(String[] hostMAC);",
+                "int",
+                "String[] hostMAC",
+                "developer:fangchao,done"
+            ],
+            "addLANHostToStorageBlackList": [
+                "int addLANHostToStorageBlackList(String[] hostMAC);",
+                "int",
+                "String[] hostMAC",
+                "developer:fangchao,done"
+            ],
+            "deleteLANHostFromStorageBlackList": [
+                "int deleteLANHostFromStorageBlackList(String[] hostMAC);",
+                "int",
+                "String[] hostMAC",
+                "developer:fangchao,done"
+            ],
+            "addLANHostToTrustList": [
+                "int addLANHostToTrustList(String[] hostMAC);",
+                "int",
+                "String[] hostMAC",
+                "developer:fangchao,done"
+            ],
+            "deleteLANHostFromTrustList": [
+                "int deleteLANHostFromTrustList(String[] hostMAC);",
+                "int",
+                "String[] hostMAC",
+                "developer:fangchao,done"
+            ]
+        },
+        "WlanQueryService": {
+            "getWLANSSIDInfo": [
+                "String getWLANSSIDInfo(int ssidIndex);",
+                "String",
+                "int ssidIndex",
+                "developer:zhangtiansheng,done"
+            ],
+            "getWLANSSIDStats": [
+                "String getWLANSSIDStats(int ssidIndex);",
+                "String",
+                "int ssidIndex",
+                "developer:zhangtiansheng,done"
+            ],
+            "getWLANWPSStatus": [
+                "int getWLANWPSStatus(int ssidIndex);",
+                "int",
+                "int ssidIndex",
+                "developer:zhangtiansheng,done"
+            ],
+            "getWLANHardwareSwitch": [
+                "boolean getWLANHardwareSwitch(String radioType);",
+                "boolean",
+                "String radioType",
+                "developer:zhangtiansheng,done"
+            ],
+            "getWLANRadioInfo": [
+                "String getWLANRadioInfo(String radioType);",
+                "String",
+                "String radioType",
+                "developer:zhangtiansheng,done"
+            ],
+            "getWLANNeighbor": [
+                "String getWLANNeighbor(String radioType, String realScan);",
+                "String",
+                "String radioType, String realScan",
+                "developer:zhangtiansheng"
+            ],
+            "getWLANHostInfo": [
+                "String getWLANHostInfo(String[] hostMAC);",
+                "String",
+                "String[] hostMAC",
+                "developer:zhangtiansheng"
+            ],
+            "getGuestSSIDInfo": [
+                "String getGuestSSIDInfo();",
+                "String",
+                "",
+                "developer:zhangtiansheng"
+            ]
+        },
+        "WlanSecretQueryService": {
+            "getWLANSSIDPassword": [
+                "String getWLANSSIDPassword(int ssidIndex);",
+                "String",
+                "int ssidIndex",
+                "developer:zhangtiansheng,done"
+            ]
+        },
+        "WlanConfigService": {
+            "setWLANSSIDSwitch": [
+                "int setWLANSSIDSwitch(int ssidIndex, boolean enable);",
+                "int",
+                "int ssidIndex, boolean enable",
+                "developer:zhangtiansheng,done"
+            ],
+            "setWLANSSIDSecurity": [
+                "int setWLANSSIDSecurity(int ssidIndex, String SSIDName, String encryptionMode, String password);",
+                "int",
+                "int ssidIndex, String SSIDName, String encryptionMode, String password",
+                "developer:zhangtiansheng,done"
+            ],
+            "setWLANSSIDAdvertisement": [
+                "int setWLANSSIDAdvertisement(int ssidIndex, boolean SSIDAdvertisementEnabled);",
+                "int",
+                "int ssidIndex, boolean SSIDAdvertisementEnabled",
+                "developer:zhangtiansheng,done"
+            ],
+            "setWLANHardwareSwitch": [
+                "int setWLANHardwareSwitch(String radioType, boolean Switch);",
+                "int",
+                "String radioType, boolean Switch",
+                "developer:zhangtiansheng,done"
+            ],
+            "setWLANStandard": [
+                "int setWLANStandard(String radioType, String standard);",
+                "int",
+                "String radioType, String standard",
+                "developer:zhangtiansheng"
+            ],
+            "setWLANRadioChannel": [
+                "int setWLANRadioChannel(String radioType, int channel);",
+                "int",
+                "String radioType, int channel",
+                "developer:zhangtiansheng,done"
+            ],
+            "setWLANRadioPower": [
+                "int setWLANRadioPower(String radioType, int transmitPower);",
+                "int",
+                "String radioType, int transmitPower",
+                "developer:zhangtiansheng,done"
+            ],
+            "setWLANRadioFrequencyWidth": [
+                "int setWLANRadioFrequencyWidth(String radioType, String frequencyWidth);",
+                "int",
+                "String radioType, String frequencyWidth",
+                "developer:zhangtiansheng"
+            ],
+            "startWLANWPS": [
+                "int startWLANWPS(int ssidIndex);",
+                "int",
+                "int ssidIndex",
+                "developer:zhangtiansheng,done"
+            ],
+            "stopWLANWPS": [
+                "int stopWLANWPS(int ssidIndex);",
+                "int",
+                "int ssidIndex",
+                "developer:zhangtiansheng,done"
+            ],
+            "addWLANGuestSSID": [
+                "int addWLANGuestSSID(int guestSsidIndex);",
+                "int",
+                "int guestSsidIndex",
+                "developer:zhangtiansheng,done"
+            ],
+            "deleteWLANGuestSSID": [
+                "int deleteWLANGuestSSID(int guestSsidIndex);",
+                "int",
+                "int guestSsidIndex",
+                "developer:zhangtiansheng,done"
+            ],
+            "setWLANGuestPortIsolation": [
+                "int setWLANGuestPortIsolation(int guestSsidIndex, boolean portIsolation);",
+                "int",
+                "int guestSsidIndex, boolean portIsolation",
+                "developer:zhangtiansheng,done"
+            ],
+            "setWLANGuestDuration": [
+                "int setWLANGuestDuration(int guestSsidIndex, int duration);",
+                "int",
+                "int guestSsidIndex, int duration",
+                "developer:zhangtiansheng"
+            ]
+        },
+        "EthQueryService": {
+            "getLANEthernetInfo": [
+                "String getLANEthernetInfo(int portIndex);",
+                "String",
+                "int portIndex",
+                "developer:zhangxingwu,done"
+            ],
+            "getLANEthernetStats": [
+                "String getLANEthernetStats(int portIndex);",
+                "String",
+                "int portIndex",
+                "developer:zhangxingwu,done"
+            ]
+        },
+        "EthConfigService": {
+            "setLANEthernetEnable": [
+                "int setLANEthernetEnable(int portIndex, boolean enable);",
+                "int",
+                "int portIndex, boolean enable",
+                "developer:zhangxingwu,done"
+            ],
+            "setLANEthernetMaxBitRate": [
+                "int setLANEthernetMaxBitRate(int portIndex, String maxBitRate);",
+                "int",
+                "int portIndex, String maxBitRate",
+                "developer:zhangxingwu,done"
+            ],
+            "setLANEthernetDuplexMode": [
+                "int setLANEthernetDuplexMode(int portIndex, String duplexMode);",
+                "int",
+                "int portIndex, String duplexMode",
+                "developer:zhangxingwu,done"
+            ]
+        }
+    },
+    "addressservices": {
+        "LANIPInfoQueryService": {
+            "getLANHostIP": [
+                "String getLANHostIP();",
+                "String",
+                "",
+                "developer:zhangxingwu,done"
+            ],
+            "getLANDHCPInfo": [
+                "String getLANDHCPInfo();",
+                "String",
+                "",
+                "developer:zhangxingwu,done"
+            ]
+        },
+        "LANIPConfigService": {
+            "setLANHostIP": [
+                "int setLANHostIP(String localIP, String submask);",
+                "int",
+                "String localIP, String submask",
+                "developer:zhangxingwu,done"
+            ],
+            "setLANDHCPInfo": [
+                "int setLANDHCPInfo(String enableDHCPServer, String DHCPStartIP, String DHCPEndIP, int DHCPDuration);",
+                "int",
+                "String enableDHCPServer, String DHCPStartIP, String DHCPEndIP, int DHCPDuration",
+                "developer:zhangxingwu,done"
+            ]
+        },
+        "PortMappingQueryService": {
+            "getPortMappingInfo": [
+                "String getPortMappingInfo();",
+                "String",
+                "",
+                "developer:chenxi,done"
+            ]
+        },
+        "PortMappingConfigService": {
+            "addPortMapping": [
+                "int addPortMapping(int wanIndex, int externalPort, int internalPort, String portMappingProtocol, String internalClient);",
+                "int",
+                "int wanIndex, int externalPort, int internalPort, String portMappingProtocol, String internalClient",
+                "developer:chenxi,done"
+            ],
+            "deletePortMapping": [
+                "int deletePortMapping(int wanIndex, int portMappingIndex);",
+                "int",
+                "int wanIndex, int portMappingIndex",
+                "developer:chenxi,done"
+            ],
+            "setPortMappingSwitch": [
+                "int setPortMappingSwitch(int wanIndex, int portMappingIndex, boolean enableState);",
+                "int",
+                "int wanIndex, int portMappingIndex, boolean enableState",
+                "developer:chenxi,done"
+            ]
+        }
+    },
+    "voipservices": {
+        "VoIPInfoQueryService": {
+            "getPOTSInfo": [
+                "String getPOTSInfo();",
+                "String",
+                "",
+                "developer:zhangxuesheng"
+            ]
+        },
+        "VoIPInfoSubscribeService": {
+            "subscribeVoIPEvent": [
+                "int subscribeVoIPEvent(BundleContext context, String[] Event);",
+                "int",
+                "BundleContext context, String[] Event",
+                "developer:zhangxuesheng"
+            ],
+            "unSubscribeVoIPEvent": [
+                "int unSubscribeVoIPEvent(BundleContext context, String[] Event);",
+                "int",
+                "BundleContext context, String[] Event",
+                "developer:zhangxuesheng"
+            ]
+        }
+    },
+    "commservices": {
+        "DeviceInfoQueryService": {
+            "getDeviceInfo": [
+                "String getDeviceInfo();",
+                "String",
+                "",
+                "developer:zhangkangkang,done"
+            ],
+            "getDeviceMAC": [
+                "String getDeviceMAC();",
+                "String",
+                "",
+                "developer:zhangkangkang,done"
+            ],
+            "getDeviceUpTime": [
+                "int getDeviceUpTime();",
+                "int",
+                "",
+                "developer:zhangkangkang,done"
+            ],
+            "getOSGiInfo": [
+                "String getOSGiInfo();",
+                "String",
+                "",
+                "developer:zhangkangkang,done"
+            ],
+            "getJVMInfo": [
+                "String getJVMInfo();",
+                "String",
+                "",
+                "developer:zhangkangkang,done"
+            ],
+            "getAPIVersion": [
+                "String getAPIVersion();",
+                "String",
+                "",
+                "developer:zhangkangkang,done"
+            ],
+            "getCPUOccupancyRate": [
+                "int getCPUOccupancyRate();",
+                "int",
+                "",
+                "developer:zhangkangkang,done"
+            ],
+            "getRAMOccupancyRate": [
+                "int getRAMOccupancyRate();",
+                "int",
+                "",
+                "developer:zhangkangkang,done"
+            ],
+            "getFlashOccupancyRate": [
+                "int getFlashOccupancyRate();",
+                "int",
+                ""
+            ],
+            "getExceptionInfo": [
+                "String getExceptionInfo();",
+                "String",
+                ""
+            ],
+            "getAppInfoByName": [
+                "String getAppInfoByName(String appName);",
+                "String",
+                "String appName"
+            ],
+            "getUsingLocalPortNum": [
+                "String getUsingLocalPortNum(String protocol);",
+                "String",
+                "String protocol"
+            ],
+            "getWarningInfo": [
+                "String getWarningInfo();",
+                "String",
+                ""
+            ]
+        },
+        "DeviceSecretInfoQueryService": {
+            "getDeviceManufacturerOUI": [
+                "String getDeviceManufacturerOUI();",
+                "String",
+                "",
+                "developer:wangling,done"
+            ],
+            "getDeviceSerialNumber": [
+                "String getDeviceSerialNumber();",
+                "String",
+                "",
+                "developer:wangling,done"
+            ],
+            "getDeviceDefaultWebPassword": [
+                "String getDeviceDefaultWebPassword();",
+                "String",
+                "",
+                "developer:wangling,done"
+            ],
+            "getDeviceDefaultSSID1Name": [
+                "String getDeviceDefaultSSID1Name();",
+                "String",
+                "",
+                "developer:wangling,done"
+            ],
+            "getDeviceDefaultSSID1Password": [
+                "String getDeviceDefaultSSID1Password();",
+                "String",
+                "",
+                "developer:wangling,done"
+            ],
+            "getDevicePassword": [
+                "String getDevicePassword();",
+                "String",
+                "",
+                "developer:wangling,done"
+            ]
+        },
+        "DeviceAccessRightQueryService": {
+            "getFTPRightInfo": [
+                "String getFTPRightInfo();",
+                "String",
+                "",
+                "developer:wangling,done"
+            ],
+            "getSambaRightInfo": [
+                "String getSambaRightInfo();",
+                "String",
+                "",
+                "developer:wangling,done"
+            ],
+            "getHTTPRightInfo": [
+                "String getHTTPRightInfo();",
+                "String",
+                "",
+                "developer:wangling,done"
+            ]
+        },
+        "DeviceAccessRightConfigService": {
+            "setFTPRight": [
+                "int setFTPRight(int right, boolean anonymous);",
+                "int",
+                "int right, boolean anonymous",
+                "developer:wangling,done"
+            ],
+            "setSambaRight": [
+                "int setSambaRight(int right, boolean anonymous);",
+                "int",
+                "int right, boolean anonymous",
+                "developer:wangling,done"
+            ],
+            "setHTTPRight": [
+                "int setHTTPRight(int right);",
+                "int",
+                "int right",
+                "developer:wangling,done"
+            ],
+            "addFTPAccount": [
+                "int addFTPAccount(String username, String password);",
+                "int",
+                "String username, String password",
+                "developer:wangling,done"
+            ],
+            "deleteFTPAccount": [
+                "int deleteFTPAccount(String username);",
+                "int",
+                "String username",
+                "developer:wangling,done"
+            ],
+            "deleteAllFTPAccount": [
+                "int deleteAllFTPAccount();",
+                "int",
+                "",
+                "developer:wangling,done"
+            ],
+            "addSambaAccount": [
+                "int addSambaAccount(String username, String password);",
+                "int",
+                "String username, String password",
+                "developer:wangling,done"
+            ],
+            "deleteSambaAccount": [
+                "int deleteSambaAccount(String username);",
+                "int",
+                "String username",
+                "developer:wangling,done"
+            ],
+            "deleteAllSambaAccount": [
+                "int deleteAllSambaAccount();",
+                "int",
+                "",
+                "developer:wangling,done"
+            ],
+            "setHTTPUserPassword": [
+                "int setHTTPUserPassword(String password);",
+                "int",
+                "String password",
+                "developer:wangling,done"
+            ]
+        },
+        "DeviceRsetService": {
+            "reset": [
+                "int reset();",
+                "int",
+                "",
+                "developer:fangchao,done"
+            ]
+        },
+        "UsbService": {
+            "usbRegister": [
+                "int usbRegister(BundleContext context, int devTypes);",
+                "int",
+                "BundleContext context, int devTypes",
+                "developer:zhangxuesheng,done"
+            ],
+            "usbUnregister": [
+                "int usbUnregister(BundleContext context);",
+                "int",
+                "BundleContext context",
+                "developer:zhangxuesheng,done"
+            ],
+            "usbLock": [
+                "int usbLock(int devId);",
+                "int",
+                "int devId",
+                "developer:zhangxuesheng,done"
+            ],
+            "usbUnlock": [
+                "int usbUnlock(int devId);",
+                "int",
+                "int devId",
+                "developer:zhangxuesheng,done"
+            ],
+            "usbOpen": [
+                "int usbOpen(int devId);",
+                "int",
+                "int devId",
+                "developer:zhangxuesheng,done"
+            ],
+            "usbDataAvailable": [
+                "int usbDataAvailable(int handle);",
+                "int",
+                "int handle",
+                "developer:zhangxuesheng,done"
+            ],
+            "usbRead": [
+                "int usbRead(int handle, byte[] buf, int offset, int count, int timeout);",
+                "int",
+                "int handle, byte[] buf, int offset, int count, int timeout",
+                "developer:zhangxuesheng,done"
+            ],
+            "usbWrite": [
+                "int usbWrite(int handle, byte[] buf, int offset, int count);",
+                "int",
+                "int handle, byte[] buf, int offset, int count",
+                "developer:zhangxuesheng,done"
+            ],
+            "usbSetSerial": [
+                "int usbSetSerial(int handle, int bandRate, int parity, int dataBits, int stopBits, boolean hwFlowCtrl, boolean swFlowCtl);",
+                "int",
+                "int handle, int bandRate, int parity, int dataBits, int stopBits, boolean hwFlowCtrl, boolean swFlowCtl",
+                "developer:zhangxuesheng,done"
+            ],
+            "usbClose": [
+                "int usbClose(int handle);",
+                "int",
+                "int handle",
+                "developer:zhangxuesheng,done"
+            ],
+            "getStorageInfo": [
+                "String getStorageInfo();",
+                "String",
+                "",
+                "developer:zhangxuesheng,done"
+            ]
+        },
+        "DeviceConfigService": {
+            "setLedSwitch": [
+                "int setLedSwitch(boolean enableState);",
+                "int",
+                "boolean enableState",
+                "developer:zhangxuesheng"
+            ]
+        },
+        "RegistrationService": {
+            "setPasswordRegistration": [
+                "int setPasswordRegistration(String password, int limit, int times, String province);",
+                "int",
+                "String password, int limit, int times, String province",
+                "developer:fangchao,done"
+            ],
+            "getPasswordRegistrationInfo": [
+                "String getPasswordRegistrationInfo();",
+                "String",
+                "",
+                "developer:fangchao,done"
+            ]
+        }
+    }
+}

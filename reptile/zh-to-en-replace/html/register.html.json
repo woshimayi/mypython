@@ -1,0 +1,22 @@
+{
+    "中国移动": "China Mobile",
+    "网关名称:": "Gateway Name:",
+    "全光组网终端": "All-optical networking terminal",
+    "网关型号:": "Gateway Model:",
+    "欢迎您！": "Welcome!",
+    "返回登录页面": "Return to login page",
+    "终端注册": "Terminal registration",
+    "请插紧光纤并确认光信号灯已处于熄灭状态。": "Please plug in the optical fiber and confirm that the optical signal light is off.",
+    "准确输入“": "Enter the \"",
+    "”，点击“确定”进行注册。": "”, click “OK” to register.",
+    "在注册及业务下发过程中（10 分钟内）不要断电、不要拔光纤。": "Do not cut off the power or unplug the optical fiber during the registration and service delivery process (within 10 minutes).",
+    "本注册功能仅用于新设备的认证及业务下发，已正常在用设备请勿重新注册。": "This registration function is only used for the authentication and service delivery of new devices. Please do not re-register devices that are already in normal use.",
+    "密码": "password",
+    "当前输入了": "Currently entered",
+    "位password": "password",
+    "确定": "Sure",
+    "重置": "Reset",
+    "正在注册OLT": "Registering OLT",
+    "出错！": "Error!",
+    "返回": "return"
+}

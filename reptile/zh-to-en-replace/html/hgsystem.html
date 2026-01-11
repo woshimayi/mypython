@@ -1,0 +1,2281 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+<title>中国移动</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link rel="stylesheet" href="css/bootstrap-4.3.1.min.css">
+<link rel="stylesheet" href="css/bootstrap-hg.css">
+<link rel="stylesheet" href="css/bootstrap-hg-wide.css">
+<link rel="stylesheet" href="css/easyui.css">
+<link rel="stylesheet" href="css/icon.css">
+
+<script src="js/jquery-3.6.0.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap-4.3.1.min.js"></script>
+<script src="js/jquery.easyui.min.js"></script>
+<script src="js/hgs_public_def.js"></script>
+<script src="js/hgs_validator.js"></script>
+<script src="js/echarts.min.js"></script>
+
+<style>
+
+</style>
+
+</head>
+
+<body class="hide">
+	<nav class="navbar">
+		<a class="navbar-brand logo" href="#" id="logo" >HGS</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<ul class="nav justify-content-end">
+			<li class="nav-item"><a class="nav-link" id="welcome">欢迎您！</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" id="DoLogout" href="#">退出</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#" id="upgradeVersion">升级版本</a>
+			</li>
+		</ul>
+	</nav>
+	
+	<div class="container" id="context">
+		<div class="row">
+			<div class="col-sm-2 col-md-2 side_bar left_margin">
+				<h1><span id="focus_page">状态</span></h1>
+			</div>
+			<div class="col-sm-10 col-md-10">
+				<ul class="nav nav_main" id="main_nav">
+					<li class="nav-item">
+						<a class="nav-link active" href="#" target_page="status">状态</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#" target_page="debug">调试</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#" target_page="maintenance" id="navMainMaintenance">维护</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#" target_page="CMS">CMS</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#" target_page="LOG">日志</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#" target_page="HBUS">HBUS</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#" target_page="OSGI">OSGI</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#" target_page="AHSAPD">AOSNET</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#" target_page="BLINK">BLINK</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#" target_page="MF">纳管MF</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#" target_page="help">帮助</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+
+		<div class="page" page="status">
+			<div class="row">
+				<div class="col-sm-2 col-lg-2 side_bar left_margin">
+				</div>
+				<div class="col-sm-10 col-lg-10">
+					<ul class="nav nav_sub">
+						<li class="nav-item">
+							<a class="nav-link active" href="#" target_page="device_info" hgs_first_target_page="1" >设备信息</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#" target_page="networkside_info">网络侧信息</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#" target_page="cpu_info">CPU</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#" target_page="memory_info">内存</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#" target_page="stream_stat">流量</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#" target_page="self_check">自检</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#" target_page="statistics">统计</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#" target_page="share_memory">共享内存</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#" target_page="hbus_stat_chart">hbus</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="row subpage" page="device_info">
+				<div class="col-sm-2 col-lg-2 side_bar">
+					<ul class="nav flex-column nav-pills">
+						<li class="nav-item">
+							<a class="nav-link  active changeView" href="#" hgs_sub_nav="dev_info" hgs_first_sub_nav="1" >设备信息</a>
+						</li>
+					</ul>
+				</div>
+				<div class="col-sm-10 col-lg-10 hgs_content">
+					<div hgs_sub_target="dev_info" >
+						<div class="row"  >
+							<div class="col-sm-12 col-lg-12" >
+								<h6>设备信息</h6>
+								<div class="row">
+									<div class="content_input_title">
+										<span>运营商</span>
+									</div>
+									<div class="content_input">
+										<span hgs_static_key="CustomerChineseName"></span>
+									</div>
+								</div>
+								<div class="row">
+									<div class="content_input_title">
+										<span>设备型号</span>
+									</div>
+									<div class="content_input">
+										<span hgs_static_key="ModelName"></span>
+									</div>
+								</div>
+								<div class="row">
+									<div class="content_input_title">
+										<span>设备标识号</span>
+									</div>
+									<div class="content_input">
+										<span hgs_static_key="SerialNumber"></span>
+									</div>
+								</div>
+								<div class="row">
+									<div class="content_input_title">
+										<span>软件版本</span>
+									</div>
+									<div class="content_input">
+										<span hgs_static_key="SoftwareVersion"></span>
+									</div>
+								</div>
+								<div class="row">
+									<div class="content_input_title">
+										<span>硬件版本</span>
+									</div>
+									<div class="content_input">
+										<span hgs_static_key="HardwareVersion"></span>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<hr/>
+						<h6>版本信息</h6>
+						<div class="row">
+							<div class="col-sm-12 col-lg-12" >
+								<div id="HGST_HG_VERSION">
+								</div>
+							</div>					
+						</div>
+					</div>
+
+				</div>
+	
+			</div>
+			<div class="row subpage" page="networkside_info">
+				<div class="col-sm-2 col-lg-2 side_bar">
+					<ul class="nav flex-column nav-pills">
+						<li class="nav-item">
+							<a class="nav-link  active changeView" href="#" hgs_sub_nav="iptables_info" hgs_first_sub_nav="1" >iptables</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link  changeView" href="#" hgs_sub_nav="ip6tables_info" hgs_first_sub_nav="1" >ip6tables</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link  changeView" href="#" hgs_sub_nav="ebtables_info" hgs_first_sub_nav="1" >ebtables</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link  changeView" href="#" hgs_sub_nav="arptables_info" hgs_first_sub_nav="1" >arptables</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link  changeView" href="#" hgs_sub_nav="ifconfig_info" hgs_first_sub_nav="1" >ifconfig</a>
+						</li>
+					</ul>
+				</div>
+				<div class="col-sm-10 col-lg-10 hgs_content">
+					<div hgs_sub_target="iptables_info" >
+						<div class="row"><span class="rowComments">点击<a href="/iptables" target="_blank">这里</a>在新窗口显示</span>
+						</div>
+					</div>
+					<div hgs_sub_target="ip6tables_info" >
+						<div class="row"><span class="rowComments">点击<a href="/ip6tables" target="_blank">这里</a>在新窗口显示</span>
+						</div>
+					</div>
+					<div hgs_sub_target="ebtables_info" >
+						<div class="row"><span class="rowComments">点击<a href="/ebtables" target="_blank">这里</a>在新窗口显示</span>
+						</div>
+					</div>
+					<div hgs_sub_target="arptables_info" >
+						<div class="row"><span class="rowComments">点击<a href="/arptables" target="_blank">这里</a>在新窗口显示</span>
+						</div>
+					</div>
+					<div hgs_sub_target="ifconfig_info" >
+						<div class="row"><span class="rowComments">点击<a href="/ifconfig" target="_blank">这里</a>在新窗口显示</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row subpage" page="cpu_info">
+				<div class="col-sm-2 col-lg-2 side_bar">
+					<ul class="nav flex-column nav-pills">
+						<li class="nav-item">
+							<a class="nav-link  active changeView" href="#" hgs_sub_nav="cpu_usage" hgs_first_sub_nav="1" >CPU使用率</a>
+						</li>
+					</ul>
+				</div>
+				<div class="col-sm-10 col-lg-10 hgs_content">
+					<div hgs_sub_target="cpu_usage">
+						<div class="row">
+							<div class="col-sm-12 col-lg-12" >
+								<div id="HGS_CPU_USAGE">
+									
+								</div>
+							</div>					
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row subpage" page="memory_info">
+				<div class="col-sm-2 col-lg-2 side_bar">
+					<ul class="nav flex-column nav-pills">
+						<li class="nav-item">
+							<a class="nav-link  active changeView" href="#" hgs_sub_nav="memory_info" hgs_first_sub_nav="1" >内存使用率</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link  changeView" href="#" hgs_sub_nav="process_memory" >进程内存趋势图</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link  changeView" href="#" hgs_sub_nav="java_memory" >java进程内存趋势图</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link  changeView" href="#" hgs_sub_nav="total_memory" >系统内存趋势图</a>
+						</li>
+					</ul>
+				</div>
+				<div class="col-sm-10 col-lg-10 hgs_content">
+					<div hgs_sub_target="memory_info">
+						<div class="row">
+							<div class="col-sm-12 col-lg-12" >
+								<div id="HGS_MEM_USAGE">
+									
+								</div>
+							</div>					
+						</div>
+					</div>
+					<div hgs_sub_target="process_memory">
+						<div class="row">
+							<div class="col-sm-12 col-lg-12" >
+								<div id="HGS_MEM_PROCESS">
+									
+								</div>
+							</div>					
+						</div>
+					</div>
+					<div hgs_sub_target="java_memory">
+						<div class="row">
+							<div class="col-sm-12 col-lg-12" >
+								<div id="HGS_MEM_JAVA_PROCESS">
+									
+								</div>
+							</div>					
+						</div>
+					</div>
+					<div hgs_sub_target="total_memory">
+						<div class="row">
+							<div class="col-sm-12 col-lg-12" >
+								<div id="HGS_MEM_TOTAL">
+									
+								</div>
+							</div>					
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row subpage" page="stream_stat">
+				<div class="col-sm-2 col-lg-2 side_bar">
+					<ul class="nav flex-column nav-pills">
+						<li class="nav-item">
+							<a class="nav-link  active changeView" href="#" hgs_sub_nav="stream_stat" hgs_first_sub_nav="1" >PON口流量统计</a>
+						</li>
+					</ul>
+				</div>
+				<div class="col-sm-10 col-lg-10 hgs_content">
+					<div hgs_sub_target="stream_stat">
+						<div class="row">
+							<div class="col-sm-12 col-lg-12" >
+								<div id="HGS_PON_STREAM">
+									
+								</div>
+							</div>					
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row subpage" page="self_check">
+				<div class="col-sm-2 col-lg-2 side_bar">
+					<ul class="nav flex-column nav-pills">
+						<li class="nav-item">
+							<a class="nav-link  active changeView" href="#" hgs_sub_nav="self_check" hgs_first_sub_nav="1" >自检状态</a>
+						</li>
+					</ul>
+				</div>
+				<div class="col-sm-10 col-lg-10 hgs_content">
+					<div hgs_sub_target="self_check">
+						<h6>自检状态显示</h6>
+						<div class="row rowComments">
+							<div class="col-sm-10 col-lg-10">
+								<span>值为1时正常,值为0时异常,没有相应的自检id时说明此项还未进行检查(可能是时机未到)</span>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-12 col-lg-12" >
+								<div id="HGST_SELF_CHECK">
+								</div>
+							</div>					
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row subpage" page="statistics">
+				<div class="col-sm-2 col-lg-2 side_bar">
+					<ul class="nav flex-column nav-pills">
+						<li class="nav-item">
+							<a class="nav-link  active changeView" href="#" hgs_sub_nav="statistics32" hgs_first_sub_nav="1" >32位统计值</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link  changeView" href="#" hgs_sub_nav="statistics64" >64位统计值</a>
+						</li>
+					</ul>
+				</div>
+				<div class="col-sm-10 col-lg-10 hgs_content">
+					<div hgs_sub_target="statistics32">
+						<div class="row">
+							<div class="col-sm-12 col-lg-12" >
+								<div id="HGST_32BIT_STAT">
+								</div>
+							</div>					
+						</div>
+					</div>
+					<div hgs_sub_target="statistics64">
+						<div class="row">
+							<div class="col-sm-12 col-lg-12" >
+								<div id="HGST_64BIT_STAT">
+								</div>
+							</div>					
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row subpage" page="share_memory">
+				<div class="col-sm-2 col-lg-2 side_bar">
+					<ul class="nav flex-column nav-pills">
+						<li class="nav-item">
+							<a class="nav-link  active changeView" href="#" hgs_sub_nav="shareMem4Bytes" hgs_first_sub_nav="1" >4字节共享内存</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link  changeView" href="#" hgs_sub_nav="shareMem8Bytes" >8字节共享内存</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link  changeView" href="#" hgs_sub_nav="shareMem16Bytes" >16字节共享内存</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link  changeView" href="#" hgs_sub_nav="shareMem64Bytes" >64字节共享内存</a>
+						</li>
+					</ul>
+				</div>
+				<div class="col-sm-10 col-lg-10 hgs_content">
+					<div hgs_sub_target="shareMem4Bytes">
+						<div class="row">
+							<div class="col-sm-12 col-lg-12" >
+								<div id="HGST_SHAREMEM_4BYTES">
+								</div>
+							</div>					
+						</div>
+					</div>
+					<div hgs_sub_target="shareMem8Bytes">
+						<div class="row">
+							<div class="col-sm-12 col-lg-12">
+								<div id="HGST_SHAREMEM_8BYTES"></div>
+							</div>
+						</div>
+					</div>
+					<div hgs_sub_target="shareMem16Bytes">
+						<div class="row">
+							<div class="col-sm-12 col-lg-12" >
+								<div id="HGST_SHAREMEM_16BYTES">
+								</div>
+							</div>					
+						</div>
+					</div>
+					<div hgs_sub_target="shareMem64Bytes">
+						<div class="row">
+							<div class="col-sm-12 col-lg-12" >
+								<div id="HGST_SHAREMEM_64BYTES">
+								</div>
+							</div>					
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="row subpage" page="hbus_stat_chart">
+				<div class="col-sm-2 col-lg-2 side_bar">
+					<ul class="nav flex-column nav-pills">
+						<li class="nav-item">
+							<a class="nav-link  active changeView" href="#" hgs_sub_nav="hbus_msg_stat" hgs_first_sub_nav="1" >hbus全局消息统计</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link  changeView" href="#" hgs_sub_nav="hgcms_stat" hgs_first_sub_nav="1" >hgcms统计</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link  changeView" href="#" hgs_sub_nav="mib_stat" hgs_first_sub_nav="1" >MIB操作统计</a>
+						</li>
+					</ul>
+				</div>
+				<div class="col-sm-10 col-lg-10 hgs_content">
+					<div hgs_sub_target="hbus_msg_stat">
+						<div class="row">
+							<div class="col-sm-12 col-lg-12" >
+								<div id="HGS_HBUS_MSG_STAT">
+									
+								</div>
+							</div>					
+						</div>
+					</div>
+
+					<div hgs_sub_target="hgcms_stat">
+						<div class="row">
+							<div class="col-sm-12 col-lg-12" >
+								<div id="HGS_HGCMS_STAT">
+									
+								</div>
+							</div>					
+						</div>
+					</div>
+
+					<div hgs_sub_target="mib_stat">
+						<div class="row">
+							<div class="col-sm-12 col-lg-12" >
+								<div id="HGS_MIB_STAT">
+									
+								</div>
+							</div>					
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+
+		<div class="page" page="debug">
+			<div class="row">
+				<div class="col-sm-2 col-lg-2 side_bar left_margin">
+				</div>
+				<div class="col-sm-10 col-lg-10">
+					<ul class="nav nav_sub">
+						<li class="nav-item">
+							<a class="nav-link active" href="#" target_page="debug_page" hgs_first_target_page="1" >页面</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#" target_page="debug_osgi">OSGI</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#" target_page="debug_AOSNET">AOSNET</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#" target_page="debug_REDIS">REDIS</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#" target_page="debug_anti_attack">防攻击</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#" target_page="core_dump">coredump</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#" target_page="telnet_cfg">TELNET</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#" target_page="omci_cfg">OMCI</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#" target_page="config_files">预配置文件</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#" target_page="debug_dev_info">设备信息</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="row subpage" page="debug_page">
+				<div class="col-sm-2 col-lg-2 side_bar">
+					<ul class="nav flex-column nav-pills">
+						<li class="nav-item">
+							<a class="nav-link  active changeView" href="#" hgs_sub_nav="debug_log_switch" hgs_first_sub_nav="1" >页面调试开关</a>
+						</li>
+					</ul>
+				</div>
+				<div class="col-sm-10 col-lg-10 hgs_content">
+					<div hgs_sub_target="debug_log_switch" >
+						<h6>页面调试开关</h6>
+						<div class="row">
+							<div class="col-sm-12 col-lg-12" >
+								<div id="HGST_WEB_SWITCH">
+								</div>
+							</div>					
+						</div>
+						<div class="row"><span class="rowComments">带*号项对性能有影响，仅供调试时使用</span>
+						</div>
+						<div class="row"><span>&nbsp;</span>
+						</div>
+						<div class="row">
+							<div class="content_input_title col-3"></div>
+							<div class="content_input muti_input col-6">
+								<div class="col-3">
+									<input type="button" class="saveBtn" value="保存" hgs_submit_div_id="HGST_WEB_SWITCH">
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<span>&nbsp;</span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			
+
+			<div class="row subpage" page="debug_osgi">
+				<div class="col-sm-2 col-lg-2 side_bar">
+					<ul class="nav flex-column nav-pills">
+						<li class="nav-item">
+							<a class="nav-link  changeView active" href="#" hgs_sub_nav="debug_osgi" hgs_first_sub_nav="1" >OSGI调试开关</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link  changeView" href="#" hgs_sub_nav="switch_osgi" >OSGI开启关闭</a>
+						</li>
+					</ul>
+				</div>
+				<div class="col-sm-10 col-lg-10 hgs_content">
+					<div class="row" hgs_sub_target="debug_osgi">
+						<div class="col-sm-12 col-lg-12" id="HGS_OSGI_DEBUG">
+							<h6>OSGI调试开关</h6>
+							<div class="row">
+								<div class="content_input_title col-3">
+									<span>调试信息打印</span>
+								</div>
+								<div class="content_input col-6">
+									<input type="checkbox" hgs_key="EnableDebug">
+								</div>
+							</div>
+	
+							<div class="row">
+								<span>&nbsp;</span>
+							</div>
+	
+							<div class="row">
+								<div class="content_input_title">
+								</div>
+								<div class="content_input muti_input">
+									<div class="col-3">
+										<input type="button" class="saveBtn" value="保存" hgs_submit_div_id="HGS_OSGI_DEBUG">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="row" hgs_sub_target="switch_osgi">
+						<div class="col-sm-12 col-lg-12" id="HGS_OSGI_SWITCH">
+							<h6>开启或关闭OSGI</h6>
+							<div class="row">
+								<div class="content_input_title col-3">
+									<span>运行OSGI</span>
+								</div>
+								<div class="content_input col-6">
+									<input type="checkbox" id="runOsgiChecked" hgs_key="RunOSGI">
+								</div>
+							</div>
+	
+							<div class="row">
+								<span>&nbsp;</span>
+							</div>
+	
+							<div class="row">
+								<div class="content_input_title">
+								</div>
+								<div class="content_input muti_input">
+									<div class="col-3">
+										<input type="button" class="saveBtn" value="保存" hgs_submit_div_id="HGS_OSGI_SWITCH">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row subpage" page="debug_AOSNET">
+				<div class="col-sm-2 col-lg-2 side_bar">
+					<ul class="nav flex-column nav-pills">
+						<li class="nav-item">
+							<a class="nav-link  changeView active" href="#" hgs_sub_nav="debug_AOSNET" hgs_first_sub_nav="1" >AOSNET调试开关</a>
+						</li>
+					</ul>
+				</div>
+				<div class="col-sm-10 col-lg-10 hgs_content">
+					<div class="row" hgs_sub_target="debug_AOSNET">
+						<div class="col-sm-12 col-lg-12" id="HGS_AOSNET_DEBUG">
+							<h6>AOSNET调试开关</h6>
+							<div class="row rowComments">
+								<div class="col-sm-10 col-lg-10">
+										<span>重定向开关勾选开启时，页面调试数据会直接发送到aosnet进程，去勾选关闭时发送到natived进程</span>
+								</div>
+							</div>
+							<div class="row">
+								<div class="content_input_title col-3">
+									<span>重定向页面调试数据</span>
+								</div>
+								<div class="content_input col-6">
+									<input type="checkbox" hgs_key="EnableRedir">
+								</div>
+							</div>
+							<div class="row">
+								<div class="content_input_title col-3">
+									<span>调试信息打印</span>
+								</div>
+								<div class="content_input col-6">
+									<input type="checkbox" hgs_key="EnableDebug">
+								</div>
+							</div>
+							
+							<div class="row">
+								<div class="content_input_title col-3">
+									<span>运行aosnet进程</span>
+								</div>
+								<div class="content_input col-6">
+									<input type="checkbox" hgs_key="RunAOSNET">
+								</div>
+							</div>
+	
+							<div class="row">
+								<span>&nbsp;</span>
+							</div>
+	
+							<div class="row">
+								<div class="content_input_title">
+								</div>
+								<div class="content_input muti_input">
+									<div class="col-3">
+										<input type="button" class="saveBtn" value="保存" hgs_submit_div_id="HGS_AOSNET_DEBUG">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+			<div class="row subpage" page="debug_REDIS">
+				<div class="col-sm-2 col-lg-2 side_bar">
+					<ul class="nav flex-column nav-pills">
+						<li class="nav-item">
+							<a class="nav-link  changeView active" href="#" hgs_sub_nav="debug_REDIS" hgs_first_sub_nav="1" >Redis调试开关</a>
+						</li>
+					</ul>
+				</div>
+				<div class="col-sm-10 col-lg-10 hgs_content">
+					<div class="row" hgs_sub_target="debug_REDIS">
+						<div class="col-sm-12 col-lg-12" id="HGS_REDIS_DEBUG">
+							<h6>Redis调试开关</h6>
+							<div class="row">
+								<div class="content_input_title col-3">
+									<span>局域网连接支持</span>
+								</div>
+								<div class="content_input col-6">
+									<input type="checkbox" hgs_key="EnableDebug">
+								</div>
+							</div>
+	
+							<div class="row">
+								<span>&nbsp;</span>
+							</div>
+	
+							<div class="row">
+								<div class="content_input_title">
+								</div>
+								<div class="content_input muti_input">
+									<div class="col-3">
+										<input type="button" class="saveBtn" value="保存" hgs_submit_div_id="HGS_REDIS_DEBUG">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+			<div class="row subpage" page="debug_anti_attack">
+				<div class="col-sm-2 col-lg-2 side_bar">
+					<ul class="nav flex-column nav-pills">
+						<li class="nav-item">
+							<a class="nav-link  active changeView" href="#" hgs_sub_nav="debug_anti_attack" hgs_first_sub_nav="1" >防攻击开关</a>
+						</li>
+					</ul>
+				</div>
+				<div class="col-sm-10 col-lg-10 hgs_content">
+					<div hgs_sub_target="debug_anti_attack" >
+						<h6>防攻击调试开关</h6>
+						<div class="row">
+							<div class="col-sm-12 col-lg-12" >
+								<div id="HGST_ANTI_ATTACK_SWITCH">
+								</div>
+							</div>					
+						</div>
+						<div class="row">
+							<div class="content_input_title col-3"></div>
+							<div class="content_input muti_input col-6">
+								<div class="col-3">
+									<input type="button" class="saveBtn" value="保存" hgs_submit_div_id="HGST_ANTI_ATTACK_SWITCH">
+								</div>
+							</div>
+						</div>
+						<hr/>
+						<h6>统计</h6>
+						<div class="row">
+							<div class="col-sm-12 col-lg-12" >
+								<div id="HGST_ANTI_ATTACK_STAT">
+								</div>
+							</div>					
+						</div>
+						<hr/>
+						<h6>监控列表</h6>
+						<div class="row">
+							<div class="col-sm-12 col-lg-12" >
+								<div id="HGST_ANTI_ATTACK_LIST">
+								</div>
+							</div>					
+						</div>
+					</div>
+				</div>
+	
+			</div>
+
+			<div class="row subpage" page="core_dump">
+				<div class="col-sm-2 col-lg-2 side_bar">
+					<ul class="nav flex-column nav-pills">
+						<li class="nav-item">
+							<a class="nav-link  active changeView" href="#" hgs_sub_nav="core_dump_files" hgs_first_sub_nav="1" >coredump</a>
+						</li>
+					</ul>
+				</div>
+				<div class="col-sm-10 col-lg-10 hgs_content">
+					<div hgs_sub_target="core_dump_files" >
+						<h6>coredump文件列表</h6>
+						<div class="row">
+							<div class="col-sm-12 col-lg-12" >
+								<div id="HGST_CORE_DUMP">
+								</div>
+							</div>					
+						</div>
+						<div class="row"><span class="rowComments">提示:</span>
+						</div>
+						<div class="row"><span class="rowComments">选中一行可以下载或删除coredump文件</span>
+						</div>
+						<div class="row"><span class="rowComments">coredump文件会占用插件flash空间，占用过多空间后会导致插件无法正常工作,请下载后及时删除!</span>
+						</div>
+					</div>
+				</div>
+	
+			</div>
+
+			<div class="row subpage" page="telnet_cfg">
+				<div class="col-sm-2 col-lg-2 side_bar">
+					<ul class="nav flex-column nav-pills">
+						<li class="nav-item">
+							<a class="nav-link changeView active" href="#" hgs_sub_nav="telnet_cfg" >telnet配置</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link changeView" href="#" hgs_sub_nav="redir_to_telnet" >重定向</a>
+						</li>
+					</ul>
+				</div>
+				<div class="col-sm-10 col-lg-10 hgs_content">
+					<div class="row" hgs_sub_target="telnet_cfg">
+						<div class="col-sm-12 col-lg-12" id="HGS_TELNET_CFG">
+							<h6>telnet配置</h6>
+							<div class="row">
+								<div class="content_input_title col-3">
+									<span>启用telnet</span>
+								</div>
+								<div class="content_input col-6">
+									<input type="checkbox" hgs_key="TelnetEnable">
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="content_input_title col-3">
+									<span>启用WAN侧</span>
+								</div>
+								<div class="content_input col-6">
+									<input type="checkbox" hgs_key="TelnetWANEnable">
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="content_input_title">
+									<span>用户名</span>
+								</div>
+								<div class="content_input">
+									<input type="input" class="col-sm-8 col-lg-6" hgs_key="TelnetUserName">
+								</div>
+							</div>
+							<div class="row">
+								<div class="content_input_title">
+									<span>密码</span>
+								</div>
+								<div class="content_input">
+									<form class="content_input col-6">
+										<input type="password" hgs_key="TelnetPassword" maxlength="32">
+										<img src="img/eye.png" class="eyePasswd">
+									</form>
+								</div>
+							</div>
+
+							<div class="row">
+								<span>&nbsp;</span>
+							</div>
+
+							<div class="row">
+								<div class="content_input_title">
+								</div>
+								<div class="content_input muti_input">
+									<div class="col-3">
+										<input type="button" class="saveBtn" value="保存" hgs_submit_div_id="HGS_TELNET_CFG">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row" hgs_sub_target="redir_to_telnet">
+						<div class="col-sm-12 col-lg-12" id="HGS_REDIR_TO_TELNET">
+							<h6>串口输出重定向到telnet</h6>
+							<div class="row"><span class="rowComments">此功能暂时不可用!请用命令控制重定向!</span>
+							</div>
+							<div class="row">
+								<div class="content_input_title col-3">
+									<span>启用重定向</span>
+								</div>
+								<div class="content_input col-6">
+									<input type="checkbox" hgs_key="RedirEnable">
+								</div>
+							</div>
+
+							<div class="row">
+								<span>&nbsp;</span>
+							</div>
+
+							<div class="row">
+								<div class="content_input_title">
+								</div>
+								<div class="content_input muti_input">
+									<div class="col-3">
+										<input type="button" class="saveBtn" value="保存" hgs_submit_div_id="HGS_REDIR_TO_TELNET" disabled>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row subpage" page="omci_cfg">
+				<div class="col-sm-2 col-lg-2 side_bar">
+					<ul class="nav flex-column nav-pills">
+						<li class="nav-item">
+							<a class="nav-link changeView active" href="#" hgs_sub_nav="omci_mirror" >OMCI镜像</a>
+						</li>
+					</ul>
+				</div>
+				<div class="col-sm-10 col-lg-10 hgs_content">
+					<div class="row" hgs_sub_target="omci_mirror">
+						<div class="col-sm-12 col-lg-12" id="HGS_OMCI_MIRROR_CFG">
+							<h6>OMCI镜像配置</h6>
+							<div class="row">
+								<div class="content_input_title">
+									<span>镜像目的LAN口</span>
+								</div>
+								<div class="content_input muti_input">
+									<div class="col-4">
+										<input type="radio" name="MirroDestGroup" hgs_key="dest" hgs_checked_value="eth0">网口1
+									</div>
+									<div class="col-4">
+										<input type="radio" name="MirroDestGroup" hgs_key="dest" hgs_checked_value="eth1">网口2
+									</div>
+								</div>
+							</div>
+							<div class="row FEATURE_LANETH_NUM4">
+								<div class="content_input_title">
+					
+								</div>
+								<div class="content_input muti_input">
+									<div class="col-4">
+										<input type="radio" name="MirroDestGroup" hgs_key="dest" hgs_checked_value="eth2">网口3
+									</div>
+									<div class="col-4">
+										<input type="radio" name="MirroDestGroup" hgs_key="dest" hgs_checked_value="eth3">网口4
+									</div>
+								</div>
+							</div>
+					
+							<hr/>
+							<h6>其他</h6>
+					
+							<div class="row">
+								<div class="content_input_title">
+									<span>重启后仍然生效</span>
+								</div>
+								<div class="content_input">
+									<div class="col-4">
+										<input type="checkbox" id="MirrorCfgPersistent" hgs_key="persistent" hgs_checked_value="1">
+									</div>
+								</div>
+							</div>
+					
+					
+							<div class="row">
+								<span>&nbsp;</span>
+							</div>
+							<div class="row">
+								<div class="content_input_title"></div>
+								<div class="content_input muti_input">
+									<div class="col-3">
+										<input type="button" class="saveBtn" value="保存" hgs_submit_div_id="HGS_OMCI_MIRROR_CFG">
+									</div>
+									<div class="col-3">
+										<input type="button" class="deleteBtn" value="清除" hgs_submit_div_id="HGS_OMCI_MIRROR_CFG">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="row subpage" page="config_files">
+				<div class="col-sm-2 col-lg-2 side_bar">
+					<ul class="nav flex-column nav-pills">
+						<li class="nav-item">
+							<a class="nav-link  active changeView" href="#" hgs_sub_nav="core_dump_files" hgs_first_sub_nav="1" >预配置文件列表</a>
+						</li>
+					</ul>
+				</div>
+				<div class="col-sm-10 col-lg-10 hgs_content">
+					<div hgs_sub_target="core_dump_files" >
+						<h6>调试用预配置文件列表</h6>
+						<div class="row">
+							<div class="col-sm-12 col-lg-12" >
+								<div id="HGST_CONFIG_FILES">
+								</div>
+							</div>					
+						</div>
+						<div class="row">
+							<div class="col-sm-12 col-lg-12" >
+								<div class="row"><span class="rowComments">请点击【选择文件】按钮选择配置文件</span>
+								</div>
+								<form enctype="multipart/form-data" id="upgradeCfgFileForm">
+									<input name="file" id="selectUpgradeCfgFileBtn" type="file" class="selectUpgradeVerFileBtnClass"/>
+									<input type="button" id="upgradeCfgFileBtn" disabled value="上传配置文件" class="upgradeVerBtnClass"/>
+								</form>
+								<div class="row"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span id="upgradeCfgFileInfo"></span>
+								</div>
+							</div>
+						</div>
+						<div class="row"><span class="rowComments">提示:</span>
+						</div>
+						<div class="row"><span class="rowComments">选中一行可以下载或删除预配置文件</span>
+						</div>
+						<div class="row"><span class="rowComments">这里的预配置文件仅用于调试,请调试完成后立即删除!否则版本中的预配置文件不能生效!</span>
+						</div>
+					</div>
+				</div>
+	
+			</div>
+
+			<div class="row subpage" page="debug_dev_info">
+				<div class="col-sm-2 col-lg-2 side_bar">
+					<ul class="nav flex-column nav-pills">
+						<li class="nav-item">
+							<a class="nav-link  active changeView" href="#" hgs_sub_nav="debug_dev_info" hgs_first_sub_nav="1" >修改设备信息</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link  changeView" href="#" hgs_sub_nav="region_code">地区码</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link  changeView" href="#" hgs_sub_nav="factory_para">工厂参数</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link  changeView" href="#" hgs_sub_nav="dev_customer_para">自定义设备信息</a>
+						</li>
+					</ul>
+				</div>
+				<div class="col-sm-10 col-lg-10 hgs_content">
+					<div hgs_sub_target="debug_dev_info">
+						<div class="row">
+							<span>&nbsp;</span>
+						</div>
+						<div class="row rowComments">
+							<div class="col-sm-10 col-lg-10">
+									<span>为了方便调试，可以修改软硬件版本号等设备信息，重启后生效！如果为空，则保持原有版本信息。</span>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-12 col-lg-12">
+								<div id="HGST_DBG_DEV_INFO">
+								</div>
+							</div>					
+						</div>
+						<div class="row">
+							<span>&nbsp;</span>
+						</div>
+
+						<div class="row">
+							<div class="content_input_title">
+							</div>
+							<div class="content_input muti_input">
+								<div class="col-3">
+									<input type="button" class="saveBtn" value="保存" hgs_submit_div_id="HGST_DBG_DEV_INFO">
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<span>&nbsp;</span>
+						</div>
+					</div>
+
+					<div hgs_sub_target="region_code">
+						<div class="row">
+							<span>&nbsp;</span>
+						</div>
+						<div class="row rowComments">
+							<div class="col-sm-10 col-lg-10">
+									<span>勾选后然后【保存】，重启后生效!</span>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-12 col-lg-12">
+								<div id="HGST_REGIONC_CODE">
+								</div>
+							</div>					
+						</div>
+						<div class="row">
+							<span>&nbsp;</span>
+						</div>
+
+						<div class="row">
+							<div class="content_input_title">
+							</div>
+							<div class="content_input muti_input">
+								<div class="col-3">
+									<input type="button" class="saveBtn" value="保存" hgs_submit_div_id="HGST_REGIONC_CODE">
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<span>&nbsp;</span>
+						</div>
+					</div>
+
+					<div hgs_sub_target="factory_para">
+						<div class="row">
+							<span>&nbsp;</span>
+						</div>
+						<div class="row rowComments">
+							<div class="col-sm-10 col-lg-10">
+									<span>这里不对数据合法性进行校验，需自己保证数据的合法性！保存后【刷新】以确认数据是否设置成功!</span>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-12 col-lg-12">
+								<div id="HGST_FACTORY_PARA">
+								</div>
+							</div>					
+						</div>
+						<div class="row">
+							<span>&nbsp;</span>
+						</div>
+
+						<div class="row">
+							<div class="content_input_title">
+							</div>
+							<div class="content_input muti_input">
+								<div class="col-3">
+									<input type="button" class="saveBtn" value="保存" hgs_submit_div_id="HGST_FACTORY_PARA">
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<span>&nbsp;</span>
+						</div>
+					</div>
+
+					<div hgs_sub_target="dev_customer_para">
+						<div class="row">
+							<span>&nbsp;</span>
+						</div>
+						<div class="row rowComments">
+							<div class="col-sm-10 col-lg-10">
+									<span></span>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-12 col-lg-12">
+								<div id="HGST_DEV_CUSTOMER_PARA">
+								</div>
+							</div>					
+						</div>
+						<div class="row">
+							<span>&nbsp;</span>
+						</div>
+
+						<div class="row">
+							<div class="content_input_title">
+							</div>
+							<div class="content_input muti_input">
+								<div class="col-3">
+									<input type="button" class="saveBtn" value="保存" hgs_submit_div_id="HGST_DEV_CUSTOMER_PARA">
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<span>&nbsp;</span>
+						</div>
+					</div>
+					
+				</div>
+	
+			</div>
+		</div>
+		<div class="page" page="maintenance">
+			<div class="row">
+				<div class="col-sm-2 col-lg-2 side_bar left_margin">
+				</div>
+				<div class="col-sm-10 col-lg-10">
+					<ul class="nav nav_sub">
+						<li class="nav-item">
+							<a class="nav-link active" href="#" target_page="upgrade_page" hgs_first_target_page="1" >升级</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="row subpage" page="upgrade_page">
+				<div class="col-sm-2 col-lg-2 side_bar">
+					<ul class="nav flex-column nav-pills">
+						<li class="nav-item">
+							<a class="nav-link active changeView" href="#" id="nav_upgrade_version" hgs_sub_nav="upgrade_version" hgs_first_sub_nav="1" >升级版本</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link changeView" href="#" hgs_sub_nav="upgrade_file" hgs_first_sub_nav="1" >更新文件</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link changeView" href="#" hgs_sub_nav="upgrade_exe_file" hgs_first_sub_nav="1" >更新可执行文件</a>
+						</li>
+					</ul>
+				</div>
+				<div class="col-sm-10 col-lg-10 hgs_content">
+					<div class="row" hgs_sub_target="upgrade_version" >
+						<div class="col-sm-12 col-lg-12" >
+							<div class="row"><span class="rowComments">请点击【选择文件】按钮选择升级版本文件!</span>
+							</div>
+							<form enctype="multipart/form-data" id="upgradeVerForm">
+								<input name="file" id="selectUpgradeVerFileBtn" type="file" class="selectUpgradeVerFileBtnClass"/>
+								<input type="button" id="upgradeVerBtn" disabled value="升级版本" class="upgradeVerBtnClass"/>
+							</form>
+							<div id="upgardeProgressBarDiv" class="hide">
+								<progress id="upgardeProgressBar" class="width100"></progress>
+							</div>
+							<div class="row"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span id="upgradeInfo"></span>
+							</div>
+						</div>
+					</div>
+					<div class="row" hgs_sub_target="upgrade_file" >
+						<div class="col-sm-12 col-lg-12" >
+							<div class="row"><span class="rowComments">请点击【选择文件】按钮选择更新文件!</span>
+							</div>
+							<form enctype="multipart/form-data" id="upgradeFileForm">
+								<input name="file" id="selectUpgradeFileBtn" type="file" class="selectUpgradeVerFileBtnClass"/>
+								<input type="button" id="upgradeFileBtn" disabled value="更新文件" class="upgradeVerBtnClass"/>
+							</form>
+							<div class="row"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span id="upgradeFileInfo"></span>
+							</div>
+						</div>
+					</div>
+					<div class="row" hgs_sub_target="upgrade_exe_file" >
+						<div class="col-sm-12 col-lg-12" >
+							<div class="row"><span class="rowComments">请点击【选择文件】按钮选择更新可执行文件!(自动添加可执行属性)</span>
+							</div>
+							<form enctype="multipart/form-data" id="upgradeExeFileForm">
+								<input name="file" id="selectUpgradeExeFileBtn" type="file" class="selectUpgradeVerFileBtnClass"/>
+								<input type="button" id="upgradeExeFileBtn" disabled value="更新可执行文件" class="upgradeVerBtnClass"/>
+							</form>
+							<div class="row"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span id="upgradeExeFileInfo"></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="page" page="CMS">
+			<div class="row">
+				<div class="col-sm-2 col-lg-2 side_bar left_margin">
+				</div>
+				<div class="col-sm-10 col-lg-10">
+					<ul class="nav nav_sub">
+						<li class="nav-item">
+							<a class="nav-link active" href="#" target_page="cms_config" hgs_first_target_page="1" >配置</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#" target_page="cms_processes" >进程</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="row subpage" page="cms_config">
+				<div class="col-sm-2 col-lg-2 side_bar">
+					<ul class="nav flex-column nav-pills">
+						<li class="nav-item">
+							<a class="nav-link active changeView" href="#" id="export_import_cms_cfg" hgs_sub_nav="export_import_cfg" hgs_first_sub_nav="1" >导出和导入</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link changeView" href="#" hgs_sub_nav="dumpmdm" >dumpmdm</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link changeView" href="#" hgs_sub_nav="dumpcfg" >dumpcfg(lastgood.xml)</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link changeView" href="#" hgs_sub_nav="dumpcfg_bk" >dumpcfg(backup_lastgood.xml)</a>
+						</li>
+					</ul>
+				</div>
+				<div class="col-sm-10 col-lg-10 hgs_content">
+					<div class="row" hgs_sub_target="export_import_cfg" >
+						<div class="col-sm-12 col-lg-12" >
+							<div class="row"><span class="rowComments">请点击【选择文件】按钮选择配置文件!</span>
+							</div>
+							<form enctype="multipart/form-data" id="uploadCmsCfg">
+								<input name="file" id="selectUploadCmsCfgBtn" type="file" class="selectUpgradeVerFileBtnClass"/>
+								<input type="button" id="uploadCmsCfgBtn" disabled value="恢复配置" class="upgradeVerBtnClass"/>
+							</form>
+							<input type="button" id="exportCmsCfgBtn" value="导出配置" class="upgradeVerBtnClass"/>
+							<div id="uploadCmsCfgProgressBarDiv" class="hide">
+								<progress id="uploadCmsCfgProgressBar" class="width100"></progress>
+							</div>
+							<div class="row"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span id="uploadCmsCfgInfo"></span>
+							</div>
+						</div>
+					</div>
+					<div class="row" hgs_sub_target="dumpmdm" >
+						<div class="col-sm-12 col-lg-12" >
+							<div class="row"><span class="rowComments">也可以点击这里<a href="/hgdumpmdm" target="_blank">hgdumpmdm</a>全窗口显示(XML格式)</span>
+							</div>
+							<div class="row"><span class="rowComments">注意:某些情况下因为XML中有中文字符，因为中文字符编码原因,浏览器解析XML可能有格式问题,请点击下面纯文本输出</span>
+							</div>
+							<div class="row"><span class="rowComments">也可以点击这里<a href="/hgdumpmdm?format=text" target="_blank">hgdumpmdm</a>全窗口显示(text格式)</span>
+							</div>
+							<textarea rows="100" cols="76" id="HGS_DUMP_MDM" class="hgs_textarea" readonly>
+							</textarea>
+						</div>
+					</div>
+					<div class="row" hgs_sub_target="dumpcfg" >
+						<div class="col-sm-12 col-lg-12" >
+							<div class="row"><span class="rowComments">也可以点击这里<a href="/hgdumpcfg" target="_blank">hgdumpcfg</a>全窗口显示(txt格式)</span>
+							</div>
+							<textarea rows="100" cols="76" id="HGS_DUMP_CFG" class="hgs_textarea" readonly>
+							</textarea>
+						</div>
+					</div>
+					<div class="row" hgs_sub_target="dumpcfg_bk" >
+						<div class="col-sm-12 col-lg-12" >
+							<div class="row"><span class="rowComments">也可以点击这里<a href="/hgdumpcfg?backup=1" target="_blank">hgdumpcfg</a>全窗口显示(txt格式)</span>
+							</div>
+							<textarea rows="100" cols="76" id="HGS_DUMP_BK_CFG" class="hgs_textarea" readonly>
+							</textarea>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row subpage" page="cms_processes">
+				<div class="col-sm-2 col-lg-2 side_bar">
+					<ul class="nav flex-column nav-pills">
+						<li class="nav-item">
+							<a class="nav-link active changeView" href="#" hgs_sub_nav="processRunLog" >进程启动日志</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link changeView" href="#" hgs_sub_nav="cfgProcessRunDelay" >启动延迟调整</a>
+						</li>
+					</ul>
+				</div>
+				<div class="col-sm-10 col-lg-10 hgs_content">
+					<div class="row" hgs_sub_target="processRunLog" id="HGS_PROCESS_RUN_LOG" >
+						<div class="col-sm-12 col-lg-12" >
+							<textarea rows="30" cols="76" id="HGS_PROCESS_START_LOG" class="hgs_textarea" readonly>
+							</textarea>
+						</div>
+					</div>
+					<div class="row" hgs_sub_target="cfgProcessRunDelay" >
+						<div class="col-sm-12 col-lg-12" id="HGS_CFG_PROCESS_RUN_DEALY" >
+							<div class="row">
+								<div class="content_input_title">
+									<span>启用</span>
+								</div>
+								<div class="content_input">
+									<input type="checkbox"  id="cfgProcessRunDelayEnable" hgs_key="Enable">
+								</div>
+							</div>
+							<div class="row"><span class="rowComments">格式为:进程的全路径+空格+延迟秒速,每个进程一行,例如:</span>
+							</div>
+							<div class="row"><span class="rowComments">/bin/miscd 10</span>
+							</div>
+							<textarea rows="30" cols="76" id="HGS_CFG_RUN_DELAY" class="hgs_textarea">
+							</textarea>
+
+							<div class="row">
+							</div>
+
+							<div class="row">
+								<div class="content_input_title">
+								</div>
+								<div class="content_input muti_input">
+									<div class="col-3">
+										<input type="button" class="saveBtn" value="保存" hgs_submit_div_id="HGS_CFG_PROCESS_RUN_DEALY">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="page" page="LOG">
+			<div class="row">
+				<div class="col-sm-2 col-lg-2 side_bar left_margin">
+				</div>
+				<div class="col-sm-10 col-lg-10">
+					<ul class="nav nav_sub">
+						<li class="nav-item">
+							<a class="nav-link active" href="#" target_page="log_record" hgs_first_target_page="1" >日志记录</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link active" href="#" target_page="log_switch">日志开关</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="row subpage" page="log_record">
+				<div class="col-sm-2 col-lg-2 side_bar">
+					<ul class="nav flex-column nav-pills">
+						<li class="nav-item">
+							<a class="nav-link  active changeView" href="#" hgs_sub_nav="sys_log" hgs_first_sub_nav="1" >系统日志</a>
+						</li>
+					</ul>
+				</div>
+				<div class="col-sm-10 col-lg-10 hgs_content">
+					<div hgs_sub_target="sys_log" >
+						<h6>系统日志</h6>
+						<div class="row" hgs_sub_target="dumpmdm" >
+							<div class="col-sm-12 col-lg-12" >
+								<div class="row"><span class="rowComments">循环记录系统日志(开辟一定的内存空间，最新的覆盖最旧的日志)</span>
+								</div>
+								<div class="row"><span class="rowComments">点击<a href="/getSysLog?type=system" target="_blank">这里</a>在新窗口显示系统日志</span>
+								</div>
+							</div>
+						</div>
+
+						<h6>WAN连接日志</h6>
+						<div class="row" hgs_sub_target="dumpmdm" >
+							<div class="col-sm-12 col-lg-12" >
+								<div class="row"><span class="rowComments">循环记录WAN连接日志(开辟一定的内存空间，最新的覆盖最旧的日志)</span>
+								</div>
+								<div class="row"><span class="rowComments">点击<a href="/getSysLog?type=wan" target="_blank">这里</a>在新窗口显示系统日志</span>
+								</div>
+							</div>
+						</div>
+
+						<h6>插件日志</h6>
+						<div class="row" hgs_sub_target="dumpmdm" >
+							<div class="col-sm-12 col-lg-12" >
+								<div class="row"><span class="rowComments">循环记录插件日志(开辟一定的内存空间，最新的覆盖最旧的日志)</span>
+								</div>
+								<div class="row"><span class="rowComments">点击<a href="/getSysLog?type=plugin" target="_blank">这里</a>在新窗口显示系统日志</span>
+								</div>
+							</div>
+						</div>
+
+						<h6>杂项日志</h6>
+						<div class="row" hgs_sub_target="dumpmdm" >
+							<div class="col-sm-12 col-lg-12" >
+								<div class="row"><span class="rowComments">循环记录杂项日志(开辟一定的内存空间，最新的覆盖最旧的日志)</span>
+								</div>
+								<div class="row"><span class="rowComments">点击<a href="/getSysLog?type=misc" target="_blank">这里</a>在新窗口显示系统日志</span>
+								</div>
+							</div>
+						</div>
+						<h6>wifi日志</h6>
+						<div class="row" hgs_sub_target="dumpmdm" >
+							<div class="col-sm-12 col-lg-12" >
+								<div class="row"><span class="rowComments">循环记录杂项日志(开辟一定的内存空间，最新的覆盖最旧的日志)</span>
+								</div>
+								<div class="row"><span class="rowComments">点击<a href="/getSysLog?type=wifi" target="_blank">这里</a>在新窗口显示系统日志</span>
+								</div>
+							</div>
+						</div>
+						<h6>omci日志</h6>
+						<div class="row" hgs_sub_target="dumpmdm" >
+							<div class="col-sm-12 col-lg-12" >
+								<div class="row"><span class="rowComments">循环记录杂项日志(开辟一定的内存空间，最新的覆盖最旧的日志)</span>
+								</div>
+								<div class="row"><span class="rowComments">点击<a href="/getSysLog?type=omci" target="_blank">这里</a>在新窗口显示系统日志</span>
+								</div>
+							</div>
+						</div>
+						<h6>内存日志</h6>
+						<div class="row" hgs_sub_target="dumpmdm" >
+							<div class="col-sm-12 col-lg-12" >
+								<div class="row"><span class="rowComments">循环记录杂项日志(开辟一定的内存空间，最新的覆盖最旧的日志)</span>
+								</div>
+								<div class="row"><span class="rowComments">点击<a href="/getSysLog?type=memory" target="_blank">这里</a>在新窗口显示系统日志</span>
+								</div>
+							</div>
+						</div>
+
+						<hr />
+						<h6>系统日志统计</h6>
+						<div class="row" hgs_sub_target="dumpmdm" >
+							<div class="col-sm-12 col-lg-12" >
+								<div class="row"><span class="rowComments">系统日志统计</span>
+								</div>
+								<div class="row"><span class="rowComments">点击<a href="/getSysLog?type=systemStat" target="_blank">这里</a>在新窗口显示日志自身的统计</span>
+								</div>
+							</div>
+						</div>
+
+						<hr />
+						<h6>系统统计数据</h6>
+						<div class="row" hgs_sub_target="dumpmdm" >
+							<div class="col-sm-12 col-lg-12" >
+								<div class="row"><span class="rowComments">系统统计数据</span>
+								</div>
+								<div class="row"><span class="rowComments">显示特定观察点的计数统计，每调用1次，计数器加1</span>
+								</div>
+								<div class="row"><span class="rowComments">点击<a href="/logShareMemStat" target="_blank">这里</a>在新窗口显示系统统计数据</span>
+								</div>
+							</div>
+						</div>
+
+						<hr />
+						<h6>共享整数数据</h6>
+						<div class="row" hgs_sub_target="dumpmdm" >
+							<div class="col-sm-12 col-lg-12" >
+								<div class="row"><span class="rowComments">共享内存整数数据</span>
+								</div>
+								<div class="row"><span class="rowComments">提供一段共享内存，存取4字节的整数数据，使用前需申请id</span>
+								</div>
+								<div class="row"><span class="rowComments">点击<a href="/logShareMemRw" target="_blank">这里</a>在新窗口显示共享内存整数数据</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row subpage" page="log_switch">
+				<div class="col-sm-2 col-lg-2 side_bar">
+					<ul class="nav flex-column nav-pills">
+						<li class="nav-item">
+							<a class="nav-link  active changeView" href="#" hgs_sub_nav="sys_log" hgs_first_sub_nav="1" >日志开关</a>
+						</li>
+					</ul>
+				</div>
+				<div class="col-sm-10 col-lg-10 hgs_content">
+					<div hgs_sub_target="sys_log" >
+						<h6>开启或者关闭记录日志</h6>
+						<div class="row">
+							<div class="col-sm-12 col-lg-12" >
+								<div id="HGST_LOG_SWITCH">
+								</div>
+							</div>					
+						</div>
+						<div class="row"><span class="rowComments">带*号项对性能有影响，仅供调试时使用</span>
+						</div>
+						<div class="row"><span>&nbsp;</span>
+						</div>
+						<div class="row">
+							<div class="content_input_title col-3"></div>
+							<div class="content_input muti_input col-6">
+								<div class="col-3">
+									<input type="button" class="saveBtn" value="保存" hgs_submit_div_id="HGST_LOG_SWITCH">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="page" page="HBUS">
+			<div class="row">
+				<div class="col-sm-2 col-lg-2 side_bar left_margin">
+				</div>
+				<div class="col-sm-10 col-lg-10">
+					<ul class="nav nav_sub">
+						<li class="nav-item">
+							<a class="nav-link active" href="#" target_page="hbus_stat" hgs_first_target_page="1" >统计</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link active" href="#" target_page="hbus_data">数据</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link active" href="#" target_page="hbus_debug">debug</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="row subpage" page="hbus_stat">
+				<div class="col-sm-2 col-lg-2 side_bar">
+					<ul class="nav flex-column nav-pills">
+						<li class="nav-item">
+							<a class="nav-link active changeView" href="#" hgs_sub_nav="all_stat" hgs_first_sub_nav="1" >全部统计数据</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link changeView" href="#" hgs_sub_nav="global_stat" >全局统计</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link changeView" href="#" hgs_sub_nav="process_stat" >进程统计</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link changeView" href="#" hgs_sub_nav="memory_stat" >内存汇总统计</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link changeView" href="#" hgs_sub_nav="mem_block_stat" >内存按区块统计</a>
+						</li>
+					</ul>
+				</div>
+				<div class="col-sm-10 col-lg-10 hgs_content">
+					<div class="row" hgs_sub_target="all_stat" >
+						<div class="col-sm-12 col-lg-12" >
+							<textarea rows="20" cols="78" id="HGS_HBUS_STAT" class="hgs_textarea" readonly>
+							</textarea>
+						</div>
+					</div>
+					<div class="row" hgs_sub_target="global_stat" >
+						<div class="col-sm-12 col-lg-12" >
+							<h6>全局统计</h6>
+							<div class="row">
+								<div class="col-sm-12 col-lg-12" >
+									<div id="HGST_HBUS_GLOBAL_STAT">
+									</div>
+								</div>					
+							</div>
+						</div>
+					</div>
+					<div class="row" hgs_sub_target="process_stat" >
+						<div class="col-sm-12 col-lg-12" >
+							<h6>多进程统计</h6>
+							<div class="row">
+								<div class="col-sm-12 col-lg-12" >
+									<div id="HGST_HBUS_PROCESS_STAT">
+									</div>
+								</div>					
+							</div>
+							<hr/>
+							<h6>单进程统计</h6>
+							<div id="ShowHbusStatProcessName">请在【多进程统计】表中点击选择一行</div>
+							<div class="row">
+								<div class="col-sm-12 col-lg-12" >
+									<div id="HGST_HBUS_SINGLE_PROCESS_STAT">
+									</div>
+								</div>					
+							</div>
+						</div>
+					</div>
+					<div class="row" hgs_sub_target="memory_stat" >
+						<div class="col-sm-12 col-lg-12" >
+							<h6>内存汇总统计</h6>
+							<div class="row">
+								<div class="col-sm-12 col-lg-12" >
+									<div id="HGST_HBUS_MEMORY_STAT">
+									</div>
+								</div>					
+							</div>
+						</div>
+					</div>
+					<div class="row" hgs_sub_target="mem_block_stat" >
+						<div class="col-sm-12 col-lg-12" >
+							<h6>内存按区块统计</h6>
+							<div class="row">
+								<div class="col-sm-12 col-lg-12" >
+									<div id="HGST_HBUS_MEMORY_BLOCK_STAT">
+									</div>
+								</div>					
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row subpage" page="hbus_data">
+				<div class="col-sm-2 col-lg-2 side_bar">
+					<ul class="nav flex-column nav-pills">
+						<li class="nav-item">
+							<a class="nav-link active changeView" href="#" hgs_sub_nav="hbus_msg_data" hgs_first_sub_nav="1" >消息队列</a>
+						</li>
+					</ul>
+					<ul class="nav flex-column nav-pills">
+						<li class="nav-item">
+							<a class="nav-link changeView" href="#" hgs_sub_nav="hbus_ping_process">ping进程</a>
+						</li>
+					</ul>
+				</div>
+				<div class="col-sm-10 col-lg-10 hgs_content">
+					<div class="row" hgs_sub_target="hbus_msg_data" >
+						<div class="col-sm-12 col-lg-12" >
+							<h6>进程列表</h6>
+							<div class="row">
+								<div class="col-sm-12 col-lg-12" >
+									<div id="HGST_HBUS_DAEMON_LIST">
+									</div>
+								</div>					
+							</div>
+							<hr/>
+							<h6>消息队列中数据</h6>
+							<div id="hbusDaemonProcessName">请在【进程列表】中选择一行</div>
+							<div class="row">
+								<div class="col-sm-12 col-lg-12" >
+									<div id="HGST_HBUS_DAEMON_PROCESS_MSG_LIST">
+									</div>
+								</div>					
+							</div>
+							<hr/>
+							<h6>数据DUMP</h6>
+							<div class="row">
+								<div class="col-sm-12 col-lg-12" >
+									<textarea rows="20" cols="78" id="HGS_HBUS_DUMP_DATA" class="hgs_textarea" readonly>
+									</textarea>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row" hgs_sub_target="hbus_ping_process" >
+						<div class="col-sm-12 col-lg-12" >
+							<h6>PING进程统计</h6>
+							<div class="row">
+								<div class="col-sm-12 col-lg-12" >
+									<div id="HGST_HBUS_PING_PROCESS">
+									</div>
+								</div>					
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row subpage" page="hbus_debug">
+				<div class="col-sm-2 col-lg-2 side_bar">
+					<ul class="nav flex-column nav-pills">
+						<li class="nav-item">
+							<a class="nav-link active changeView" href="#" hgs_sub_nav="hbus_debug_switch" hgs_first_sub_nav="1" >debug开关</a>
+						</li>
+					</ul>
+				</div>
+				<div class="col-sm-10 col-lg-10 hgs_content">
+					<div class="row" hgs_sub_target="hbus_debug_switch" >
+						<div class="col-sm-12 col-lg-12" >
+							<div class="row"><span class="rowComments">调试级别越高（数字越大）,debug信息越多</span>
+							</div>
+						</div>
+						<div class="col-sm-12 col-lg-12" >
+							<div class="row"><span class="rowComments">点击这里<a href="/hbusDebug?debug=0" target="_blank">关闭所有调试开关</a></span>
+							</div>
+						</div>
+						<div class="col-sm-12 col-lg-12" >
+							<div class="row"><span class="rowComments">点击这里<a href="/hbusDebug" target="_blank">显示调试开关级别</a></span>
+							</div>
+						</div>
+						<div class="col-sm-12 col-lg-12" >
+							<div class="row"><span class="rowComments">点击这里<a href="/hbusDebug?debug=1" target="_blank">开启调试1级开关</a></span>
+							</div>
+						</div>
+						<div class="col-sm-12 col-lg-12" >
+							<div class="row"><span class="rowComments">点击这里<a href="/hbusDebug?debug=2" target="_blank">开启调试2级开关</a></span>
+							</div>
+						</div>
+						<div class="col-sm-12 col-lg-12" >
+							<div class="row"><span class="rowComments">点击这里<a href="/hbusDebug?debug=3" target="_blank">开启调试3级开关</a></span>
+							</div>
+						</div>
+
+						<hr />
+						<div class="col-sm-12 col-lg-12" >
+							<div class="row"><span class="rowComments">选择监控的进程ipcId，当为0时不监控任何进程，不为0时只输出ipcId匹配的debug信息</span>
+							</div>
+						</div>
+
+						<div class="col-sm-12 col-lg-12" >
+							<div class="row">
+								<div class="content_input_title">
+									<span>hbus进程间通信id</span>
+								</div>
+								<div class="content_input">
+									<select class="col-sm-6 col-lg-4" id="hbusIpcId">
+										<option value="0">0</option>
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+										<option value="4">4</option>
+										<option value="5">5</option>
+										<option value="6">6</option>
+										<option value="7">7</option>
+										<option value="8">8</option>
+										<option value="9">9</option>
+										<option value="10">10</option>
+										<option value="11">11</option>
+										<option value="12">12</option>
+									</select>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="page" page="OSGI">
+			<div class="row">
+				<div class="col-sm-2 col-lg-2 side_bar left_margin">
+				</div>
+				<div class="col-sm-10 col-lg-10">
+					<ul class="nav nav_sub">
+						<li class="nav-item">
+							<a class="nav-link active" href="#" target_page="accessservices" hgs_first_target_page="1" >接入</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#" target_page="transferservices">传送</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#" target_page="lanservices">联网</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#" target_page="addressservices">地址</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#" target_page="voipservices">VoIP</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#" target_page="commservices">通用</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="row subpage" page="accessservices">
+				<div class="col-sm-2 col-lg-2 side_bar">
+					<ul class="nav flex-column nav-pills">
+
+					</ul>
+				</div>
+				<div class="col-sm-10 col-lg-10 hgs_content">
+					
+				</div>
+			</div>
+			<div class="row subpage" page="transferservices">
+				<div class="col-sm-2 col-lg-2 side_bar">
+					<ul class="nav flex-column nav-pills">
+
+					</ul>
+				</div>
+				<div class="col-sm-10 col-lg-10 hgs_content">
+					
+				</div>
+			</div>
+			<div class="row subpage" page="lanservices">
+				<div class="col-sm-2 col-lg-2 side_bar">
+					<ul class="nav flex-column nav-pills">
+
+					</ul>
+				</div>
+				<div class="col-sm-10 col-lg-10 hgs_content">
+					
+				</div>
+			</div>
+			<div class="row subpage" page="addressservices">
+				<div class="col-sm-2 col-lg-2 side_bar">
+					<ul class="nav flex-column nav-pills">
+
+					</ul>
+				</div>
+				<div class="col-sm-10 col-lg-10 hgs_content">
+					
+				</div>
+			</div>
+			<div class="row subpage" page="voipservices">
+				<div class="col-sm-2 col-lg-2 side_bar">
+					<ul class="nav flex-column nav-pills">
+
+					</ul>
+				</div>
+				<div class="col-sm-10 col-lg-10 hgs_content">
+					
+				</div>
+			</div>
+			<div class="row subpage" page="commservices">
+				<div class="col-sm-2 col-lg-2 side_bar">
+					<ul class="nav flex-column nav-pills">
+
+					</ul>
+				</div>
+				<div class="col-sm-10 col-lg-10 hgs_content">
+					
+				</div>
+			</div>
+		</div>
+
+		<div class="page" page="AHSAPD">
+			<div class="row">
+				<div class="col-sm-2 col-lg-2 side_bar left_margin">
+				</div>
+				<div class="col-sm-10 col-lg-10">
+					<ul class="nav nav_sub">
+						<li class="nav-item">
+							<a class="nav-link" href="#" target_page="basic" hgs_first_target_page="1">basic</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#" target_page="hardware">hardware</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#" target_page="port">port</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#" target_page="uplink">uplink</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#" target_page="sta">sta</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#" target_page="wifi">wifi</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#" target_page="wifistats">wifi.stats</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#" target_page="neighbor">neighbor</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#" target_page="roaming">roaming</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#" target_page="timedtask">timedtask</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#" target_page="macfilter">macfilter</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#" target_page="control">control</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#" target_page="config">config</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#" target_page="mesh">mesh</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#" target_page="limit">limit</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#" target_page="detection">detection</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#" target_page="wificsi">wifi.csi</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#" target_page="qos">qos</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#" target_page="vlan">vlan</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="row subpage" page="basic">
+				<div class="col-sm-2 col-lg-2 side_bar">
+					<ul class="nav flex-column nav-pills">
+	
+					</ul>
+				</div>
+				<div class="col-sm-10 col-lg-10 hgs_content">
+					
+				</div>
+			</div>
+			<div class="row subpage" page="hardware">
+				<div class="col-sm-2 col-lg-2 side_bar">
+						<ul class="nav flex-column nav-pills">
+	
+						</ul>
+				</div>
+				<div class="col-sm-10 col-lg-10 hgs_content">
+	
+				</div>
+			</div>
+			<div class="row subpage" page="port">
+				<div class="col-sm-2 col-lg-2 side_bar">
+						<ul class="nav flex-column nav-pills">
+	
+						</ul>
+				</div>
+				<div class="col-sm-10 col-lg-10 hgs_content">
+	
+				</div>
+			</div>
+			<div class="row subpage" page="uplink">
+				<div class="col-sm-2 col-lg-2 side_bar">
+						<ul class="nav flex-column nav-pills">
+	
+						</ul>
+				</div>
+				<div class="col-sm-10 col-lg-10 hgs_content">
+	
+				</div>
+			</div>
+			<div class="row subpage" page="sta">
+				<div class="col-sm-2 col-lg-2 side_bar">
+						<ul class="nav flex-column nav-pills">
+	
+						</ul>
+				</div>
+				<div class="col-sm-10 col-lg-10 hgs_content">
+	
+				</div>
+			</div>
+			<div class="row subpage" page="wifi">
+				<div class="col-sm-2 col-lg-2 side_bar">
+						<ul class="nav flex-column nav-pills">
+	
+						</ul>
+				</div>
+				<div class="col-sm-10 col-lg-10 hgs_content">
+	
+				</div>
+			</div>
+			<div class="row subpage" page="wifistats">
+				<div class="col-sm-2 col-lg-2 side_bar">
+						<ul class="nav flex-column nav-pills">
+	
+						</ul>
+				</div>
+				<div class="col-sm-10 col-lg-10 hgs_content">
+	
+				</div>
+			</div>
+			<div class="row subpage" page="neighbor">
+				<div class="col-sm-2 col-lg-2 side_bar">
+						<ul class="nav flex-column nav-pills">
+	
+						</ul>
+				</div>
+				<div class="col-sm-10 col-lg-10 hgs_content">
+	
+				</div>
+			</div>
+			<div class="row subpage" page="roaming">
+					<div class="col-sm-2 col-lg-2 side_bar">
+							<ul class="nav flex-column nav-pills">
+	
+							</ul>
+					</div>
+					<div class="col-sm-10 col-lg-10 hgs_content">
+	
+					</div>
+			</div>
+			<div class="row subpage" page="timedtask">
+					<div class="col-sm-2 col-lg-2 side_bar">
+							<ul class="nav flex-column nav-pills">
+	
+							</ul>
+					</div>
+					<div class="col-sm-10 col-lg-10 hgs_content">
+	
+					</div>
+			</div>
+			<div class="row subpage" page="macfilter">
+					<div class="col-sm-2 col-lg-2 side_bar">
+							<ul class="nav flex-column nav-pills">
+	
+							</ul>
+					</div>
+					<div class="col-sm-10 col-lg-10 hgs_content">
+	
+					</div>
+			</div>
+			<div class="row subpage" page="control">
+					<div class="col-sm-2 col-lg-2 side_bar">
+							<ul class="nav flex-column nav-pills">
+	
+							</ul>
+					</div>
+					<div class="col-sm-10 col-lg-10 hgs_content">
+	
+					</div>
+			</div>
+			<div class="row subpage" page="config">
+					<div class="col-sm-2 col-lg-2 side_bar">
+							<ul class="nav flex-column nav-pills">
+	
+							</ul>
+					</div>
+					<div class="col-sm-10 col-lg-10 hgs_content">
+	
+					</div>
+			</div>
+			<div class="row subpage" page="mesh">
+				<div class="col-sm-2 col-lg-2 side_bar">
+						<ul class="nav flex-column nav-pills">
+	
+						</ul>
+				</div>
+				<div class="col-sm-10 col-lg-10 hgs_content">
+	
+				</div>
+			</div>
+			<div class="row subpage" page="limit">
+					<div class="col-sm-2 col-lg-2 side_bar">
+							<ul class="nav flex-column nav-pills">
+	
+							</ul>
+					</div>
+					<div class="col-sm-10 col-lg-10 hgs_content">
+	
+					</div>
+			</div>
+			<div class="row subpage" page="detection">
+					<div class="col-sm-2 col-lg-2 side_bar">
+							<ul class="nav flex-column nav-pills">
+	
+							</ul>
+					</div>
+					<div class="col-sm-10 col-lg-10 hgs_content">
+	
+					</div>
+			</div>
+			<div class="row subpage" page="wificsi">
+					<div class="col-sm-2 col-lg-2 side_bar">
+							<ul class="nav flex-column nav-pills">
+	
+							</ul>
+					</div>
+					<div class="col-sm-10 col-lg-10 hgs_content">
+	
+					</div>
+			</div>
+			<div class="row subpage" page="qos">
+					<div class="col-sm-2 col-lg-2 side_bar">
+							<ul class="nav flex-column nav-pills">
+	
+							</ul>
+					</div>
+					<div class="col-sm-10 col-lg-10 hgs_content">
+	
+					</div>
+			</div>
+			<div class="row subpage" page="vlan">
+					<div class="col-sm-2 col-lg-2 side_bar">
+							<ul class="nav flex-column nav-pills">
+	
+							</ul>
+					</div>
+					<div class="col-sm-10 col-lg-10 hgs_content">
+	
+					</div>
+			</div>
+		</div>
+
+		<div class="page" page="BLINK">
+			<div class="row">
+				<div class="col-sm-2 col-lg-2 side_bar left_margin">
+				</div>
+				<div class="col-sm-10 col-lg-10">
+					<ul class="nav nav_sub">
+						<li class="nav-item">
+							<a class="nav-link" href="#" target_page="blink_debug" hgs_first_target_page="1">debug</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="row subpage" page="blink_debug">
+				<div class="col-sm-2 col-lg-2 side_bar">
+					<ul class="nav flex-column nav-pills">
+						<li class="nav-item">
+							<a class="nav-link  active changeView" href="#" hgs_sub_nav="common_debug" hgs_first_sub_nav="1" >通用接口调试</a>
+						</li>
+					</ul>
+				</div>
+				<div class="col-sm-10 col-lg-10 hgs_content">
+					<div hgs_sub_target="common_debug" >
+						<div class="row" >
+							<div>
+								<span>函数名称</span>
+								<input type="text" id="blinkFuncName"  style="width: 300px;margin-right: 10px;" >
+								<span>插件</span>
+								<select id="plugin">
+									<option value="blink">blink</option>
+									<option value="HG_Slave_Capability">slave_osgi</option>
+									<option value="hg_mf_test">MF</option>
+								</select>
+							</div>
+							<hr>
+							<div>
+								<input type="button" id="blinkUpdate" value="发送" >
+								<input type="button" id="blinkClear" value="清除" >
+							</div>
+							<hr>
+							<div>发送数据(JSON格式): (注意:如果数据是只读的，请不要发送数据)</div>
+							<textarea rows="10" cols="78" id="blink_send_json" class="hgs_textarea"></textarea>
+							
+							<div>服务器回应数据:</div> 
+								<textarea rows="20" cols="78" id="blink_recv_json" class="hgs_textarea"></textarea>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="page" page="MF">
+			<div class="row">
+				<div class="col-sm-2 col-lg-2 side_bar left_margin">
+				</div>
+				<div class="col-sm-10 col-lg-10">
+					<ul class="nav nav_sub">
+						<li class="nav-item">
+							<a class="nav-link" href="#" target_page="mf_debug" hgs_first_target_page="1">debug</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="row subpage" page="mf_debug">
+				<div class="col-sm-2 col-lg-2 side_bar">
+					<ul class="nav flex-column nav-pills">
+						<li class="nav-item">
+							<a class="nav-link  active changeView" href="#" hgs_sub_nav="common_debug" hgs_first_sub_nav="1" >通用接口调试</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link  changeView" href="#" hgs_sub_nav="extend_debug" hgs_first_sub_nav="1" >扩展接口调试</a>
+						</li>
+					</ul>
+				</div>
+				<div class="col-sm-10 col-lg-10 hgs_content" id="HGS_MF_DEBUG">
+					<div hgs_sub_target="common_debug" >
+						<br>
+						<div class="row" >
+							
+							<div class="col-sm-10 col-lg-10">
+								<input type="button" id="mfUpdate" value="发送" >
+								<input type="button" id="mfClear" value="清除" >
+							</div>
+							<hr>
+						</div>
+						<div class="row">
+							<div class="content_input_title">
+								<span>调试模式</span>
+							</div>
+							<div class="content_input muti_input">
+								<div class="row align_c col-8 col-md-5">
+									<input type="radio" class="col-2 radio-10" name="MfDebugMode" value="0" >natived
+								</div>
+								<div class="row align_c col-8 col-md-5">
+									<input type="radio" class="col-2 radio-10" name="MfDebugMode" value="1" >mqtt
+								</div>
+							</div>
+						</div>
+						<div class="row" >
+							<div>发送数据(JSON格式，参考接口规范)</div>
+							<textarea rows="10" cols="78" id="mf_send_json" class="hgs_textarea" 
+							placeholder='{ 
+								"RPCMethod" : "Post", 
+								"Parameter": "{ 
+									\"CmdType\":\"GET_MFU_UPPON_INFO\", 
+									\"SequenceId\":\"%s\" 
+								}" 
+							}'></textarea>
+							
+							<div>服务器回应数据:</div> 
+							<textarea rows="20" cols="78" id="mf_recv_json" class="hgs_textarea"></textarea>
+						</div>
+					</div>
+					<div hgs_sub_target="extend_debug" >
+						<div class="row" >
+							<div>
+								<span>函数名称</span>
+								<input type="text" id="mfExtFuncName"  style="width: 300px;margin-right: 10px;" >
+								<span>数据类型</span>
+								<select id="mfDataType">
+									<option value="0">性能数据上报</option>
+									<option value="1">告警数据上报</option>
+								</select>
+							</div>
+							<hr>
+							<div>
+								<input type="button" id="mfExtUpdate" value="发送" >
+								<input type="button" id="mfExtClear" value="清除" >
+							</div>
+							<hr>
+							<div>发送数据(JSON格式): (注意:如果数据是只读的，请不要发送数据)</div>
+							<textarea rows="10" cols="78" id="mf_ext_send_json" class="hgs_textarea"></textarea>
+							
+							<div>服务器回应数据:</div> 
+								<textarea rows="20" cols="78" id="mf_ext_recv_json" class="hgs_textarea"></textarea>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div>&nbsp;</div>
+	<div class="row foot_note">
+		<div class="col-12">
+			<div class="text_align_c" >Copyright &copy;<span>2001-2024 HGS. All rights reserved.</span></div>
+		</div>
+	</div>
+
+<script src="js/hgs_layout.js"></script>
+<script src="js/hgs_update_data.js"></script>
+<script src="js/hgs_public_funcs.js"></script>
+<script src="/su/hgs_system_funcs.js"></script>
+
+</body>
+
+</html>

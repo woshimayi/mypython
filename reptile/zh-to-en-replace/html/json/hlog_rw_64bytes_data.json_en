@@ -1,0 +1,152 @@
+[
+    [
+        1,
+        "IPv6 Address",
+        "HLOG_DATALEN64_LAN_IPV6_ADDR"
+    ],
+    [
+        2,
+        "HEX|Boot ID",
+        "HLOG_DATALEN64_BOOT_ID"
+    ],
+    [
+        6,
+        "WEB admin password",
+        "HLOG_DATALEN64_WEB_ADMIN_PWD"
+    ],
+    [
+        7,
+        "WEB user password",
+        "HLOG_DATALEN64_WEB_USER_PWD"
+    ],
+    [
+        11,
+        "WEB client MAC",
+        "HLOG_DATALEN64_WEBCLIENT_MAC"
+    ],
+    [
+        12,
+        "WEB client IP",
+        "HLOG_DATALEN64_WEBCLIENT_IP"
+    ],
+    [
+        13,
+        "WEB admin name",
+        "HLOG_DATALEN64_WEB_ADMIN_NAME"
+    ],
+    [
+        14,
+        "OLT register status",
+        "HLOG_DATALEN64_OLT_REGISTER_STATUS"
+    ],
+    [
+        15,
+        "OLT register service",
+        "HLOG_DATALEN64_OLT_REGISTER_SERVICE"
+    ],
+    [
+        16,
+        "WEB set option 60 account",
+        "HLOG_DATALEN64_WEB_SET_OPT60_ACCOUNT"
+    ],
+    [
+        17,
+        "WEB set option 60 password",
+        "HLOG_DATALEN64_WEB_SET_OPT60_PASSWORD"
+    ],
+    [
+        18,
+        "Internet ppp wan Name",
+        "HLOG_DATALEN64_PPP_INTERNET_NAME"
+    ],
+    [
+        19,
+        "This Domain only resolve ipv4addr",
+        "HLOG_DATALEN64_DOMAIN_IPV4_ONLY"
+    ],
+    [
+        20,
+        "lan ability information",
+        "HLOG_RW_LAN_ABILITY_GET"
+    ],
+    [
+        21,
+        "telnet account name",
+        "HLOG_DATALEN64_TELNET_NAME"
+    ],
+    [
+        22,
+        "telnet account password",
+        "HLOG_DATALEN64_TELNET_PWD"
+    ],
+    [
+        23,
+        "dmz host ip",
+        "HLOG_DATALEN64_DMZ_HOST_IP"
+    ],
+    [
+        24,
+        "dmz host wan",
+        "HLOG_DATALEN64_DMZ_HOST_WAN"
+    ],
+    [
+        25,
+        "default wan addr",
+        "HLOG_DATALEN64_DEFAULT_WAN_ADDR"
+    ],
+    [
+        26,
+        "lan ipv6 dhcpv6 start address",
+        "HLOG_DATALEN64_PREFIX_MIN_IP"
+    ],
+    [
+        27,
+        "lan ipv6 dhcpv6 end address",
+        "HLOG_DATALEN64_PREFIX_MAX_IP"
+    ],
+    [
+        29,
+        "INTERNET IPv6 address",
+        "HLOG_DATALEN64_DEF_INTERNET_WAN_IPV6_ADDR"
+    ],
+    [
+        30,
+        "lan ipv6 AUTO address",
+        "HLOG_DATALEN64_LAN_IPV6_ADDR_AUTO"
+    ],
+    [
+        31,
+        "lan ipv6 slaac address",
+        "HLOG_DATALEN64_LAN_IPV6_ADDR_SLAAC"
+    ],
+    [
+        32,
+        "ALMAC of FTTR Sub-Gateway MESH Uplink Device",
+        "HLOG_DATALEN64_MESH_BH_ALMAC"
+    ],
+    [
+        34,
+        "SSID of the backhaul interface when FTTR sub-gateway is in MESH wireless networking",
+        "HLOG_DATALEN64_MESH_BH_SSID"
+    ],
+    [
+        35,
+        "FTTR sub-gateway MESH wireless networking backhaul interface PWD",
+        "HLOG_DATALEN64_MESH_BH_PWD"
+    ],
+    [
+        36,
+        "FTTR sub-gateway MESH wireless networking backhaul interface encryption method",
+        "HLOG_DATALEN64_MESH_BH_SECURITYMODE"
+    ],
+    [
+        37,
+        "The IP address of the main gateway obtained on the FTTR sub-gateway",
+        "HLOG_DATALEN64_MAIN_DEV_IP"
+    ],
+    [
+        38,
+        "MAC address of the main gateway obtained on the FTTR sub-gateway",
+        "HLOG_DATALEN64_MAIN_DEV_MAC"
+    ]
+]

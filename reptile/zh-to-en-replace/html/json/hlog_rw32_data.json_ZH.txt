@@ -1,0 +1,126 @@
+CPU使用率
+uptime(单位:秒)
+监控系统信息记录间隔(单位:秒)
+重启的时间戳(自1970年以来的秒数)
+redis启动时间戳(uptime)
+redis服务准备好可以连接(0-not ready, 1-ready)
+使能或者禁用ping进程(1-使能,0-禁用)
+升级状态(0 - init, 1 - invalid image, 2 - valid image, 3 - flashing ver,4 - failed to flash, 5 - flash done, 6 - reboot, 7 - upload successfully,8 - preUpload img file)
+使能或者禁用hubs内存泄漏检测进程(1-使能,0-禁用)
+使能DNS欺骗(1-使能,0-禁用)
+FTP使能或者禁用(1-使能,0-禁用)
+Telnet使能或者禁用(0 - disable, 1 - local, 2 - remote, 3 - local + remote)
+TFTP下载使能或者禁用(1-使能,0-禁用)
+使能或者禁用QOS旧规则(1-使能,0-禁用)
+wan连接信息变化时间
+wan连接信息上次变化次数
+xtables chain值
+HEX|iptables chain标志
+HEX|ebtables chain标志
+HEX|iptables chain标志开始
+HEX|iptables chain标志结束
+HEX|ebtables chain标志开始
+HEX|ebtables chain标志结束
+HEX|NAT 规则准备状态(0x01 - POSTROUTING, 0x10 - post_snat)
+HEX|tr069 规则准备状态(0x01 - input, 0x10 - service_whitelist, 0x100 - hg_serv_whitelist, 0x1000 - hg_wan_accept_tr069)
+tr069 WAN连接mode(1 - IPv4, 2 - IPv6, 3 - IPv4 + IPv6)
+voip WAN连接mode(1 - IPv4, 2 - IPv6, 3 - IPv4 + IPv6)
+上联PON类型(0-GPON;1-XGPON)
+上联PON配置类型(0-GPON;1-XGPON;2-COMBO)
+FLOAT|PON RX power in dbm(仅仅当PON is up时有效)
+FLOAT|PON TX power in dbm(仅仅当PON is up时有效)
+打开MIB commit调试开关(0-disable, 1-enable)
+防火墙开关
+防火墙级别
+当前防火墙开关
+当前防火墙级别
+防DOS攻击开关
+防DOS攻击高级设置
+防端口扫描开关
+防IPv6Session攻击开关
+WAN到LAN IPv4报文过滤开关(1-使能,0-禁用)
+WAN到LAN IPv4报文过滤策略(1-白名单,0-黑名单)
+LAN到WAN IPv4报文过滤开关(1-使能,0-禁用)
+LAN到WAN IPv4报文过滤策略(1-白名单,0-黑名单)
+Interent ppp wan 使能节点 多个internet wan 以最后一个设置为准
+Interent ppp wan 拨号方式(1 - ONDEMAND, 2-ALWAYSON, 3-MANUAL, 4-PROXY)
+RMS未注册时禁止登录，跳转到注册页(1-使能,0-禁用)
+RMS注册状态
+SAMBA开关
+重启设备时间点(uptime)
+当前MacFilter开关
+当前MacFilter模式
+需要保存MIB(0-不需要,1-需要)
+需要产生备份MIB文件(0-不需要,1-需要)
+加载配置文件类型(0-none,1-lastgood.xml, 2-backup_lastgood.xml, 3-backup_b_lastgood.xml)
+PPP 系统自动重启开关
+PPP 系统重启时间间隔
+重启dnsmasq标志(0-不重启, 1-重启)
+使能快速重启dnsmasq功能(0-不其余, 1-启用)
+TR069设置vlanid为0(0-未设置,1-设置)
+其他wan设置vlanid为0(0-未设置,1-设置)
+每周期上下线事件通知次数限制
+软探针光功率优化使能(0-未使能,1-使能)
+软探针光功率优化TX(单位:0.1uW)
+软探针光功率优化RX(单位:0.1uW)
+新建WAN连接的全局索引
+全局ipversion能力
+UPNP使能或者禁用(1-使能,0-禁用)
+DMZ使能或者禁用(1-使能,0-禁用)
+wan common set(1-使能,0-禁用)
+wan common internet(1-使能,0-禁用)
+default wan broute(1-使能,0-禁用)
+L2TP ALG(1-使能,0-禁用)
+IPSEC ALG(1-使能,0-禁用)
+PPTP ALG(1-使能,0-禁用)
+FTP ALG(1-使能,0-禁用)
+SIP ALG(1-使能,0-禁用)
+RTSP ALG(1-使能,0-禁用)
+H323 ALG(1-使能,0-禁用)
+url过滤开关(1-使能,0-禁用)
+url过滤模式(1-白名单,0-黑名单)
+DHCP服务器就绪(1-完成,0-未完成)
+lan bridge设置(0x11-使能,0x10-禁用)
+wan_lan进程轮询host链表状态
+RA M 和O 位标记 1-SLAAC_M1,2-SLAAC_M0_O1,3-SLAAC_M0_O0  
+注册标记 1-web注册触发  2-omciReboot 
+macfilter list 标志 0-macfilter是空的  1-macfilter内容已保存
+0-macfilter规则清空,1-white规则建立,2-black规则建立
+锁网使能(1-开启 0-关闭)
+电源口相对于网口的位置(1-右边,0-左边)
+IP|internet wan 公网IP
+网关上行方式(0-未知,1-pon,2-eth,3-2.4G,4-5G,5-MLD)
+网关上联PON口类型(0 - GPON, 1 - XGPON)
+FTTR在线子网关数量
+FTTR子网关连接状态(0-初始状态， 1-已经连接到主网关)
+FTTR子网关MESH组网状态 (0-掉线 1-在线)
+FTTR子网关是否允许向LAN侧分配地址(1-不分配,0-分配)
+FTTR子网关MESH无线组网时回传接口RSSI
+升级方式(0-WEB,1-TR069,2-OMCI,3-BLINK,4-AOSNET)
+固件下载百分比
+固件写入百分比
+固件升级百分比
+blink分步升级(1-开启 0-关闭)
+blink自行接管升级任务(1-开启 0-关闭)
+mdmd运行拓扑侦测(0-使能,1-禁用)
+mdmd topo 调试开关(0x1-RX enable, 0x2-Tx enable, 0x4-Gen Topo)
+插件启动的时间
+aosnet/blink插件启动标志(0-未启动,1-启动)
+UDHCPD(1-启用, 0-禁用)
+2.4G wifi5(1-启用, 0-禁用)
+最近一次重启来源(参见HG_DEVICE_LAST_REBOOT_FROM)
+IGMP配置形态(见HG_FTTR_IGMP_CONTROL_TYPE)
+获取wan连接index, 通过IPC hi_ipc wan_conn_idx_get
+FTTR纳管功能(1-启用, 0-禁用)
+FTTR纳管运行(1-启用, 0-禁用)
+FTTR纳管测试(1-启用, 0-禁用)
+enable cache objs(1-启用, 0-禁用)
+最近一次重启原因(参见HG_DEVICE_LAST_REBOOT_REASON)
+主网关dhcpd根据hostname判断是不是子网关的方式(0-型号;1-Manufacturer;2-两个-)
+下挂设备最大实例ID
+使能cached功能(1-启用, 0-禁用)
+使能cached的debug功能(1-启用, 0-禁用)
+启动第三方插件的时间戳戳(uptime)
+每次产生下挂设备缓存需要的纳秒数
+获取纳秒数本身需要的纳秒数
+光衰补偿开关

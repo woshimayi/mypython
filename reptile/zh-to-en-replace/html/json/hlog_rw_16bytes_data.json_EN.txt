@@ -1,0 +1,17 @@
+LAN IPv4 address
+LAN IPv4 address 2
+LAN IPv4 subnet mask
+IPv4 mask
+Tr069 WAN interface name
+Voip WAN interface name
+RADVD lease time
+INTERNET IPv4 address
+V4 default WAN interface name
+V6 default WAN interface name
+Whether mesh is enabled (0-disable; 1-enable)
+Mesh Role (2-agent; 3-controller)
+NAS IP address
+NAS mac address
+Sub-gateway br0 obtains the IP address
+Uplink interface name
+External PHY Model

@@ -1,0 +1,26 @@
+.countdownText{
+    color: red;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.upgradeInfo{
+    color: blue;
+    font-weight: bold;
+    font-size: 24px;    
+}
+
+.margin30{
+	margin: 30px
+}
+
+.rowComments{
+	font-style: italic;
+	color: #00f;
+	font-size: .8rem;
+}
+
+.hgs_textarea{
+	font-family: Courier New;  /*等宽字体*/
+	font-size: .8rem;
+}

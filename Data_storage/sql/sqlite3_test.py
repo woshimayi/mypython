@@ -67,7 +67,7 @@ print(cur)
 for i in cur.fetchall():
     print(i[0])
     try:
-        with open(r'movieFile/' + i[0], 'w', encoding='utf-8') as file:
+        with open(r'T:/Documents/movieFile/' + i[0], 'w', encoding='utf-8') as file:
             pass  # 不写入任何内容
         print(f"空文件 '{i[0]}' 已成功创建。")
     except Exception as e:

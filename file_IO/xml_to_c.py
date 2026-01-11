@@ -194,6 +194,7 @@ class GenerateObject(object):
     def head(self, name, shortObjectName):
         self.CWMP_OP = 't' + shortObjectName + 'LeafOP'
         self.ObjCWMP_PRMT = 't' + shortObjectName + 'LeafInfo'
+        print("zzzzz ", self.CWMP_OP, self.ObjCWMP_PRMT)
         self.shortObjectName = shortObjectName
         self.enums = []
         self.ObjshortObjectName = shortObjectName
@@ -279,7 +280,10 @@ class GenerateObject(object):
             if dict['type'] == 'unsignedInt':
                 self.fw.write('\t%s %s;\n' % (struct_types[dict['type']], dict['name']))
             elif dict['type'] == 'string':
-                self.fw.write('\t%s %s[%s];\n' % (struct_types[dict['type']], dict['name'], dict.get('maxlength')))
+                if None != dict.get('maxlength'):
+                    self.fw.write('\t%s %s[%s];\n' % (struct_types[dict['type']], dict['name'], dict.get('maxlength')))
+                else:
+                    self.fw.write('\t%s %s[%s];\n' % (struct_types[dict['type']], dict['name'], '128'))
             elif dict['type'] == 'boolean':
                 self.fw.write('\t%s %s;\n' % (struct_types[dict['type']], dict['name']))
 
@@ -357,7 +361,7 @@ class GenerateObject(object):
 
 	HI_OS_MEMSET_S(&currObj, sizeof(IgdFastPathSpeedUpServiceTab), 0, sizeof(IgdFastPathSpeedUpServiceTab));
 	HI_OS_MEMCPY_S(&entry, sizeof(IgdFastPathSpeedUpServiceTab), newObj, sizeof(IgdFastPathSpeedUpServiceTab));
-	entry.ulIndex = lInsNum + 1;
+	entry.ulIndex = lIndex + 1;
 	entry.ulStateAndIndex = 0;
 	CM_LOG("ulIndex = %d", entry.ulIndex);
 	if (!totalNum)
@@ -540,7 +544,7 @@ class GenerateObject(object):
     def igdSingleGetfun(self, shortObjectName):
         str = '''
 {
-	word32 lRet;
+	word32 lRet = IGD_CM_OPERATE_SUCCESS;
 	IgdQosAttrConfTab entry;
 	IgdQosAttrConfTab *currObj = NULL;
 
@@ -1414,7 +1418,7 @@ if __name__ == "__main__":
                         if mulNodeFlag:
                             G.headObj(objName, name, oid)
 
-                        G.head(name, objName)
+                        G.head(shortObjectName, shortObjectName)
 
             elif 'parameter' in line:
                 soup = BeautifulSoup(line.strip(), "lxml")

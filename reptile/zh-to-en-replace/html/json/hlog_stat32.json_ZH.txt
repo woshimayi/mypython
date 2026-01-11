@@ -1,0 +1,130 @@
+写配置文件的次数
+检测在线(下挂)设备的次数
+刷新在线(下挂)设备的信息的次数
+miscd进程获取在线(下挂)设备的信息失败的次数
+hghttpd进程获取下挂设备失败的次数
+启动PPPoE按需拨号的次数
+停止PPPoE按需拨号的次数
+触发通知iptables子chain需要更新的次数
+iptables子chain更新的次数
+iptables子chain因为更新失败需要重新更新的次数
+触发通知ebtables子chain需要更新的次数
+ebtables子chain更新的次数
+准备MIB提交次数
+MIB提交次数
+启动60s内MIB提交次数
+ebtables子chain因为更新失败需要重新更新的次数
+检查进程内存是否超限制的次数
+因为内存占用过多重启java进程的次数
+因为内存占用过多重启hghttpd进程的次数
+因为内存占用过多重启natived进程的次数
+因为内存占用过多重启其他进程的次数
+dnsmasq进程无法提供dns proxy服务备hgs重启的次数
+产生配置文件失败的次数
+产生弱光报警的次数
+默认配置加载等待时间
+PON UP/DOWN的次数
+PON状态改变的次数
+natived进程XTABLES处理线程启动次数
+samba配置次数
+启动samba次数
+停止samba次数
+Internet ppp wan dog 生效次数
+Internet ppp wan 海思重启pppd 次数
+Interent ppp wan 实际启动次数(包含pppdog 拉起和海思拉起pppd)
+Interent ppp wan 收到request 心跳包次数
+Interent ppp wan 发送relay 心跳包次数
+Interent ppp wan 发送request 心跳包次数
+Interent ppp wan 收到relay 心跳包次数
+检查cms进程存在的次数
+检查cwmp进程存在的次数
+/tmp/dhcp.leases 文件最后的clilent id 是*
+绑定信息准备更新次数
+绑定信息实际更新次数
+绑定信息成功更新次数
+下挂设备上下线事件通知总次数
+下挂设备上下线事件通知丢弃次数
+下挂设备上下线事件每周期次数
+telned进程配置改变的次数
+telned进程退出的次数
+检查telnetd进程的次数
+重启telnetd进程的次数
+kill掉不再需要的telnetd进程的次数
+启动tr69c进程的次数
+internet led 操作计数
+cwmp 上报计数
+dnsmasq收到的Discover报文计数
+dnsmasq发出的Offer报文计数
+dnsmasq收到的Request报文计数
+dnsmasq发出的ACK报文计数
+dnsmasq发出的NAK报文计数
+mdmd topo分片包次数
+mdmd topo分片包总数
+mdmd topo子网关准备同步主网关的基础信息
+mdmd topo子网关完成同步主网关的基础信息
+mdmd topo子网关准备同步主网关的所有AGENT信息
+mdmd topo子网关完成同步主网关的所有AGENT信息
+mdmd topo子网关开始上传下挂设备的详细信息
+mdmd topo子网关开始上传下挂设备的详细信息
+mdmd topo发送get mdm msge
+mdmd topo接收get mdm msge
+mdmd topo更新主网关接口信息
+mdmd topo workaroud增加PON接口字段
+mdmd topo子网关收到主网关需要同步接口信息的请求
+hghttpd获取拓扑图的次数
+hghttpd获取拓扑图的文件读写冲突
+hghttpd获取了空的拓扑图
+hghttpd收到上传agent信息
+hghttpd收到下载agent信息的请求
+hghttpd收到下载agent信息的请求打开文件时冲突
+radvd 配置文件变化次数
+wan连接信息手动刷新次数
+wan连接信息设置值次数
+wan连接信息数目获取次数
+wan连接信息获取次数
+wan连接信息增加次数
+wan连接信息删除次数
+wan连接信息清除次数
+wan连接信息更新次数
+wan连接信息变化次数
+wan信息变化通知次数
+natived获取wan连接信息次数
+udhcpd配置文件可能发生变化
+udhcpd收到discover包
+udhcpd发出offer包
+udhcpd收到request包
+udhcpd发出ack包
+udhcpd收到decline包
+udhcpd收到ack包
+udhcpd收到inform包
+udhcpd收到debug包
+udhcpd收到包总数
+udhcpd重新初始化socket
+udhcpd重新加载配置
+udhcpd收到hbus消息
+udhcpd发出NAK包
+udhcpd检查是否需要reload
+udhcpd需要reload配置
+udhcpd检查子网关旧IP和MAC
+udhcpd更新子网关旧IP和MAC
+udhcpd处理普通option60包
+udhcpd通过复杂option60鉴权
+udhcpd未通过复杂option60鉴权
+udhcpd通过简单option60鉴权
+udhcpd未通过简单option60鉴权
+更新海思MIB记录的下挂设备轮数
+更新海思MIB记录的下挂设备总次数
+MIB下挂设备文件读写冲突次数
+cached循环次数
+cached刷新下挂设备次数
+cached检查redis中下挂设备信息次数
+cached更新redis中下挂设备信息次数
+cached获取持久redisContext次数
+cached重新初始化redisContext次数
+cached获取空的redisContext次数
+命中InternetGatewayDevice.LANDevice.{i}.Hosts.Host.{i}.高速缓存的次数
+读取/var/OnlineDevTopo.json发送读写冲突
+读取/var/OnlineDevTopo.json失败
+hgcms获取持久redisContext次数
+hgcmsd重新初始化redisContext次数
+hgcms获取空的redisContext次数

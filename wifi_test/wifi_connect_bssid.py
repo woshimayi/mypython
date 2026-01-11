@@ -5,7 +5,7 @@
 @software: dof
 @file: wifi_connect_bssid.py
 @time: 2025/02/28 14:17
-@desc: 
+@desc: 连接指定的wifi bssid
 '''
 
 
@@ -40,11 +40,22 @@ def connect_wifi(ssid, bssid, password):
         print("Wi-Fi 连接失败！")
 
 # 使用示例
-ssid = "CMCC-GD252C01-5G"
-bssid = "24:8B:E0:E5:37:78"
+ssid = "CMCC-GD252C01"
+# bssid = "24:8b:e0:e5:33:78"
+bssid = "a4:a5:28:23:22:29"
 password = "12345678"
 
-connect_wifi(ssid, bssid, password)
+L = ["a4:a5:28:23:22:29", "24:8b:e0:e5:2d:81"]
+
+if False:
+    while True:
+        for b in L:
+            connect_wifi(ssid, b, password)
+            time.sleep(15)
+        time.sleep(15)
+else:
+    connect_wifi(ssid, bssid, password)
+
 
 
 if __name__ == '__main__':

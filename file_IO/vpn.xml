@@ -1,0 +1,32 @@
+  <object name="InternetGatewayDevice.X_HG_VpnCfg." shortObjectName="HgVpnCfgObject" specSource="Custom" profile="Unspecified" supportLevel="DynamicInstances"  hideObjectFromAcs="true" oid="4500"/>
+
+    <parameter name="VPNType"     type="unsignedInt" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite"  minValue="0" maxValue="1" defaultValue="0" />
+    <parameter name="VPNEnable"   type="boolean" specSource="HG" profile="X_HG_CMCC:1" supportLevel="ReadWrite" defaultValue="True" />
+    <parameter name="VPNMode"     type="unsignedInt" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite"  minValue="0" maxValue="1" defaultValue="0" />
+    <parameter name="VPNPriority" type="unsignedInt" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite"  minValue="0" maxValue="7" defaultValue="7" />
+
+
+    <parameter name="VPNUserId" type="string" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" maxLength="16" />
+    <parameter name="VPNTunnelName" type="string" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" maxLength="32" />
+    <parameter name="wan_name" type="string" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" maxLength="64" />
+
+    <parameter name="VPNIdleTime"     type="unsignedInt" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" />
+
+    <parameter name="VPNAccountProxy" type="string" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" maxLength="64" />
+    <parameter name="VPNAddress" type="string" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" maxLength="64" />
+
+    <parameter name="VPNAccountName" type="string" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" maxLength="64" />
+    <parameter name="VPNPassWord" type="string" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" maxLength="260" />
+
+    <parameter name="VPNPort"     type="unsignedInt" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite"  minValue="0" maxValue="65535" defaultValue="0" />
+    <parameter name="L2TPOperate"     type="unsignedInt" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite"  minValue="0" maxValue="1" defaultValue="0" />
+    <parameter name="QosParameter" type="string" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" maxLength="512" />
+
+
+
+  <object name="InternetGatewayDevice.X_HG_VpnCfg.X_HG_VpnTun.{i}." shortObjectName="HgVpnTunObject" specSource="Custom" profile="Unspecified" supportLevel="DynamicInstances" />
+    <parameter name="VPNTunnelName" type="string" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" maxLength="32" />
+    <parameter name="VPNAttachMode"     type="unsignedInt" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite"  minValue="0" maxValue="1" defaultValue="0" />
+    <parameter name="AttachContext" type="string" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" maxLength="1024" />
+    <parameter name="VPNTunlIndex"     type="unsignedInt" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite"  minValue="0" maxValue="65535" defaultValue="0" />
+

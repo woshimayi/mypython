@@ -1,0 +1,123 @@
+There cannot be Chinese characters in LOID, please re-enter!
+LOID must be at least [$1] characters long and at most [$2] characters long.
+The password cannot contain Chinese characters, please re-enter!
+Password length must be at least [$1] characters and at most [$2] characters
+Username must be at least [$1] characters long and at most [$2] characters long
+Password length must be at least [$1] characters and at most [$2] characters
+MTU must be a valid number!
+MTU minimum [$1] bytes, maximum [$2] bytes
+The vlan id must be a valid number!
+VLAN id minimum [$1], maximum [$2]
+Multicast vlan must be a valid number!
+Invalid IPv4 address
+Invalid subnet mask
+Invalid gateway address
+Invalid IP address
+Invalid IPv6 address
+Invalid IPv6 DNS server
+Invalid IPv6 address prefix
+Invalid IPv6 default gateway
+The primary server address cannot be empty!
+Please set FTP username!
+Chinese characters cannot exist in the user name, please reset it!
+Please set FTP password!
+The password cannot contain Chinese characters, please reset it!
+Password length must be at least [$1] characters and at most [$2] characters
+Please set SAMBA username!
+The password cannot contain Chinese characters, please reset it!
+Please set a SAMBA password!
+The password cannot contain Chinese characters, please reset it!
+Password length must be at least [$1] characters and at most [$2] characters
+Invalid IP address
+Invalid subnet mask
+Invalid [address pool start address]
+Invalid [Address pool end address]
+TunnelKey should be a number in the range of 0-16777215
+TunnelKey minimum [$1], maximum [$2]
+Invalid IP address
+MTU must be a valid number!
+MTU minimum [$1] bytes, maximum [$2] bytes
+Invalid IP address
+Invalid primary DNS server address
+Invalid backup DNS server address
+VLAN id minimum [$1], maximum [$2]
+Invalid [LAN IP address] address
+Rate cannot be empty!
+Rate cannot be empty!
+Rate cannot be empty!
+Rate cannot be empty!
+Rate cannot be empty!
+Rate cannot be empty!
+Please enter your username!
+Chinese characters cannot exist in the user name, please reset it!
+Please enter your password!
+The password cannot contain Chinese characters, please reset it!
+Please enter a domain name!
+The domain name is illegal!
+Please select a wan connection!
+The password cannot contain Chinese characters, please reset it!
+The password cannot contain Chinese characters, please reset it!
+The interval days cannot be empty!
+The interval days must be a valid number!
+Time cannot be empty!
+The time is incorrect, please enter the format such as: 10:20
+The password cannot contain Chinese characters, please re-enter!
+Password is between [$1] and [$2] characters
+The password cannot contain Chinese characters, please re-enter!
+Password is between [$1] and [$2] characters
+The password cannot contain Chinese characters, please re-enter!
+Password is between [$1] and [$2] characters
+The password cannot contain Chinese characters, please re-enter!
+Password is between [$1] and [$2] characters
+The password cannot contain Chinese characters, please re-enter!
+Password is between [$1] and [$2] characters
+The password cannot contain Chinese characters, please re-enter!
+Password is between [$1] and [$2] characters
+The password cannot contain Chinese characters, please re-enter!
+Password is between [$1] and [$2] characters
+The password cannot contain Chinese characters, please re-enter!
+Password is between [$1] and [$2] characters
+The password cannot contain Chinese characters, please re-enter!
+Password is between [$1] and [$2] characters
+Illegal mobile phone number, please re-enter!
+The effective range of signal strength threshold is -100~-60dBm
+Password is between [$1] and [$2] characters
+The IP address or domain name cannot be empty
+The IP address or domain name cannot be empty
+Lan side IPv6 address is illegal!
+The starting address is invalid.
+The end address is invalid.
+Registration timeout must be greater than 0
+If registration fails, the re-registration time must be greater than 0
+Chinese characters cannot exist in the user name, please re-enter!
+Username must be at least [$1] characters long and at most [$2] characters long
+Chinese characters cannot exist in the user name, please re-enter!
+Username must be at least [$1] characters long and at most [$2] characters long
+CPU usage
+Time (unit: seconds)
+Occupancy rate (unit: 1/10000)
+Total Memory
+Memory usage
+Used Memory
+Remaining memory
+uptime
+(Unit: seconds)
+Memory (unit: K)
+uptime
+(Unit: seconds)
+Memory (unit: K)
+uptime
+(Unit: seconds)
+Memory (unit: K)
+uptime
+(Unit: seconds)
+Traffic (Unit: Bytes)
+uptime
+(Unit: seconds)
+frequency
+uptime
+(Unit: seconds)
+frequency
+uptime
+(Unit: seconds)
+frequency

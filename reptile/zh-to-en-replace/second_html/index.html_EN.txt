@@ -1,0 +1,60 @@
+Click the [New] button to create a new VxLan instance. Select a row in the table and click the [Delete] button to delete the selected instance. AE Set or edit parameters for the instance of the currently selected row in the [VxLan Settings] below. AE To create, delete or modify, you need to click the [Save] button at the bottom to take effect. AE										
+Click the [New] button to create a new URL filtering address. Select a row in the table and click the [Delete] button to delete the selected instance. AE You can directly select a saved URL filtering address to edit and modify it. AE [New] or [Modify] requires clicking the [Save] button at the bottom to take effect. AE										
+Click the [New] button to create a new URL filtering address. Select a row in the table and click the [Delete] button to delete the selected instance. AE You can directly select the saved MAC filtering address to edit and modify it. AE [New] or [Modify] requires clicking the [Save] button at the bottom to take effect. AE										
+Click the [New] button to create a new instance. Select a row in the table and click the [Delete] button to delete the selected instance. AE You can directly select a saved instance to edit and modify it. AE [New] or [Modify] requires clicking the [Save] button at the bottom to take effect. AE										
+Click the [New] button to create a new instance. Select a row in the table and click the [Delete] button to delete the selected instance. AE You can directly select a saved instance to edit and modify it. AE [New] or [Modify] requires clicking the [Save] button at the bottom to take effect. AE										
+IPv4 connection information
+IPv4 connection information
+IPv4 connection information
+IPv4 connection information
+IPv4 connection information
+IPv4 connection information
+IPv6 connection information
+IPv6 connection information
+Connection time
+Second
+factory
+QoS flow classification type setting
+Select Dial Now
+QoS flow classification type setting
+QoS flow classification type setting
+QoS flow classification type setting
+QoS flow classification type setting
+Modal Box
+Relay Status
+right
+Reverse connection for authentication
+IPv4 static routing configuration
+IPv4 static routing configuration
+IPv4 static routing configuration
+IPv4 static routing configuration
+Server Port
+Hostname
+keep
+keep
+keep
+keep
+keep
+keep
+keep
+keep
+keep
+keep
+keep
+keep
+keep
+keep
+refresh
+keep
+Device restart
+Restore default configuration
+Restore factory settings
+Upgraded version
+keep
+keep
+keep
+test
+test
+keep
+Clear
+keep

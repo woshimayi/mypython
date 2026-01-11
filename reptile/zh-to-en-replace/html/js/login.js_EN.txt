@@ -1,0 +1,15 @@
+Username cannot be empty!
+Password cannot be empty!
+Network Error
+You can try and fail 3 times in one minute! You need 60 seconds to log in again!
+Wrong username or password! You have ${remainCnt} chances left to log in!
+Wrong username or password!
+There is already a device logged in!
+Other errors!
+Network Error
+An unknown error occurred
+Other devices have logged in. You cannot log in temporarily.
+You can try and fail at most 3 times in one minute! You need ${data.nextLogRemainSec} seconds to log in again!
+You can try and fail at most 3 times in one minute! Do not log in too frequently!
+An unknown error occurred
+The network is down and you cannot log in.

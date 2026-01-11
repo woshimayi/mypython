@@ -328,7 +328,7 @@ if __name__ == "__main__":
     music = ['.mp3', '.ogg', '.wav', '.aac', '.flac', '.mov']
     print('start run ....')
 
-    dirs = [r'E:/mypython_new/Data_storage/sql/movieFile']
+    dirs = [r'E:/mypython_new/Data_storage/sql/movieFile', r'T:/Documents/movieFile']
     dest_dirs = r'E:/mypython_new/Data_storage/sql/EXE'
     # dir = r'C:/Users/zs-mobile/Pictures'
     # dir = r'E:/相册'
@@ -336,8 +336,8 @@ if __name__ == "__main__":
     for dir in dirs:
         F = GetDirAllFileInfo(dir)
         # F.filesfilterdel(delfile)
-        F.dirfilesmove2root(1)
-        # F.allfilesfilterrename(video)
+        # F.dirfilesmove2root(1)
+        F.allfilesfilterrename(video)
         # F.filesfiltermove(music, r'V:/MUSIC')
         # F.filesfiltermove(exe, r'V:/EXE')
         # F.filesfiltermove(video, dest_dirs)

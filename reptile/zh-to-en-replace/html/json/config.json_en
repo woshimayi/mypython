@@ -1,0 +1,4378 @@
+{
+    "HGS_PON_LINK_INFO": {
+        "inputElements": {
+            "Status": {
+                "checkin": [],
+                "checkout": [
+                    {
+                        "strategy": "convertGponStateToChinese",
+                        "valueConvert": 1
+                    }
+                ]
+            },
+            "FECSupport": {
+                "checkin": [],
+                "checkout": []
+            },
+            "FECDownstream": {
+                "checkin": [],
+                "checkout": []
+            },
+            "TXPower": {
+                "checkin": [],
+                "checkout": []
+            },
+            "RXPower": {
+                "checkin": [],
+                "checkout": []
+            },
+            "SupplyVottage": {
+                "checkin": [],
+                "checkout": []
+            },
+            "BiasCurrent": {
+                "checkin": [],
+                "checkout": []
+            },
+            "TransceiverTemperature": {
+                "checkin": [],
+                "checkout": []
+            }
+        },
+        "customerCheckin": {},
+        "customerCheckout": {
+            "hbusGetPath": [
+                "hbus://mdm/InternetGatewayDevice.WANDevice.1.X_CMCC_GponInterfaceConfig.;",
+                "InternetGatewayDevice.WANDevice.1.X_CMCC_GponInterfaceConfig.Stats."
+            ],
+            "msgType": 211,
+            "userTagData": 1,
+            "preCheckout": "ponInfoCheckout"
+        }
+    },
+    "HGS_DOWNSTREAM_OPTICAL_MODULE_INFO": {
+        "inputElements": {
+            "voltage": {
+                "checkin": [],
+                "checkout": []
+            },
+            "bias": {
+                "checkin": [],
+                "checkout": []
+            },
+            "temperature": {
+                "checkin": [],
+                "checkout": []
+            },
+            "txpower": {
+                "checkin": [],
+                "checkout": []
+            },
+            "rxpower": {
+                "checkin": [],
+                "checkout": []
+            }
+        },
+        "customerCheckin": {},
+        "customerCheckout": {
+            "url": "/optical",
+            "checkout": "downstreamOpticalInfoCheckout"
+        }
+    },
+    "HGS_ITMS": {
+        "inputElements": {
+            "InformStatus": {
+                "checkin": [],
+                "checkout": []
+            },
+            "ConnectStatus": {
+                "checkin": [],
+                "checkout": []
+            }
+        },
+        "customerCheckin": {},
+        "customerCheckout": {
+            "hbusGetPath": "hbus://mdm/InternetGatewayDevice.ManagementServer.X_HG_RemoteStatus.",
+            "msgType": 211,
+            "checkout": "informCheckout"
+        }
+    },
+    "HGS_ACS_SETUP": {
+        "inputElements": {
+            "Result": {
+                "checkin": [],
+                "checkout": []
+            }
+        },
+        "customerCheckin": {},
+        "customerCheckout": {
+            "hbusGetPath": "hbus://mdm/InternetGatewayDevice.X_CMCC_UserInfo.",
+            "msgType": 211,
+            "checkout": "resultToInfo"
+        }
+    },
+    "HGS_ONU_PASSWORD": {
+        "inputElements": {
+            "UserName": {
+                "checkin": [
+                    {
+                        "strategy": "ischinese",
+                        "errorMsg": "There cannot be Chinese characters in LOID, please re-enter!"
+                    },
+                    {
+                        "strategy": "minMaxLength",
+                        "errorMsg": "LOID must be at least [$1] characters long and at most [$2] characters long.",
+                        "para": "1:24"
+                    }
+                ],
+                "checkout": []
+            },
+            "Password": {
+                "checkin": [
+                    {
+                        "strategy": "ischinese",
+                        "errorMsg": "The password cannot contain Chinese characters, please re-enter!"
+                    },
+                    {
+                        "strategy": "minMaxLength",
+                        "errorMsg": "Password length must be at least [$1] characters and at most [$2] characters",
+                        "para": "1:36"
+                    }
+                ],
+                "checkout": []
+            }
+        },
+        "customerCheckin": {
+            "msgType": 212,
+            "checkin": "onuCfgCheckin"
+        },
+        "customerCheckout": {
+            "hbusGetPath": "hbus://mdm/InternetGatewayDevice.X_CMCC_UserInfo.",
+            "msgType": 211,
+            "checkout": "OnuAuthTypeChange"
+        }
+    },
+    "HGS_ONU_REGISTER_ENFORCE": {
+        "inputElements": {
+            "RegisterForcePush": {
+                "checkin": [],
+                "checkout": [
+                    {
+                        "strategy": "convertNumStrToBool",
+                        "valueConvert": 1
+                    }
+                ]
+            }
+        },
+        "customerCheckin": {
+            "msgType": 212,
+            "checkin": "onuRegisterEnforceCheckin"
+        },
+        "customerCheckout": {
+            "hbusGetPath": "hbus://mdm/InternetGatewayDevice.HgConfig.",
+            "msgType": 211,
+            "checkout": "onuRegisterEnforceCheckout"
+        }
+    },
+    "HGS_WAN": {
+        "inputElements": {
+            "Enable": {
+                "checkin": [],
+                "checkout": []
+            },
+            "IPVersion": {
+                "checkin": [
+                    {
+                        "strategy": "convertTextToNum",
+                        "valueConvert": 1
+                    }
+                ],
+                "checkout": []
+            },
+            "EncapType": {
+                "checkin": [],
+                "checkout": []
+            },
+            "ServiceList": {
+                "checkin": [],
+                "checkout": []
+            },
+            "ConnectType": {
+                "checkin": [],
+                "checkout": []
+            },
+            "UserName": {
+                "checkin": [
+                    {
+                        "strategy": "minMaxLength",
+                        "errorMsg": "Username must be at least [$1] characters long and at most [$2] characters long",
+                        "para": "1:64"
+                    }
+                ],
+                "checkout": []
+            },
+            "UserPassword": {
+                "checkin": [
+                    {
+                        "strategy": "minMaxLength",
+                        "errorMsg": "Password length must be at least [$1] characters and at most [$2] characters",
+                        "para": "1:64"
+                    }
+                ],
+                "checkout": []
+            },
+            "ConnectionTrigger": {
+                "checkin": [],
+                "checkout": []
+            },
+            "PppManualOperate": {
+                "checkin": [],
+                "checkout": []
+            },
+            "IdleDisconnectTime": {
+                "checkin": [
+                    {
+                        "strategy": "convertTextToNum",
+                        "valueConvert": 1
+                    }
+                ],
+                "checkout": []
+            },
+            "NPTv6Enable": {
+                "checkin": [],
+                "checkout": []
+            },
+            "NatEnabled": {
+                "checkin": [],
+                "checkout": []
+            },
+            "MTU": {
+                "checkin": [
+                    {
+                        "strategy": "isNotNum",
+                        "errorMsg": "MTU must be a valid number!"
+                    },
+                    {
+                        "strategy": "minMaxIntValue",
+                        "errorMsg": "MTU minimum [$1] bytes, maximum [$2] bytes",
+                        "para": "0:1900"
+                    },
+                    {
+                        "strategy": "convertTextToNum",
+                        "valueConvert": 1
+                    }
+                ],
+                "checkout": []
+            },
+            "LanInterface-DHCPEnable": {
+                "checkin": [],
+                "checkout": []
+            },
+            "VlanEnabled": {
+                "checkin": [],
+                "checkout": []
+            },
+            "VlanId": {
+                "checkin": [
+                    {
+                        "strategy": "isNotNum",
+                        "errorMsg": "The vlan id must be a valid number!"
+                    },
+                    {
+                        "strategy": "minMaxIntValue",
+                        "errorMsg": "VLAN id minimum [$1], maximum [$2]",
+                        "para": "1:4094"
+                    }
+                ],
+                "checkout": []
+            },
+            "_802dot1p": {
+                "checkin": [
+                    {
+                        "strategy": "convertTextToNum",
+                        "valueConvert": 1
+                    }
+                ],
+                "checkout": []
+            },
+            "MulticastVlan": {
+                "checkin": [
+                    {
+                        "strategy": "isNotNum",
+                        "errorMsg": "Multicast vlan must be a valid number!"
+                    }
+                ],
+                "checkout": []
+            },
+            "LanBind": {
+                "checkin": [],
+                "checkout": []
+            },
+            "SSIDBind": {
+                "checkin": [],
+                "checkout": []
+            },
+            "HgSlaveMcastEnable": {
+                "checkin": [],
+                "checkout": [
+                    {
+                        "strategy": "convertNumStrToBool",
+                        "valueConvert": 1
+                    }
+                ]
+            },
+            "IPv4AddrType": {
+                "checkin": [],
+                "checkout": []
+            },
+            "ExternalIPAddress": {
+                "checkin": [
+                    {
+                        "strategy": "isValidIP",
+                        "errorMsg": "Invalid IPv4 address"
+                    }
+                ],
+                "checkout": []
+            },
+            "SubnetMask": {
+                "checkin": [
+                    {
+                        "strategy": "isValidMask",
+                        "errorMsg": "Invalid subnet mask"
+                    }
+                ],
+                "checkout": []
+            },
+            "DefaultGateway": {
+                "checkin": [
+                    {
+                        "strategy": "isValidIP",
+                        "errorMsg": "Invalid gateway address"
+                    }
+                ],
+                "checkout": []
+            },
+            "DNSEnabled": {
+                "checkin": [],
+                "checkout": []
+            },
+            "DNSServers": {
+                "checkin": [
+                    {
+                        "strategy": "isValidMultipleIP",
+                        "errorMsg": "Invalid IP address"
+                    }
+                ],
+                "checkout": []
+            },
+            "IPv6IPAddressOrigin": {
+                "checkin": [],
+                "checkout": []
+            },
+            "IPv6IPAddress": {
+                "checkin": [
+                    {
+                        "strategy": "isValidIPv6SubNet",
+                        "errorMsg": "Invalid IPv6 address"
+                    }
+                ],
+                "checkout": []
+            },
+            "IPv6DNSServers": {
+                "checkin": [
+                    {
+                        "strategy": "isValidMulIPv6",
+                        "errorMsg": "Invalid IPv6 DNS server"
+                    }
+                ],
+                "checkout": []
+            },
+            "IPv6PrefixDelegationEnabled": {
+                "checkin": [],
+                "checkout": []
+            },
+            "IPv6PrefixOrigin": {
+                "checkin": [],
+                "checkout": []
+            },
+            "IPv6Prefix": {
+                "checkin": [
+                    {
+                        "strategy": "isValidIPv6Prefix",
+                        "errorMsg": "Invalid IPv6 address prefix"
+                    }
+                ],
+                "checkout": []
+            },
+            "IPv6DefaultGateway": {
+                "checkin": [
+                    {
+                        "strategy": "isValidIPv6",
+                        "errorMsg": "Invalid IPv6 default gateway"
+                    }
+                ],
+                "checkout": []
+            },
+            "IPv6DsliteEnable": {
+                "checkin": [],
+                "checkout": []
+            },
+            "IPv6AftrMode": {
+                "checkin": [],
+                "checkout": [
+                    {
+                        "strategy": "convertNumStrToBool",
+                        "valueConvert": 1
+                    }
+                ]
+            },
+            "IPv6Aftr": {
+                "checkin": [],
+                "checkout": []
+            },
+            "IPTVAccount": {
+                "checkin": [],
+                "checkout": []
+            },
+            "IPTVPassword": {
+                "checkin": [],
+                "checkout": []
+            }
+        },
+        "customerCheckin": {
+            "hbusPostPath": "hbus://mdmd/editWan",
+            "otherCheckin": "wanConnectionCfg",
+            "delete": "wanConnectionDelete",
+            "userTagData": 2
+        },
+        "customerCheckout": {
+            "hbusGetPath": "hbus://mdmd/getWan",
+            "msgType": 213,
+            "userTagData": 1,
+            "checkout": "wanCheckout"
+        }
+    },
+    "HGS_UPLINK": {
+        "inputElements": {
+            "AccessType": {
+                "checkin": [],
+                "checkout": []
+            }
+        },
+        "customerCheckin": {
+            "checkin": "uplinkCheckin"
+        },
+        "customerCheckout": {
+            "checkout": "uplinkCheckout"
+        }
+    },
+    "HGS_REMOTE_MANAGE": {
+        "inputElements": {
+            "PeriodicInformEnable": {
+                "checkin": [],
+                "checkout": []
+            },
+            "PeriodicInformInterval": {
+                "checkin": [],
+                "checkout": []
+            },
+            "URL": {
+                "checkin": [],
+                "checkout": []
+            },
+            "Username": {
+                "checkin": [],
+                "checkout": []
+            },
+            "Password": {
+                "checkin": [],
+                "checkout": []
+            },
+            "ConnectionRequestUsername": {
+                "checkin": [],
+                "checkout": []
+            },
+            "ConnectionRequestPassword": {
+                "checkin": [],
+                "checkout": []
+            }
+        },
+        "customerCheckin": {
+            "hbusPostPath": "hbus://mdm/InternetGatewayDevice.ManagementServer.",
+            "msgType": 212,
+            "otherCheckin": "ItmsCfg"
+        },
+        "customerCheckout": {
+            "hbusGetPath": "hbus://mdm/InternetGatewayDevice.ManagementServer.",
+            "msgType": 211,
+            "checkout": "ItmsCheckout"
+        }
+    },
+    "HGS_TIME_MANAGE": {
+        "inputElements": {
+            "Enable": {
+                "checkin": [],
+                "checkout": [
+                    {
+                        "strategy": "convertNumStrToBool",
+                        "valueConvert": 1
+                    }
+                ]
+            },
+            "CurrentLocalTime": {
+                "checkin": [],
+                "checkout": []
+            },
+            "LocalTimeZone": {
+                "checkin": [],
+                "checkout": []
+            },
+            "NTPServer1": {
+                "checkin": [
+                    {
+                        "strategy": "isNonEmpty",
+                        "errorMsg": "The primary server address cannot be empty!"
+                    }
+                ],
+                "checkout": []
+            },
+            "NTPServer2": {
+                "checkin": [],
+                "checkout": []
+            },
+            "X_CMCC_NTPInterval": {
+                "checkin": [],
+                "checkout": []
+            },
+            "X_CMCC_NTPServerType": {
+                "checkin": [],
+                "checkout": []
+            }
+        },
+        "customerCheckin": {
+            "hbusPostPath": "hbus://mdm/InternetGatewayDevice.Time.",
+            "msgType": 212,
+            "checkin": "timeManageCheckin"
+        },
+        "customerCheckout": {
+            "hbusGetPath": "hbus://mdm/InternetGatewayDevice.Time.",
+            "msgType": 211
+        }
+    },
+    "HGS_INFORM": {
+        "inputElements": {
+            "Status": {
+                "checkin": [],
+                "checkout": []
+            }
+        },
+        "customerCheckin": {
+            "hbusPostPath": "hbus://miscd/inform",
+            "otherCheckin": "informStatusCfg",
+            "msgType": 214,
+            "userTagData": 1
+        },
+        "customerCheckout": {
+            "hbusGetPath": "hbus://miscd/inform",
+            "msgType": 214,
+            "userTagData": 2,
+            "checkout": "informSelfCheckout"
+        }
+    },
+    "HGS_IGMP": {
+        "inputElements": {
+            "ProxyEnable": {
+                "checkin": [],
+                "checkout": [
+                    {
+                        "strategy": "convertNumStrToBool",
+                        "valueConvert": 1
+                    }
+                ]
+            },
+            "SnoopingEnable": {
+                "checkin": [],
+                "checkout": [
+                    {
+                        "strategy": "convertNumStrToBool",
+                        "valueConvert": 1
+                    }
+                ]
+            },
+            "MLDProxyEnable": {
+                "checkin": [],
+                "checkout": [
+                    {
+                        "strategy": "convertNumStrToBool",
+                        "valueConvert": 1
+                    }
+                ]
+            },
+            "MLDSnoopingEnable": {
+                "checkin": [],
+                "checkout": [
+                    {
+                        "strategy": "convertNumStrToBool",
+                        "valueConvert": 1
+                    }
+                ]
+            }
+        },
+        "customerCheckin": {
+            "msgType": 212
+        },
+        "customerCheckout": {
+            "hbusGetPath": "hbus://mdm/InternetGatewayDevice.Services.X_CMCC_IPTV.",
+            "msgType": 211
+        }
+    },
+    "HGS_FTP": {
+        "inputElements": {
+            "FtpEnable": {
+                "checkin": [],
+                "checkout": [
+                    {
+                        "strategy": "convertNumStrToBool",
+                        "valueConvert": 1
+                    }
+                ]
+            },
+            "FtpUserName": {
+                "checkin": [
+                    {
+                        "strategy": "isNonEmpty",
+                        "errorMsg": "Please set FTP username!"
+                    },
+                    {
+                        "strategy": "ischinese",
+                        "errorMsg": "Chinese characters cannot exist in the user name, please reset it!"
+                    }
+                ],
+                "checkout": []
+            },
+            "FtpPassword": {
+                "checkin": [
+                    {
+                        "strategy": "isNonEmpty",
+                        "errorMsg": "Please set FTP password!"
+                    },
+                    {
+                        "strategy": "ischinese",
+                        "errorMsg": "The password cannot contain Chinese characters, please reset it!"
+                    },
+                    {
+                        "strategy": "minMaxLength",
+                        "errorMsg": "Password length must be at least [$1] characters and at most [$2] characters",
+                        "para": "8:64"
+                    }
+                ],
+                "checkout": []
+            },
+            "FtpPort": {
+                "checkin": [],
+                "checkout": []
+            }
+        },
+        "customerCheckin": {
+            "msgType": 212,
+            "checkin": "FTPCfgCheckIn"
+        },
+        "customerCheckout": {
+            "hbusGetPath": "hbus://mdm/InternetGatewayDevice.DeviceInfo.X_CMCC_ServiceManage.",
+            "msgType": 211,
+            "checkout": "FTPCfgCheckout"
+        }
+    },
+    "HGS_SAMBA": {
+        "inputElements": {
+            "Enable": {
+                "checkin": [],
+                "checkout": [
+                    {
+                        "strategy": "convertNumStrToBool",
+                        "valueConvert": 1
+                    }
+                ]
+            },
+            "Username": {
+                "checkin": [
+                    {
+                        "strategy": "isNonEmpty",
+                        "errorMsg": "Please set SAMBA username!"
+                    },
+                    {
+                        "strategy": "ischinese",
+                        "errorMsg": "The password cannot contain Chinese characters, please reset it!"
+                    }
+                ],
+                "checkout": []
+            },
+            "Password": {
+                "checkin": [
+                    {
+                        "strategy": "isNonEmpty",
+                        "errorMsg": "Please set a SAMBA password!"
+                    },
+                    {
+                        "strategy": "ischinese",
+                        "errorMsg": "The password cannot contain Chinese characters, please reset it!"
+                    },
+                    {
+                        "strategy": "minMaxLength",
+                        "errorMsg": "Password length must be at least [$1] characters and at most [$2] characters",
+                        "para": "8:64"
+                    }
+                ],
+                "checkout": []
+            },
+            "Anymous": {
+                "checkin": [],
+                "checkout": [
+                    {
+                        "strategy": "convertNumStrToBool",
+                        "valueConvert": 1
+                    }
+                ]
+            }
+        },
+        "customerCheckin": {
+            "msgType": 212
+        },
+        "customerCheckout": {
+            "hbusGetPath": "hbus://mdm/InternetGatewayDevice.DeviceInfo.X_CMCC_SAMBA.",
+            "msgType": 211,
+            "checkout": "sambaUpdate"
+        }
+    },
+    "HGS_UPNP": {
+        "inputElements": {
+            "Enable": {
+                "checkin": [],
+                "checkout": [
+                    {
+                        "strategy": "convertNumStrToBool",
+                        "valueConvert": 1
+                    }
+                ]
+            }
+        },
+        "customerCheckin": {
+            "msgType": 212
+        },
+        "customerCheckout": {
+            "hbusGetPath": "hbus://mdm/InternetGatewayDevice.DeviceInfo.X_CMCC_UPNP.",
+            "msgType": 211
+        }
+    },
+    "HGS_BUCPE": {
+        "inputElements": {
+            "platdomain1": {
+                "checkin": [],
+                "checkout": []
+            },
+            "platdomain2": {
+                "checkin": [],
+                "checkout": []
+            },
+            "reportpath1": {
+                "checkin": [],
+                "checkout": []
+            },
+            "reportpath2": {
+                "checkin": [],
+                "checkout": []
+            },
+            "speedserver1": {
+                "checkin": [],
+                "checkout": []
+            },
+            "speedserver2": {
+                "checkin": [],
+                "checkout": []
+            },
+            "tracerouteserver": {
+                "checkin": [],
+                "checkout": []
+            },
+            "plattimeserver": {
+                "checkin": [],
+                "checkout": []
+            },
+            "reportcycle": {
+                "checkin": [],
+                "checkout": []
+            },
+            "exetaskcycle": {
+                "checkin": [],
+                "checkout": []
+            }
+        },
+        "customerCheckin": {},
+        "customerCheckout": {
+            "hbusGetPath": "hbus://miscd/getBucpe",
+            "msgType": 237,
+            "userTagData": 1
+        }
+    },
+    "HGS_BUCPE_DEVINFO": {
+        "inputElements": {
+            "OperatorID": {
+                "checkin": [],
+                "checkout": []
+            },
+            "VendorID": {
+                "checkin": [],
+                "checkout": []
+            },
+            "ModelStr": {
+                "checkin": [],
+                "checkout": []
+            },
+            "SoftVer": {
+                "checkin": [],
+                "checkout": []
+            },
+            "SerialNum": {
+                "checkin": [],
+                "checkout": []
+            },
+            "WANMAC": {
+                "checkin": [],
+                "checkout": []
+            },
+            "DevMAC": {
+                "checkin": [],
+                "checkout": []
+            },
+            "Uplink": {
+                "checkin": [],
+                "checkout": []
+            },
+            "ProtocolVer": {
+                "checkin": [],
+                "checkout": []
+            },
+            "DeviceTime": {
+                "checkin": [],
+                "checkout": []
+            },
+            "RegID": {
+                "checkin": [],
+                "checkout": []
+            },
+            "UUID": {
+                "checkin": [],
+                "checkout": []
+            }
+        },
+        "customerCheckin": {},
+        "customerCheckout": {
+            "hbusGetPath": "hbus://miscd/getBucpe",
+            "msgType": 237,
+            "userTagData": 1,
+            "preCheckout": "bucpeDevInfoCheckout"
+        }
+    },
+    "HGS_BUCPE_GIS": {
+        "inputElements": {
+            "Long": {
+                "checkin": [],
+                "checkout": []
+            },
+            "Lat": {
+                "checkin": [],
+                "checkout": []
+            },
+            "Altitudes": {
+                "checkin": [],
+                "checkout": []
+            },
+            "HorizontalError": {
+                "checkin": [],
+                "checkout": []
+            },
+            "VerticalError": {
+                "checkin": [],
+                "checkout": []
+            },
+            "GISInterface": {
+                "checkin": [],
+                "checkout": []
+            },
+            "AreaCode": {
+                "checkin": [],
+                "checkout": []
+            },
+            "GISLockTime": {
+                "checkin": [],
+                "checkout": []
+            },
+            "GISDigest": {
+                "checkin": [],
+                "checkout": []
+            },
+            "appStatus": {
+                "checkin": [],
+                "checkout": []
+            }
+        },
+        "customerCheckin": {},
+        "customerCheckout": {
+            "hbusGetPath": "hbus://miscd/getBucpe",
+            "msgType": 237,
+            "userTagData": 1,
+            "preCheckout": "bucpeGisCheckout"
+        }
+    },
+    "HGS_BUCPE_IFNAME": {
+        "inputElements": {
+            "wanIfname": {
+                "checkin": [],
+                "checkout": []
+            },
+            "wanMac": {
+                "checkin": [],
+                "checkout": []
+            },
+            "wanIp": {
+                "checkin": [],
+                "checkout": []
+            },
+            "wanIfnameP2pIp": {
+                "checkin": [],
+                "checkout": []
+            },
+            "wanIpMask": {
+                "checkin": [],
+                "checkout": []
+            },
+            "wanIfnameMtu": {
+                "checkin": [],
+                "checkout": []
+            },
+            "lanDstIp": {
+                "checkin": [],
+                "checkout": []
+            },
+            "lanGw": {
+                "checkin": [],
+                "checkout": []
+            },
+            "lanMask": {
+                "checkin": [],
+                "checkout": []
+            },
+            "lanRoute": {
+                "checkin": [],
+                "checkout": []
+            },
+            "lanMetric": {
+                "checkin": [],
+                "checkout": []
+            },
+            "lanRotueNext": {
+                "checkin": [],
+                "checkout": []
+            },
+            "firstDns": {
+                "checkin": [],
+                "checkout": []
+            },
+            "secendDns": {
+                "checkin": [],
+                "checkout": []
+            }
+        },
+        "customerCheckin": {},
+        "customerCheckout": {
+            "msgType": 211,
+            "userTagData": 1,
+            "hbusGetPath": [
+                "hbus://mdm/InternetGatewayDevice.WANDevice.{i}.WANConnectionDevice.{i}.WANIPConnection.{i}.;",
+                "InternetGatewayDevice.WANDevice.{i}.WANConnectionDevice.{i}.WANPPPConnection.{i}.;",
+                "InternetGatewayDevice.LANDevice.1.LANHostConfigManagement."
+            ],
+            "preCheckout": "bucpeIfnameCheckout"
+        }
+    },
+    "HGS_BUCPE_SPEEDINFO": {
+        "inputElements": {
+            "Url": {
+                "checkin": [],
+                "checkout": []
+            },
+            "DestIp": {
+                "checkin": [],
+                "checkout": []
+            },
+            "PthreadNum": {
+                "checkin": [],
+                "checkout": []
+            },
+            "DiagnosticsState": {
+                "checkin": [],
+                "checkout": []
+            }
+        },
+        "customerCheckin": {
+            "msgType": 221,
+            "waitTimeoutMs": 5000,
+            "preCheckin": "bucpeSpeedCheckin"
+        },
+        "customerCheckout": {
+            "hbusGetPath": "hbus://miscd/getBucpe",
+            "msgType": 237,
+            "userTagData": 1,
+            "preCheckout": "bucpeSpeedCheckout"
+        }
+    },
+    "HGS_BUCPE_TRACEROUTE": {
+        "inputElements": {},
+        "customerCheckin": {},
+        "customerCheckout": {
+            "msgType": 220,
+            "preCheckout": "bucpeTracerCheckout",
+            "waitTimeoutMs": 5000
+        }
+    },
+    "HGS_DHCPV4": {
+        "inputElements": {
+            "IPInterfaceIPAddress": {
+                "checkin": [
+                    {
+                        "strategy": "isValidIP",
+                        "errorMsg": "Invalid IP address"
+                    }
+                ],
+                "checkout": []
+            },
+            "IPInterfaceSubnetMask": {
+                "checkin": [
+                    {
+                        "strategy": "isValidMask",
+                        "errorMsg": "Invalid subnet mask"
+                    }
+                ],
+                "checkout": []
+            },
+            "DHCPServerEnable": {
+                "checkin": [],
+                "checkout": [
+                    {
+                        "strategy": "convertNumStrToBool",
+                        "valueConvert": 1
+                    }
+                ]
+            },
+            "MinAddress": {
+                "checkin": [
+                    {
+                        "strategy": "isValidIP",
+                        "errorMsg": "Invalid [address pool start address]"
+                    }
+                ],
+                "checkout": []
+            },
+            "MaxAddress": {
+                "checkin": [
+                    {
+                        "strategy": "isValidIP",
+                        "errorMsg": "Invalid [Address pool end address]"
+                    }
+                ],
+                "checkout": []
+            },
+            "DHCPLeaseTime": {
+                "checkin": [],
+                "checkout": []
+            },
+            "ISPDNSEnable": {
+                "checkin": [],
+                "checkout": [
+                    {
+                        "strategy": "convertNumStrToBool",
+                        "valueConvert": 1
+                    }
+                ]
+            },
+            "ipv4DNSServer1": {
+                "checkin": [],
+                "checkout": []
+            },
+            "ipv4DNSServer2": {
+                "checkin": [],
+                "checkout": []
+            }
+        },
+        "customerCheckin": {
+            "msgType": 221,
+            "waitTimeoutMs": 5000,
+            "preCheckin": "dhcpv4PreCheckin"
+        },
+        "customerCheckout": {
+            "msgType": 220,
+            "checkout": "dhcpv4Checkout",
+            "waitTimeoutMs": 5000,
+            "postPaths": [
+                "InternetGatewayDevice.LANDevice.1.LANHostConfigManagement.IPInterface.1.",
+                "InternetGatewayDevice.LANDevice.1.LANHostConfigManagement."
+            ]
+        }
+    },
+    "HGS_QOS_CFG": {
+        "inputElements": {
+            "Mode": {
+                "checkin": [],
+                "checkout": []
+            },
+            "Enable": {
+                "checkin": [],
+                "checkout": [
+                    {
+                        "strategy": "convertNumStrToBool",
+                        "valueConvert": 1
+                    }
+                ]
+            },
+            "Bandwidth": {
+                "checkin": [],
+                "checkout": []
+            },
+            "Plan": {
+                "checkin": [],
+                "checkout": []
+            },
+            "EnableForceWeight": {
+                "checkin": [],
+                "checkout": [
+                    {
+                        "strategy": "convertNumStrToBool",
+                        "valueConvert": 1
+                    }
+                ]
+            },
+            "EnableDSCPMark": {
+                "checkin": [],
+                "checkout": [
+                    {
+                        "strategy": "convertNumStrToBool",
+                        "valueConvert": 1
+                    }
+                ]
+            },
+            "Enable802-1_P": {
+                "checkin": [],
+                "checkout": []
+            }
+        },
+        "customerCheckin": {
+            "msgType": 212,
+            "otherCheckin": "QOSCfgCheckIn"
+        },
+        "customerCheckout": {
+            "hbusGetPath": "hbus://mdm/InternetGatewayDevice.X_CMCC_UplinkQoS.",
+            "msgType": 211,
+            "checkout": "QOSCfgCheckout"
+        }
+    },
+    "HGS_ALG": {
+        "inputElements": {
+            "H323Enable": {
+                "checkin": [],
+                "checkout": [
+                    {
+                        "strategy": "convertNumStrToBool",
+                        "valueConvert": 1
+                    }
+                ]
+            },
+            "SIPEnable": {
+                "checkin": [],
+                "checkout": [
+                    {
+                        "strategy": "convertNumStrToBool",
+                        "valueConvert": 1
+                    }
+                ]
+            },
+            "RTSPEnable": {
+                "checkin": [],
+                "checkout": [
+                    {
+                        "strategy": "convertNumStrToBool",
+                        "valueConvert": 1
+                    }
+                ]
+            },
+            "L2TPEnable": {
+                "checkin": [],
+                "checkout": [
+                    {
+                        "strategy": "convertNumStrToBool",
+                        "valueConvert": 1
+                    }
+                ]
+            },
+            "IPSECEnable": {
+                "checkin": [],
+                "checkout": [
+                    {
+                        "strategy": "convertNumStrToBool",
+                        "valueConvert": 1
+                    }
+                ]
+            },
+            "FTPEnable": {
+                "checkin": [],
+                "checkout": [
+                    {
+                        "strategy": "convertNumStrToBool",
+                        "valueConvert": 1
+                    }
+                ]
+            },
+            "PPTPEnable": {
+                "checkin": [],
+                "checkout": [
+                    {
+                        "strategy": "convertNumStrToBool",
+                        "valueConvert": 1
+                    }
+                ]
+            }
+        },
+        "customerCheckin": {
+            "msgType": 212
+        },
+        "customerCheckout": {
+            "hbusGetPath": "hbus://mdm/InternetGatewayDevice.DeviceInfo.X_CMCC_ALGAbility.",
+            "msgType": 211
+        }
+    },
+    "HGS_SYSLOG": {
+        "inputElements": {
+            "Enable": {
+                "checkin": [],
+                "checkout": [
+                    {
+                        "strategy": "convertNumStrToBool",
+                        "valueConvert": 1
+                    }
+                ]
+            },
+            "Level": {
+                "checkin": [],
+                "checkout": []
+            }
+        },
+        "customerCheckin": {
+            "msgType": 212
+        },
+        "customerCheckout": {
+            "hbusGetPath": "hbus://mdm/InternetGatewayDevice.DeviceInfo.X_CMCC_Syslog.",
+            "msgType": 211
+        }
+    },
+    "HGS_SECURITY_LEVEL": {
+        "inputElements": {
+            "FirewallEnable": {
+                "checkin": [],
+                "checkout": [
+                    {
+                        "strategy": "convertNumStrToBool",
+                        "valueConvert": 1
+                    }
+                ]
+            },
+            "FirewallLevel": {
+                "checkin": [],
+                "checkout": []
+            }
+        },
+        "customerCheckin": {
+            "msgType": 212
+        },
+        "customerCheckout": {
+            "hbusGetPath": "hbus://mdm/InternetGatewayDevice.X_CMCC_Security.",
+            "msgType": 211
+        }
+    },
+    "HGS_ANTI_ATTACK": {
+        "inputElements": {
+            "DoSEnable": {
+                "checkin": [],
+                "checkout": [
+                    {
+                        "strategy": "convertNumStrToBool",
+                        "valueConvert": 1
+                    }
+                ]
+            },
+            "PortScanEnable": {
+                "checkin": [],
+                "checkout": [
+                    {
+                        "strategy": "convertNumStrToBool",
+                        "valueConvert": 1
+                    }
+                ]
+            },
+            "IPv6SessionSecurityEnable": {
+                "checkin": [],
+                "checkout": [
+                    {
+                        "strategy": "convertNumStrToBool",
+                        "valueConvert": 1
+                    }
+                ]
+            }
+        },
+        "customerCheckin": {
+            "msgType": 212
+        },
+        "customerCheckout": {
+            "hbusGetPath": "hbus://mdm/InternetGatewayDevice.X_CMCC_Security.",
+            "msgType": 211
+        }
+    },
+    "HGS_VXLAN": {
+        "inputElements": {
+            "Enable": {
+                "checkin": [],
+                "checkout": [
+                    {
+                        "strategy": "convertNumStrToBool",
+                        "valueConvert": 1
+                    }
+                ]
+            },
+            "TunnelKey": {
+                "checkin": [
+                    {
+                        "strategy": "isNotNum",
+                        "errorMsg": "TunnelKey should be a number in the range of 0-16777215"
+                    },
+                    {
+                        "strategy": "minMaxIntValue",
+                        "errorMsg": "TunnelKey minimum [$1], maximum [$2]",
+                        "para": "0:16777215"
+                    }
+                ],
+                "checkout": []
+            },
+            "TunnelRemoteIp": {
+                "checkin": [
+                    {
+                        "strategy": "isValidIPv4v6",
+                        "errorMsg": "Invalid IP address"
+                    }
+                ],
+                "checkout": []
+            },
+            "WorkMode": {
+                "checkin": [],
+                "checkout": []
+            },
+            "MaxMTUSize": {
+                "checkin": [
+                    {
+                        "strategy": "isNotNum",
+                        "errorMsg": "MTU must be a valid number!"
+                    },
+                    {
+                        "strategy": "minMaxIntValue",
+                        "errorMsg": "MTU minimum [$1] bytes, maximum [$2] bytes",
+                        "para": "500:1840"
+                    },
+                    {
+                        "strategy": "convertTextToNum",
+                        "valueConvert": 1
+                    }
+                ],
+                "checkout": []
+            },
+            "AddressingType": {
+                "checkin": [],
+                "checkout": []
+            },
+            "IPAddress": {
+                "checkin": [
+                    {
+                        "strategy": "isValidIPv4v6",
+                        "errorMsg": "Invalid IP address"
+                    }
+                ],
+                "checkout": []
+            },
+            "SubnetMask": {
+                "checkin": [],
+                "checkout": []
+            },
+            "DefaultGateway": {
+                "checkin": [],
+                "checkout": []
+            },
+            "NATEnabled": {
+                "checkin": [],
+                "checkout": [
+                    {
+                        "strategy": "convertNumStrToBool",
+                        "valueConvert": 1
+                    }
+                ]
+            },
+            "DNSServers_Master": {
+                "checkin": [
+                    {
+                        "strategy": "isEmptyOrValidIP",
+                        "errorMsg": "Invalid primary DNS server address"
+                    }
+                ],
+                "checkout": []
+            },
+            "DNSServers_Slave": {
+                "checkin": [
+                    {
+                        "strategy": "isEmptyOrValidIP",
+                        "errorMsg": "Invalid backup DNS server address"
+                    }
+                ],
+                "checkout": []
+            },
+            "X_CMCC_VLANEnable": {
+                "checkin": [],
+                "checkout": [
+                    {
+                        "strategy": "convertNumStrToBool",
+                        "valueConvert": 1
+                    }
+                ]
+            },
+            "X_CMCC_VLAN": {
+                "checkin": [
+                    {
+                        "strategy": "minMaxIntValue",
+                        "errorMsg": "VLAN id minimum [$1], maximum [$2]",
+                        "para": "1:4094"
+                    },
+                    {
+                        "strategy": "convertTextToNum",
+                        "valueConvert": 1
+                    }
+                ],
+                "checkout": []
+            },
+            "X_CMCC_WANInterface": {
+                "checkin": [],
+                "checkout": []
+            },
+            "X_CMCC_LanInterface": {
+                "checkin": [],
+                "checkout": []
+            }
+        },
+        "customerCheckin": {
+            "hbusPostPath": "hbus://mdm/InternetGatewayDevice.X_CMCC_VXLAN.VXLANConfig.{i}.",
+            "otherCheckin": "vxLanCheckin",
+            "msgType": 215
+        },
+        "customerCheckout2": {
+            "hbusGetPath": [
+                "hbus://mdm/InternetGatewayDevice.X_CMCC_VXLAN.VXLANConfig.{i}.;",
+                "InternetGatewayDevice.WANDevice.{i}.WANConnectionDevice.{i}.WANIPConnection.{i}.Name;",
+                "InternetGatewayDevice.WANDevice.{i}.WANConnectionDevice.{i}.WANPPPConnection.{i}.Name;"
+            ],
+            "msgType": 211,
+            "userTagData": 1,
+            "checkout": "vxLanCheckout"
+        }
+    },
+    "HGS_OPTICAL_MANAGE_INFO": {
+        "inputElements": {
+            "OpticalRouterUpLinkType": {
+                "checkin": [],
+                "checkout": []
+            }
+        },
+        "customerCheckin": {
+            "msgType": 212
+        },
+        "customerCheckout": {
+            "hbusGetPath": "hbus://mdm/InternetGatewayDevice.X_CMCC_FTTRNetwork.",
+            "msgType": 211
+        }
+    },
+    "HGS_URL_FILTER": {
+        "inputElements": {
+            "UrlFilterEnable": {
+                "checkin": [],
+                "checkout": [
+                    {
+                        "strategy": "convertNumStrToBool",
+                        "valueConvert": 1
+                    }
+                ]
+            },
+            "UrlFilterPolicy": {
+                "checkin": [],
+                "checkout": []
+            }
+        },
+        "customerCheckin": {
+            "msgType": 212
+        },
+        "customerCheckout": {
+            "hbusGetPath": "hbus://mdm/InternetGatewayDevice.X_CMCC_Security.",
+            "msgType": 211
+        }
+    },
+    "HGS_MAC_FILTER": {
+        "inputElements": {
+            "MacFilterEnable": {
+                "checkin": [],
+                "checkout": [
+                    {
+                        "strategy": "convertNumStrToBool",
+                        "valueConvert": 1
+                    }
+                ]
+            },
+            "MacFilterPolicy": {
+                "checkin": [],
+                "checkout": []
+            }
+        },
+        "customerCheckin": {
+            "hbusGetPath": "hbus://mdm/InternetGatewayDevice.X_CMCC_Security.",
+            "msgType": 212
+        },
+        "customerCheckout": {
+            "hbusGetPath": "hbus://mdm/InternetGatewayDevice.X_CMCC_Security.",
+            "msgType": 211
+        }
+    },
+    "HGS_IP_FILTER": {
+        "inputElements": {
+            "Enable": {
+                "checkin": [],
+                "checkout": [
+                    {
+                        "strategy": "convertNumStrToBool",
+                        "valueConvert": 1
+                    }
+                ]
+            },
+            "Policy": {
+                "checkin": [],
+                "checkout": []
+            }
+        },
+        "customerCheckin": {
+            "msgType": 212,
+            "checkin": "ipFilterCfgCheckin"
+        },
+        "customerCheckout": {
+            "hbusGetPath": "hbus://mdm/InternetGatewayDevice.X_CMCC_Security.",
+            "msgType": 211,
+            "preCheckout": "ipFilterCfgPreCheckout"
+        }
+    },
+    "HGS_DMZ": {
+        "inputElements": {
+            "DMZEnable": {
+                "checkin": [],
+                "checkout": [
+                    {
+                        "strategy": "convertNumStrToBool",
+                        "valueConvert": 1
+                    }
+                ]
+            },
+            "DMZHostIPAddress": {
+                "checkin": [
+                    {
+                        "strategy": "isEmptyOrValidIP",
+                        "errorMsg": "Invalid [LAN IP address] address"
+                    }
+                ],
+                "checkout": []
+            }
+        },
+        "customerCheckin": {
+            "msgType": 212,
+            "checkin": "dmzCheckin"
+        },
+        "customerCheckout": {
+            "hbusGetPath": "hbus://mdm/InternetGatewayDevice.X_HG_SecDmzHostCfg.",
+            "msgType": 211,
+            "checkout": "dmzUpdate"
+        }
+    },
+    "HGS_QOS_SPEED_LIMIT": {
+        "inputElements": {
+            "SpeedLimitMode_UP": {
+                "checkin": [
+                    {
+                        "strategy": "convertTextToNum",
+                        "valueConvert": 1
+                    }
+                ],
+                "checkout": []
+            },
+            "InterfaceLimit_UP": {
+                "checkin": [
+                    {
+                        "strategy": "isNonEmpty",
+                        "errorMsg": "Rate cannot be empty!"
+                    }
+                ],
+                "checkout": []
+            },
+            "VlanTagLimit_UP": {
+                "checkin": [
+                    {
+                        "strategy": "isNonEmpty",
+                        "errorMsg": "Rate cannot be empty!"
+                    }
+                ],
+                "checkout": []
+            },
+            "IPLimit_UP": {
+                "checkin": [
+                    {
+                        "strategy": "isNonEmpty",
+                        "errorMsg": "Rate cannot be empty!"
+                    }
+                ],
+                "checkout": []
+            }
+        },
+        "customerCheckin": {
+            "msgType": 212,
+            "checkin": "qosSpeedLimitCheckin"
+        },
+        "customerCheckout": {
+            "hbusGetPath": "hbus://mdm/InternetGatewayDevice.LANDevice.1.X_CMCC_DataSpeedLimit.",
+            "msgType": 211,
+            "checkout": "qosSpeedLimitCheckout"
+        }
+    },
+    "HGS_QOS_SPEED_LIMIT_DOWN": {
+        "inputElements": {
+            "SpeedLimitMode_DOWN": {
+                "checkin": [
+                    {
+                        "strategy": "convertTextToNum",
+                        "valueConvert": 1
+                    }
+                ],
+                "checkout": []
+            },
+            "InterfaceLimit_DOWN": {
+                "checkin": [
+                    {
+                        "strategy": "isNonEmpty",
+                        "errorMsg": "Rate cannot be empty!"
+                    }
+                ],
+                "checkout": []
+            },
+            "VlanTagLimit_DOWN": {
+                "checkin": [
+                    {
+                        "strategy": "isNonEmpty",
+                        "errorMsg": "Rate cannot be empty!"
+                    }
+                ],
+                "checkout": []
+            },
+            "IPLimit_DOWN": {
+                "checkin": [
+                    {
+                        "strategy": "isNonEmpty",
+                        "errorMsg": "Rate cannot be empty!"
+                    }
+                ],
+                "checkout": []
+            }
+        },
+        "customerCheckin": {
+            "msgType": 212,
+            "checkin": "qosSpeedLimitDownCheckin"
+        },
+        "customerCheckout": {
+            "hbusGetPath": "hbus://mdm/InternetGatewayDevice.LANDevice.1.X_CMCC_DataSpeedLimit.",
+            "msgType": 211,
+            "checkout": "qosSpeedLimitDownCheckout"
+        }
+    },
+    "HGS_DDNS": {
+        "inputElements": {
+            "DDNSCfgEnabled": {
+                "checkin": [],
+                "checkout": [
+                    {
+                        "strategy": "convertNumStrToBool",
+                        "valueConvert": 1
+                    }
+                ]
+            },
+            "DDNSProvider": {
+                "checkin": [],
+                "checkout": []
+            },
+            "DDNSUsername": {
+                "checkin": [
+                    {
+                        "strategy": "isNonEmpty",
+                        "errorMsg": "Please enter your username!"
+                    },
+                    {
+                        "strategy": "ischinese",
+                        "errorMsg": "Chinese characters cannot exist in the user name, please reset it!"
+                    }
+                ],
+                "checkout": []
+            },
+            "DDNSPassword": {
+                "checkin": [
+                    {
+                        "strategy": "isNonEmpty",
+                        "errorMsg": "Please enter your password!"
+                    },
+                    {
+                        "strategy": "ischinese",
+                        "errorMsg": "The password cannot contain Chinese characters, please reset it!"
+                    }
+                ],
+                "checkout": []
+            },
+            "DDNSDomainName": {
+                "checkin": [
+                    {
+                        "strategy": "isNonEmpty",
+                        "errorMsg": "Please enter a domain name!"
+                    },
+                    {
+                        "strategy": "isValidDomain",
+                        "errorMsg": "The domain name is illegal!"
+                    }
+                ],
+                "checkout": []
+            },
+            "WANInterface": {
+                "checkin": [
+                    {
+                        "strategy": "isNonEmpty",
+                        "errorMsg": "Please select a wan connection!"
+                    }
+                ],
+                "checkout": []
+            }
+        },
+        "customerCheckin": {
+            "hbusPostPath": "hbus://mdm/InternetGatewayDevice.X_HG_DDnsCfg.",
+            "msgType": 212
+        },
+        "customerCheckout": {
+            "hbusGetPath": [
+                "hbus://mdm/InternetGatewayDevice.X_HG_DDnsCfg.;",
+                "InternetGatewayDevice.WANDevice.{i}.WANConnectionDevice.{i}.WANIPConnection.{i}.Name;",
+                "InternetGatewayDevice.WANDevice.{i}.WANConnectionDevice.{i}.WANPPPConnection.{i}.Name"
+            ],
+            "msgType": 211,
+            "userTagData": 1,
+            "preCheckout": "ddnsUpdate"
+        }
+    },
+    "HGS_USER_ACCOUNT": {
+        "inputElements": {
+            "UserName": {
+                "checkin": [],
+                "checkout": []
+            },
+            "UserOldPassword": {
+                "checkin": [],
+                "checkout": []
+            },
+            "UserNewPassword": {
+                "checkin": [
+                    {
+                        "strategy": "ischinese",
+                        "errorMsg": "The password cannot contain Chinese characters, please reset it!"
+                    }
+                ],
+                "checkout": []
+            },
+            "ConfirmUserNewPwd": {
+                "checkin": [
+                    {
+                        "strategy": "ischinese",
+                        "errorMsg": "The password cannot contain Chinese characters, please reset it!"
+                    }
+                ],
+                "checkout": []
+            }
+        },
+        "customerCheckin": {
+            "hbusPostPath": "hbus://mdm/InternetGatewayDevice.X_HG_FunctionWebLeaf.",
+            "msgType": 201,
+            "otherCheckin": "userAccountCheckin",
+            "userTagData": 5,
+            "respHanlder": "userAccountResp"
+        },
+        "customerCheckout": {
+            "msgType": 220,
+            "preCheckout": "userAccountCheckout",
+            "waitTimeoutMs": 5000,
+            "postPaths": [
+                "InternetGatewayDevice.X_HG_FunctionWebLeaf.UserName"
+            ]
+        }
+    },
+    "HGS_REBOOT_DEV": {
+        "customerCheckin": {
+            "url": "/rebootDev",
+            "waitTimeoutMs": 5000,
+            "otherCheckin": "rebootCheckIn",
+            "respHanlder": "rebootResp"
+        },
+        "customerCheckout": {}
+    },
+    "HGS_SCHEDULE_REBOOT": {
+        "inputElements": {
+            "Enable": {
+                "checkin": [],
+                "checkout": [
+                    {
+                        "strategy": "convertNumStrToBool",
+                        "valueConvert": 1
+                    }
+                ]
+            },
+            "Interval": {
+                "checkin": [
+                    {
+                        "strategy": "isNonEmpty",
+                        "errorMsg": "The interval days cannot be empty!"
+                    },
+                    {
+                        "strategy": "isNotNum",
+                        "errorMsg": "The interval days must be a valid number!"
+                    }
+                ],
+                "checkout": []
+            },
+            "Time": {
+                "checkin": [
+                    {
+                        "strategy": "isNonEmpty",
+                        "errorMsg": "Time cannot be empty!"
+                    },
+                    {
+                        "strategy": "isValidTime",
+                        "errorMsg": "The time is incorrect, please enter the format such as: 10:20"
+                    }
+                ],
+                "checkout": []
+            },
+            "ForceFlow": {
+                "checkin": [],
+                "checkout": []
+            }
+        },
+        "customerCheckin": {
+            "msgType": 212,
+            "checkin": "scheRebootCheckin"
+        },
+        "customerCheckout": {
+            "hbusGetPath": "hbus://mdm/InternetGatewayDevice.LANDevice.1.AutoResetConfig.",
+            "msgType": 211,
+            "checkout": "scheRebootCheckout"
+        }
+    },
+    "HGS_RESTORE_DEF": {
+        "customerCheckin": {
+            "hbusPostPath": "hbus://mdm/RestoreDefault",
+            "msgType": 201,
+            "userTagData": 7,
+            "waitTimeoutMs": 5000,
+            "otherCheckin": "restoreDefCheckIn",
+            "respHanlder": "restoreDefResp"
+        }
+    },
+    "HGS_RESTORE_FAC": {
+        "customerCheckin": {
+            "hbusPostPath": "hbus://mdm/RestoreFactory",
+            "msgType": 201,
+            "userTagData": 8,
+            "waitTimeoutMs": 5000,
+            "otherCheckin": "restoreFacCheckIn",
+            "respHanlder": "restoreFacResp"
+        }
+    },
+    "HGS_OSGI_DEBUG": {
+        "inputElements": {
+            "EnableDebug": {
+                "checkin": [],
+                "checkout": [
+                    {
+                        "strategy": "convertNumStrToBool",
+                        "valueConvert": 1
+                    }
+                ]
+            }
+        },
+        "customerCheckin": {
+            "hbusPostPath": "hbus://native/",
+            "msgType": 201,
+            "userTagData": 1,
+            "otherCheckin": "osgiDebugCheckIn"
+        },
+        "customerCheckout": {
+            "hbusGetPath": "hbus://native/",
+            "msgType": 201,
+            "userTagData": 2
+        }
+    },
+    "HGS_OSGI_SWITCH": {
+        "inputElements": {
+            "EnableDebug": {
+                "checkin": [],
+                "checkout": [
+                    {
+                        "strategy": "convertNumStrToBool",
+                        "valueConvert": 1
+                    }
+                ]
+            }
+        },
+        "customerCheckin": {
+            "otherCheckin": "osgiSwitchCheckin"
+        },
+        "customerCheckout": {
+            "checkout": "osgiSwitchCheckout"
+        }
+    },
+    "HGS_HBUS_STAT": {
+        "customerCheckout": {
+            "checkout": "hbusStatGet"
+        }
+    },
+    "HGS_WLAN_SSIDPWD_CFG": {
+        "inputElements": {
+            "Enable": {
+                "checkin": [],
+                "checkout": [
+                    {
+                        "strategy": "convertNumStrToBool",
+                        "valueConvert": 1
+                    }
+                ]
+            },
+            "SSID": {
+                "checkin": [],
+                "checkout": []
+            },
+            "BeaconType": {
+                "checkin": [],
+                "checkout": []
+            },
+            "WPAEncryptionModes": {
+                "checkin": [],
+                "checkout": []
+            },
+            "KeyPassphrase": {
+                "checkin": [
+                    {
+                        "strategy": "ischinese",
+                        "errorMsg": "The password cannot contain Chinese characters, please re-enter!"
+                    },
+                    {
+                        "strategy": "minMaxLength",
+                        "errorMsg": "Password is between [$1] and [$2] characters",
+                        "para": "8:64"
+                    }
+                ],
+                "checkout": []
+            },
+            "Enable_5g": {
+                "checkin": [],
+                "checkout": [
+                    {
+                        "strategy": "convertNumStrToBool",
+                        "valueConvert": 1
+                    }
+                ]
+            },
+            "SSID_5g": {
+                "checkin": [],
+                "checkout": []
+            },
+            "BeaconType_5g": {
+                "checkin": [],
+                "checkout": []
+            },
+            "WPAEncryptionModes_5g": {
+                "checkin": [],
+                "checkout": []
+            },
+            "KeyPassphrase_5g": {
+                "checkin": [
+                    {
+                        "strategy": "ischinese",
+                        "errorMsg": "The password cannot contain Chinese characters, please re-enter!"
+                    },
+                    {
+                        "strategy": "minMaxLength",
+                        "errorMsg": "Password is between [$1] and [$2] characters",
+                        "para": "8:64"
+                    }
+                ],
+                "checkout": []
+            }
+        },
+        "customerCheckout": {
+            "msgType": 220,
+            "checkout": "wlanSsidPwdCfgCheckout",
+            "waitTimeoutMs": 5000,
+            "postPaths": [
+                "InternetGatewayDevice.LANDevice.1.WLANConfiguration.1.;",
+                "InternetGatewayDevice.LANDevice.1.WLANConfiguration.5.;"
+            ]
+        },
+        "customerCheckin": {
+            "msgType": 221,
+            "waitTimeoutMs": 5000,
+            "preCheckin": "wlanSsidPwdCfgCheckin"
+        }
+    },
+    "HGS_WLAN_ALL_CFG": {
+        "inputElements": {
+            "bandSteeringEnable": {
+                "checkin": [],
+                "checkout": [
+                    {
+                        "strategy": "convertNumStrToBool",
+                        "valueConvert": 1
+                    }
+                ]
+            },
+            "RSSIThreshold": {
+                "checkin": [],
+                "checkout": [
+                    {
+                        "strategy": "convertTextToNum",
+                        "valueConvert": 1
+                    }
+                ]
+            },
+            "RSSIThreshold5G": {
+                "checkin": [],
+                "checkout": [
+                    {
+                        "strategy": "convertTextToNum",
+                        "valueConvert": 1
+                    }
+                ]
+            },
+            "Enable": {
+                "checkin": [],
+                "checkout": [
+                    {
+                        "strategy": "convertNumStrToBool",
+                        "valueConvert": 1
+                    }
+                ]
+            },
+            "SSID": {
+                "checkin": [],
+                "checkout": []
+            },
+            "SSIDAdvertisementEnabled": {
+                "checkin": [],
+                "checkout": [
+                    {
+                        "strategy": "convertNumStrToBool",
+                        "valueConvert": 1
+                    }
+                ]
+            },
+            "Standard": {
+                "checkin": [],
+                "checkout": []
+            },
+            "Channel": {
+                "checkin": [],
+                "checkout": []
+            },
+            "ChannelsInUse": {
+                "checkin": [],
+                "checkout": []
+            },
+            "BeaconType": {
+                "checkin": [],
+                "checkout": []
+            },
+            "WPAEncryptionModes": {
+                "checkin": [],
+                "checkout": []
+            },
+            "X_CMCC_ChannelWidth": {
+                "checkin": [],
+                "checkout": []
+            },
+            "TransmitPower": {
+                "checkin": [],
+                "checkout": []
+            },
+            "BcnIntvl": {
+                "checkin": [],
+                "checkout": []
+            },
+            "DtmIntvl": {
+                "checkin": [],
+                "checkout": []
+            },
+            "KeyPassphrase": {
+                "checkin": [
+                    {
+                        "strategy": "ischinese",
+                        "errorMsg": "The password cannot contain Chinese characters, please re-enter!"
+                    },
+                    {
+                        "strategy": "minMaxLength",
+                        "errorMsg": "Password is between [$1] and [$2] characters",
+                        "para": "8:64"
+                    }
+                ],
+                "checkout": []
+            }
+        },
+        "customerCheckout": {
+            "msgType": 220,
+            "checkout": "wlanAllCfgCheckout",
+            "waitTimeoutMs": 5000,
+            "postPaths": [
+                "InternetGatewayDevice.LANDevice.1.WLANConfiguration.1.;",
+                "InternetGatewayDevice.LANDevice.1.WLANConfiguration.2.;",
+                "InternetGatewayDevice.LANDevice.1.WLANConfiguration.3.;",
+                "InternetGatewayDevice.LANDevice.1.WLANConfiguration.4.;",
+                "InternetGatewayDevice.LANDevice.1.WLANConfiguration.5.;",
+                "InternetGatewayDevice.LANDevice.1.WLANConfiguration.6.;",
+                "InternetGatewayDevice.LANDevice.1.WLANConfiguration.8.;",
+                "InternetGatewayDevice.CMCC_WIFI_BandSteering."
+            ]
+        },
+        "customerCheckin": {
+            "msgType": 221,
+            "waitTimeoutMs": 5000,
+            "preCheckin": "wlanAllCfgCheckin"
+        }
+    },
+    "HGS_WLAN_WIFI5_CFG": {
+        "inputElements": {
+            "Enable": {
+                "checkin": [],
+                "checkout": [
+                    {
+                        "strategy": "convertNumStrToBool",
+                        "valueConvert": 1
+                    }
+                ]
+            },
+            "SSID": {
+                "checkin": [],
+                "checkout": []
+            },
+            "SSIDAdvertisementEnabled": {
+                "checkin": [],
+                "checkout": [
+                    {
+                        "strategy": "convertNumStrToBool",
+                        "valueConvert": 1
+                    }
+                ]
+            },
+            "Channel": {
+                "checkin": [],
+                "checkout": []
+            },
+            "ChannelsInUse": {
+                "checkin": [],
+                "checkout": []
+            },
+            "BeaconType": {
+                "checkin": [],
+                "checkout": []
+            },
+            "WPAEncryptionModes": {
+                "checkin": [],
+                "checkout": []
+            },
+            "X_CMCC_ChannelWidth": {
+                "checkin": [],
+                "checkout": []
+            },
+            "TransmitPower": {
+                "checkin": [],
+                "checkout": []
+            },
+            "BcnIntvl": {
+                "checkin": [],
+                "checkout": []
+            },
+            "DtmIntvl": {
+                "checkin": [],
+                "checkout": []
+            },
+            "KeyPassphrase": {
+                "checkin": [
+                    {
+                        "strategy": "ischinese",
+                        "errorMsg": "The password cannot contain Chinese characters, please re-enter!"
+                    },
+                    {
+                        "strategy": "minMaxLength",
+                        "errorMsg": "Password is between [$1] and [$2] characters",
+                        "para": "8:64"
+                    }
+                ],
+                "checkout": []
+            }
+        },
+        "customerCheckout": {
+            "msgType": 220,
+            "checkout": "wlanWifi5CfgCheckout",
+            "waitTimeoutMs": 5000,
+            "postPaths": [
+                "InternetGatewayDevice.LANDevice.1.WLANConfiguration.4.;",
+                "InternetGatewayDevice.LANDevice.1.WLANConfiguration.8.;"
+            ]
+        },
+        "customerCheckin": {
+            "msgType": 221,
+            "waitTimeoutMs": 5000,
+            "preCheckin": "wlanWifi5CfgCheckin"
+        }
+    },
+    "HGS_WLAN_CTL": {
+        "inputElements": {
+            "X_CMCC_APModuleEnable": {
+                "checkin": [],
+                "checkout": [
+                    {
+                        "strategy": "convertNumStrToBool",
+                        "valueConvert": 1
+                    }
+                ]
+            }
+        },
+        "customerCheckout": {
+            "msgType": 220,
+            "postPaths": [
+                "InternetGatewayDevice.LANDevice.1.WLANConfiguration.1.",
+                "InternetGatewayDevice.Services.WifiMesh."
+            ],
+            "checkout": "wlanCtlCfgCheckout"
+        },
+        "customerCheckin": {
+            "msgType": 212,
+            "hbusPostPath": "hbus://mdm/InternetGatewayDevice.LANDevice.1.WLANConfiguration.1."
+        }
+    },
+    "HGS_WLAN_BASIC_CFG": {
+        "inputElements": {
+            "bandSteeringEnable": {
+                "checkin": [],
+                "checkout": [
+                    {
+                        "strategy": "convertNumStrToBool",
+                        "valueConvert": 1
+                    }
+                ]
+            },
+            "RSSIThreshold": {
+                "checkin": [],
+                "checkout": [
+                    {
+                        "strategy": "convertTextToNum",
+                        "valueConvert": 1
+                    }
+                ]
+            },
+            "RSSIThreshold5G": {
+                "checkin": [],
+                "checkout": [
+                    {
+                        "strategy": "convertTextToNum",
+                        "valueConvert": 1
+                    }
+                ]
+            },
+            "MloEnbale": {
+                "checkin": [],
+                "checkout": [
+                    {
+                        "strategy": "convertTextToNum",
+                        "valueConvert": 1
+                    }
+                ]
+            },
+            "Enable": {
+                "checkin": [],
+                "checkout": [
+                    {
+                        "strategy": "convertNumStrToBool",
+                        "valueConvert": 1
+                    }
+                ]
+            },
+            "SSID": {
+                "checkin": [],
+                "checkout": []
+            },
+            "BeaconType": {
+                "checkin": [],
+                "checkout": []
+            },
+            "WPAEncryptionModes": {
+                "checkin": [],
+                "checkout": []
+            },
+            "KeyPassphrase": {
+                "checkin": [
+                    {
+                        "strategy": "ischinese",
+                        "errorMsg": "The password cannot contain Chinese characters, please re-enter!"
+                    },
+                    {
+                        "strategy": "minMaxLength",
+                        "errorMsg": "Password is between [$1] and [$2] characters",
+                        "para": "8:64"
+                    }
+                ],
+                "checkout": []
+            },
+            "guestEnable": {
+                "checkin": [],
+                "checkout": [
+                    {
+                        "strategy": "convertNumStrToBool",
+                        "valueConvert": 1
+                    }
+                ]
+            },
+            "guestSSIDEnable": {
+                "checkin": [],
+                "checkout": [
+                    {
+                        "strategy": "convertNumStrToBool",
+                        "valueConvert": 1
+                    }
+                ]
+            },
+            "X_CMCC_WIFI5": {
+                "checkin": [],
+                "checkout": [
+                    {
+                        "strategy": "convertNumStrToBool",
+                        "valueConvert": 1
+                    }
+                ]
+            },
+            "guestSSID": {
+                "checkin": [],
+                "checkout": []
+            },
+            "guestBeaconType": {
+                "checkin": [],
+                "checkout": []
+            },
+            "guestPreSharedKey": {
+                "checkin": [],
+                "checkout": []
+            }
+        },
+        "customerCheckout": {
+            "msgType": 220,
+            "checkout": "wlanBasicCfgCheckout",
+            "waitTimeoutMs": 5000,
+            "postPaths": [
+                "InternetGatewayDevice.LANDevice.1.WLANConfiguration.1.;",
+                "InternetGatewayDevice.LANDevice.1.WLANConfiguration.2.;",
+                "InternetGatewayDevice.LANDevice.1.WLANConfiguration.3.;",
+                "InternetGatewayDevice.LANDevice.1.WLANConfiguration.4.;",
+                "InternetGatewayDevice.LANDevice.1.WLANConfiguration.5.;",
+                "InternetGatewayDevice.LANDevice.1.WLANConfiguration.6.;",
+                "InternetGatewayDevice.LANDevice.1.WLANConfiguration.8.;",
+                "InternetGatewayDevice.CMCC_WIFI_BandSteering.",
+                "InternetGatewayDevice.Services.WifiMesh.",
+                "InternetGatewayDevice.HgConfig."
+            ]
+        },
+        "customerCheckin": {
+            "msgType": 221,
+            "waitTimeoutMs": 5000,
+            "preCheckin": "wlanBasicCfgCheckin"
+        }
+    },
+    "HGS_WLAN_ADV_CFG": {
+        "inputElements": {
+            "SSIDAdvertisementEnabled": {
+                "checkin": [],
+                "checkout": [
+                    {
+                        "strategy": "convertNumStrToBool",
+                        "valueConvert": 1
+                    }
+                ]
+            },
+            "Standard": {
+                "checkin": [],
+                "checkout": []
+            },
+            "Channel": {
+                "checkin": [],
+                "checkout": []
+            },
+            "ChannelsInUse": {
+                "checkin": [],
+                "checkout": []
+            },
+            "X_CMCC_ChannelWidth": {
+                "checkin": [],
+                "checkout": []
+            },
+            "TransmitPower": {
+                "checkin": [],
+                "checkout": []
+            },
+            "BcnIntvl": {
+                "checkin": [],
+                "checkout": []
+            },
+            "DtmIntvl": {
+                "checkin": [],
+                "checkout": []
+            }
+        },
+        "customerCheckout": {
+            "msgType": 220,
+            "checkout": "wlanAdvCfgCheckout",
+            "waitTimeoutMs": 5000,
+            "postPaths": [
+                "InternetGatewayDevice.LANDevice.1.WLANConfiguration.1.;",
+                "InternetGatewayDevice.LANDevice.1.WLANConfiguration.5.;",
+                "InternetGatewayDevice.Services.WifiMesh."
+            ]
+        },
+        "customerCheckin": {
+            "msgType": 221,
+            "waitTimeoutMs": 5000,
+            "preCheckin": "wlanAdvCfgCheckin"
+        }
+    },
+    "HGS_WLAN_BACKUP": {
+        "inputElements": {
+            "Enable": {
+                "checkin": [],
+                "checkout": [
+                    {
+                        "strategy": "convertNumStrToBool",
+                        "valueConvert": 1
+                    }
+                ]
+            },
+            "SSID_2g": {
+                "checkin": [],
+                "checkout": []
+            },
+            "SSID_5g": {
+                "checkin": [],
+                "checkout": []
+            },
+            "KeyPassphrase_2g": {
+                "checkin": [
+                    {
+                        "strategy": "ischinese",
+                        "errorMsg": "The password cannot contain Chinese characters, please re-enter!"
+                    },
+                    {
+                        "strategy": "minMaxLength",
+                        "errorMsg": "Password is between [$1] and [$2] characters",
+                        "para": "8:64"
+                    }
+                ],
+                "checkout": []
+            },
+            "KeyPassphrase_5g": {
+                "checkin": [
+                    {
+                        "strategy": "ischinese",
+                        "errorMsg": "The password cannot contain Chinese characters, please re-enter!"
+                    },
+                    {
+                        "strategy": "minMaxLength",
+                        "errorMsg": "Password is between [$1] and [$2] characters",
+                        "para": "8:64"
+                    }
+                ],
+                "checkout": []
+            }
+        },
+        "customerCheckout": {
+            "msgType": 220,
+            "checkout": "wlanBackupCfgCheckout",
+            "waitTimeoutMs": 5000,
+            "postPaths": [
+                "InternetGatewayDevice.LANDevice.1.WLANConfiguration.1.;",
+                "InternetGatewayDevice.LANDevice.1.WLANConfiguration.4.;",
+                "InternetGatewayDevice.LANDevice.1.WLANConfiguration.5.;",
+                "InternetGatewayDevice.LANDevice.1.WLANConfiguration.8.;"
+            ]
+        },
+        "customerCheckin": {
+            "msgType": 221,
+            "waitTimeoutMs": 5000,
+            "preCheckin": "wlanBackupCfgCheckin"
+        }
+    },
+    "HGS_WLAN_GUEST": {
+        "inputElements": {
+            "Enable": {
+                "checkin": [],
+                "checkout": [
+                    {
+                        "strategy": "convertNumStrToBool",
+                        "valueConvert": 1
+                    }
+                ]
+            },
+            "SSID": {
+                "checkin": [],
+                "checkout": []
+            },
+            "BeaconType": {
+                "checkin": [],
+                "checkout": []
+            },
+            "WPAEncryptionModes": {
+                "checkin": [],
+                "checkout": []
+            },
+            "KeyPassphrase": {
+                "checkin": [
+                    {
+                        "strategy": "ischinese",
+                        "errorMsg": "The password cannot contain Chinese characters, please re-enter!"
+                    },
+                    {
+                        "strategy": "minMaxLength",
+                        "errorMsg": "Password is between [$1] and [$2] characters",
+                        "para": "8:64"
+                    }
+                ],
+                "checkout": []
+            },
+            "Enable_5g": {
+                "checkin": [],
+                "checkout": [
+                    {
+                        "strategy": "convertNumStrToBool",
+                        "valueConvert": 1
+                    }
+                ]
+            },
+            "SSID_5g": {
+                "checkin": [],
+                "checkout": []
+            },
+            "BeaconType_5g": {
+                "checkin": [],
+                "checkout": []
+            },
+            "WPAEncryptionModes_5g": {
+                "checkin": [],
+                "checkout": []
+            },
+            "KeyPassphrase_5g": {
+                "checkin": [
+                    {
+                        "strategy": "ischinese",
+                        "errorMsg": "The password cannot contain Chinese characters, please re-enter!"
+                    },
+                    {
+                        "strategy": "minMaxLength",
+                        "errorMsg": "Password is between [$1] and [$2] characters",
+                        "para": "8:64"
+                    }
+                ],
+                "checkout": []
+            }
+        },
+        "customerCheckout": {
+            "msgType": 220,
+            "checkout": "wlanGuestCfgCheckout",
+            "waitTimeoutMs": 5000,
+            "postPaths": [
+                "InternetGatewayDevice.LANDevice.1.WLANConfiguration.3.;",
+                "InternetGatewayDevice.LANDevice.1.WLANConfiguration.7.;",
+                "InternetGatewayDevice.Services.WifiMesh."
+            ]
+        },
+        "customerCheckin": {
+            "msgType": 221,
+            "waitTimeoutMs": 5000,
+            "preCheckin": "wlanGuestCfgCheckin"
+        }
+    },
+    "HGS_WLAN_SHARE": {
+        "inputElements": {
+            "EnableUserId": {
+                "checkin": [],
+                "checkout": [
+                    {
+                        "strategy": "convertNumStrToBool",
+                        "valueConvert": 1
+                    }
+                ]
+            },
+            "UserId": {
+                "checkin": [
+                    {
+                        "strategy": "isMobile",
+                        "errorMsg": "Illegal mobile phone number, please re-enter!"
+                    }
+                ],
+                "checkout": []
+            }
+        },
+        "customerCheckout": {
+            "msgType": 220,
+            "checkout": "wlanShareCheckout",
+            "waitTimeoutMs": 5000,
+            "postPaths": [
+                "InternetGatewayDevice.LANDevice.1.X_CMCC_WLANShare.1."
+            ]
+        },
+        "customerCheckin": {
+            "msgType": 221,
+            "waitTimeoutMs": 5000,
+            "preCheckin": "wlanShareCheckin"
+        }
+    },
+    "HGS_WLAN_WPS": {
+        "inputElements": {
+            "Enable": {
+                "checkin": [],
+                "checkout": [
+                    {
+                        "strategy": "convertNumStrToBool",
+                        "valueConvert": 1
+                    }
+                ]
+            }
+        },
+        "customerCheckout": {
+            "msgType": 220,
+            "checkout": "wlanWpsCheckout",
+            "waitTimeoutMs": 5000,
+            "postPaths": [
+                "InternetGatewayDevice.LANDevice.1.WLANConfiguration.1.WPS.",
+                "InternetGatewayDevice.LANDevice.1.WLANConfiguration.5.WPS."
+            ]
+        },
+        "customerCheckin": {
+            "msgType": 221,
+            "waitTimeoutMs": 5000,
+            "preCheckin": "wlanWpsCheckin"
+        }
+    },
+    "HGS_WLAN_SIGNALTHR": {
+        "inputElements": {
+            "Switch": {
+                "checkin": [
+                    {
+                        "strategy": "convertBoolToNumber",
+                        "valueConvert": 1
+                    }
+                ],
+                "checkout": [
+                    {
+                        "strategy": "convertNumStrToBool",
+                        "valueConvert": 1
+                    }
+                ]
+            },
+            "LowRLFBAND": {
+                "checkin": [
+                    {
+                        "strategy": "minMaxIntValue",
+                        "errorMsg": "The effective range of signal strength threshold is -100~-60dBm",
+                        "para": "-100:-60"
+                    }
+                ],
+                "checkout": []
+            }
+        },
+        "customerCheckout": {
+            "msgType": 211,
+            "checkout": "wlanSignalCheckout",
+            "hbusGetPath": "hbus://mdm/InternetGatewayDevice.CMCC_WIFI_SIGNALTHR."
+        },
+        "customerCheckin": {
+            "msgType": 212
+        }
+    },
+    "HGS_RELAY": {
+        "inputElements": {
+            "Enable": {
+                "checkin": [
+                    {
+                        "strategy": "convertNumStrToBool",
+                        "valueConvert": 1
+                    }
+                ],
+                "checkout": []
+            },
+            "status": {
+                "checkin": [],
+                "checkout": [
+                    {
+                        "strategy": "convertUpDownToConnectStatus",
+                        "valueConvert": 1
+                    }
+                ]
+            },
+            "SSID": {
+                "checkin": [],
+                "checkout": []
+            }
+        },
+        "customerCheckout": {
+            "msgType": 211,
+            "checkout": "relayCheckout",
+            "hbusGetPath": "hbus://mdm/InternetGatewayDevice.WlanUpConnect."
+        },
+        "customerCheckin": {
+            "msgType": 212
+        }
+    },
+    "HGS_REPEATER": {
+        "inputElements": {
+            "Enable": {
+                "checkin": [
+                    {
+                        "strategy": "convertNumStrToBool",
+                        "valueConvert": 1
+                    }
+                ],
+                "checkout": []
+            },
+            "SSID": {
+                "checkin": [],
+                "checkout": []
+            },
+            "PWD": {
+                "checkin": [
+                    {
+                        "strategy": "minMaxLength",
+                        "errorMsg": "Password is between [$1] and [$2] characters",
+                        "para": "8:64"
+                    }
+                ],
+                "checkout": []
+            },
+            "SecurityMode": {
+                "checkin": [],
+                "checkout": []
+            }
+        },
+        "customerCheckout": {
+            "msgType": 211,
+            "checkout": "repeaterCheckout",
+            "hbusGetPath": "hbus://mdm/InternetGatewayDevice.WlanUpConnect."
+        },
+        "customerCheckin": {
+            "msgType": 212
+        }
+    },
+    "HGS_PING": {
+        "inputElements": {
+            "X_CMCC_WANInterface": {
+                "checkin": [],
+                "checkout": []
+            },
+            "Protocol": {
+                "checkin": [],
+                "checkout": []
+            },
+            "Dest": {
+                "checkin": [
+                    {
+                        "strategy": "isNonEmpty",
+                        "errorMsg": "The IP address or domain name cannot be empty"
+                    }
+                ],
+                "checkout": []
+            }
+        },
+        "customerCheckout": {
+            "msgType": 211,
+            "userTagData": 1,
+            "checkout": "pingCheckout",
+            "hbusGetPath": [
+                "hbus://mdm/InternetGatewayDevice.WANDevice.{i}.WANConnectionDevice.{i}.WANIPConnection.{i}.;",
+                "InternetGatewayDevice.WANDevice.{i}.WANConnectionDevice.{i}.WANPPPConnection.{i}."
+            ]
+        },
+        "customerCheckin": {
+            "checkin": "pingCheckin"
+        }
+    },
+    "HGS_TRACERT": {
+        "inputElements": {
+            "X_CMCC_WANInterface": {
+                "checkin": [],
+                "checkout": []
+            },
+            "Protocol": {
+                "checkin": [],
+                "checkout": []
+            },
+            "TTL": {
+                "checkin": [],
+                "checkout": []
+            },
+            "NumberPerHop": {
+                "checkin": [],
+                "checkout": []
+            },
+            "TimeoutSec": {
+                "checkin": [],
+                "checkout": []
+            },
+            "Dest": {
+                "checkin": [
+                    {
+                        "strategy": "isNonEmpty",
+                        "errorMsg": "The IP address or domain name cannot be empty"
+                    }
+                ],
+                "checkout": []
+            }
+        },
+        "customerCheckout": {
+            "msgType": 211,
+            "userTagData": 1,
+            "checkout": "tracertCheckout",
+            "waitTimeoutMs": 5000,
+            "hbusGetPath": [
+                "hbus://mdm/InternetGatewayDevice.WANDevice.{i}.WANConnectionDevice.{i}.WANIPConnection.{i}.;",
+                "InternetGatewayDevice.WANDevice.{i}.WANConnectionDevice.{i}.WANPPPConnection.{i}."
+            ]
+        },
+        "customerCheckin": {
+            "checkin": "tracertCheckin"
+        }
+    },
+    "HGS_RADVD": {
+        "inputElements": {
+            "Enable": {
+                "checkin": [],
+                "checkout": [
+                    {
+                        "strategy": "convertNumStrToBool",
+                        "valueConvert": 1
+                    }
+                ]
+            },
+            "MaxRtrAdvInterval": {
+                "checkin": [],
+                "checkout": []
+            },
+            "MinRtrAdvInterval": {
+                "checkin": [],
+                "checkout": []
+            },
+            "AdvManagedFlag": {
+                "checkin": [],
+                "checkout": [
+                    {
+                        "strategy": "convertNumStrToBool",
+                        "valueConvert": 1
+                    }
+                ]
+            },
+            "AdvOtherConfigFlag": {
+                "checkin": [],
+                "checkout": [
+                    {
+                        "strategy": "convertNumStrToBool",
+                        "valueConvert": 1
+                    }
+                ]
+            }
+        },
+        "customerCheckout": {
+            "msgType": 220,
+            "checkout": "radvdCheckout",
+            "waitTimeoutMs": 5000,
+            "postPaths": [
+                "InternetGatewayDevice.LANDevice.1.X_CMCC_RouterAdvertisement."
+            ]
+        },
+        "customerCheckin": {
+            "msgType": 221,
+            "waitTimeoutMs": 5000,
+            "preCheckin": "radvdCheckin"
+        }
+    },
+    "HGS_DHCPV6": {
+        "inputElements": {
+            "LocalAddress": {
+                "checkin": [
+                    {
+                        "strategy": "isEmptyOrValidIPv6",
+                        "errorMsg": "Lan side IPv6 address is illegal!"
+                    }
+                ],
+                "checkout": []
+            },
+            "Enable": {
+                "checkin": [],
+                "checkout": [
+                    {
+                        "strategy": "convertNumStrToBool",
+                        "valueConvert": 1
+                    }
+                ]
+            },
+            "MinAddress": {
+                "checkin": [
+                    {
+                        "strategy": "isValidIPv6Last64Bits",
+                        "errorMsg": "The starting address is invalid."
+                    }
+                ],
+                "checkout": []
+            },
+            "MaxAddress": {
+                "checkin": [
+                    {
+                        "strategy": "isValidIPv6Last64Bits",
+                        "errorMsg": "The end address is invalid."
+                    }
+                ],
+                "checkout": []
+            },
+            "IPv6DNSConfigType": {
+                "checkin": [],
+                "checkout": []
+            },
+            "IPv6DNSWANConnection": {
+                "checkin": [],
+                "checkout": []
+            },
+            "IPv6DNSServers": {
+                "checkin": [],
+                "checkout": []
+            }
+        },
+        "customerCheckout": {
+            "msgType": 220,
+            "checkout": "dhcpv6Checkout",
+            "waitTimeoutMs": 5000,
+            "postPaths": [
+                "InternetGatewayDevice.LANDevice.1.LANHostConfigManagement.IPInterface.1.X_CMCC_IPv6Address.",
+                "InternetGatewayDevice.LANDevice.1.X_CMCC_IPv6Config.",
+                "InternetGatewayDevice.LANDevice.1.X_CMCC_DHCPv6Server."
+            ]
+        },
+        "customerCheckin": {
+            "msgType": 221,
+            "waitTimeoutMs": 5000,
+            "preCheckin": "dhcpv6Checkin"
+        }
+    },
+    "HGS_PREFIX": {
+        "inputElements": {
+            "Mode": {
+                "checkin": [],
+                "checkout": []
+            },
+            "DelegatedWanConnection": {
+                "checkin": [],
+                "checkout": []
+            },
+            "Prefix": {
+                "checkin": [],
+                "checkout": []
+            }
+        },
+        "customerCheckout": {
+            "msgType": 220,
+            "checkout": "prefixCheckout",
+            "waitTimeoutMs": 5000,
+            "postPaths": [
+                "InternetGatewayDevice.LANDevice.1.X_CMCC_IPv6Config.PrefixInformation.1."
+            ]
+        },
+        "customerCheckin": {
+            "msgType": 221,
+            "waitTimeoutMs": 5000,
+            "preCheckin": "prefixCheckin"
+        }
+    },
+    "HGS_VOIP_LINK_INFO": {
+        "inputElements": {
+            "VoipPhoneNum": {
+                "checkin": [],
+                "checkout": []
+            },
+            "VoipPhoneStatus": {
+                "checkin": [],
+                "checkout": []
+            },
+            "VoipPhoneError": {
+                "checkin": [],
+                "checkout": []
+            }
+        },
+        "customerCheckin": {},
+        "customerCheckout": {
+            "msgType": 220,
+            "checkout": "voipLinkCheckout",
+            "waitTimeoutMs": 5000,
+            "postPaths": [
+                "InternetGatewayDevice.Services.VoiceService.1.VoiceProfile.1.Line.1.SIP.",
+                "InternetGatewayDevice.Services.VoiceService.1.VoiceProfile.1.Line.1."
+            ]
+        }
+    },
+    "HGS_VOIP_PROTOCOL": {
+        "inputElements": {
+            "X_CMCC_ServerType": {
+                "checkin": [],
+                "checkout": []
+            }
+        },
+        "customerCheckout": {
+            "hbusGetPath": "hbus://mdm/InternetGatewayDevice.Services.VoiceService.1.VoiceProfile.1.",
+            "msgType": 211,
+            "checkout": "voipProtocolCheckout"
+        },
+        "customerCheckin": {
+            "msgType": 212,
+            "otherCheckin": "voipProtocolCheckin"
+        }
+    },
+    "HGS_VOIP_CONFIG": {
+        "inputElements": {
+            "RegistrarServer": {
+                "checkin": [],
+                "checkout": []
+            },
+            "RegistrarServerPort": {
+                "checkin": [],
+                "checkout": []
+            },
+            "ProxyServer": {
+                "checkin": [],
+                "checkout": []
+            },
+            "ProxyServerPort": {
+                "checkin": [],
+                "checkout": []
+            },
+            "OutboundProxy": {
+                "checkin": [],
+                "checkout": []
+            },
+            "OutboundProxyPort": {
+                "checkin": [],
+                "checkout": []
+            },
+            "X_CMCC_Standby-RegistrarServer": {
+                "checkin": [],
+                "checkout": []
+            },
+            "X_CMCC_Standby-RegistrarServerPort": {
+                "checkin": [],
+                "checkout": []
+            },
+            "X_CMCC_Standby-ProxyServer": {
+                "checkin": [],
+                "checkout": []
+            },
+            "X_CMCC_Standby-ProxyServerPort": {
+                "checkin": [],
+                "checkout": []
+            },
+            "X_CMCC_Standby-OutboundProxy": {
+                "checkin": [],
+                "checkout": []
+            },
+            "X_CMCC_Standby-OutboundProxyPort": {
+                "checkin": [],
+                "checkout": []
+            },
+            "Enable": {
+                "checkin": [],
+                "checkout": []
+            },
+            "AuthUserName": {
+                "checkin": [],
+                "checkout": []
+            },
+            "URI": {
+                "checkin": [],
+                "checkout": []
+            },
+            "AuthPassword": {
+                "checkin": [],
+                "checkout": []
+            }
+        },
+        "customerCheckout": {
+            "msgType": 220,
+            "checkout": "voipConfigCheckout",
+            "waitTimeoutMs": 5000,
+            "postPaths": [
+                "InternetGatewayDevice.Services.VoiceService.1.VoiceProfile.1.SIP.",
+                "InternetGatewayDevice.Services.VoiceService.1.VoiceProfile.1.Line.1.",
+                "InternetGatewayDevice.Services.VoiceService.1.VoiceProfile.1.Line.1.SIP."
+            ]
+        },
+        "customerCheckin": {
+            "msgType": 221,
+            "waitTimeoutMs": 5000,
+            "preCheckin": "voipConfigCheckin"
+        }
+    },
+    "HGS_VOIP_CALL_CTL": {
+        "inputElements": {
+            "X_CMCC_StartDigitTimer": {
+                "checkin": [],
+                "checkout": []
+            },
+            "X_CMCC_InterDigitTimerShort": {
+                "checkin": [],
+                "checkout": []
+            },
+            "X_CMCC_InterDigitTimerLong": {
+                "checkin": [],
+                "checkout": []
+            },
+            "X_CMCC_HangingReminderToneTimer": {
+                "checkin": [],
+                "checkout": []
+            },
+            "X_CMCC_BusyToneTimer": {
+                "checkin": [],
+                "checkout": []
+            },
+            "X_CMCC_NoAnswerTimer": {
+                "checkin": [],
+                "checkout": []
+            }
+        },
+        "customerCheckout": {
+            "hbusGetPath": "hbus://mdm/InternetGatewayDevice.Services.VoiceService.1.VoiceProfile.1.",
+            "msgType": 211
+        },
+        "customerCheckin": {
+            "msgType": 212
+        }
+    },
+    "HGS_VOIP_ADV_CONFIG": {
+        "inputElements": {
+            "DTMFMethod": {
+                "checkin": [],
+                "checkout": []
+            },
+            "UseCodecPriorityInSDPResponse": {
+                "checkin": [],
+                "checkout": []
+            },
+            "RegisterExpires": {
+                "checkin": [
+                    {
+                        "strategy": "minMaxIntValue",
+                        "errorMsg": "Registration timeout must be greater than 0",
+                        "para": "1"
+                    }
+                ],
+                "checkout": []
+            },
+            "RegisterRetryInterval": {
+                "checkin": [
+                    {
+                        "strategy": "minMaxIntValue",
+                        "errorMsg": "If registration fails, the re-registration time must be greater than 0",
+                        "para": "1"
+                    }
+                ],
+                "checkout": []
+            },
+            "X_TianYi_SessionUpdateEnable": {
+                "checkin": [],
+                "checkout": [
+                    {
+                        "strategy": "convertNumStrToBool",
+                        "valueConvert": 1
+                    }
+                ]
+            },
+            "X_CMCC_SessionUpdateTimer": {
+                "checkin": [],
+                "checkout": []
+            },
+            "X_CMCC_PrackEnable": {
+                "checkin": [],
+                "checkout": [
+                    {
+                        "strategy": "convertNumStrToBool",
+                        "valueConvert": 1
+                    }
+                ]
+            },
+            "X_CMCC_BootDeRegisterEnable": {
+                "checkin": [],
+                "checkout": [
+                    {
+                        "strategy": "convertNumStrToBool",
+                        "valueConvert": 1
+                    }
+                ]
+            },
+            "TimeSyncMode": {
+                "checkin": [],
+                "checkout": []
+            },
+            "CallIDShowMode": {
+                "checkin": [],
+                "checkout": []
+            },
+            "CIDPriorityMode": {
+                "checkin": [],
+                "checkout": []
+            },
+            "PreferRemoteCodecSwitch": {
+                "checkin": [],
+                "checkout": []
+            },
+            "ClipSendDateTime": {
+                "checkin": [],
+                "checkout": []
+            },
+            "ClipGetMode": {
+                "checkin": [],
+                "checkout": []
+            },
+            "X_CUSTOM_RingVoltage": {
+                "checkin": [],
+                "checkout": []
+            },
+            "HookFlashDownTime": {
+                "checkin": [],
+                "checkout": []
+            },
+            "HookFlashUpTime": {
+                "checkin": [],
+                "checkout": []
+            },
+            "ReceiveGain": {
+                "checkin": [],
+                "checkout": []
+            },
+            "TransmitGain": {
+                "checkin": [],
+                "checkout": []
+            },
+            "X_TIANYI_COM_FixedJitterBufferEnabled": {
+                "checkin": [],
+                "checkout": []
+            },
+            "X_TIANYI_COM_JitterBufferDynMin": {
+                "checkin": [],
+                "checkout": []
+            },
+            "X_TIANYI_COM_JitterBufferDynMax": {
+                "checkin": [],
+                "checkout": []
+            },
+            "EchoCancellationEnable": {
+                "checkin": [],
+                "checkout": []
+            },
+            "SilenceSuppression": {
+                "checkin": [],
+                "checkout": [
+                    {
+                        "strategy": "convertNumStrToBool",
+                        "valueConvert": 1
+                    }
+                ]
+            },
+            "X_CMCC_SubscribeEnable": {
+                "checkin": [],
+                "checkout": [
+                    {
+                        "strategy": "convertNumStrToBool",
+                        "valueConvert": 1
+                    }
+                ]
+            },
+            "X_CMCC_HeartbeatSwitch": {
+                "checkin": [],
+                "checkout": [
+                    {
+                        "strategy": "convertNumStrToBool",
+                        "valueConvert": 1
+                    }
+                ]
+            },
+            "X_CMCC_HeartbeatCycle": {
+                "checkin": [],
+                "checkout": []
+            }
+        },
+        "customerCheckout": {
+            "msgType": 220,
+            "checkout": "voipAdvancedCfgCheckout",
+            "waitTimeoutMs": 5000,
+            "postPaths": [
+                "InternetGatewayDevice.Services.VoiceService.1.VoiceProfile.1.",
+                "InternetGatewayDevice.Services.VoiceService.1.VoiceProfile.1.DTMFMethod",
+                "InternetGatewayDevice.Services.VoiceService.1.VoiceProfile.1.SIP.",
+                "InternetGatewayDevice.Services.VoiceService.1.VoiceProfile.1.Line.1.VoiceProcessing."
+            ]
+        },
+        "customerCheckin": {
+            "msgType": 221,
+            "waitTimeoutMs": 5000,
+            "preCheckin": "voipAdvancedCfgCheckin"
+        }
+    },
+    "HGS_VOIP_SUPPLY_CONFIG": {
+        "inputElements": {
+            "Reversed_polarity": {
+                "checkin": [],
+                "checkout": []
+            },
+            "HotlineEnable": {
+                "checkin": [],
+                "checkout": []
+            },
+            "HotlineTimer": {
+                "checkin": [],
+                "checkout": []
+            },
+            "HotlineNumber": {
+                "checkin": [],
+                "checkout": []
+            },
+            "CallWaitingEnable": {
+                "checkin": [],
+                "checkout": []
+            },
+            "hold-service": {
+                "checkin": [],
+                "checkout": []
+            },
+            "ConferenceEnable": {
+                "checkin": [],
+                "checkout": []
+            },
+            "X_BROADCOM_COM_CallHoldEnable": {
+                "checkin": [],
+                "checkout": [
+                    {
+                        "strategy": "convertNumStrToBool",
+                        "valueConvert": 1
+                    }
+                ]
+            }
+        },
+        "customerCheckout": {
+            "msgType": 220,
+            "checkout": "voipSupplyCfgCheckout",
+            "waitTimeoutMs": 5000,
+            "postPaths": [
+                "InternetGatewayDevice.Services.VoiceService.1.VoiceProfile.1.SIP.",
+                "InternetGatewayDevice.Services.VoiceService.1.VoiceProfile.1.Line.1.CallingFeatures.",
+                "InternetGatewayDevice.Services.VoiceService.1.VoiceProfile.1.Line.1.X_CMCC_IMS."
+            ]
+        },
+        "customerCheckin": {
+            "msgType": 221,
+            "waitTimeoutMs": 5000,
+            "preCheckin": "voipSupplyCfgCheckin"
+        }
+    },
+    "HGS_VOIP_QOS_CONFIG": {
+        "inputElements": {
+            "S_DSCPMark": {
+                "checkin": [],
+                "checkout": []
+            },
+            "S_X_CMCC_802-1pMark": {
+                "checkin": [],
+                "checkout": []
+            },
+            "R_DSCPMark": {
+                "checkin": [],
+                "checkout": []
+            },
+            "R_X_CMCC_802-1pMark": {
+                "checkin": [],
+                "checkout": []
+            }
+        },
+        "customerCheckout": {
+            "msgType": 220,
+            "preCheckout": "voipQosCfgCheckout",
+            "waitTimeoutMs": 5000,
+            "postPaths": [
+                "InternetGatewayDevice.Services.VoiceService.1.VoiceProfile.1.SIP.",
+                "InternetGatewayDevice.Services.VoiceService.1.VoiceProfile.1.RTP."
+            ]
+        },
+        "customerCheckin": {
+            "msgType": 221,
+            "waitTimeoutMs": 5000,
+            "preCheckin": "voipQosCfgCheckin"
+        }
+    },
+    "HGS_VOIP_FAX_CONFIG": {
+        "inputElements": {
+            "Enable": {
+                "checkin": [],
+                "checkout": []
+            },
+            "FaxMode": {
+                "checkin": [],
+                "checkout": []
+            },
+            "ControlType": {
+                "checkin": [],
+                "checkout": []
+            }
+        },
+        "customerCheckout": {
+            "msgType": 220,
+            "checkout": "voipFaxCheckout",
+            "waitTimeoutMs": 5000,
+            "postPaths": [
+                "InternetGatewayDevice.Services.VoiceService.1.VoiceProfile.1.X_CT-COM_G711Fax."
+            ]
+        },
+        "customerCheckin": {
+            "msgType": 221,
+            "waitTimeoutMs": 5000,
+            "preCheckin": "voipFaxCheckin"
+        }
+    },
+    "HGS_VOIP_CONFIG_H248": {
+        "inputElements": {
+            "MediaGatewayPort": {
+                "checkin": [],
+                "checkout": []
+            },
+            "MediaGatewayControler": {
+                "checkin": [],
+                "checkout": []
+            },
+            "MediaGatewayControlerPort": {
+                "checkin": [],
+                "checkout": []
+            },
+            "Standby-MediaGatewayControler": {
+                "checkin": [],
+                "checkout": []
+            },
+            "Standby-MediaGatewayControlerPort": {
+                "checkin": [],
+                "checkout": []
+            },
+            "DeviceIDType": {
+                "checkin": [],
+                "checkout": []
+            },
+            "DeviceID": {
+                "checkin": [],
+                "checkout": []
+            },
+            "MessageEncodingType": {
+                "checkin": [],
+                "checkout": []
+            },
+            "PhysicalTermIDConfigMethod": {
+                "checkin": [],
+                "checkout": []
+            },
+            "PhysicalTermIDPrefix": {
+                "checkin": [],
+                "checkout": []
+            },
+            "PhysicalTermID": {
+                "checkin": [],
+                "checkout": []
+            },
+            "PhysicalTermIDAddLen": {
+                "checkin": [],
+                "checkout": []
+            },
+            "RTPPrefix": {
+                "checkin": [],
+                "checkout": []
+            },
+            "EphemeralTermIDStart": {
+                "checkin": [],
+                "checkout": []
+            },
+            "EphemeralTermIDAddLen": {
+                "checkin": [],
+                "checkout": []
+            }
+        },
+        "customerCheckout": {
+            "hbusGetPath": "hbus://mdm/InternetGatewayDevice.Services.VoiceService.1.VoiceProfile.1.X_CT-COM_H248.",
+            "msgType": 211
+        },
+        "customerCheckin": {
+            "msgType": 212
+        }
+    },
+    "HGS_VOIP_ADV_CONFIG_H248": {
+        "inputElements": {
+            "DTMFMethod": {
+                "checkin": [],
+                "checkout": []
+            },
+            "RtpPortStart": {
+                "checkin": [],
+                "checkout": []
+            },
+            "RtpPortEnd": {
+                "checkin": [],
+                "checkout": []
+            },
+            "HookFlashDownTime": {
+                "checkin": [],
+                "checkout": []
+            },
+            "HookFlashUpTime": {
+                "checkin": [],
+                "checkout": []
+            },
+            "SilenceSuppression": {
+                "checkin": [],
+                "checkout": [
+                    {
+                        "strategy": "convertNumStrToBool",
+                        "valueConvert": 1
+                    }
+                ]
+            },
+            "ReceiveGain": {
+                "checkin": [],
+                "checkout": []
+            },
+            "TransmitGain": {
+                "checkin": [],
+                "checkout": []
+            },
+            "EchoCancellationEnable": {
+                "checkin": [],
+                "checkout": []
+            }
+        },
+        "customerCheckout": {
+            "msgType": 220,
+            "checkout": "voipAdvancedCfgH248Checkout",
+            "waitTimeoutMs": 5000,
+            "postPaths": [
+                "InternetGatewayDevice.Services.VoiceService.1.VoiceProfile.1.",
+                "InternetGatewayDevice.Services.VoiceService.1.VoiceProfile.1.SIP.",
+                "InternetGatewayDevice.Services.VoiceService.1.VoiceProfile.1.Line.1.VoiceProcessing."
+            ]
+        },
+        "customerCheckin": {
+            "msgType": 221,
+            "waitTimeoutMs": 5000,
+            "preCheckin": "voipAdvancedCfgH248Checkin"
+        }
+    },
+    "HGS_VOIP_SUPPLY_CONFIG_H248": {
+        "inputElements": {
+            "HeartbeatMode": {
+                "checkin": [],
+                "checkout": []
+            },
+            "HeartbeatCycle": {
+                "checkin": [],
+                "checkout": []
+            },
+            "HeartbeatCount": {
+                "checkin": [],
+                "checkout": []
+            },
+            "CallIDShowMode": {
+                "checkin": [],
+                "checkout": []
+            }
+        },
+        "customerCheckout": {
+            "msgType": 220,
+            "checkout": "voipSupplyCfgH248Checkout",
+            "waitTimeoutMs": 5000,
+            "postPaths": [
+                "InternetGatewayDevice.Services.VoiceService.1.VoiceProfile.1.SIP.",
+                "InternetGatewayDevice.Services.VoiceService.1.VoiceProfile.1.X_CT-COM_H248."
+            ]
+        },
+        "customerCheckin": {
+            "msgType": 221,
+            "waitTimeoutMs": 5000,
+            "preCheckin": "voipSupplyCfgH248Checkin"
+        }
+    },
+    "HGS_VOIP_CALL_CTL_H248": {
+        "inputElements": {
+            "X_CMCC_StartDigitTimer": {
+                "checkin": [],
+                "checkout": []
+            },
+            "X_CMCC_InterDigitTimerShort": {
+                "checkin": [],
+                "checkout": []
+            },
+            "X_CMCC_InterDigitTimerLong": {
+                "checkin": [],
+                "checkout": []
+            },
+            "X_CMCC_HangingReminderToneTimer": {
+                "checkin": [],
+                "checkout": []
+            },
+            "X_CMCC_BusyToneTimer": {
+                "checkin": [],
+                "checkout": []
+            },
+            "X_CMCC_NoAnswerTimer": {
+                "checkin": [],
+                "checkout": []
+            }
+        },
+        "customerCheckout": {
+            "hbusGetPath": "hbus://mdm/InternetGatewayDevice.Services.VoiceService.1.VoiceProfile.1.",
+            "msgType": 211
+        },
+        "customerCheckin": {
+            "msgType": 212
+        }
+    },
+    "HGS_DIGITALMAP_CONFIG": {
+        "inputElements": {
+            "DigitMapEnable": {
+                "checkin": [],
+                "checkout": [
+                    {
+                        "strategy": "convertNumStrToBool",
+                        "valueConvert": 1
+                    }
+                ]
+            },
+            "DigitMap": {
+                "checkin": [],
+                "checkout": []
+            },
+            "ImmediatlyDigit": {
+                "checkin": [],
+                "checkout": [
+                    {
+                        "strategy": "convertNumStrToBool",
+                        "valueConvert": 1
+                    }
+                ]
+            }
+        },
+        "customerCheckout": {
+            "waitTimeoutMs": 5000,
+            "postPaths": [
+                "InternetGatewayDevice.Services.VoiceService.1.VoiceProfile.1."
+            ],
+            "msgType": 220,
+            "checkout": "voipDigitalmapCheckout"
+        },
+        "customerCheckin": {
+            "msgType": 221,
+            "waitTimeoutMs": 5000,
+            "preCheckin": "voipDigitalmapCheckin"
+        }
+    },
+    "HGS_DUMP_MDM": {
+        "customerCheckout": {
+            "checkout": "dumpmdmCheckout"
+        }
+    },
+    "HGS_DUMP_CFG": {
+        "customerCheckout": {
+            "checkout": "dumpcfgCheckout"
+        }
+    },
+    "HGS_DUMP_BK_CFG": {
+        "customerCheckout": {
+            "checkout": "dumpbkcfgCheckout"
+        }
+    },
+    "HGS_LOG_WAN_IP": {
+        "inputElements": {
+            "IpofInternetWan": {
+                "checkin": [],
+                "checkout": []
+            }
+        },
+        "customerCheckin": {},
+        "customerCheckout": {
+            "hbusGetPath": "hbus://misc/",
+            "msgType": 232,
+            "userTagData": 0
+        }
+    },
+    "HGS_MIRROR_CFG": {
+        "inputElements": {},
+        "customerCheckin": {
+            "otherCheckin": "mirrorCfgCheckin",
+            "delete": "mirrorCfgDelete"
+        },
+        "customerCheckout": {
+            "checkout": "mirrorCfgCheckout"
+        }
+    },
+    "HGS_OMCI_MIRROR_CFG": {
+        "inputElements": {},
+        "customerCheckin": {
+            "otherCheckin": "omciMirrorCfgCheckin",
+            "delete": "omciMirrorCfgDelete"
+        },
+        "customerCheckout": {
+            "checkout": "omciMirrorCfgCheckout"
+        }
+    },
+    "HGS_TELNET_CFG": {
+        "inputElements": {
+            "TelnetEnable": {
+                "checkin": [],
+                "checkout": [
+                    {
+                        "strategy": "convertNumStrToBool",
+                        "valueConvert": 1
+                    }
+                ]
+            },
+            "TelnetWANEnable": {
+                "checkin": [],
+                "checkout": [
+                    {
+                        "strategy": "convertNumStrToBool",
+                        "valueConvert": 1
+                    }
+                ]
+            },
+            "TelnetUserName": {
+                "checkin": [
+                    {
+                        "strategy": "ischinese",
+                        "errorMsg": "Chinese characters cannot exist in the user name, please re-enter!"
+                    },
+                    {
+                        "strategy": "minMaxLength",
+                        "errorMsg": "Username must be at least [$1] characters long and at most [$2] characters long",
+                        "para": "1:32"
+                    }
+                ],
+                "checkout": []
+            },
+            "TelnetPassword": {
+                "checkin": [],
+                "checkout": []
+            }
+        },
+        "customerCheckout": {
+            "msgType": 220,
+            "checkout": "telnetCfgCheckout",
+            "waitTimeoutMs": 5000,
+            "postPaths": [
+                "InternetGatewayDevice.DeviceInfo.X_CMCC_ServiceManage."
+            ]
+        },
+        "customerCheckin": {
+            "msgType": 221,
+            "waitTimeoutMs": 5000,
+            "preCheckin": "telnetCfgCheckin"
+        }
+    },
+    "HGS_CONSOLE_CFG": {
+        "inputElements": {
+            "SerialEnable": {
+                "checkin": [],
+                "checkout": [
+                    {
+                        "strategy": "convertNumStrToBool",
+                        "valueConvert": 1
+                    }
+                ]
+            },
+            "AdminUserName": {
+                "checkin": [
+                    {
+                        "strategy": "ischinese",
+                        "errorMsg": "Chinese characters cannot exist in the user name, please re-enter!"
+                    },
+                    {
+                        "strategy": "minMaxLength",
+                        "errorMsg": "Username must be at least [$1] characters long and at most [$2] characters long",
+                        "para": "1:32"
+                    }
+                ],
+                "checkout": []
+            },
+            "AdminPassword": {
+                "checkin": [],
+                "checkout": []
+            }
+        },
+        "customerCheckout": {
+            "msgType": 220,
+            "checkout": "consoleCfgCheckout",
+            "waitTimeoutMs": 5000,
+            "postPaths": [
+                "InternetGatewayDevice.DeviceInfo.X_CMCC_ServiceManage."
+            ]
+        },
+        "customerCheckin": {
+            "msgType": 221,
+            "waitTimeoutMs": 5000,
+            "preCheckin": "consoleCfgCheckin"
+        }
+    },
+    "HGS_CFG_PROCESS_RUN_DEALY": {
+        "inputElements": {},
+        "customerCheckin": {
+            "otherCheckin": "cfgProcessRunDelayCheckin"
+        },
+        "customerCheckout": {
+            "checkout": "cfgProcessRunDelayCheckout"
+        }
+    },
+    "HGS_PROCESS_RUN_LOG": {
+        "inputElements": {},
+        "customerCheckout": {
+            "checkout": "processRunLogCheckout"
+        }
+    },
+    "HGS_IPV4_ROUTE": {
+        "inputElements": {},
+        "customerCheckout": {
+            "checkout": "ipv4RouteTableCheckout"
+        }
+    },
+    "HGS_IPV6_ROUTE": {
+        "inputElements": {},
+        "customerCheckout": {
+            "checkout": "ipv6RouteTableCheckout"
+        }
+    },
+    "HGS_IPV4_POLICY_ROUTE": {
+        "inputElements": {},
+        "customerCheckout": {
+            "checkout": "ipv4PolicyRouteTableCheckout"
+        }
+    },
+    "HGS_IPV6_POLICY_ROUTE": {
+        "inputElements": {},
+        "customerCheckout": {
+            "checkout": "ipv6PolicyRouteTableCheckout"
+        }
+    },
+    "HGS_REDIR_TO_TELNET": {
+        "inputElements": {
+            "RedirEnable": {
+                "checkin": [],
+                "checkout": [
+                    {
+                        "strategy": "convertNumStrToBool",
+                        "valueConvert": 1
+                    }
+                ]
+            }
+        },
+        "customerCheckin": {
+            "otherCheckin": "redirToTelnetCheckin"
+        },
+        "customerCheckout": {
+            "checkout": "redirToTelnetCheckout"
+        }
+    },
+    "HGS_CPU_USAGE": {
+        "customerCheckout": {
+            "checkout": "cpuUsageCheckout"
+        },
+        "echartsOption": {
+            "animation": false,
+            "title": {
+                "text": "CPU usage",
+                "x": "center",
+                "textStyle": {
+                    "color": "#00f"
+                }
+            },
+            "xAxis": {
+                "type": "category",
+                "name": "Time (unit: seconds)",
+                "data": []
+            },
+            "yAxis": {
+                "type": "value",
+                "name": "Occupancy rate (unit: 1/10000)",
+                "min": 0,
+                "max": 10000
+            },
+            "series": [
+                {
+                    "data": [],
+                    "type": "line",
+                    "label": {
+                        "show": false,
+                        "position": "bottom",
+                        "textStyle": {
+                            "fontSize": 20
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    "HGS_MEM_USAGE": {
+        "customerCheckout": {
+            "checkout": "memUsageCheckout"
+        },
+        "echartsOption": {
+            "tooltip": {
+                "trigger": "item"
+            },
+            "legend": {
+                "top": "5%",
+                "left": "center"
+            },
+            "title": {
+                "text": "Total Memory",
+                "subtext": "471688 kB",
+                "x": "center",
+                "y": "center"
+            },
+            "series": [
+                {
+                    "name": "Memory usage",
+                    "type": "pie",
+                    "radius": [
+                        "40%",
+                        "70%"
+                    ],
+                    "avoidLabelOverlap": false,
+                    "itemStyle": {
+                        "borderRadius": 10,
+                        "borderColor": "#fff",
+                        "borderWidth": 2
+                    },
+                    "label": {
+                        "normal": {
+                            "position": "outside",
+                            "formatter": "{b}\n{c}KB ({d}%)"
+                        }
+                    },
+                    "emphasis": {
+                        "label": {
+                            "show": true,
+                            "fontSize": "40",
+                            "fontWeight": "bold"
+                        }
+                    },
+                    "labelLine": {
+                        "show": false
+                    },
+                    "data": [
+                        {
+                            "value": 326676,
+                            "name": "Used Memory"
+                        },
+                        {
+                            "value": 145012,
+                            "name": "Remaining memory"
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "HGS_MEM_PROCESS": {
+        "customerCheckout": {
+            "checkout": "monitorProcessMem"
+        },
+        "echartsOption": {
+            "animation": false,
+            "title": {
+                "text": ""
+            },
+            "tooltip": {
+                "trigger": "axis"
+            },
+            "legend": {
+                "top": 0,
+                "data": []
+            },
+            "grid": {
+                "left": "3%",
+                "right": "7%",
+                "bottom": "3%",
+                "containLabel": true
+            },
+            "toolbox": {},
+            "xAxis": {
+                "type": "category",
+                "name": "uptime\n(单位:秒)",
+                "boundaryGap": false,
+                "data": []
+            },
+            "yAxis": {
+                "type": "value",
+                "name": "Memory (unit: K)"
+            },
+            "series": []
+        }
+    },
+    "HGS_MEM_JAVA_PROCESS": {
+        "customerCheckout": {
+            "checkout": "monitorProcessJavaMem"
+        },
+        "echartsOption": {
+            "animation": false,
+            "title": {
+                "text": ""
+            },
+            "tooltip": {
+                "trigger": "axis"
+            },
+            "legend": {
+                "top": 0,
+                "data": []
+            },
+            "grid": {
+                "left": "3%",
+                "right": "7%",
+                "bottom": "3%",
+                "containLabel": true
+            },
+            "toolbox": {},
+            "xAxis": {
+                "type": "category",
+                "name": "uptime\n(单位:秒)",
+                "boundaryGap": false,
+                "data": []
+            },
+            "yAxis": {
+                "type": "value",
+                "name": "Memory (unit: K)"
+            },
+            "series": []
+        }
+    },
+    "HGS_MEM_TOTAL": {
+        "customerCheckout": {
+            "checkout": "monitorTotalMem"
+        },
+        "echartsOption": {
+            "animation": false,
+            "title": {
+                "text": ""
+            },
+            "tooltip": {
+                "trigger": "axis"
+            },
+            "legend": {
+                "top": 0,
+                "data": []
+            },
+            "grid": {
+                "left": "3%",
+                "right": "7%",
+                "bottom": "3%",
+                "containLabel": true
+            },
+            "toolbox": {},
+            "xAxis": {
+                "type": "category",
+                "name": "uptime\n(单位:秒)",
+                "boundaryGap": false,
+                "data": []
+            },
+            "yAxis": {
+                "type": "value",
+                "name": "Memory (unit: K)"
+            },
+            "series": []
+        }
+    },
+    "HGS_PON_STREAM": {
+        "customerCheckout": {
+            "checkout": "monitorPonStream"
+        },
+        "echartsOption": {
+            "animation": false,
+            "title": {
+                "text": ""
+            },
+            "tooltip": {
+                "trigger": "axis"
+            },
+            "legend": {
+                "top": 0,
+                "data": []
+            },
+            "grid": {
+                "left": "3%",
+                "right": "7%",
+                "bottom": "3%",
+                "containLabel": true
+            },
+            "toolbox": {},
+            "xAxis": {
+                "type": "category",
+                "name": "uptime\n(单位:秒)",
+                "boundaryGap": false,
+                "data": []
+            },
+            "yAxis": {
+                "type": "value",
+                "name": "Traffic (Unit: Bytes)"
+            },
+            "series": []
+        }
+    },
+    "HGS_HBUS_MSG_STAT": {
+        "customerCheckout": {
+            "checkout": "monitorHbusMsgStat"
+        },
+        "echartsOption": {
+            "animation": false,
+            "title": {
+                "text": ""
+            },
+            "tooltip": {
+                "trigger": "axis"
+            },
+            "legend": {
+                "top": 0,
+                "data": []
+            },
+            "grid": {
+                "left": "3%",
+                "right": "7%",
+                "bottom": "3%",
+                "containLabel": true
+            },
+            "toolbox": {},
+            "xAxis": {
+                "type": "category",
+                "name": "uptime\n(单位:秒)",
+                "boundaryGap": false,
+                "data": []
+            },
+            "yAxis": {
+                "type": "value",
+                "name": "frequency"
+            },
+            "series": []
+        }
+    },
+    "HGS_HGCMS_STAT": {
+        "customerCheckout": {
+            "checkout": "monitorHgcmsStat"
+        },
+        "echartsOption": {
+            "animation": false,
+            "title": {
+                "text": ""
+            },
+            "tooltip": {
+                "trigger": "axis"
+            },
+            "legend": {
+                "top": 0,
+                "data": []
+            },
+            "grid": {
+                "left": "3%",
+                "right": "7%",
+                "bottom": "3%",
+                "containLabel": true
+            },
+            "toolbox": {},
+            "xAxis": {
+                "type": "category",
+                "name": "uptime\n(单位:秒)",
+                "boundaryGap": false,
+                "data": []
+            },
+            "yAxis": {
+                "type": "value",
+                "name": "frequency"
+            },
+            "series": []
+        }
+    },
+    "HGS_MIB_STAT": {
+        "customerCheckout": {
+            "checkout": "monitorMibStat"
+        },
+        "echartsOption": {
+            "animation": false,
+            "title": {
+                "text": ""
+            },
+            "tooltip": {
+                "trigger": "axis"
+            },
+            "legend": {
+                "top": 0,
+                "data": []
+            },
+            "grid": {
+                "left": "3%",
+                "right": "7%",
+                "bottom": "3%",
+                "containLabel": true
+            },
+            "toolbox": {},
+            "xAxis": {
+                "type": "category",
+                "name": "uptime\n(单位:秒)",
+                "boundaryGap": false,
+                "data": []
+            },
+            "yAxis": {
+                "type": "value",
+                "name": "frequency"
+            },
+            "series": []
+        }
+    },
+    "HGS_LED_CONTROL": {
+        "inputElements": {
+            "Switch": {
+                "checkin": [
+                    {
+                        "strategy": "convertTextToNum",
+                        "valueConvert": 1
+                    }
+                ],
+                "checkout": []
+            }
+        },
+        "customerCheckout": {
+            "hbusGetPath": "hbus://mdm/InternetGatewayDevice.DeviceInfo.X_CMCC_LedControl.",
+            "msgType": 211
+        },
+        "customerCheckin": {
+            "msgType": 212
+        }
+    },
+    "HGS_MESH_CFG": {
+        "inputElements": {
+            "Enable": {
+                "checkin": [],
+                "checkout": [
+                    {
+                        "strategy": "convertNumStrToBool",
+                        "valueConvert": 1
+                    }
+                ]
+            },
+            "Mesh_2G_thld": {
+                "checkin": [],
+                "checkout": []
+            },
+            "Mesh_5G_thld": {
+                "checkin": [],
+                "checkout": []
+            }
+        },
+        "customerCheckout": {
+            "hbusGetPath": "hbus://mdm/InternetGatewayDevice.Services.WifiMesh.",
+            "msgType": 211
+        },
+        "customerCheckin": {
+            "msgType": 212
+        }
+    },
+    "HGS_AOSNET_DEBUG": {
+        "inputElements": {
+            "EnableRedir": {
+                "checkin": [],
+                "checkout": [
+                    {
+                        "strategy": "convertNumStrToBool",
+                        "valueConvert": 1
+                    }
+                ]
+            },
+            "EnableDebug": {
+                "checkin": [],
+                "checkout": [
+                    {
+                        "strategy": "convertNumStrToBool",
+                        "valueConvert": 1
+                    }
+                ]
+            },
+            "RunAOSNET": {
+                "checkin": [],
+                "checkout": [
+                    {
+                        "strategy": "convertNumStrToBool",
+                        "valueConvert": 1
+                    }
+                ]
+            }
+        },
+        "customerCheckin": {
+            "otherCheckin": "aosnetAosnetDebugCheckin"
+        },
+        "customerCheckout": {
+            "checkout": "aosnetAosnetDebugCheckout"
+        }
+    },
+    "HGS_REDIS_DEBUG": {
+        "inputElements": {
+            "EnableDebug": {
+                "checkin": [],
+                "checkout": [
+                    {
+                        "strategy": "convertNumStrToBool",
+                        "valueConvert": 1
+                    }
+                ]
+            }
+        },
+        "customerCheckin": {
+            "otherCheckin": "redisDebugCheckin"
+        },
+        "customerCheckout": {
+            "checkout": "redisDebugCheckout"
+        }
+    }
+}

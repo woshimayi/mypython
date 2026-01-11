@@ -1,0 +1,5351 @@
+{
+	"HGST_IPV4_INFO": {
+		"style": {
+			"width": "100%",
+			"border": "none"
+		},
+		"cssClass": {
+			"addClass": "lines-no"
+		},
+		"easyui": {
+			"rownumbers": false,
+			"iconCls": "icon-table",
+			"fitColumns": false,
+			"singleSelect": true,
+			"toolbar": [
+				{
+					"text": "全屏显示",
+					"iconCls": "icon-fullscreen",
+					"handler": "wanIpv4InfoFullShow"
+				}
+			],
+			"fit": false,
+			"columns": [
+				[
+					{
+						"field": "Name",
+						"title": "wan连接名称",
+						"halign": "left",
+						"align": "left",
+						"width": "25%"
+					},
+					{
+						"field": "ExternalIPAddress",
+						"title": "IP地址",
+						"halign": "left",
+						"align": "left",
+						"width": "20%"
+					},
+					{
+						"field": "ConnectionStatus",
+						"title": "连接状态",
+						"halign": "left",
+						"align": "left",
+						"width": "15%"
+					},
+					{
+						"field": "AddressingType",
+						"title": "地址获取方式",
+						"halign": "left",
+						"align": "left",
+						"width": "15%"
+					},
+					{
+						"field": "MainDns",
+						"title": "主DNS",
+						"halign": "left",
+						"align": "left",
+						"width": "20%"
+					},
+					{
+						"field": "BackupDns",
+						"title": "备DNS",
+						"halign": "left",
+						"align": "left",
+						"width": "20%"
+					},
+					{
+						"field": "SubnetMask",
+						"title": "子网掩码",
+						"halign": "left",
+						"align": "left",
+						"width": "20%"
+					},
+					{
+						"field": "DefaultGateway",
+						"title": "默认网关",
+						"halign": "left",
+						"align": "left",
+						"width": "20%"
+					},
+					{
+						"field": "Uptime",
+						"title": "在线时间(秒)",
+						"halign": "left",
+						"align": "left",
+						"width": "20%"
+					},
+					{
+						"field": "MACAddress",
+						"title": "MAC地址",
+						"halign": "left",
+						"align": "left",
+						"width": "20%"
+					},
+					{
+						"field": "LastConnectionError",
+						"title": "连接失败原因",
+						"halign": "left",
+						"align": "left",
+						"width": "30%"
+					}
+				]
+			]
+		},
+		"customerCheckout": {
+			"hbusGetPath": "hbus://mdmd/getWan",
+			"msgType": 213,
+			"userTagData": 5,
+			"checkout": "wanIpv4InfoCheckout"
+		}
+	},
+	"HGST_IPV4_FULL_INFO": {
+		"style": {
+			"width": "100%",
+			"border": "none"
+		},
+		"cssClass": {
+			"addClass": "lines-no"
+		},
+		"easyui": {
+			"rownumbers": false,
+			"iconCls": "icon-table",
+			"fitColumns": false,
+			"singleSelect": true,
+			"toolbar": [],
+			"fit": false,
+			"columns": [
+				[
+					{
+						"field": "Name",
+						"title": "wan连接名称",
+						"halign": "left",
+						"align": "left"
+					},
+					{
+						"field": "ExternalIPAddress",
+						"title": "IP地址",
+						"halign": "left",
+						"align": "left"
+					},
+					{
+						"field": "ConnectionStatus",
+						"title": "连接状态",
+						"halign": "left",
+						"align": "left"
+					},
+					{
+						"field": "AddressingType",
+						"title": "地址获取方式",
+						"halign": "left",
+						"align": "left"
+					},
+					{
+						"field": "MainDns",
+						"title": "主DNS",
+						"halign": "left",
+						"align": "left"
+					},
+					{
+						"field": "BackupDns",
+						"title": "备DNS",
+						"halign": "left",
+						"align": "left"
+					},
+					{
+						"field": "SubnetMask",
+						"title": "子网掩码",
+						"halign": "left",
+						"align": "left"
+					},
+					{
+						"field": "DefaultGateway",
+						"title": "默认网关",
+						"halign": "left",
+						"align": "left"
+					},
+					{
+						"field": "Uptime",
+						"title": "在线时间(秒)",
+						"halign": "left",
+						"align": "left"
+					},
+					{
+						"field": "MACAddress",
+						"title": "MAC地址",
+						"halign": "left",
+						"align": "left"
+					},
+					{
+						"field": "LastConnectionError",
+						"title": "连接失败原因",
+						"halign": "left",
+						"align": "left"
+					}
+				]
+			]
+		},
+		"customerCheckout": {
+			"hbusGetPath": "hbus://mdmd/getWan",
+			"msgType": 213,
+			"userTagData": 5,
+			"checkout": "wanIpv4InfoCheckout"
+		}
+	},
+	"HGST_IPV6_INFO": {
+		"style": {
+			"width": "100%",
+			"border": "none"
+		},
+		"cssClass": {
+			"addClass": "lines-no"
+		},
+		"easyui": {
+			"rownumbers": false,
+			"iconCls": "icon-table",
+			"fitColumns": false,
+			"singleSelect": true,
+			"toolbar": [
+				{
+					"text": "全屏显示",
+					"iconCls": "icon-fullscreen",
+					"handler": "wanIpv6InfoFullShow"
+				}
+			],
+			"fit": false,
+			"columns": [
+				[
+					{
+						"field": "Name",
+						"title": "wan连接名称",
+						"halign": "left",
+						"align": "left",
+						"width": "30%"
+					},
+					{
+						"field": "IPv6IPAddress",
+						"title": "IPv6地址",
+						"halign": "left",
+						"align": "left",
+						"width": "30%"
+					},
+					{
+						"field": "X_CMCC_IPv6ConnStatus",
+						"title": "连接状态",
+						"halign": "left",
+						"align": "left",
+						"width": "20%"
+					},
+					{
+						"field": "IPv6IPAddressOrigin",
+						"title": "地址获取方式",
+						"halign": "left",
+						"align": "left",
+						"width": "30%"
+					},
+					{
+						"field": "IPv6MainDns",
+						"title": "主DNS",
+						"halign": "left",
+						"align": "left",
+						"width": "20%"
+					},
+					{
+						"field": "IPv6BackupDns",
+						"title": "备DNS",
+						"halign": "left",
+						"align": "left",
+						"width": "20%"
+					},
+					{
+						"field": "IPv6Prefix",
+						"title": "前缀地址",
+						"halign": "left",
+						"align": "left",
+						"width": "30%"
+					},
+					{
+						"field": "IPv6PrefixOrigin",
+						"title": "前缀获取方式",
+						"halign": "left",
+						"align": "left",
+						"width": "30%"
+					},
+					{
+						"field": "IPv6DefaultGateway",
+						"title": "网关",
+						"halign": "left",
+						"align": "left",
+						"width": "30%"
+					},
+					{
+						"field": "IPv6DsliteEnable",
+						"title": "启用DS-Lite",
+						"halign": "left",
+						"align": "left",
+						"width": "30%"
+					},
+					{
+						"field": "IPv6Aftr",
+						"title": "AFTR地址",
+						"halign": "left",
+						"align": "left",
+						"width": "30%"
+					},
+					{
+						"field": "LastConnectionError",
+						"title": "连接失败原因",
+						"halign": "left",
+						"align": "left",
+						"width": "30%"
+					}
+				]
+			]
+		},
+		"customerCheckout": {
+			"hbusGetPath": "hbus://mdmd/getWan",
+			"msgType": 213,
+			"userTagData": 5,
+			"checkout": "wanIpv6InfoCheckout"
+		}
+	},
+	"HGST_IPV6_FULL_INFO": {
+		"style": {
+			"width": "100%",
+			"border": "none"
+		},
+		"cssClass": {
+			"addClass": "lines-no"
+		},
+		"easyui": {
+			"rownumbers": false,
+			"iconCls": "icon-table",
+			"fitColumns": false,
+			"singleSelect": true,
+			"toolbar": [],
+			"fit": false,
+			"columns": [
+				[
+					{
+						"field": "Name",
+						"title": "wan连接名称",
+						"halign": "left",
+						"align": "left"
+					},
+					{
+						"field": "IPv6IPAddress",
+						"title": "IPv6地址",
+						"halign": "left",
+						"align": "left"
+					},
+					{
+						"field": "X_CMCC_IPv6ConnStatus",
+						"title": "连接状态",
+						"halign": "left",
+						"align": "left"
+					},
+					{
+						"field": "IPv6IPAddressOrigin",
+						"title": "地址获取方式",
+						"halign": "left",
+						"align": "left"
+					},
+					{
+						"field": "IPv6MainDns",
+						"title": "主DNS",
+						"halign": "left",
+						"align": "left"
+					},
+					{
+						"field": "IPv6BackupDns",
+						"title": "备DNS",
+						"halign": "left",
+						"align": "left"
+					},
+					{
+						"field": "IPv6Prefix",
+						"title": "前缀地址",
+						"halign": "left",
+						"align": "left"
+					},
+					{
+						"field": "IPv6PrefixOrigin",
+						"title": "前缀获取方式",
+						"halign": "left",
+						"align": "left"
+					},
+					{
+						"field": "IPv6DefaultGateway",
+						"title": "网关",
+						"halign": "left",
+						"align": "left",
+						"width": "30%"
+					},
+					{
+						"field": "IPv6DsliteEnable",
+						"title": "启用DS-Lite",
+						"halign": "left",
+						"align": "left"
+					},
+					{
+						"field": "IPv6Aftr",
+						"title": "AFTR地址",
+						"halign": "left",
+						"align": "left"
+					},
+					{
+						"field": "LastConnectionError",
+						"title": "连接失败原因",
+						"halign": "left",
+						"align": "left"
+					}
+				]
+			]
+		},
+		"customerCheckout": {
+			"hbusGetPath": "hbus://mdmd/getWan",
+			"msgType": 213,
+			"userTagData": 5,
+			"checkout": "wanIpv6InfoCheckout"
+		}
+	},
+	"HGST_HG_VERSION": {
+		"style": {
+			"width": "100%",
+			"border": "none"
+		},
+		"cssClass": {
+			"addClass": "lines-no"
+		},
+		"easyui": {
+			"rownumbers": false,
+			"iconCls": "icon-table",
+			"fitColumns": false,
+			"singleSelect": true,
+			"toolbar": "#toolbar",
+			"fit": false,
+			"columns": [
+				[
+					{
+						"field": "key",
+						"title": "名称",
+						"halign": "left",
+						"align": "left",
+						"width": "30%"
+					},
+					{
+						"field": "value",
+						"title": "值",
+						"halign": "left",
+						"align": "left",
+						"width": "70%"
+					}
+				]
+			]
+		},
+		"define": {
+			"keyValue": true
+		},
+		"customerCheckout": {
+			"url": "/hgsreadme"
+		}
+	},
+	"HGST_WEB_SWITCH": {
+		"style": {
+			"width": "100%",
+			"border": "none"
+		},
+		"cssClass": {
+			"addClass": "lines-no"
+		},
+		"easyui": {
+			"rownumbers": false,
+			"iconCls": "icon-table",
+			"fitColumns": false,
+			"singleSelect": false,
+			"toolbar": "#toolbar",
+			"fit": false,
+			"columns": [
+				[
+					{
+						"field": "key",
+						"title": "名称",
+						"halign": "center",
+						"align": "left",
+						"width": "30%"
+					},
+					{
+						"field": "value",
+						"title": "值",
+						"halign": "left",
+						"align": "center",
+						"width": "20%",
+						"checkbox": true
+					},
+					{
+						"field": "comments",
+						"title": "备注",
+						"halign": "center",
+						"align": "left",
+						"width": "50%"
+					}
+				]
+			]
+		},
+		"keyData": {
+			"EnableWebDataLog": {
+				"comments": "*使能在浏览器中打印WEB数据日志"
+			},
+			"EnableLogHtmlEle": {
+				"comments": "*使能在浏览器中打印HTML元素的数据"
+			},
+			"DisableCommitData": {
+				"comments": "*不提交数据(仅供调试使用)"
+			},
+			"EnableConsolelog": {
+				"comments": "*使能串口调试"
+			},
+			"EnableHttpdDebug": {
+				"comments": "*使能HTTP调试"
+			},
+			"EnableSkipAuth": {
+				"comments": "跳过用户鉴权"
+			},
+			"EnableHttpdHbusData": {
+				"comments": "*打印HBUS数据"
+			},
+			"EnableHttpdHbusCmd": {
+				"comments": "*打印HBUS命令行"
+			},
+			"EnableDownloadFile": {
+				"comments": "使能下载文件"
+			},
+			"DisablePing": {
+				"comments": "关闭ping进程功能"
+			},
+			"EnableLanSideViewRedis": {
+				"comments": "启用LAN侧查看Redis"
+			}
+		},
+		"define": {
+			"keyValue": true,
+			"checkRow": true
+		},
+		"customerCheckout": {
+			"url": "/debug?getData"
+		},
+		"customerCheckin": {
+			"url": "/debug"
+		}
+	},
+	"HGST_AGENT_IPTV_BIND": {
+		"style": {
+			"width": "100%",
+			"border": "none"
+		},
+		"cssClass": {
+			"addClass": "lines-no"
+		},
+		"profile": {
+			"edit": {
+				"editAllRows": true
+			}
+		},
+		"easyui": {
+			"rownumbers": false,
+			"iconCls": "icon-table",
+			"fitColumns": false,
+			"singleSelect": true,
+			"fit": false,
+			"onLoadSuccess": "bindInterfaceLoadSuccess",
+			"toolbar": [
+				{
+					"text": "刷新",
+					"iconCls": "icon-reload",
+					"handler": "agentIPTVBindUpdate"
+				}
+			],
+			"columns": [
+				[
+					{
+						"field": "interface",
+						"title": "接口",
+						"halign": "center",
+						"align": "left",
+						"width": "20%"
+					},
+					{
+						"field": "mac",
+						"title": "光路由MAC",
+						"halign": "center",
+						"align": "left",
+						"width": "30%"
+					},
+					{
+						"field": "bindInterface",
+						"title": "光路由IPTV端口绑定",
+						"halign": "center",
+						"align": "left",
+						"width": "40%",
+						"editor": {
+							"type": "combobox",
+							"options": {
+								"valueField": "bindInterface",
+								"textField": "bindInterfaceText",
+								"data": [
+									{
+										"bindInterface": "1",
+										"bindInterfaceText": "LAN1"
+									},
+									{
+										"bindInterface": "2",
+										"bindInterfaceText": "LAN2"
+									},
+									{
+										"bindInterface": "0",
+										"bindInterfaceText": "不绑定"
+									}
+								],
+								"panelHeight": "auto",
+								"required": true,
+								"multiple": true
+							}
+						}
+					}
+				]
+			]
+		},
+		"customerCheckout": {
+			"url": "/agentIPTVBind?action=get",
+			"preCheckout": "agentIPTVBindCheckout"
+		},
+		"customerCheckin": {
+			"url": "/agentIPTVBind?action=set",
+			"checkin": "agentIPTVBindCheckin"
+		}
+	},
+	"HGST_VLAN_BIND": {
+		"style": {
+			"width": "100%",
+			"border": "none"
+		},
+		"cssClass": {
+			"addClass": "lines-no"
+		},
+		"profile": {
+			"combobox": {
+				"readonly": true
+			},
+			"edit": {
+				"editAllRows": true
+			},
+			"getChanges": false
+		},
+		"easyui": {
+			"rownumbers": false,
+			"iconCls": "icon-table",
+			"fitColumns": false,
+			"singleSelect": false,
+			"onLoadSuccess": "vlanBindonLoadSuccess",
+			"toolbar": [
+				{
+					"text": "刷新",
+					"iconCls": "icon-reload",
+					"handler": "vlanbindUpdate"
+				}
+			],
+			"fit": false,
+			"columns": [
+				[
+					{
+						"field": "port",
+						"title": "端口",
+						"halign": "center",
+						"align": "center",
+						"width": "20%"
+					},
+					{
+						"field": "mode",
+						"title": "绑定模式",
+						"halign": "center",
+						"align": "left",
+						"width": "30%",
+						"editor": {
+							"type": "combobox",
+							"options": {
+								"valueField": "mode",
+								"textField": "modeText",
+								"data": [
+									{
+										"mode": "0",
+										"modeText": "端口绑定"
+									},
+									{
+										"mode": "1",
+										"modeText": "VLAN绑定"
+									}
+								],
+								"required": true,
+								"panelHeight": "auto"
+							}
+						}
+					},
+					{
+						"field": "vlanBind",
+						"title": "VLAN绑定",
+						"halign": "center",
+						"align": "center",
+						"width": "50%",
+						"editor": {
+							"type": "textbox"
+						}
+					}
+				]
+			]
+		},
+		"customerCheckout": {
+			"hbusGetPath": "hbus://mdm/",
+			"msgType": 201,
+			"userTagData": 1,
+			"checkout": "vlanBindCheckout"
+		},
+		"customerCheckin": {
+			"hbusPostPath": "hbus://mdm/",
+			"msgType": 201,
+			"userTagData": 2,
+			"otherCheckin": "vlanBindCheckin"
+		}
+	},
+	"HGST_VXLAN": {
+		"style": {
+			"width": "100%",
+			"border": "none"
+		},
+		"cssClass": {
+			"addClass": "lines-no"
+		},
+		"profile": {
+			"edit": {
+				"editAllRows": true
+			}
+		},
+		"easyui": {
+			"rownumbers": true,
+			"iconCls": "icon-table",
+			"fitColumns": false,
+			"singleSelect": true,
+			"toolbar": [
+				{
+					"text": "新建",
+					"iconCls": "icon-add",
+					"handler": "vxLanCreate"
+				},
+				{
+					"text": "删除",
+					"iconCls": "icon-remove",
+					"handler": "vxLanDelete"
+				},
+				{
+					"text": "刷新",
+					"iconCls": "icon-reload",
+					"handler": "vxLanUpdate"
+				}
+			],
+			"fit": false,
+			"onClickRow": "vxLanClickRow",
+			"frozenColumns": [
+				[
+					{
+						"field": "selected",
+						"title": "",
+						"halign": "center",
+						"align": "left",
+						"width": "10%",
+						"checkbox": true
+					}
+				]
+			],
+			"columns": [
+				[
+					{
+						"field": "Name",
+						"title": "wan连接名称",
+						"halign": "left",
+						"align": "left",
+						"width": "180"
+					},
+					{
+						"field": "X_CMCC_VLAN",
+						"title": "VLAN ID",
+						"halign": "left",
+						"align": "left",
+						"width": "60"
+					},
+					{
+						"field": "TunnelKey",
+						"title": "TunnelKey",
+						"halign": "left",
+						"align": "left",
+						"width": "80"
+					},
+					{
+						"field": "WorkModeText",
+						"title": "工作模式",
+						"halign": "left",
+						"align": "left",
+						"width": "70"
+					},
+					{
+						"field": "TunnelRemoteIp",
+						"title": "隧道对端地址",
+						"halign": "left",
+						"align": "left",
+						"width": "180"
+					}
+				]
+			]
+		},
+		"customerCheckout": {
+			"hbusGetPath": [
+				"hbus://mdm/InternetGatewayDevice.X_CMCC_VXLAN.VXLANConfig.{i}.;",
+				"InternetGatewayDevice.WANDevice.{i}.WANConnectionDevice.{i}.WANIPConnection.{i}.Name;",
+				"InternetGatewayDevice.WANDevice.{i}.WANConnectionDevice.{i}.WANPPPConnection.{i}.Name;"
+			],
+			"msgType": 211,
+			"userTagData": 1,
+			"checkout": "vxLanCheckout"
+		}
+	},
+	"HGST_LAN_INFO": {
+		"style": {
+			"width": "100%",
+			"border": "none"
+		},
+		"cssClass": {
+			"addClass": "lines-no"
+		},
+		"easyui": {
+			"rownumbers": false,
+			"iconCls": "icon-table",
+			"fitColumns": false,
+			"singleSelect": true,
+			"toolbar": [
+				{
+					"text": "刷新",
+					"iconCls": "icon-reload",
+					"handler": "lanInfoUpdate"
+				}
+			],
+			"fit": false,
+			"columns": [
+				[
+					{
+						"field": "LanName",
+						"title": "LAN名称",
+						"halign": "center",
+						"align": "center",
+						"width": "70"
+					},
+					{
+						"field": "Status",
+						"title": "状态",
+						"halign": "center",
+						"align": "center",
+						"width": "70"
+					},
+					{
+						"field": "MaxBitRate",
+						"title": "速率",
+						"halign": "center",
+						"align": "center",
+						"width": "70"
+					},
+					{
+						"field": "DuplexMode",
+						"title": "工作模式",
+						"halign": "center",
+						"align": "center",
+						"width": "70"
+					},
+					{
+						"field": "strBytesSent",
+						"title": "发送字节数",
+						"halign": "center",
+						"align": "right",
+						"width": "90"
+					},
+					{
+						"field": "strBytesReceived",
+						"title": "接收字节数",
+						"halign": "center",
+						"align": "right",
+						"width": "90"
+					},
+					{
+						"field": "strPacketsSent",
+						"title": "发送包数",
+						"halign": "center",
+						"align": "right",
+						"width": "90"
+					},
+					{
+						"field": "strPacketsReceived",
+						"title": "接收包数",
+						"halign": "center",
+						"align": "right",
+						"width": "90"
+					}
+				]
+			]
+		},
+		"customerCheckout": {
+			"hbusGetPath": [
+				"hbus://mdm/InternetGatewayDevice.LANDevice.{i}.LANEthernetInterfaceConfig.{i}.;",
+				"InternetGatewayDevice.LANDevice.{i}.LANEthernetInterfaceConfig.{i}.Stats."
+			],
+			"msgType": 211,
+			"userTagData": 1,
+			"checkout": "lanInfoCheckout"
+		}
+	},
+	"HGST_HOST_INFO": {
+		"style": {
+			"width": "100%",
+			"border": "none"
+		},
+		"cssClass": {
+			"addClass": "lines-no"
+		},
+		"easyui": {
+			"rownumbers": false,
+			"iconCls": "icon-table",
+			"fitColumns": false,
+			"singleSelect": true,
+			"toolbar": [
+				{
+					"text": "刷新",
+					"iconCls": "icon-reload",
+					"handler": "hostInfoUpdate"
+				}
+			],
+			"fit": false,
+			"columns": [
+				[
+					{
+						"field": "ip",
+						"title": "IP",
+						"halign": "center",
+						"align": "center",
+						"width": "150"
+					},
+					{
+						"field": "mac",
+						"title": "MAC",
+						"halign": "center",
+						"align": "center",
+						"width": "180"
+					},
+					{
+						"field": "if",
+						"title": "接口",
+						"halign": "center",
+						"align": "center",
+						"width": "60"
+					},
+					{
+						"field": "HostName",
+						"title": "主机名",
+						"halign": "center",
+						"align": "center",
+						"width": "90"
+					},
+					{
+						"field": "DeviceType",
+						"title": "设备类型",
+						"halign": "center",
+						"align": "center",
+						"width": "70"
+					},
+					{
+						"field": "online_secs",
+						"title": "在线时间(秒)",
+						"halign": "center",
+						"align": "right",
+						"width": "90"
+					},
+					{
+						"field": "LeaseTimeRemaining",
+						"title": "剩余租期(秒)",
+						"halign": "center",
+						"align": "right",
+						"width": "90"
+					}
+				]
+			]
+		},
+		"customerCheckout": {
+			"url": "/onlineDevice",
+			"checkout": "hostDevInfoCheckout"
+		}
+	},
+	"HGST_HOST_IPV6_INFO": {
+		"style": {
+			"width": "100%",
+			"border": "none"
+		},
+		"cssClass": {
+			"addClass": "lines-no"
+		},
+		"easyui": {
+			"rownumbers": false,
+			"iconCls": "icon-table",
+			"fitColumns": false,
+			"singleSelect": true,
+			"toolbar": [
+				{
+					"text": "刷新",
+					"iconCls": "icon-reload",
+					"handler": "hostIpv6InfoUpdate"
+				}
+			],
+			"fit": false,
+			"columns": [
+				[
+					{
+						"field": "mac",
+						"title": "MAC",
+						"halign": "center",
+						"align": "center",
+						"width": "180"
+					},
+					{
+						"field": "ip",
+						"title": "IP",
+						"halign": "center",
+						"align": "left",
+						"width": "300"
+					},
+					{
+						"field": "if",
+						"title": "接口",
+						"halign": "center",
+						"align": "center",
+						"width": "60"
+					},
+					{
+						"field": "HostName",
+						"title": "主机名",
+						"halign": "center",
+						"align": "center",
+						"width": "90"
+					},
+					{
+						"field": "DeviceType",
+						"title": "设备类型",
+						"halign": "center",
+						"align": "center",
+						"width": "70"
+					},
+					{
+						"field": "online_secs",
+						"title": "在线时间(秒)",
+						"halign": "center",
+						"align": "right",
+						"width": "90"
+					}
+				]
+			]
+		},
+		"customerCheckout": {
+			"url": "/onlineIpv6Device",
+			"checkout": "hostIpv6DevInfoCheckout"
+		}
+	},
+	"HGST_URL_FILTER": {
+		"style": {
+			"width": "100%",
+			"border": "none"
+		},
+		"cssClass": {
+			"addClass": "lines-no"
+		},
+		"profile": {
+			"edit": {
+				"editAllRows": true
+			}
+		},
+		"easyui": {
+			"rownumbers": true,
+			"iconCls": "icon-table",
+			"fitColumns": false,
+			"singleSelect": true,
+			"onClickRow": "urlFilterClickRow",
+			"onCheck": "urlFilterCheckRow",
+			"toolbar": [
+				{
+					"text": "新建",
+					"iconCls": "icon-add",
+					"handler": "urlFilterCreate"
+				},
+				{
+					"text": "删除",
+					"iconCls": "icon-remove",
+					"handler": "urlFilterDelete"
+				},
+				{
+					"text": "刷新",
+					"iconCls": "icon-reload",
+					"handler": "urlFilterUpdate"
+				}
+			],
+			"fit": false,
+			"columns": [
+				[
+					{
+						"field": "Url",
+						"title": "URL",
+						"halign": "center",
+						"align": "left",
+						"width": "90%",
+						"editor": {
+							"type": "textbox"
+						}
+					},
+					{
+						"field": "selected",
+						"title": "",
+						"halign": "center",
+						"align": "left",
+						"width": "10%",
+						"checkbox": true
+					}
+				]
+			]
+		},
+		"customerCheckout": {
+			"hbusGetPath": [
+				"hbus://mdm/InternetGatewayDevice.X_CMCC_Security.UrlFilter.{i}."
+			],
+			"msgType": 211,
+			"userTagData": 1
+		},
+		"customerCheckin": {
+			"hbusPostPath": "hbus://mdm/InternetGatewayDevice.X_CMCC_Security.UrlFilter.{i}.",
+			"msgType": 215,
+			"otherCheckin": "urlFilterCheckin"
+		}
+	},
+	"HGST_MAC_FILTER": {
+		"style": {
+			"width": "100%",
+			"border": "none"
+		},
+		"cssClass": {
+			"addClass": "lines-no"
+		},
+		"profile": {
+			"edit": {
+				"editAllRows": true
+			},
+			"combobox": {
+				"readonly": true
+			}
+		},
+		"easyui": {
+			"rownumbers": true,
+			"iconCls": "icon-table",
+			"fitColumns": false,
+			"singleSelect": true,
+			"onClickRow": "macFilterClickRow",
+			"onCheck": "macFilterCheckRow",
+			"toolbar": [
+				{
+					"text": "新建",
+					"iconCls": "icon-add",
+					"handler": "macFilterCreate"
+				},
+				{
+					"text": "删除",
+					"iconCls": "icon-remove",
+					"handler": "macFilterDelete"
+				},
+				{
+					"text": "刷新",
+					"iconCls": "icon-reload",
+					"handler": "macFilterUpdate"
+				}
+			],
+			"fit": false,
+			"columns": [
+				[
+					{
+						"field": "SourceMACAddress",
+						"title": "源MAC",
+						"halign": "center",
+						"align": "left",
+						"width": "45%",
+						"editor": {
+							"type": "textbox"
+						}
+					},
+					{
+						"field": "DestinationMACAddress",
+						"title": "目的MAC",
+						"halign": "center",
+						"align": "left",
+						"width": "45%",
+						"editor": {
+							"type": "textbox"
+						}
+					},
+					{
+						"field": "selected",
+						"title": "",
+						"halign": "center",
+						"align": "left",
+						"width": "10%",
+						"checkbox": true
+					}
+				]
+			]
+		},
+		"customerCheckout": {
+			"hbusGetPath": [
+				"hbus://mdm/InternetGatewayDevice.X_CMCC_Security.MacFilter.{i}."
+			],
+			"msgType": 211,
+			"userTagData": 1,
+			"checkout": "macFilterCheckout"
+		},
+		"customerCheckin": {
+			"hbusPostPath": "hbus://mdm/InternetGatewayDevice.X_CMCC_Security.MacFilter.{i}.",
+			"msgType": 215,
+			"otherCheckin": "macFilterCheckin"
+		}
+	},
+	"HGST_IP_FILTER": {
+		"style": {
+			"width": "100%",
+			"border": "none"
+		},
+		"cssClass": {
+			"addClass": "lines-no"
+		},
+		"profile": {
+			"edit": {
+				"editAllRows": true
+			},
+			"combobox": {
+				"readonly": true
+			}
+		},
+		"easyui": {
+			"rownumbers": true,
+			"iconCls": "icon-table",
+			"fitColumns": false,
+			"singleSelect": true,
+			"onClickRow": "ipFilterClickRow",
+			"onCheck": "ipFilterCheckRow",
+			"toolbar": [
+				{
+					"text": "新建",
+					"iconCls": "icon-add",
+					"handler": "ipFilterCreate"
+				},
+				{
+					"text": "删除",
+					"iconCls": "icon-remove",
+					"handler": "ipFilterDelete"
+				},
+				{
+					"text": "刷新",
+					"iconCls": "icon-reload",
+					"handler": "ipFilterUpdate"
+				}
+			],
+			"fit": false,
+			"frozenColumns": [
+				[
+					{
+						"field": "selected",
+						"title": "",
+						"halign": "center",
+						"align": "left",
+						"width": "10%",
+						"checkbox": true
+					}
+				]
+			],
+			"columns": [
+				[
+					{
+						"field": "Name",
+						"title": "规则名称",
+						"halign": "center",
+						"align": "left",
+						"width": "70",
+						"editor": {
+							"type": "textbox"
+						}
+					},
+					{
+						"field": "Enable",
+						"title": "使能",
+						"halign": "center",
+						"align": "left",
+						"width": "60",
+						"editor": {
+							"type": "combobox",
+							"options": {
+								"valueField": "Enable",
+								"textField": "EnableText",
+								"data": [
+									{
+										"Enable": "1",
+										"EnableText": "是"
+									},
+									{
+										"Enable": "0",
+										"EnableText": "否"
+									}
+								],
+								"required": true,
+								"panelHeight": "auto"
+							}
+						}
+					},
+					{
+						"field": "SourceIPStart",
+						"title": "源IP(起)",
+						"halign": "center",
+						"align": "left",
+						"width": "120",
+						"editor": {
+							"type": "textbox"
+						}
+					},
+					{
+						"field": "SourceIPEnd",
+						"title": "源IP(止)",
+						"halign": "center",
+						"align": "left",
+						"width": "120",
+						"editor": {
+							"type": "textbox"
+						}
+					},
+					{
+						"field": "DestIPStart",
+						"title": "目的IP(起)",
+						"halign": "center",
+						"align": "left",
+						"width": "120",
+						"editor": {
+							"type": "textbox"
+						}
+					},
+					{
+						"field": "DestIPEnd",
+						"title": "目的IP(止)",
+						"halign": "center",
+						"align": "left",
+						"width": "120",
+						"editor": {
+							"type": "textbox"
+						}
+					},
+					{
+						"field": "Protocol",
+						"title": "协议",
+						"halign": "center",
+						"align": "left",
+						"width": "110",
+						"editor": {
+							"type": "combobox",
+							"options": {
+								"valueField": "Protocol",
+								"textField": "Protocol",
+								"data": [
+									{
+										"Protocol": "TCP"
+									},
+									{
+										"Protocol": "UDP"
+									},
+									{
+										"Protocol": "TCP/UDP"
+									},
+									{
+										"Protocol": "ICMP"
+									},
+									{
+										"Protocol": "ALL"
+									}
+								],
+								"required": true,
+								"panelHeight": "auto"
+							}
+						}
+					},
+					{
+						"field": "SourcePortStart",
+						"title": "源端口(起)",
+						"halign": "center",
+						"align": "left",
+						"width": "80",
+						"editor": {
+							"type": "textbox"
+						}
+					},
+					{
+						"field": "SourcePortEnd",
+						"title": "源端口(止)",
+						"halign": "center",
+						"align": "left",
+						"width": "80",
+						"editor": {
+							"type": "textbox"
+						}
+					},
+					{
+						"field": "DestPortStart",
+						"title": "目的端口(起)",
+						"halign": "center",
+						"align": "left",
+						"width": "90",
+						"editor": {
+							"type": "textbox"
+						}
+					},
+					{
+						"field": "DestPortEnd",
+						"title": "目的端口(止)",
+						"halign": "center",
+						"align": "left",
+						"width": "90",
+						"editor": {
+							"type": "textbox"
+						}
+					}
+				]
+			]
+		},
+		"customerCheckout": {
+			"hbusGetPath": [
+				"hbus://mdm/InternetGatewayDevice.X_CMCC_Security.IPFilterIn.{i}."
+			],
+			"msgType": 211,
+			"userTagData": 1,
+			"checkout": "ipFilterCheckout",
+			"preCheckout": "ipFilterPreCheckout"
+		},
+		"customerCheckin": {
+			"hbusPostPath": "hbus://mdm/InternetGatewayDevice.X_CMCC_Security.IPFilterIn.{i}.",
+			"msgType": 215,
+			"otherCheckin": "ipFilterCheckin"
+		}
+	},
+	"HGST_VIRTUAL_SERVER": {
+		"style": {
+			"width": "100%",
+			"border": "none"
+		},
+		"cssClass": {
+			"addClass": "lines-no"
+		},
+		"profile": {
+			"edit": {
+				"editAllRows": true
+			},
+			"combobox": {
+				"readonly": true
+			},
+			"easyuiUpdateEverytime": true
+		},
+		"easyui": {
+			"rownumbers": true,
+			"iconCls": "icon-table",
+			"fitColumns": false,
+			"singleSelect": true,
+			"onClickRow": "vserverClickRow",
+			"onCheck": "vserverCheckRow",
+			"toolbar": [
+				{
+					"text": "新建",
+					"iconCls": "icon-add",
+					"handler": "vserverCreate"
+				},
+				{
+					"text": "删除",
+					"iconCls": "icon-remove",
+					"handler": "vserverDelete"
+				},
+				{
+					"text": "刷新",
+					"iconCls": "icon-reload",
+					"handler": "vserverUpdate"
+				}
+			],
+			"fit": false,
+			"frozenColumns": [
+				[
+					{
+						"field": "selected",
+						"title": "",
+						"halign": "center",
+						"align": "left",
+						"width": "10%",
+						"checkbox": true
+					}
+				]
+			],
+			"columns": [
+				[
+					{
+						"field": "WanName",
+						"title": "WAN连接",
+						"halign": "center",
+						"align": "left",
+						"width": "30%",
+						"editor": {
+							"type": "combobox",
+							"options": {
+								"valueField": "WanPath",
+								"textField": "WanName",
+								"data": [],
+								"required": true,
+								"panelHeight": "auto"
+							}
+						}
+					},
+					{
+						"field": "PortMappingEnabled",
+						"title": "使能",
+						"halign": "center",
+						"align": "left",
+						"width": "10%",
+						"editor": {
+							"type": "combobox",
+							"options": {
+								"valueField": "Enable",
+								"textField": "EnableText",
+								"data": [
+									{
+										"Enable": "1",
+										"EnableText": "是"
+									},
+									{
+										"Enable": "0",
+										"EnableText": "否"
+									}
+								],
+								"required": true,
+								"panelHeight": "auto"
+							}
+						}
+					},
+					{
+						"field": "RemoteHost",
+						"title": "外网IP",
+						"halign": "center",
+						"align": "left",
+						"width": "20%",
+						"editor": {
+							"type": "textbox"
+						}
+					},
+					{
+						"field": "ExternalPort",
+						"title": "外网端口",
+						"halign": "center",
+						"align": "left",
+						"width": "12%",
+						"editor": {
+							"type": "textbox"
+						}
+					},
+					{
+						"field": "InternalClient",
+						"title": "内网IP",
+						"halign": "center",
+						"align": "left",
+						"width": "20%",
+						"editor": {
+							"type": "textbox"
+						}
+					},
+					{
+						"field": "InternalPort",
+						"title": "内网端口",
+						"halign": "center",
+						"align": "left",
+						"width": "12%",
+						"editor": {
+							"type": "textbox"
+						}
+					},
+					{
+						"field": "PortMappingProtocol",
+						"title": "协议",
+						"halign": "center",
+						"align": "left",
+						"width": "12%",
+						"editor": {
+							"type": "combobox",
+							"options": {
+								"valueField": "PortMappingProtocol",
+								"textField": "PortMappingProtocol",
+								"data": [
+									{
+										"PortMappingProtocol": "TCP"
+									},
+									{
+										"PortMappingProtocol": "UDP"
+									}
+								],
+								"required": true,
+								"panelHeight": "auto"
+							}
+						}
+					},
+					{
+						"field": "PortMappingLeaseDuration",
+						"title": "租用秒数",
+						"halign": "center",
+						"align": "left",
+						"width": "12%",
+						"editor": {
+							"type": "textbox"
+						}
+					},
+					{
+						"field": "PortMappingDescription",
+						"title": "备注",
+						"halign": "center",
+						"align": "left",
+						"width": "15%",
+						"editor": {
+							"type": "textbox"
+						}
+					}
+				]
+			]
+		},
+		"customerCheckout": {
+			"hbusGetPath": [
+				"hbus://mdm/InternetGatewayDevice.WANDevice.{i}.WANConnectionDevice.{i}.WANPPPConnection.{i}.PortMapping.{i}.;",
+				"InternetGatewayDevice.WANDevice.{i}.WANConnectionDevice.{i}.WANIPConnection.{i}.PortMapping.{i}.;",
+				"InternetGatewayDevice.WANDevice.{i}.WANConnectionDevice.{i}.WANPPPConnection.{i}.;",
+				"InternetGatewayDevice.WANDevice.{i}.WANConnectionDevice.{i}.WANIPConnection.{i}."
+			],
+			"msgType": 211,
+			"userTagData": 1,
+			"checkout": "vserverCheckout",
+			"preCheckout": "vserverPreCheckout"
+		},
+		"customerCheckin": {
+			"hbusPostPath": "hbus://mdm/InternetGatewayDevice.WANDevice.{i}.WANConnectionDevice.{i}.WANPPPConnection.{i}.PortMapping.{i}.",
+			"msgType": 215,
+			"otherCheckin": "vserverCheckin"
+		}
+	},
+	"HGST_HBUS_GLOBAL_STAT": {
+		"style": {
+			"width": "100%",
+			"border": "none"
+		},
+		"cssClass": {
+			"addClass": "lines-no"
+		},
+		"easyui": {
+			"rownumbers": false,
+			"iconCls": "icon-table",
+			"fitColumns": false,
+			"singleSelect": true,
+			"toolbar": "#toolbar",
+			"fit": false,
+			"columns": [
+				[
+					{
+						"field": "key",
+						"title": "名称",
+						"halign": "left",
+						"align": "left",
+						"width": "30%"
+					},
+					{
+						"field": "value",
+						"title": "值",
+						"halign": "left",
+						"align": "left",
+						"width": "70%"
+					}
+				]
+			]
+		},
+		"define": {
+			"keyValue": true
+		},
+		"customerCheckout": {
+			"url": "/hbusStats",
+			"preCheckout": "hbusGetGlobalStat"
+		}
+	},
+	"HGST_HBUS_MEMORY_STAT": {
+		"style": {
+			"width": "100%",
+			"border": "none"
+		},
+		"cssClass": {
+			"addClass": "lines-no"
+		},
+		"easyui": {
+			"rownumbers": false,
+			"iconCls": "icon-table",
+			"fitColumns": false,
+			"singleSelect": true,
+			"toolbar": "#toolbar",
+			"fit": false,
+			"columns": [
+				[
+					{
+						"field": "key",
+						"title": "名称",
+						"halign": "left",
+						"align": "left",
+						"width": "40%"
+					},
+					{
+						"field": "value",
+						"title": "值",
+						"halign": "left",
+						"align": "left",
+						"width": "60%"
+					}
+				]
+			]
+		},
+		"define": {
+			"keyValue": true
+		},
+		"customerCheckout": {
+			"url": "/hbusStats",
+			"preCheckout": "hbusGetMemoryStat"
+		}
+	},
+	"HGST_HBUS_PROCESS_STAT": {
+		"style": {
+			"width": "100%",
+			"border": "none"
+		},
+		"cssClass": {
+			"addClass": "lines-no"
+		},
+		"easyui": {
+			"rownumbers": false,
+			"iconCls": "icon-table",
+			"fitColumns": false,
+			"singleSelect": true,
+			"toolbar": [
+				{
+					"text": "刷新",
+					"iconCls": "icon-reload",
+					"handler": "hbusProcessStatUpdate"
+				}
+			],
+			"fit": false,
+			"onClickRow": "processStatClickRow",
+			"frozenColumns": [
+				[
+					{
+						"field": "path",
+						"title": "path",
+						"halign": "left",
+						"align": "left",
+						"width": "25%"
+					}
+				]
+			],
+			"columns": [
+				[
+					{
+						"field": "index",
+						"title": "index",
+						"halign": "left",
+						"align": "left",
+						"width": "8%"
+					},
+					{
+						"field": "ipcId",
+						"title": "ipcId",
+						"halign": "left",
+						"align": "left",
+						"width": "8%"
+					},
+					{
+						"field": "processId",
+						"title": "processId",
+						"halign": "left",
+						"align": "left",
+						"width": "12%"
+					},
+					{
+						"field": "msgBeginPos",
+						"title": "msgBeginPos",
+						"halign": "left",
+						"align": "right",
+						"width": "15%"
+					},
+					{
+						"field": "msgEndPos",
+						"title": "msgEndPos",
+						"halign": "left",
+						"align": "right",
+						"width": "15%"
+					},
+					{
+						"field": "freePosNum",
+						"title": "freePosNum",
+						"halign": "left",
+						"align": "right",
+						"width": "15%"
+					},
+					{
+						"field": "state",
+						"title": "state",
+						"halign": "left",
+						"align": "right",
+						"width": "18%"
+					},
+					{
+						"field": "DebugLinePos",
+						"title": "DebugLinePos",
+						"halign": "left",
+						"align": "right",
+						"width": "25%"
+					},
+					{
+						"field": "WaitSemStatus",
+						"title": "WaitSemStatus",
+						"halign": "left",
+						"align": "right",
+						"width": "18%"
+					},
+					{
+						"field": "WaitCnt",
+						"title": "WaitCnt",
+						"halign": "left",
+						"align": "right",
+						"width": "15%"
+					},
+					{
+						"field": "WaitPostCnt",
+						"title": "WaitPostCnt",
+						"halign": "left",
+						"align": "right",
+						"width": "17%"
+					},
+					{
+						"field": "ReplySemStatus",
+						"title": "ReplySemStatus",
+						"halign": "left",
+						"align": "right",
+						"width": "18%"
+					},
+					{
+						"field": "ReplyCnt",
+						"title": "ReplyCnt",
+						"halign": "left",
+						"align": "right",
+						"width": "15%"
+					},
+					{
+						"field": "ReplyPostCnt",
+						"title": "ReplyPostCnt",
+						"halign": "left",
+						"align": "right",
+						"width": "17%"
+					},
+					{
+						"field": "SendCnt",
+						"title": "SendCnt",
+						"halign": "left",
+						"align": "right",
+						"width": "15%"
+					},
+					{
+						"field": "RecvCnt",
+						"title": "RecvCnt",
+						"halign": "left",
+						"align": "right",
+						"width": "15%"
+					},
+					{
+						"field": "ReplyCnt",
+						"title": "ReplyCnt",
+						"halign": "left",
+						"align": "right",
+						"width": "15%"
+					},
+					{
+						"field": "FailToSendCnt",
+						"title": "FailToSendCnt",
+						"halign": "left",
+						"align": "right",
+						"width": "17%"
+					},
+					{
+						"field": "FailToGetReplyCnt",
+						"title": "FailToGetReplyCnt",
+						"halign": "left",
+						"align": "right",
+						"width": "19%"
+					},
+					{
+						"field": "replyDataIdx",
+						"title": "replyDataIdx",
+						"halign": "left",
+						"align": "right",
+						"width": "15%"
+					},
+					{
+						"field": "waitRelpyDataId",
+						"title": "waitRelpyDataId",
+						"halign": "left",
+						"align": "right",
+						"width": "18%"
+					},
+					{
+						"field": "updateSec",
+						"title": "updateSec",
+						"halign": "left",
+						"align": "right",
+						"width": "15%"
+					},
+					{
+						"field": "updateUs",
+						"title": "updateUs",
+						"halign": "left",
+						"align": "right",
+						"width": "15%"
+					}
+				]
+			]
+		},
+		"customerCheckout": {
+			"url": "/hbusStats",
+			"preCheckout": "hbusProcessStatPreUpdate"
+		}
+	},
+	"HGST_HBUS_SINGLE_PROCESS_STAT": {
+		"style": {
+			"width": "100%",
+			"border": "none"
+		},
+		"cssClass": {
+			"addClass": "lines-no"
+		},
+		"easyui": {
+			"rownumbers": false,
+			"iconCls": "icon-table",
+			"fitColumns": false,
+			"singleSelect": true,
+			"toolbar": [],
+			"fit": false,
+			"columns": [
+				[
+					{
+						"field": "Action",
+						"title": "Action",
+						"halign": "left",
+						"align": "left",
+						"width": "20%"
+					},
+					{
+						"field": "TriggerTime",
+						"title": "TriggerTime",
+						"halign": "left",
+						"align": "left",
+						"width": "40%"
+					},
+					{
+						"field": "LeaveTime",
+						"title": "LeaveTime",
+						"halign": "left",
+						"align": "left",
+						"width": "40%"
+					}
+				]
+			]
+		},
+		"customerCheckout": {}
+	},
+	"HGST_HBUS_DAEMON_LIST": {
+		"style": {
+			"width": "100%",
+			"border": "none"
+		},
+		"cssClass": {
+			"addClass": "lines-no"
+		},
+		"easyui": {
+			"rownumbers": false,
+			"iconCls": "icon-table",
+			"fitColumns": false,
+			"singleSelect": true,
+			"toolbar": [
+				{
+					"text": "刷新",
+					"iconCls": "icon-reload",
+					"handler": "hbusProcessListUpdate"
+				}
+			],
+			"fit": false,
+			"onClickRow": "hbusProcessListClickRow",
+			"frozenColumns": [
+				[
+					{
+						"field": "path",
+						"title": "path",
+						"halign": "left",
+						"align": "left",
+						"width": "25%"
+					}
+				]
+			],
+			"columns": [
+				[
+					{
+						"field": "index",
+						"title": "index",
+						"halign": "left",
+						"align": "left",
+						"width": "8%"
+					},
+					{
+						"field": "ipcId",
+						"title": "ipcId",
+						"halign": "left",
+						"align": "left",
+						"width": "8%"
+					},
+					{
+						"field": "processId",
+						"title": "processId",
+						"halign": "left",
+						"align": "left",
+						"width": "12%"
+					},
+					{
+						"field": "msgBeginPos",
+						"title": "msgBeginPos",
+						"halign": "left",
+						"align": "right",
+						"width": "15%"
+					},
+					{
+						"field": "msgEndPos",
+						"title": "msgEndPos",
+						"halign": "left",
+						"align": "right",
+						"width": "15%"
+					},
+					{
+						"field": "freePosNum",
+						"title": "freePosNum",
+						"halign": "left",
+						"align": "right",
+						"width": "15%"
+					},
+					{
+						"field": "state",
+						"title": "state",
+						"halign": "left",
+						"align": "right",
+						"width": "25%"
+					},
+					{
+						"field": "DebugLinePos",
+						"title": "DebugLinePos",
+						"halign": "left",
+						"align": "right",
+						"width": "18%"
+					},
+					{
+						"field": "WaitSemStatus",
+						"title": "WaitSemStatus",
+						"halign": "left",
+						"align": "right",
+						"width": "18%"
+					},
+					{
+						"field": "WaitCnt",
+						"title": "WaitCnt",
+						"halign": "left",
+						"align": "right",
+						"width": "15%"
+					},
+					{
+						"field": "WaitPostCnt",
+						"title": "WaitPostCnt",
+						"halign": "left",
+						"align": "right",
+						"width": "17%"
+					},
+					{
+						"field": "ReplySemStatus",
+						"title": "ReplySemStatus",
+						"halign": "left",
+						"align": "right",
+						"width": "18%"
+					},
+					{
+						"field": "ReplyCnt",
+						"title": "ReplyCnt",
+						"halign": "left",
+						"align": "right",
+						"width": "15%"
+					},
+					{
+						"field": "ReplyPostCnt",
+						"title": "ReplyPostCnt",
+						"halign": "left",
+						"align": "right",
+						"width": "17%"
+					},
+					{
+						"field": "SendCnt",
+						"title": "SendCnt",
+						"halign": "left",
+						"align": "right",
+						"width": "15%"
+					},
+					{
+						"field": "RecvCnt",
+						"title": "RecvCnt",
+						"halign": "left",
+						"align": "right",
+						"width": "15%"
+					},
+					{
+						"field": "ReplyCnt",
+						"title": "ReplyCnt",
+						"halign": "left",
+						"align": "right",
+						"width": "15%"
+					},
+					{
+						"field": "FailToSendCnt",
+						"title": "FailToSendCnt",
+						"halign": "left",
+						"align": "right",
+						"width": "17%"
+					},
+					{
+						"field": "FailToGetReplyCnt",
+						"title": "FailToGetReplyCnt",
+						"halign": "left",
+						"align": "right",
+						"width": "19%"
+					},
+					{
+						"field": "replyDataIdx",
+						"title": "replyDataIdx",
+						"halign": "left",
+						"align": "right",
+						"width": "15%"
+					},
+					{
+						"field": "waitRelpyDataId",
+						"title": "waitRelpyDataId",
+						"halign": "left",
+						"align": "right",
+						"width": "18%"
+					},
+					{
+						"field": "updateSec",
+						"title": "updateSec",
+						"halign": "left",
+						"align": "right",
+						"width": "15%"
+					},
+					{
+						"field": "updateUs",
+						"title": "updateUs",
+						"halign": "left",
+						"align": "right",
+						"width": "15%"
+					}
+				]
+			]
+		},
+		"customerCheckout": {
+			"url": "/hbusStats",
+			"preCheckout": "hbusProcessListPreCheckout"
+		}
+	},
+	"HGST_HBUS_DAEMON_PROCESS_MSG_LIST": {
+		"style": {
+			"width": "100%",
+			"border": "none"
+		},
+		"cssClass": {
+			"addClass": "lines-no"
+		},
+		"easyui": {
+			"rownumbers": false,
+			"iconCls": "icon-table",
+			"fitColumns": false,
+			"singleSelect": true,
+			"toolbar": [],
+			"fit": false,
+			"onClickRow": "hbusProcessMsgListClickRow",
+			"columns": [
+				[
+					{
+						"field": "index",
+						"title": "index",
+						"halign": "left",
+						"align": "left",
+						"width": "13%"
+					},
+					{
+						"field": "dataIdx",
+						"title": "dataIdx",
+						"halign": "left",
+						"align": "left",
+						"width": "16%"
+					},
+					{
+						"field": "nDataSize",
+						"title": "nDataSize",
+						"halign": "left",
+						"align": "left",
+						"width": "16%"
+					},
+					{
+						"field": "nMsgType",
+						"title": "nMsgType",
+						"halign": "left",
+						"align": "left",
+						"width": "16%"
+					},
+					{
+						"field": "ulUserTagData",
+						"title": "ulUserTagData",
+						"halign": "left",
+						"align": "left",
+						"width": "18%"
+					},
+					{
+						"field": "ulMethod",
+						"title": "ulMethod",
+						"halign": "left",
+						"align": "left",
+						"width": "20%"
+					}
+				]
+			]
+		},
+		"customerCheckout": {}
+	},
+	"HGST_HBUS_MEMORY_BLOCK_STAT": {
+		"style": {
+			"width": "100%",
+			"border": "none"
+		},
+		"cssClass": {
+			"addClass": "lines-no"
+		},
+		"easyui": {
+			"rownumbers": false,
+			"iconCls": "icon-table",
+			"fitColumns": false,
+			"singleSelect": true,
+			"toolbar": [],
+			"fit": false,
+			"columns": [
+				[
+					{
+						"field": "blockSize",
+						"title": "blockSize",
+						"halign": "center",
+						"align": "right",
+						"width": "15%"
+					},
+					{
+						"field": "availableBlockSize",
+						"title": "可用大小",
+						"halign": "center",
+						"align": "right",
+						"width": "20%"
+					},
+					{
+						"field": "blockNum",
+						"title": "可使用数目",
+						"halign": "center",
+						"align": "right",
+						"width": "20%"
+					},
+					{
+						"field": "used",
+						"title": "正在使用数目",
+						"halign": "center",
+						"align": "right",
+						"width": "20%"
+					},
+					{
+						"field": "mallocCnt",
+						"title": "分配次数",
+						"halign": "center",
+						"align": "right",
+						"width": "25%"
+					}
+				]
+			]
+		},
+		"customerCheckout": {
+			"url": "/hbusStats",
+			"preCheckout": "hbusMemBlockPreCheckout"
+		}
+	},
+	"HGST_HBUS_PING_PROCESS": {
+		"style": {
+			"width": "100%",
+			"border": "none"
+		},
+		"cssClass": {
+			"addClass": "lines-no"
+		},
+		"easyui": {
+			"rownumbers": false,
+			"iconCls": "icon-table",
+			"fitColumns": false,
+			"singleSelect": true,
+			"toolbar": [],
+			"fit": false,
+			"columns": [
+				[
+					{
+						"field": "name",
+						"title": "进程名称",
+						"halign": "center",
+						"align": "left",
+						"width": "20%"
+					},
+					{
+						"field": "pingCount",
+						"title": "ping次数",
+						"halign": "center",
+						"align": "right",
+						"width": "25%"
+					},
+					{
+						"field": "noRespTotalCount",
+						"title": "未响应ping次数",
+						"halign": "center",
+						"align": "right",
+						"width": "30%"
+					},
+					{
+						"field": "restartCount",
+						"title": "重启次数",
+						"halign": "center",
+						"align": "right",
+						"width": "25%"
+					}
+				]
+			]
+		},
+		"customerCheckout": {
+			"url": "/getHbusPingStat"
+		}
+	},
+	"HGST_STATIC_ROUTE_CFG": {
+		"style": {
+			"width": "100%",
+			"border": "none"
+		},
+		"cssClass": {
+			"addClass": "lines-no"
+		},
+		"profile": {
+			"edit": {
+				"editAllRows": true
+			},
+			"combobox": {
+				"readonly": true
+			},
+			"getChanges": true,
+			"easyuiUpdateEverytime": true
+		},
+		"easyui": {
+			"rownumbers": true,
+			"iconCls": "icon-table",
+			"fitColumns": false,
+			"singleSelect": false,
+			"onClickRow": "staticRouteClickRow",
+			"onCheck": "staticRouteCheckRow",
+			"toolbar": [
+				{
+					"text": "新建",
+					"iconCls": "icon-add",
+					"handler": "staticRouteCreate"
+				},
+				{
+					"text": "删除",
+					"iconCls": "icon-remove",
+					"handler": "staticRouteDelete"
+				},
+				{
+					"text": "刷新",
+					"iconCls": "icon-reload",
+					"handler": "staticRouteUpdate"
+				},
+				{
+					"text": "全屏显示",
+					"iconCls": "icon-fullscreen",
+					"handler": "staticRouteInfoFullShow"
+				}
+			],
+			"fit": false,
+			"frozenColumns": [
+				[
+					{
+						"field": "selected",
+						"title": "",
+						"halign": "center",
+						"align": "left",
+						"width": "10%",
+						"checkbox": true
+					}
+				]
+			],
+			"columns": [
+				[
+					{
+						"field": "Interface",
+						"title": "WAN连接",
+						"halign": "center",
+						"align": "left",
+						"width": "35%",
+						"editor": {
+							"type": "combobox",
+							"options": {
+								"valueField": "Interface",
+								"textField": "Name",
+								"required": true,
+								"data": [],
+								"panelHeight": "auto"
+							}
+						}
+					},
+					{
+						"field": "Enable",
+						"title": "使能",
+						"halign": "center",
+						"align": "left",
+						"width": "15%",
+						"editor": {
+							"type": "combobox",
+							"options": {
+								"valueField": "Enable",
+								"textField": "EnableText",
+								"data": [
+									{
+										"Enable": "1",
+										"EnableText": "是"
+									},
+									{
+										"Enable": "0",
+										"EnableText": "否"
+									}
+								],
+								"required": true,
+								"panelHeight": "auto"
+							}
+						}
+					},
+					{
+						"field": "DestIPAddress",
+						"title": "目的IP",
+						"halign": "center",
+						"align": "left",
+						"width": "25%",
+						"editor": {
+							"type": "textbox"
+						}
+					},
+					{
+						"field": "DestSubnetMask",
+						"title": "目的掩码",
+						"halign": "center",
+						"align": "left",
+						"width": "25%",
+						"editor": {
+							"type": "textbox"
+						}
+					}
+				]
+			]
+		},
+		"customerCheckout": {
+			"msgType": 211,
+			"userTagData": 1,
+			"checkout": "staticRouteCheckout",
+			"waitTimeoutMs": 5000,
+			"hbusGetPath": [
+				"hbus://mdm/InternetGatewayDevice.Layer3Forwarding.Forwarding.{i}.;",
+				"InternetGatewayDevice.WANDevice.{i}.WANConnectionDevice.{i}.WANIPConnection.{i}.;",
+				"InternetGatewayDevice.WANDevice.{i}.WANConnectionDevice.{i}.WANPPPConnection.{i}."
+			]
+		},
+		"customerCheckin": {
+			"msgType": 221,
+			"waitTimeoutMs": 5000,
+			"preCheckin": "staticRouteCheckin"
+		}
+	},
+	"HGST_STATIC_ROUTE_FULL_INFO": {
+		"style": {
+			"width": "100%",
+			"border": "none"
+		},
+		"cssClass": {
+			"addClass": "lines-no"
+		},
+		"easyui": {
+			"rownumbers": false,
+			"iconCls": "icon-table",
+			"fitColumns": false,
+			"singleSelect": false,
+			"toolbar": [],
+			"fit": false,
+			"columns": [
+				[
+					{
+						"field": "Interface",
+						"title": "WAN连接",
+						"halign": "center",
+						"align": "left"
+					},
+					{
+						"field": "Enable",
+						"title": "使能",
+						"halign": "center",
+						"align": "left"
+					},
+					{
+						"field": "DestIPAddress",
+						"title": "目的IP",
+						"halign": "center",
+						"align": "left"
+					},
+					{
+						"field": "DestSubnetMask",
+						"title": "目的掩码",
+						"halign": "center",
+						"align": "left"
+					}
+				]
+			]
+		},
+		"customerCheckout": {
+			"msgType": 211,
+			"userTagData": 1,
+			"checkout": "staticRouteFullInfoCheckout",
+			"waitTimeoutMs": 5000,
+			"hbusGetPath": [
+				"hbus://mdm/InternetGatewayDevice.Layer3Forwarding.Forwarding.{i}.;",
+				"InternetGatewayDevice.WANDevice.{i}.WANConnectionDevice.{i}.WANIPConnection.{i}.;",
+				"InternetGatewayDevice.WANDevice.{i}.WANConnectionDevice.{i}.WANPPPConnection.{i}."
+			]
+		}
+	},
+	"HGST_STATIC_IPV6_ROUTE_CFG": {
+		"style": {
+			"width": "100%",
+			"border": "none"
+		},
+		"cssClass": {
+			"addClass": "lines-no"
+		},
+		"profile": {
+			"edit": {
+				"editAllRows": true
+			},
+			"combobox": {
+				"readonly": true
+			},
+			"getChanges": true,
+			"easyuiUpdateEverytime": true
+		},
+		"easyui": {
+			"rownumbers": true,
+			"iconCls": "icon-table",
+			"fitColumns": false,
+			"singleSelect": false,
+			"onClickRow": "staticIPv6RouteClickRow",
+			"onCheck": "staticIPv6RouteCheckRow",
+			"toolbar": [
+				{
+					"text": "新建",
+					"iconCls": "icon-add",
+					"handler": "staticIPv6RouteCreate"
+				},
+				{
+					"text": "删除",
+					"iconCls": "icon-remove",
+					"handler": "staticIPv6RouteDelete"
+				},
+				{
+					"text": "刷新",
+					"iconCls": "icon-reload",
+					"handler": "staticIPv6RouteUpdate"
+				},
+				{
+					"text": "全屏显示",
+					"iconCls": "icon-fullscreen",
+					"handler": "staticIPv6RouteInfoFullShow"
+				}
+			],
+			"fit": false,
+			"frozenColumns": [
+				[
+					{
+						"field": "selected",
+						"title": "",
+						"halign": "center",
+						"align": "left",
+						"width": "10%",
+						"checkbox": true
+					}
+				]
+			],
+			"columns": [
+				[
+					{
+						"field": "Interface",
+						"title": "WAN连接",
+						"halign": "center",
+						"align": "left",
+						"width": "40%",
+						"editor": {
+							"type": "combobox",
+							"options": {
+								"valueField": "Interface",
+								"textField": "Name",
+								"required": true,
+								"data": [],
+								"panelHeight": "auto"
+							}
+						}
+					},
+					{
+						"field": "Enable",
+						"title": "使能",
+						"halign": "center",
+						"align": "left",
+						"width": "15%",
+						"editor": {
+							"type": "combobox",
+							"options": {
+								"valueField": "Enable",
+								"textField": "EnableText",
+								"data": [
+									{
+										"Enable": "1",
+										"EnableText": "是"
+									},
+									{
+										"Enable": "0",
+										"EnableText": "否"
+									}
+								],
+								"required": true,
+								"panelHeight": "auto"
+							}
+						}
+					},
+					{
+						"field": "DestIPPrefix",
+						"title": "目的IPv6前缀",
+						"halign": "center",
+						"align": "left",
+						"width": "45%",
+						"editor": {
+							"type": "textbox"
+						}
+					}
+				]
+			]
+		},
+		"customerCheckout": {
+			"msgType": 211,
+			"userTagData": 1,
+			"checkout": "staticIPv6RouteCheckout",
+			"waitTimeoutMs": 5000,
+			"hbusGetPath": [
+				"hbus://mdm/InternetGatewayDevice.X_CMCC_IPv6Layer3Forwarding.Forwarding.{i}.;",
+				"InternetGatewayDevice.WANDevice.{i}.WANConnectionDevice.{i}.WANIPConnection.{i}.;",
+				"InternetGatewayDevice.WANDevice.{i}.WANConnectionDevice.{i}.WANPPPConnection.{i}."
+			]
+		},
+		"customerCheckin": {
+			"msgType": 221,
+			"waitTimeoutMs": 5000,
+			"preCheckin": "staticIPv6RouteCheckin"
+		}
+	},
+	"HGST_STATIC_IPV6_ROUTE_FULL_INFO": {
+		"style": {
+			"width": "100%",
+			"border": "none"
+		},
+		"cssClass": {
+			"addClass": "lines-no"
+		},
+		"easyui": {
+			"rownumbers": false,
+			"iconCls": "icon-table",
+			"fitColumns": false,
+			"singleSelect": true,
+			"toolbar": [],
+			"fit": false,
+			"columns": [
+				[
+					{
+						"field": "Interface",
+						"title": "WAN连接",
+						"halign": "center",
+						"align": "left"
+					},
+					{
+						"field": "Enable",
+						"title": "使能",
+						"halign": "center",
+						"align": "left"
+					},
+					{
+						"field": "DestIPPrefix",
+						"title": "目的IPv6前缀",
+						"halign": "center",
+						"align": "left"
+					}
+				]
+			]
+		},
+		"customerCheckout": {
+			"msgType": 211,
+			"userTagData": 1,
+			"checkout": "staticIPv6RouteFullInfoCheckout",
+			"waitTimeoutMs": 5000,
+			"hbusGetPath": [
+				"hbus://mdm/InternetGatewayDevice.X_CMCC_IPv6Layer3Forwarding.Forwarding.{i}.;",
+				"InternetGatewayDevice.WANDevice.{i}.WANConnectionDevice.{i}.WANIPConnection.{i}.;",
+				"InternetGatewayDevice.WANDevice.{i}.WANConnectionDevice.{i}.WANPPPConnection.{i}."
+			]
+		}
+	},
+	"HGST_ANTI_ATTACK_SWITCH": {
+		"style": {
+			"width": "100%",
+			"border": "none"
+		},
+		"cssClass": {
+			"addClass": "lines-no"
+		},
+		"easyui": {
+			"rownumbers": false,
+			"iconCls": "icon-table",
+			"fitColumns": false,
+			"singleSelect": false,
+			"toolbar": "#toolbar",
+			"fit": false,
+			"columns": [
+				[
+					{
+						"field": "key",
+						"title": "名称",
+						"halign": "center",
+						"align": "left",
+						"width": "30%"
+					},
+					{
+						"field": "value",
+						"title": "值",
+						"halign": "left",
+						"align": "center",
+						"width": "20%",
+						"checkbox": true
+					},
+					{
+						"field": "comments",
+						"title": "备注",
+						"halign": "center",
+						"align": "left",
+						"width": "50%"
+					}
+				]
+			]
+		},
+		"keyData": {
+			"enable_anti_port_scan": {
+				"comments": "使能防端口扫描"
+			},
+			"enable_anti_syn_flood": {
+				"comments": "使能防DOS攻击(syn flood)"
+			},
+			"enable_lan_side": {
+				"comments": "开启LAN侧防攻击"
+			}
+		},
+		"define": {
+			"keyValue": true,
+			"checkRow": true
+		},
+		"customerCheckout": {
+			"url": "/antiAttack?getData"
+		},
+		"customerCheckin": {
+			"url": "/antiAttack"
+		}
+	},
+	"HGST_ANTI_ATTACK_STAT": {
+		"style": {
+			"width": "100%",
+			"border": "none"
+		},
+		"cssClass": {
+			"addClass": "lines-no"
+		},
+		"easyui": {
+			"rownumbers": false,
+			"iconCls": "icon-table",
+			"fitColumns": false,
+			"singleSelect": true,
+			"toolbar": [
+				{
+					"text": "刷新",
+					"iconCls": "icon-reload",
+					"handler": "antiAttackStatUpdate"
+				}
+			],
+			"fit": false,
+			"columns": [
+				[
+					{
+						"field": "key",
+						"title": "名称",
+						"halign": "left",
+						"align": "left",
+						"width": "30%"
+					},
+					{
+						"field": "value",
+						"title": "值",
+						"halign": "left",
+						"align": "left",
+						"width": "70%"
+					}
+				]
+			]
+		},
+		"define": {
+			"keyValue": true
+		},
+		"customerCheckout": {
+			"url": "/antiAttack?getData",
+			"preCheckout": "antiAttackCheckout"
+		}
+	},
+	"HGST_ANTI_ATTACK_LIST": {
+		"style": {
+			"width": "100%",
+			"border": "none"
+		},
+		"cssClass": {
+			"addClass": "lines-no"
+		},
+		"easyui": {
+			"rownumbers": false,
+			"iconCls": "icon-table",
+			"fitColumns": false,
+			"singleSelect": true,
+			"toolbar": [
+				{
+					"text": "刷新",
+					"iconCls": "icon-reload",
+					"handler": "antiAttackListUpdate"
+				}
+			],
+			"fit": false,
+			"frozenColumns": [
+				[
+					{
+						"field": "src_ip",
+						"title": "src_ip",
+						"halign": "left",
+						"align": "left",
+						"width": "18%"
+					}
+				]
+			],
+			"columns": [
+				[
+					{
+						"field": "dst_ip",
+						"title": "dst_ip",
+						"halign": "left",
+						"align": "left",
+						"width": "18%"
+					},
+					{
+						"field": "dst_port",
+						"title": "dst_port",
+						"halign": "left",
+						"align": "left",
+						"width": "12%"
+					},
+					{
+						"field": "reset_num",
+						"title": "reset_num",
+						"halign": "left",
+						"align": "right",
+						"width": "15%"
+					},
+					{
+						"field": "drop_num",
+						"title": "drop_num",
+						"halign": "left",
+						"align": "right",
+						"width": "15%"
+					},
+					{
+						"field": "drop_syn",
+						"title": "drop_syn",
+						"halign": "left",
+						"align": "right",
+						"width": "18%"
+					},
+					{
+						"field": "timeout",
+						"title": "timeout",
+						"halign": "left",
+						"align": "right",
+						"width": "15%"
+					},
+					{
+						"field": "syn_num",
+						"title": "syn_num",
+						"halign": "left",
+						"align": "right",
+						"width": "17%"
+					},
+					{
+						"field": "drop_ack",
+						"title": "drop_ack",
+						"halign": "left",
+						"align": "right",
+						"width": "18%"
+					},
+					{
+						"field": "push_list",
+						"title": "push_list",
+						"halign": "left",
+						"align": "right",
+						"width": "15%"
+					},
+					{
+						"field": "push_fail",
+						"title": "push_fail",
+						"halign": "left",
+						"align": "right",
+						"width": "17%"
+					},
+					{
+						"field": "pop_list",
+						"title": "pop_list",
+						"halign": "left",
+						"align": "right",
+						"width": "15%"
+					}
+				]
+			]
+		},
+		"customerCheckout": {
+			"url": "/antiAttack?getData",
+			"preCheckout": "antiAttackPreUpdate"
+		}
+	},
+	"HGST_WLAN_INFO": {
+		"style": {
+			"width": "100%",
+			"border": "none"
+		},
+		"cssClass": {
+			"addClass": "lines-no"
+		},
+		"easyui": {
+			"rownumbers": false,
+			"iconCls": "icon-table",
+			"fitColumns": false,
+			"singleSelect": true,
+			"toolbar": [
+				{
+					"text": "刷新",
+					"iconCls": "icon-reload",
+					"handler": "wlanInfInfoUpdate"
+				}
+			],
+			"fit": false,
+			"columns": [
+				[
+					{
+						"field": "Band",
+						"title": "频段",
+						"halign": "center",
+						"align": "center",
+						"width": "70"
+					},
+					{
+						"field": "X_CMCC_APModuleEnable",
+						"title": "开关状态",
+						"halign": "center",
+						"align": "center",
+						"width": "70"
+					},
+					{
+						"field": "Status",
+						"title": "接口状态",
+						"halign": "center",
+						"align": "center",
+						"width": "70"
+					},
+					{
+						"field": "ChannelsInUse",
+						"title": "信道",
+						"halign": "center",
+						"align": "center",
+						"width": "70"
+					},
+					{
+						"field": "BeaconType",
+						"title": "认证方式",
+						"halign": "center",
+						"align": "center",
+						"width": "100"
+					},
+					{
+						"field": "WPAEncryptionModes",
+						"title": "加密方式",
+						"halign": "center",
+						"align": "center",
+						"width": "100"
+					},
+					{
+						"field": "TotalBytesSent",
+						"title": "发送字节数",
+						"halign": "center",
+						"align": "right",
+						"width": "100"
+					},
+					{
+						"field": "TotalBytesReceived",
+						"title": "接收字节数",
+						"halign": "center",
+						"align": "right",
+						"width": "100"
+					},
+					{
+						"field": "TotalPacketsSent",
+						"title": "发送包数",
+						"halign": "center",
+						"align": "right",
+						"width": "100"
+					},
+					{
+						"field": "TotalPacketsReceived",
+						"title": "接收包数",
+						"halign": "center",
+						"align": "right",
+						"width": "100"
+					}
+				]
+			]
+		},
+		"customerCheckout": {
+			"url": "/getObjs",
+			"msgType": 220,
+			"checkout": "wlanInfInfoCheckout",
+			"waitTimeoutMs": 5000,
+			"postPaths": [
+				"InternetGatewayDevice.LANDevice.1.WLANConfiguration.1.;",
+				"InternetGatewayDevice.LANDevice.1.WLANConfiguration.5.",
+				"InternetGatewayDevice.LANDevice.1.WLANConfiguration.6.",
+				"InternetGatewayDevice.Services.WifiMesh."
+			]
+		}
+	},
+	"HGST_QOS_PRIORITY_QUEUE": {
+		"style": {
+			"width": "100%",
+			"border": "none"
+		},
+		"cssClass": {
+			"addClass": "lines-no"
+		},
+		"profile": {
+			"edit": {
+				"editAllRows": true
+			}
+		},
+		"easyui": {
+			"rownumbers": false,
+			"iconCls": "icon-table",
+			"fitColumns": false,
+			"singleSelect": true,
+			"toolbar": [
+				{
+					"text": "新建",
+					"iconCls": "icon-add",
+					"handler": "priorityQueueCreate"
+				},
+				{
+					"text": "删除",
+					"iconCls": "icon-remove",
+					"handler": "priorityQueueDelete"
+				},
+				{
+					"text": "刷新",
+					"iconCls": "icon-reload",
+					"handler": "priorityQueueUpdate"
+				}
+			],
+			"fit": false,
+			"onClickRow": "priorityQueueClickRow",
+			"onCheck": "priorityQueueCheckRow",
+			"columns": [
+				[
+					{
+						"field": "queue",
+						"title": "队列",
+						"halign": "center",
+						"align": "center",
+						"width": "10%"
+					},
+					{
+						"field": "Priority",
+						"title": "优先级",
+						"halign": "center",
+						"align": "center",
+						"width": "40%"
+					},
+					{
+						"field": "Enable",
+						"title": "启用",
+						"halign": "center",
+						"align": "left",
+						"width": "40%",
+						"editor": {
+							"type": "combobox",
+							"options": {
+								"valueField": "Enable",
+								"textField": "EnableText",
+								"data": [
+									{
+										"Enable": "1",
+										"EnableText": "是"
+									},
+									{
+										"Enable": "0",
+										"EnableText": "否"
+									}
+								],
+								"required": true,
+								"panelHeight": "auto"
+							}
+						}
+					},
+					{
+						"field": "selected",
+						"title": "",
+						"halign": "center",
+						"align": "left",
+						"width": "10%",
+						"checkbox": true
+					}
+				]
+			]
+		},
+		"customerCheckout": {
+			"hbusGetPath": [
+				"hbus://mdm/InternetGatewayDevice.X_CMCC_UplinkQoS.PriorityQueue.{i}."
+			],
+			"msgType": 211,
+			"userTagData": 1,
+			"checkout": "priorityQueueCheckout"
+		},
+		"customerCheckin": {
+			"hbusPostPath": "hbus://mdm/InternetGatewayDevice.X_CMCC_UplinkQoS.PriorityQueue.{i}.",
+			"msgType": 215,
+			"otherCheckin": "priorityQueueCheckin"
+		}
+	},
+	"HGST_QOS_PRIORITY_QUEUE_WEIGHT": {
+		"style": {
+			"width": "100%",
+			"border": "none"
+		},
+		"cssClass": {
+			"addClass": "lines-no"
+		},
+		"profile": {
+			"edit": {
+				"editAllRows": true
+			}
+		},
+		"easyui": {
+			"rownumbers": false,
+			"iconCls": "icon-table",
+			"fitColumns": false,
+			"singleSelect": true,
+			"toolbar": [
+				{
+					"text": "刷新",
+					"iconCls": "icon-reload",
+					"handler": "priorityQueueWeightUpdate"
+				}
+			],
+			"fit": false,
+			"onCheck": "priorityQueueWeightCheckRow",
+			"columns": [
+				[
+					{
+						"field": "queue",
+						"title": "队列",
+						"halign": "center",
+						"align": "center",
+						"width": "10%"
+					},
+					{
+						"field": "Enable",
+						"title": "启用",
+						"halign": "center",
+						"align": "center",
+						"width": "45%",
+						"editor": {
+							"type": "combobox",
+							"options": {
+								"valueField": "Enable",
+								"textField": "EnableText",
+								"data": [
+									{
+										"Enable": "1",
+										"EnableText": "是"
+									},
+									{
+										"Enable": "0",
+										"EnableText": "否"
+									}
+								],
+								"required": true,
+								"panelHeight": "auto"
+							}
+						}
+					},
+					{
+						"field": "Weight",
+						"title": "权重(%)",
+						"halign": "center",
+						"align": "left",
+						"width": "45%",
+						"editor": {
+							"type": "textbox"
+						}
+					}
+				]
+			]
+		},
+		"customerCheckout": {
+			"hbusGetPath": [
+				"hbus://mdm/InternetGatewayDevice.X_CMCC_UplinkQoS.PriorityQueue.{i}."
+			],
+			"msgType": 211,
+			"userTagData": 1,
+			"checkout": "priorityQueueWeightCheckout"
+		},
+		"customerCheckin": {
+			"url": "/setObjs",
+			"msgType": 221,
+			"preCheckin": "priorityQueueWeightCheckin"
+		}
+	},
+	"HGST_QOS_APP": {
+		"style": {
+			"width": "100%",
+			"border": "none"
+		},
+		"cssClass": {
+			"addClass": "lines-no"
+		},
+		"profile": {
+			"edit": {
+				"editAllRows": true
+			}
+		},
+		"easyui": {
+			"rownumbers": true,
+			"iconCls": "icon-table",
+			"fitColumns": false,
+			"singleSelect": true,
+			"toolbar": [
+				{
+					"text": "新建",
+					"iconCls": "icon-add",
+					"handler": "qosAppCreate"
+				},
+				{
+					"text": "删除",
+					"iconCls": "icon-remove",
+					"handler": "qosAppDelete"
+				},
+				{
+					"text": "刷新",
+					"iconCls": "icon-reload",
+					"handler": "qosAppUpdate"
+				}
+			],
+			"fit": false,
+			"onCheck": "qosAppCheckRow",
+			"onLoadSuccess": "qosAppOnLoadSuccess",
+			"columns": [
+				[
+					{
+						"field": "AppName",
+						"title": "业务名",
+						"halign": "center",
+						"align": "left",
+						"width": "45%",
+						"editor": {
+							"type": "combobox",
+							"options": {
+								"valueField": "AppName",
+								"textField": "AppNameText",
+								"data": [
+									{
+										"AppName": "VOIP",
+										"AppNameText": "VOIP"
+									},
+									{
+										"AppName": "TR069",
+										"AppNameText": "TR069"
+									}
+								],
+								"required": true,
+								"panelHeight": "auto"
+							}
+						}
+					},
+					{
+						"field": "ClassQueue",
+						"title": "优先级队列",
+						"halign": "center",
+						"align": "left",
+						"width": "45%",
+						"editor": {
+							"type": "combobox",
+							"options": {
+								"valueField": "ClassQueue",
+								"textField": "ClassQueueText",
+								"data": [
+									{
+										"ClassQueue": "1",
+										"ClassQueueText": "1"
+									},
+									{
+										"ClassQueue": "2",
+										"ClassQueueText": "2"
+									},
+									{
+										"ClassQueue": "3",
+										"ClassQueueText": "3"
+									},
+									{
+										"ClassQueue": "4",
+										"ClassQueueText": "4"
+									}
+								],
+								"required": true,
+								"panelHeight": "auto"
+							}
+						}
+					},
+					{
+						"field": "selected",
+						"title": "",
+						"halign": "center",
+						"align": "left",
+						"width": "10%",
+						"checkbox": true
+					}
+				]
+			]
+		},
+		"customerCheckout": {
+			"hbusGetPath": [
+				"hbus://mdm/InternetGatewayDevice.X_CMCC_UplinkQoS.App.{i}."
+			],
+			"msgType": 211,
+			"userTagData": 1
+		},
+		"customerCheckin": {
+			"hbusPostPath": "hbus://mdm/InternetGatewayDevice.X_CMCC_UplinkQoS.App.{i}.",
+			"msgType": 215,
+			"otherCheckin": "qosAppCheckin"
+		}
+	},
+	"HGST_QOS_CLASSIFICATION": {
+		"style": {
+			"width": "100%",
+			"border": "none"
+		},
+		"cssClass": {
+			"addClass": "lines-no"
+		},
+		"profile": {
+			"edit": {
+				"editAllRows": true
+			}
+		},
+		"easyui": {
+			"rownumbers": false,
+			"iconCls": "icon-table",
+			"fitColumns": false,
+			"singleSelect": false,
+			"onLoadSuccess": "qosClassficationOnLoadSuccess",
+			"toolbar": [
+				{
+					"text": "新建",
+					"iconCls": "icon-add",
+					"handler": "qosClassificationCreate"
+				},
+				{
+					"text": "删除",
+					"iconCls": "icon-remove",
+					"handler": "qosClassificationDelete"
+				},
+				{
+					"text": "刷新",
+					"iconCls": "icon-reload",
+					"handler": "qosClassificationUpdate"
+				}
+			],
+			"fit": false,
+			"columns": [
+				[
+					{
+						"field": "queue",
+						"title": "队列",
+						"halign": "center",
+						"align": "center",
+						"width": "10%"
+					},
+					{
+						"field": "DSCPMarkValue",
+						"title": "DSCP/TC值",
+						"halign": "center",
+						"align": "center",
+						"width": "30%",
+						"editor": {
+							"type": "textbox"
+						}
+					},
+					{
+						"field": "802-1_P_Value",
+						"title": "802.1p值",
+						"halign": "center",
+						"align": "center",
+						"width": "25%",
+						"editor": {
+							"type": "textbox"
+						}
+					},
+					{
+						"field": "ClassQueue",
+						"title": "优先级队列",
+						"halign": "center",
+						"align": "left",
+						"width": "25%",
+						"editor": {
+							"type": "combobox",
+							"options": {
+								"valueField": "ClassQueue",
+								"textField": "ClassQueueText",
+								"data": [
+									{
+										"ClassQueue": "1",
+										"ClassQueueText": "1"
+									},
+									{
+										"ClassQueue": "2",
+										"ClassQueueText": "2"
+									},
+									{
+										"ClassQueue": "3",
+										"ClassQueueText": "3"
+									},
+									{
+										"ClassQueue": "4",
+										"ClassQueueText": "4"
+									},
+									{
+										"ClassQueue": "5",
+										"ClassQueueText": "5"
+									},
+									{
+										"ClassQueue": "6",
+										"ClassQueueText": "6"
+									},
+									{
+										"ClassQueue": "7",
+										"ClassQueueText": "7"
+									},
+									{
+										"ClassQueue": "8",
+										"ClassQueueText": "8"
+									}
+								],
+								"required": true,
+								"panelHeight": "auto"
+							}
+						}
+					},
+					{
+						"field": "selected",
+						"title": "",
+						"halign": "center",
+						"align": "left",
+						"width": "10%",
+						"checkbox": true
+					}
+				]
+			]
+		},
+		"customerCheckout": {
+			"hbusGetPath": [
+				"hbus://mdm/InternetGatewayDevice.X_CMCC_UplinkQoS.Classification.{i}."
+			],
+			"msgType": 211,
+			"userTagData": 1,
+			"checkout": "qosClassificationCheckout"
+		},
+		"customerCheckin": {
+			"hbusPostPath": "hbus://mdm/InternetGatewayDevice.X_CMCC_UplinkQoS.Classification.{i}.",
+			"msgType": 215,
+			"otherCheckin": "qosClassificationCheckin"
+		}
+	},
+	"HGST_QOS_CLASSIFICATION_TYPE": {
+		"style": {
+			"width": "100%",
+			"border": "none"
+		},
+		"cssClass": {
+			"addClass": "lines-no"
+		},
+		"profile": {
+			"edit": {
+				"editAllRows": true
+			}
+		},
+		"easyui": {
+			"rownumbers": true,
+			"iconCls": "icon-table",
+			"fitColumns": false,
+			"singleSelect": true,
+			"toolbar": [
+				{
+					"text": "新建",
+					"iconCls": "icon-add",
+					"handler": "qosClassificationTypeCreate"
+				},
+				{
+					"text": "删除",
+					"iconCls": "icon-remove",
+					"handler": "qosClassificationTypeDelete"
+				},
+				{
+					"text": "刷新",
+					"iconCls": "icon-reload",
+					"handler": "qosClassificationTypeUpdate"
+				},
+				{
+					"text": "全屏显示",
+					"iconCls": "icon-fullscreen",
+					"handler": "qosClassificationTypeFullInfoShow"
+				}
+			],
+			"fit": false,
+			"onCheck": "qosClassificationTypeCheckRow",
+			"columns": [
+				[
+					{
+						"field": "Type",
+						"title": "匹配类型",
+						"halign": "center",
+						"align": "left",
+						"width": "20%",
+						"editor": {
+							"type": "combobox",
+							"options": {
+								"valueField": "Type",
+								"textField": "TypeText",
+								"data": [
+									{
+										"Type": "NULLType",
+										"TypeText": "NULLType"
+									},
+									{
+										"Type": "SMAC",
+										"TypeText": "源MAC地址"
+									},
+									{
+										"Type": "DMAC",
+										"TypeText": "目的MAC地址"
+									},
+									{
+										"Type": "8021P",
+										"TypeText": "8021P(0-7)"
+									},
+									{
+										"Type": "SIP",
+										"TypeText": "源IP地址"
+									},
+									{
+										"Type": "DIP",
+										"TypeText": "目的IP地址"
+									},
+									{
+										"Type": "SPORT",
+										"TypeText": "源端口"
+									},
+									{
+										"Type": "DPORT",
+										"TypeText": "目的端口"
+									},
+									{
+										"Type": "TOS",
+										"TypeText": "TOS(0-255)"
+									},
+									{
+										"Type": "DSCP",
+										"TypeText": "DSCP(0-63)"
+									},
+									{
+										"Type": "TC",
+										"TypeText": "流类型TC(0-255)"
+									},
+									{
+										"Type": "FL",
+										"TypeText": "流标签FlowLable(0-1048575)"
+									},
+									{
+										"Type": "WANInterface",
+										"TypeText": "WANInterface"
+									},
+									{
+										"Type": "LANInterface",
+										"TypeText": "LANInterface"
+									},
+									{
+										"Type": "IPVERSION",
+										"TypeText": "IpVersion"
+									}
+								],
+								"required": true,
+								"panelHeight": "auto"
+							}
+						}
+					},
+					{
+						"field": "Max",
+						"title": "最大值",
+						"halign": "center",
+						"align": "left",
+						"width": "25%",
+						"editor": {
+							"type": "combobox",
+							"options": {
+								"valueField": "Interface",
+								"textField": "Name",
+								"data": []
+							}
+						}
+					},
+					{
+						"field": "Min",
+						"title": "最小值",
+						"halign": "center",
+						"align": "left",
+						"width": "25%",
+						"editor": {
+							"type": "combobox",
+							"options": {
+								"valueField": "Interface",
+								"textField": "Name",
+								"data": []
+							}
+						}
+					},
+					{
+						"field": "ProtocolList",
+						"title": "协议",
+						"halign": "center",
+						"align": "left",
+						"width": "20%",
+						"editor": {
+							"type": "combobox",
+							"options": {
+								"valueField": "Protocol",
+								"textField": "ProtocolText",
+								"data": [
+									{
+										"Protocol": "TCP",
+										"ProtocolText": "TCP"
+									},
+									{
+										"Protocol": "UDP",
+										"ProtocolText": "UDP"
+									},
+									{
+										"Protocol": "ICMP",
+										"ProtocolText": "ICMP"
+									},
+									{
+										"Protocol": "ICMPv6",
+										"ProtocolText": "ICMPv6"
+									},
+									{
+										"Protocol": "RTP",
+										"ProtocolText": "RTP"
+									}
+								],
+								"panelHeight": "auto",
+								"multiple": true
+							}
+						}
+					},
+					{
+						"field": "selected",
+						"title": "",
+						"halign": "center",
+						"align": "left",
+						"width": "10%",
+						"checkbox": true
+					}
+				]
+			]
+		},
+		"customerCheckout": {
+			"hbusGetPath": [
+				"hbus://mdm/InternetGatewayDevice.X_CMCC_UplinkQoS.Classification.{i}.type.{i}.;",
+				"InternetGatewayDevice.WANDevice.{i}.WANConnectionDevice.{i}.WANIPConnection.{i}.;",
+				"InternetGatewayDevice.WANDevice.{i}.WANConnectionDevice.{i}.WANPPPConnection.{i}.;",
+				"InternetGatewayDevice.LANDevice.{i}.LANEthernetInterfaceConfig.{i}.;",
+				"InternetGatewayDevice.LANDevice.{i}.WLANConfiguration.{i}.;"
+			],
+			"msgType": 211,
+			"userTagData": 1,
+			"checkout": "qosClassificationTypeCheckout"
+		},
+		"customerCheckin": {
+			"hbusPostPath": "hbus://mdm/InternetGatewayDevice.X_CMCC_UplinkQoS.Classification.{i}.type.{i}.",
+			"msgType": 215,
+			"otherCheckin": "qosClassificationTypeCheckin"
+		}
+	},
+	"HGST_QOS_CLASSIFICATION_TYPE_FULL_INFO": {
+		"style": {
+			"width": "100%",
+			"border": "none"
+		},
+		"cssClass": {
+			"addClass": "lines-no"
+		},
+		"easyui": {
+			"rownumbers": false,
+			"iconCls": "icon-table",
+			"fitColumns": false,
+			"singleSelect": false,
+			"toolbar": [],
+			"fit": false,
+			"columns": [
+				[
+					{
+						"field": "Type",
+						"title": "匹配类型",
+						"halign": "center",
+						"align": "left"
+					},
+					{
+						"field": "Max",
+						"title": "最大值",
+						"halign": "center",
+						"align": "left"
+					},
+					{
+						"field": "Min",
+						"title": "最小值",
+						"halign": "center",
+						"align": "left"
+					},
+					{
+						"field": "ProtocolList",
+						"title": "协议",
+						"halign": "center",
+						"align": "left"
+					}
+				]
+			]
+		},
+		"customerCheckout": {
+			"hbusGetPath": [
+				"hbus://mdm/InternetGatewayDevice.X_CMCC_UplinkQoS.Classification.{i}.type.{i}.;",
+				"InternetGatewayDevice.WANDevice.{i}.WANConnectionDevice.{i}.WANIPConnection.{i}.;",
+				"InternetGatewayDevice.WANDevice.{i}.WANConnectionDevice.{i}.WANPPPConnection.{i}.;",
+				"InternetGatewayDevice.LANDevice.{i}.LANEthernetInterfaceConfig.{i}.;",
+				"InternetGatewayDevice.LANDevice.{i}.WLANConfiguration.{i}.;"
+			],
+			"msgType": 211,
+			"userTagData": 1,
+			"checkout": "qosClassificationTypeFullInfoCheckout"
+		}
+	},
+	"HGST_USB_INFO": {
+		"style": {
+			"width": "100%",
+			"border": "none"
+		},
+		"cssClass": {
+			"addClass": "lines-no"
+		},
+		"easyui": {
+			"rownumbers": false,
+			"iconCls": "icon-table",
+			"fitColumns": false,
+			"singleSelect": true,
+			"toolbar": [
+				{
+					"text": "刷新",
+					"iconCls": "icon-reload",
+					"handler": "usbInfoUpdate"
+				}
+			],
+			"fit": false,
+			"columns": [
+				[
+					{
+						"field": "Name",
+						"title": "名称",
+						"halign": "center",
+						"align": "left",
+						"width": "50%"
+					},
+					{
+						"field": "Status",
+						"title": "状态",
+						"halign": "center",
+						"align": "left",
+						"width": "50%"
+					}
+				]
+			]
+		},
+		"customerCheckout": {
+			"hbusGetPath": [
+				"hbus://mdm/InternetGatewayDevice.LANDevice.1.LANUSBInterfaceConfig.1.;",
+				"InternetGatewayDevice.LANDevice.1.LANUSBInterfaceNumberOfEntries;"
+			],
+			"msgType": 211,
+			"userTagData": 1,
+			"checkout": "usbInfoCheckout"
+		}
+	},
+	"HGST_LOG_INFO": {
+		"style": {
+			"width": "100%",
+			"border": "none"
+		},
+		"profile": {
+			"combobox": {
+				"readonly": true
+			},
+			"filter": "logFilter",
+			"pagination": "logPage"
+		},
+		"cssClass": {
+			"addClass": "lines-no"
+		},
+		"easyui": {
+			"rownumbers": true,
+			"iconCls": "icon-table",
+			"fitColumns": false,
+			"singleSelect": true,
+			"toolbar": [
+				{
+					"text": "刷新",
+					"iconCls": "icon-reload",
+					"handler": "logInfoUpdate"
+				},
+				{
+					"text": "下载日志",
+					"iconCls": "icon-download",
+					"handler": "logDownload"
+				},
+				{
+					"text": "删除日志",
+					"iconCls": "icon-clear",
+					"handler": "logDelete"
+				}
+			],
+			"fit": false,
+			"pageSize": 50,
+			"pagination": true,
+			"pageList": [
+				10,
+				20,
+				50,
+				100,
+				200,
+				500,
+				1000
+			],
+			"columns": [
+				[
+					{
+						"field": "Time",
+						"title": "时间",
+						"halign": "left",
+						"align": "center",
+						"width": "25%"
+					},
+					{
+						"field": "Level",
+						"title": "日志等级",
+						"halign": "left",
+						"align": "center",
+						"width": "16%"
+					},
+					{
+						"field": "log",
+						"title": "日志",
+						"halign": "left",
+						"align": "left",
+						"width": "300%"
+					}
+				]
+			]
+		},
+		"customerCheckout": {
+			"url": "/getLog",
+			"checkout": "logInfoCheckout",
+			"waitTimeoutMs": 5000
+		}
+	},
+	"HGST_VOIP_CODEC": {
+		"style": {
+			"width": "100%",
+			"border": "none"
+		},
+		"profile": {
+			"edit": {
+				"editAllRows": true
+			}
+		},
+		"cssClass": {
+			"addClass": "lines-no"
+		},
+		"easyui": {
+			"rownumbers": true,
+			"iconCls": "icon-table",
+			"fitColumns": false,
+			"singleSelect": false,
+			"toolbar": [
+				{
+					"text": "刷新",
+					"iconCls": "icon-reload",
+					"handler": "voipCodecUpdate"
+				}
+			],
+			"fit": false,
+			"columns": [
+				[
+					{
+						"field": "Codec",
+						"title": "编码方式",
+						"halign": "center",
+						"align": "left",
+						"width": "40%"
+					},
+					{
+						"field": "Priority",
+						"title": "编码优先级（1-4）",
+						"halign": "center",
+						"align": "left",
+						"width": "35%",
+						"editor": {
+							"type": "textbox"
+						}
+					},
+					{
+						"field": "Enable",
+						"title": "使能",
+						"halign": "center",
+						"align": "left",
+						"width": "15%",
+						"editor": {
+							"type": "combobox",
+							"options": {
+								"valueField": "Enable",
+								"textField": "EnableText",
+								"data": [
+									{
+										"Enable": "1",
+										"EnableText": "是"
+									},
+									{
+										"Enable": "0",
+										"EnableText": "否"
+									}
+								],
+								"required": true,
+								"panelHeight": "auto"
+							}
+						}
+					},
+					{
+						"field": "selected",
+						"title": "",
+						"halign": "center",
+						"align": "left",
+						"width": "10%",
+						"checkbox": true
+					}
+				]
+			]
+		},
+		"customerCheckout": {
+			"hbusGetPath": [
+				"hbus://mdm/InternetGatewayDevice.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.Codec.List.{i}."
+			],
+			"msgType": 211,
+			"userTagData": 1,
+			"checkout": "voipCodecCheckout"
+		},
+		"customerCheckin": {
+			"hbusPostPath": "hbus://mdm/InternetGatewayDevice.Services.VoiceService.1.VoiceProfile.1.Line.1.Codec.List.1.",
+			"msgType": 215,
+			"otherCheckin": "voipCodecCheckin"
+		}
+	},
+	"HGST_VOIP_CODEC_H248": {
+		"style": {
+			"width": "100%",
+			"border": "none"
+		},
+		"profile": {
+			"edit": {
+				"editAllRows": true
+			}
+		},
+		"cssClass": {
+			"addClass": "lines-no"
+		},
+		"easyui": {
+			"rownumbers": true,
+			"iconCls": "icon-table",
+			"fitColumns": false,
+			"singleSelect": false,
+			"toolbar": [
+				{
+					"text": "刷新",
+					"iconCls": "icon-reload",
+					"handler": "voipCodecUpdate"
+				}
+			],
+			"fit": false,
+			"columns": [
+				[
+					{
+						"field": "Codec",
+						"title": "编码方式",
+						"halign": "center",
+						"align": "left",
+						"width": "40%"
+					},
+					{
+						"field": "Priority",
+						"title": "编码优先级（1-4）",
+						"halign": "center",
+						"align": "left",
+						"width": "35%",
+						"editor": {
+							"type": "textbox"
+						}
+					},
+					{
+						"field": "Enable",
+						"title": "使能",
+						"halign": "center",
+						"align": "left",
+						"width": "15%",
+						"editor": {
+							"type": "combobox",
+							"options": {
+								"valueField": "Enable",
+								"textField": "EnableText",
+								"data": [
+									{
+										"Enable": "1",
+										"EnableText": "是"
+									},
+									{
+										"Enable": "0",
+										"EnableText": "否"
+									}
+								],
+								"required": true,
+								"panelHeight": "auto"
+							}
+						}
+					},
+					{
+						"field": "selected",
+						"title": "",
+						"halign": "center",
+						"align": "left",
+						"width": "10%",
+						"checkbox": true
+					}
+				]
+			]
+		},
+		"customerCheckout": {
+			"hbusGetPath": [
+				"hbus://mdm/InternetGatewayDevice.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.Codec.List.{i}."
+			],
+			"msgType": 211,
+			"userTagData": 1,
+			"checkout": "voipCodecH248Checkout"
+		},
+		"customerCheckin": {
+			"hbusPostPath": "hbus://mdm/InternetGatewayDevice.Services.VoiceService.1.VoiceProfile.1.Line.1.Codec.List.1.",
+			"msgType": 215,
+			"otherCheckin": "voipCodecH248Checkin"
+		}
+	},
+	"HGST_CORE_DUMP": {
+		"style": {
+			"width": "100%",
+			"border": "none"
+		},
+		"cssClass": {
+			"addClass": "lines-no"
+		},
+		"profile": {
+			"edit": {
+				"editAllRows": false
+			},
+			"combobox": {
+				"readonly": true
+			},
+			"getChanges": true
+		},
+		"easyui": {
+			"rownumbers": true,
+			"iconCls": "icon-table",
+			"fitColumns": false,
+			"singleSelect": false,
+			"onClickRow": "coredumpClickRow",
+			"onCheck": "coredumpCheckRow",
+			"toolbar": [
+				{
+					"text": "下载",
+					"iconCls": "icon-download",
+					"handler": "coredumpDownload"
+				},
+				{
+					"text": "删除",
+					"iconCls": "icon-remove",
+					"handler": "coredumpDelete"
+				},
+				{
+					"text": "刷新",
+					"iconCls": "icon-reload",
+					"handler": "coredumpUpdate"
+				}
+			],
+			"fit": false,
+			"frozenColumns": [
+				[
+					{
+						"field": "selected",
+						"title": "",
+						"halign": "center",
+						"align": "left",
+						"width": "10%",
+						"checkbox": true
+					}
+				]
+			],
+			"columns": [
+				[
+					{
+						"field": "filename",
+						"title": "文件名称",
+						"halign": "center",
+						"align": "left",
+						"width": "60%",
+						"editor": {
+							"type": "textbox"
+						}
+					},
+					{
+						"field": "date",
+						"title": "日期",
+						"halign": "center",
+						"align": "left",
+						"width": "20%",
+						"editor": {
+							"type": "textbox"
+						}
+					},
+					{
+						"field": "size",
+						"title": "大小",
+						"halign": "center",
+						"align": "right",
+						"width": "15%",
+						"editor": {
+							"type": "textbox"
+						}
+					}
+				]
+			]
+		},
+		"customerCheckout": {
+			"url": "/coredump?action=listfiles",
+			"checkout": "coredumpCheckout"
+		}
+	},
+	"HGST_CONFIG_FILES": {
+		"style": {
+			"width": "100%",
+			"border": "none"
+		},
+		"cssClass": {
+			"addClass": "lines-no"
+		},
+		"profile": {
+			"edit": {
+				"editAllRows": false
+			},
+			"combobox": {
+				"readonly": true
+			},
+			"getChanges": true
+		},
+		"easyui": {
+			"rownumbers": true,
+			"iconCls": "icon-table",
+			"fitColumns": false,
+			"singleSelect": false,
+			"onClickRow": "cfgFilesClickRow",
+			"onCheck": "cfgFilesCheckRow",
+			"toolbar": [
+				{
+					"text": "下载",
+					"iconCls": "icon-download",
+					"handler": "cfgFilesDownload"
+				},
+				{
+					"text": "删除",
+					"iconCls": "icon-remove",
+					"handler": "cfgFilesDelete"
+				},
+				{
+					"text": "刷新",
+					"iconCls": "icon-reload",
+					"handler": "cfgFilesUpdate"
+				}
+			],
+			"fit": false,
+			"frozenColumns": [
+				[
+					{
+						"field": "selected",
+						"title": "",
+						"halign": "center",
+						"align": "left",
+						"width": "10%",
+						"checkbox": true
+					}
+				]
+			],
+			"columns": [
+				[
+					{
+						"field": "filename",
+						"title": "文件名称",
+						"halign": "center",
+						"align": "left",
+						"width": "60%",
+						"editor": {
+							"type": "textbox"
+						}
+					},
+					{
+						"field": "date",
+						"title": "日期",
+						"halign": "center",
+						"align": "left",
+						"width": "20%",
+						"editor": {
+							"type": "textbox"
+						}
+					},
+					{
+						"field": "size",
+						"title": "大小",
+						"halign": "center",
+						"align": "right",
+						"width": "15%",
+						"editor": {
+							"type": "textbox"
+						}
+					}
+				]
+			]
+		},
+		"customerCheckout": {
+			"url": "/cfgFiles?action=listfiles",
+			"msgType": 220,
+			"checkout": "coredumpCheckout"
+		}
+	},
+	"HGST_OSGI_INFO": {
+		"style": {
+			"width": "100%",
+			"border": "none"
+		},
+		"cssClass": {
+			"addClass": "lines-no"
+		},
+		"easyui": {
+			"rownumbers": false,
+			"iconCls": "icon-table",
+			"fitColumns": false,
+			"singleSelect": true,
+			"onLoadSuccess": "osgiLoadSuccess",
+			"toolbar": [
+				{
+					"text": "刷新",
+					"iconCls": "icon-reload",
+					"handler": "osgiInfoUpdate"
+				}
+			],
+			"fit": false,
+			"columns": [
+				[
+					{
+						"field": "Name",
+						"title": "插件名称",
+						"halign": "center",
+						"align": "center",
+						"width": "60%"
+					},
+					{
+						"field": "Version",
+						"title": "版本",
+						"halign": "center",
+						"align": "center",
+						"width": "15%"
+					},
+					{
+						"field": "Status",
+						"title": "状态",
+						"halign": "center",
+						"align": "center",
+						"width": "10%"
+					},
+					{
+						"field": "on",
+						"title": "开启",
+						"halign": "center",
+						"align": "center",
+						"width": "15%",
+						"formatter": "showFormat"
+					}
+				]
+			]
+		},
+		"customerCheckout": {
+			"url": "/getObjs",
+			"msgType": 220,
+			"checkout": "osgiInfoCheckout",
+			"waitTimeoutMs": 5000,
+			"postPaths": [
+				"InternetGatewayDevice.SoftwareModules.ExecutionUnit.{i}."
+			]
+		}
+	},
+	"HGST_LOG_SWITCH": {
+		"style": {
+			"width": "100%",
+			"border": "none"
+		},
+		"cssClass": {
+			"addClass": "lines-no"
+		},
+		"easyui": {
+			"rownumbers": false,
+			"iconCls": "icon-table",
+			"fitColumns": false,
+			"singleSelect": false,
+			"toolbar": "#toolbar",
+			"fit": false,
+			"columns": [
+				[
+					{
+						"field": "key",
+						"title": "名称",
+						"halign": "center",
+						"align": "left",
+						"width": "30%"
+					},
+					{
+						"field": "value",
+						"title": "值",
+						"halign": "left",
+						"align": "center",
+						"width": "20%",
+						"checkbox": true
+					},
+					{
+						"field": "comments",
+						"title": "备注",
+						"halign": "center",
+						"align": "left",
+						"width": "50%"
+					}
+				]
+			]
+		},
+		"keyData": {
+			"EnableSysLog": {
+				"comments": "使能系统日志"
+			},
+			"EnableSysLogConsolePrint": {
+				"comments": "*使能系统日志串口打印"
+			},
+			"EnableWanLog": {
+				"comments": "使能WAN连接日志"
+			},
+			"EnableWanLogConsolePrint": {
+				"comments": "*使能WAN连接日志串口打印"
+			},
+			"EnablePluginLog": {
+				"comments": "使能插件日志"
+			},
+			"EnablePluginConsolePrint": {
+				"comments": "*使能插件日志串口打印"
+			},
+			"EnableMiscLog": {
+				"comments": "使能杂项日志"
+			},
+			"EnableMiscConsolePrint": {
+				"comments": "*使能杂项日志串口打印"
+			},
+			"EnableWifiLog": {
+				"comments": "使能WIFI日志"
+			},
+			"EnableWifiConsolePrint": {
+				"comments": "*使能WIFI日志串口打印"
+			},
+			"EnableOmciLog": {
+				"comments": "使能OMCI日志"
+			},
+			"EnableOmciConsolePrint": {
+				"comments": "*使能OMCI日志串口打印"
+			},
+			"EnableMemoryLog": {
+				"comments": "使能memory日志"
+			},
+			"EnableMemoryConsolePrint": {
+				"comments": "*使能memory日志串口打印"
+			}
+		},
+		"define": {
+			"keyValue": true,
+			"checkRow": true
+		},
+		"customerCheckout": {
+			"url": "/logSwitch?getData"
+		},
+		"customerCheckin": {
+			"url": "/logSwitch"
+		}
+	},
+	"HGST_DBG_DEV_INFO": {
+		"style": {
+			"width": "100%",
+			"border": "none"
+		},
+		"cssClass": {
+			"addClass": "lines-no"
+		},
+		"profile": {
+			"edit": {
+				"editAllRows": true
+			},
+			"getChanges": false
+		},
+		"easyui": {
+			"rownumbers": false,
+			"iconCls": "icon-table",
+			"fitColumns": false,
+			"singleSelect": false,
+			"toolbar": [
+				{
+					"text": "刷新",
+					"iconCls": "icon-reload",
+					"handler": "devInfoUpdate"
+				},
+				{
+					"text": "全部清除",
+					"iconCls": "icon-remove",
+					"handler": "devInfoClear"
+				}
+			],
+			"fit": false,
+			"columns": [
+				[
+					{
+						"field": "key",
+						"title": "名称",
+						"halign": "center",
+						"align": "left",
+						"width": "20%"
+					},
+					{
+						"field": "value",
+						"title": "值",
+						"halign": "left",
+						"align": "center",
+						"width": "40%",
+						"editor": {
+							"type": "textbox"
+						}
+					},
+					{
+						"field": "comments",
+						"title": "备注",
+						"halign": "center",
+						"align": "left",
+						"width": "40%"
+					}
+				]
+			]
+		},
+		"keyData": {
+			"SoftwareVersion": {
+				"comments": "软件版本"
+			},
+			"HardwareVersion": {
+				"comments": "硬件版本"
+			},
+			"ModelName": {
+				"comments": "设备型号"
+			},
+			"Manufacturer": {
+				"comments": "厂商名称"
+			}
+		},
+		"define": {
+			"keyValue": true,
+			"textBox": true
+		},
+		"customerCheckout": {
+			"url": "/debugDevinfo"
+		},
+		"customerCheckin": {
+			"url": "/debugDevinfo?action=set"
+		}
+	},
+	"HGST_REGIONC_CODE": {
+		"style": {
+			"width": "100%",
+			"border": "none"
+		},
+		"cssClass": {
+			"addClass": "lines-no"
+		},
+		"profile": {
+			"edit": {
+				"editAllRows": false
+			},
+			"getChanges": true
+		},
+		"easyui": {
+			"rownumbers": true,
+			"iconCls": "icon-table",
+			"fitColumns": false,
+			"singleSelect": true,
+			"onClickRow": "coredumpClickRow",
+			"onCheck": "coredumpCheckRow",
+			"onLoadSuccess": "regionCodeLoadSuccess",
+			"toolbar": [
+				{
+					"text": "刷新",
+					"iconCls": "icon-reload",
+					"handler": "regionCodeUpdate"
+				}
+			],
+			"fit": false,
+			"frozenColumns": [
+				[
+					{
+						"field": "selected",
+						"title": "",
+						"halign": "center",
+						"align": "left",
+						"width": "10%",
+						"checkbox": true
+					}
+				]
+			],
+			"columns": [
+				[
+					{
+						"field": "regionAbbr",
+						"title": "地区缩写",
+						"halign": "center",
+						"align": "left",
+						"width": "30%",
+						"editor": {
+							"type": "textbox"
+						}
+					},
+					{
+						"field": "regionFullName",
+						"title": "地区全称",
+						"halign": "center",
+						"align": "left",
+						"width": "40%",
+						"editor": {
+							"type": "textbox"
+						}
+					},
+					{
+						"field": "regionCode",
+						"title": "地区编码",
+						"halign": "center",
+						"align": "right",
+						"width": "20%",
+						"editor": {
+							"type": "textbox"
+						}
+					}
+				]
+			]
+		},
+		"customerCheckout": {
+			"url": "/regionCode"
+		},
+		"customerCheckin": {
+			"checkin": "regionCodeCheckin"
+		}
+	},
+	"HGST_FACTORY_PARA": {
+		"style": {
+			"width": "100%",
+			"border": "none"
+		},
+		"cssClass": {
+			"addClass": "lines-no"
+		},
+		"profile": {
+			"edit": {
+				"editAllRows": true
+			},
+			"getChanges": false
+		},
+		"easyui": {
+			"rownumbers": false,
+			"iconCls": "icon-table",
+			"fitColumns": false,
+			"singleSelect": false,
+			"toolbar": [
+				{
+					"text": "刷新",
+					"iconCls": "icon-reload",
+					"handler": "factoryParaUpdate"
+				}
+			],
+			"fit": false,
+			"columns": [
+				[
+					{
+						"field": "key",
+						"title": "名称",
+						"halign": "center",
+						"align": "left",
+						"width": "20%"
+					},
+					{
+						"field": "value",
+						"title": "值",
+						"halign": "left",
+						"align": "center",
+						"width": "40%",
+						"editor": {
+							"type": "textbox"
+						}
+					},
+					{
+						"field": "comments",
+						"title": "备注",
+						"halign": "center",
+						"align": "left",
+						"width": "40%"
+					}
+				]
+			]
+		},
+		"keyData": {
+			"mac": {
+				"comments": "MAC地址,格式xx:xx:xx:xx:xx:xx(大小写均可)"
+			},
+			"manufactureroui": {
+				"comments": "厂商OUI,格式xxxxxx,例如00aa22,manufacturerOUI"
+			},
+			"userpassword": {
+				"comments": "用户密码userPassword"
+			},
+			"ssid": {
+				"comments": "SSID"
+			},
+			"ssid2": {
+				"comments": "SSID2"
+			},
+			"sharedkey": {
+				"comments": "SSID的共享密钥sharedKey"
+			},
+			"ponsn": {
+				"comments": "PON SN"
+			},
+			"productiondate": {
+				"comments": "生产日期productionDate"
+			}
+		},
+		"define": {
+			"keyValue": true,
+			"textBox": true
+		},
+		"customerCheckout": {
+			"url": "/factoryPara"
+		},
+		"customerCheckin": {
+			"url": "/factoryPara?action=set"
+		}
+	},
+	"HGST_DEV_CUSTOMER_PARA": {
+		"style": {
+			"width": "100%",
+			"border": "none"
+		},
+		"cssClass": {
+			"addClass": "lines-no"
+		},
+		"profile": {
+			"edit": {
+				"editAllRows": true
+			},
+			"getChanges": false
+		},
+		"easyui": {
+			"rownumbers": false,
+			"iconCls": "icon-table",
+			"fitColumns": false,
+			"singleSelect": false,
+			"toolbar": [
+				{
+					"text": "刷新",
+					"iconCls": "icon-reload",
+					"handler": "devCustomerParaUpdate"
+				}
+			],
+			"fit": false,
+			"columns": [
+				[
+					{
+						"field": "key",
+						"title": "名称",
+						"halign": "center",
+						"align": "left",
+						"width": "20%"
+					},
+					{
+						"field": "value",
+						"title": "值",
+						"halign": "left",
+						"align": "center",
+						"width": "40%",
+						"editor": {
+							"type": "textbox"
+						}
+					},
+					{
+						"field": "comments",
+						"title": "备注",
+						"halign": "center",
+						"align": "left",
+						"width": "40%"
+					}
+				]
+			]
+		},
+		"keyData": {
+			"devId": {
+				"comments": "设备ID,大小写字母和数字均可"
+			}
+		},
+		"define": {
+			"keyValue": true,
+			"textBox": true
+		},
+		"customerCheckout": {
+			"url": "/devCustomerPara"
+		},
+		"customerCheckin": {
+			"url": "/devCustomerPara?action=set"
+		}
+	},
+	"HGST_SELF_CHECK": {
+		"style": {
+			"width": "100%",
+			"border": "none"
+		},
+		"cssClass": {
+			"addClass": "lines-no"
+		},
+		"profile": {
+			"combobox": {
+				"readonly": true
+			},
+			"pagination": "refreshPager"
+		},
+		"easyui": {
+			"rownumbers": true,
+			"iconCls": "icon-table",
+			"fitColumns": false,
+			"pageSize": 200,
+			"pagination": true,
+			"pageList": [
+				10,
+				20,
+				50,
+				100,
+				200
+			],
+			"toolbar": [
+				{
+					"text": "刷新",
+					"iconCls": "icon-reload"
+				}
+			],
+			"columns": [
+				[
+					{
+						"field": "id",
+						"title": "自检ID",
+						"halign": "center",
+						"align": "left",
+						"width": "10%"
+					},
+					{
+						"field": "value",
+						"title": "值",
+						"halign": "center",
+						"align": "center",
+						"width": "10%"
+					},
+					{
+						"field": "comments",
+						"title": "备注",
+						"halign": "center",
+						"align": "left",
+						"width": "50%"
+					},
+					{
+						"field": "macro",
+						"title": "宏定义",
+						"halign": "center",
+						"align": "left",
+						"width": "30%"
+					}
+				]
+			]
+		},
+		"customerCheckout": {
+			"url": "/selfcheckStatus",
+			"checkout": "selfcheckStatusCheckout"
+		}
+	},
+	"HGST_32BIT_STAT": {
+		"style": {
+			"width": "100%",
+			"border": "none"
+		},
+		"profile": {
+			"combobox": {
+				"readonly": true
+			},
+			"pagination": "refreshPager"
+		},
+		"cssClass": {
+			"addClass": "lines-no"
+		},
+		"easyui": {
+			"rownumbers": true,
+			"iconCls": "icon-table",
+			"fitColumns": false,
+			"pageSize": 200,
+			"pagination": true,
+			"pageList": [
+				10,
+				20,
+				50,
+				100,
+				200
+			],
+			"toolbar": [
+				{
+					"text": "刷新",
+					"iconCls": "icon-reload",
+					"handler": "get32bitStat"
+				}
+			],
+			"columns": [
+				[
+					{
+						"field": "id",
+						"title": "ID",
+						"halign": "center",
+						"align": "left",
+						"width": "10%"
+					},
+					{
+						"field": "value",
+						"title": "值",
+						"halign": "center",
+						"align": "center",
+						"width": "10%"
+					},
+					{
+						"field": "comments",
+						"title": "备注",
+						"halign": "center",
+						"align": "left",
+						"width": "50%"
+					},
+					{
+						"field": "macro",
+						"title": "宏定义",
+						"halign": "center",
+						"align": "left",
+						"width": "30%"
+					}
+				]
+			]
+		},
+		"customerCheckout": {
+			"url": "/get32bitStat",
+			"checkout": "Stat32bitCheckout"
+		}
+	},
+	"HGST_64BIT_STAT": {
+		"style": {
+			"width": "100%",
+			"border": "none"
+		},
+		"profile": {
+			"combobox": {
+				"readonly": true
+			},
+			"pagination": "refreshPager"
+		},
+		"cssClass": {
+			"addClass": "lines-no"
+		},
+		"easyui": {
+			"rownumbers": true,
+			"iconCls": "icon-table",
+			"fitColumns": false,
+			"pageSize": 200,
+			"pagination": true,
+			"pageList": [
+				10,
+				20,
+				50,
+				100,
+				200
+			],
+			"toolbar": [
+				{
+					"text": "刷新",
+					"iconCls": "icon-reload",
+					"handler": "get64bitStat"
+				}
+			],
+			"columns": [
+				[
+					{
+						"field": "id",
+						"title": "ID",
+						"halign": "center",
+						"align": "left",
+						"width": "10%"
+					},
+					{
+						"field": "value",
+						"title": "值",
+						"halign": "center",
+						"align": "center",
+						"width": "10%"
+					},
+					{
+						"field": "comments",
+						"title": "备注",
+						"halign": "center",
+						"align": "left",
+						"width": "50%"
+					},
+					{
+						"field": "macro",
+						"title": "宏定义",
+						"halign": "center",
+						"align": "left",
+						"width": "40%"
+					}
+				]
+			]
+		},
+		"customerCheckout": {
+			"url": "/get64bitStat",
+			"checkout": "Stat64bitCheckout"
+		}
+	},
+	"HGST_SHAREMEM_4BYTES": {
+		"style": {
+			"width": "100%",
+			"border": "none"
+		},
+		"profile": {
+			"combobox": {
+				"readonly": true
+			},
+			"pagination": "refreshPager"
+		},
+		"cssClass": {
+			"addClass": "lines-no"
+		},
+		"easyui": {
+			"rownumbers": true,
+			"iconCls": "icon-table",
+			"fitColumns": false,
+			"singleSelect": true,
+			"toolbar": [
+				{
+					"text": "刷新",
+					"iconCls": "icon-reload",
+					"handler": "get4bytesShareMem"
+				}
+			],
+			"fit": false,
+			"pageSize": 200,
+			"pagination": true,
+			"pageList": [
+				10,
+				20,
+				50,
+				100,
+				200
+			],
+			"columns": [
+				[
+					{
+						"field": "id",
+						"title": "ID",
+						"halign": "center",
+						"align": "left",
+						"width": "10%"
+					},
+					{
+						"field": "value",
+						"title": "值",
+						"halign": "center",
+						"align": "center",
+						"width": "10%"
+					},
+					{
+						"field": "comments",
+						"title": "备注",
+						"halign": "center",
+						"align": "left",
+						"width": "50%"
+					},
+					{
+						"field": "macro",
+						"title": "宏定义",
+						"halign": "center",
+						"align": "left",
+						"width": "30%"
+					}
+				]
+			]
+		},
+		"customerCheckout": {
+			"url": "/get32rwData",
+			"checkout": "ShareMem4bytesCheckout",
+			"waitTimeoutMs": 5000
+		}
+	},
+	"HGST_SHAREMEM_8BYTES": {
+		"style": {
+			"width": "100%",
+			"border": "none"
+		},
+		"cssClass": {
+			"addClass": "lines-no"
+		},
+		"profile": {
+			"combobox": {
+				"readonly": true
+			},
+			"pagination": "refreshPager"
+		},
+		"easyui": {
+			"rownumbers": true,
+			"iconCls": "icon-table",
+			"fitColumns": false,
+			"pageSize": 200,
+			"pagination": true,
+			"pageList": [
+				10,
+				20,
+				50,
+				100,
+				200
+			],
+			"toolbar": [
+				{
+					"text": "刷新",
+					"iconCls": "icon-reload",
+					"handler": "get8bytesShareMem"
+				}
+			],
+			"columns": [
+				[
+					{
+						"field": "id",
+						"title": "ID",
+						"halign": "center",
+						"align": "left",
+						"width": "10%"
+					},
+					{
+						"field": "value",
+						"title": "值",
+						"halign": "center",
+						"align": "left",
+						"width": "10%"
+					},
+					{
+						"field": "comments",
+						"title": "备注",
+						"halign": "center",
+						"align": "left",
+						"width": "50%"
+					},
+					{
+						"field": "macro",
+						"title": "宏定义",
+						"halign": "center",
+						"align": "left",
+						"width": "30%"
+					}
+				]
+			]
+		},
+		"customerCheckout": {
+			"url": "/get8bytesRwData",
+			"checkout": "ShareMem8bytesCheckout"
+		}
+	},
+	"HGST_SHAREMEM_16BYTES": {
+		"style": {
+			"width": "100%",
+			"border": "none"
+		},
+		"cssClass": {
+			"addClass": "lines-no"
+		},
+		"profile": {
+			"combobox": {
+				"readonly": true
+			},
+			"pagination": "refreshPager"
+		},
+		"easyui": {
+			"rownumbers": true,
+			"iconCls": "icon-table",
+			"fitColumns": false,
+			"pageSize": 200,
+			"pagination": true,
+			"pageList": [
+				10,
+				20,
+				50,
+				100,
+				200
+			],
+			"toolbar": [
+				{
+					"text": "刷新",
+					"iconCls": "icon-reload",
+					"handler": "get16bytesShareMem"
+				}
+			],
+			"columns": [
+				[
+					{
+						"field": "id",
+						"title": "ID",
+						"halign": "center",
+						"align": "left",
+						"width": "10%"
+					},
+					{
+						"field": "value",
+						"title": "值",
+						"halign": "center",
+						"align": "left",
+						"width": "30%"
+					},
+					{
+						"field": "comments",
+						"title": "备注",
+						"halign": "center",
+						"align": "left",
+						"width": "50%"
+					},
+					{
+						"field": "macro",
+						"title": "宏定义",
+						"halign": "center",
+						"align": "left",
+						"width": "30%"
+					}
+				]
+			]
+		},
+		"customerCheckout": {
+			"url": "/get16bytesRwData",
+			"checkout": "ShareMem16bytesCheckout"
+		}
+	},
+	"HGST_SHAREMEM_64BYTES": {
+		"style": {
+			"width": "100%",
+			"border": "none"
+		},
+		"cssClass": {
+			"addClass": "lines-no"
+		},
+		"profile": {
+			"combobox": {
+				"readonly": true
+			},
+			"pagination": "refreshPager"
+		},
+		"easyui": {
+			"rownumbers": true,
+			"iconCls": "icon-table",
+			"fitColumns": false,
+			"pageSize": 200,
+			"pagination": true,
+			"pageList": [
+				10,
+				20,
+				50,
+				100,
+				200
+			],
+			"toolbar": [
+				{
+					"text": "刷新",
+					"iconCls": "icon-reload",
+					"handler": "get64bytesShareMem"
+				}
+			],
+			"columns": [
+				[
+					{
+						"field": "id",
+						"title": "ID",
+						"halign": "center",
+						"align": "left",
+						"width": "10%"
+					},
+					{
+						"field": "value",
+						"title": "值",
+						"halign": "center",
+						"align": "left",
+						"width": "30%"
+					},
+					{
+						"field": "comments",
+						"title": "备注",
+						"halign": "center",
+						"align": "left",
+						"width": "50%"
+					},
+					{
+						"field": "macro",
+						"title": "宏定义",
+						"halign": "center",
+						"align": "left",
+						"width": "30%"
+					}
+				]
+			]
+		},
+		"customerCheckout": {
+			"url": "/get64bytesRwData",
+			"checkout": "ShareMem64bytesCheckout"
+		}
+	}
+}

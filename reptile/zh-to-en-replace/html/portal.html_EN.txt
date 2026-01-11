@@ -1,0 +1,3 @@
+China Mobile
+This terminal is limited to use in China Mobile's designated broadband network. Please switch networks and try again.
+The current network IP address of the device is

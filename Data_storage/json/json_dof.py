@@ -258,10 +258,10 @@ def json_compare(file_1, file_2):
 
 if __name__ == '__main__':
 
-    '''
+    # '''
     # obj字典对象为新增内容
     obj_array = [{"url": 111, "title": "DATEdddd"}]
-    obj = {"url": 111, "title": "DATEdddd"}
+    obj = {"url": 111, "title": "DATE"}
 
     print(type(obj))
     if type(obj) == dict:
@@ -271,13 +271,11 @@ if __name__ == '__main__':
 
 
     j = json_Dof("labels.json")
-    j.add(obj)
-    obj = {"url": 111, "title": "DATE"}
     j.add(obj_array)
-    # L = j.find("url")
-    # J = j.find("title")
-    # print(L)
-    # print(J)
+    L = j.find("url")
+    J = j.find("title")
+    print('L', L)
+    print('J', J)
     
     
     j = json_Dof("main.json")
@@ -291,7 +289,7 @@ if __name__ == '__main__':
         elif isinstance(i, list):
             for lists in i:
                 print(lists)
-    '''
+    # '''
 
     # old = json_Dof(r'wand_test_record20230302115642.json')
     # new = json_Dof(r'wand_test_record20230302115825.json')
@@ -325,7 +323,7 @@ if __name__ == '__main__':
 
     '''
 
-    json_compare(r'wand_test_record20230511145934.json', r'wand_test_record20230511150155.json')
+    # json_compare(r'wand_test_record20230511145934.json', r'wand_test_record20230511150155.json')
 
 
 

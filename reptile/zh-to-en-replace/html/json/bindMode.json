@@ -1,0 +1,4 @@
+[
+	{"mode":"0","modeText":"端口绑定"},
+	{"mode":"1","modeText":"VLAN绑定"}
+]

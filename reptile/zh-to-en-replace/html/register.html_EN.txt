@@ -1,0 +1,22 @@
+China Mobile
+China Mobile
+Gateway Name:
+All-optical networking terminal
+Gateway Model:
+Welcome!
+Return to login page
+Terminal registration
+Please plug in the optical fiber and confirm that the optical signal light is off.
+Enter the "
+”, click “OK” to register.
+Do not cut off the power or unplug the optical fiber during the registration and service delivery process (within 10 minutes).
+This registration function is only used for the authentication and service delivery of new devices. Please do not re-register devices that are already in normal use.
+password
+Currently entered
+password
+Sure
+Reset
+Registering OLT
+Error!
+return
+return

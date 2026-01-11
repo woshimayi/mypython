@@ -1,0 +1,37 @@
+Start upgrading the version!
+Error in upgrading version!
+Error in upgrading version!
+Error in upgrading version!
+The upgrade device process is not responding!
+Uploading version file!
+Invalid update file!
+Upgrade file verification successful!
+Writing to Flash!
+Writing to flash failed!
+Writing to flash successfully!
+Restarting!
+Upload version file successfully!
+The device is ready to receive uploaded version files!
+Start uploading files!
+Error uploading file! Error code:
+, Error description:
+ Upload file successfully!
+Start uploading files!
+Error uploading file! Error code:
+, Error description:
+ Upload file successfully!
+Restoring the configuration file will cause the system to restart. Are you sure you want to restore it?
+Start uploading files!
+ Upload file successfully!
+Error in upgrading version!
+Uploading version file!
+Invalid update file!
+Upgrade file verification successful!
+Upload version file successfully!
+No mirror source port is selected!
+[Username] is not allowed to be set to root or user!
+[User new password] length cannot be less than 8 characters!
+[User new password] must contain letters, numbers and special characters, without spaces!
+【Password】length cannot be less than 8 characters!
+[Password] must contain letters, numbers, and special characters, without spaces!
+; // Empty string or null/undefined returns directly

@@ -1,0 +1,14 @@
+{
+    "已连接": "Connected",
+    "未连接": "Not connected",
+    "天": "sky",
+    "小时": "Hour",
+    "分": "point",
+    "秒": "Second",
+    "初始": "initial",
+    "待机": "Standby",
+    "序列号": "Serial Number",
+    "测距": "Distance measurement",
+    "运行": "run",
+    "紧急停止": "Emergency Stop"
+}

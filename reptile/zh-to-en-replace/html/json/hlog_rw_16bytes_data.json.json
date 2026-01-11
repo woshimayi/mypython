@@ -1,0 +1,19 @@
+{
+    "LAN IPv4地址": "LAN IPv4 address",
+    "LAN IPv4地址2": "LAN IPv4 address 2",
+    "LAN IPv4子网掩码": "LAN IPv4 subnet mask",
+    "IPv4掩码": "IPv4 mask",
+    "Tr069 WAN接口名称": "Tr069 WAN interface name",
+    "Voip WAN接口名称": "Voip WAN interface name",
+    "RADVD lease 时间": "RADVD lease time",
+    "INTERNET IPv4地址": "INTERNET IPv4 address",
+    "V4默认WAN接口名称": "V4 default WAN interface name",
+    "V6默认WAN接口名称": "V6 default WAN interface name",
+    "mesh是否使能(0-disable;1-enable)": "Whether mesh is enabled (0-disable; 1-enable)",
+    "mesh角色(2-agent; 3-controller)": "Mesh Role (2-agent; 3-controller)",
+    "NAS ip 地址": "NAS IP address",
+    "NAS mac 地址": "NAS mac address",
+    "子网关br0 获取的ip地址": "Sub-gateway br0 obtains the IP address",
+    "上联接口名称": "Uplink interface name",
+    "外置PHY型号": "External PHY Model"
+}

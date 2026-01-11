@@ -7,6 +7,7 @@
 @time: 2025/04/25 17:06
 @desc: 
 '''
+from file_IO.list_dir_file import find_files_with_suffix
 
 '''
 import re
@@ -92,7 +93,7 @@ if __name__ == "__main__":
 import re
 from bs4 import BeautifulSoup, Comment
 
-def extract_chinese_text(html_content):
+def extract_chinese_text(html_content, file_path):
     """
     从 HTML 字符串中提取包含中文的文本。
 
@@ -124,16 +125,48 @@ def extract_chinese_text(html_content):
             if cleaned_text:  # 确保文本不是空的
                 print(cleaned_text)
                 chinese_text_list.append(cleaned_text)
+
+    if chinese_text_list:
+        try:
+            with open(file_path + "_ZH.txt", 'w', encoding='utf-8') as f:
+                for s in chinese_text_list:
+                    f.write(s + '\n')
+        except Exception as e:
+            print(f"读取文件失败: {e}")
+
     return chinese_text_list
 
 if __name__ == '__main__':
-    # 读取HTML文件
-    with open('index.html', 'r', encoding='utf-8') as f:
-        html_content = f.read()
 
-    # 调用函数提取中文文本
-    result = extract_chinese_text(html_content)
 
-    # 打印结果
+
+    target_dir = r'E:/mypython_new/reptile/zh-to-en-replace/html/'
+    file_suffix = '.html'
+
+    found_files = find_files_with_suffix(target_dir, file_suffix)
+    if found_files:
+        print(f"\n在目录 '{target_dir}' 及其子目录下找到以下后缀为 '{file_suffix}' 的文件:")
+        for file_path in found_files:
+            print(file_path)
+                # 读取HTML文件
+            with open(file_path, 'r', encoding='utf-8') as f:
+                html_content = f.read()
+                # 调用函数提取中文文本
+                result = extract_chinese_text(html_content, file_path)
+
+    else:
+        print(f"\n在目录 '{target_dir}' 及其子目录下没有找到后缀为 '{file_suffix}' 的文件。")
+
+
+
+
+    # # 读取HTML文件
+    # with open('index.html', 'r', encoding='utf-8') as f:
+    #     html_content = f.read()
+    #
+    # # 调用函数提取中文文本
+    # result = extract_chinese_text(html_content, 'index.html')
+    #
+    # # 打印结果
     # for text in result:
     #     print(text)

@@ -1,0 +1,6 @@
+发现有注入脚本性质的非法攻击行为,退出当前登录,请重新登录!
+<h3 class="text-danger">网络已经断开!已经无法连接设备!</h3>
+<h6 class="text-primary">当网络连接恢复时，请手动重新<a href="/" style="color:#f00">刷新</a>页面!</h6>
+<h3 class="text-danger">网络已经断开!已经无法连接设备!</h3>
+用户初始密码
+<option value="INTERNET">上网</option>

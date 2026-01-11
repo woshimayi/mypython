@@ -1,0 +1,285 @@
+					<div class="row">
+						<div class="content_input_title">
+							<span>连接名称</span>
+						</div>
+						<div class="content_input">
+							<input type="text" class="col-3 col-sm-8 paraDisable" id="ipsecName" hgs_key="Name"><span class="rowComments"></span>
+						</div>
+					</div>
+					<div class="row">
+						<div class="content_input_title">
+							<span>启用</span>
+						</div>
+						<div class="content_input">
+							<input type="checkbox" class="paraDisable" id="ipsecEnable" hgs_key="Enable">
+						</div>
+					</div>
+					<div class="row">
+						<div class="content_input_title">
+							<span>组网模式</span>
+						</div>
+						<div class="content_input">
+							<select class="col-6 wanCfgChange paraDisable" id="ipsecIPSecType" hgs_key="IPSecType">
+								<option value="Site-to-Site">Site-to-Site</option>
+								<option value="PC-to-Site">PC-to-Site</option>
+							</select>
+						</div>
+					</div>
+					<div class="row">
+						<div class="content_input_title">
+							<span>对端网关/掩码</span>
+						</div>
+						<div class="content_input">
+							<input type="text" class="col-3 col-sm-8 paraDisable" id="ipsecRemoteSubnet" hgs_key="RemoteSubnet"><span class="rowComments"></span>
+						</div>
+					</div>
+					<div class="row">
+						<div class="content_input_title">
+							<span>本地网关/掩码</span>
+						</div>
+						<div class="content_input">
+							<input type="text" class="col-3 col-sm-8 paraDisable" id="ipsecLocalSubnet" hgs_key="LocalSubnet"><span class="rowComments"></span>
+						</div>
+					</div>
+					<div class="row">
+						<div class="content_input_title">
+							<span>对端IP</span>
+						</div>
+						<div class="content_input">
+							<input type="text" class="col-3 col-sm-8 paraDisable" id="ipsecRemoteIP" hgs_key="RemoteIP"><span class="rowComments"></span>
+						</div>
+					</div>
+					<div class="row">
+						<div class="content_input_title">
+							<span>对端域名</span>
+						</div>
+						<div class="content_input">
+							<input type="text" class="col-3 col-sm-8 paraDisable" id="ipsecRemoteDomain" hgs_key="RemoteDomain"><span class="rowComments"></span>
+						</div>
+					</div>
+					<div class="row">
+						<div class="content_input_title">
+							<span>IKE协商方式</span>
+						</div>
+						<div class="content_input">
+							<select class="col-6 wanCfgChange paraDisable" id="ipsecExchangeMode" hgs_key="ExchangeMode">
+								<option value="Main">Main</option>
+								<option value="Aggressive">Aggressive</option>
+							</select>
+						</div>
+					</div>
+					<div class="row">
+						<div class="content_input_title">
+							<span>IKE验证算法</span>
+						</div>
+						<div class="content_input">
+							<select class="col-6 wanCfgChange paraDisable" id="ipsecIKEAuthenticationAlgorithm" hgs_key="IKEAuthenticationAlgorithm">
+								<option value="MD5">MD5</option>
+								<option value="SHA1">SHA1</option>
+							</select>
+						</div>
+					</div>
+					<div class="row">
+						<div class="content_input_title">
+							<span>IKE验证方法</span>
+						</div>
+						<div class="content_input">
+							<select class="col-6 wanCfgChange paraDisable" id="ipsecIKEAuthenticationMethod" hgs_key="IKEAuthenticationMethod">
+								<option value="PreShareKey">PreShareKey</option>
+								<option value="RsaSignature">RsaSignature</option>
+							</select>
+						</div>
+					</div>
+					<div class="row">
+						<div class="content_input_title">
+							<span>IKE加密算法</span>
+						</div>
+						<div class="content_input">
+							<select class="col-6 wanCfgChange paraDisable" id="ipsecIKEEncryptionAlgorithm" hgs_key="IKEEncryptionAlgorithm">
+								<option value="DES">DES</option>
+								<option value="3DES">3DES</option>
+								<option value="AES128">AES128</option>
+								<option value="AES192">AES192</option>
+								<option value="AES256">AES256</option>
+							</select>
+						</div>
+					</div>
+					<div class="row">
+						<div class="content_input_title">
+							<span>DH组</span>
+						</div>
+						<div class="content_input">
+							<select class="col-6 wanCfgChange paraDisable" id="ipsecIKEDHGroup" hgs_key="IKEDHGroup">
+								<option value="Group1">Group1</option>
+								<option value="Group2">Group2</option>
+								<option value="Group5">Group5</option>
+								<option value="Group14">Group14</option>
+							</select>
+						</div>
+					</div>
+					<div class="row">
+						<div class="content_input_title">
+							<span>IKE身份类型</span>
+						</div>
+						<div class="content_input">
+							<select class="col-6 wanCfgChange paraDisable" id="ipsecIKEIDType" hgs_key="IKEIDType">
+								<option value="IP">IP</option>
+								<option value="Name">Name</option>
+							</select>
+						</div>
+					</div>
+					<div class="row">
+						<div class="content_input_title">
+							<span>IKE本端名称</span>
+						</div>
+						<div class="content_input">
+							<input type="text" class="col-3 col-sm-8 paraDisable" id="ipsecIKELocalName" hgs_key="IKELocalName"><span class="rowComments"></span>
+						</div>
+					</div>
+					<div class="row">
+						<div class="content_input_title">
+							<span>IKE对端名称</span>
+						</div>
+						<div class="content_input">
+							<input type="text" class="col-3 col-sm-8 paraDisable" id="ipsecIKERemoteName" hgs_key="IKERemoteName"><span class="rowComments"></span>
+						</div>
+					</div>
+					<div class="row">
+						<div class="content_input_title">
+							<span>IKE预共享密钥</span>
+						</div>
+						<div class="content_input">
+							<input type="text" class="col-3 col-sm-8 paraDisable" id="ipsecIKEPreshareKey" hgs_key="IKEPreshareKey"><span class="rowComments"></span>
+						</div>
+					</div>
+					<div class="row">
+						<div class="content_input_title">
+							<span>出口</span>
+						</div>
+						<div class="content_input">
+							<select class="col-6 wanCfgChange paraDisable" id="ipsecIPSecOutInterface" hgs_key="IPSecOutInterface">
+								<option value=""></option>
+							</select>
+						</div>
+					</div>
+					<div class="row">
+						<div class="content_input_title">
+							<span>封装模式</span>
+						</div>
+						<div class="content_input">
+							<select class="col-6 wanCfgChange paraDisable" id="ipsecIPSecEncapsulationMode" hgs_key="IPSecEncapsulationMode">
+								<option value="Tunnel">Tunnel</option>
+								<option value="Transport">Transport</option>
+							</select>
+						</div>
+					</div>
+					<div class="row">
+						<div class="content_input_title">
+							<span>安全协议</span>
+						</div>
+						<div class="content_input">
+							<select class="col-6 wanCfgChange paraDisable" id="ipsecIPSecTransform" hgs_key="IPSecTransform">
+								<option value="AH">AH</option>
+								<option value="ESP">ESP</option>
+							</select>
+						</div>
+					</div>
+					<div class="row">
+						<div class="content_input_title">
+							<span>验证算法</span>
+						</div>
+						<div class="content_input">
+							<select class="col-6 wanCfgChange paraDisable" id="ipsecESPAuthenticationAlgorithm" hgs_key="ESPAuthenticationAlgorithm">
+								<option value="None">None</option>
+								<option value="MD5">MD5</option>
+								<option value="SHA1">SHA1</option>
+							</select>
+						</div>
+					</div>
+					<div class="row">
+						<div class="content_input_title">
+							<span>加密算法</span>
+						</div>
+						<div class="content_input">
+							<select class="col-6 wanCfgChange paraDisable" id="ipsecESPEncryptionAlgorithm" hgs_key="ESPEncryptionAlgorithm">
+								<option value="DES">DES</option>
+								<option value="3DES">3DES</option>
+								<option value="AES128">AES128</option>
+								<option value="AES192">AES192</option>
+								<option value="AES256">AES256</option>
+							</select>
+						</div>
+					</div>
+					<div class="row">
+						<div class="content_input_title">
+							<span>DH组</span>
+						</div>
+						<div class="content_input">
+							<select class="col-6 wanCfgChange paraDisable" id="ipsecIPSecPFS" hgs_key="IPSecPFS">
+								<option value="None">None</option>
+								<option value="Group1">Group1</option>
+								<option value="Group2">Group2</option>
+								<option value="Group5">Group5</option>
+								<option value="Group14">Group14</option>
+							</select>
+						</div>
+					</div>
+					<div class="row">
+						<div class="content_input_title">
+							<span>SA生命周期</span>
+						</div>
+						<div class="content_input">
+							<input type="text" class="col-3 col-sm-2 paraDisable" id="ipsecIKESAPeriod" hgs_key="IKESAPeriod"><span class="rowComments">有效范围1200-86400</span>
+						</div>
+					</div>
+					<div class="row">
+						<div class="content_input_title">
+							<span>SA时间生命周期</span>
+						</div>
+						<div class="content_input">
+							<input type="text" class="col-3 col-sm-2 paraDisable" id="ipsecIPSecSATimePeriod" hgs_key="IPSecSATimePeriod"><span class="rowComments">有效范围600-86400</span>
+						</div>
+					</div>
+					<div class="row">
+						<div class="content_input_title">
+							<span>SA流量生命周期</span>
+						</div>
+						<div class="content_input">
+							<input type="text" class="col-3 col-sm-2 paraDisable" id="ipsecIPSecSATrafficPeriod" hgs_key="IPSecSATrafficPeriod"><span class="rowComments">有效范围2560-536870912</span>
+						</div>
+					</div>
+					<div class="row">
+						<div class="content_input_title">
+							<span>AH验证算法</span>
+						</div>
+						<div class="content_input">
+							<select class="col-6 wanCfgChange paraDisable" id="ipsecAHAuthenticationAlgorithm" hgs_key="AHAuthenticationAlgorithm">
+								<option value="MD5">MD5</option>
+								<option value="SHA1">SHA1</option>
+							</select>
+						</div>
+					</div>
+					<div class="row">
+						<div class="content_input_title">
+							<span>DPD</span>
+						</div>
+						<div class="content_input">
+							<input type="checkbox" class="paraDisable" id="ipsecDPDEnable" hgs_key="DPDEnable">
+						</div>
+					</div>
+					<div class="row">
+						<div class="content_input_title">
+							<span>DPD空闲时间</span>
+						</div>
+						<div class="content_input">
+							<input type="text" class="col-3 col-sm-2 paraDisable" id="ipsecDPDThreshold" hgs_key="DPDThreshold"><span class="rowComments">有效范围10-3600</span>
+						</div>
+					</div>
+					<div class="row">
+						<div class="content_input_title">
+							<span>尝试间隔</span>
+						</div>
+						<div class="content_input">
+							<input type="text" class="col-3 col-sm-2 paraDisable" id="ipsecDPDRetry" hgs_key="DPDRetry"><span class="rowComments">有效范围2-10</span>
+						</div>
+					</div>

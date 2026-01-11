@@ -1,0 +1,1071 @@
+China Mobile
+Gateway Name:
+All-optical networking terminal
+Gateway Model:
+Welcome!
+quit
+state
+state
+network
+Safety
+application
+manage
+diagnosis
+help
+Device Information
+Network side information
+User side information
+Broadband Voice Information
+Remote management status
+Plugin configuration delivery status
+Device Information
+Network access permission
+Device Information
+Operators
+Device Model
+Equipment identification number
+Software Version
+Hardware version
+Manufacturing information
+Gateway MAC address
+Device Type
+Device port capability information
+Network access permission
+Network access license code
+IPv4 connection information
+IPv6 connection information
+PON link connection information
+IPv4 connection information
+IPv6 connection information
+PON link connection information
+PON Status
+FEC Capability
+FEC Status
+Transmitted optical power
+Received optical power
+Optical module supply voltage
+Optical module bias current
+Optical module operating temperature
+Device side information
+LAN interface information
+Downstream device information
+Downlink device information (IPv6)
+WLAN interface information
+USB interface information
+Downlink optical port information
+Mesh topology diagram
+Device side information
+Device IP address
+LAN interface information
+MAC Address:
+Downstream device information
+IPv6 device information
+A device may have multiple IPv6 addresses, each with a different purpose.
+WLAN interface information
+USB interface information
+Downlink optical port information
+Operating voltage
+Working current
+Operating temperature
+Transmit power
+Receive power
+Mesh topology diagram
+Broadband Voice Information
+Business registration status
+telephone number
+Registration Status
+error message
+Interaction establishment
+Service configuration delivery status
+Actively report status and accept the display of connection status on the provincial digital home management platform
+Inform reporting status
+Accept RMS connection request status
+Service configuration delivery status
+Service configuration delivery status
+Plugin configuration delivery status
+Plugin configuration delivery status
+Broadband settings
+Binding Configuration
+LAN side address configuration
+Remote Management
+Time Management
+Routing Configuration
+Optical routing management
+Broadband settings
+Uplink mode switching
+Network connection
+Connection Name
+Create a new WAN connection
+Enable
+IP protocol version
+Package Type
+Business Type
+Internet Access
+manage
+voice
+other
+Internet + Voice
+Internet access + management
+Management + Voice
+Internet access + management + voice
+IPTV+Voice
+IPTV+ Management
+IPTV+Management+Voice
+Connection Mode
+bridging
+routing
+username
+password
+Dial method
+Manual dialing
+Dial on demand
+Auto dial
+dial
+Interrupt
+Idle timeout
+Valid range: 1-4320
+iptv account
+iptv password
+Enable NPTv6
+Effective range 500-1900
+Enable DHCP on the LAN side
+Enable VLAN
+Multicast VLAN
+-1 or 0 means not enabled
+LAN Port Binding
+Network port 1
+Network port 2
+Network port 3
+Network port 4
+SSID port binding
+Downstream PON port
+ipv4 configuration
+Address acquisition method
+Static IP address
+Subnet Mask
+Default Gateway
+Separate multiple IPs with commas
+ipv6 configuration
+Address acquisition method
+Static IPv6 Address
+The format of static IPv6 address is [ipv6address/len], and the default value of len is 64.
+IPv6 Default Gateway
+Get Prefix
+How to obtain prefix
+Prefix address
+Separate multiple IPs with commas
+Enable DS-Lite
+How to obtain AFTR address
+Automatic acquisition
+Static Configuration
+AFTR Address
+Uplink mode switching
+When LAN is uplinked, LAN1 is used as the uplink port
+Uplink mode
+MESH Networking
+Mesh Configuration
+Enable mesh networking
+2.4G threshold
+(Recommended range: High sensitivity -65~-55 Medium sensitivity -75~-66 Low sensitivity -85~-76)
+5G Threshold
+(Recommended range: High sensitivity -60~-50 Medium sensitivity -70~-61 Low sensitivity -80~-71)
+Binding Configuration
+VLAN Binding
+It takes effect when the binding mode is [VLAN binding]. It is set in the form of "m1/n1, m2/n2", where "m" is the received VLAN and "n" is the mapped target. When a port has multiple configurations, they are separated by commas.
+IPv4 Configuration
+RA Configuration
+DHCPv6 Configuration
+IPV6 prefix configuration
+LAN side address configuration
+IP address
+Subnet Mask
+IPv4 DHCP Configuration
+Enable DHCP
+Address pool start address
+End address of the address pool
+Lease time
+1 minute
+1 hour
+1 day
+1 week
+Enable transparent transmission
+IPv6 RADVD Configuration
+Enable RADVD
+Maximum waiting time
+Minimum waiting time
+M marker
+O mark
+DHCPv6 Configuration
+Lan side IPv6 address
+Enable DHCPv6
+Starting address
+(The last 64 bits are valid)
+End address
+(The last 64 bits are valid)
+How to obtain DNS on the LAN side
+WAN link full path
+Lan side DNS
+Use commas to separate multiple addresses.
+IPv6 prefix configuration
+Prefix Type
+WAN link full path
+Prefix address
+Uplink QoS Configuration
+Classification Configuration
+Classification type configuration
+Business Configuration
+Congestion Management
+Uplink speed limit configuration
+Downlink speed limit configuration
+Uplink QoS Configuration
+If you keep the right frame content empty and submit, the empty template will be enabled.
+Click a business option in the left frame to select and sort by priority, and click a business option in the right frame to cancel.
+Business to be selected
+Prioritization
+high
+Low
+QoS enable switch
+Total upstream bandwidth
+(0 means unlimited bandwidth)
+Priority Mode
+Priority
+Weight
+Enable forced bandwidth
+Enable DSCP flag
+802-1_P Flag Enable Mode
+Not Enabled
+Keep the original flag
+Rewrite flag
+QoS flow classification setting parameters
+QoS flow classification type setting
+Classification rules
+Business Settings
+Congestion Management Settings
+The current congestion management algorithm SP, select Yes/No to open/close the queue
+Congestion Management Settings
+The current congestion management algorithm DWRR, the sum of the weights of the enabled queues must be equal to 100%.
+Ingress rate limit configuration
+Speed ​​Limit Mode
+closure
+User interface based rate limiting
+User-side VLAN rate limit
+Speed ​​limit based on user-side device IP address segment
+Set it in the "m1/n1, m2/n2" format, where "m" is the user interface in the format of LAN1, LAN2, SSID1, SSID2, and so on; "n" is the speed limit value in units of 512Kbps.
+Set the rate based on the interface
+Set it in the "m1/n1,m2/n2" format, where "m" is the VLAN ID, such as 85,3001,untagged; "n" is the speed limit value, the unit is 512Kbps.
+Set the rate based on VLAN
+Set it in the "m1/n1, m2/n2" format, where "m" is the IP address segment. The format requirements are: IPv4 is "x1.x2.x3.x4-y1.y2.y3.y4", IPv6 is "x1:x2:x3::x4-y1:y2:y3::y4"; "n" is the speed limit value, the unit is 512Kbps.
+Set the rate based on IP address
+Ingress rate limit configuration
+Speed ​​Limit Mode
+closure
+User interface based rate limiting
+User-side VLAN rate limit
+Speed ​​limit based on user-side device IP address segment
+Set it in the "m1/n1, m2/n2" format, where "m" is the user interface in the format of LAN1, LAN2, SSID1, SSID2, and so on; "n" is the speed limit value in units of 512Kbps.
+Set the rate based on the interface
+Set it in the "m1/n1,m2/n2" format, where "m" is the VLAN ID, such as 85,3001,untagged; "n" is the speed limit value, the unit is 512Kbps.
+Set the rate based on VLAN
+Set it in the "m1/n1, m2/n2" format, where "m" is the IP address segment. The format requirements are: IPv4 is "x1.x2.x3.x4-y1.y2.y3.y4", IPv6 is "x1:x2:x3::x4-y1:y2:y3::y4"; "n" is the speed limit value, the unit is 512Kbps.
+Set the rate based on IP address
+WiFi Name Password
+WLAN Configuration
+Backup WiFi
+WLAN control
+WLAN Basic Configuration
+WLAN Advanced Configuration
+WLAN backup network configuration
+WLAN guest network configuration
+WLAN sharing configuration
+WPS Settings
+Weak signal limits access
+Wireless relay
+WLAN parameter configuration
+Frequency band
+SSID Enable
+SSID Name
+(Length: 1~32)
+Authentication
+Encryption
+password
+(Length: 1~32)
+Frequency band
+SSID Enable
+SSID Name
+(Length: 1~32)
+Authentication
+Encryption
+password
+(Length: 1~32)
+WLAN control
+Wireless switch
+WLAN parameter configuration
+Enable dual-band integration
+2.4G threshold
+5G Threshold
+Frequency band
+SSID Enable
+SSID Name
+(Length: 1~32)
+Authentication
+Encryption
+password
+(Length: 1~32)
+Working Mode
+Broadcast SSID (not hidden)
+Wireless Channel
+automatic
+Current channel
+Channel bandwidth
+Beacon frame interval (ms)
+DTIM interval (ms)
+Transmit power
+Backup network parameter configuration
+Frequency band
+SSID Enable
+SSID Name
+(Length: 1~32)
+Authentication
+Encryption
+password
+(Length: 1~32)
+Broadcast SSID (not hidden)
+Wireless Channel
+automatic
+Current channel
+Channel bandwidth
+Beacon frame interval (ms)
+DTIM interval (ms)
+Transmit power
+WLAN basic parameter configuration
+Enable dual-band integration
+2.4G threshold
+5G Threshold
+Enable MLO
+Frequency band
+SSID Enable
+SSID Name
+(Length: 1~32)
+Authentication
+Encryption
+password
+(Length: 1~32)
+Basic encryption mode
+WEP encryption
+Basic Authentication Mode
+Key length
+Current Key
+Key 1
+Key 2
+Key 3
+Key 4
+Enable backup network
+Backup Network
+SSID Enable
+Enable Wi-Fi 5 backup network
+SSID Name
+(Length: 1~32)
+Encryption
+encryption
+No encryption
+password
+(Length: 1~32)
+WLAN advanced parameter configuration
+Frequency band
+Working Mode
+Broadcast SSID (not hidden)
+Wireless Channel
+automatic
+Current channel
+Channel bandwidth
+Beacon frame interval (ms)
+DTIM interval (ms)
+Transmit power
+Backup Network
+Enable backup network
+ssid name
+(Length: 1~32)
+password
+(Length: 1~32)
+ssid name
+(Length: 1~32)
+password
+(Length: 1~32)
+Guest Network
+Enable 2.4G guest network
+ssid name
+(Length: 1~32)
+Authentication
+Encryption
+password
+(Length: 1~32)
+Enable 5G guest network
+ssid name
+(Length: 1~32)
+Authentication
+Encryption
+password
+(Length: 1~32)
+Wi-Fi Sharing
+Share custom phone number
+Shared mobile number
+Wi-Fi settings
+WPS switch
+WPS Mode
+Key Mode
+SSID selection
+Wi-Fi settings
+Signal strength enable
+Signal strength threshold
+Wireless relay
+If you use the relay function, please make sure that the wan port has no access and mesh is not enabled.
+Relay Mode
+Open
+closure
+Repeater SSID
+Scanning for WiFi... Estimated time
+Second
+Scanning completed
+Please click on the line of the wireless name you want to relay in the list searched above, and fill in the corresponding wireless password to connect
+Wireless Name
+Wireless password
+Configuring
+Provincial digital home management platform server
+Certification
+Strong elastic ONU registration
+Remote management configuration
+Enable periodic reporting
+Periodic reporting time
+Web server URL
+username
+password
+Connection request username
+Connection request password
+ONU Certification
+Authentication
+Strong elastic ONU registration
+Enable Power Bomb
+Time Management
+Time Server Settings
+Current date and time
+Time Zone
+GMT-12:00 Dateline West
+GMT-11:00 Midway Island
+GMT-10:00 Hawaii
+GMT-09:00 United States (Alaska)
+GMT-08:00 Pacific Time (US and Canada, Tijuana)
+GMT-07:00 Mountain Time (United States and Canada, Arizona)
+GMT-06:00 Central Time (United States and Canada, Monterey)
+GMT-05:00 Eastern Time (US and Canada, Indiana)
+GMT-04:00 Atlantic Time (Calalaska)
+GMT-03:00 Argentina, Greenland
+GMT-02:00 Mid-Atlantic Time, Brazil
+GMT-01:00 Azores
+GMT Greenwich Mean Time (London)
+GMT+01:00 Central European Time, Belgium, Equatorial Guinea
+GMT+02:00 Eastern Time, Belarus, Egypt
+GMT+03:00 Moscow Time
+GMT+04:00 Russia
+GMT+05:00 Islamabad, Pakistan
+GMT+06:00 Yangon, Bhutan
+GMT+07:00 Indonesia, Laos
+GMT+08:00 China Standard Time (Beijing, Hong Kong, Taiwan)
+GMT+09:00 Japan Standard Time (Tokyo)
+GMT+10:00 Australian Eastern Standard Time (Melbourne)
+GMT+11:00 Solomon Islands
+GMT+12:00 Fiji
+GMT+13:00 Nuku'alofa
+Primary server address
+From the server address
+Sync Interval
+Bound WAN connection service type
+Static route configuration
+IPV4 routing table
+IPV6 routing table
+IPV4 Policy Routing
+IPV6 Policy Routing
+IPv4 static routing configuration
+IPv6 static routing configuration
+The IPv6 prefix format is [prefix/len], and [::/0] indicates the default route.
+Click
+here
+Show in new window
+Click
+here
+Show in new window
+Click
+here
+Show in new window
+Click
+here
+Show in new window
+VxLan Settings
+VxLan Configuration List
+Click the [New] button to create a new VxLan instance. Select a row in the table and click the [Delete] button to delete the selected instance. Set or edit parameters for the instance in the currently selected row in the [VxLan Settings] below. To create, delete or modify, you need to click the [Save] button at the bottom to take effect.
+VxLan Settings
+Enable VxLan
+vni parameter (0-16777215)
+Tunnel peer address
+Working Mode
+Layer 2 mode (bridge mode)
+Layer 3 mode (routing mode)
+Address acquisition method
+IP address
+Subnet Mask
+Gateway
+Enable NAT
+Primary DNS Server
+Backup DNS Server
+Enable VLAN
+WAN Connection Name
+LAN Port Binding
+Network port 1
+Network port 2
+Network port 3
+Network port 4
+Note: You can only [Save] when you create or select a row of [VxLan Configuration List]
+Networking
+Multicast Zero-Configuration Deployment
+Upgrading from the device
+Networking
+Networking
+Fiber/LAN/Wi-Fi
+Fiber/LAN
+optical fiber
+Multicast Zero-Configuration Deployment
+Please click the [Select File] button to select the upgrade version file!
+WAN Access Settings
+Firewall
+MAC Filtering
+Port Filtering
+Serial Port
+WAN Access Settings
+WAN Access Settings
+Enable
+model
+blacklist
+Whitelist
+URL filtering address list
+Click the [New] button to create a new URL filtering address. Select a row in the table and click the [Delete] button to delete the selected instance. You can directly select a saved URL filtering address to edit and modify it. [New] or [Modify] requires clicking the [Save] button at the bottom to take effect.
+If it is the default port, you do not need to include the port number, such as port 80 for HTTP and port 443 for HTTPS. Otherwise, you need to include the port number in the URL.
+Security Level
+Attack Protection Settings
+Security level configuration
+Enable Firewall
+Firewall Level
+Low
+middle
+high
+Attack protection configuration
+Anti-DOS attack
+Anti-port scanning
+Anti-IPv6Session Attack
+MAC Filtering
+MAC filtering basic settings
+Enable
+model
+blacklist
+Whitelist
+MAC filter address list
+Click the [New] button to create a new URL filtering address. Select a row in the table and click the [Delete] button to delete the selected instance. You can directly select a saved MAC filtering address to edit and modify it. [New] or [Modify] requires clicking the [Save] button at the bottom to take effect.
+[Protocol] The drop-down box supports multiple selections. You can select or remove multiple protocols at a time.
+The following MAC addresses are all legal input forms:
+001122334455 or 00:11:22:33:44:55 or 00-11-22-33-44-55
+Port Filtering
+Port filtering basic settings
+Filter direction
+WAN to LAN
+LAN to WAN
+Enable
+model
+blacklist
+Whitelist
+Port filter list
+Click the [New] button to create a new instance. Select a row in the table and click the [Delete] button to delete the selected instance. You can directly select a saved instance to edit and modify it. [New] or [Modify] requires clicking the [Save] button at the bottom to take effect.
+Telnet Configuration
+Telnet Configuration
+Enable telnet
+Enable WAN side
+username
+password
+Serial port configuration
+Serial port configuration
+Enable Serial Port
+username
+password
+DDNS Configuration
+Advanced NAT Configuration
+Broadband Phone Setup
+IGMP Settings
+Home Storage
+UPnP Configuration
+Universal broadband service
+DDNS Configuration
+DDNS Configuration
+Enable DDNS
+Service Providers
+username
+password
+domain name
+WAN Connection Name
+ALG Configuration
+DMZ Configuration
+Virtual host configuration
+ALG Switch
+DMZ Configuration
+Enable DMZ
+LAN IP address
+Virtual host configuration list
+Click the [New] button to create a new instance. Select a row in the table and click the [Delete] button to delete the selected instance. You can directly select a saved instance to edit and modify it. [New] or [Modify] requires clicking the [Save] button at the bottom to take effect.
+Protocol Settings
+Basic Settings
+Basic call controls
+Advanced Settings
+Supplementary service settings
+Voice QoS
+Digital graph settings
+Basic settings (H248)
+Advanced Settings (H248)
+Supplementary service settings (H248)
+Dial Settings (H248)
+Fax Setup
+Protocol Settings
+Voice Protocol
+Soft Switch
+Basic Settings
+Primary Server
+Primary SIP registration server address
+Primary SIP registration server port
+Primary proxy server address
+Primary proxy server port
+Primary outbound proxy server address
+Primary outbound proxy server port
+Alternative server (optional, leave blank if none)
+Backup SIP registrar server address
+Alternate SIP registrar server port
+Alternative proxy server address
+Alternate proxy server port
+Alternative outbound proxy server address
+Alternative outbound proxy server port
+User Enablement
+User phone number
+Authentication Username
+Authentication password
+Basic call controls
+Off-hook time without dialing
+Second
+Short timer time
+Second
+Long timer time
+Second
+Reminder time
+Second
+Busy Tone Time
+Second
+Long call time
+Second
+Advanced Settings
+Secondary dialing mode
+Registration timeout
+Registration failed re-registration time
+Session update period
+Enable PRACK
+Power on logout function
+Subscription switch
+Heartbeat switch
+Heartbeat cycle
+Time Synchronization
+Out of sync
+synchronous
+automatic
+Caller ID
+Not Enabled
+How to obtain the incoming number
+Get it from PAI first
+Prioritize fetching from FROM
+Media consultation method
+Remote Negotiation
+Local negotiation
+Minimum flash time
+The longest time of flashing hook
+DSP receiving gain value
+DSP send gain value
+Echo Suppression
+Silence detection
+Supplementary service settings
+Polarity Reversal
+Hotline activation
+Hotline delay
+Hotline Number
+Call Waiting
+Call Hold
+Three-way calling
+Voice QoS
+Signal DSCP tag
+Signal 802.1P tag
+DSCP tag of media
+802.1P tag for media
+Digital graph settings
+Enable Digitmap
+Digital graph
+Send the trailing "#" when dialing immediately
+Basic Settings
+H.248 Server
+MGC port number
+Primary server address or domain name
+Active server port
+Alternative IP address or domain name
+Alternate Server Port
+Terminal identification type
+domain name
+Device Name
+Terminal identification
+H.248 protocol encoding type
+Physical endpoint configuration method
+Wildcard
+Configure one by one
+Terminal physical endpoint identifier prefix
+Terminal physical endpoint start value
+Physical endpoint extension length
+RTP Termination Point Identifier Prefix
+RTP endpoint identifier starting value
+Temporary endpoint extension length
+Advanced Settings
+Secondary dialing mode
+Minimum local RTP port
+Maximum local RTP port value
+Minimum flash time
+The longest time of flashing hook
+Silence detection
+DSP receiving gain value
+DSP send gain value
+Echo Suppression
+Supplementary service settings
+Heartbeat
+closure
+Notify Command
+Heartbeat cycle
+Heart rate
+Caller ID
+Not Enabled
+Dial Settings
+Off-hook time without dialing
+(0-20) seconds
+Short timer time
+(0-10) seconds
+Long timer time
+(0-15) seconds
+Reminder time
+Second
+Busy Tone Time
+Second
+Long call time
+Second
+Fax Setup
+Enable Fax
+Fax Mode
+T.30 Fax
+T.38 Fax
+T.30 fax negotiation mode
+Full control
+Self-negotiation
+IGMP Settings
+IGMP Settings
+MLD Settings
+FTP Server Settings
+Enable FTP
+Login Username
+Login Password
+port
+SAMBA Server Setup
+Enable SAMBA
+Anonymous access
+Login Username
+Login Password
+UPnP Configuration
+UPnP Configuration
+Enable UPnP
+Preconfiguration Information
+Device Information
+Geographic location information
+Interface Information
+Speed ​​test execution results
+Traceroute test execution results
+Preconfiguration Information
+parameter
+Preconfigured Values
+Management platform primary domain name
+Management platform backup primary domain name
+Report path (primary)
+Reporting path (alternative)
+Default reporting period (min)
+Default task execution period (h)
+Primary speed measurement path prefix
+Alternative speed measurement path prefix
+Tracerotue speed test domain name
+Management platform time service
+Device Information
+Operators
+Equipment Manufacturer
+Device Model
+Software version number
+Device serial number
+WAN port address
+Device Address
+Device Type
+D1 version number
+Current time
+Registration ID
+Geographic location information
+How to obtain geographic information
+Geographic Information Object Status
+longitude
+latitude
+Altitude
+Latitude and longitude error
+Height error
+Administrative village division code
+Position coordinate measurement time
+Measurement result signature
+Interface Information
+Interface Name
+Interface MAC address
+Interface IP address
+Peer IP address of the interface
+Interface MTU value
+Destination IP address
+Gateway Address
+Mask address
+Routing flags
+Routing cost integer value
+Via interface
+Primary DNS
+Alternative DNS
+Speed ​​test execution results
+File download URL
+Destination Address
+Number of download threads
+state
+Traceroute test execution results
+User Management
+Device Management
+Log file management
+User Management
+User password setting
+User Account
+User old password
+User new password
+Confirm new user password
+Device restart
+Restore Configuration
+Upgraded version
+Scheduled restart
+Indicator status management
+Click [Restore Default Configuration] to restore the terminal device configuration to the default configuration and retain key parameters
+Click [Restore Factory Settings] to restore to factory default settings.
+Please click the [Select File] button to select the upgrade version file!
+Set a scheduled reboot
+Enable
+Interval days
+Days (days should be a positive integer)
+time
+Threshold
+Device indicator switch configuration
+Indicator light control
+Open
+closure
+set up
+Log View
+Log Settings
+Enable Logging
+Log Level
+Log View
+Network Diagnostics
+Ping Test
+Tracert test
+Inform manual reporting
+Mirror Configuration
+Ping Test
+WAN Connection Name
+protocol
+IP address or domain name
+Ping test data
+Tracert test
+WAN Connection Name
+protocol
+Maximum hop count (TTL)
+Number of packets per hop
+Timeout (seconds)
+IP address or domain name
+Tracert test data
+Smart gateway reporting
+Report status:
+Mirror WAN/LAN port packets to LAN port
+You can enable WAN side and LAN side mirroring at the same time (check and save to take effect). When mirroring on the LAN side, the source and destination cannot be the same LAN port.
+Mirror source port
+WAN port
+LAN port
+Network port 1
+Network port 2
+Network port 3
+Network port 4
+Downlink
+Mirror destination port
+Destination LAN port
+Network port 1
+Network port 2
+Network port 3
+Network port 4
+other
+Still effective after reboot
+OMCI image configuration
+Mirror destination LAN port
+Not mirrored
+Equipment Diagnosis
+VoIP Diagnostics
+help
+Using Help
+Using Help
+state
+Device Information
+Device Information
+Displays information such as operator, device model, device identification number, hardware version number, software version number, etc.
+Network side information
+IPv4 connection information
+Display the established connection information, including: IP address, connection status, DNS, WAN MAC and other information.
+IPv6 connection information
+Display the established connection information, including: IP address, connection status, DNS, WAN MAC and other information.
+PON link connection information
+Displays information such as GPON status, PON port transmit optical power, PON port receive optical power, optical module supply voltage, optical transmitter bias current, and operating temperature.
+User side information
+LAN interface information
+Display Ethernet interface information, including: port name, status, number of received packets/bytes, number of sent packets/bytes, etc.
+USB interface information
+Displays information about devices connected to the USB port.
+Broadband Voice Information
+Business registration status
+Displays the service status of each VoIP user line.
+Remote management status
+Interaction establishment
+View the interaction establishment status.
+Service configuration delivery status
+Check the service configuration delivery status.
+network
+Broadband settings
+Network connection
+Broadband connection related parameter settings, after the settings are completed, the interface displays general settings information: port binding settings; protocol modes include IPv4, IPv6, IPv4/IPv6; under IPv4 protocol, the modes include routing and bridging, among which routing mode settings include PPPoE (if the ISP uses PPPoE, please select this option, and selecting this operation will dynamically obtain an IP address), DHCP (automatically obtain an IP address from the ISP) and Static (a static IP address is configured by the ISP. The information that needs to be entered includes: IP address, subnet mask, preferred DNS server and backup DNS server, etc. The IP address must be entered in the correct format, and the 4 IP bytes are separated by "." (xxxx). For example: 192.168.0.100), bridge mode setting Bridge (the device can be configured as a bridge device between the LAN and the ISP; it can make the communication between two or more networks as if they are on the same LAN physical connection); under IPv6, IPv4/IPv6 protocol modes include PPP (if the ISP uses PPPoE, please select this option, selecting this operation will dynamically obtain an IP address) and IP (automatically obtain an IP address from the ISP); basic NAT function on and off; VLAN ID and 802.1p priority settings.
+Binding Configuration
+VLAN Binding
+Configure the public multicast VLAN value for the broadband connection.
+LAN side address configuration
+IPv4 Configuration
+Contains configuration of parameters such as whether to enable the DHCP service, the lease period assigned to the device, and the address range.
+RA Configuration
+RA (Router Advertisement) can provide prefix addresses and DNS addresses to access devices on the LAN side, allowing access devices to access the network faster. Enable: Whether to enable RA configuration. Minimum waiting time: The value range should be between 3 and 1350. Maximum waiting time: The value range should be between 4 and 1800. The minimum waiting time is less than the maximum waiting time. Under normal circumstances, the access device on the LAN side will receive the prefix address and DNS address sent by the router advertisement between the maximum waiting time and the minimum waiting time. In addition to the active request of the LAN side device and the active renewal of the RAServer. Select the M field: The access device can obtain the IPv6 prefix through DHCPv6. Select the O field: The access device can obtain DNS address and other information through DHCPv6.
+DHCP Configuration (IPV6)
+1.Configure the IPv6 address of the gateway. 2.IPv6 dynamic address management, IP address: configure the IPv6 address range of the gateway. Start DHCP service: turn on/off the DHCPv6 service function. DNS refresh time: configure the DNS sent to the client.
+IPv6 prefix configuration
+Configure IPv6 prefix type and WAN link full path
+Uplink QoS Configuration
+Based on your configuration of each service priority, the device will automatically generate a template and apply it to meet your needs for each service priority; some basic configurations of QoS can be performed.
+Category settings
+The result of configuring QoS classification rules is used to process the matching forwarding class packets accordingly.
+Category Type Settings
+Used to configure the conditions of QoS classification rules and perform matching operations on forwarding class packets.
+Business Configuration
+Set the queue for local application messages to ensure the required bandwidth service.
+Congestion Management
+Used to configure the parameters of the QoS congestion management queue to perform congestion management on packets.
+Speed ​​limit configuration
+Used to configure the QoS ingress rate limit interface and rate limit value to implement the ingress rate limit of packets.
+Remote Management
+Provincial digital home management platform server
+It is used to set the URL of the RMS server, the username and password for RMS authentication gateway, and the username and password for gateway authentication RMS. It can also configure whether the gateway sends periodic report messages and the report message cycle.
+Certification
+Password authentication is used to configure the password and register with the OLT.
+Time Management
+Time Management
+Display the current time, set time zone, server address, synchronization interval and bound WAN connection service type.
+Routing Configuration
+Static route configuration
+You need to select an interface and then configure the network address and subnet mask.
+Vxlan Configuration
+Vxlan Configuration
+Configuring Vxlan
+Safety
+WAN Access Settings
+WAN Access Settings
+WAN access settings: Use this operation to set the parameters related to the URL filtering function. After the settings are completed, the new URL filtering function status is displayed on the interface.
+Firewall
+Security Level
+Security level: This operation allows you to set the firewall level (IPv4) to "High" or "Low". After the setting is completed, the new firewall status will be displayed on the interface.
+Attack Protection Settings
+Attack protection settings, you can turn on or off anti-attack protection
+MAC Filtering
+MAC Filtering
+MAC address filtering settings: Use this operation to set the parameters related to the MAC address filtering function. After the settings are completed, the new MAC address filtering function status is displayed on the interface.
+Port Filtering
+Port Filtering
+Filter switch: Use this operation to enable or disable the IP address filtering function, including the IP filtering switch from Wan to Lan and from Lan to Wan.
+application
+DDNS Configuration
+DDNS Configuration
+Enable switch, use this operation to start or stop the DDNS function. DDNS setting, use this operation to set DDNS related parameters. After the setting is completed, the new DDNS status is displayed on the interface.
+Advanced NAT Configuration
+ALG Configuration
+ALG setting: Use this operation to turn on or off each ALG switch. After the setting is completed, the new ALG switch status is displayed on the interface.
+DMZ Configuration
+DMZ configuration, DMZ enable switch, use this operation to start or shut down the DMZ function. After the setting is completed, the new DMZ configuration information is displayed on the interface.
+Virtual host configuration
+Virtual host configuration, enable virtual server configuration, and configure the relevant information of the WAN host and virtual host. After the configuration is completed, the WAN host can access the virtual host by accessing the WAN connection (IP address of the WAN connection: WAN port).
+Broadband Phone Setup
+Basic Settings
+SIP protocol general configuration, mainly including server configuration and function switches, phone number, password, authentication user name, etc.
+Basic call controls
+Voice main timer configuration.
+Advanced Settings
+Mainly includes 1. Secondary dialing mode configuration; 2. Registration, session; 3. Caller ID; 4. DSP transceiver gain value: used to configure the gain of two directions of voice; 5. Echo suppression: used to eliminate echo; 6. Mute suppression.
+Supplementary service configuration
+The configuration related to voice supplementary services mainly includes 1. hotline service configuration items and hotline destination number configuration; 2. reverse polarity switch.
+Digital graph
+Contains digitmap enable switch, digitmap settings
+Fax Setup
+Some voice function settings: 1. T38 enable switch, used to configure whether fax uses T38 transmission mode. 2. T38 a=fax enable switch, used to control whether T38 fax media in SDP carries a=fax field.
+IGMP Settings
+IGMP Settings
+IGMP SNOOPING, bridging mode carries multicast services, both routing connection and bridge connection need to be enabled.
+IGMP PROXY, carrying multicast services in routing connection mode.
+MLD Settings
+MLD snooping, IPv6 bridging mode to carry multicast services, both routing connection and bridge connection need to be enabled.
+MLD proxy, carrying multicast services in IPv6 routing connection mode.
+Home Storage
+FTP server settings (after correct configuration, it can be used as a server); FTP client settings (after correct configuration, it can automatically download files from the specified server address to the storage space of the home gateway to achieve resource sharing).
+UPnP Configuration
+UPnP Configuration
+Enable or disable the UPnP function.
+manage
+User Management
+User Management
+Mobile administrators can force end-user account passwords to change.
+Device Management
+Device restart
+Device restart, use this operation to restart the gateway.
+Restore Configuration
+Restoring the default configuration locally is a local restore; restoring the factory configuration locally is a remote restore.
+Log file management
+set up
+Set the log enable, log level, etc.
+Log View
+View the logs.
+diagnosis
+Network Diagnostics
+Ping Test
+Ping the entered IP or host name.
+Tracert test
+Used to diagnose the network status between this home gateway and the specified IP address or host name.
+Inform manual reporting
+Manually trigger the Inform report.
+help
+Using Help
+Using Help
+Use the help instructions to understand the functions and basic usage of the gateway.

@@ -1,0 +1,10 @@
+[
+    {
+        "mode": "0",
+        "modeText": "Port Binding"
+    },
+    {
+        "mode": "1",
+        "modeText": "VLAN Binding"
+    }
+]

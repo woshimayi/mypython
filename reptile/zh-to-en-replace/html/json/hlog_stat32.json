@@ -1,0 +1,623 @@
+{
+"1":{
+"comments":"写配置文件的次数",
+"macro":"HLOG_STATS_WRITE_MDM_CFG"	
+},
+"2":{
+"comments":"检测在线(下挂)设备的次数",
+"macro":"HLOG_STATS_CHECK_ONLINE_DEV_INFO"	
+},
+"3":{
+"comments":"刷新在线(下挂)设备的信息的次数",
+"macro":"HLOG_STATS_UPDATE_ONLINE_DEV_INFO"	
+},
+"4":{
+"comments":"miscd进程获取在线(下挂)设备的信息失败的次数",
+"macro":"HLOG_STATS_FAIL_TO_UPDATE_ONLINE_DEV_INFO"	
+},
+"5":{
+"comments":"hghttpd进程获取下挂设备失败的次数",
+"macro":"HLOG_STATS_FAIL_TO_GET_ONLINE_DEV_INFO"	
+},
+"6":{
+"comments":"启动PPPoE按需拨号的次数",
+"macro":"HLOG_STATS_PPPOE_ONDEMAND_START"	
+},
+"7":{
+"comments":"停止PPPoE按需拨号的次数",
+"macro":"HLOG_STATS_PPPOE_ONDEMAND_STOP"	
+},
+"8":{
+"comments":"触发通知iptables子chain需要更新的次数",
+"macro":"HLOG_STATS_IPTABLES_SUBCHAIN_NEED_CHANGE"	
+},
+"9":{
+"comments":"iptables子chain更新的次数",
+"macro":"HLOG_STATS_IPTABLES_SUBCHAIN_UPDATE"	
+},
+"10":{
+"comments":"iptables子chain因为更新失败需要重新更新的次数",
+"macro":"HLOG_STATS_IPTABLES_SUBCHAIN_UPDATE_AGAIN"	
+},
+"11":{
+"comments":"触发通知ebtables子chain需要更新的次数",
+"macro":"HLOG_STATS_EBTABLES_SUBCHAIN_NEED_CHANGE"	
+},
+"12":{
+"comments":"ebtables子chain更新的次数",
+"macro":"HLOG_STATS_EBTABLES_SUBCHAIN_UPDATE"	
+},
+"25":{
+"comments":"准备MIB提交次数",
+"macro":"HLOG_STATS_MIB_TRY_COMMIT"
+},
+"19":{
+"comments":"MIB提交次数",
+"macro":"HLOG_STATS_MIB_COMMIT"	
+},
+"39":{
+"comments":"启动60s内MIB提交次数",
+"macro":"HLOG_STATS_BOOTING_MIB_COMMIT"
+},
+"13":{
+"comments":"ebtables子chain因为更新失败需要重新更新的次数",
+"macro":"HLOG_STATS_EBTABLES_SUBCHAIN_UPDATE_AGAIN"	
+},
+"14":{
+"comments":"检查进程内存是否超限制的次数",
+"macro":"HLOG_STATS_CHECK_PROCESS_MEM"	
+},
+"15":{
+"comments":"因为内存占用过多重启java进程的次数",
+"macro":"HLOG_STATS_MEM_RESTART_JAVA"	
+},
+"16":{
+"comments":"因为内存占用过多重启hghttpd进程的次数",
+"macro":"HLOG_STATS_MEM_RESTART_HGHTTPD"	
+},
+"17":{
+"comments":"因为内存占用过多重启natived进程的次数",
+"macro":"HLOG_STATS_MEM_RESTART_NATIVED"	
+},
+"18":{
+"comments":"因为内存占用过多重启其他进程的次数",
+"macro":"HLOG_STATS_MEM_RESTART_OTHERS"	
+},
+"44":{
+"comments":"dnsmasq进程无法提供dns proxy服务备hgs重启的次数",
+"macro":"HLOG_STATS_HGS_RESTART_DNSMASQ"	
+},
+"20":{
+"comments":"产生配置文件失败的次数",
+"macro":"HLOG_STATS_GEN_CON_FILE_FAILED"
+},
+"21":{
+"comments":"产生弱光报警的次数",
+"macro":"HLOG_STATS_LOW_RX_PORWER"
+},
+"22":{
+"comments":"默认配置加载等待时间",
+"macro":"HLOG_STATS_DFT_CFG_DELAY"
+},
+"23":{
+"comments":"PON UP/DOWN的次数",
+"macro":"HLOG_STATS_PON_UP_DOWN_EVENT"
+},
+"24":{
+"comments":"PON状态改变的次数",
+"macro":"HLOG_STATS_PON_STATUS_CHANGE"
+},
+"26":{
+"comments":"natived进程XTABLES处理线程启动次数",
+"macro":"HLOG_STATS_START_NATIVED_XTABLES"
+},
+"27":{
+"comments":"samba配置次数",
+"macro":"HLOG_STATS_SMB_CFGED_TIMES"
+},
+"28":{
+"comments":"启动samba次数",
+"macro":"HLOG_STATS_SMB_START_TIMES"
+},
+"29":{
+"comments":"停止samba次数",
+"macro":"HLOG_STATS_SMB_STOP_TIMES"
+},
+"30":{
+"comments":"Internet ppp wan dog 生效次数",
+"macro":"HLOG_STATS_PPP_DOG_START"
+},
+"31":{
+"comments":"Internet ppp wan 海思重启pppd 次数",
+"macro":"HLOG_STATS_PPP_HSAN_RUN"
+},
+"32":{
+"comments":"Interent ppp wan 实际启动次数(包含pppdog 拉起和海思拉起pppd)",
+"macro":"HLOG_STATS_PPPD_RUN"
+},
+"33":{
+"comments":"Interent ppp wan 收到request 心跳包次数",
+"macro":"HLOG_STATS_PPP_RECV_REQUEST"
+},
+"34":{
+"comments":"Interent ppp wan 发送relay 心跳包次数",
+"macro":"HLOG_STATS_PPP_SEND_REPLAY"
+},
+"35":{
+"comments":"Interent ppp wan 发送request 心跳包次数",
+"macro":"HLOG_STATS_PPP_SEND_REQUEST"
+},
+"36":{
+"comments":"Interent ppp wan 收到relay 心跳包次数",
+"macro":"HLOG_STATS_PPP_RECVD_REPLAY"
+},
+"37":{
+"comments":"parse lastgood fail",
+"macro":"HLOG_STATS_PARSE_CONFIG_FAIL"
+},
+"38":{
+"comments":"检查cms进程存在的次数",
+"macro":"HLOG_STATS_CHECK_CMS_PROCESS"
+},
+"43":{
+"comments":"检查cwmp进程存在的次数",
+"macro":"HLOG_STATS_CHECK_CWMP_PROCESS"
+},
+"40":{
+"comments":"parse lastgood ok",
+"macro":"HLOG_STATS_PARSE_CONFIG_OK"
+},
+"41":{
+"comments":"parse backup lastgood fail",
+"macro":"HLOG_STATS_PARSE_BACKUP_CONFIG_FAIL"
+},
+"42":{
+"comments":"backup lastgood recover",
+"macro":"HLOG_STATS_PARSE_BACKUP_CONFIG_RECOVER"
+},
+"45":{
+"comments":"/tmp/dhcp.leases 文件最后的clilent id 是*",
+"macro":"HLOG_STATS_DHCP_LEASE_ERR"	
+},
+"46":{
+"comments":"绑定信息准备更新次数",
+"macro":"HLOG_STATS_PORT_VLAN_BIND_NEED_UPDATE"	
+},
+"47":{
+"comments":"绑定信息实际更新次数",
+"macro":"HLOG_STATS_PORT_VLAN_BIND_REAL_UPDATE"	
+},
+"48":{
+"comments":"绑定信息成功更新次数",
+"macro":"HLOG_STATS_PORT_VLAN_BIND_SUCC_UPDATE"	
+},
+"49":{
+    "comments":"下挂设备上下线事件通知总次数",
+    "macro":"HLOG_STATS_EVENT_NOTIFY_TOTAL"	
+},
+"50":{
+    "comments":"下挂设备上下线事件通知丢弃次数",
+    "macro":"HLOG_STATS_EVENT_NOTIFY_DROPED"	
+},
+"51":{
+    "comments":"下挂设备上下线事件每周期次数",
+    "macro":"HLOG_STATS_EVENT_NOTIFY_PER_PERIOD"	
+},
+"52":{
+    "comments":"telned进程配置改变的次数",
+    "macro":"HLOG_STATS_TELNETD_CFG_CHANGED"	
+},
+"53":{
+    "comments":"telned进程退出的次数",
+    "macro":"HLOG_STATS_TELNETD_PROCESS_CHANGED"	
+},
+"54":{
+    "comments":"检查telnetd进程的次数",
+    "macro":"HLOG_STATS_TELNETD_CHECK"	
+
+},
+"55":{
+    "comments":"重启telnetd进程的次数",
+    "macro":"HLOG_STATS_TELNETD_RESTART"	
+},
+"56":{
+    "comments":"kill掉不再需要的telnetd进程的次数",
+    "macro":"HLOG_STATS_TELNETD_KILL_NOT_USED"	
+},
+"57":{
+    "comments":"启动tr69c进程的次数",
+    "macro":"HLOG_STATS_HGCWMP_RESTART"	
+},
+"58":{
+    "comments":"internet led 操作计数",
+    "macro":"HLOG_STATS_INTERNET_LED"	
+},
+"59":{
+    "comments":"cwmp 上报计数",
+    "macro":"HLOG_STATS_HGCWMP_SENDINFORM"
+},
+"60":{
+    "comments":"dnsmasq收到的Discover报文计数",
+    "macro":"HLOG_STATS_DNSMASQ_DHCP_DISCOVER_COUNTER"
+},
+"61":{
+    "comments":"dnsmasq发出的Offer报文计数",
+    "macro":"HLOG_STATS_DNSMASQ_DHCP_OFFER_COUNTER"
+},
+"62":{
+    "comments":"dnsmasq收到的Request报文计数",
+    "macro":"HLOG_STATS_DNSMASQ_DHCP_REQUEST_COUNTER"
+},
+"63":{
+    "comments":"dnsmasq发出的ACK报文计数",
+    "macro":"HLOG_STATS_DNSMASQ_DHCP_ACK_COUNTER"
+},
+"64":{
+    "comments":"dnsmasq发出的NAK报文计数",
+    "macro":"HLOG_STATS_DNSMASQ_DHCP_NAK_COUNTER"
+},
+"65":{
+    "comments":"mdmd topo rx",
+    "macro":"HLOG_STATS_MDMD_TOPO_RX"
+},
+"66":{
+    "comments":"mdmd topo rx error",
+    "macro":"HLOG_STATS_MDMD_TOPO_RX_ERROR"
+},
+"67":{
+    "comments":"mdmd topo rx binary",
+    "macro":"HLOG_STATS_MDMD_TOPO_RX_BIN"
+},
+"68":{
+    "comments":"mdmd topo rx json",
+    "macro":"HLOG_STATS_MDMD_TOPO_RX_JSON"
+},
+"69":{
+    "comments":"mdmd topo tx",
+    "macro":"HLOG_STATS_MDMD_TOPO_TX"
+},
+"70":{
+    "comments":"mdmd topo tx error",
+    "macro":"HLOG_STATS_MDMD_TOPO_TX_ERROR"
+},
+"71":{
+    "comments":"mdmd topo check",
+    "macro":"HLOG_STATS_MDMD_TOPO_CHECK"
+},
+"72":{
+    "comments":"mdmd topo generate json file",
+    "macro":"HLOG_STATS_MDMD_TOPO_GEN_JSON"
+},
+"73":{
+    "comments":"mdmd topo update sub device interface info",
+    "macro":"HLOG_STATS_MDMD_TOPO_UPDATE_SUB_IF_INFO"
+},
+"74":{
+    "comments":"mdmd topo bad online data",
+    "macro":"HLOG_STATS_MDMD_TOPO_BAD_ONLINE_DATA"
+},
+"75":{
+    "comments":"mdmd topo get online devs",
+    "macro":"HLOG_STATS_MDMD_TOPO_GET_ONLINE_DEVS"
+},
+"76":{
+    "comments":"mdmd topo get host info",
+    "macro":"HLOG_STATS_MDMD_TOPO_GET_HOST_INFO"
+},
+"77":{
+    "comments":"mdmd topo generate agent info",
+    "macro":"HLOG_STATS_MDMD_TOPO_GEN_AGNET_INFO"
+},
+"78":{
+    "comments":"mdmd topo generate agent online devices",
+    "macro":"HLOG_STATS_MDMD_TOPO_GEN_AGNET_DEVS"
+},
+"79":{
+    "comments":"mdmd topo session id",
+    "macro":"HLOG_STATS_MDMD_TOPO_AGNET_DEVS_SESSION_ID"
+},
+"80":{
+    "comments":"mdmd topo分片包次数",
+    "macro":"HLOG_STATS_MDMD_TOPO_AGNET_DEVS_FRAGMENT"
+},
+"81":{
+    "comments":"mdmd topo分片包总数",
+    "macro":"HLOG_STATS_MDMD_TOPO_AGNET_DEVS_FRAG_TOTAL"
+},
+"82":{
+    "comments":"mdmd topo子网关准备同步主网关的基础信息",
+    "macro":"HLOG_STATS_MDMD_TOPO_READY_SYN_MAIN_DEV"
+},
+"83":{
+    "comments":"mdmd topo子网关完成同步主网关的基础信息",
+    "macro":"HLOG_STATS_MDMD_TOPO_FIN_SYN_SYN_MAIN_DEV"
+},
+"84":{
+    "comments":"mdmd topo子网关准备同步主网关的所有AGENT信息",
+    "macro":"HLOG_STATS_MDMD_TOPO_READY_SYN_ALL_AGENTS"
+},
+"85":{
+    "comments":"mdmd topo子网关完成同步主网关的所有AGENT信息",
+    "macro":"HLOG_STATS_MDMD_TOPO_SUCCESS_SYN_SYN_ALL_AGENTS"
+},
+"86":{
+    "comments":"mdmd topo子网关开始上传下挂设备的详细信息",
+    "macro":"HLOG_STATS_MDMD_TOPO_UPLOAD_ONLINE_DEV_DETAIL_INFO"
+},
+"87":{
+    "comments":"mdmd topo子网关开始上传下挂设备的详细信息",
+    "macro":"HLOG_STATS_MDMD_TOPO_SUCESS_UPLOAD_ONLINE_DEV_DETAIL_INFO"
+},
+"88":{
+    "comments":"mdmd topo发送get mdm msge",
+    "macro":"HLOG_STATS_MDMD_TOPO_SEND_GET_MDM_MSG"
+},
+"89":{
+    "comments":"mdmd topo接收get mdm msge",
+    "macro":"HLOG_STATS_MDMD_TOPO_RECV_GET_MDM_MSG"
+},
+"90":{
+    "comments":"mdmd topo更新主网关接口信息",
+    "macro":"HLOG_STATS_MDMD_TOPO_UPDATE_MAIN_IFINDEX"
+},
+"91":{
+    "comments":"mdmd topo workaroud增加PON接口字段",
+    "macro":"HLOG_STATS_MDMD_TOPO_WORKAROUND_FOR_PON_IF"
+},
+"92":{
+    "comments":"mdmd topo子网关收到主网关需要同步接口信息的请求",
+    "macro":"HLOG_STATS_MDMD_TOPO_RX_NEED_SYN_IF"
+},
+"101":{
+    "comments":"hghttpd获取拓扑图的次数",
+    "macro":"HLOG_STATS_HGHTTPD_TOPO_GET"
+},
+"102":{
+    "comments":"hghttpd获取拓扑图的文件读写冲突",
+    "macro":"HLOG_STATS_HGHTTPD_TOPO_FILE_COLLISION"
+},
+"103":{
+    "comments":"hghttpd获取了空的拓扑图",
+    "macro":"HLOG_STATS_HGHTTPD_TOPO_GET_EMPTY"
+},
+"104":{
+    "comments":"hghttpd收到上传agent信息",
+    "macro":"HLOG_STATS_HGHTTPD_RECV_UPLOADLOAD_AGENT_INFO"
+},
+"105":{
+    "comments":"hghttpd收到下载agent信息的请求",
+    "macro":"HLOG_STATS_HGHTTPD_HANDLE_DOWNLOAD_AGENT_INFO"
+},
+"106":{
+    "comments":"hghttpd收到下载agent信息的请求打开文件时冲突",
+    "macro":"HLOG_STATS_HGHTTPD_DOWNLOAD_AGENT_INFO_FILE_COLLISION"
+},
+"107":{
+    "comments":"radvd 配置文件变化次数",
+    "macro":"HLOG_STATS_RADVD_CONF_CHANGE"
+},
+"109":{
+    "comments":"wan连接信息手动刷新次数",
+    "macro":"HLOG_STATS_MANUAL_WAN_CONN_UPDATE"
+},
+"110":{
+    "comments":"wan连接信息设置值次数",
+    "macro":"HLOG_STATS_MIB_WAN_CONN_SET_VALUE"
+},
+"111":{
+    "comments":"wan连接信息数目获取次数",
+    "macro":"HLOG_STATS_MIB_WAN_CONN_TOTAL"
+},
+"112":{
+    "comments":"wan连接信息获取次数",
+    "macro":"HLOG_STATS_MIB_WAN_CONN_GET"
+},
+"113":{
+    "comments":"wan连接信息增加次数",
+    "macro":"HLOG_STATS_MIB_WAN_CONN_ADD"
+},
+"114":{
+    "comments":"wan连接信息删除次数",
+    "macro":"HLOG_STATS_MIB_WAN_CONN_DELETE"
+},
+"115":{
+    "comments":"wan连接信息清除次数",
+    "macro":"HLOG_STATS_MIB_WAN_CONN_CLEAR"
+},
+"116":{
+    "comments":"wan连接信息更新次数",
+    "macro":"HLOG_STATS_MIB_WAN_CONN_UPDATE"
+},
+"117":{
+    "comments":"wan连接信息变化次数",
+    "macro":"HLOG_STATS_MIB_WAN_CONN_CHANGE"
+},
+"118":{
+    "comments":"wan信息变化通知次数",
+    "macro":"HLOG_STATS_WAN_NOTIFY"
+},
+"119":{
+    "comments":"natived获取wan连接信息次数",
+    "macro":"HLOG_STATS_NATIVED_WAN_CONN_GET"
+},
+"120":{
+    "comments":"udhcpd配置文件可能发生变化",
+    "macro":"HLOG_STATS_UDHCPD_CFG_MAY_CHANGE"
+},
+"121":{
+    "comments":"udhcpd收到discover包",
+    "macro":"HLOG_STATS_UDHCPD_PKT_DISCOVER"
+},
+"122":{
+    "comments":"udhcpd发出offer包",
+    "macro":"HLOG_STATS_UDHCPD_PKT_OFFER"
+},
+"123":{
+    "comments":"udhcpd收到request包",
+    "macro":"HLOG_STATS_UDHCPD_PKT_REQUEST"
+},
+"124":{
+    "comments":"udhcpd发出ack包",
+    "macro":"HLOG_STATS_UDHCPD_PKT_ACK"
+},
+"125":{
+    "comments":"udhcpd收到decline包",
+    "macro":"HLOG_STATS_UDHCPD_PKT_DECLINE"
+},
+"126":{
+    "comments":"udhcpd收到ack包",
+    "macro":"HLOG_STATS_UDHCPD_PKT_RELEASE"
+},
+"127":{
+    "comments":"udhcpd收到inform包",
+    "macro":"HLOG_STATS_UDHCPD_PKT_INFORM"
+},
+"128":{
+    "comments":"udhcpd收到debug包",
+    "macro":"HLOG_STATS_UDHCPD_PKT_DEBUG"
+},
+"129":{
+    "comments":"udhcpd收到包总数",
+    "macro":"HLOG_STATS_UDHCPD_PKT_TOTAOL"
+},
+"130":{
+    "comments":"udhcpd init",
+    "macro":"HLOG_STATS_UDHCPD_INIT"
+},
+"131":{
+    "comments":"udhcpd重新初始化socket",
+    "macro":"HLOG_STATS_UDHCPD_REINIT_SOCKET"
+},
+"132":{
+    "comments":"udhcpd重新加载配置",
+    "macro":"HLOG_STATS_UDHCPD_RELOAD_CFG"
+},
+"133":{
+    "comments":"udhcpd收到hbus消息",
+    "macro":"HLOG_STATS_UDHCPD_RECV_MSG"
+},
+"134":{
+    "comments":"udhcpd发出NAK包",
+    "macro":"HLOG_STATS_UDHCPD_PKT_NAK"
+},
+"135":{
+    "comments":"udhcpd检查是否需要reload",
+    "macro":"HLOG_STATS_UDHCPD_CHECK_RELOAD_CFG"
+},
+"136":{
+    "comments":"udhcpd需要reload配置",
+    "macro":"HLOG_STATS_UDHCPD_NEED_RELOAD_CFG"
+},
+"137":{
+    "comments":"udhcpd检查子网关旧IP和MAC",
+    "macro":"HLOG_STATS_UDHCPD_CHECK_SUBGW_OLD_IP_MAC"
+},
+"138":{
+    "comments":"udhcpd更新子网关旧IP和MAC",
+    "macro":"HLOG_STATS_UDHCPD_UPDATE_SUBGW_OLD_IP_MAC"
+},
+"139":{
+    "comments":"udhcpd处理普通option60包",
+    "macro":"HLOG_STATS_UDHCPD_OPT60_NORMAL"
+},
+"140":{
+    "comments":"udhcpd通过复杂option60鉴权",
+    "macro":"HLOG_STATS_UDHCPD_OPT60_SPECIAL_PASS"
+},
+"141":{
+    "comments":"udhcpd未通过复杂option60鉴权",
+    "macro":"HLOG_STATS_UDHCPD_OPT60_SPECIAL_FAIL"
+},
+"142":{
+    "comments":"udhcpd通过简单option60鉴权",
+    "macro":"HLOG_STATS_UDHCPD_OPT60_SIMPLE_PASS"
+},
+"143":{
+    "comments":"udhcpd未通过简单option60鉴权",
+    "macro":"HLOG_STATS_UDHCPD_OPT60_SIMPLE_FAIL"
+},
+"150":{
+    "comments":"hgcms set objs",
+    "macro":"HLOG_STATS_HGCMS_SET_OBJS"
+},
+"151":{
+    "comments":"hgcms del objs",
+    "macro":"HLOG_STATS_HGCMS_DEL_OBJS"
+},
+"152":{
+    "comments":"hgcms get objs",
+    "macro":"HLOG_STATS_HGCMS_GET_OBJS"
+},
+"153":{
+    "comments":"hgcms get cache objs",
+    "macro":"HLOG_STATS_HGCMS_GET_CACHE_OBJS"
+},
+"154":{
+    "comments":"hgcms get cache objs",
+    "macro":"HLOG_STATS_HGCMS_UPDATE_WAN_CACHE"
+},
+"155":{
+    "comments":"更新海思MIB记录的下挂设备轮数",
+    "macro":"HLOG_STATS_HI_ONLINE_DEV_UPDATE_LOOP"
+},
+"156":{
+    "comments":"更新海思MIB记录的下挂设备总次数",
+    "macro":"HLOG_STATS_HI_ONLINE_DEV_UPDATE_CNT"
+},
+"157":{
+    "comments":"MIB下挂设备文件读写冲突次数",
+    "macro":"HLOG_STATS_HI_ONLINE_DEV_RW_COLLISION"
+},
+"158":{
+    "comments":"cached循环次数",
+    "macro":"HLOG_STATS_CACHED_LOOP"
+},
+"159":{
+    "comments":"cached刷新下挂设备次数",
+    "macro":"HLOG_STATS_CACHED_UPDATE_ONLINE_DEV_MDM"
+},
+"160":{
+    "comments":"cached检查redis中下挂设备信息次数",
+    "macro":"HLOG_STATS_CACHED_CHECK_ONLINE_DEV_REDIS"
+},
+"161":{
+    "comments":"cached更新redis中下挂设备信息次数",
+    "macro":"HLOG_STATS_CACHED_UPDATE_ONLINE_DEV_REDIS"
+},
+"162":{
+    "comments":"cached获取持久redisContext次数",
+    "macro":"HLOG_STATS_CACHED_REDIS_NORMAL_CONNECT"
+},
+"163":{
+    "comments":"cached重新初始化redisContext次数",
+    "macro":"HLOG_STATS_CACHED_REDIS_RE_CONNECT"
+},
+"164":{
+    "comments":"cached获取空的redisContext次数",
+    "macro":"HLOG_STATS_CACHED_REDIS_NULL_CONNECT"
+},
+"165":{
+    "comments":"命中InternetGatewayDevice.LANDevice.{i}.Hosts.Host.{i}.高速缓存的次数",
+    "macro":"HLOG_STATS_ONLINE_DEV_NODE_HIT_CACHE"
+},
+"166":{
+    "comments":"读取/var/OnlineDevTopo.json发送读写冲突",
+    "macro":"HLOG_STATS_CACHED_ON_LINE_DEV_TOPO_FILE_COLLISION"
+},
+"167":{
+    "comments":"读取/var/OnlineDevTopo.json失败",
+    "macro":"HLOG_STATS_CACHED_FAIL_TO_READ_ON_LINE_DEV_TOPO_FILE"
+},
+"168":{
+    "comments":"hgcms获取持久redisContext次数",
+    "macro":"HLOG_STATS_HGCMS_REDIS_NORMAL_CONNECT"
+},
+"169":{
+    "comments":"hgcmsd重新初始化redisContext次数",
+    "macro":"HLOG_STATS_HGCMS_REDIS_RE_CONNECT"
+},
+"170":{
+    "comments":"hgcms获取空的redisContext次数",
+    "macro":"HLOG_STATS_HGCMS_REDIS_NULL_CONNECT"
+}
+}

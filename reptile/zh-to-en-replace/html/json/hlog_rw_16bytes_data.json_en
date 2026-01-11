@@ -1,0 +1,97 @@
+[
+    [
+        1,
+        "LAN IPv4 address",
+        "HLOG_DATALEN16_LAN_IPV4_ADDR"
+    ],
+    [
+        10,
+        "LAN IPv4 address 2",
+        "HLOG_DATALEN16_LAN_IPV4_ADDR_2"
+    ],
+    [
+        7,
+        "LAN IPv4 subnet mask",
+        "HLOG_DATALEN16_LAN_IPV4_SUBNETMASK"
+    ],
+    [
+        5,
+        "IPv4 mask",
+        "HLOG_DATALEN16_LAN_IPV4_MASK"
+    ],
+    [
+        2,
+        "Latest region",
+        "HLOG_DATALEN16_REGION_LATEST"
+    ],
+    [
+        3,
+        "Tr069 WAN interface name",
+        "HLOG_DATALEN16_TR069_WAN_IFNAME"
+    ],
+    [
+        4,
+        "Voip WAN interface name",
+        "HLOG_DATALEN16_VOICE_WAN_IFNAME"
+    ],
+    [
+        6,
+        "default wan addr",
+        "HLOG_DATALEN16_DEFAULT_WAN_ADDR"
+    ],
+    [
+        8,
+        "RADVD lease time",
+        "HLOG_DATALEN16_PREFIX_LEASE"
+    ],
+    [
+        9,
+        "INTERNET IPv4 address",
+        "HLOG_DATALEN16_DEF_INTERNET_WAN_IPV4_ADDR"
+    ],
+    [
+        11,
+        "V4 default WAN interface name",
+        "HLOG_DATALEN16_V4_DEFAULT_WAN_IFNAME"
+    ],
+    [
+        12,
+        "V6 default WAN interface name",
+        "HLOG_DATALEN16_V6_DEFAULT_WAN_IFNAME"
+    ],
+    [
+        13,
+        "Whether mesh is enabled (0-disable; 1-enable)",
+        "HLOG_DATALEN16_MESH_ENABLE"
+    ],
+    [
+        14,
+        "Mesh Role (2-agent; 3-controller)",
+        "HLOG_DATALEN16_MESH_ROLE"
+    ],
+    [
+        15,
+        "NAS IP address",
+        "HLOG_DATALEN16_NAS_IPV4_ADDR"
+    ],
+    [
+        16,
+        "NAS mac address",
+        "HLOG_DATALEN16_NAS_MAC"
+    ],
+    [
+        17,
+        "Sub-gateway br0 obtains the IP address",
+        "HLOG_DATALEN16_SUBGW_IPV4"
+    ],
+    [
+        19,
+        "Uplink interface name",
+        "HLOG_DATALEN16_UPLINK_IFNAME"
+    ],
+    [
+        20,
+        "External PHY Model",
+        "HLOG_DATALEN16_EXT_PHY_NAME"
+    ]
+]

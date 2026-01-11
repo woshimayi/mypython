@@ -1,0 +1,7 @@
+{
+    "发现有注入脚本性质的非法攻击行为,退出当前登录,请重新登录!": "Illegal attack behavior of injecting scripts is found. Log out of the current login and log in again!",
+    "<h3 class=\"text-danger\">网络已经断开!已经无法连接设备!</h3>": "<h3 class=\"text-danger\">The network has been disconnected! The device can no longer be connected!</h3>",
+    "<h6 class=\"text-primary\">当网络连接恢复时，请手动重新<a href=\"/\" style=\"color:#f00\">刷新</a>页面!</h6>": "<h6 class=\"text-primary\">When the network connection is restored, please manually <a href=\"/\" style=\"color:#f00\">refresh</a> the page!</h6>",
+    "用户初始密码": "User initial password",
+    "<option value=\"INTERNET\">上网</option>": "<option value=\"INTERNET\">Internet access</option>"
+}

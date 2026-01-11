@@ -1,0 +1,130 @@
+Number of times the configuration file is written
+Number of times to detect online (download) devices
+The number of times the information of online (downloaded) devices is refreshed
+Number of times the miscd process failed to obtain information about online (downloaded) devices
+Number of times the hghttpd process failed to obtain the attached device
+Number of times PPPoE on-demand dialing is started
+Number of times PPPoE on-demand dialing is stopped
+The number of times the iptables subchain needs to be updated.
+Number of iptables subchain updates
+The number of times the iptables subchain needs to be updated again due to update failures
+The number of times the ebtables sub-chain needs to be updated.
+Number of times the ebtables subchain is updated
+Prepare MIB submission times
+MIB submission times
+Number of MIB submissions within 60 seconds after startup
+The number of times the ebtables subchain needs to be updated again due to update failure
+Checks whether the process memory exceeds the limit.
+The number of times the Java process was restarted due to excessive memory usage
+Number of times the hghttpd process was restarted due to excessive memory usage
+Number of times the natived process was restarted due to excessive memory usage
+The number of times other processes were restarted due to excessive memory usage
+The dnsmasq process cannot provide the dns proxy service backup hgs restart times
+Number of failed attempts to generate a configuration file
+Number of low-light alarms
+Default configuration loading wait time
+Number of PON UP/DOWN
+Number of times the PON status changes
+The number of natived process XTABLES processing threads started
+Samba configuration times
+Number of times samba is started
+Stop samba times
+Internet ppp wan dog effective times
+Internet ppp wan HiSilicon restart pppd times
+Interent ppp wan actual startup times (including pppdog startup and HiSilicon startup of pppd)
+The number of request heartbeat packets received by Interent PPP WAN
+Interent ppp wan sends relay heartbeat packets
+Interent ppp wan sends request heartbeat packets
+Interent PPP WAN received relay heartbeat packets
+Check the number of times the cms process exists
+Check the number of times the cwmp process exists
+The last clilent id in the /tmp/dhcp.leases file is *
+Number of times binding information is ready to be updated
+Number of actual updates of binding information
+Number of successful updates of binding information
+Total number of notifications of offline and online events of downstream devices
+Number of discarded notifications of downlink and downlink events of downstream devices
+Number of downlink and downlink events of downstream devices per cycle
+The number of times the telned process configuration has changed
+The number of times the telned process has exited
+Check the number of telnetd processes
+Number of times the telnetd process is restarted
+The number of times the telnetd process that is no longer needed is killed
+Number of times the tr69c process is started
+internet led operation count
+cwmp report count
+Number of Discover messages received by dnsmasq
+Offer message count sent by dnsmasq
+Request message count received by dnsmasq
+ACK message count sent by dnsmasq
+NAK message count sent by dnsmasq
+mdmd topo fragmentation packet times
+Total number of mdmd topo fragment packets
+mdmd topo sub-gateway prepares to synchronize basic information of the main gateway
+mdmd topo sub-gateway completes synchronization of basic information of the main gateway
+mdmd topo sub-gateway is ready to synchronize all AGENT information of the main gateway
+mdmd topo sub-gateway completes synchronization of all AGENT information of the main gateway
+mdmd topo sub-gateway starts uploading detailed information of the downstream devices
+mdmd topo sub-gateway starts uploading detailed information of the downstream devices
+mdmd topo send get mdm msge
+mdmd topo receive get mdm msge
+mdmd topo updates the main gateway interface information
+mdmd topo workaroud add PON interface field
+The mdmd topo sub-gateway receives a request from the main gateway to synchronize interface information
+The number of times hghttpd obtains the topology map
+hghttpd gets the file read and write conflict of the topology map
+hghttpd gets an empty topology map
+hghttpd receives upload agent information
+hghttpd receives a request to download agent information
+hghttpd received a request to download agent information and a conflict occurred while opening the file
+radvd configuration file changes
+Number of manual refreshes of wan connection information
+Wan connection information setting value times
+Number of wan connection information acquisition times
+Number of times wan connection information is obtained
+Wan connection information increase times
+Number of wan connection information deletions
+Number of times wan connection information is cleared
+Wan connection information update times
+Number of wan connection information changes
+Wan information change notification times
+Number of times natived obtains wan connection information
+udhcpd configuration files may change
+udhcpd receives the discover packet
+udhcpd sends an offer packet
+udhcpd receives a request packet
+udhcpd sends an ack packet
+udhcpd receives a decline packet
+udhcpd receives ack packet
+udhcpd receives the inform packet
+udhcpd receives debug packet
+Total number of packets received by udhcpd
+udhcpd reinitializes the socket
+udhcpd reload configuration
+udhcpd receives hbus message
+udhcpd sends a NAK packet
+udhcpd checks whether reload is required
+udhcpd needs to reload configuration
+udhcpd checks the old IP and MAC of the sub-gateway
+udhcpd updates the old IP and MAC of the sub-gateway
+udhcpd processes common option 60 packets
+udhcpd passes complex option60 authentication
+udhcpd fails complex option 60 authentication
+udhcpd passes simple option60 authentication
+udhcpd fails simple option 60 authentication
+Update the number of downstream devices recorded in HiSilicon MIB
+Total number of downstream devices recorded by HiSilicon MIB updated
+Number of read and write conflicts of MIB mounted device files
+Number of cached cycles
+cached refreshes the number of times the device is mounted
+cached checks the number of times the device information in redis is mounted
+cached updates the number of times the device information in redis is mounted
+cached gets the number of persistent redisContext
+cached reinitializes redisContext times
+Number of times cached gets an empty redisContext
+Number of hits to InternetGatewayDevice.LANDevice.{i}.Hosts.Host.{i}.cache
+Reading /var/OnlineDevTopo.json sends read-write conflict
+Failed to read /var/OnlineDevTopo.json
+hgcms gets the number of persistent redisContext
+hgcmsd reinitializes redisContext times
+hgcms gets the number of empty redisContext

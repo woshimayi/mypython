@@ -1,0 +1,12 @@
+IPv6 Address
+lan ipv6 dhcpv6 start address
+lan ipv6 dhcpv6 end address
+INTERNET IPv6 address
+lan ipv6 AUTO address
+lan ipv6 slaac address
+ALMAC of FTTR Sub-Gateway MESH Uplink Device
+SSID of the backhaul interface when FTTR sub-gateway is in MESH wireless networking
+FTTR sub-gateway MESH wireless networking backhaul interface PWD
+FTTR sub-gateway MESH wireless networking backhaul interface encryption method
+The IP address of the main gateway obtained on the FTTR sub-gateway
+MAC address of the main gateway obtained on the FTTR sub-gateway

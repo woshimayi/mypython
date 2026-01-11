@@ -1,0 +1,4 @@
+Upgrading...
+Please note that please do not power off during the upgrade process. Abnormal power off may cause the device to fail to start normally!
+It will take about 70 seconds in total.
+The upgrade and restart will be completed in seconds, please wait patiently!

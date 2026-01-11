@@ -29,7 +29,7 @@ data3 = {
     "ID": 5,
     "Longitude": 106.836710,
     "Latitude": 36.818850,
-    "Elevation": 0,
+    "Elevation": 25,
     "HorizontalError": 40,
     "AltitudeError": 58,
     "AreaCode": "530116401002",

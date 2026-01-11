@@ -1,0 +1,22 @@
+{
+"2":{
+"comments":"hgcms get values",
+"macro":"HLOG_STATS64_HGCMS_GET_VALUES"	
+},
+"3":{
+"comments":"hgcms set values",
+"macro":"HLOG_STATS64_HGCMS_SET_VALUES"	
+},
+"4":{
+"comments":"hgcms get paths",
+"macro":"HLOG_STATS64_HGCMS_GET_PATHS"	
+},
+"5":{
+"comments":"hgcms add objects",
+"macro":"HLOG_STATS64_HGCMS_ADD_OBJS"	
+},
+"6":{
+"comments":"hgcms delete objects",
+"macro":"HLOG_STATS64_HGCMS_DEL_OBJS"	
+}
+}

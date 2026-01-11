@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+<title>China Mobile</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport"/>
+<link href="css/bootstrap-4.3.1.min.css" rel="stylesheet"/>
+<link href="css/bootstrap-hg.css" rel="stylesheet"/>
+<link href="css/easyui.css" rel="stylesheet"/>
+<link href="css/icon.css" rel="stylesheet"/>
+<link href="css/login.css" rel="stylesheet"/>
+<script src="js/customer.js"></script>
+<script src="js/customer_reg.js"></script>
+<script src="js/md5.js"></script>
+<script src="js/login.js"></script>
+</head>
+<body>
+<nav class="navbar">
+<img alt="" src="/img/login_logo_cm.png"/>
+<button class="navbar-toggler" data-target="#collapsibleNavbar" data-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<ul class="nav justify-content-end">
+<!--需使用<a></a>，否则无法保持文字水平居中，会略为偏上-->
+<li class="nav-item">
+<a class="nav-link">Gateway Name:<span hgs_static_key="ProductType">All-optical networking terminal</span></a>
+</li>
+<li class="nav-item">
+<a class="nav-link">Gateway Model:<span hgs_static_key="ModelName">TEWA-700G</span></a>
+</li>
+<li class="nav-item"><a class="nav-link">Welcome!</a>
+</li>
+</ul>
+</nav>
+<div class="container" id="context">
+<div id="LoginBox">
+<br/>
+<div id="promptInfo"> </div>
+<form>
+<div class="input-group mb-3">
+<div class="input-group-prepend">
+<span class="input-group-text">user</span>
+</div>
+<input class="form-control" id="UserAccount" placeholder="Please enter your username" type="text"/>
+</div>
+<div class="input-group mb-3">
+<div class="input-group-prepend">
+<span class="input-group-text">password</span>
+</div>
+<input autocomplete="off" class="form-control" id="Password" placeholder="Please enter your password" type="password"/>
+</div>
+<div>
+<button class="btn btn-primary" id="Login" type="button">Log in</button>
+<button class="btn btn-primary" id="Cancel" type="button">Cancel</button>
+<button class="btn btn-primary" id="Reister" type="button">register</button>
+</div>
+<br/>
+<img id="mobileClientPic" src="img/mbclient.png"/><img/>
+<div>Download mobile client</div>
+</form>
+</div>
+</div>
+<div> </div>
+<div class="foot_note">
+<div class="col-12">
+<div><span id="hgs_copyright">Copyright ©</span><span hgs_static_key="ShowCopyright">2001-2021 HGS. All rights reserved.</span></div>
+<div id="session-row"><span>session-id:  </span><span id="session-id"></span></div>
+</div>
+</div>
+</body>
+</html>

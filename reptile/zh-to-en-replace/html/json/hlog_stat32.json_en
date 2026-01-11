@@ -1,0 +1,622 @@
+{
+    "1": {
+        "comments": "Number of times the configuration file is written",
+        "macro": "HLOG_STATS_WRITE_MDM_CFG"
+    },
+    "2": {
+        "comments": "Number of times to detect online (download) devices",
+        "macro": "HLOG_STATS_CHECK_ONLINE_DEV_INFO"
+    },
+    "3": {
+        "comments": "The number of times the information of online (downloaded) devices is refreshed",
+        "macro": "HLOG_STATS_UPDATE_ONLINE_DEV_INFO"
+    },
+    "4": {
+        "comments": "Number of times the miscd process failed to obtain information about online (downloaded) devices",
+        "macro": "HLOG_STATS_FAIL_TO_UPDATE_ONLINE_DEV_INFO"
+    },
+    "5": {
+        "comments": "Number of times the hghttpd process failed to obtain the attached device",
+        "macro": "HLOG_STATS_FAIL_TO_GET_ONLINE_DEV_INFO"
+    },
+    "6": {
+        "comments": "Number of times PPPoE on-demand dialing is started",
+        "macro": "HLOG_STATS_PPPOE_ONDEMAND_START"
+    },
+    "7": {
+        "comments": "Number of times PPPoE on-demand dialing is stopped",
+        "macro": "HLOG_STATS_PPPOE_ONDEMAND_STOP"
+    },
+    "8": {
+        "comments": "The number of times the iptables subchain needs to be updated.",
+        "macro": "HLOG_STATS_IPTABLES_SUBCHAIN_NEED_CHANGE"
+    },
+    "9": {
+        "comments": "Number of iptables subchain updates",
+        "macro": "HLOG_STATS_IPTABLES_SUBCHAIN_UPDATE"
+    },
+    "10": {
+        "comments": "The number of times the iptables subchain needs to be updated again due to update failures",
+        "macro": "HLOG_STATS_IPTABLES_SUBCHAIN_UPDATE_AGAIN"
+    },
+    "11": {
+        "comments": "The number of times the ebtables sub-chain needs to be updated.",
+        "macro": "HLOG_STATS_EBTABLES_SUBCHAIN_NEED_CHANGE"
+    },
+    "12": {
+        "comments": "Number of times the ebtables subchain is updated",
+        "macro": "HLOG_STATS_EBTABLES_SUBCHAIN_UPDATE"
+    },
+    "25": {
+        "comments": "Prepare MIB submission times",
+        "macro": "HLOG_STATS_MIB_TRY_COMMIT"
+    },
+    "19": {
+        "comments": "MIB submission times",
+        "macro": "HLOG_STATS_MIB_COMMIT"
+    },
+    "39": {
+        "comments": "Number of MIB submissions within 60 seconds after startup",
+        "macro": "HLOG_STATS_BOOTING_MIB_COMMIT"
+    },
+    "13": {
+        "comments": "The number of times the ebtables subchain needs to be updated again due to update failure",
+        "macro": "HLOG_STATS_EBTABLES_SUBCHAIN_UPDATE_AGAIN"
+    },
+    "14": {
+        "comments": "Checks whether the process memory exceeds the limit.",
+        "macro": "HLOG_STATS_CHECK_PROCESS_MEM"
+    },
+    "15": {
+        "comments": "The number of times the Java process was restarted due to excessive memory usage",
+        "macro": "HLOG_STATS_MEM_RESTART_JAVA"
+    },
+    "16": {
+        "comments": "Number of times the hghttpd process was restarted due to excessive memory usage",
+        "macro": "HLOG_STATS_MEM_RESTART_HGHTTPD"
+    },
+    "17": {
+        "comments": "Number of times the natived process was restarted due to excessive memory usage",
+        "macro": "HLOG_STATS_MEM_RESTART_NATIVED"
+    },
+    "18": {
+        "comments": "The number of times other processes were restarted due to excessive memory usage",
+        "macro": "HLOG_STATS_MEM_RESTART_OTHERS"
+    },
+    "44": {
+        "comments": "The dnsmasq process cannot provide the dns proxy service backup hgs restart times",
+        "macro": "HLOG_STATS_HGS_RESTART_DNSMASQ"
+    },
+    "20": {
+        "comments": "Number of failed attempts to generate a configuration file",
+        "macro": "HLOG_STATS_GEN_CON_FILE_FAILED"
+    },
+    "21": {
+        "comments": "Number of low-light alarms",
+        "macro": "HLOG_STATS_LOW_RX_PORWER"
+    },
+    "22": {
+        "comments": "Default configuration loading wait time",
+        "macro": "HLOG_STATS_DFT_CFG_DELAY"
+    },
+    "23": {
+        "comments": "Number of PON UP/DOWN",
+        "macro": "HLOG_STATS_PON_UP_DOWN_EVENT"
+    },
+    "24": {
+        "comments": "Number of times the PON status changes",
+        "macro": "HLOG_STATS_PON_STATUS_CHANGE"
+    },
+    "26": {
+        "comments": "The number of natived process XTABLES processing threads started",
+        "macro": "HLOG_STATS_START_NATIVED_XTABLES"
+    },
+    "27": {
+        "comments": "Samba configuration times",
+        "macro": "HLOG_STATS_SMB_CFGED_TIMES"
+    },
+    "28": {
+        "comments": "Number of times samba is started",
+        "macro": "HLOG_STATS_SMB_START_TIMES"
+    },
+    "29": {
+        "comments": "Stop samba times",
+        "macro": "HLOG_STATS_SMB_STOP_TIMES"
+    },
+    "30": {
+        "comments": "Internet ppp wan dog effective times",
+        "macro": "HLOG_STATS_PPP_DOG_START"
+    },
+    "31": {
+        "comments": "Internet ppp wan HiSilicon restart pppd times",
+        "macro": "HLOG_STATS_PPP_HSAN_RUN"
+    },
+    "32": {
+        "comments": "Interent ppp wan actual startup times (including pppdog startup and HiSilicon startup of pppd)",
+        "macro": "HLOG_STATS_PPPD_RUN"
+    },
+    "33": {
+        "comments": "The number of request heartbeat packets received by Interent PPP WAN",
+        "macro": "HLOG_STATS_PPP_RECV_REQUEST"
+    },
+    "34": {
+        "comments": "Interent ppp wan sends relay heartbeat packets",
+        "macro": "HLOG_STATS_PPP_SEND_REPLAY"
+    },
+    "35": {
+        "comments": "Interent ppp wan sends request heartbeat packets",
+        "macro": "HLOG_STATS_PPP_SEND_REQUEST"
+    },
+    "36": {
+        "comments": "Interent PPP WAN received relay heartbeat packets",
+        "macro": "HLOG_STATS_PPP_RECVD_REPLAY"
+    },
+    "37": {
+        "comments": "parse lastgood fail",
+        "macro": "HLOG_STATS_PARSE_CONFIG_FAIL"
+    },
+    "38": {
+        "comments": "Check the number of times the cms process exists",
+        "macro": "HLOG_STATS_CHECK_CMS_PROCESS"
+    },
+    "43": {
+        "comments": "Check the number of times the cwmp process exists",
+        "macro": "HLOG_STATS_CHECK_CWMP_PROCESS"
+    },
+    "40": {
+        "comments": "parse lastgood ok",
+        "macro": "HLOG_STATS_PARSE_CONFIG_OK"
+    },
+    "41": {
+        "comments": "parse backup lastgood fail",
+        "macro": "HLOG_STATS_PARSE_BACKUP_CONFIG_FAIL"
+    },
+    "42": {
+        "comments": "backup lastgood recover",
+        "macro": "HLOG_STATS_PARSE_BACKUP_CONFIG_RECOVER"
+    },
+    "45": {
+        "comments": "The last clilent id in the /tmp/dhcp.leases file is *",
+        "macro": "HLOG_STATS_DHCP_LEASE_ERR"
+    },
+    "46": {
+        "comments": "Number of times binding information is ready to be updated",
+        "macro": "HLOG_STATS_PORT_VLAN_BIND_NEED_UPDATE"
+    },
+    "47": {
+        "comments": "Number of actual updates of binding information",
+        "macro": "HLOG_STATS_PORT_VLAN_BIND_REAL_UPDATE"
+    },
+    "48": {
+        "comments": "Number of successful updates of binding information",
+        "macro": "HLOG_STATS_PORT_VLAN_BIND_SUCC_UPDATE"
+    },
+    "49": {
+        "comments": "Total number of notifications of offline and online events of downstream devices",
+        "macro": "HLOG_STATS_EVENT_NOTIFY_TOTAL"
+    },
+    "50": {
+        "comments": "Number of discarded notifications of downlink and downlink events of downstream devices",
+        "macro": "HLOG_STATS_EVENT_NOTIFY_DROPED"
+    },
+    "51": {
+        "comments": "Number of downlink and downlink events of downstream devices per cycle",
+        "macro": "HLOG_STATS_EVENT_NOTIFY_PER_PERIOD"
+    },
+    "52": {
+        "comments": "The number of times the telned process configuration has changed",
+        "macro": "HLOG_STATS_TELNETD_CFG_CHANGED"
+    },
+    "53": {
+        "comments": "The number of times the telned process has exited",
+        "macro": "HLOG_STATS_TELNETD_PROCESS_CHANGED"
+    },
+    "54": {
+        "comments": "Check the number of telnetd processes",
+        "macro": "HLOG_STATS_TELNETD_CHECK"
+    },
+    "55": {
+        "comments": "Number of times the telnetd process is restarted",
+        "macro": "HLOG_STATS_TELNETD_RESTART"
+    },
+    "56": {
+        "comments": "The number of times the telnetd process that is no longer needed is killed",
+        "macro": "HLOG_STATS_TELNETD_KILL_NOT_USED"
+    },
+    "57": {
+        "comments": "Number of times the tr69c process is started",
+        "macro": "HLOG_STATS_HGCWMP_RESTART"
+    },
+    "58": {
+        "comments": "internet led operation count",
+        "macro": "HLOG_STATS_INTERNET_LED"
+    },
+    "59": {
+        "comments": "cwmp report count",
+        "macro": "HLOG_STATS_HGCWMP_SENDINFORM"
+    },
+    "60": {
+        "comments": "Number of Discover messages received by dnsmasq",
+        "macro": "HLOG_STATS_DNSMASQ_DHCP_DISCOVER_COUNTER"
+    },
+    "61": {
+        "comments": "Offer message count sent by dnsmasq",
+        "macro": "HLOG_STATS_DNSMASQ_DHCP_OFFER_COUNTER"
+    },
+    "62": {
+        "comments": "Request message count received by dnsmasq",
+        "macro": "HLOG_STATS_DNSMASQ_DHCP_REQUEST_COUNTER"
+    },
+    "63": {
+        "comments": "ACK message count sent by dnsmasq",
+        "macro": "HLOG_STATS_DNSMASQ_DHCP_ACK_COUNTER"
+    },
+    "64": {
+        "comments": "NAK message count sent by dnsmasq",
+        "macro": "HLOG_STATS_DNSMASQ_DHCP_NAK_COUNTER"
+    },
+    "65": {
+        "comments": "mdmd topo rx",
+        "macro": "HLOG_STATS_MDMD_TOPO_RX"
+    },
+    "66": {
+        "comments": "mdmd topo rx error",
+        "macro": "HLOG_STATS_MDMD_TOPO_RX_ERROR"
+    },
+    "67": {
+        "comments": "mdmd topo rx binary",
+        "macro": "HLOG_STATS_MDMD_TOPO_RX_BIN"
+    },
+    "68": {
+        "comments": "mdmd topo rx json",
+        "macro": "HLOG_STATS_MDMD_TOPO_RX_JSON"
+    },
+    "69": {
+        "comments": "mdmd topo tx",
+        "macro": "HLOG_STATS_MDMD_TOPO_TX"
+    },
+    "70": {
+        "comments": "mdmd topo tx error",
+        "macro": "HLOG_STATS_MDMD_TOPO_TX_ERROR"
+    },
+    "71": {
+        "comments": "mdmd topo check",
+        "macro": "HLOG_STATS_MDMD_TOPO_CHECK"
+    },
+    "72": {
+        "comments": "mdmd topo generate json file",
+        "macro": "HLOG_STATS_MDMD_TOPO_GEN_JSON"
+    },
+    "73": {
+        "comments": "mdmd topo update sub device interface info",
+        "macro": "HLOG_STATS_MDMD_TOPO_UPDATE_SUB_IF_INFO"
+    },
+    "74": {
+        "comments": "mdmd topo bad online data",
+        "macro": "HLOG_STATS_MDMD_TOPO_BAD_ONLINE_DATA"
+    },
+    "75": {
+        "comments": "mdmd topo get online devs",
+        "macro": "HLOG_STATS_MDMD_TOPO_GET_ONLINE_DEVS"
+    },
+    "76": {
+        "comments": "mdmd topo get host info",
+        "macro": "HLOG_STATS_MDMD_TOPO_GET_HOST_INFO"
+    },
+    "77": {
+        "comments": "mdmd topo generate agent info",
+        "macro": "HLOG_STATS_MDMD_TOPO_GEN_AGNET_INFO"
+    },
+    "78": {
+        "comments": "mdmd topo generate agent online devices",
+        "macro": "HLOG_STATS_MDMD_TOPO_GEN_AGNET_DEVS"
+    },
+    "79": {
+        "comments": "mdmd topo session id",
+        "macro": "HLOG_STATS_MDMD_TOPO_AGNET_DEVS_SESSION_ID"
+    },
+    "80": {
+        "comments": "mdmd topo fragmentation packet times",
+        "macro": "HLOG_STATS_MDMD_TOPO_AGNET_DEVS_FRAGMENT"
+    },
+    "81": {
+        "comments": "Total number of mdmd topo fragment packets",
+        "macro": "HLOG_STATS_MDMD_TOPO_AGNET_DEVS_FRAG_TOTAL"
+    },
+    "82": {
+        "comments": "mdmd topo sub-gateway prepares to synchronize basic information of the main gateway",
+        "macro": "HLOG_STATS_MDMD_TOPO_READY_SYN_MAIN_DEV"
+    },
+    "83": {
+        "comments": "mdmd topo sub-gateway completes synchronization of basic information of the main gateway",
+        "macro": "HLOG_STATS_MDMD_TOPO_FIN_SYN_SYN_MAIN_DEV"
+    },
+    "84": {
+        "comments": "mdmd topo sub-gateway is ready to synchronize all AGENT information of the main gateway",
+        "macro": "HLOG_STATS_MDMD_TOPO_READY_SYN_ALL_AGENTS"
+    },
+    "85": {
+        "comments": "mdmd topo sub-gateway completes synchronization of all AGENT information of the main gateway",
+        "macro": "HLOG_STATS_MDMD_TOPO_SUCCESS_SYN_SYN_ALL_AGENTS"
+    },
+    "86": {
+        "comments": "mdmd topo sub-gateway starts uploading detailed information of the downstream devices",
+        "macro": "HLOG_STATS_MDMD_TOPO_UPLOAD_ONLINE_DEV_DETAIL_INFO"
+    },
+    "87": {
+        "comments": "mdmd topo sub-gateway starts uploading detailed information of the downstream devices",
+        "macro": "HLOG_STATS_MDMD_TOPO_SUCESS_UPLOAD_ONLINE_DEV_DETAIL_INFO"
+    },
+    "88": {
+        "comments": "mdmd topo send get mdm msge",
+        "macro": "HLOG_STATS_MDMD_TOPO_SEND_GET_MDM_MSG"
+    },
+    "89": {
+        "comments": "mdmd topo receive get mdm msge",
+        "macro": "HLOG_STATS_MDMD_TOPO_RECV_GET_MDM_MSG"
+    },
+    "90": {
+        "comments": "mdmd topo updates the main gateway interface information",
+        "macro": "HLOG_STATS_MDMD_TOPO_UPDATE_MAIN_IFINDEX"
+    },
+    "91": {
+        "comments": "mdmd topo workaroud add PON interface field",
+        "macro": "HLOG_STATS_MDMD_TOPO_WORKAROUND_FOR_PON_IF"
+    },
+    "92": {
+        "comments": "The mdmd topo sub-gateway receives a request from the main gateway to synchronize interface information",
+        "macro": "HLOG_STATS_MDMD_TOPO_RX_NEED_SYN_IF"
+    },
+    "101": {
+        "comments": "The number of times hghttpd obtains the topology map",
+        "macro": "HLOG_STATS_HGHTTPD_TOPO_GET"
+    },
+    "102": {
+        "comments": "hghttpd gets the file read and write conflict of the topology map",
+        "macro": "HLOG_STATS_HGHTTPD_TOPO_FILE_COLLISION"
+    },
+    "103": {
+        "comments": "hghttpd gets an empty topology map",
+        "macro": "HLOG_STATS_HGHTTPD_TOPO_GET_EMPTY"
+    },
+    "104": {
+        "comments": "hghttpd receives upload agent information",
+        "macro": "HLOG_STATS_HGHTTPD_RECV_UPLOADLOAD_AGENT_INFO"
+    },
+    "105": {
+        "comments": "hghttpd receives a request to download agent information",
+        "macro": "HLOG_STATS_HGHTTPD_HANDLE_DOWNLOAD_AGENT_INFO"
+    },
+    "106": {
+        "comments": "hghttpd received a request to download agent information and a conflict occurred while opening the file",
+        "macro": "HLOG_STATS_HGHTTPD_DOWNLOAD_AGENT_INFO_FILE_COLLISION"
+    },
+    "107": {
+        "comments": "radvd configuration file changes",
+        "macro": "HLOG_STATS_RADVD_CONF_CHANGE"
+    },
+    "109": {
+        "comments": "Number of manual refreshes of wan connection information",
+        "macro": "HLOG_STATS_MANUAL_WAN_CONN_UPDATE"
+    },
+    "110": {
+        "comments": "Wan connection information setting value times",
+        "macro": "HLOG_STATS_MIB_WAN_CONN_SET_VALUE"
+    },
+    "111": {
+        "comments": "Number of wan connection information acquisition times",
+        "macro": "HLOG_STATS_MIB_WAN_CONN_TOTAL"
+    },
+    "112": {
+        "comments": "Number of times wan connection information is obtained",
+        "macro": "HLOG_STATS_MIB_WAN_CONN_GET"
+    },
+    "113": {
+        "comments": "Wan connection information increase times",
+        "macro": "HLOG_STATS_MIB_WAN_CONN_ADD"
+    },
+    "114": {
+        "comments": "Number of wan connection information deletions",
+        "macro": "HLOG_STATS_MIB_WAN_CONN_DELETE"
+    },
+    "115": {
+        "comments": "Number of times wan connection information is cleared",
+        "macro": "HLOG_STATS_MIB_WAN_CONN_CLEAR"
+    },
+    "116": {
+        "comments": "Wan connection information update times",
+        "macro": "HLOG_STATS_MIB_WAN_CONN_UPDATE"
+    },
+    "117": {
+        "comments": "Number of wan connection information changes",
+        "macro": "HLOG_STATS_MIB_WAN_CONN_CHANGE"
+    },
+    "118": {
+        "comments": "Wan information change notification times",
+        "macro": "HLOG_STATS_WAN_NOTIFY"
+    },
+    "119": {
+        "comments": "Number of times natived obtains wan connection information",
+        "macro": "HLOG_STATS_NATIVED_WAN_CONN_GET"
+    },
+    "120": {
+        "comments": "udhcpd configuration files may change",
+        "macro": "HLOG_STATS_UDHCPD_CFG_MAY_CHANGE"
+    },
+    "121": {
+        "comments": "udhcpd receives the discover packet",
+        "macro": "HLOG_STATS_UDHCPD_PKT_DISCOVER"
+    },
+    "122": {
+        "comments": "udhcpd sends an offer packet",
+        "macro": "HLOG_STATS_UDHCPD_PKT_OFFER"
+    },
+    "123": {
+        "comments": "udhcpd receives a request packet",
+        "macro": "HLOG_STATS_UDHCPD_PKT_REQUEST"
+    },
+    "124": {
+        "comments": "udhcpd sends an ack packet",
+        "macro": "HLOG_STATS_UDHCPD_PKT_ACK"
+    },
+    "125": {
+        "comments": "udhcpd receives a decline packet",
+        "macro": "HLOG_STATS_UDHCPD_PKT_DECLINE"
+    },
+    "126": {
+        "comments": "udhcpd receives ack packet",
+        "macro": "HLOG_STATS_UDHCPD_PKT_RELEASE"
+    },
+    "127": {
+        "comments": "udhcpd receives the inform packet",
+        "macro": "HLOG_STATS_UDHCPD_PKT_INFORM"
+    },
+    "128": {
+        "comments": "udhcpd receives debug packet",
+        "macro": "HLOG_STATS_UDHCPD_PKT_DEBUG"
+    },
+    "129": {
+        "comments": "Total number of packets received by udhcpd",
+        "macro": "HLOG_STATS_UDHCPD_PKT_TOTAOL"
+    },
+    "130": {
+        "comments": "udhcpd init",
+        "macro": "HLOG_STATS_UDHCPD_INIT"
+    },
+    "131": {
+        "comments": "udhcpd reinitializes the socket",
+        "macro": "HLOG_STATS_UDHCPD_REINIT_SOCKET"
+    },
+    "132": {
+        "comments": "udhcpd reload configuration",
+        "macro": "HLOG_STATS_UDHCPD_RELOAD_CFG"
+    },
+    "133": {
+        "comments": "udhcpd receives hbus message",
+        "macro": "HLOG_STATS_UDHCPD_RECV_MSG"
+    },
+    "134": {
+        "comments": "udhcpd sends a NAK packet",
+        "macro": "HLOG_STATS_UDHCPD_PKT_NAK"
+    },
+    "135": {
+        "comments": "udhcpd checks whether reload is required",
+        "macro": "HLOG_STATS_UDHCPD_CHECK_RELOAD_CFG"
+    },
+    "136": {
+        "comments": "udhcpd needs to reload configuration",
+        "macro": "HLOG_STATS_UDHCPD_NEED_RELOAD_CFG"
+    },
+    "137": {
+        "comments": "udhcpd checks the old IP and MAC of the sub-gateway",
+        "macro": "HLOG_STATS_UDHCPD_CHECK_SUBGW_OLD_IP_MAC"
+    },
+    "138": {
+        "comments": "udhcpd updates the old IP and MAC of the sub-gateway",
+        "macro": "HLOG_STATS_UDHCPD_UPDATE_SUBGW_OLD_IP_MAC"
+    },
+    "139": {
+        "comments": "udhcpd processes common option 60 packets",
+        "macro": "HLOG_STATS_UDHCPD_OPT60_NORMAL"
+    },
+    "140": {
+        "comments": "udhcpd passes complex option60 authentication",
+        "macro": "HLOG_STATS_UDHCPD_OPT60_SPECIAL_PASS"
+    },
+    "141": {
+        "comments": "udhcpd fails complex option 60 authentication",
+        "macro": "HLOG_STATS_UDHCPD_OPT60_SPECIAL_FAIL"
+    },
+    "142": {
+        "comments": "udhcpd passes simple option60 authentication",
+        "macro": "HLOG_STATS_UDHCPD_OPT60_SIMPLE_PASS"
+    },
+    "143": {
+        "comments": "udhcpd fails simple option 60 authentication",
+        "macro": "HLOG_STATS_UDHCPD_OPT60_SIMPLE_FAIL"
+    },
+    "150": {
+        "comments": "hgcms set objs",
+        "macro": "HLOG_STATS_HGCMS_SET_OBJS"
+    },
+    "151": {
+        "comments": "hgcms del objs",
+        "macro": "HLOG_STATS_HGCMS_DEL_OBJS"
+    },
+    "152": {
+        "comments": "hgcms get objs",
+        "macro": "HLOG_STATS_HGCMS_GET_OBJS"
+    },
+    "153": {
+        "comments": "hgcms get cache objs",
+        "macro": "HLOG_STATS_HGCMS_GET_CACHE_OBJS"
+    },
+    "154": {
+        "comments": "hgcms get cache objs",
+        "macro": "HLOG_STATS_HGCMS_UPDATE_WAN_CACHE"
+    },
+    "155": {
+        "comments": "Update the number of downstream devices recorded in HiSilicon MIB",
+        "macro": "HLOG_STATS_HI_ONLINE_DEV_UPDATE_LOOP"
+    },
+    "156": {
+        "comments": "Total number of downstream devices recorded by HiSilicon MIB updated",
+        "macro": "HLOG_STATS_HI_ONLINE_DEV_UPDATE_CNT"
+    },
+    "157": {
+        "comments": "Number of read and write conflicts of MIB mounted device files",
+        "macro": "HLOG_STATS_HI_ONLINE_DEV_RW_COLLISION"
+    },
+    "158": {
+        "comments": "Number of cached cycles",
+        "macro": "HLOG_STATS_CACHED_LOOP"
+    },
+    "159": {
+        "comments": "cached refreshes the number of times the device is mounted",
+        "macro": "HLOG_STATS_CACHED_UPDATE_ONLINE_DEV_MDM"
+    },
+    "160": {
+        "comments": "cached checks the number of times the device information in redis is mounted",
+        "macro": "HLOG_STATS_CACHED_CHECK_ONLINE_DEV_REDIS"
+    },
+    "161": {
+        "comments": "cached updates the number of times the device information in redis is mounted",
+        "macro": "HLOG_STATS_CACHED_UPDATE_ONLINE_DEV_REDIS"
+    },
+    "162": {
+        "comments": "cached gets the number of persistent redisContext",
+        "macro": "HLOG_STATS_CACHED_REDIS_NORMAL_CONNECT"
+    },
+    "163": {
+        "comments": "cached reinitializes redisContext times",
+        "macro": "HLOG_STATS_CACHED_REDIS_RE_CONNECT"
+    },
+    "164": {
+        "comments": "Number of times cached gets an empty redisContext",
+        "macro": "HLOG_STATS_CACHED_REDIS_NULL_CONNECT"
+    },
+    "165": {
+        "comments": "Number of hits to InternetGatewayDevice.LANDevice.{i}.Hosts.Host.{i}.cache",
+        "macro": "HLOG_STATS_ONLINE_DEV_NODE_HIT_CACHE"
+    },
+    "166": {
+        "comments": "Reading /var/OnlineDevTopo.json sends read-write conflict",
+        "macro": "HLOG_STATS_CACHED_ON_LINE_DEV_TOPO_FILE_COLLISION"
+    },
+    "167": {
+        "comments": "Failed to read /var/OnlineDevTopo.json",
+        "macro": "HLOG_STATS_CACHED_FAIL_TO_READ_ON_LINE_DEV_TOPO_FILE"
+    },
+    "168": {
+        "comments": "hgcms gets the number of persistent redisContext",
+        "macro": "HLOG_STATS_HGCMS_REDIS_NORMAL_CONNECT"
+    },
+    "169": {
+        "comments": "hgcmsd reinitializes redisContext times",
+        "macro": "HLOG_STATS_HGCMS_REDIS_RE_CONNECT"
+    },
+    "170": {
+        "comments": "hgcms gets the number of empty redisContext",
+        "macro": "HLOG_STATS_HGCMS_REDIS_NULL_CONNECT"
+    }
+}

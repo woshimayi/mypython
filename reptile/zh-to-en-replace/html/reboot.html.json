@@ -1,0 +1,6 @@
+{
+    "正在重启过程中...": "Restarting...",
+    "请注意，在重启过程中请不要断电，异常断电可能会导致设备无法正常启动!": "Please note that please do not cut off the power during the restart process. Abnormal power outage may cause the device to fail to start normally!",
+    "共计需要大约60秒钟时间,预计": "It will take about 60 seconds in total.",
+    "秒后完成升级和重启,请耐心等待!": "The upgrade and restart will be completed in seconds, please wait patiently!"
+}

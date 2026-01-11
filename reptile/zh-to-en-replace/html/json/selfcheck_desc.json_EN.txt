@@ -1,0 +1,45 @@
+SC_HARDWARE_ID|Check if the hardwareid is correct
+SC_MANUFACTURER|Check if the manufacturer is correct
+SC_REGION_CONFIG_FILE|Check if the province preconfiguration is correct
+SC_BASE_CONFIG_FILE|Check if the base configuration is correct
+SC_DEFAULT_CONFIG_FILE|Check whether the configuration of base + province is correct
+SC_CACHED_INIT|The cached process was initialized successfully
+SC_HBUSDEAMON_INIT|hbusdaemon process initialized successfully
+SC_MDMD_INIT|mdmd process initialized successfully
+SC_MISCD_INIT|miscd process initialized successfully
+SC_HGHTTPD_INIT|hghttd process initialized successfully
+SC_NATIVED_INIT|natived process initialized successfully
+SC_UDHCPD_INIT|udhcpd process initialized successfully
+SC_MF_INIT|mf process initialization successful
+SC_PING_MDMD|Ping mdmd process successfully
+SC_PING_MISCD|Ping the miscd process successfully
+SC_PING_HGHTTPD|Ping hghttpd process successfully
+SC_PING_NATIVED|Successfully pinged the natived process
+SC_PING_DNSMASQ|Ping dnsmasq process successfully
+SC_PING_UDHCPD|ping udhcpd process successfully
+SC_REGISTER_20_PERCENT | Registration progress bar reaches 20% success
+SC_REGISTER_30_PERCENT|Registration progress bar reaches 30% success
+SC_REGISTER_40_PERCENT|Registration progress bar reaches 40% success
+SC_REGISTER_50_PERCENT | Registration progress bar reaches 50% success
+SC_REGISTER_60_PERCENT | Registration progress bar reaches 60% success
+SC_REGISTER_99_PERCENT|Registration progress bar reaches 99% success
+SC_REGISTER_100_PERCENT | Registration progress bar reaches 100% success
+SC_KO_BRIDGE|net_probe.ko loaded successfully (arp detection module)
+SC_KO_SECURITY|anti_attack.ko loaded successfully (anti-network attack module)
+SC_KO_SHOWNET|net_show.ko loaded successfully (network attack protection module)
+SC_KO_LPDETEC|lpdetect.ko loaded successfully (loop detection and topology detection module)
+SC_CHECK_BOARD_XML|Check if the board.xml file md5 verification is successful
+SC_CHECK_SYSINFO_XML|Check if the md5 verification of the sysinfo.xml file is successful
+SC_CHECK_WLAN_INI|Check whether the md5 verification of the cfg_hi5622v100_hisi.ini file is successful
+SC_CHECK_FAC_DATA_JSON|Check if the md5 verification of the factoryData.json file is successful
+SC_CHECK_FAC_TXT|Check if the md5 verification of the factory.txt file is successful
+SC_CHECK_BOB_CFG_INI|Check if the md5 verification of the bob_config.ini file is successful
+SC_CHECK_WLAN_CAL|Check if the md5 verification of hi5622v100.cal file is successful
+SC_PON_UP|Is PON UP (reaching O5 state)?
+SC_INTERNET_WAN_UP|Is INTERNET WAN UP?
+SC_TR069_WAN_UP|Is TR069 WAN UP?
+SC_VOIP_WAN_UP|Is VOIP WAN UP?
+SC_NTP_SUCCESS|Whether NTP successfully synchronized network time
+SC_IPTABLES_INIT|IPTABLES initialization successful
+SC_EBTABLES_INIT|EBTABLES initialization succeeded
+SC_CFG_LOAD_FINIH|Configuration loading completed

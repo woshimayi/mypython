@@ -12,6 +12,9 @@ compile      :
 '''
 import json
 
+from file_IO.list_dir_file import find_files_with_suffix
+
+
 def create_json_from_txt(zh_file, en_file, output_file):
     """
     Generates a JSON file containing key-value pairs from two text files,
@@ -64,7 +67,28 @@ def create_json_from_txt(zh_file, en_file, output_file):
 
 
 if __name__ == "__main__":
-    zh_file = "js_ZH.txt"
-    en_file = "js_EN.txt"
-    output_file = "output.json"
+    # zh_file = "html_ZH.txt"
+    # en_file = "html_EN.txt"
+    # output_file = "html_output.json"
+
+
+    # target_dir = r'E:/mypython_new/reptile/zh-to-en-replace/html/'
+    # file_suffix = '.json'
+    #
+    # found_files = find_files_with_suffix(target_dir, file_suffix)
+    # if found_files:
+    #     print(f"\n在目录 '{target_dir}' 及其子目录下找到以下后缀为 '{file_suffix}' 的文件:")
+    #     for file_path in found_files:
+    #         print(file_path)
+    #         zh_file = file_path + r"_ZH.txt"
+    #         en_file = file_path + r'_EN.txt'
+    #         output_file = file_path + r'.json'
+    #         create_json_from_txt(zh_file, en_file, output_file)
+    #
+    # else:
+    #     print(f"\n在目录 '{target_dir}' 及其子目录下没有找到后缀为 '{file_suffix}' 的文件。")
+
+    zh_file = "index.html_ZH.txt"
+    en_file = "index.html_EN.txt"
+    output_file = "index_output.json"
     create_json_from_txt(zh_file, en_file, output_file)

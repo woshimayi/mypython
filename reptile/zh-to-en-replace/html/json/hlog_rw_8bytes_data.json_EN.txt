@@ -1,0 +1,3 @@
+HEX|Sub-gateway fiber optic networking online list
+HEX|Whether the vpitv port is bound to the bridge WAN flag when the sub-gateway is fiber-optic networked
+Time when natived reads wan connection information

@@ -102,10 +102,11 @@ if __name__ == "__main__":
     if wifi_networks:
         print("\n扫描到的 Wi-Fi 网络:")
         for network in wifi_networks:
-            print(f"  SSID: {network['SSID']}", end="")
-            print(f"  BSSID: {network['BSSID']}", end="")
-            print(f"  频率: {network['频率']} MHz", end="")
-            print(f"  信道: {network['信道']}", end="")
-            print(f"  强度: {network['强度']} dBm", end="")
-            print(f"  标准: {network['标准']}", end="")
-            print("-" * 20)
+            if "GD252C01" in network['SSID']:
+                print(f"  SSID: {network['SSID']}", end="")
+                print(f"  BSSID: {network['BSSID']}", end="")
+                print(f"  频率: {network['频率']} MHz", end="")
+                print(f"  信道: {network['信道']}", end="")
+                print(f"  强度: {network['强度']} dBm", end="")
+                print(f"  标准: {network['标准']}", end="")
+                print("-" * 20)

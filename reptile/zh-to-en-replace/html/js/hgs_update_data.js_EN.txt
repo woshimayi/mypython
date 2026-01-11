@@ -1,0 +1,6 @@
+Illegal attack behavior of injecting scripts is found. Log out of the current login and log in again!
+<h3 class="text-danger">The network has been disconnected! The device can no longer be connected!</h3>
+<h6 class="text-primary">When the network connection is restored, please manually <a href="/" style="color:#f00">refresh</a> the page!</h6>
+<h3 class="text-danger">The network has been disconnected! The device can no longer be connected!</h3>
+User initial password
+<option value="INTERNET">Internet access</option>

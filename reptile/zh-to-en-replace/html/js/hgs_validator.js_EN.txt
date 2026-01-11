@@ -1,0 +1,12 @@
+Connected
+Not connected
+sky
+Hour
+point
+Second
+initial
+Standby
+Serial Number
+Distance measurement
+run
+Emergency Stop

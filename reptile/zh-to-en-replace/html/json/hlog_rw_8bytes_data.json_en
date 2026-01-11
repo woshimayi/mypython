@@ -1,0 +1,17 @@
+[
+    [
+        2,
+        "HEX|Sub-gateway fiber optic networking online list",
+        "HLOG_RW64_FTTR_SLAVE_ONLINE_LIST"
+    ],
+    [
+        3,
+        "HEX|Whether the vpitv port is bound to the bridge WAN flag when the sub-gateway is fiber-optic networked",
+        "HLOG_RW64_FTTR_SLAVE_IPTV_ENABLE"
+    ],
+    [
+        4,
+        "Time when natived reads wan connection information",
+        "HLOG_RW64_WAN_CONN_TIME"
+    ]
+]

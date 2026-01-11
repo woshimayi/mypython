@@ -1,0 +1,29 @@
+#LoginBox{
+height: 450px;
+width: 300px;
+text-align: center;
+}
+
+#context{
+display: flex;
+justify-content: center;
+align-items: center;	
+}
+
+#promptInfo{
+    color: red;
+    font-size: 20px;
+}
+
+.foot_note div{
+	text-align: center
+}
+
+#mobileClientPic {
+width: 160px;
+height: 160px;
+}
+
+#session-row {
+display: none
+}

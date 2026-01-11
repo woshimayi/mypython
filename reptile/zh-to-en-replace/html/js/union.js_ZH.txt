@@ -1,0 +1,10 @@
+升级失败!请点击<a href='/' target='_blank'>这里</a>重新到主页面进行升级!
+升级服务进程未响应!
+无效的升级文件!
+升级文件校验成功!
+正在写入Flash...
+写入flash失败!
+写入flash成功!
+正在重启...
+<h3 class="text-danger">网络已经断开!已经无法连接设备!</h3>
+<h6 class="text-primary">当网络连接恢复时，请手动重新<a href="/" style="color:#f00">刷新</a>页面!</h6>
