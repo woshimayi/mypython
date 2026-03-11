@@ -38,14 +38,14 @@ class BeautifulPicture:
 	def get_pic(self, url):
 		r = requests.get(url, headers=self.headers)
 		r.encoding='utf-8'
-		soup=BeautifulSoup(r.text,"lxml")
+		soup=BeautifulSoup(r.text,"html.parser")
 		soup.prettify()
 		i = 0
 		for jpg_url in soup.find_all('img'):
 			i += 1
 			if 'http'  in jpg_url['src']:
 				print(jpg_url['alt'])
-				# print(jpg_url['alt'],"	", jpg_url['src'],"		", str(time.strftime("%Y%m%d%H%M%S", time.localtime()))+str(i)+'.jpg')
+				print(jpg_url['alt'],"	", jpg_url['src'],"		", str(time.strftime("%Y%m%d%H%M%S", time.localtime()))+str(i)+'.jpg')
 				# self.save_img(jpg_url['src'], str(time.strftime("%Y%m%d%H%M%S", time.localtime()))+str(i)+'.jpg')
 			# print('成功')
 	
@@ -66,7 +66,7 @@ class BeautifulPicture:
 
 if __name__ == '__main__':
 	be = BeautifulPicture()
-	path = r'G:/python/get_pic'+str(time.strftime("%Y%m%d%H%M%S", time.localtime()))
+	path = r'E:/python/get_pic'+str(time.strftime("%Y%m%d%H%M%S", time.localtime()))
 	url = 'https://cn.bing.com/images/trending?form=Z9LH'
 	be.mk_dir(path)
 	be.get_pic(url)
