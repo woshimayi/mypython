@@ -114,3 +114,15 @@
   <parameter name="Enable" type="boolean" specSource="HG" profile="X_HG_CMCC:1" supportLevel="ReadWrite" defaultValue="True" />
     <description source="HG"></description>
 
+
+<object name="InternetGatewayDevice.X_CMCC_SmartGateway.TransferServices.InterfaceSpeedlimit.{i}." shortObjectName="HgInterfaceSpeedlimitObject" specSource="Custom" profile="Unspecified" supportLevel="DynamicInstances" />
+
+  <parameter name="Index" type="unsignedInt" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" minValue="0" maxValue="31"/>
+
+  <parameter name="UpSpeed" type="unsignedInt" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" />
+
+  <parameter name="DownSpeed" type="unsignedInt" specSource="Custom" profile="Unspecified" supportLevel="ReadWrite" />
+
+  <parameter name="LimitPort" type="string" specSource="HG" profile="X_HG_CMCC:1" supportLevel="ReadWrite" defaultValue="" />
+
+

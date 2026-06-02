@@ -369,13 +369,14 @@ class GenerateObject(object):
 		currObj.ulIndex = 1;
 	}
 	CM_LOG("ulIndex = %d", entry.ulIndex);
-	if (mib_chain_add(IGD_FASTPATHSPEEDUPSERVICE_TAB, (unsigned char *)&entry))
+	if (!mib_chain_add(IGD_FASTPATHSPEEDUPSERVICE_TAB, (unsigned char *)&entry))
 	{
-		/*backfill TaskId*/
-		lRet = IGD_CM_OPERATE_SUCCESS;
+    	CM_LOG("mib_chain_add failed for speed limit entry!");
+		newObj->ulIndex = lIndex + 1;
+		return IGD_CM_OPERATE_FAIL;
 	}
 	newObj->ulIndex = lIndex + 1;
-	return lRet;
+	return IGD_CM_OPERATE_SUCCESS;
 }
 '''
         str1 = str.replace('IgdFastPathSpeedUpServiceTab', self.struct)
@@ -1353,7 +1354,7 @@ def GenObj(G, name, shortObjectName, mulNodeFlag):
 
 # 示例用法
 if __name__ == "__main__":
-    xml_file = r"E:\mypython_new\file_IO\cms-dm-hg-cmcc-tr98-obj-Traffic.xml"  # 替换为你的 XML 文件路径
+    xml_file = r"E:\mypython\file_IO\cms-dm-hg-cmcc-tr98-obj-Traffic.xml"  # 替换为你的 XML 文件路径
 
     with open(xml_file, 'r') as fr:
         L = fr.readlines()
